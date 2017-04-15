@@ -42,7 +42,7 @@ Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, je
 > Přidání účtu Správce (starší verze Windows):
 
 - Stiskněte kláv. zkratku ![win](https://mople71.cz/cs/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
-<li style="list-style-type: none"><pre><code contenteditable="true">control userpasswords</code></pre>
+<li style="list-style-type: none"><pre><code>control userpasswords</code></pre>
 a stiskněte **Enter**.</li>
 - Otevře se nastavení uživatelského účtu. Klikněte na možnost <span class="green">Spravovat jiný účet</span> a vytvořte Standardní účet s omezenými oprávněními, ze kterého můžete prohlížet internet apod.
 
@@ -59,7 +59,7 @@ Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <a href="http
 > Kontrola nastavení aktualizací OS (starší verze Windows):
 
 - Stiskněte kláv. zkratku ![win](https://mople71.cz/cs/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
-<li style="list-style-type: none"><pre><code contenteditable=true>wuapp</code></pre>
+<li style="list-style-type: none"><pre><code>wuapp</code></pre>
 a stiskněte **Enter**.</li>
 - V levém panelu klikněte na tlačítko <span class="green">Změnit nastavení</span>.
 - Zkontrolujte, že **důležité aktualizace** mají zvolenou možnost <span class="green">Instalovat aktualizace automaticky (doporučeno)</span>, případně napravte.
@@ -75,7 +75,7 @@ User Account Control je důležitá součást bezpečnostního modelu OS od Wind
 > Nastavení UAC:
 
 - Stiskněte kláv. zkratku ![win](https://mople71.cz/cs/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
-<li style="list-style-type: none"><pre><code contenteditable=true>useraccountcontrolsettings</code></pre>
+<li style="list-style-type: none"><pre><code>useraccountcontrolsettings</code></pre>
 a stiskněte **Enter**.</li>
 - Otevře se nastavení UAC. To změňte na nejvyšší možnost.
 <li style="list-style-type: none">![uac](https://mople71.cz/faq/uac.png)</li>
@@ -99,7 +99,7 @@ a stiskněte **Enter**.</li>
 > Konfigurace síťového adaptéru + DNS
 
 - Stiskněte kláv. zkratku ![win](https://mople71.cz/cs/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
-<li style="list-style-type: none"><pre><code contenteditable=true>ncpa.cpl</code></pre>
+<li style="list-style-type: none"><pre><code>ncpa.cpl</code></pre>
 a stiskněte **Enter**.</li>
 - Otevře se seznam síťových adaptérů. Klikněte na první adaptér (obvykle ethernet) pravým tlačítkem a zvolte možnost <span class="green">Vlastnosti</span>.
 <li style="list-style-type: none">![vlastnosti](https://mople71.cz/faq/net.png)</li>
@@ -111,8 +111,8 @@ a stiskněte **Enter**.</li>
 
 ![arrow](https://mople71.cz/sm/arrow.gif) <span class="green">Nyní nastavíme bezpečné DNS servery.</span>
 - Pokud nevíte, co DNS je, přečtěte si tento <a href="https://www.nic.cz/page/312/o-domenach-a-dns/" target="_blank">krátký článek</a>.
-- Můžete si vybrat z mnoho DNS serverů, zde je pár příkladů:
-<li style="list-style-type: none"><pre><code contenteditable=true>CZ.NIC DNSSEC:        217.31.204.130, 193.29.206.206
+- Doporučuji použít DNSSEC. Ale můžete si vybrat z mnoha DNS serverů, zde je pár příkladů:
+<li style="list-style-type: none"><pre><code>CZ.NIC DNSSEC:        217.31.204.130, 193.29.206.206
 Adguard DNS:          176.103.130.130, 176.103.130.131
 OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
 - Po zvolení DNS serverů se přepněte zpět do okna Vlastností IPv4 protokolu.
@@ -130,7 +130,7 @@ OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
 - Vypněte AutoPlay (<a href="http://windows.microsoft.com/cs-cz/windows/change-autoplay-settings#1TC=windows-7" target="_blank">návod</a>).
 - Vypněte Remote Assistance
     - Stiskněte kláv. zkratku ![win](https://mople71.cz/cs/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
-    <li style="list-style-type: none"><pre><code contenteditable=true>sysdm.cpl</code></pre>
+    <li style="list-style-type: none"><pre><code>sysdm.cpl</code></pre>
 a stiskněte **Enter**.</li>
     - Zobrazí se Vlastnosti systému.
     - Přesuňte se do záložky **Vzdálený přístup** a odstraňte zatržítko u položky <span class="green">Povolit připojení vzdálené pomoci k tomuto počítači</span>.
