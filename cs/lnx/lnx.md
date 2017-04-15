@@ -52,11 +52,11 @@ Malware se často spouští z dočasných složek. Zakázání exekuce spustitel
 - V levém horním rohu klikněte na Hotovo a následně na Přijmout změny.
 - Pokračujte v instalaci.
 - Po úspěšné instalaci si otevřete <span class="green">Terminál</span>. Zadejte do něj následující příkaz:
-<li style="list-style-type: none"><pre><code contenteditable=true>sudo -i
+<li style="list-style-type: none"><pre><code>sudo -i
 dnf -y install nano
 gedit /etc/fstab</code></pre></li>
 - V textovém souboru šipkami nalezněte řádek, který obsahuje "<span class="red">/tmp</span>". Řádek by měl vypadat následovně:
-<li style="list-style-type: none"><pre><code contenteditable=true>UUID=... /tmp           ext4    defaults   1   2</code></pre></li>
+<li style="list-style-type: none"><pre><code>UUID=... /tmp           ext4    defaults   1   2</code></pre></li>
 - Na řádku nalezněte slovo "<span class="green">defaults</span>" a a za něj dopište "<span class="red">,nodev,noexec,nosuid</span>". Fstab tedy bude vypadat následovně:
 <li style="list-style-type: none">![fstab](https://mople71.cz/faq/fe/fstab.png)</li>
 - V horním pravém rohu klikněte na tlačítko <span class="green">Uložit</span>. Aplikaci zavřete a následně zavřete i konzoli.
@@ -69,14 +69,14 @@ Pokud nepoužíváte a nepotřebujete IPv6 (pokud nevíte, můžete to zjistit p
 > Návod
 
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
-<li style="list-style-type: none"><pre><code contenteditable=true>sudo -i
+<li style="list-style-type: none"><pre><code>sudo -i
 dnf -y install nano
 nano /etc/default/grub</code></pre></li>
 - Nalezněte řádek <span class="green">GRUB_CMDLINE_LINUX_DEFAULT</span> a před poslední uvozovku vepište "<span class="red"> ipv6.disable=1</span>". Řádek tedy bude vypadat nějak takto:
-<li style="list-style-type: none"><pre><code contenteditable=true>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash ipv6.disable=1"</code></pre></li>
+<li style="list-style-type: none"><pre><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash ipv6.disable=1"</code></pre></li>
 - Stiskněte klávesovou zkratku <span class="green">Ctrl + X</span>. Pro uložení změn v sobouru stiskněte tlačítko <span class="red">Y</span> a následně <span class="green">Enter</span>.
 - Budete vráceni do konzole. Zadejte do ní následující příkazy:
-<li style="list-style-type: none"><pre><code contenteditable=true>grub2-mkconfig -o /boot/grub2/grub.cfg
+<li style="list-style-type: none"><pre><code>grub2-mkconfig -o /boot/grub2/grub.cfg
 exit
 exit</code></pre></li>
 - Restartujte OS.
@@ -93,14 +93,14 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento <a href="https://www.
 <li style="list-style-type: none">![dnssec](https://mople71.cz/faq/fe/dnssec.png)</li>
 - Přepněte se do záložky IPv4 a vypněte možnost <span class="green">Automatické DNS</span>.
 - Do kolonky **Server** vepište:
-<li style="list-style-type: none"><pre><code contenteditable=true>217.31.204.130</code></pre></li>
+<li style="list-style-type: none"><pre><code>217.31.204.130</code></pre></li>
 - Klikněte na tlačítko <span class="green">+</span> pod kolonkou **Server**.
 - Objeví se další kolonka Server, do ní vepište:
-<li style="list-style-type: none"><pre><code contenteditable=true>193.29.206.206</code></pre></li>
+<li style="list-style-type: none"><pre><code>193.29.206.206</code></pre></li>
 <li style="list-style-type: none">![dnssec1](https://mople71.cz/faq/fe/dnssec1.png)</li>
 - Klikněte na tlačítko <span class="green">Použít</span> a Nastavení zavřete.
 <li style="list-style-type: none">![idea](https://mople71.cz/sm/idea.gif) Další doporučené DNS servery:</li>
-<li style="list-style-type: none"><pre><code contenteditable=true>Adguard DNS:         176.103.130.130, 176.103.130.131
+<li style="list-style-type: none"><pre><code>Adguard DNS:         176.103.130.130, 176.103.130.131
 OpenDNS:             208.67.222.222, 208.67.220.220</code></pre></li>
 
 <br><br><hr><br>
@@ -119,7 +119,7 @@ Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před út
 **<span class="os">openSUSE</span>** má v základu plně funkční firewall.
 
 **<span class="ub">Ubuntu</span>** v základu nemá zapnutý firewall, je třeba jej zapnout příkazem:
-<pre><code contenteditable=true>sudo ufw enable</code></pre>
+<pre><code>sudo ufw enable</code></pre>
 
 <br>
 
@@ -158,7 +158,7 @@ Osobně doporučuji upřednostnit **Flatpak**.
 > Instalace Firejail
 
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
-<li style="list-style-type: none"><pre><code contenteditable=true>sudo -i
+<li style="list-style-type: none"><pre><code>sudo -i
 dnf copr enable heikoada/firejail
 dnf clean metadata && dnf check-update
 dnf install firejail
@@ -167,23 +167,23 @@ chmod u+s /usr/bin/firejail</code></pre></li>
 > Návod k použití Firejail
 
 - Následující příkaz budete (bohužel) muset vždy spustit po aktualizaci aplikace firejail:
-<li style="list-style-type: none"><pre><code contenteditable=true>sudo chmod u+s /usr/bin/firejail</code></pre></li>
+<li style="list-style-type: none"><pre><code>sudo chmod u+s /usr/bin/firejail</code></pre></li>
 - Následujícím příkazem nastavíte automatické spouštění všech podporovaných aplikací v běžném sandboxu, pokud nainstalujete zbrusu novou podporovanou aplikaci, musíte příkaz zopakovat:
 <li style="list-style-type: none">![exclaim](https://mople71.cz/sm/exclaim.gif) Máte-li nainstalovanou aplikaci **Chromium** / **Google Chrome**, před použitím následujícího příkazu ji musíte nejprve odinstalovat a po použití příkazu následně opět nainstalovat.</li>
-<li style="list-style-type: none"><pre><code contenteditable=true>sudo firecfg</code></pre></li>
+<li style="list-style-type: none"><pre><code>sudo firecfg</code></pre></li>
 - Aplikaci můžete spustit v sandboxu zadáním následujícího příkazu do konzole:
-<li style="list-style-type: none"><pre><code contenteditable=true>firejail nazev_aplikace
+<li style="list-style-type: none"><pre><code>firejail nazev_aplikace
 např. firejail firefox</code></pre></li>
 - Tím spustíte Firefox v přednastaveném profilu &ndash; Firefox má z osobních složek přístup pouze k Ploše a Staženým souborům, data zůstávají na disku i po ukončení sandboxu => vhodné pro každodenní využití.
 - Chcete-li, aby se aplikace spustila v prázdném sanboxu, který se po ukončení aplikace celý smaže, můžete použít následující příkaz:
-<li style="list-style-type: none"><pre><code contenteditable=true>firejail --private nazev_aplikace
+<li style="list-style-type: none"><pre><code>firejail --private nazev_aplikace
 např. firejail --private firefox</code></pre></li>
 - Tato možnost se hodí v případě, kdy potřebujete otevřit rizikovou stránku, na kterou byste museli dočasně snížit bezpečnostní nastavení prohlížeče a mohli tak rizikovat kompromitaci profilu vašeho prohlížeče.
 - V takovém případě se hodí znát příkaz, který Firefox spustí ve zmíněném sandboxu jako nový proces &ndash; jinak je nemožné mít otevřeno více Firefoxů ve více sandboxech.
-<li style="list-style-type: none"><pre><code contenteditable=true>firejail --private nazev_aplikace
+<li style="list-style-type: none"><pre><code>firejail --private nazev_aplikace
 např. firejail --private firefox</code></pre></li>
 - Libovolnou aplikaci také můžete spustit bez přístupu k internetu použitím jednoduchého příkazu:
-<li style="list-style-type: none"><pre><code contenteditable=true>firejail --net=none nazev_aplikace
+<li style="list-style-type: none"><pre><code>firejail --net=none nazev_aplikace
 např. firejail --net=none evince</code></pre></li>
 
 ![idea](https://mople71.cz/sm/idea.gif) Více užitečných příkazů naleznete na <a href="https://firejail.wordpress.com/" target="_blank">oficiálních stránkách aplikace</a>.
@@ -196,10 +196,10 @@ Flatpak je nový způsob distribuce aplikací. Má za cíl odstranit chyby a ned
 **<span class="fe">Fedora</span>** má balíček **flatpak** předinstalovaný.
 
 **<span class="os">openSUSE</span>** Flatpak předinstalovaný nemá, lze jej ovšem nainstalovat jednoduchým příkazem:
-<pre><code contenteditable=true>sudo zypper install flatpak</code></pre>
+<pre><code>sudo zypper install flatpak</code></pre>
 
 **<span class="ub">Ubuntu</span>** Flatpak předinstalovaný nemá, jelikož propaguje svou alternativu k Flatpaku &ndash; <a href="https://www.ubuntu.com/desktop/snappy" target="_blank">Snap</a>. Každopádně pokud se rozhodnete používat raději Flatpak než Snap, můžete jej nainstalovat následujícími příkazy:
-<pre><code contenteditable=true>sudo add-apt-repository ppa:alexlarsson/flatpak
+<pre><code>sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
 sudo apt install flatpak</code></pre>
 
@@ -214,7 +214,7 @@ Pokud ve vaší distribuci nebude fungovat odkaz na stáhnutí, překlikněte se
 #### LibreOffice:
 - Odinstalujte současnou verzi LibreOffice.
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
-<li style="list-style-type: none"><pre><code contenteditable=true>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
+<li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
 wget http://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffice.flatpak
 flatpak install --bundle LibreOffice.flatpak</code></pre></li>
 - Na všechny otázky odpovězte kladně.
