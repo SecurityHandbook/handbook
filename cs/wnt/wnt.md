@@ -25,7 +25,7 @@ Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, je
 
 ![us](https://mople71.cz/faq/us.png)
 - Otevře se dialog pro přidání nového uživatele. V levém dolním rohu klikněte na <span class="green">Nemám přihlašovací údaje této osoby</span>.
-- V levém dolním rohu zvlote možnost <span class="green>Přidat uživatele bez účtu Microsoft</span>.
+- V levém dolním rohu zvlote možnost <span class="green">Přidat uživatele bez účtu Microsoft</span>.
 - Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné zapamatovatelné heslo.
 - V seznamu jiných uživatelů se zobrazí účet **Admin**. Klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
 
