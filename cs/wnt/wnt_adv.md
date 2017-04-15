@@ -24,7 +24,64 @@ Windows obsahují vestavěný <span class="green">Windows Firewall</span> (WF), 
 
 Použití FW třetí strany je zbytečné rozšiřování attack surface. Základem síťového zabezpečení v domácnosti je rozumný router s použitelným FW (např. Mikrotik, kde si FW ovšem samozřejmě musíte nastavit).
 
-Co se týče outbound FW, návod na konfiguraci WF je v sekci pro méně pokročilé.
+Co se týče blokování odchozí komunikace, Windows Firewall tuto funkci podporuje a umožňuje vcelku jednoduše nastavit.
+
+![idea](https://mople71.cz/sm/idea.gif) Návod měl původně být v sekci pro méně pokročilé, ovšem z důvodu nepříjemného bugu (nebo funkce) Windows 10 Creators Update, automatické aktualizace OS nelze ve whitelistu rozumně definovat.
+
+> Nastavení WF na blokování odchozí komunikace
+
+- Otevřete si **hledání Windows**, do vyhledávacího pole zadejte:
+<li style="list-style-type: none"><pre><code>wf.msc</code></pre></li>
+- Na nalezenou položku klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/cs/admin.png) **Spustit jako správce**.
+<li style="list-style-type: none">![wf](https://mople71.cz/faq/wf.png)</li>
+- Otevře se pokročilé nastavení Windows Firewall. V prostředním sloupci zvolte možnost <span class="green">Vlastnosti brány firewall</span>.
+- V horním panelu si otevřete záložku **Privátní profil**. U položky **Odchozí připojení** zvolte možnost <span class="green">Blokovat</span>.
+<li style="list-style-type: none">![wf1](https://mople71.cz/faq/wf1.png)</li>
+- Postup zopakujte pro záložku **Veřejný profil**.
+- Klikněte na <span class="green">OK</span>.
+<li style="list-style-type: none">![wf2](https://mople71.cz/faq/wf2.png)</li>
+
+![arrow](https://mople71.cz/sm/arrow.gif) <span class="green">Nyní WF blokuje veškerou odchozí kouminakci, která není na whitelistu. Dále je třeba nastavit whitelist.</span>
+
+> Povolení odchozí komunikace pro důležité aplikace
+
+- V levém sloupci otevřete <span class="green">Odchozí pravidla</span>.
+- V pravém sloupci zvolte možnost <span class="green">Nové pravidlo...</span>
+- Jako typ pravidla zvolte **Program** a klikněte na tlačítko <span class="green">Další</span>.
+- Zvolte možnost **Cesta k tomuto programu** a klikněte na tlačítko <span class="green">Procházet...</span>
+- Nalezněte a zvolte následující aplikaci: <span class="blue">C:\Windows\System32\smartscreen.exe</span>
+<li style="list-style-type: none">![wf3](https://mople71.cz/faq/wf3.png)</li>
+- Klikněte na tlačítko <span class="green">Další</span>.
+- Zvolte možnost **Povolit připojení** a klikněte na tlačítko <span class="green">Další</span>.
+- Zkontrolujte zatržítka u všech možností a klikněte na tlačítko <span class="green">Další</span>.
+- Zadejte název pravidla &ndash; v tomto případě např. **SmartScreen.exe**
+- Klikněte na <span class="green">Dokončit</span>.
+
+![idea](https://mople71.cz/sm/idea.gif) Stejným způsobem povolte veškeré další aplikace, které potřebují přístup k internetu (např. internetové prohlížeče, "%programfiles%\Windows Defender\MpCmdRun.exe", VoodooShield,...)
+
+> Windows Update na Windows 10 (Creators Update)
+
+Ve W10 CU není možné rozumně povolit Windows Update &ndash; nestačí povolit pouze nezbytné služby, je nutné povolit celý *svchost.exe*.
+
+Je zde několik možností:
+
+- Permanentně povolit SVCHost.exe pro porty 80 a 443 **(nedoporučeno)**.
+- Povolit SVCHost.exe pouze po dobu instalace aktualizací.
+- Instalovat aktualizace 1x měsíčně ručně a WU neřešit.
+- ...
+
+![arrow](https://mople71.cz/sm/arrow.gif) Problémem ovšem je, že přes WU se aktualizují definice Windows Defender, které je důležité mít aktuální.
+
+Zde existuje také několik možností:
+
+- Permanentně povolit WU.
+- Vytvořit pravidlo pro povolení SVCHost.exe ve WF a pravidlo zakázat. Následně pro aktualizaci definicí WD napsat jednoduchý skript a naplánovat jeho spuštění 1x za 12 hodin. Např.:
+<li style="list-style-type: none"><pre><code>@echo off
+netsh advfirewall firewall set rule name="SVCHost.exe" new enable=yes
+"%programfiles%\Windows Defender\MpCmdRun.exe" -SignatureUpdate
+netsh advfirewall firewall set rule name="SVCHost.exe" new enable=no
+pause</code></pre></li>
+- ...
 
 <br>
 
@@ -33,7 +90,13 @@ Co se týče outbound FW, návod na konfiguraci WF je v sekci pro méně pokroč
 
 > Konfigurace mitigací ve W10 RS2
 
-...
+- Stiskněte kláv. zkratku <img src="https://mople71.cz/cs/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
+<li style="list-style-type: none">![wx](https://mople71.cz/win/wx.png)</li>
+- Do příkazové řádky zadejte následující příkaz:
+<li style="list-style-type: none"><pre><code>Install-Module -Name ProcessMitigations</code></pre></li>
+- Přečtěte si manuál <a href="https://technet.microsoft.com/en-us/itpro/windows/keep-secure/overview-of-threat-mitigations-in-windows-10#converting-an-emet-xml-settings-file-into-windows-10-mitigation-policies" target="_blank">zde</a>.
+- Podrobná dokumentace je také obsažená přímo v nainstalovaném modulu:
+<li style="list-style-type: none"><pre><code>%programfiles%\WindowsPowerShell\Modules\ProcessMitigations\*\Docs</code></pre></li>
 
 <br>
 
@@ -86,7 +149,7 @@ Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, a
 > Příklady MemProtect
 
 - Zablokování přístupu všem nesystémovým procesům k procesům VoodooShield &ndash; jednoduché ztížení exploitace:
-<li style="list-style-type: none"><pre><code contenteditable=true>[LETHAL]
+<li style="list-style-type: none"><pre><code>[LETHAL]
 [LOGGING]
 [DEFAULTALLOW]
 [WHITELIST]
@@ -171,7 +234,7 @@ Pokud jste si přečetli teorii, snad již chápete, že nastavení např. inter
 
 Má to ovšem jednu zásadní komfortní nevýhodu. Vždy, když spustíte aplikaci s nízkou úrovní integrity, zobrazí se bezpečnostní varování, zdali aplikaci chcete opravdu spustit. To platí i pro prohlížeč. (neplatí pro <span class="green">Windows 10</span>) Výměnou za tuto drobnější otravnost ovšem dosáhnete řádově vyššího zabezpečení, jelikož na rozdíl od ostatních bezpečnostních vrstev, integritní politiku malware nemůže exploitovat a obejít. U veškerého SW třetí strany je toto riziko vyšší.
 
-#### Návody:
+### Návody:
 
 > Nastavení integritní politiky osobních složek
 
@@ -179,23 +242,23 @@ Windows má vestavěný nástroj jménem <span class="green">icacls</span>, kter
 
 - Stáhněte si <a href="http://www.minasi.com/apps/chml.exe">chml</a> a uložte jej <span class="blue">na Plochu</span>.
 - Zkontrolujte checksums aplikace (návod případně naleznete v sekci **Užitečné aplikace** FAQ Windows pro méně pokročilé):
-<li style="list-style-type: none"><pre><code contenteditable=true>SHA-256: 59aa55d2eac6b295d42ef2aadc607b759f034f4557a66dec0214a4cc032ecc17
-SHA-512: a22317552f90e896fb6f0e4a30f7834baf97a771211a37aca12f52d55ff8b85212d4ded5138ab66a70eaaa1193002b98158938bc17185ea94ccc9f7f4b8120f4</code></pre></li>
+<li style="list-style-type: none"><pre><code>SHA-1:   e26af472a52039caac5548ecb3c6727b2651e490
+SHA-256: 59aa55d2eac6b295d42ef2aadc607b759f034f4557a66dec0214a4cc032ecc17</code></pre></li>
 - Aplikaci přesuňte do umístění: <span class="blue">C:\Windows\System32</span>
     - Klikněte na aplikaci a stiskněte <span class="green">Ctrl + X</span>
     - Stiskněte kláv. zkratku  ![win](https://mople71.cz/cs/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
-    <li style="list-style-type: none"><pre><code contenteditable=true>C:\Windows\System32</code></pre>
+    <li style="list-style-type: none"><pre><code>C:\Windows\System32</code></pre>
 a stiskněte **Enter**.</li>
     - Otevře se složka System32. Stiskněte <span class="green">Ctrl + V</span> a a potvrďte přesun do složky.
 
-- Stiskněte kláv. zkratku <img src="https://mople71.cz/cs/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows Powershell (správce)</span>.
-<li style="list-style-type: none"><img src="https://mople71.cz/win/winx.png" alt="winx"></li>
+- Stiskněte kláv. zkratku <img src="https://mople71.cz/cs/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
+<li style="list-style-type: none">![wx](https://mople71.cz/win/wx.png)</li>
 
 - Do příkazové řádky zadejte následující příkaz pro validaci úspěšné instalace aplikace:
-<li style="list-style-type: none"><pre><code contenteditable=true>chml /?</code></pre></li>
+<li style="list-style-type: none"><pre><code>chml /?</code></pre></li>
 - Pokud chml zareagoval svým výstupem, je správně nainstalován.
 - Nyní můžeme nastavit integritní politiku osobních složek, jejichž obsah chceme chránit před malware. Přesná lokace složek závisí na každém OS, cestu ke složkám tedy prosím zkontrolujte a upravte pro váš OS. Např.:
-<li style="list-style-type: none"><pre><code contenteditable=true>chml C:\Users\(uživ. jméno)\Documents -i:m -nw -nx
+<li style="list-style-type: none"><pre><code>chml C:\Users\(uživ. jméno)\Documents -i:m -nw -nx
 chml C:\Users\(uživ. jméno)\Pictures -i:m -nw -nx
 chml C:\Users\(uživ. jméno)\Music -i:m -nw -nx
 chml C:\Users\(uživ. jméno)\Videos -i:m -nw -nx
@@ -240,31 +303,31 @@ Pokud jste si přečetli teorii, snad máte alespoň matnou představu o tom, ja
 
 ACL můžeme využít následovně: můžeme zakázat spouštění spustitelných souborů v uživatelských složkách. Běžný uživatel nepotřebuje spouštět ve svých složkách spustitelné soubory &ndash; a pokud ano, nic mu nebrání v přesunutí souboru mimo jeho osobní složky. Výhody jsou doufám jasné &ndash; pokud se malware dostane na disk, nespustí se.
 
-#### Návody:
+### Návody:
 
 > Odebrání pravomoce exekuce souborů v uživatelských složkách
 
 - Stiskněte kláv. zkratku <img src="https://mople71.cz/cs/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
-    <li style="list-style-type: none"><img src="https://mople71.cz/win/winx.png" alt="winx"></li>
+<li style="list-style-type: none">![wx](https://mople71.cz/win/wx.png)</li>
 - Do příkazové řádky zadejte následující příkazy (cestu ke složce uživatele patřičně upravte):</li>
-    <li style="list-style-type: none"><pre><code contenteditable=true>icacls "C:\Users\(uživ. jméno)" /c /inheritance:d
-    icacls "C:\Users\(uživ. jméno)" /c /deny Everyone:(OI)(CI)(X)</code></pre></li>
+<li style="list-style-type: none"><pre><code>icacls "C:\Users\(uživ. jméno)" /c /inheritance:d
+icacls "C:\Users\(uživ. jméno)" /c /deny Everyone:(OI)(CI)(X)</code></pre></li>
 
 > Opětovné přidání pravomoce exekuce souborů v uživatelské složce
 
 - Stiskněte kláv. zkratku <img src="https://mople71.cz/cs/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
-    <li style="list-style-type: none"><img src="https://mople71.cz/win/winx.png" alt="winx"></li>
+<li style="list-style-type: none">![wx](https://mople71.cz/win/wx.png)</li>
 - Do příkazové řádky zadejte následující příkaz (cestu ke složce patřičně upravte):</li>
-    <li style="list-style-type: none"><pre><code contenteditable=true>icacls "C:\Users\User\AppData\Local\Temp" /remove Everyone /t</code></pre></li>
+<li style="list-style-type: none"><pre><code>icacls "C:\Users\User\AppData\Local\Temp" /remove Everyone /t</code></pre></li>
 
-![idea](https://mople71.cz/sm/idea.gif) V příkladu byla použita složka **Temp**, jejíž pravomoc exekuce obsahujících souborů může být vyžadována některými aplikacemi (včetně systémových). Každopádně z bezpečnostního hlediska není ideální exekuci ve složce povolit.
+![idea](https://mople71.cz/sm/idea.gif) V příkladu byla použita složka **Temp**, jejíž pravomoc exekuce obsahujících souborů může být vyžadována některými aplikacemi (včetně systémových &ndash; MS Edge). Každopádně z bezpečnostního hlediska není úplně ideální exekuci ve složce povolit.
 
 <br><br><hr><br>
 
 ## AppContainer:
 AppContainer je implementace sandboxu integrovaná v OS od Windows 8. Je vyvinut pro ModernUI aplikace a např. MS Edge na něm má postavený svůj bezpečnostní model (používá několik AppContainerů zároveň). Existují také možnosti, jak upravit Win32 aplikaci, aby běžela v AppContainer, viz. <a href="https://www.howtogeek.com/250041/how-to-convert-a-windows-desktop-app-to-a-universal-windows-app/" target="_blank">zde</a> nebo <a href="https://news.saferbytes.it/analisi/2013/07/securing-microsoft-windows-8-appcontainers/" target="_blank">zde</a>.
 
-AppContainer odděluje aplikace od sebe a částí OS. Podobnou snahu můžeme pozorovat i u Linuxu (Flatpak). Více o izolaci si můžete přečíst zde: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/mt595898(v=vs.85).aspx" target="_blank">https://msdn.microsoft.com/en-us/library/windows/desktop/mt595898(v=vs.85).aspx</a>
+AppContainer odděluje aplikace od sebe a částí OS. Podobnou snahu můžeme pozorovat i u Linuxu (Flatpak). Více o izolaci si můžete přečíst <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/mt595898(v=vs.85).aspx" target="_blank">zde</a>.
 
 <br><br><hr>
 
