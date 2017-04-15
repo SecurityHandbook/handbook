@@ -3,12 +3,12 @@
 > Bezpečnější nastavení
 
 - Do adresního řádku prohlížeče zadejte:
-<li style="list-style-type: none"><pre><code contenteditable=true>chrome://plugins</code></pre>
-a stiskněte **Enter<**.</li>
+<li style="list-style-type: none"><pre><code>chrome://plugins</code></pre>
+a stiskněte **Enter**.</li>
 - Zobrazí se seznam rozšíření. V seznamu nalezněte **Adobe Flash Player** a deaktivujte jej.
 <li style="list-style-type: none">![ch1](https://mople71.cz/faq/ch1.png)</li>
 - Do adresního řádku prohlížeče zadejte:
-<li style="list-style-type: none"><pre><code contenteditable=true>chrome://settings</code></pre>
+<li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
 a stiskněte **Enter**.</li>
 - Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko <span class="green">Zobrazit rozšířená nastavení...</span>
 - V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu...</span>
@@ -19,7 +19,7 @@ a stiskněte **Enter**.</li>
 
 #### Pro Windows 8 a výše:
 - Do adresního řádku prohlížeče zadejte:
-<li style="list-style-type: none"><pre><code contenteditable=true>chrome://flags/#enable-ppapi-win32k-lockdown</code></pre>
+<li style="list-style-type: none"><pre><code>chrome://flags/#enable-ppapi-win32k-lockdown</code></pre>
 a stiskněte **Enter**.</li>
 - Zobrazí se pokročilá nastavení. Rozklikněte nabídku u položky **Aktivovat uzamknutí pluginů PPAPI pole zásady Win32k** a zvolte možnost <span class="green">Všechny pluginy</span>.
 - Rozklikněte nabídku u položky **Aktivovat uzamknutí do kontejneru AppContainer** a zvolte možnost <span class="green">Aktivní</span>.
@@ -80,7 +80,7 @@ Google Chrome používá velmi dobrou implementaci sandboxu.
 - Stáhněte si nejnovější verzi <span class="green">uBlock Origin</span>. Doporučena je stabilní a **rc** verze. Užití beta verze zvažte.
 - Ze staženého archivu vybalte složku <span class="blue">uBlock0.edge</span> a přesuňte ji do své složky <span class="green">Dokumenty</span>. Pro používání uBlock Origin ji nesmíte odstranit.
 - Do adresního řádku prohlížeče zadejte:
-<li style="list-style-type: none"><pre><code contenteditable=true>about:flags</code></pre>
+<li style="list-style-type: none"><pre><code>about:flags</code></pre>
 a stiskněte **Enter**.</li>
 - Aktivujte <span class="green">funkce pro vývojáře rozšíření</span>.
 <li style="list-style-type: none">![edge5](https://mople71.cz/faq/edge5.png)</li>
@@ -115,7 +115,7 @@ Microsoft Edge nyní používá velmi robustní implementaci sandboxu.
 > Bezpečnější nastavení
 
 - Stiskněte kláv. zkratku ![win](https://mople71.cz/cs/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
-<li style="list-style-type: none"><pre><code contenteditable=true>inetcpl.cpl</code></pre>
+<li style="list-style-type: none"><pre><code>inetcpl.cpl</code></pre>
 a stiskněte **Enter**.</li>
 - Zobrazí se Vlastnosti internetu. V horní liště se přesuňte do záložky <span class="green">Zabezpečení</span>.
 - Zobrazí se nastavení úrovně zabezpečení internetových zón.
@@ -170,19 +170,19 @@ Prohlížeč je částečně oddělen od OS díky technologii **Protected Mode**
 > Bezpečnější nastavení
 
 - Do adresního řádku prohlížeče zadejte:
-<li style="list-style-type: none"><pre><code contenteditable=true>about:config</code></pre>
+<li style="list-style-type: none"><pre><code>about:config</code></pre>
 a stiskněte **Enter**.</li>
 - Tlačítkem <span class="green">Beru to na vědomí!</span>, potvrďte varování.
 - Zobrazí se podrobné nastavení prohlížeče. Zde lze provést pár bezpečnostních opatření.
 - Do vyhledávacího pole ve vrchní části stránky zadejte:
-<li style="list-style-type: none"><pre><code contenteditable=true>ocsp</code></pre></li>
+<li style="list-style-type: none"><pre><code>ocsp</code></pre></li>
 - Vyhledávání zobrazí veškeré hodnoty s **OCSP** v názvu. Dvakrát poklepejte myší na následující hodnotu:
-<li style="list-style-type: none"><pre><code contenteditable=true>security.OCSP.GET.enabled</code></pre></li>
+<li style="list-style-type: none"><pre><code>security.OCSP.GET.enabled</code></pre></li>
 - Tím změníte její výchozí nastavení (zapnete/vypnete požadovanou funkci).
 <li style="list-style-type: none">![ff0](https://mople71.cz/faq/ff.png)</li>
 <li style="list-style-type: none"![ff1](https://mople71.cz/faq/ff1.png)</li>
 - Výše uvedeným způsobem vyhledejte a změňte výchozí nastavení následujících hodnot:
-<li style="list-style-type: none"><pre><code contenteditable=true>accessibility.blockautorefresh  ---  vypíná automatické přesměrování
+<li style="list-style-type: none"><pre><code>accessibility.blockautorefresh  ---  vypíná automatické přesměrování
 browser.pocket.enabled  ---  vypíná službu Pocket
 pdfjs.disabled  ---  vypne otevírání PDF v prohlížeči
 security.mixed_content.block_display_content  ---  nezabezpečený obsah
@@ -198,15 +198,15 @@ dom.storage.enabled  ---  vypíná DOM úložiště (bezpečnější, ovšem mů
                                               vyžadováno některými službami)
 media.peerconnection.enabled  ---  WebRTC</code></pre></li>
 - Do vyhledávacího pole ve vrchní části stránky zadejte:
-<li style="list-style-type: none"><pre><code contenteditable=true>flash</code></pre></li>
+<li style="list-style-type: none"><pre><code>flash</code></pre></li>
 - Vyhledávání zobrazí veškeré hodnoty s **OCSP** v názvu. Dvakrát poklepejte myší na následující hodnotu:
-<li style="list-style-type: none"><pre><code contenteditable=true>plugin.state.flash</code></pre></li>
+<li style="list-style-type: none"><pre><code>plugin.state.flash</code></pre></li>
 - Tím otevřete okno pro změnu hodnoty položky. Nastavte hodnotu na <span class="red">0</span> a klikněte na <span class="green">OK</span>.
 - Postup zopakujte pro následující položku:
-<li style="list-style-type: none"><pre><code contenteditable=true>plugin.state.java</code></pre></li>
+<li style="list-style-type: none"><pre><code>plugin.state.java</code></pre></li>
 
 - Do adresního řádku prohlížeče zadejte:
-<li style="list-style-type: none"><pre><code contenteditable=true>about:preferences</code></pre>
+<li style="list-style-type: none"><pre><code>about:preferences</code></pre>
 a stiskněte **Enter**.</li>
 - V levém panelu se přesuňte do záložky <span class="green">Aplikace</span>.
 - Ve sloupci **Akce** rozklikněte pole v řádku **Soubor PDF**.
