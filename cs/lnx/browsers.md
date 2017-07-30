@@ -10,19 +10,34 @@ a stiskněte **Enter**.</li>
 - Do adresního řádku prohlížeče zadejte:
 <li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
 a stiskněte **Enter**.</li>
-- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko <span class="green">Zobrazit rozšířená nastavení...</span>
+- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch2](https://faq.mople71.cz/img/cs/ch2.png)
 - V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu...</span>
+<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
 - V sekci **Soubory cookie** zatrhněte možnost <span class="green">Blokovat soubory cookie třetích stran a data webových stránek</span>.
-<li style="list-style-type: none">![ch2](https://faq.mople71.cz/img/cs/ch2.png)</li>
+<li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
 - V pravém dolním rohu klikněte na <span class="green">Hotovo</span>.
 - Prohlížeč restartujte.
+
+> Omezení JavaScript
+
+- Do adresního řádku prohlížeče zadejte:
+<li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
+a stiskněte **Enter**.</li>
+- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch2](https://faq.mople71.cz/img/cs/ch2.png)
+- V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu</span>
+<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
+- V sekci **JavaScript** zablokujte spouštění JS.
+<li style="list-style-type: none">![ch5](https://faq.mople71.cz/img/cs/ch5.png)</li>
+- Klikněte na tlačítko <span class="green">Přidat</span> v sekci **Povolit**.
+- Zadejte adresu důvěryhodnéhu webu, na kterém se může spouštět JS. Syntax je jednoduchý.
+<li style="list-style-type: none">![ch6](https://faq.mople71.cz/img/cs/ch6.png)</li>
+- Klikněte na <span class="green">Přidat</span>.
 
 > Blokování reklamy
 
 - Nainstalujte si následující bezpečnostní doplněk: <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=cs" target="_blank">uBlock Origin</a>.
 
 #### Nastavení uBlock:
-
 - Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
 <li style="list-style-type: none">![chublock](https://faq.mople71.cz/img/cs/chublock.png)</li>
 - Zobrazí se nastavení uBlock Origin. V sekci **Soukromí** zatrhněte možnost <span class="green">Předejít úniku lokálních IP adres přes WebRTC</span>.
