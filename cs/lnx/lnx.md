@@ -151,7 +151,7 @@ Externí sandbox není zdaleka tak účinný jako sandbox integrovaný v aplikac
 #### Firejail:
 Firejail je solidní aplikace umožňující sandbox rizikových aplikací &ndash; pro spoustu z nich má předdefinované profily (např. Empathy, Evince, Filezilla, Firefox, Chrome, Chromium, HexChat, KMail, Opera, Pidgin, Transmission, Rhythmbox, SeaMonkey, Skype, Spotify, Steam, Thunderbird, Totem, VLC,...).
 
-Osobně doporučuji upřednostnit **Flatpak**.
+Důrazně doporučuji upřednostnit **Flatpak**, kde je to možné.
 
 ![idea](https://mople71.cz/img/sm/idea.gif) Používate-li aplikaci s integrovaným sandboxem jako např. **Chrome/ium**, rozhodně ji nesandboxujte pomocí firejail, integrovaný sandbox je řádově účinnější.
 
@@ -207,9 +207,12 @@ sudo apt install flatpak</code></pre>
 
 > Návod k použití Flatpak
 
-Seznam dostupných aplikací naleznete zde: <a href="http://flatpak.org/apps.html" target="_blank">http://flatpak.org/apps.html</a>
+Několik dostupných aplikací naleznete zde: <a href="http://flatpak.org/apps.html" target="_blank">http://flatpak.org/apps.html</a>
 
 Pokud ve vaší distribuci nebude fungovat odkaz na stáhnutí, překlikněte se do záložky <span class="green">Command Line</span> a postupujte dle instrukcí.
+
+Flatpak aplikace lze aktualizovat následujícím příkazem:
+<pre><code>flatpak update</code></pre>
 
 #### LibreOffice:
 - Odinstalujte současnou verzi LibreOffice.
@@ -218,6 +221,18 @@ Pokud ve vaší distribuci nebude fungovat odkaz na stáhnutí, překlikněte se
 wget http://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffice.flatpak
 flatpak install --bundle LibreOffice.flatpak</code></pre></li>
 - Na všechny otázky odpovězte kladně.
+
+> Flathub
+
+Flathub je oficiální platforma pro distribuci Flatpak aplikací. Naleznete v ní vcelku malý počet aplikací, který se bude pouze zvyšovat. Například Audacity, Corebird, Blender, **Steam**, GeoGebra, Inkscape, Warmux,...
+
+#### Steam:
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
+<li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.valvesoftware.Steam
+</code></pre></li>
+- Bude-li vám v průběhu nabídnut výběr mezi *gnome* a *flathub* repozitáři, zvolte <span class="green">flathub</span>.
+- Spusťte Steam a doufejte, že vámi oblíbené hry jsou ve flatpaku funkční. Seznam otestovaných her naleznete <a href="https://github.com/flathub/com.valvesoftware.Steam/wiki/Tested-Games" target="_blank">zde</a>.
 
 <br><br><hr><br>
 

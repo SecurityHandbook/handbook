@@ -182,58 +182,44 @@ Pro pokročilou virtualizaci za použití **KVM** se podívejte <a href="https:/
 <br><br><hr><br>
 
 ## Anti-exploit mitigace:
-### Grsecurity:
-Grsecurity je bezpečnostní patchset pro kernel nabízející řadu mitigací proti exploitům. Obsahuje také vestavěný MAC &ndash; RBAC. Kompletní výpis funkcí naleznete na <a href="https://grsecurity.net/features.php" target="_blank">oficiálním webu</a>.
+### Kernel:
+Grsecurity patchset již není veřejně dostupný a bezplatný. Iniciativu hardeningu kernelu tedy (mimo *KSPP*) převzala komunita, která se stará o portaci mitigací ze starých grsecurity patchů a vývoj nových mitigací. Projekt naleznete <a href="https://github.com/copperhead/linux-hardened" target="_blank">zde</a>.
 
-Kernel s grsecurity nabízí mnoho distribucí &ndash; Alpine, Hardened Gentoo, Subgraph, <a href="https://www.archlinux.org/packages/community/x86_64/linux-grsec/" target="_blank">Arch Linux</a>, <a href="https://packages.debian.org/search?keywords=linux-image-grsec" target="_blank">Debian</a>,...
-
-<span class="red">Bohužel, grsecurity patchsety již nebudou zdarma, bezplatně dostupné patchsety končí s LTS verzí kernelu 4.9.</span>
-
-![arrow](https://mople71.cz/img/sm/arrow.gif) Jakmile zmíněný kernel dosáhne EOL, zřejmě bude nutné si za patchsety platit...
-
-> Instalace Grsecurity
+> Instalace linux-hardened
 
 - Otevřete root konzoli a zadejte:
-<li style="list-style-type: none"><pre><code>pacman -S linux-grsec</code></pre></li>
+<li style="list-style-type: none"><pre><code>pacman -S linux-hardened</code></pre></li>
 - Po úspěšné instalaci aktualizujte bootloader, pokud máte GRUB, stačí jednoduchý příkaz:
 <li style="list-style-type: none"><pre><code>grub-mkconfig -o /boot/grub/grub.cfg</code></pre></li>
 - Restartujte OS a vyzkoušejte, zdali pro vás výchozí nastavení funguje.
 
-> Paxd
+> Ruční konfigurace a kompilace linux-hardened kernelu
 
-- Pro výchozí aktivaci mitigací proti *memory corruption* exploitům potřebujete následující balíček:
-<li style="list-style-type: none"><pre><code>pacman -S paxd</code></pre></li>
-- Problematickým binárkám poté můžete nastavit výjimku následujícím způsobem (např.):
-<li style="list-style-type: none"><pre><code>setfattr -n user.pax.flags -v "m" /home/user/.local/share/Steam/ubuntu12_32/steam</code></pre></li>
-
-> Ruční konfigurace a kompilace kernelu s Grsecurity
-
-![idea](https://mople71.cz/img/sm/idea.gif) Konfigurace patchsetu v předkompilovaném balíčku může být příliš striktní a nemusí se vám podařit nabootovat. V takovém případě je třeba identifikovat problém a kernel si následně zkompilovat ručně. Arch Linux to umožňuje velmi snadno díky *ABS*.
+![idea](https://mople71.cz/img/sm/idea.gif) Konfigurace v předkompilovaném balíčku může být příliš striktní a nemusí se vám podařit nabootovat. V takovém případě je třeba identifikovat problém a kernel si následně zkompilovat ručně. Arch Linux to umožňuje velmi snadno díky *ABS*.
 
 - Nainstalujte si ABS a GPG:
 <li style="list-style-type: none"><pre><code>sudo pacman -S abs gnupg
-sudo abs
-cp -r /var/abs/community/linux-grsec ~/linux-grsec
-cd ~/linux-grsec
+asp export community/linux-hardened
+cd ./linux-hardened
 gedit PKGBUILD    #nahradte vami pouzivanym editorem</code></pre></li>
 - V PKGBUILD nalezněte <span class="green">#make menuconfig</span>, příkaz odkomentujte, uložte a zavřete.
 <li style="list-style-type: none"><pre><code>gpg --recv-keys 79BE3E4300411886
 gpg --recv-keys 38DBBDC86092693E
-gpg --recv-keys 44D1C0F82525FE49
+gpg --recv-keys F9E712E59AF5F22A
 makepkg -s</code></pre></li>
 - Po chvíli se zobrazí menu s možnostmi kernelu. Zvolte, co potřebujete, a zrušte, co nepotřebujete. Celkově je dobrý nápad z kernelu vyházet věci, které nepotřebujete, docílíte tím snížení prostoru pro exploitaci.
 - 2x ESC a uložte konfiguraci. Tím započnete kompilaci kernelu.
 - Po kompilaci kernelu balíček nainstalujte:
-<li style="list-style-type: none"><pre><code>sudo pacman -U linux-grsec-*.pkg.tar.xz
-sudo pacman -U linux-grsec-headers-*.pkg.tar.xz</code></pre></li>
+<li style="list-style-type: none"><pre><code>sudo pacman -U linux-hardened-*.pkg.tar.xz
+sudo pacman -U linux-hardened-headers-*.pkg.tar.xz</code></pre></li>
 - Aktualizujte GRUB:
 <li style="list-style-type: none"><pre><code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code></pre></li>
-- Nastavte ignorování aktualizací pro linux-grsec (a linux-grsec-headers):
+- Nastavte ignorování aktualizací pro linux-hardened (a linux-hardened-headers):
 <li style="list-style-type: none"><pre><code>/etc/pacman.conf
 -----------------------------------
 
 # Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup
-IgnorePkg   = linux-grsec linux-grsec-headers
+IgnorePkg   = linux-hardened linux-hardened-headers
 #IgnoreGroup =</code></pre></li>
 - Tento proces budete muset zopakovat při každé aktualizaci kernelu, pacman vás na aktualizaci při *-Syu* upozorní.
 
@@ -247,6 +233,8 @@ Jediná distribuce, která má balíčky velmi vysoké úrovně s  důležitými
 Pro plnou funkčnost ASLR musí být všechny běžící procesy zkompilovány jako **PIE**. Poté se bude jednat o velmi robustní implementaci &ndash; alespoň tedy na platformě *x86_64*. Na 32-bit OS není problém ASLR prolomit pomocí brute-force.
 
 Balíčky neobsahující zmíněné mitigace je tedy nutné zkompilovat ručně. Repozitáře Arch Linux obsahují **hardening-wrapper**, který automaticky nastaví kompilátor a veškeré kompilované balíčky po jeho instalaci budou kompilovány s dostupnými mitigacemi.
+
+**Hardening-wrapper** již není kriticky nutný, jelikož nejnovější verze *gcc* automaticky kompiluje aplikace jako *PIE*. Za chvíli *gcc* adoptuje v základu veškeré funkce a hardening-wrapper bude naprosto nepotřebný &ndash; bude odebrán z repozitářů.
 
 > Audit mitigací běžících procesů
 
@@ -337,7 +325,7 @@ Checksec je skript určený pro kontrolu nastavení kernelu a zobrazení *memory
 <br><br><hr><br>
 
 ## Ostatní doporučení:
-- používejte Wayland, implementace X.org nejsou bezpečné (jedině Xenocara v OpenBSD)
+- používejte Wayland, implementace X.org nejsou bezpečné (kromě Xenocara v OpenBSD)
 - používejte Flatpak
 - na běžné prohlížení webu používejte Chromium, na bankovnictví např. Epiphany
 - Firefox používejte na prohlížení PDF souborů (pdf.js je velmi bezpečný způsob prohlížení)
