@@ -16,7 +16,7 @@ Android má robustní bezpečnostní model, který předpokládá, že aplikace 
 ## Bezpečnostní model OS:
 Android má robustní vícevrstevný bezpečnostní model. Používá linuxové jádro, implementuje <abbr title="Mandatory Access Control">MAC</abbr> a mitigace proti *memory corruption* exploitům &ndash; Android je jediná linuxová distribuce, která neumožňuje spuštění *non-<abbr title="Position Independent Executable">PIE</abbr>* kódu. Každé aplikaci je přiřazen unikátní uživatelský ID, aplikace je uzavřena v sandboxovaném prostředí, nemůže operovat s žádnou jinou aplikací a je jí umožněno operovat pouze se soubory/komponenty OS, ke kterým dostane oprávnění od vlastníka zařízení.
 
-![Android Security Model](https://mople71.cz/faq/android.png)
+![Android Security Model](https://faq.mople71.cz/img/android.png)
 
 > Trocha teorie o bezpečnostním modelu OS Android
 
@@ -76,9 +76,7 @@ Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se d
 
 ### Zařízení s OS Android splňující bezpečnostní požadavky:
 
-(tento seznam nebude aktualizován mimo pravidelnou půlroční aktualizaci, proto obsažené informace nemusí být vždy 100% aktuální)
-
-<!--- ./andr_devices.md -->
+Seznam zařízení naleznete v článku <a href="https://guide.mople71.cz/iot/andr_vyber.php" target="_blank">Výběr telefonu &ndash; OS Android</a>.
 
 <br><br><hr><br>
 
@@ -90,11 +88,11 @@ Android je bezpečně nastaven již v základu, není ovšem od věci podívat s
 - Otevřete si aplikaci <span class="green">Nastavení</span>.
 - Nalezněte podkategorii **Zabezpečení** a otevřete ji.
 - Nemáte-li, nastavte si <span class="green">zámek obrazovky</span>.
-<li style="list-style-type: none">![andset](https://mople71.cz/faq/andset.png)</li>
+<li style="list-style-type: none">![andset](https://faq.mople71.cz/img/cs/andset.png)</li>
 - Ověřte nastavení šifrování úložište telefonu.
-<li style="list-style-type: none">![andset1](https://mople71.cz/faq/andset1.png)</li>
+<li style="list-style-type: none">![andset1](https://faq.mople71.cz/img/cs/andset1.png)</li>
 - Ověřte vypnutou instalaci aplikací z <span class="green">neznámých zdrojů</span>.
-<li style="list-style-type: none">![andset2](https://mople71.cz/faq/andset2.png)</li>
+<li style="list-style-type: none">![andset2](https://faq.mople71.cz/img/cs/andset2.png)</li>
 - Aplikaci zavřete.
 
 <br>
@@ -106,12 +104,12 @@ Pod uživatelem hosta můžete relativně bezpečně např. prohlížet rizikov�
 
 - Stáhněte dolů notifikační lištu dvěma prsty, případně ji rozšiřte kliknutím na šipku v pravém horním rohu.
 - V pravé horní liště klikněte na obrázek svého uživatelského účtu.
-<li style="list-style-type: none">![andg](https://mople71.cz/faq/andg.png)</li>
+<li style="list-style-type: none">![andg](https://faq.mople71.cz/img/cs/andg.png)</li>
 - Zobrazí se seznam uživatelských účtů. Klikněte na tlačítko <span class="green">Přidat hosta</span>.
-<li style="list-style-type: none">![andg1](https://mople71.cz/faq/andg1.png)</li>
+<li style="list-style-type: none">![andg1](https://faq.mople71.cz/img/cs/andg1.png)</li>
 - Budete automaticky přepnuti na uživatele hosta.
 - Jakmile z účtu hosta budete chtít odejít, stáhněte notifikační lištu a klikněte na tlačítko <span class="green">Odstranit hosta</span>.
-<li style="list-style-type: none">![andg2](https://mople71.cz/faq/andg2.png)</li>
+<li style="list-style-type: none">![andg2](https://faq.mople71.cz/img/cs/andg2.png)</li>
 - Odstranění potvrďte.
 
 <br><br><hr><br>
@@ -181,14 +179,14 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 - Otevřete si aplikaci <span class="green">Nastavení</span>.
 - Nalezněte podkategorii **Aplikace** a otevřete ji.
 - V pravém horním rohu klikněte na <span class="green">ozubené kolo</span>.
-<li style="list-style-type: none">![andapp](https://mople71.cz/faq/andapp.png)</li>
+<li style="list-style-type: none">![andapp](https://faq.mople71.cz/img/cs/andapp.png)</li>
 - Klikněte na <span class="green">Oprávnění aplikací</span>.
 - Otevřete postupně všechny kategorie a zakažte všem aplikacím nepotřebný přístup.
-<li style="list-style-type: none">![andapp1](https://mople71.cz/faq/andapp1.png)</li>
-<li style="list-style-type: none">![andapp2](https://mople71.cz/faq/andapp2.png)</li>
+<li style="list-style-type: none">![andapp1](https://faq.mople71.cz/img/cs/andapp1.png)</li>
+<li style="list-style-type: none">![andapp2](https://faq.mople71.cz/img/cs/andapp2.png)</li>
 - Po dokončení nastavení oprávnění se z kategorie **Oprávnění aplikací** přesuňte o úroveň výše a otevřete si <span class="green">Speciální přístup</span>.
 - Zde můžete nastavit např. které aplikace mají přístup k prémiovým SMS nebo mohou na pozadí neomezeně používat mobilní data.
-<li style="list-style-type: none">![andapp3](https://mople71.cz/faq/andapp3.png)</li>
+<li style="list-style-type: none">![andapp3](https://faq.mople71.cz/img/cs/andapp3.png)</li>
 - Aplikaci zavřete.
 
 <br>
@@ -199,7 +197,7 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 
 XPrivacy primárně nahrazuje Java API novým kódem a často pouze kódem strany klienta &ndash; většina dat může být stále získána. Například skrývá sériové číslo v Java system property API (<a href="https://github.com/M66B/XPrivacy/blob/master/src/biz/bokhorst/xprivacy/XSystemProperties.java" target="_blank">link</a>). Sériové číslo je ovšem stále přístupné nativnímu kódu, případně Java kódu používajícímu jiné rozhraní pro přístup. Tímto způsobem evidentně (ne)funguje větší část XPrivacy.
 
-Mít bezpečnostní aplikaci, kterou lze obejít i bez exploitace, moc nemá smysl. ![wink](https://mople71.cz/sm/wink.gif)
+Mít bezpečnostní aplikaci, kterou lze obejít i bez exploitace, moc nemá smysl. ![wink](https://mople71.cz/img/sm/wink.gif)
 
 <br>
 
@@ -220,7 +218,7 @@ Prohlížeč samozřejmě závisí na osobních preferencích. Přesto je fakt, 
 - Klikněte na <span class="green">Nastavení webu</span>.
 - Zobrazí se nastavení určující, které internetové stránky mají jaké konkrétní pravomoce. Otevřete podkategorii <span class="green">JavaScript</span>.
 - Kliknutím vypněte JavaScript a následně přidejte výjimky pro všechny stránky, jejichž JS potřebujete.
-<li style="list-style-type: none">![andchr](https://mople71.cz/faq/andchr.png)</li>
+<li style="list-style-type: none">![andchr](https://faq.mople71.cz/img/cs/andchr.png)</li>
 - Aplikaci zavřete.
 
 <br><br><hr><br>
@@ -242,4 +240,4 @@ Seznam je řazen od nejbezpečnější po nejméně bezpečnou.
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/sm/smile.gif)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.gif)</h3>

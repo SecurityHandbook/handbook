@@ -82,9 +82,9 @@ Na Arch Linux není problém provozovat RBAC, TOMOYO nebo AppArmor. SELinux je o
 
 > Instalace TOMOYO Linux
 
-![idea](https://mople71.cz/sm/idea.gif) TOMOYO Linux není příliš rozšířený MAC a velmi těžko někde naleznete profily pro aplikace. Budete si je tedy muset sami vytvořit (příp. přepsat z AppArmor profilů &ndash; ty jsou všude).
+![idea](https://mople71.cz/img/sm/idea.gif) TOMOYO Linux není příliš rozšířený MAC a velmi těžko někde naleznete profily pro aplikace. Budete si je tedy muset sami vytvořit (příp. přepsat z AppArmor profilů &ndash; ty jsou všude).
 
-![idea](https://mople71.cz/sm/idea.gif) Dokumentaci k TOMOYO Linux naleznete <a href="http://tomoyo.osdn.jp/2.5/index.html.en" target="_blank">zde</a>.
+![idea](https://mople71.cz/img/sm/idea.gif) Dokumentaci k TOMOYO Linux naleznete <a href="http://tomoyo.osdn.jp/2.5/index.html.en" target="_blank">zde</a>.
 
 - Nepoužíváte-li **linux-grsec** kernel, musíte si zkompilovat vlastní. Návod na kompilaci jádra naleznete v sekci <a href="#lnx2.1">Grsecurity</a>. Případně můžete využít předkompilovaný kernel z <a href="https://aur.archlinux.org/packages/linux-lts-tomoyo/" target="_blank">AUR</a>.
 - Povolte TOMOYO Linux v GRUB:
@@ -141,7 +141,7 @@ PROFILE_VERSION=20110903
 - Otevřete konfiguraci TOMOYO pro aplikace:
 <li style="list-style-type: none"><pre><code>sudo tomoyo-editpolicy</code></pre></li>
 - Šipkami se posunujete mezi aplikacemi. Profil aplikace změníte klávesou <span class="red">S</span>, zadáním čísla profilu a stisknutím **Enter**.
-<li style="list-style-type: none">![exclaim](https://mople71.cz/sm/exclaim.gif) TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spuštěny.</li>
+<li style="list-style-type: none">![exclaim](https://mople71.cz/img/sm/exclaim.gif) TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spuštěny.</li>
 <li style="list-style-type: none"><pre><code>0     #bez přístupu k internetu
 1     #s přístupem k internetu
 </code></pre></li>
@@ -151,7 +151,7 @@ PROFILE_VERSION=20110903
 
 > RBAC
 
-![idea](https://mople71.cz/sm/idea.gif) Více informací naleznete <a href="https://wiki.archlinux.org/index.php/Grsecurity#RBAC" target="_blank">zde</a>.
+![idea](https://mople71.cz/img/sm/idea.gif) Více informací naleznete <a href="https://wiki.archlinux.org/index.php/Grsecurity#RBAC" target="_blank">zde</a>.
 
 - Pro ovládání RBAC potřebujete následující balíček:
 <li style="list-style-type: none"><pre><code>pacman -S gradm</code></pre></li>
@@ -189,7 +189,7 @@ Kernel s grsecurity nabízí mnoho distribucí &ndash; Alpine, Hardened Gentoo, 
 
 <span class="red">Bohužel, grsecurity patchsety již nebudou zdarma, bezplatně dostupné patchsety končí s LTS verzí kernelu 4.9.</span>
 
-![arrow](https://mople71.cz/sm/arrow.gif) Jakmile zmíněný kernel dosáhne EOL, zřejmě bude nutné si za patchsety platit...
+![arrow](https://mople71.cz/img/sm/arrow.gif) Jakmile zmíněný kernel dosáhne EOL, zřejmě bude nutné si za patchsety platit...
 
 > Instalace Grsecurity
 
@@ -208,7 +208,7 @@ Kernel s grsecurity nabízí mnoho distribucí &ndash; Alpine, Hardened Gentoo, 
 
 > Ruční konfigurace a kompilace kernelu s Grsecurity
 
-![idea](https://mople71.cz/sm/idea.gif) Konfigurace patchsetu v předkompilovaném balíčku může být příliš striktní a nemusí se vám podařit nabootovat. V takovém případě je třeba identifikovat problém a kernel si následně zkompilovat ručně. Arch Linux to umožňuje velmi snadno díky *ABS*.
+![idea](https://mople71.cz/img/sm/idea.gif) Konfigurace patchsetu v předkompilovaném balíčku může být příliš striktní a nemusí se vám podařit nabootovat. V takovém případě je třeba identifikovat problém a kernel si následně zkompilovat ručně. Arch Linux to umožňuje velmi snadno díky *ABS*.
 
 - Nainstalujte si ABS a GPG:
 <li style="list-style-type: none"><pre><code>sudo pacman -S abs gnupg
@@ -250,7 +250,7 @@ Balíčky neobsahující zmíněné mitigace je tedy nutné zkompilovat ručně.
 
 > Audit mitigací běžících procesů
 
-![idea](https://mople71.cz/sm/idea.gif) Pro audit použijeme skript **checksec**, který je podrobněji rozebírán níže.
+![idea](https://mople71.cz/img/sm/idea.gif) Pro audit použijeme skript **checksec**, který je podrobněji rozebírán níže.
 
 <pre><code>checksec --proc-all</code></pre>
 
@@ -345,4 +345,4 @@ Checksec je skript určený pro kontrolu nastavení kernelu a zobrazení *memory
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/sm/smile.gif)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.gif)</h3>

@@ -3,7 +3,7 @@ Linux se díky svému minoritnímu zastoupení na desktopech těší řádově m
 
 Není tedy pravda, že malware na desktopový Linux neexistuje. Pouze máte o něco menší šanci, že na něj někdy narazíte. Pokud by se ovšem tak stalo, je dobré být předem připraven. V této sekci naleznete několik jednoduchých tipů na účinné zvýšení úrovně zabezpečení.
 
-Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Pro pokročilé uživatele je zde sekce v <a href="https://mople71.cz/faq/lin/adv.html#lin">FAQ pro pokročilé</a>.
+Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Pro pokročilé uživatele je zde sekce v <a href="https://faq.mople71.cz/cs/lin/adv.html#lin">FAQ pro pokročilé</a>.
 #### FAQ se dělí na několik sekcí:
 - doporučené distribuce
 - bezpečné nastavení OS
@@ -41,7 +41,7 @@ Malware se často spouští z dočasných složek. Zakázání exekuce spustitel
 - Rozklikněte nabídku **schémat rozdělení** a zvolte <span class="green">Standardní oddíl</span>.
 - Klikněte na tlačítko <span class="green">+</span> dole pro přidání oddílu.
 - Do kolonky velikost zadejte plnou velikost disku/velikost, kterou chcete vyhradit pro Fedoru, akorát od ní odečtěte <span class="blue">4 GiB</span>.
-<li style="list-style-type: none">![tmp1](https://mople71.cz/faq/fe/tmp1.png)</li>
+<li style="list-style-type: none">![tmp1](https://faq.mople71.cz/img/cs/tmp1.png)</li>
 - Přípojný bod zvolte "<span class="red">/</span>" a klikněte na <span class="green">Přidat bod připojení</span>.
 - Klikněte na tlačítko <span class="green">+</span> dole pro přidání oddílu.
 - Přípojný bod zvolte "<span class="red">/tmp</span>".
@@ -58,7 +58,7 @@ gedit /etc/fstab</code></pre></li>
 - V textovém souboru šipkami nalezněte řádek, který obsahuje "<span class="red">/tmp</span>". Řádek by měl vypadat následovně:
 <li style="list-style-type: none"><pre><code>UUID=... /tmp           ext4    defaults   1   2</code></pre></li>
 - Na řádku nalezněte slovo "<span class="green">defaults</span>" a a za něj dopište "<span class="red">,nodev,noexec,nosuid</span>". Fstab tedy bude vypadat následovně:
-<li style="list-style-type: none">![fstab](https://mople71.cz/faq/fe/fstab.png)</li>
+<li style="list-style-type: none">![fstab](https://faq.mople71.cz/img/en/fstab.png)</li>
 - V horním pravém rohu klikněte na tlačítko <span class="green">Uložit</span>. Aplikaci zavřete a následně zavřete i konzoli.
 
 <br>
@@ -90,16 +90,16 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento <a href="https://www.
 
 - Otevřete si <span class="green">Nastavení</span> a klikněte na položku <span class="green">Síť</span>.
 - V seznamu vyhledejte připojení, které používáte (Drátové/WiFi), klikněte na něj a následně klikněte v pravém dolním rohu na ozubené kolo.
-<li style="list-style-type: none">![dnssec](https://mople71.cz/faq/fe/dnssec.png)</li>
+<li style="list-style-type: none">![dnssec](https://faq.mople71.cz/img/cs/dnssec.png)</li>
 - Přepněte se do záložky IPv4 a vypněte možnost <span class="green">Automatické DNS</span>.
 - Do kolonky **Server** vepište:
 <li style="list-style-type: none"><pre><code>217.31.204.130</code></pre></li>
 - Klikněte na tlačítko <span class="green">+</span> pod kolonkou **Server**.
 - Objeví se další kolonka Server, do ní vepište:
 <li style="list-style-type: none"><pre><code>193.29.206.206</code></pre></li>
-<li style="list-style-type: none">![dnssec1](https://mople71.cz/faq/fe/dnssec1.png)</li>
+<li style="list-style-type: none">![dnssec1](https://faq.mople71.cz/img/cs/dnssec1.png)</li>
 - Klikněte na tlačítko <span class="green">Použít</span> a Nastavení zavřete.
-<li style="list-style-type: none">![idea](https://mople71.cz/sm/idea.gif) Další doporučené DNS servery:</li>
+<li style="list-style-type: none">![idea](https://mople71.cz/img/sm/idea.gif) Další doporučené DNS servery:</li>
 <li style="list-style-type: none"><pre><code>Adguard DNS:         176.103.130.130, 176.103.130.131
 OpenDNS:             208.67.222.222, 208.67.220.220</code></pre></li>
 
@@ -153,7 +153,7 @@ Firejail je solidní aplikace umožňující sandbox rizikových aplikací &ndas
 
 Osobně doporučuji upřednostnit **Flatpak**.
 
-![idea](https://mople71.cz/sm/idea.gif) Používate-li aplikaci s integrovaným sandboxem jako např. **Chrome/ium**, rozhodně ji nesandboxujte pomocí firejail, integrovaný sandbox je řádově účinnější.
+![idea](https://mople71.cz/img/sm/idea.gif) Používate-li aplikaci s integrovaným sandboxem jako např. **Chrome/ium**, rozhodně ji nesandboxujte pomocí firejail, integrovaný sandbox je řádově účinnější.
 
 > Instalace Firejail
 
@@ -169,7 +169,7 @@ chmod u+s /usr/bin/firejail</code></pre></li>
 - Následující příkaz budete (bohužel) muset vždy spustit po aktualizaci aplikace firejail:
 <li style="list-style-type: none"><pre><code>sudo chmod u+s /usr/bin/firejail</code></pre></li>
 - Následujícím příkazem nastavíte automatické spouštění všech podporovaných aplikací v běžném sandboxu, pokud nainstalujete zbrusu novou podporovanou aplikaci, musíte příkaz zopakovat:
-<li style="list-style-type: none">![exclaim](https://mople71.cz/sm/exclaim.gif) Máte-li nainstalovanou aplikaci **Chromium** / **Google Chrome**, před použitím následujícího příkazu ji musíte nejprve odinstalovat a po použití příkazu následně opět nainstalovat.</li>
+<li style="list-style-type: none">![exclaim](https://mople71.cz/img/sm/exclaim.gif) Máte-li nainstalovanou aplikaci **Chromium** / **Google Chrome**, před použitím následujícího příkazu ji musíte nejprve odinstalovat a po použití příkazu následně opět nainstalovat.</li>
 <li style="list-style-type: none"><pre><code>sudo firecfg</code></pre></li>
 - Aplikaci můžete spustit v sandboxu zadáním následujícího příkazu do konzole:
 <li style="list-style-type: none"><pre><code>firejail nazev_aplikace
@@ -186,7 +186,7 @@ např. firejail --private firefox</code></pre></li>
 <li style="list-style-type: none"><pre><code>firejail --net=none nazev_aplikace
 např. firejail --net=none evince</code></pre></li>
 
-![idea](https://mople71.cz/sm/idea.gif) Více užitečných příkazů naleznete na <a href="https://firejail.wordpress.com/" target="_blank">oficiálních stránkách aplikace</a>.
+![idea](https://mople71.cz/img/sm/idea.gif) Více užitečných příkazů naleznete na <a href="https://firejail.wordpress.com/" target="_blank">oficiálních stránkách aplikace</a>.
 
 <br>
 
@@ -228,4 +228,4 @@ Z bezpečnostního hlediska doporučuji prohlížeč <span class="green">Chromiu
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/sm/smile.gif)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.gif)</h3>

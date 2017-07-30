@@ -23,16 +23,16 @@ Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, je
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Rodina a jiní uživatelé</span>.
 - Klikněte na tlačítko <span class="green">Přidat do tohoto počítače někoho dalšího</span>.
 
-![us](https://mople71.cz/faq/us.png)
+![us](https://faq.mople71.cz/img/cs/us.png)
 - Otevře se dialog pro přidání nového uživatele. V levém dolním rohu klikněte na <span class="green">Nemám přihlašovací údaje této osoby</span>.
 - V levém dolním rohu zvlote možnost <span class="green">Přidat uživatele bez účtu Microsoft</span>.
 - Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné zapamatovatelné heslo.
 - V seznamu jiných uživatelů se zobrazí účet **Admin**. Klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
 
-![us1](https://mople71.cz/faq/us1.png)
+![us1](https://faq.mople71.cz/img/cs/us1.png)
 - Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Správce</span> a klikněte na <span class="green">OK</span>.
 
-![us2](https://mople71.cz/faq/us2.png)
+![us2](https://faq.mople71.cz/img/cs/us2.png)
 - Odhlaste se z vašeho účtu a přihlaste se jako **Admin**.
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Rodina a jiní uživatelé</span>.
 - V seznamu jiných uživatelů nalezněte svůj účet, klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
@@ -41,7 +41,7 @@ Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, je
 
 > Přidání účtu Správce (starší verze Windows):
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/cs/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>control userpasswords</code></pre>
 a stiskněte **Enter**.</li>
 - Otevře se nastavení uživatelského účtu. Klikněte na možnost <span class="green">Spravovat jiný účet</span> a vytvořte Standardní účet s omezenými oprávněními, ze kterého můžete prohlížet internet apod.
@@ -58,7 +58,7 @@ Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <a href="http
 
 > Kontrola nastavení aktualizací OS (starší verze Windows):
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/cs/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>wuapp</code></pre>
 a stiskněte **Enter**.</li>
 - V levém panelu klikněte na tlačítko <span class="green">Změnit nastavení</span>.
@@ -74,23 +74,23 @@ User Account Control je důležitá součást bezpečnostního modelu OS od Wind
 
 > Nastavení UAC:
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/cs/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>useraccountcontrolsettings</code></pre>
 a stiskněte **Enter**.</li>
 - Otevře se nastavení UAC. To změňte na nejvyšší možnost.
-<li style="list-style-type: none">![uac](https://mople71.cz/faq/uac.png)</li>
+<li style="list-style-type: none">![uac](https://faq.mople71.cz/img/cs/uac.png)</li>
 - Klikněte na <span class="green">OK</span>.
 
 <br>
 
 ### Vypnutí nebezpečných služeb a funkcí Windows
 
-![idea](https://mople71.cz/sm/idea.gif) Pokročilejší si skript mohou upravit &ndash; je v něm několik zakomentovaných bezpečnostních opatření, které nemohou být aplikovány širokopásmově...
+![idea](https://mople71.cz/img/sm/idea.gif) Pokročilejší si skript mohou upravit &ndash; je v něm několik zakomentovaných bezpečnostních opatření, které nemohou být aplikovány širokopásmově...
 
-![batch](https://mople71.cz/cs/bat.png) **SaferSRV**:
+![batch](https://mople71.cz/img/bat.png) **SaferSRV**:
 - Stáhněte si <a href="https://mople71.cz/safersrv.zip" download='SaferSRV'>SaferSRV</a>.
 - Uložte a obsah archivu vyextrahujte <span class="blue">na Plochu</span>.
-- Na skript jménem <span class="green">safersrv</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/cs/admin.png) **Spustit jako správce**.
+- Na skript jménem <span class="green">safersrv</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/admin.png) **Spustit jako správce**.
 - Nechte skript pracovat, na konci procesu vám řekne o souhlas k restartu OS.
 
 <br>
@@ -98,18 +98,18 @@ a stiskněte **Enter**.</li>
 #### Bezpečné nastavení sítě:
 > Konfigurace síťového adaptéru + DNS
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/cs/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>ncpa.cpl</code></pre>
 a stiskněte **Enter**.</li>
 - Otevře se seznam síťových adaptérů. Klikněte na první adaptér (obvykle ethernet) pravým tlačítkem a zvolte možnost <span class="green">Vlastnosti</span>.
-<li style="list-style-type: none">![vlastnosti](https://mople71.cz/faq/net.png)</li>
+<li style="list-style-type: none">![vlastnosti](https://faq.mople71.cz/img/cs/net.png)</li>
 - V seznamu odškrtněte všechny nepotřebné položky. Běžným uživatelům stačí ponechat pouze <span class="green">Sdílení souborů a tiskáren v sítích Microsoft</span>, <span class="green">Protokol IP verze 4 (TCP/IPv4)</span> a <span class="green">Protokol IP verze 6 (TCP/IPv6)</span>.
 - Pokud nesdílíte žádnou tiskárnu v síti a nepoužíváte IPv6 (pokud nevíte, zdali používáte IPv6, můžete to zjistil pomocí následujícího rychlého <a href="http://www.test-ipv6.cz/" target="_blank">online testu</a>), můžete pro vyšší bezpečnost ponechat zaškrtnutý pouze <span class="green">Protokol IP verze 4 (TCP/IPv4)</span>.
-<li style="list-style-type: none">![vlastnosti2](https://mople71.cz/faq/net1.png)</li>
+<li style="list-style-type: none">![vlastnosti2](https://faq.mople71.cz/img/cs/net1.png)</li>
 - Klikněte na **Protokol IP verze 4 (TCP/IPv4)** a zvolte možnost <span class="green">Vlastnosti</span>.
-<li style="list-style-type: none">![vlastnosti3](https://mople71.cz/faq/net2.png)</li>
+<li style="list-style-type: none">![vlastnosti3](https://faq.mople71.cz/img/cs/net2.png)</li>
 
-![arrow](https://mople71.cz/sm/arrow.gif) <span class="green">Nyní nastavíme bezpečné DNS servery.</span>
+![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Nyní nastavíme bezpečné DNS servery.</span>
 - Pokud nevíte, co DNS je, přečtěte si tento <a href="https://www.nic.cz/page/312/o-domenach-a-dns/" target="_blank">krátký článek</a>.
 - Doporučuji použít DNSSEC. Ale můžete si vybrat z mnoha DNS serverů, zde je pár příkladů:
 <li style="list-style-type: none"><pre><code>CZ.NIC DNSSEC:        217.31.204.130, 193.29.206.206
@@ -117,10 +117,10 @@ Adguard DNS:          176.103.130.130, 176.103.130.131
 OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
 - Po zvolení DNS serverů se přepněte zpět do okna Vlastností IPv4 protokolu.
 - Klikněte na <span class="green">Použít následující adresy serverů DNS</span> a do kolonek vepište vámi zvolené DNS.
-<li style="list-style-type: none">![vlastnosti4](https://mople71.cz/faq/net3.png)</li>
+<li style="list-style-type: none">![vlastnosti4](https://faq.mople71.cz/img/cs/net3.png)</li>
 - Klikněte na <span class="green">OK</span> a okno zavřete.
 
-![arrow](https://mople71.cz/sm/arrow.gif) <span class="green">Stejný postup aplikujte pro všechny síťové adaptéry v seznamu (obvykle WLAN).</span>
+![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Stejný postup aplikujte pro všechny síťové adaptéry v seznamu (obvykle WLAN).</span>
 
 <br>
 
@@ -129,12 +129,12 @@ OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
 - Vypněte Usnadnění přístupu na přihlašovací obrazovce (pokud nepotřebujete, tak kompletně).
 - Vypněte AutoPlay (<a href="http://windows.microsoft.com/cs-cz/windows/change-autoplay-settings#1TC=windows-7" target="_blank">návod</a>).
 - Vypněte Remote Assistance
-    - Stiskněte kláv. zkratku ![win](https://mople71.cz/cs/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+    - Stiskněte kláv. zkratku ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
     <li style="list-style-type: none"><pre><code>sysdm.cpl</code></pre>
 a stiskněte **Enter**.</li>
     - Zobrazí se Vlastnosti systému.
     - Přesuňte se do záložky **Vzdálený přístup** a odstraňte zatržítko u položky <span class="green">Povolit připojení vzdálené pomoci k tomuto počítači</span>.
-    <li style="list-style-type: none">![sysdm](https://mople71.cz/faq/sysdm.png)</li>
+    <li style="list-style-type: none">![sysdm](https://faq.mople71.cz/img/cs/sysdm.png)</li>
     - Klikněte na <span class="green">OK</span>.
 
 <br><br><hr><br>
@@ -169,7 +169,7 @@ Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &
 - Zkontrolujte, zdali máte zapnuté volby **Ochrana v reálném čase**, **Cloudová ochrana** a **Automatické odesílání vzorků**, případně napravte.
 - Přepněte se do kategorie <span class="green">Řízení aplikací a prohlížečů</span>.
 - Upravte nastavení, aby odpovídalo obrázku níže.
-<li style="list-style-type: none">![wd](https://mople71.cz/faq/wd.png)</li>
+<li style="list-style-type: none">![wd](https://faq.mople71.cz/img/cs/wd.png)</li>
 
 <br>
 
@@ -219,33 +219,33 @@ Windows využívají velké množství mitigací a exploitace samotného OS a ap
 - Stáhněte si nejnovější verzi <a href="https://technet.microsoft.com/en-us/security/jj653751" target="_blank">EMET</a>.
 - Aplikaci nainstalujte, licenci odsouhlaste tlačítkem <span class="green">I Agree</span>.
 - V průběhu instalace se zobrazí okno se základním nastavením aplikace. Zvolte možnost <span class="green">Use Recommended Settings</span> a klikněte na <span class="green">Finish</span>.
-<li style="list-style-type: none">![emet](https://mople71.cz/faq/emet.png)</li>
+<li style="list-style-type: none">![emet](https://faq.mople71.cz/img/en/emet.png)</li>
 - Po dokončení instalace otevřete EMET dvojitým poklepáním na jeho ikonu na hlavním panelu.
-<li style="list-style-type: none">![emet1](https://mople71.cz/faq/emettray.png)</li>
+<li style="list-style-type: none">![emet1](https://faq.mople71.cz/img/en/emettray.png)</li>
 
-![idea](https://mople71.cz/sm/idea.gif) <span class="green">Nyní máte nainstalovaný EMET v základní konfiguraci. Dále musíte nastavit ochranu pro všechny rizikové aplikace.</span>
+![idea](https://mople71.cz/img/sm/idea.gif) <span class="green">Nyní máte nainstalovaný EMET v základní konfiguraci. Dále musíte nastavit ochranu pro všechny rizikové aplikace.</span>
 
 - V horním menu EMET klikněte na tlačítko <span class="green">Apps</span>.
 - Zobrazí se seznam aplikací chráněných EMETem, pro přidání nové klikněte na tlačítko <span class="green">Add Application</span>.
-<li style="list-style-type: none">![emet2](https://mople71.cz/faq/emet2.png)</li>
+<li style="list-style-type: none">![emet2](https://faq.mople71.cz/img/en/emet2.png)</li>
 - Otevře se okno průzkumníka Windows, v něm nalezněte aplikaci, kterou chcete mitigovat pomocí EMET a potvrďte ji. Tento proces opakujte pro všechny aplikace.
 
-![idea](https://mople71.cz/sm/idea.gif) Jaké aplikace mitigovat? Všechny internetové prohlížeče, PDF čtečky, aplikace pracující s archivy (7-zip apod.), přehrávače hudby (VLC), LibreOffice, Steam atd. Veškerý rizikový SW třetí strany. Pokud se ve složce aplikace nachází více spustitelných souborů, mitigujte všechny (kromě odinstalátorů).
+![idea](https://mople71.cz/img/sm/idea.gif) Jaké aplikace mitigovat? Všechny internetové prohlížeče, PDF čtečky, aplikace pracující s archivy (7-zip apod.), přehrávače hudby (VLC), LibreOffice, Steam atd. Veškerý rizikový SW třetí strany. Pokud se ve složce aplikace nachází více spustitelných souborů, mitigujte všechny (kromě odinstalátorů).
 
-![emet3](https://mople71.cz/faq/emet3.png)
+![emet3](https://faq.mople71.cz/img/cs/emet3.png)
 - Pro více rizikovější síťový SW &ndash; webové prohlížeče, Java, Flash, Steam apod. &ndash; zaškrtněte v seznamu <span style="color: #008000">všechny</span> možnosti mitigace kromě <span class="green">Fonts</span>.
 - Pro méně rizikový SW nemusíte zatrhávat mitigace <span class="green">EAF+</span> a <span class="green">ASR</span>. ASR může způsobovat pády aplikací.
-<li style="list-style-type: none">![emet4](https://mople71.cz/faq/emet4.png)</li>
+<li style="list-style-type: none">![emet4](https://faq.mople71.cz/img/en/emet4.png)</li>
 - Po dokončení nastavení všech aplikací zkontrolujte nastavení mitigací, případně opravte dle obrázku:
-<li style="list-style-type: none">![emet5](https://mople71.cz/faq/emet5.png)</li>
+<li style="list-style-type: none">![emet5](https://faq.mople71.cz/img/en/emet5.png)</li>
 - Klikněte na <span class="green">OK</span> a zavřete EMET spolu s vyskakovacím oknem, které se objeví.
 
-![idea](https://mople71.cz/sm/idea.gif) **TIP pro rychlou konfiguraci aplikace:**
+![idea](https://mople71.cz/img/sm/idea.gif) **TIP pro rychlou konfiguraci aplikace:**
 - Pro rychlou konfiguraci aplikace danou aplikaci nejprve spusťte.
 - Otevřete <span class="green">EMET GUI</span>.
 - V listu běžících procesů nalezněte danou aplikaci, klikněte na ni pravým tlačítkem a zvolte možnost <span class="green">Configure Process...</span>
 - Otevře se nastavení aplikací s nově přidanou zvolenou aplikací, pro kterou následně nakonfigurujte mitigace, a klikěnte na <span class="green">OK</span>.
-<li style="list-style-type: none">![emet6](https://mople71.cz/faq/emet6.png)</li>
+<li style="list-style-type: none">![emet6](https://faq.mople71.cz/img/en/emet6.png)</li>
 
 <br>
 
@@ -258,15 +258,15 @@ Windows využívají velké množství mitigací a exploitace samotného OS a ap
 - Aplikaci otevřete.
 - Klikněte na ozubené kolečko v pravém horním rohu a zvolte možnost <span class="green">Advanced interface</span>.
 - Následně v dolní části klikněte na možnost **Safety notification** a zvolte možnost <span class="green">At application start</span>.
-<li style="list-style-type: none">![hmpa](https://mople71.cz/faq/hmpa.png)</li>
+<li style="list-style-type: none">![hmpa](https://faq.mople71.cz/img/en/hmpa.png)</li>
 - Následně klikněte na kategorii <span class="green">Risk reduction</span> a zapněte všechny její funkce, které nejsou vypnuté. Funkce, které již jsou zapnuté, ponechte na výchozím nastavení.
 - Při otevření prohlížeče nebo jiné chráněné aplikace se při ponechání myši na pár sekund na kraji jejího okna  zobrazí ohraničení, které signalizuje, že HMP.A chrání danou aplikaci a také ukazuje, které funkce HMP.A jsou pro danou aplikaci zapnuté. Mimo jiné se objeví notifikace o zapnutí ochrany pro danou aplikaci.
-<li style="list-style-type: none">![hmpa1](https://mople71.cz/faq/hmpa1.png)</li>
-<li style="list-style-type: none">![hmpa2](https://mople71.cz/faq/hmpa2.png)</li>
+<li style="list-style-type: none">![hmpa1](https://faq.mople71.cz/img/en/hmpa1.png)</li>
+<li style="list-style-type: none">![hmpa2](https://faq.mople71.cz/img/en/hmpa2.png)</li>
 - Při zachycení útoku HMP.A školivou aplikaci ukončí a zobrazí následující hlášku:
-<li style="list-style-type: none">![hmpa3](https://mople71.cz/faq/hmpa3.png)</li>
+<li style="list-style-type: none">![hmpa3](https://faq.mople71.cz/img/en/hmpa3.png)</li>
 
-![idea](https://mople71.cz/sm/idea.gif) Více se dozívte v <a href="http://dl.surfright.nl/HitmanPro%20Alert%20Getting%20Started.pdf">manuálu</a>.
+![idea](https://mople71.cz/img/sm/idea.gif) Více se dozívte v <a href="http://dl.surfright.nl/HitmanPro%20Alert%20Getting%20Started.pdf">manuálu</a>.
 
 <br>
 
@@ -293,27 +293,27 @@ Většinou funguje na bázi *whitelistu* &ndash; má nastaveno, které spustitel
 - Jakmile budete dotázáni na volbu módu, zvolte <span class="green">Application Whitelisting Mode</span>.
 - Po instalaci klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a vyberte možnost <span class="green">Hide</span>, čímž skryjete štít z pracovního prostoru.
 - Klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Training</span>.
-<li style="list-style-type: none">![vs](https://mople71.cz/faq/vs.png)</li>
+<li style="list-style-type: none">![vs](https://faq.mople71.cz/img/en/vs.png)</li>
 - Nyní se VoodooShield učí aplikace, které používáte, a povoluje je. V tréninkovém módu postupně spusťte všechny aplikace, které používáte. Ideální je v tréninkovém módu PC používat jeden den, aby VoodooShield vše stihl zapsat.
 - Po ukončení tréniku VoodooShield klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Always On</span>.
-<li style="list-style-type: none">![vs1](https://mople71.cz/faq/vs1.png)</li>
+<li style="list-style-type: none">![vs1](https://faq.mople71.cz/img/en/vs1.png)</li>
 
-![arrow](https://mople71.cz/sm/arrow.gif) <span class="green">To je vše, nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když budete chtít instalovat libovolnou aplikaci, zvolte **Disable/Install Mode**.</span>
+![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">To je vše, nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když budete chtít instalovat libovolnou aplikaci, zvolte **Disable/Install Mode**.</span>
 
-![idea](https://mople71.cz/sm/idea.gif) Pokud vaše bezpečnostní konfigurace obsahuje aplikaci <span class="red">EMET</span>, můžete v něm nastavit ochranu aplikace VoodooShield. Tím ztížíte exploitaci VoodooShield.
-![vs6](https://mople71.cz/faq/vs6.png)
+![idea](https://mople71.cz/img/sm/idea.gif) Pokud vaše bezpečnostní konfigurace obsahuje aplikaci <span class="red">EMET</span>, můžete v něm nastavit ochranu aplikace VoodooShield. Tím ztížíte exploitaci VoodooShield.
+![vs6](https://faq.mople71.cz/img/en/vs6.png)
 
 #### Ukázky a poznatky z provozu:
 (obrázky jsou pouze ilustrativní)
 
 - Když VS zablokuje neznámou, ale možná bezpečnou aplikaci, zobrazí následující bublinu:
-<li style="list-style-type: none">![vs2](https://mople71.cz/faq/vs2.png)</li>
+<li style="list-style-type: none">![vs2](https://faq.mople71.cz/img/en/vs2.png)</li>
 - Pokud chcete aplikaci povolit, na bublinu klikněte a v následujícím okně zvolte možnost <span class="green">Install</span>.
-<li style="list-style-type: none">![vs3](https://mople71.cz/faq/vs3.png)</li>
+<li style="list-style-type: none">![vs3](https://faq.mople71.cz/img/en/vs3.png)</li>
 - Když VS zablokuje aplikaci, kterou detekuje alespoň 1 antivirový produkt nebo VoodooAI jako malware, zobrazí následující bublinu:
-<li style="list-style-type: none">![vs4](https://mople71.cz/faq/vs4.png)</li>
+<li style="list-style-type: none">![vs4](https://faq.mople71.cz/img/en/vs4.png)</li>
 - Zde je povolení o pár kliků delší. Klikněte na bublinu, v následujícím okně zvolte možnost <span class="green">Allow False Positive</span> a odsouhlaste veškerá vyskakovací okna.
-<li style="list-style-type: none">![vs5](https://mople71.cz/faq/vs5.png)</li>
+<li style="list-style-type: none">![vs5](https://faq.mople71.cz/img/en/vs5.png)</li>
 - Po povolení aplikace a provedení vámi požadované akce se vždy přesvědčte, že VS běží v módu <span class="green">Always On</span>.
 
 <br>
@@ -346,10 +346,10 @@ Nejbezpečnější způsob virtualizace je virtuální počítač při korektní
 - Aplikaci nainstalujte a projděte úvodním tutoriálem.
 - Otevřete **Ovládání Sandboxie**.
 - Klikněte pravým tlačítkem na **Sandbox DefaultBox** a zvolte možnost <span class="green">Nastavení Sandboxu</span>.
-<li style="list-style-type: none"><img src="https://mople71.cz/faq/sbie2.png" alt="sandboxie"></li>
+<li style="list-style-type: none"><img src="https://faq.mople71.cz/img/cs/sbie2.png" alt="sandboxie"></li>
 - V pravém panelu rozbalte možnost **Vymazat** a klikněte na <span class="green">Smazat pracovní soubory</span>.
 - Zatrhněte možnost <span class="green">Automaticky smazat obsah Sandboxu</span> a klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none"><img src="https://mople71.cz/faq/sbie1.png" alt="sandboxie_2"></li>
+<li style="list-style-type: none"><img src="https://faq.mople71.cz/img/cs/sbie1.png" alt="sandboxie_2"></li>
 
 <br>
 
@@ -408,7 +408,7 @@ Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je 
 
 Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nastavit OS (hlavně účet s omezeným oprávněním). V případě instalace 3-P internetového prohlížeče používat MS Edge pro bankovní účely a podobné citlivé věci. Samozřejmě, pokud zvládáte pokročilou konfiguraci popisovanou v FAQ pro pokročilé, úroveň zabezpečení můžete velmi výrazně zvýšit.
 
-![arrow](https://mople71.cz/sm/arrow.gif) Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.
+![arrow](https://mople71.cz/img/sm/arrow.gif) Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.
 
 <br>
 
@@ -427,8 +427,8 @@ Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nas
 - užitečné aplikace &ndash; **Unchecky**, **HashTab**
 - konfigurace pro pokročilé &ndash; dle znalostí
 
-![arrow](https://mople71.cz/sm/arrow.gif) Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.
+![arrow](https://mople71.cz/img/sm/arrow.gif) Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/sm/smile.gif)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.gif)</h3>

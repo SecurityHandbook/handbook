@@ -1,4 +1,4 @@
-<h3 id="lin4.1" class="chm">![chm](https://mople71.cz/cs/chm16.ico) Chromium:</h3>
+<h3 id="lin4.1" class="chm">![chm](https://mople71.cz/img/cs/chm16.ico) Chromium:</h3>
 
 > Bezpečnější nastavení
 
@@ -6,14 +6,14 @@
 <li style="list-style-type: none"><pre><code>chrome://plugins</code></pre>
 a stiskněte **Enter**.</li>
 - Zobrazí se seznam rozšíření. V seznamu nalezněte **Adobe Flash Player** a deaktivujte jej.
-<li style="list-style-type: none">![ch1](https://mople71.cz/faq/ch1.png)</li>
+<li style="list-style-type: none">![ch1](https://faq.mople71.cz/img/cs/ch1.png)</li>
 - Do adresního řádku prohlížeče zadejte:
 <li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
 a stiskněte **Enter**.</li>
 - Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko <span class="green">Zobrazit rozšířená nastavení...</span>
 - V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu...</span>
 - V sekci **Soubory cookie** zatrhněte možnost <span class="green">Blokovat soubory cookie třetích stran a data webových stránek</span>.
-<li style="list-style-type: none">![ch2](https://mople71.cz/faq/ch2.png)</li>
+<li style="list-style-type: none">![ch2](https://faq.mople71.cz/img/cs/ch2.png)</li>
 - V pravém dolním rohu klikněte na <span class="green">Hotovo</span>.
 - Prohlížeč restartujte.
 
@@ -24,18 +24,18 @@ a stiskněte **Enter**.</li>
 #### Nastavení uBlock:
 
 - Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
-<li style="list-style-type: none">![chublock](https://mople71.cz/faq/chublock.png)</li>
+<li style="list-style-type: none">![chublock](https://faq.mople71.cz/img/cs/chublock.png)</li>
 - Zobrazí se nastavení uBlock Origin. V sekci **Soukromí** zatrhněte možnost <span class="green">Předejít úniku lokálních IP adres přes WebRTC</span>.
 - Následně se přesuňte do záložky <span class="green">Filtry třetích stran</span>.
-<li style="list-style-type: none">![ublock1](https://mople71.cz/faq/ublock1.png)</li>
+<li style="list-style-type: none">![ublock1](https://faq.mople71.cz/img/cs/ublock1.png)</li>
 - Zde vyberte filtry pro blokování webového obsahu. Doporučuji kromě výchozích zvolit následující:</li>
-<li style="list-style-type: none">![ublock2](https://mople71.cz/faq/ublock2.png)</li>
-<li style="list-style-type: none">![ublock3](https://mople71.cz/faq/ublock3.png)</li>
-<li style="list-style-type: none">![ublock4](https://mople71.cz/faq/ublock4.png)</li>
-<li style="list-style-type: none">![ublock5](https://mople71.cz/faq/ublock5.png)</li>
-- Následně v pravém horním rohu klikněte na tlačítko: ![ublock6](https://mople71.cz/faq/ublock6.png)
+<li style="list-style-type: none">![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)</li>
+<li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
+<li style="list-style-type: none">![ublock4](https://faq.mople71.cz/img/cs/ublock4.png)</li>
+<li style="list-style-type: none">![ublock5](https://faq.mople71.cz/img/cs/ublock5.png)</li>
+- Následně v pravém horním rohu klikněte na tlačítko: ![ublock6](https://faq.mople71.cz/img/cs/ublock6.png)
 - Přesuňte se na začátek stránky, zkontrolujte zatržítko u položky <span class="green">Automaticky aktualizovat seznamy filtrů</span> a klikněte na tlačítko <span class="green">Aktualizovat nyní</span>. Během aktualizace panel nezavírejte.
-<li style="list-style-type: none">![ublock7](https://mople71.cz/faq/ublock7.png)</li>
+<li style="list-style-type: none">![ublock7](https://faq.mople71.cz/img/cs/ublock7.png)</li>
 
 > Oddělení prohlížeče od OS a dat
 
@@ -43,7 +43,7 @@ Chromium používá špičkovou implementaci sandboxu.
 
 <br>
 
-<h3 id="win3.4" class="ff">![ff](https://mople71.cz/cs/ff.png) Mozilla Firefox</h3>
+<h3 id="win3.4" class="ff">![ff](https://mople71.cz/img/cs/ff.png) Mozilla Firefox</h3>
 
 > Bezpečnější nastavení
 
@@ -57,8 +57,8 @@ a stiskněte **Enter**.</li>
 - Vyhledávání zobrazí veškeré hodnoty s **OCSP** v názvu. Dvakrát poklepejte myší na následující hodnotu:
 <li style="list-style-type: none"><pre><code>security.OCSP.GET.enabled</code></pre></li>
 - Tím změníte její výchozí nastavení (zapnete/vypnete požadovanou funkci).
-<li style="list-style-type: none">![ff0](https://mople71.cz/faq/ff.png)</li>
-<li style="list-style-type: none"![ff1](https://mople71.cz/faq/ff1.png)</li>
+<li style="list-style-type: none">![ff0](https://faq.mople71.cz/img/cs/ff.png)</li>
+<li style="list-style-type: none"![ff1](https://faq.mople71.cz/img/cs/ff1.png)</li>
 - Výše uvedeným způsobem vyhledejte a změňte výchozí nastavení následujících hodnot:
 <li style="list-style-type: none"><pre><code>accessibility.blockautorefresh  ---  vypíná automatické přesměrování
 browser.pocket.enabled  ---  vypíná službu Pocket
@@ -89,4 +89,4 @@ a stiskněte **Enter**.</li>
 - V levém panelu se přesuňte do záložky <span class="green">Aplikace</span>.
 - Ve sloupci **Akce** rozklikněte pole v řádku **Soubor PDF**.
 - Zvolte vámi preferovanou metodu &ndash; buď se vždy zeptat nebo automaticky PDF soubory stahovat nebo použít na otevření výchozí PDF prohlížeč. Osobně preferuji použít výchozí PDF prohlížeč.
-<li style="list-style-type: none">![ff2](https://mople71.cz/faq/ff2.png)</li>
+<li style="list-style-type: none">![ff2](https://faq.mople71.cz/img/cs/ff2.png)</li>

@@ -26,22 +26,22 @@ Použití FW třetí strany je zbytečné rozšiřování attack surface. Zákla
 
 Co se týče blokování odchozí komunikace, Windows Firewall tuto funkci podporuje a umožňuje vcelku jednoduše nastavit.
 
-![idea](https://mople71.cz/sm/idea.gif) Návod měl původně být v sekci pro méně pokročilé, ovšem z důvodu nepříjemného bugu (nebo funkce) Windows 10 Creators Update, automatické aktualizace OS nelze ve whitelistu rozumně definovat.
+![idea](https://mople71.cz/img/sm/idea.gif) Návod měl původně být v sekci pro méně pokročilé, ovšem z důvodu nepříjemného bugu (nebo funkce) Windows 10 Creators Update, automatické aktualizace OS nelze ve whitelistu rozumně definovat.
 
 > Nastavení WF na blokování odchozí komunikace
 
 - Otevřete si **hledání Windows**, do vyhledávacího pole zadejte:
 <li style="list-style-type: none"><pre><code>wf.msc</code></pre></li>
-- Na nalezenou položku klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/cs/admin.png) **Spustit jako správce**.
-<li style="list-style-type: none">![wf](https://mople71.cz/faq/wf.png)</li>
+- Na nalezenou položku klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/admin.png) **Spustit jako správce**.
+<li style="list-style-type: none">![wf](https://faq.mople71.cz/img/cs/wf.png)</li>
 - Otevře se pokročilé nastavení Windows Firewall. V prostředním sloupci zvolte možnost <span class="green">Vlastnosti brány firewall</span>.
 - V horním panelu si otevřete záložku **Privátní profil**. U položky **Odchozí připojení** zvolte možnost <span class="green">Blokovat</span>.
-<li style="list-style-type: none">![wf1](https://mople71.cz/faq/wf1.png)</li>
+<li style="list-style-type: none">![wf1](https://faq.mople71.cz/img/cs/wf1.png)</li>
 - Postup zopakujte pro záložku **Veřejný profil**.
 - Klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![wf2](https://mople71.cz/faq/wf2.png)</li>
+<li style="list-style-type: none">![wf2](https://faq.mople71.cz/img/cs/wf2.png)</li>
 
-![arrow](https://mople71.cz/sm/arrow.gif) <span class="green">Nyní WF blokuje veškerou odchozí kouminakci, která není na whitelistu. Dále je třeba nastavit whitelist.</span>
+![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Nyní WF blokuje veškerou odchozí kouminakci, která není na whitelistu. Dále je třeba nastavit whitelist.</span>
 
 > Povolení odchozí komunikace pro důležité aplikace
 
@@ -50,14 +50,14 @@ Co se týče blokování odchozí komunikace, Windows Firewall tuto funkci podpo
 - Jako typ pravidla zvolte **Program** a klikněte na tlačítko <span class="green">Další</span>.
 - Zvolte možnost **Cesta k tomuto programu** a klikněte na tlačítko <span class="green">Procházet...</span>
 - Nalezněte a zvolte následující aplikaci: <span class="blue">C:\Windows\System32\smartscreen.exe</span>
-<li style="list-style-type: none">![wf3](https://mople71.cz/faq/wf3.png)</li>
+<li style="list-style-type: none">![wf3](https://faq.mople71.cz/img/cs/wf3.png)</li>
 - Klikněte na tlačítko <span class="green">Další</span>.
 - Zvolte možnost **Povolit připojení** a klikněte na tlačítko <span class="green">Další</span>.
 - Zkontrolujte zatržítka u všech možností a klikněte na tlačítko <span class="green">Další</span>.
 - Zadejte název pravidla &ndash; v tomto případě např. **SmartScreen.exe**
 - Klikněte na <span class="green">Dokončit</span>.
 
-![idea](https://mople71.cz/sm/idea.gif) Stejným způsobem povolte veškeré další aplikace, které potřebují přístup k internetu (např. internetové prohlížeče, "%programfiles%\Windows Defender\MpCmdRun.exe", VoodooShield,...)
+![idea](https://mople71.cz/img/sm/idea.gif) Stejným způsobem povolte veškeré další aplikace, které potřebují přístup k internetu (např. internetové prohlížeče, "%programfiles%\Windows Defender\MpCmdRun.exe", VoodooShield,...)
 
 > Windows Update na Windows 10 (Creators Update)
 
@@ -70,7 +70,7 @@ Je zde několik možností:
 - Instalovat aktualizace 1x měsíčně ručně a WU neřešit.
 - ...
 
-![arrow](https://mople71.cz/sm/arrow.gif) Problémem ovšem je, že přes WU se aktualizují definice Windows Defender, které je důležité mít aktuální.
+![arrow](https://mople71.cz/img/sm/arrow.gif) Problémem ovšem je, že přes WU se aktualizují definice Windows Defender, které je důležité mít aktuální.
 
 Zde existuje také několik možností:
 
@@ -90,8 +90,8 @@ pause</code></pre></li>
 
 > Konfigurace mitigací ve W10 RS2
 
-- Stiskněte kláv. zkratku <img src="https://mople71.cz/cs/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
-<li style="list-style-type: none">![wx](https://mople71.cz/win/wx.png)</li>
+- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
+<li style="list-style-type: none">![wx](https://mople71.cz/img/cs/wx.png)</li>
 - Do příkazové řádky zadejte následující příkaz:
 <li style="list-style-type: none"><pre><code>Install-Module -Name ProcessMitigations</code></pre></li>
 - Přečtěte si manuál <a href="https://technet.microsoft.com/en-us/itpro/windows/keep-secure/overview-of-threat-mitigations-in-windows-10#converting-an-emet-xml-settings-file-into-windows-10-mitigation-policies" target="_blank">zde</a>.
@@ -195,7 +195,7 @@ Pokud je úroveň integrity tokenu menší než úroveň integrity deskriptoru, 
 
 Pravidla určovaná integritní politikou jsou naprosto neoblomná &ndash; aplikaci je natvrdo zamezen přístup a jediné, co s tím může dělat, je úroveň integrity si navýšit. Což samozřejmě jen tak nemůže, může se o to pokusit a vyhodit UAC dialog, ale ten uživatel samozřejmě nechce odsouhlasit. Navíc malware obvykle chce zůstat utajen, dokud nedokončí svoji práci => UAC dialog by ho tak nějak prozradil...
 
-#### ![idea](https://mople71.cz/sm/idea.gif) Vzorový příklad 1:
+#### ![idea](https://mople71.cz/img/sm/idea.gif) Vzorový příklad 1:
 - Aplikaci **Mozilla Firefox** a osobní složky ponecháme na výchozí (=<span class='tip'>střední</span>) úrovni integrity.
 - Přes aplikaci si stáhneme do **Stažených souborů** nějaký pěkný ransomware.</li>
 - Ransomware získává (dědí) <span class='tip'>střední</span> úroveň integrity => má právo na neomezenou operaci s objekty střední úrovně integrity.
@@ -208,7 +208,7 @@ Pravidla určovaná integritní politikou jsou naprosto neoblomná &ndash; aplik
 
 <span class="red">Uživatelská data</span> <span style="color: #BF0000">jsou zašifrována</span>, <span style="color: #008000">OS je v bezpečí</span>.
 
-#### ![idea](https://mople71.cz/sm/idea.gif) Vzorový příklad 2:
+#### ![idea](https://mople71.cz/img/sm/idea.gif) Vzorový příklad 2:
 - Aplikaci **Mozilla Firefox** a osobní složky nastavíme na nízkou úroveň integrity.
 - Přes aplikaci si stáhneme do **Stažených souborů** nějaký pěkný ransomware.
 - Ransomware získává (dědí) <span style="color: #BF0000">nízkou</span> úroveň integrity => má právo na neomezenou operaci s objekty nízkou úrovně integrity.
@@ -224,7 +224,7 @@ Pravidla určovaná integritní politikou jsou naprosto neoblomná &ndash; aplik
 
 Většina lépe naprogramovaných malware/ransomware pozná, že běží s nízkou integritou a hrdě spáchají seppuku. Obvykle ověřuje přístupová práva do registrových klíčů, které jsou pro subjekty s <span style="color: #BF0000">nízkou</span> integritou a nižší značně omezené. Exploitace UAC (samo-povýšení) je v jistých případech teoreticky možná a proveditelná se střední úrovní integrity, proces s nízkou úrovní integrity se může jít klouzat...
 
-![arrow](https://mople71.cz/sm/arrow.gif) Integritní politika dokáže při správném nastavení a modelu spolehlivě uchovat vaše soubory v bezpečí. Samozřejmě je teoreticky možné exploitovat chybu ve Windows a s její pomocí sám sobě navýšit úroveň integrity, ale praktická šance, že by takový exploit byl v běžném ransomware, je <span class="red">nulová</span>.
+![arrow](https://mople71.cz/img/sm/arrow.gif) Integritní politika dokáže při správném nastavení a modelu spolehlivě uchovat vaše soubory v bezpečí. Samozřejmě je teoreticky možné exploitovat chybu ve Windows a s její pomocí sám sobě navýšit úroveň integrity, ale praktická šance, že by takový exploit byl v běžném ransomware, je <span class="red">nulová</span>.
 
 Rozdíly v pravomocech procesů <span class='tip'>střední</span> a <span style="color: #BF0000">nízké</span> integrity jsou velké, spouštění prohlížeče jako proces s <span style="color: #BF0000">nízkou</span> integritou tedy má mnoho dalších bezpečnostních benefitů.
 
@@ -246,13 +246,13 @@ Windows má vestavěný nástroj jménem <span class="green">icacls</span>, kter
 SHA-256: 59aa55d2eac6b295d42ef2aadc607b759f034f4557a66dec0214a4cc032ecc17</code></pre></li>
 - Aplikaci přesuňte do umístění: <span class="blue">C:\Windows\System32</span>
     - Klikněte na aplikaci a stiskněte <span class="green">Ctrl + X</span>
-    - Stiskněte kláv. zkratku  ![win](https://mople71.cz/cs/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+    - Stiskněte kláv. zkratku  ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
     <li style="list-style-type: none"><pre><code>C:\Windows\System32</code></pre>
 a stiskněte **Enter**.</li>
     - Otevře se složka System32. Stiskněte <span class="green">Ctrl + V</span> a a potvrďte přesun do složky.
 
-- Stiskněte kláv. zkratku <img src="https://mople71.cz/cs/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
-<li style="list-style-type: none">![wx](https://mople71.cz/win/wx.png)</li>
+- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
+<li style="list-style-type: none">![wx](https://mople71.cz/img/cs/wx.png)</li>
 
 - Do příkazové řádky zadejte následující příkaz pro validaci úspěšné instalace aplikace:
 <li style="list-style-type: none"><pre><code>chml /?</code></pre></li>
@@ -271,7 +271,7 @@ chml C:\Users\(uživ. jméno)\Videos -i:m -nw -nx
 -nr (NO_READ_UP) */</code></pre></li>
 - Stejným způsobem můžete nastavit integritu pro libovolnou privátní složku na disku. Není potřeba nastavovat integritu pro složky nacházející se ve složkách, jejichž úroveň integrity a integritní politika byla již změněna (např. po změně integrity složky Dokumenty není třeba měnit integritu složky Škola nacházející se v Dokumentech). Integritní úroveň a politika se "dědí".
 
-![arrow](https://mople71.cz/sm/arrow.gif) <span class='green'>Nyní máte nastavenou integritní politiku pro vaše privátní složky.</span>
+![arrow](https://mople71.cz/img/sm/arrow.gif) <span class='green'>Nyní máte nastavenou integritní politiku pro vaše privátní složky.</span>
 
 > Tipy
 
@@ -299,7 +299,7 @@ Kontrola přístupu z tokenu aplikace získá jeho SID a následně v ACL seznam
 
 Pokud jste si přečetli teorii, snad máte alespoň matnou představu o tom, jak ACL a kontrola přístupu funguje. Nyní se podívejme na praktické využití.
 
-![idea](https://mople71.cz/sm/idea.gif) Předpoklad pro mnou uvedený příklad využití je separátní administrátorský účet, který beru jako samozřejmost.
+![idea](https://mople71.cz/img/sm/idea.gif) Předpoklad pro mnou uvedený příklad využití je separátní administrátorský účet, který beru jako samozřejmost.
 
 ACL můžeme využít následovně: můžeme zakázat spouštění spustitelných souborů v uživatelských složkách. Běžný uživatel nepotřebuje spouštět ve svých složkách spustitelné soubory &ndash; a pokud ano, nic mu nebrání v přesunutí souboru mimo jeho osobní složky. Výhody jsou doufám jasné &ndash; pokud se malware dostane na disk, nespustí se.
 
@@ -307,20 +307,20 @@ ACL můžeme využít následovně: můžeme zakázat spouštění spustitelnýc
 
 > Odebrání pravomoce exekuce souborů v uživatelských složkách
 
-- Stiskněte kláv. zkratku <img src="https://mople71.cz/cs/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
-<li style="list-style-type: none">![wx](https://mople71.cz/win/wx.png)</li>
+- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
+<li style="list-style-type: none">![wx](https://mople71.cz/img/cs/wx.png)</li>
 - Do příkazové řádky zadejte následující příkazy (cestu ke složce uživatele patřičně upravte):</li>
 <li style="list-style-type: none"><pre><code>icacls "C:\Users\(uživ. jméno)" /c /inheritance:d
 icacls "C:\Users\(uživ. jméno)" /c /deny Everyone:(OI)(CI)(X)</code></pre></li>
 
 > Opětovné přidání pravomoce exekuce souborů v uživatelské složce
 
-- Stiskněte kláv. zkratku <img src="https://mople71.cz/cs/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
-<li style="list-style-type: none">![wx](https://mople71.cz/win/wx.png)</li>
+- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
+<li style="list-style-type: none">![wx](https://mople71.cz/img/cs/wx.png)</li>
 - Do příkazové řádky zadejte následující příkaz (cestu ke složce patřičně upravte):</li>
 <li style="list-style-type: none"><pre><code>icacls "C:\Users\User\AppData\Local\Temp" /remove Everyone /t</code></pre></li>
 
-![idea](https://mople71.cz/sm/idea.gif) V příkladu byla použita složka **Temp**, jejíž pravomoc exekuce obsahujících souborů může být vyžadována některými aplikacemi (včetně systémových &ndash; MS Edge). Každopádně z bezpečnostního hlediska není úplně ideální exekuci ve složce povolit.
+![idea](https://mople71.cz/img/sm/idea.gif) V příkladu byla použita složka **Temp**, jejíž pravomoc exekuce obsahujících souborů může být vyžadována některými aplikacemi (včetně systémových &ndash; MS Edge). Každopádně z bezpečnostního hlediska není úplně ideální exekuci ve složce povolit.
 
 <br><br><hr><br>
 
@@ -331,4 +331,4 @@ AppContainer odděluje aplikace od sebe a částí OS. Podobnou snahu můžeme p
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/sm/smile.gif)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.gif)</h3>

@@ -1,4 +1,4 @@
 # FAQ
-https://mople71.cz/faq/
-
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+https://faq.mople71.cz/cs/
