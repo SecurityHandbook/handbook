@@ -1,4 +1,4 @@
-<h3 id="lin4.1" class="chm">![chm](https://mople71.cz/img/cs/chm16.ico) Chromium:</h3>
+<h3 id="lin4.1" class="chm">![chm](https://mople71.cz/img/chm16.ico) Chromium:</h3>
 
 > Bezpečnější nastavení
 
@@ -58,7 +58,7 @@ Chromium používá špičkovou implementaci sandboxu.
 
 <br>
 
-<h3 id="win3.4" class="ff">![ff](https://mople71.cz/img/cs/ff.png) Mozilla Firefox</h3>
+<h3 id="win3.4" class="ff">![ff](https://mople71.cz/img/ff.png) Mozilla Firefox</h3>
 
 > Bezpečnější nastavení
 

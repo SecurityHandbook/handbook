@@ -1,12 +1,7 @@
-<h3 id="win3.1" class="ch">![ch](https://mople71.cz/img/ch16.png) Google Chrome / Chromium</h3>
+<h3 id="win3.1" class="ch">![ch](https://mople71.cz/img/ch16.png) Google Chrome</h3>
 
 > Bezpečnější nastavení
 
-- Do adresního řádku prohlížeče zadejte:
-<li style="list-style-type: none"><pre><code>chrome://plugins</code></pre>
-a stiskněte **Enter**.</li>
-- Zobrazí se seznam rozšíření. V seznamu nalezněte **Adobe Flash Player** a deaktivujte jej.
-<li style="list-style-type: none">![ch1](https://faq.mople71.cz/img/cs/ch1.png)</li>
 - Do adresního řádku prohlížeče zadejte:
 <li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
 a stiskněte **Enter**.</li>
@@ -69,6 +64,35 @@ Google Chrome používá velmi dobrou implementaci sandboxu.
 
 <br>
 
+<h3 id="lin4.1" class="chm">![chm](https://mople71.cz/img/chm16.ico) Chromium:</h3>
+
+Nechcete-li používat *Google Chrome*, doporučuji použít open-source Chromium, na kterém je *Google Chrome* založen. Chromium na Windows se bohužel neumí automaticky aktualizovat. Můžete ovšem použít komunitní open-source nástroj.
+
+> Instalace a nastavení chrlauncher
+
+- Stáhněte si nejnovější verzi <a href="https://github.com/henrypp/chrlauncher/releases" target="_blank">Chrlauncher</a>.
+- Archiv extrahujte. V závislosti na bitové verzi vašeho OS určete, kterou složku z archivu budete potřebovat (64-bit OS &ndash; složka **64**), a následně ji přesuňte na důstojné místo (ideálně *%localappdata%*, ale stačí *Dokumenty*). Také je vhodné ji přejmenovat.
+- Ve složce nalezněte a otevřete konfigurační soubor <span class="green">chrlauncher.ini</span>.
+- Nalezněte řádek začínající na **ChromiumArchitecture** a za rovnítko vepište požadovanou architekturu (na novějších zařízeních <span class="green">64</span>):
+<li style="list-style-type: none">![chrl](https://faq.mople71.cz/img/en/chrl.png)</li>
+- Sjeďte níže na řádek začínající na **ChromiumType** a za rovnítko vepište druh prohlížeče, který chcete použít. <span class="green">Stable-codecs-nosync</span> je verze s kodeky a bez služeb Google, je tedy doporučena. Naopak *ungoogled-chromium* je neoficiální nebezpečný fork a jeho užití je důrazně <span style="color: #bf0000">nedoporučeno</span>.
+- Zkontrolujte nastavení **ChromiumCheckPeriod**, případně opravte.
+<li style="list-style-type: none">![chrl1](https://faq.mople71.cz/img/en/chrl1.png)</li>
+- Dále zkontrolujte a případně opravte nastavení následujících argumentů:
+<li style="list-style-type: none"><pre><code>ChromiumAutoDownload=true
+ChromiumBringToFront=true
+ChromiumWaitForDownloadEnd=true</code></pre></li>
+- Změny uložte a konfigurační soubor zavřete.
+- Spusťte aplikaci <span class="green">chrlauncher</span>.
+- Chrlauncher následně můžete připnout na panel a nastavit jako výchozí prohlížeč v **Nastavení**.
+<li style="list-style-type: none">![chrl2](https://faq.mople71.cz/img/en/chrl2.png)</li>
+
+> Bezpečnější nastavení a blokování reklam
+
+Použijte návod pro **Google Chrome** výše, je identický.
+
+<br>
+
 <h3 id="win3.2" class="ed">![edge](https://mople71.cz/img/edge16.png) Microsoft Edge</h3>
 
 > Blokování reklamy (AdBlock)
@@ -89,7 +113,7 @@ Google Chrome používá velmi dobrou implementaci sandboxu.
 - Klikněte na tlačítko <span class="green">Přidat</span>.
 
 
-> Blokování reklamy pro pokročilejší (uBlock)
+> Blokování reklamy pro pokročilejší (uBlock origin)
 
 - Otevřete v prohlížeči <a href="https://github.com/nikrolls/uBlock-Edge/releases" target="_blank">následující stránku</a>.
 - Stáhněte si nejnovější verzi <span class="green">uBlock Origin</span>. Doporučena je stabilní a **rc** verze. Užití beta verze zvažte.
@@ -196,22 +220,98 @@ a stiskněte **Enter**.</li>
 - Tím změníte její výchozí nastavení (zapnete/vypnete požadovanou funkci).
 <li style="list-style-type: none">![ff0](https://faq.mople71.cz/img/cs/ff.png)</li>
 <li style="list-style-type: none"![ff1](https://faq.mople71.cz/img/cs/ff1.png)</li>
-- Výše uvedeným způsobem vyhledejte a změňte výchozí nastavení následujících hodnot:
-<li style="list-style-type: none"><pre><code>accessibility.blockautorefresh  ---  vypíná automatické přesměrování
-browser.pocket.enabled  ---  vypíná službu Pocket
-pdfjs.disabled  ---  vypne otevírání PDF v prohlížeči
-security.mixed_content.block_display_content  ---  nezabezpečený obsah
-security.ssl3.ecdhe_ecdsa_rc4_128_sha  ---  slabé šifrování
-security.ssl3.ecdhe_rsa_rc4_128_sha  ---  slabé šifrování
-security.ssl3.rsa_des_ede3_sha  ---  slabé šifrování
-security.ssl3.rsa_rc4_128_md5  ---  slabé šifrování
-security.ssl3.rsa_rc4_128_sha  ---  slabé šifrování
+- Výše uvedeným způsobem vyhledejte a změňte nastavení následujících hodnot (pokud se neshoduje):
+<li style="list-style-type: none"><pre><code>accessibility.blockautorefresh  ---  automatické přesměrování; true
+browser.pocket.enabled  ---  vypíná službu Pocket; false
+extensions.pocket.enabled ---  false
+pdfjs.disabled  ---  vypne otevírání PDF v prohlížeči; true
+security.mixed_content.block_display_content  ---  nezabezpečený obsah; true
+security.ssl3.rsa_null_sha  ---  false
+security.ssl3.rsa_null_md5  ---  false
+security.ssl3.ecdhe_rsa_null_sha  ---  false
+security.ssl3.ecdhe_ecdsa_null_sha  ---  false
+security.ssl3.ecdh_rsa_null_sha  ---  false
+security.ssl3.ecdh_ecdsa_null_sha  ---  false
+security.ssl3.rsa_seed_sha  ---  false
+security.ssl3.rsa_rc4_40_md5  ---  false
+security.ssl3.rsa_rc2_40_md5  ---  false
+security.ssl3.rsa_1024_rc4_56_sha  ---  false
+security.ssl3.rsa_camellia_128_sha  ---  false
+security.ssl3.ecdhe_rsa_aes_128_sha  ---  false
+security.ssl3.ecdhe_ecdsa_aes_128_sha  ---  false
+security.ssl3.ecdh_rsa_aes_128_sha  ---  false
+security.ssl3.ecdh_ecdsa_aes_128_sha  ---  false
+security.ssl3.dhe_rsa_camellia_128_sha  ---  false
+security.ssl3.dhe_rsa_aes_128_sha  ---  false
+security.ssl3.ecdh_ecdsa_rc4_128_sha  ---  false
+security.ssl3.ecdh_rsa_rc4_128_sha  ---  false
+security.ssl3.ecdhe_ecdsa_rc4_128_sha  ---  false
+security.ssl3.ecdhe_rsa_rc4_128_sha  ---  false
+security.ssl3.rsa_rc4_128_md5  ---  false
+security.ssl3.rsa_rc4_128_sha  ---  false
+security.tls.unrestricted_rc4_fallback  ---  false
+security.ssl3.dhe_dss_des_ede3_sha  ---  false
+security.ssl3.dhe_rsa_des_ede3_sha  ---  false
+security.ssl3.ecdh_ecdsa_des_ede3_sha  ---  false
+security.ssl3.ecdh_rsa_des_ede3_sha  ---  false
+security.ssl3.ecdhe_ecdsa_des_ede3_sha  ---  false
+security.ssl3.ecdhe_rsa_des_ede3_sha  ---  false
+security.ssl3.rsa_des_ede3_sha  ---  false
+security.ssl3.rsa_fips_des_ede3_sha  ---  false
+security.ssl3.ecdh_rsa_aes_256_sha  ---  false
+security.ssl3.ecdh_ecdsa_aes_256_sha  ---  false
+security.ssl3.rsa_camellia_256_sha  ---  false
+security.ssl3.dhe_rsa_camellia_256_sha  ---  false
+security.ssl3.dhe_rsa_aes_256_sha  ---  false
+security.ssl3.dhe_dss_aes_128_sha  ---  false
+security.ssl3.dhe_dss_aes_256_sha  ---  false
+security.ssl3.dhe_dss_camellia_128_sha  ---  false
+security.ssl3.dhe_dss_camellia_256_sha  ---  false
+media.peerconnection.ice.no_host --- true
+network.jar.open-unsafe-types  ---  false
+security.xpconnect.plugin.unrestricted  ---  false
+javascript.options.asmjs  ---  false
+shumway.disabled  ---  true
+plugins.click_to_play  ---  true
+network.negotiate-auth.allow-insecure-ntlm-v1  ---  false
+security.insecure_password.ui.enabled  ---  true
+plugins.update.notifyUser  ---  true
+
 
 Volitelné hodnoty:
---------------------
-dom.storage.enabled  ---  vypíná DOM úložiště (bezpečnější, ovšem může být
-                                              vyžadováno některými službami)
-media.peerconnection.enabled  ---  WebRTC</code></pre></li>
+========================
+(mohou znefunkčnit některé stránky, označené hvězdičkou obzvlášť)
+
+*dom.storage.enabled  ---  DOM úložiště; false
+*media.peerconnection.enabled  ---  WebRTC; false
+dom.serviceWorkers.enabled  ---  false
+dom.workers.enabled  ---  false
+geo.enabled  ---  false
+dom.mozTCPSocket.enabled  ---  false
+dom.telephony.enabled  ---  false
+beacon.enabled  ---  false
+media.webspeech.recognition.enable  ---  false
+media.webspeech.synth.enabled  ---  false
+device.sensors.enabled  ---  false
+browser.send_pings  ---  false
+dom.vr.enabled  ---  false
+dom.vibrator.enabled  ---  false
+webgl.disabled  ---  true
+camera.control.face_detection.enabled  ---  false
+keyword.enabled  ---  false
+gfx.font_rendering.opentype_svg.enabled  ---  false
+svg.disabled  ---  false
+devtools.webide.enabled  ---  false
+devtools.debugger.remote-enabled  ---  false
+network.allow-experiments  ---  false
+browser.uitour.enabled  ---  false
+dom.flyweb.enabled  ---  false
+privacy.trackingprotection.enabled  ---  true
+privacy.trackingprotection.pbmode.enabled  ---  true
+privacy.resistFingerprinting  ---  true
+browser.safebrowsing.downloads.remote.enabled  ---  false
+security.pki.sha1_enforcement_level  ---  1
+security.ssl.treat_unsafe_negotiation_as_broken  ---  true</code></pre></li>
 - Do vyhledávacího pole ve vrchní části stránky zadejte:
 <li style="list-style-type: none"><pre><code>flash</code></pre></li>
 - Vyhledávání zobrazí veškeré hodnoty s **OCSP** v názvu. Dvakrát poklepejte myší na následující hodnotu:
