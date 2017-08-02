@@ -210,9 +210,8 @@ Windows využívají velké množství mitigací a exploitace samotného OS a ap
 #### Přehled anti-exploit řešení:
 - <a href="http://www.surfright.nl/en/alert" target="_blank">HitmanPro.Alert</a> (HMP.A)
 - <a href="https://technet.microsoft.com/en-us/security/jj653751" target="_blank">Microsoft Enhanced Mitigation Experience Toolkit</a> (EMET)
-- <a href="https://www.malwarebytes.org/antiexploit/" target="_blank">Malwarebytes Anti-Exploit</a> (MBAE)
 
-<span class="red">EMET</span> je anti-exploit řešení od MS a v nejnovější verzi Windows je již nepotřebný, jelikož veškeré jeho funkce (a mnohem více) jsou nyní integrovány přímo do OS. Návod na podrobnější nastavení těchto funkcí naleznete v FAQ pro pokročilé.
+<span class="red">EMET</span> je anti-exploit řešení od MS a v nejnovější verzi Windows je **již nepotřebný**, jelikož veškeré jeho funkce (a mnohem více) jsou nyní integrovány přímo do OS. Návod na podrobnější nastavení těchto funkcí naleznete v FAQ pro pokročilé.
 
 > Instalace a konfigurace EMET (starší verze Windows)
 
