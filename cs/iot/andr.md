@@ -33,7 +33,7 @@ Veškeré aplikace jsou uzavřeny v sandboxu (*IsolatedProcess*), tudíž každ�
 
 Android **Marshmallow** a výše nabízí rozšířený model oprávnění &ndash; uživatel si může zvolit, k jakým komponentům/souborům bude mít daná aplikace přístup. Vestavěný správce oprávnění zatím není perfektní, jelikož neumožňuje nastavení všech důležitých oprávnění, ale funguje spolehlivě, což se nedá říci o správcích oprávnění třetích stran (např. XPrivacy).
 
-Další funkce závislé na službách Google (např. *SafetyNet*), zde nebudou rozebírány.
+Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect*), zde nebudou rozebírány. Pro další informace o architektuře nahlédněte do návodu <a href="https://guide.mople71.cz/iot/andr_vyber.php" target="_blank">Výběr telefonu &ndash; OS Android</a>.
 
 <br><br><hr><br>
 
@@ -76,7 +76,7 @@ Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se d
 
 ### Zařízení s OS Android splňující bezpečnostní požadavky:
 
-Seznam zařízení naleznete v článku <a href="https://guide.mople71.cz/iot/andr_vyber.php" target="_blank">Výběr telefonu &ndash; OS Android</a>.
+Seznam zařízení naleznete v návodu <a href="https://guide.mople71.cz/iot/andr_vyber.php#vyber2" target="_blank">Výběr telefonu &ndash; OS Android</a>.
 
 <br><br><hr><br>
 
@@ -126,7 +126,8 @@ Obchod s aplikacemi velmi úzce souvisí s bezpečností, jelikož z něj stahuj
 #### Proprietární:
 - Google Play: <a href="https://play.google.com/" target="_blank">https://play.google.com/</a>
 - Amazon: <a href="https://www.amazon.com/appstore" target="_blank">https://www.amazon.com/appstore</a>
-- Yandex.Store: <a href="https://store.yandex.com/" target="_blank">https://store.yandex.com/</a>
+
+*Amazon* má zdlouhavý proces kontroly aplikací (jsou kontrolovány manuálně), proto má témeř vždy zastaralé verze aplikací, zvláště těch, které jsou často aktualizovány.
 
 <br>
 
@@ -202,7 +203,9 @@ Mít bezpečnostní aplikaci, kterou lze obejít i bez exploitace, moc nemá smy
 <br>
 
 ### Internetový prohlížeč:
-Prohlížeč samozřejmě závisí na osobních preferencích. Přesto je fakt, že Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům. Prohlížeče založené na Mozilla Firefox jsou několik let za Chromium v oblasti mitigací proti exploitům, na Androidu je situace ovšem méně kritická než na desktopových OS.
+Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na Linuxu &ndash; tedy i na Androidu. Prohlížeče založené na Mozilla Firefox jsou několik let za Chromium v oblasti mitigací proti exploitům, na Androidu je situace ovšem méně kritická než na desktopových OS.
+
+![Bezpečnostní model Chromium](https://faq.mople71.cz/img/en/chmandr.png)
 
 #### FOSS:
 - Chromium: <a href="https://www.chromium.org/developers/how-tos/android-build-instructions" target="_blank">https://www.chromium.org/developers/how-tos/android-build-instructions</a>  <a href="https://play.google.com/store/apps/details?id=com.anddevw.getchromium" target="_blank">https://play.google.com/store/apps/details?id=com.anddevw.getchromium</a>
@@ -211,15 +214,17 @@ Prohlížeč samozřejmě závisí na osobních preferencích. Přesto je fakt, 
 #### Proprietární:
 - Google Chrome: <a href="https://play.google.com/store/apps/details?id=com.android.chrome" target="_blank">https://play.google.com/store/apps/details?id=com.android.chrome</a>
 
-> Omezení JavaScriptu v Google Chrome
+> Omezení JavaScriptu v Google Chrome / Chromium
 
-- Otevřete si aplikaci <span class="green">Google Chrome</span>.
+- Otevřete si aplikaci <span class="green">Google Chrome</span> / <span class="green">Chromium</span>.
 - Kliknutím na tři tečky v horním pravém rohu otevřete boční panel a klikněte na tlačítko <span class="green">Nastavení</span>.
-- Klikněte na <span class="green">Nastavení webu</span>.
-- Zobrazí se nastavení určující, které internetové stránky mají jaké konkrétní pravomoce. Otevřete podkategorii <span class="green">JavaScript</span>.
-- Kliknutím vypněte JavaScript a následně přidejte výjimky pro všechny stránky, jejichž JS potřebujete.
-<li style="list-style-type: none">![andchr](https://faq.mople71.cz/img/cs/andchr.png)</li>
-- Aplikaci zavřete.
+- Klikněte na **Nastavení webu** a Otevřete podkategorii <span class="green">JavaScript</span>.
+- Zablokujte spouštění JS.
+<li style="list-style-type: none">![chmandrjs](https://faq.mople71.cz/img/cs/chmandrjs.png)</li>
+- Klikněte na tlačítko <span class="green">Přidat výjimku pro konkrétní web</span>.
+- Zadejte adresu důvěryhodnéhu webu, na kterém se může spouštět JS. Syntax je oproti desktopové verzi značně omezený.
+<li style="list-style-type: none">![chmandrjs1](https://faq.mople71.cz/img/cs/chmandrjs1.png)</li>
+- Klikněte na <span class="green">Přidat</span>.
 
 <br><br><hr><br>
 
