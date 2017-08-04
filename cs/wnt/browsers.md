@@ -94,7 +94,11 @@ Použijte postup pro **Google Chrome** výše, je identický.
 
 > Bezpečnější nastavení
 
-...
+- V pravém panelu otevřete <span class="green">Nastavení</span>.
+- Sjeďte na konec stránky a klikněte na <span class="green">Zobrazit upřesňující nastavení</span>.
+- Zkontrolujte konfiguraci a případně upravte:
+<li style="list-style-type: none">![edge](https://faq.mople71.cz/img/cs/edge.png)</li>
+- Prohlížeč restartujte.
 
 > Blokování reklamy
 
