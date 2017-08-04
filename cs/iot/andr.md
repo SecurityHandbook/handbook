@@ -67,7 +67,7 @@ Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se d
 
 ### Bezpečnostní požadavky na zařízení s OS Android:
 - 64-bit architektura (x86/ARM)
-- jádro > 3.18 (ideálně 4.x)
+- jádro > 3.18 (ideálně 4.4)
 - full verified boot (ideálně i pro custom ROM)
 - časté (ideálně měsíční) bezpečnostní aktualizace pro firmware a proprietární komponenty
 - garance bezpečnostních aktualizací po dobu morální životnosti modelu (min. 1 rok od koupi)
@@ -87,12 +87,19 @@ Android je bezpečně nastaven již v základu, není ovšem od věci podívat s
 
 - Otevřete si aplikaci <span class="green">Nastavení</span>.
 - Nalezněte podkategorii **Zabezpečení** a otevřete ji.
-- Nemáte-li, nastavte si <span class="green">zámek obrazovky</span>.
+- Nemáte-li, nastavte si <span class="green">zámek obrazovky</span>. Ověřte konfiguraci zabezpečení, případně opravte.
 <li style="list-style-type: none">![andset](https://faq.mople71.cz/img/cs/andset.png)</li>
-- Ověřte nastavení šifrování úložište telefonu.
-<li style="list-style-type: none">![andset1](https://faq.mople71.cz/img/cs/andset1.png)</li>
-- Ověřte vypnutou instalaci aplikací z <span class="green">neznámých zdrojů</span>.
-<li style="list-style-type: none">![andset2](https://faq.mople71.cz/img/cs/andset2.png)</li>
+- Aplikaci zavřete.
+
+> Kontrola aktuálního OS
+
+- Otevřete si aplikaci <span class="green">Nastavení</span>.
+- Nalezněte podkategorii **Informace o telefonu** a otevřete ji.
+- Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **7.1.2** a **8.0**.
+- Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
+<li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
+- Máte-li starší *verzi systému Android* než **7.1.1**, telefon není implicitně bezpečný &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* nežli **5. července 2017** (a k nápravě nedojde do konce září), telefon je nebezpečný &ndash; můžete se dívat po náhradě.
+- Více informací o této problematice naleznete v návodu <a href="https://guide.mople71.cz/iot/andr_vyber.php" target="_blank">Výběr telefonu &ndash; OS Android</a>.
 - Aplikaci zavřete.
 
 <br>
@@ -104,9 +111,8 @@ Pod uživatelem hosta můžete relativně bezpečně např. prohlížet rizikov�
 
 - Stáhněte dolů notifikační lištu dvěma prsty, případně ji rozšiřte kliknutím na šipku v pravém horním rohu.
 - V pravé horní liště klikněte na obrázek svého uživatelského účtu.
-<li style="list-style-type: none">![andg](https://faq.mople71.cz/img/cs/andg.png)</li>
 - Zobrazí se seznam uživatelských účtů. Klikněte na tlačítko <span class="green">Přidat hosta</span>.
-<li style="list-style-type: none">![andg1](https://faq.mople71.cz/img/cs/andg1.png)</li>
+<li style="list-style-type: none">![andg](https://faq.mople71.cz/img/cs/andg.png)</li>
 - Budete automaticky přepnuti na uživatele hosta.
 - Jakmile z účtu hosta budete chtít odejít, stáhněte notifikační lištu a klikněte na tlačítko <span class="green">Odstranit hosta</span>.
 <li style="list-style-type: none">![andg2](https://faq.mople71.cz/img/cs/andg2.png)</li>
@@ -158,6 +164,7 @@ Blokování reklamy je z hlediska bezpečnosti esenciální kvůli četnému vý
 - Freedome: <a href="https://play.google.com/store/apps/details?id=com.fsecure.freedome.vpn.security.privacy.android" target="_blank">https://play.google.com/store/apps/details?id=com.fsecure.freedome.vpn.security.privacy.android</a>
 
 #### Internetový prohlížeč:
+- Google Chrome / Chromium
 - Brave: <a href="https://play.google.com/store/apps/details?id=com.brave.browser" target="_blank">https://play.google.com/store/apps/details?id=com.brave.browser</a>
 - atd.
 
@@ -165,7 +172,7 @@ Blokování reklamy je z hlediska bezpečnosti esenciální kvůli četnému vý
 - Adguard DNS: <a href="https://adguard.com/en/adguard-dns/overview.html" target="_blank">https://adguard.com/en/adguard-dns/overview.html</a>
 - NoAd: <a href="https://noad.zone" target="_blank">https://noad.zone</a>
 
-Použití DNS je dle mého názoru dobrý způsob, můžete jej nastavit na routeru, ovšem pro mobilní data DNS servery nelze změnit. Potom doporučím použití prohlížeče blokující reklamy, pro pokročilejší prohlížeče umožňující vypnutí JS s výjimkami. VPN je také dobrý způsob, ovšem implementace OpenVPN na Androidu není 100% ideální.
+DNS je jednoduchý způsob blokace reklam, vyžaduje to ovšem důvěru v poskytovatele DNS. Použití prohlížeče blokující reklamy je nejlepším řešením. *Chrome(ium)* od verze 62 umožní nativně blokovat agresivní reklamy nesplňující podmínky. VPN je také dobrý způsob, ovšem implementace OpenVPN na Androidu není 100% ideální.
 
 <br>
 

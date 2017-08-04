@@ -5,11 +5,11 @@
 - Do adresního řádku prohlížeče zadejte:
 <li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
 a stiskněte **Enter**.</li>
-- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch2](https://faq.mople71.cz/img/cs/ch2.png)
+- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch1](https://faq.mople71.cz/img/cs/ch1.png)
 - V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu...</span>
-<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
+<li style="list-style-type: none">![ch2](https://faq.mople71.cz/img/cs/ch2.png)</li>
 - V sekci **Soubory cookie** zatrhněte možnost <span class="green">Blokovat soubory cookie třetích stran a data webových stránek</span>.
-<li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
+<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
 - V pravém dolním rohu klikněte na <span class="green">Hotovo</span>.
 - Prohlížeč restartujte.
 
@@ -19,7 +19,7 @@ a stiskněte **Enter**.</li>
 a stiskněte **Enter**.</li>
 - Zobrazí se pokročilá nastavení. Rozklikněte nabídku u položky **Aktivovat uzamknutí pluginů PPAPI pole zásady Win32k** a zvolte možnost <span class="green">Všechny pluginy</span>.
 - Rozklikněte nabídku u položky **Aktivovat uzamknutí do kontejneru AppContainer** a zvolte možnost <span class="green">Aktivní</span>.
-<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
+<li style="list-style-type: none">![ch](https://faq.mople71.cz/img/cs/ch.png)</li>
 - Prohlížeč restartujte.
 
 > Omezení JavaScript
@@ -27,14 +27,14 @@ a stiskněte **Enter**.</li>
 - Do adresního řádku prohlížeče zadejte:
 <li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
 a stiskněte **Enter**.</li>
-- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch2](https://faq.mople71.cz/img/cs/ch2.png)
+- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch1](https://faq.mople71.cz/img/cs/ch1.png)
 - V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu</span>
-<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
+<li style="list-style-type: none">![ch2](https://faq.mople71.cz/img/cs/ch2.png)</li>
 - V sekci **JavaScript** zablokujte spouštění JS.
-<li style="list-style-type: none">![ch5](https://faq.mople71.cz/img/cs/ch5.png)</li>
+<li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
 - Klikněte na tlačítko <span class="green">Přidat</span> v sekci **Povolit**.
 - Zadejte adresu důvěryhodnéhu webu, na kterém se může spouštět JS. Syntax je jednoduchý.
-<li style="list-style-type: none">![ch6](https://faq.mople71.cz/img/cs/ch6.png)</li>
+<li style="list-style-type: none">![ch5](https://faq.mople71.cz/img/cs/ch5.png)</li>
 - Klikněte na <span class="green">Přidat</span>.
 
 > Blokování reklamy

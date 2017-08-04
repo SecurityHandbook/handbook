@@ -54,7 +54,7 @@ Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často
 
 Windows by se měly ve výchozím nastavení aktualizovat samy (v edici Home automatické aktualizace dokonce nelze vypnout). Mnohé důležité aplikace (např. prohlížeče) se obvykle aktualizují automaticky.
 
-Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <a href="http://www.flexerasoftware.com/enterprise/products/software-vulnerability-management/personal-software-inspector/" target="_blank">Personal Software Inspector</a>, která běží na pozadí a upozorní vás v případě neaktuálního SW. *Nedoporučuji používat pododné aplikace, který neaktuální SW aktualizují za vás, jelikož tyto aplikace mohou způsobit problémy.*
+Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <a href="https://www.flexerasoftware.com/enterprise/products/software-vulnerability-management/personal-software-inspector/" target="_blank">Personal Software Inspector</a>, která běží na pozadí a upozorní vás v případě neaktuálního SW. *Nedoporučuji používat pododné aplikace, který neaktuální SW aktualizují za vás, jelikož tyto aplikace mohou způsobit problémy.*
 
 > Kontrola nastavení aktualizací OS (starší verze Windows):
 
@@ -162,18 +162,30 @@ Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &
 
 <span class="green">Windows Defender</span> integrovaný ve **Windows 8.1 Update 3** a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vstrvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a v OS mnohdy provádí v porovnání s integrovaným řešením naprosté šílenosti.
 
-> Nastavení Windows Defender
+Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci <a href="#win2.4">anti-exploit</a>).
+
+> Ochrana před viry a hrozbami &ndash; nastavení
 
 - Otevřete si <span class="green">Centrum zabezpečení v programu Windows Defender</span>.
-- Rozklikněte kategorii **Ochrana před viry a hrozbami** a zvolte <span class="green">Nastavení ochrany před viry a hrozbami</span>.
-- Zkontrolujte, zdali máte zapnuté volby **Ochrana v reálném čase**, **Cloudová ochrana** a **Automatické odesílání vzorků**, případně napravte.
-- Přepněte se do kategorie <span class="green">Řízení aplikací a prohlížečů</span>.
-- Upravte nastavení, aby odpovídalo obrázku níže.
+- Přesuňte se do kategorie **Ochrana před viry a hrozbami** a otevřete <span class="green">Nastavení ochrany před viry a hrozbami</span>.
+- Zkontrolujte konfiguraci ochrany a případně opravte:
 <li style="list-style-type: none">![wd](https://faq.mople71.cz/img/cs/wd.png)</li>
+- Zapněte <span class="green">Řízený přístup ke složkám</span> a následně otevřete <span class="green">Chráněné složky</span>.
+<li style="list-style-type: none">![wd1](https://faq.mople71.cz/img/cs/wd1.png)</li>
+- Klikněte na <span class="green">Přidat chráněnou složku</span>.
+- Nalezněte svojí složku **Dokumenty** v levém panelu, zvolte ji a následně klikněte na <span class="green">Vybrat složku</span>.
+<li style="list-style-type: none">![wd2](https://faq.mople71.cz/img/cs/wd2.png)</li>
+- Obdobným způsobem přidejte na seznam veškeré důležité osobní složky na disku.
+
+> Řízení aplikací a prohlížečů &ndash; nastavení
+
+- Přesuňte se do kategorie **Řízení aplikací a prohlížečů**.
+- Zkontrolujte konfiguraci SmartScreen filtru a případně opravte:
+<li style="list-style-type: none">![wd3](https://faq.mople71.cz/img/cs/wd3.png)</li>
 
 <br>
 
-Pro nižší verze Windows lze instalaci antiviru třetí strany pochopit, jelikož OS nemá integrované antimalware řešení.
+Pro nižší verze Windows lze instalaci antiviru třetí strany pochopit, jelikož OS nemá integrované AV/M řešení.
 
 > Doporučené antiviry pro Windows 8 a níže
 
@@ -185,7 +197,6 @@ Pro nižší verze Windows lze instalaci antiviru třetí strany pochopit, jelik
 #### Placená řešení:
 - <a href="https://www.emsisoft.com/en/software/antimalware/" target="_blank">Emsisoft Anti-Malware</a> &ndash; anglické rozhraní
 - <a href="https://www.f-secure.com/en/web/home_global/safe?icid=1526" target="_blank">F-Secure</a> &ndash; české rozhraní
-- <a href="https://www.webroot.com/us/en/home" target="_blank">Webroot</a> &ndash; anglické rozhraní
 - <a href="http://www.bitdefender.com/" target="_blank">Bitdefender</a> &ndash; anglické rozhraní, existuje i <a href="http://www.bitdef.cz/" target="_blank">česká verze</a>
 
 <br>
@@ -202,16 +213,99 @@ Základní nevýhoda WF pro běžné uživatele je absence jakéhokoli intuitivn
 
 <br>
 
+### Anti-executable:
+Anti-executable je jedna z nejúčinnějších vrstev ochrany. Jak napovídá název, anti-executable řešení zabraňuje spuštění malware.
+
+Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně souboru rovnou zabraní spustit se. Nastavení whitelistu není úkol pro běžné uživatele, existují ovšem i řešení, která umí whitelist vytvořit prakticky bez uživatelské interakce.
+
+#### Přehled anti-executable řešení:
+- <a href="https://voodooshield.com/" target="_blank">VoodooShield</a> (VS)
+- <a href="http://www.novirusthanks.org/products/anti-autoexec/" target="_blank">NVT Anti-AutoExec</a>
+
+- <a href="http://www.appguardus.com/index.php/appguard/personal/overview1" target="_blank">AppGuard</a> (AG)
+- <a href="http://www.novirusthanks.org/products/exe-radar-pro/" target="_blank">NVT ExeRadarPro</a> (NVT ERP)
+- <a href="https://technet.microsoft.com/cs-cz/library/dd759117.aspx" target="_blank">AppLocker</a>
+- <a href="https://technet.microsoft.com/cs-cz/library/hh831534.aspx" target="_blank">Software Restrtiction Policies</a> (SRP)
+
+<span class="red">VoodooShield</span> je nejpřívětivější anti-executable a nejlepší volba pro obyčejné uživatele. Kromě placené verze poskytuje i bezplatnou pro nekomerční využití, která poskytuje srovnatelnou ochranu, akorát nenabízí možnost rozšířené konfigurace, což běžnému uživateli nevadí. V základu je nakonfigurován bezpečně. Bohužel zatím nenabízí české rozhraní.
+
+> Instalace a konfigurace VoodooShield
+
+- Stáhněte si <a href="https://voodooshield.com/" target="_blank">VoodooShield</a>.
+- Aplikaci nainstalujte.
+- Vyčkejte na dokončení konfigurace aplikace a při dotázání zvolte <span class="green">Application Whitelisting Mode</span>. Uvítací okno následně zavřete.
+- Klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a vyberte možnost <span class="green">Hide</span>, čímž skryjete widget aplikace z pracovního prostoru.
+- Klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Training</span>.
+<li style="list-style-type: none">![vs](https://faq.mople71.cz/img/en/vs.png)</li>
+- Nyní se VoodooShield učí aplikace, které používáte, a povoluje je. V tréninkovém módu postupně spusťte všechny aplikace, které používáte. Ideální je v tréninkovém módu PC používat jeden den, aby VoodooShield vše stihl zapsat.
+- Po ukončení tréniku VoodooShield klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Always On</span>.
+<li style="list-style-type: none">![vs1](https://faq.mople71.cz/img/en/vs1.png)</li>
+
+![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">To je vše, nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když budete chtít instalovat libovolnou aplikaci, zvolte **Disable/Install Mode**.</span>
+
+![idea](https://mople71.cz/img/sm/idea.gif) Pokud vaše bezpečnostní konfigurace obsahuje aplikaci <span class="red">EMET</span>, můžete v něm nastavit ochranu aplikace VoodooShield. Tím ztížíte exploitaci VoodooShield.
+![vs6](https://faq.mople71.cz/img/en/vs6.png)
+
+#### Ukázky a poznatky z provozu:
+(obrázky jsou pouze ilustrativní)
+
+- Když VS zablokuje neznámou, ale možná bezpečnou aplikaci, zobrazí následující bublinu:
+<li style="list-style-type: none">![vs2](https://faq.mople71.cz/img/en/vs2.png)</li>
+- Pokud chcete aplikaci povolit, na bublinu klikněte a v následujícím okně zvolte možnost <span class="green">Install</span>.
+<li style="list-style-type: none">![vs3](https://faq.mople71.cz/img/en/vs3.png)</li>
+- Když VS zablokuje aplikaci, kterou detekuje alespoň 1 antivirový produkt nebo VoodooAI jako malware, zobrazí následující bublinu:
+<li style="list-style-type: none">![vs4](https://faq.mople71.cz/img/en/vs4.png)</li>
+- Zde je povolení o pár kliků delší. Klikněte na bublinu, v následujícím okně zvolte možnost <span class="green">Allow False Positive</span> a odsouhlaste veškerá vyskakovací okna.
+<li style="list-style-type: none">![vs5](https://faq.mople71.cz/img/en/vs5.png)</li>
+- Po povolení aplikace a provedení vámi požadované akce se vždy přesvědčte, že VS běží v módu <span class="green">Always On</span>.
+
+<br>
+
+<span class="red">NVT Anti-AutoExec</span> je drobná aplikace, která automaticky zabraňuje šíření USB malware. Stačí nainstalovat a ochrana je aktivní bez jakékoli interakce.
+
+<span class="red">AppGuard</span> je profesionální anti-executable určený převážně pro firemní sféru, je ovšem dostupný i v domácí verzi. Jeho nastavení je vcelku komplikované a přizpůsobené pro odborníky.
+
+<span class="red">AppLocker</span> je anti-executable integrovaný ve Windows v edicích Ultimate, Education a Enterprise. Umožňuje ovládání spustitelných souborů, skriptů, DLL knihoven, MSI instalátorů a ModernUI (metro) aplikací. Poskytuje vcelku slušnou ochranu, na druhou stranu existují známé způsoby jeho obejití.
+
+<span class="red">Software Restriction Policy</span> je velmi funkčně omezený anti-executable dostupný ve všech edicích Windows. Umožňuje ovládání spustitelných souborů a skriptů. Jeho pravidla jsou ovšem vázána na proces *explorer.exe*, který je vlastněn uživatelem, není tedy ideální k použití v profesionálním prostředí.
+
+<br>
+
 ### Anti-exploit:
 Každý kód obsahuje minimálně jednu chybu. Toho zneužívají exploity šířící se internetem. Anti-exploit aplikace přicházejí s mitigacemi, které mají za cíl znemožnit využití jednoduchých způsobů exploitace a proces exploitace výrazně ztížit.
 
-Windows využívají velké množství mitigací a exploitace samotného OS a aplikací OS je tedy velmi nákladná. Některé aplikace (např. Chrome) jsou také na velmi vysoké úrovni a jejich exploitace je nákladná. Jsou zde ovšem aplikace, které žádné anti-exploit techniky nepoužívají a někdy je používání těchto aplikací nezbytné. V takovém případě existují anti-exploit řešení, která umí exploitaci zmíněných aplikací výrazně ztížit.
+Windows využívají velké množství mitigací a exploitace samotného OS a aplikací OS je tedy velmi nákladná. Některé aplikace (např. Chrome) jsou také na velmi vysoké úrovni a jejich exploitace je nákladná. Jsou zde ovšem aplikace, které žádné anti-exploit mitigace nepoužívají a někdy je používání těchto aplikací nezbytné. V takovém případě existují anti-exploit řešení, která umí exploitaci zmíněných aplikací výrazně ztížit.
 
 #### Přehled anti-exploit řešení:
+- Windows Defender Exploit Protection (Windows 10 Fall Creators Update a výše)
+- <a href="https://technet.microsoft.com/en-us/security/jj653751" target="_blank">Microsoft Enhanced Mitigation Experience Toolkit</a> (EMET; Windows 10 November Update a níže)
 - <a href="http://www.surfright.nl/en/alert" target="_blank">HitmanPro.Alert</a> (HMP.A)
-- <a href="https://technet.microsoft.com/en-us/security/jj653751" target="_blank">Microsoft Enhanced Mitigation Experience Toolkit</a> (EMET)
 
-<span class="red">EMET</span> je anti-exploit řešení od MS a v nejnovější verzi Windows je **již nepotřebný**, jelikož veškeré jeho funkce (a mnohem více) jsou nyní integrovány přímo do OS. Návod na podrobnější nastavení těchto funkcí naleznete v FAQ pro pokročilé.
+Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implementovány přímo do OS. Konfiguraci mitigací umožňuje *GUI* vestavěného AV/M řešení <span class="green">Windows Defender</span>.
+
+> Konfigurace celosystémových anti-exploit mitigací
+
+- Otevřete si <span class="green">Centrum zabezpečení v programu Windows Defender</span>.
+- Přesuňte se do kategorie **Řízení aplikací a prohlížečů**.
+- Sjeďte na konec stránky a otevřete <span class="green">Nastavení Exploit Protection</span>.
+<li style="list-style-type: none">![wd4](https://faq.mople71.cz/img/cs/wd4.png)</li>
+- Zkontrolujte konfiguraci celosystémových mitigací a případně opravte:
+<li style="list-style-type: none">![wd5](https://faq.mople71.cz/img/cs/wd5.png)</li>
+
+> Konfigurace anti-exploit mitigací pro jednotlivé aplikace (příklad: VoodooShield)
+
+- V horním panelu se přesuňte do záložky **Nastavení programu**.
+- Klikněte na <span class="green">Přidat program, který chcete přizpůsobit</span>.
+<li style="list-style-type: none">![wd6](https://faq.mople71.cz/img/cs/wd6.png)</li>
+- Nalezněte a zvolte požadovanou aplikaci, kterou chcete mitigovat.
+<li style="list-style-type: none">![wd7](https://faq.mople71.cz/img/cs/wd7.png)</li>
+- Upravte konfiguraci dle obrázku:
+<li style="list-style-type: none">![wd8](https://faq.mople71.cz/img/cs/wd8.png)</li>
+- Klikněte na tlačítko <span class="green">Použít</span>.
+
+<br>
+
+<span class="red">EMET</span> je anti-exploit řešení od MS určen pro starší verze OS, které nemají anti-exploit mitigace integrovány.
 
 > Instalace a konfigurace EMET (starší verze Windows)
 
@@ -248,7 +342,7 @@ Windows využívají velké množství mitigací a exploitace samotného OS a ap
 
 <br>
 
-<span class="red">HitmanPro.Alert</span> je placená aplikace, která nabízí komplexní zabezpečení včetně mitigací proti exploitům. Je to velmi solidní SW a investice do něj není nesmyslná.
+<span class="red">HitmanPro.Alert</span> je placená aplikace, která nabízí komplexní zabezpečení včetně mitigací proti exploitům. Je to velmi solidní SW a investice do něj má smysl u starších verzí OS. Verze **Windows 10 Fall Creators Update** a novější mají většinu hlavních funkcí HMP.A integrovanou v OS, nejedná se tedy již o *&bdquo;must-have&ldquo;*.
 
 > Instalace a konfigurace HMP.A
 
@@ -269,71 +363,11 @@ Windows využívají velké množství mitigací a exploitace samotného OS a ap
 
 <br>
 
-### Anti-executable:
-Anti-executable je jedna z nejúčinnějších vrstev ochrany. Jak napovídá název, anti-executable řešení zabraňuje spuštění malware.
-
-Většinou funguje na bázi *whitelistu* &ndash; má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně souboru rovnou zabraní spustit se. Nastavení whitelistu není úkol pro běžné uživatele, existují ovšem i řešení, která umí whitelist vytvořit prakticky bez uživatelské interakce.
-
-#### Přehled anti-executable řešení:
-- <a href="https://voodooshield.com/" target="_blank">VoodooShield</a> (VS)
-- <a href="https://www.foolishit.com/cryptoprevent-malware-prevention/" target="_blank">CryptoPrevent</a>
-- <a href="http://www.appguardus.com/index.php/appguard/personal/overview1" target="_blank">AppGuard</a> (AG)
-- <a href="http://www.novirusthanks.org/products/exe-radar-pro/" target="_blank">NVT ExeRadarPro</a> (NVT ERP)
-- <a href="http://www.novirusthanks.org/products/anti-autoexec/" target="_blank">NVT Anti-AutoExec</a>
-- <a href="https://technet.microsoft.com/cs-cz/library/dd759117.aspx" target="_blank">AppLocker</a>
-- <a href="https://technet.microsoft.com/cs-cz/library/hh831534.aspx" target="_blank">Software Restrtiction Policies</a> (SRP)
-
-<span class="red">VoodooShield</span> je nejpřívětivější anti-executable a nejlepší volba pro obyčejné uživatele. Kromě placené verze poskytuje i bezplatnou pro nekomerční využití, která poskytuje srovnatelnou ochranu, akorát nenabízí možnost rozšířené konfigurace, což běžnému uživateli nevadí. V základu je nakonfigurován bezpečně. Bohužel zatím nenabízí české rozhraní.
-
-> Instalace a konfigurace VoodooShield
-
-- Stáhněte si <a href="https://voodooshield.com/" target="_blank">VoodooShield</a>.
-- Aplikaci nainstalujte.
-- Jakmile budete dotázáni na volbu módu, zvolte <span class="green">Application Whitelisting Mode</span>.
-- Po instalaci klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a vyberte možnost <span class="green">Hide</span>, čímž skryjete štít z pracovního prostoru.
-- Klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Training</span>.
-<li style="list-style-type: none">![vs](https://faq.mople71.cz/img/en/vs.png)</li>
-- Nyní se VoodooShield učí aplikace, které používáte, a povoluje je. V tréninkovém módu postupně spusťte všechny aplikace, které používáte. Ideální je v tréninkovém módu PC používat jeden den, aby VoodooShield vše stihl zapsat.
-- Po ukončení tréniku VoodooShield klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Always On</span>.
-<li style="list-style-type: none">![vs1](https://faq.mople71.cz/img/en/vs1.png)</li>
-
-![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">To je vše, nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když budete chtít instalovat libovolnou aplikaci, zvolte **Disable/Install Mode**.</span>
-
-![idea](https://mople71.cz/img/sm/idea.gif) Pokud vaše bezpečnostní konfigurace obsahuje aplikaci <span class="red">EMET</span>, můžete v něm nastavit ochranu aplikace VoodooShield. Tím ztížíte exploitaci VoodooShield.
-![vs6](https://faq.mople71.cz/img/en/vs6.png)
-
-#### Ukázky a poznatky z provozu:
-(obrázky jsou pouze ilustrativní)
-
-- Když VS zablokuje neznámou, ale možná bezpečnou aplikaci, zobrazí následující bublinu:
-<li style="list-style-type: none">![vs2](https://faq.mople71.cz/img/en/vs2.png)</li>
-- Pokud chcete aplikaci povolit, na bublinu klikněte a v následujícím okně zvolte možnost <span class="green">Install</span>.
-<li style="list-style-type: none">![vs3](https://faq.mople71.cz/img/en/vs3.png)</li>
-- Když VS zablokuje aplikaci, kterou detekuje alespoň 1 antivirový produkt nebo VoodooAI jako malware, zobrazí následující bublinu:
-<li style="list-style-type: none">![vs4](https://faq.mople71.cz/img/en/vs4.png)</li>
-- Zde je povolení o pár kliků delší. Klikněte na bublinu, v následujícím okně zvolte možnost <span class="green">Allow False Positive</span> a odsouhlaste veškerá vyskakovací okna.
-<li style="list-style-type: none">![vs5](https://faq.mople71.cz/img/en/vs5.png)</li>
-- Po povolení aplikace a provedení vámi požadované akce se vždy přesvědčte, že VS běží v módu <span class="green">Always On</span>.
-
-<br>
-
-<span class="red">CryptoPrevent</span> je anti-executable řešení, které automaticky dle svých pravidel pomocí SRP zakáže spouštění rizikových souborů v rizikových lokacích. Jedná se o dobré preventivní opatření.
-
-<span class="red">NVT Anti-AutoExec</span> je drobná aplikace, která automaticky zabraňuje šíření USB malware. Stačí nainstalovat a ochrana je aktivní.
-
-<span class="red">AppGuard</span> je profesionální anti-executable určený převážně pro firemní sféru, je ovšem dostupný i v domácí verzi. Jeho nastavení je vcelku komplikované a přizpůsobené pro odborníky.
-
-<span class="red">AppLocker</span> je anti-executable integrovaný ve Windows v edicích Ultimate, Education a Enterprise. Umožňuje ovládání spustitelných souborů, skriptů, DLL knihoven, MSI instalátorů a ModernUI (metro) aplikací. Poskytuje velmi slušnou ochranu.
-
-<span class="red">Software Restriction Policy</span> je velmi funkčně omezený anti-executable dostupný ve všech edicích Windows. Umožňuje ovládání spustitelných souborů a skriptů. Jeho pravidla jsou ovšem vázána na proces *explorer.exe*, který je vlastněn uživatelem, není tedy v porovnání s AppLocker určen pro profesionální použití.
-
-<br>
-
 ### Virtualizace:
 Virtualizace může být velmi bezpečný způsob ochrany před malware (záleží na způsobu aplikace), jelikož odděluje požadovanou část OS od fyzického OS.
 
 #### Možnosti virtualizace:
-- virtuální poočítač &ndash; <a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a>, <a href="https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0" target="_blank">VMware Player</a>,...
+- virtuální počítač &ndash; <a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a>, <a href="https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0" target="_blank">VMware Player</a>,...
 - lehká virtualizace OS &ndash; <a href="http://www.shadowdefender.com/" target="_blank">Shadow Defender</a>
 - sandbox &ndash; <a href="http://www.sandboxie.com/" target="_blank">Sandboxie</a>
 
@@ -364,22 +398,19 @@ Užitečné aplikace, které nespadají ani pod jednu kategorii vrstev zabezpeč
 ## Zabezpečení internetového prohlížeče:
 - bezpečnější nastavení (vypnutí nebezpečných funkcí, ideálně vč. javascriptu)
 - blokování reklamy
-- anti-exploit mitigace
 - oddělení prohlížeče od dat a fyzického OS (sandbox &lt; VM &lt; live OS)
 
-Jelikož se mne uživatelé velmi často ptají na můj názor na prohlížeče a mnou doporučovaný prohlížeč, rozhodl jsem se tyto informace implementovat do FAQ. Naleznete zde i vysvětlení, které už je ovšem trochu pokročilejší.
+> Porovnání prohlížečů z ohledu bezpečnosti
 
-> Doporučené prohlížeče z ohledu bezpečnosti
+Všechny prohlížeče jsou po korektním nastavení relativně bezpečné, nejvíce také záleží na vás. Proto zde rozeberu pouze teoretické zabezpečení prohlížečů z hlediska mitigací exploitů apod. Níže v sekci naleznete návody na zabezpečení **Mozilla Firefox**, **Internet Explorer**, **Google Chrome** a **Microsoft Edge** kvůli jejich dominantnímu postavení.
 
-Všechny prohlížeče jsou po korektním nastavení relativně bezpečné, nejvíce také záleží na vás. Proto zde rozeberu pouze teoretické zabezpečení prohlížečů z hlediska mitigací exploitů apod. Níže v sekci naleznete návody na zabezpečení **Mozilla Firefox**, **Internet Explorer**, **Google Chrome** a **Microsoft Edge** kvůli jejich dominantnímu postavení.</p>
+Ze zmíněných prohlížečů bych doporučil <span class="green">Microsoft Edge</span> a <a href="https://chromium.woolyss.com/" target="_blank"><span class="green underline">Chromium</span></a>, případně jeho proprietární variantu <a href="https://www.google.com/chrome/browser/index.html" target="_blank">Google Chrome</a>. S prohlížečem **Internet Explorer** není zásadní problém, na druhou stranu již není v aktivním vývoji.
 
-Ze zmíněných prohlížečů bych doporučil <span class="green">Microsoft Edge</span> a <a href="https://chromium.woolyss.com/" target="_blank"><span class="green underline">Chromium</span></a>, případně jeho proprietární variantu <a href="https://www.google.com/chrome/browser/index.html" target="_blank">Google Chrome</a>. S prohlížečem **Internet Explorer** taky nemám zásadní problém, pokud se korektně nastaví.
-
-<span class="red">Mozilla Firefox</span>. Tento prohlížeč z hlediska zabezpečení nemohu doporučit, v porovnání s ostatními zmíněnými prohlížeči výrazně zaostává. Má starý kód výrazně nižší kvality nežli Edge či Chromium. Také postrádá základní mitigace proti exploitům. Externí sandbox typu Sandboxie (pro Linux např. firejail) nedosahuje zdaleka takové kvality jako vestavěný sandbox.
+<span class="red">Mozilla Firefox</span>. Tento prohlížeč z hlediska zabezpečení nelze doporučit, v porovnání s ostatními zmíněnými prohlížeči výrazně zaostává. Má starý kód výrazně nižší kvality nežli Edge či Chromium a postrádá základní mitigace proti exploitům (v poslední době se toto snaží dohánět implementací sandboxu prohlížeče Chromium). Externí sandbox typu Sandboxie nedosahuje zdaleka takové kvality jako vestavěný sandbox.
 
 <span class="green">Chrome(ium)</span> používá vestavěný sandbox velmi dobré kvality. Také nabízí možnost využití vestavěného sandboxu ve Windows (AppContainer). Nové verze jsou kompilovány s **CFG**, což je významné plus.
 
-<span class="green">Microsoft Edge</span> je nový a moderní prohlížeč využívající špičkovou implementaci sandboxu. Mimo jiné používá **CFG**, což je významné plus.
+<span class="green">Microsoft Edge</span> je nový a moderní prohlížeč využívající špičkovou implementaci sandboxu. Používá nejmodernější mitigace jako **CFG**, což je významné plus.
 
 <br>
 
@@ -393,12 +424,12 @@ Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je 
 #### Bezplatná konfigurace pro BFU, který neumí anglicky (např. prarodiče):
 > Konfigurace
 
-- OS &ndash; Windows 10 Creators Update
+- OS &ndash; Windows 10 Fall Creators Update
 - bezpečné nastavení OS &ndash; **kompletní**
 - AV/M &ndash; **Windows Defender**
 - FW &ndash; **Windows Firewall**
-- anti-exploit &ndash; **nic**
-- anti-executable &ndash; **CryptoPrevent**, **NVT Anti-AutoExec**
+- anti-exploit &ndash; **Windows Defender**
+- anti-executable &ndash; **NVT Anti-AutoExec**
 - virtualizace &ndash; **nic**
 - internetový prohlížeč &ndash; **MS Edge** / **Google Chrome**
 - zabezpečení prohlížeče &ndash; **kompletní**
@@ -414,11 +445,11 @@ Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nas
 #### Bezplatná konfigurace pro mírně pokročilého, který umí anglicky:
 > Konfigurace
 
-- OS &ndash; Windows 10/8.1/7
+- OS &ndash; Windows **10** / **8.1 Update 3**
 - bezpečné nastavení OS &ndash; **kompletní**
-- AV/M &ndash; **Windows Defender** / **Microsoft Security Essentials**
+- AV/M &ndash; **Windows Defender**
 - FW &ndash; **Windows Firewall**
-- anti-exploit &ndash; **nic** / **EMET**
+- anti-exploit &ndash; **Windows Defender** / **EMET**
 - anti-executable &ndash; **VoodooShield**, **NVT Anti-AutoExec**
 - virtualizace &ndash; **Sandboxie**
 - internetový prohlížeč &ndash; **MS Edge** / **Google Chrome** / **Internet Explorer**
