@@ -44,18 +44,15 @@ a stiskněte **Enter**.</li>
 #### Nastavení uBlock:
 
 - Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
-<li style="list-style-type: none">![chublock](https://faq.mople71.cz/img/cs/chublock.png)</li>
+<li style="list-style-type: none">![chublock](https://faq.mople71.cz/img/en/chublock.png)</li>
 - Zobrazí se nastavení uBlock Origin. V sekci **Soukromí** zatrhněte možnost <span class="green">Předejít úniku lokálních IP adres přes WebRTC</span>.
 - Následně se přesuňte do záložky <span class="green">Filtry třetích stran</span>.
-<li style="list-style-type: none">![ublock1](https://faq.mople71.cz/img/cs/ublock1.png)</li>
+<li style="list-style-type: none">![ublock](https://faq.mople71.cz/img/cs/ublock.png)</li>
 - Zde vyberte filtry pro blokování webového obsahu. Doporučuji kromě výchozích zvolit následující:</li>
-<li style="list-style-type: none">![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)</li>
-<li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
-<li style="list-style-type: none">![ublock4](https://faq.mople71.cz/img/cs/ublock4.png)</li>
-<li style="list-style-type: none">![ublock5](https://faq.mople71.cz/img/cs/ublock5.png)</li>
-- Následně v pravém horním rohu klikněte na tlačítko: ![ublock6](https://faq.mople71.cz/img/cs/ublock6.png)
+<li style="list-style-type: none">![ublock1](https://faq.mople71.cz/img/cs/ublock1.png)</li>
+- Následně v pravém horním rohu klikněte na tlačítko: ![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)
 - Přesuňte se na začátek stránky, zkontrolujte zatržítko u položky <span class="green">Automaticky aktualizovat seznamy filtrů</span> a klikněte na tlačítko <span class="green">Aktualizovat nyní</span>. Během aktualizace panel nezavírejte.
-<li style="list-style-type: none">![ublock7](https://faq.mople71.cz/img/cs/ublock7.png)</li>
+<li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
 
 
 > Oddělení prohlížeče od OS a dat
@@ -89,58 +86,31 @@ ChromiumWaitForDownloadEnd=true</code></pre></li>
 
 > Bezpečnější nastavení a blokování reklam
 
-Použijte návod pro **Google Chrome** výše, je identický.
+Použijte postup pro **Google Chrome** výše, je identický.
 
 <br>
 
 <h3 id="win3.2" class="ed">![edge](https://mople71.cz/img/edge16.png) Microsoft Edge</h3>
 
-> Blokování reklamy (AdBlock)
+> Bezpečnější nastavení
 
-- Otevřete prohlížeč, v pravém horním rohu klikněte na ikonu tří teček a klikněte na tlačítko <span class="green">Rozšíření</span>.
-- Klikněte na tlačítko <span class="green">Získat rozšíření ze Storu</span>.
-<li style="list-style-type: none">![edge2](https://faq.mople71.cz/img/cs/edge2.png)</li>
-- Otevře se obchod s aplikacemi na stránce s dostupnými doplňky. V seznamu doplňků nalezněte doplněk <span class="green">Adblock Plus</span> a nainstalujte jej.
-- Restartujte prohlížeč.
-- V pravém horním rohu se zobrazí vyskakovací okno o novém rozšíření. Zvolte možnost <span class="green">Zapnout</span>.
-<li style="list-style-type: none">![edge3](https://faq.mople71.cz/img/cs/edge3.png)</li>
-- Zobrazí se stránka o úspěšné instalaci Adblock Plus. Sjeďte úplně dolů a zapněte <span class="green">Blokování malware</span>, případně i zbylé možnosti.
-- V pravém horním prohlížeče rohu klikněte na ikonu tří teček a klikněte na tlačítko <span class="green">Adblock Plus</span>.
-- Zobrazí se panel Adblock Plus. Klikněte na tlačítko <span class="green">Možnosti</span>.
-- V možnostech klikněte na tlačítko <span class="green">Přidat cizí filtry</span>.
-- Rozklikněte seznam filtrů a vyberte **EasyList Czech and Slovak+EasyList**.
-<li style="list-style-type: none">![edge4](https://faq.mople71.cz/img/cs/edge4.png)</li>
-- Klikněte na tlačítko <span class="green">Přidat</span>.
+...
 
+> Blokování reklamy
 
-> Blokování reklamy pro pokročilejší (uBlock origin)
-
-- Otevřete v prohlížeči <a href="https://github.com/nikrolls/uBlock-Edge/releases" target="_blank">následující stránku</a>.
-- Stáhněte si nejnovější verzi <span class="green">uBlock Origin</span>. Doporučena je stabilní a **rc** verze. Užití beta verze zvažte.
-- Ze staženého archivu vybalte složku <span class="blue">uBlock0.edge</span> a přesuňte ji do své složky <span class="green">Dokumenty</span>. Pro používání uBlock Origin ji nesmíte odstranit.
-- Do adresního řádku prohlížeče zadejte:
-<li style="list-style-type: none"><pre><code>about:flags</code></pre>
-a stiskněte **Enter**.</li>
-- Aktivujte <span class="green">funkce pro vývojáře rozšíření</span>.
-<li style="list-style-type: none">![edge5](https://faq.mople71.cz/img/cs/edge5.png)</li>
-- Restartujte prohlížeč.
-- V pravém horním rohu klikněte na ikonu tří teček a klikněte na tlačítko <span class="green">Rozšíření</span>.
-- Zvolte možnost <span class="green">Načíst rozšíření</span> a vyberte složku **uBlock0.edge**.
+- Nainstalujte si následující bezpečnostní doplněk: <a href="https://www.microsoft.com/cs-cz/store/p/ublock-origin/9nblggh444l4" target="_blank">uBlock Origin</a>.
 
 #### Nastavení uBlock:
-- Klikněte na ikonu <span class="green">uBlock Origin</span> v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
-<li style="list-style-type: none">![edublock](https://faq.mople71.cz/img/cs/edublock.png)</li>
+- Klikněte na ikonu uBlock v panelu ikon a následně otevřete **Nastavení**.
+<li style="list-style-type: none">![edublock](https://faq.mople71.cz/img/en/edublock.png)</li>
 - Zobrazí se nastavení uBlock Origin. V sekci **Soukromí** zatrhněte možnost <span class="green">Předejít úniku lokálních IP adres přes WebRTC</span>.
 - Následně se přesuňte do záložky <span class="green">Filtry třetích stran</span>.
-<li style="list-style-type: none">![ublock1](https://faq.mople71.cz/img/cs/ublock1.png)</li>
+<li style="list-style-type: none">![ublock](https://faq.mople71.cz/img/cs/ublock.png)</li>
 - Zde vyberte filtry pro blokování webového obsahu. Doporučuji kromě výchozích zvolit následující:</li>
-<li style="list-style-type: none">![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)</li>
-<li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
-<li style="list-style-type: none">![ublock4](https://faq.mople71.cz/img/cs/ublock4.png)</li>
-<li style="list-style-type: none">![ublock5](https://faq.mople71.cz/img/cs/ublock5.png)</li>
-- Následně v pravém horním rohu klikněte na tlačítko: ![ublock6](https://faq.mople71.cz/img/cs/ublock6.png)
+<li style="list-style-type: none">![ublock1](https://faq.mople71.cz/img/cs/ublock1.png)</li>
+- Následně v pravém horním rohu klikněte na tlačítko: ![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)
 - Přesuňte se na začátek stránky, zkontrolujte zatržítko u položky <span class="green">Automaticky aktualizovat seznamy filtrů</span> a klikněte na tlačítko <span class="green">Aktualizovat nyní</span>. Během aktualizace panel nezavírejte.
-<li style="list-style-type: none">![ublock7](https://faq.mople71.cz/img/cs/ublock7.png)</li>
+<li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
 
 
 > Oddělení prohlížeče od OS a dat
@@ -335,18 +305,15 @@ a stiskněte **Enter**.</li>
 
 #### Nastavení uBlock:
 - Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
-<li style="list-style-type: none">![ublock](https://faq.mople71.cz/img/cs/ublock.png)</li>
+<li style="list-style-type: none">![ffublock](https://faq.mople71.cz/img/en/ffublock.png)</li>
 - Zobrazí se nastavení uBlock Origin. V sekci **Soukromí** zatrhněte možnost <span class="green">Předejít úniku lokálních IP adres přes WebRTC</span>.
 - Následně se přesuňte do záložky <span class="green">Filtry třetích stran</span>.
-<li style="list-style-type: none">![ublock1](https://faq.mople71.cz/img/cs/ublock1.png)</li>
+<li style="list-style-type: none">![ublock](https://faq.mople71.cz/img/cs/ublock.png)</li>
 - Zde vyberte filtry pro blokování webového obsahu. Doporučuji kromě výchozích zvolit následující:</li>
-<li style="list-style-type: none">![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)</li>
-<li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
-<li style="list-style-type: none">![ublock4](https://faq.mople71.cz/img/cs/ublock4.png)</li>
-<li style="list-style-type: none">![ublock5](https://faq.mople71.cz/img/cs/ublock5.png)</li>
-- Následně v pravém horním rohu klikněte na tlačítko: ![ublock6](https://faq.mople71.cz/img/cs/ublock6.png)
+<li style="list-style-type: none">![ublock1](https://faq.mople71.cz/img/cs/ublock1.png)</li>
+- Následně v pravém horním rohu klikněte na tlačítko: ![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)
 - Přesuňte se na začátek stránky, zkontrolujte zatržítko u položky <span class="green">Automaticky aktualizovat seznamy filtrů</span> a klikněte na tlačítko <span class="green">Aktualizovat nyní</span>. Během aktualizace panel nezavírejte.
-<li style="list-style-type: none">![ublock7](https://faq.mople71.cz/img/cs/ublock7.png)</li>
+<li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
 
 
 > Oddělení prohlížeče od OS a dat
