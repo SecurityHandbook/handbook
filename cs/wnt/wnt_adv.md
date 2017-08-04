@@ -106,7 +106,6 @@ pause</code></pre></li>
 
 ### Anti-executable:
 <span class="red">AppLocker</span> je anti-executable integrovaný ve Windows v edicích Ultimate, Education a Enterprise. Umožňuje ovládání spustitelných souborů, skriptů, DLL knihoven, MSI instalátorů a ModernUI aplikací. Poskytuje velmi slušnou ochranu.
-<span class="red">CryptoPrevent</span> je anti-executable řešení, které automaticky dle svých pravidel pomocí SRP zakáže spouštění rizikových souborů v rizikových lokacích. SRP můžete nastavit sami, navíc pravidla SRP se vážou na *explorer.exe* vlastněný uživatelem...
 
 <span class="red">NVT Anti-AutoExec</span> je drobná aplikace, která automaticky zabraňuje šíření USB malware. Stačí nainstalovat a ochrana je aktivní.
 
