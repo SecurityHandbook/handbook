@@ -277,7 +277,6 @@ Většinou funguje na bázi *whitelistu* &ndash; má nastaveno, které spustitel
 
 #### Přehled anti-executable řešení:
 - <a href="https://voodooshield.com/" target="_blank">VoodooShield</a> (VS)
-- <a href="https://www.foolishit.com/cryptoprevent-malware-prevention/" target="_blank">CryptoPrevent</a>
 - <a href="http://www.appguardus.com/index.php/appguard/personal/overview1" target="_blank">AppGuard</a> (AG)
 - <a href="http://www.novirusthanks.org/products/exe-radar-pro/" target="_blank">NVT ExeRadarPro</a> (NVT ERP)
 - <a href="http://www.novirusthanks.org/products/anti-autoexec/" target="_blank">NVT Anti-AutoExec</a>
@@ -317,8 +316,6 @@ Většinou funguje na bázi *whitelistu* &ndash; má nastaveno, které spustitel
 - Po povolení aplikace a provedení vámi požadované akce se vždy přesvědčte, že VS běží v módu <span class="green">Always On</span>.
 
 <br>
-
-<span class="red">CryptoPrevent</span> je anti-executable řešení, které automaticky dle svých pravidel pomocí SRP zakáže spouštění rizikových souborů v rizikových lokacích. Jedná se o dobré preventivní opatření.
 
 <span class="red">NVT Anti-AutoExec</span> je drobná aplikace, která automaticky zabraňuje šíření USB malware. Stačí nainstalovat a ochrana je aktivní.
 
