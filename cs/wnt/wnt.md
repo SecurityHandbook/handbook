@@ -54,7 +54,7 @@ Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často
 
 Windows by se měly ve výchozím nastavení aktualizovat samy (v edici Home automatické aktualizace dokonce nelze vypnout). Mnohé důležité aplikace (např. prohlížeče) se obvykle aktualizují automaticky.
 
-Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <a href="https://www.flexerasoftware.com/enterprise/products/software-vulnerability-management/personal-software-inspector/" target="_blank">Personal Software Inspector</a>, která běží na pozadí a upozorní vás v případě neaktuálního SW. *Nedoporučuji používat pododné aplikace, který neaktuální SW aktualizují za vás, jelikož tyto aplikace mohou způsobit problémy.*
+Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <span class="green">Heimdal Free</span>, která běží na pozadí a upozorní vás v případě neaktuálního SW, případně jej sama aktualizuje, automatické aktualizace ovšem teoreticky mohou způsobit problémy. Návod k *Heimdal Free* naleznete v sekci <a href="#win2.6">Ostatní aplikace</a>.
 
 > Kontrola nastavení aktualizací OS (starší verze Windows):
 
@@ -390,8 +390,17 @@ Nejbezpečnější způsob virtualizace je virtuální počítač při korektní
 Užitečné aplikace, které nespadají ani pod jednu kategorii vrstev zabezpečení.
 
 #### Doporučené ostatní aplikace:
+- <a href="https://heimdalsecurity.com/en/products/heimdal-free" target="_blank">Heimdal Free</a>
 - <a href="https://unchecky.com/" target="_blank">Unchecky</a>
 - <a href="http://implbits.com/products/hashtab/" target="_blank">HashTab</a>
+
+> Instalace a konfigurace Heimdal Free
+
+...
+
+> Konfigurace HashTab
+
+...
 
 <br><br><hr><br>
 

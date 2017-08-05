@@ -85,25 +85,6 @@ pause</code></pre></li>
 
 <br>
 
-### Anti-exploit:
-<span class="red">EMET</span> je hezké GUI pro nastavení celosystémových mitigací. Jeho funkce **ASR** také není vůbec k zahození. **Windows 10 Creators Update** mají veškeré funkce EMET integrované a jejich konfigurace je možná pomocí PowerShell.
-
-> Konfigurace mitigací ve W10 RS2
-
-- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
-<li style="list-style-type: none">![wx](https://mople71.cz/img/cs/wx.png)</li>
-- Do příkazové řádky zadejte následující příkaz:
-<li style="list-style-type: none"><pre><code>Install-Module -Name ProcessMitigations</code></pre></li>
-- Přečtěte si manuál <a href="https://technet.microsoft.com/en-us/itpro/windows/keep-secure/overview-of-threat-mitigations-in-windows-10#converting-an-emet-xml-settings-file-into-windows-10-mitigation-policies" target="_blank">zde</a>.
-- Podrobná dokumentace je také obsažená přímo v nainstalovaném modulu:
-<li style="list-style-type: none"><pre><code>%programfiles%\WindowsPowerShell\Modules\ProcessMitigations\*\Docs</code></pre></li>
-
-<br>
-
-<span class="red">HMP.A</span> je velmi dobrá aplikace podporující **CFI**. Pro W10 Creators Update méně nutná.
-
-<br>
-
 ### Anti-executable:
 <span class="red">AppLocker</span> je anti-executable integrovaný ve Windows v edicích Ultimate, Education a Enterprise. Umožňuje ovládání spustitelných souborů, skriptů, DLL knihoven, MSI instalátorů a ModernUI aplikací. Poskytuje velmi slušnou ochranu.
 

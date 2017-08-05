@@ -13,15 +13,6 @@ a stiskněte **Enter**.</li>
 - V pravém dolním rohu klikněte na <span class="green">Hotovo</span>.
 - Prohlížeč restartujte.
 
-#### Pro Windows 8 a výše:
-- Do adresního řádku prohlížeče zadejte:
-<li style="list-style-type: none"><pre><code>chrome://flags/#enable-ppapi-win32k-lockdown</code></pre>
-a stiskněte **Enter**.</li>
-- Zobrazí se pokročilá nastavení. Rozklikněte nabídku u položky **Aktivovat uzamknutí pluginů PPAPI pole zásady Win32k** a zvolte možnost <span class="green">Všechny pluginy</span>.
-- Rozklikněte nabídku u položky **Aktivovat uzamknutí do kontejneru AppContainer** a zvolte možnost <span class="green">Aktivní</span>.
-<li style="list-style-type: none">![ch](https://faq.mople71.cz/img/cs/ch.png)</li>
-- Prohlížeč restartujte.
-
 > Omezení JavaScript
 
 - Do adresního řádku prohlížeče zadejte:
@@ -82,7 +73,7 @@ ChromiumWaitForDownloadEnd=true</code></pre></li>
 - Změny uložte a konfigurační soubor zavřete.
 - Spusťte aplikaci <span class="green">chrlauncher</span>.
 - Chrlauncher následně můžete připnout na panel a nastavit jako výchozí prohlížeč v **Nastavení**.
-<li style="list-style-type: none">![chrl2](https://faq.mople71.cz/img/en/chrl2.png)</li>
+<li style="list-style-type: none">![chrl2](https://faq.mople71.cz/img/cs/chrl2.png)</li>
 
 > Bezpečnější nastavení a blokování reklam
 
