@@ -87,10 +87,10 @@ a stiskněte **Enter**.</li>
 
 ![idea](https://mople71.cz/img/sm/idea.gif) Pokročilejší si skript mohou upravit &ndash; je v něm několik zakomentovaných bezpečnostních opatření, které nemohou být aplikovány širokopásmově...
 
-![batch](https://mople71.cz/img/bat.png) **SaferSRV**:
-- Stáhněte si <a href="https://mople71.cz/safersrv.zip" download='SaferSRV'>SaferSRV</a>.
+![batch](https://mople71.cz/img/bat.png) **SafeSVC**:
+- Stáhněte si <a href="https://mople71.cz/safersrv.zip" download='SafeSVC'>SafeSVC</a>.
 - Uložte a obsah archivu vyextrahujte <span class="blue">na Plochu</span>.
-- Na skript jménem <span class="green">safersrv</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/admin.png) **Spustit jako správce**.
+- Na skript jménem <span class="green">safesvc</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/admin.png) **Spustit jako správce**.
 - Nechte skript pracovat, na konci procesu vám řekne o souhlas k restartu OS.
 
 <br>
@@ -126,9 +126,13 @@ OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
 
 ### Ostatní bezpečnostní nastavení
 
-- Vypněte Usnadnění přístupu na přihlašovací obrazovce (pokud nepotřebujete, tak kompletně).
-- Vypněte AutoPlay (<a href="http://windows.microsoft.com/cs-cz/windows/change-autoplay-settings#1TC=windows-7" target="_blank">návod</a>).
-- Vypněte Remote Assistance
+- Vypněte Usnadnění přístupu na přihlašovací obrazovce &ndash; součást skriptu **SafeSVC**.
+- Vypněte AutoPlay:
+    - Otevřete si <span class="green">Nastavení.</span> Rozklikněte kategorii **Zařízení** a následně zvolte podkategorii <span class="green">Automatické přehrávání</span>.
+    - Klikněte na tlačítko <span class="green">Přidat do tohoto počítače někoho dalšího</span>.
+    - Automatické přehrávání vypněte.
+    <li style="list-style-type: none">![autoplay](https://faq.mople71.cz/img/cs/autoplay.png)</li>
+- Vypněte Remote Assistance:
     - Stiskněte kláv. zkratku ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
     <li style="list-style-type: none"><pre><code>sysdm.cpl</code></pre>
 a stiskněte **Enter**.</li>
@@ -162,7 +166,7 @@ Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &
 
 <span class="green">Windows Defender</span> integrovaný ve **Windows 8.1 Update 3** a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vstrvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a v OS mnohdy provádí v porovnání s integrovaným řešením naprosté šílenosti.
 
-Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci <a href="#win2.4">anti-exploit</a>).
+Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům (tzv. *Řízený přístup ke složkám*) a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci <a href="#win2.4">anti-exploit</a>).
 
 > Ochrana před viry a hrozbami &ndash; nastavení
 
@@ -170,6 +174,16 @@ Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows D
 - Přesuňte se do kategorie **Ochrana před viry a hrozbami** a otevřete <span class="green">Nastavení ochrany před viry a hrozbami</span>.
 - Zkontrolujte konfiguraci ochrany a případně opravte:
 <li style="list-style-type: none">![wd](https://faq.mople71.cz/img/cs/wd.png)</li>
+
+> Řízení aplikací a prohlížečů &ndash; nastavení
+
+- Přesuňte se do kategorie **Řízení aplikací a prohlížečů**.
+- Zkontrolujte konfiguraci SmartScreen filtru a případně opravte:
+<li style="list-style-type: none">![wd3](https://faq.mople71.cz/img/cs/wd3.png)</li>
+
+> Konfigurace Řízeného přístupu ke složkám
+
+- Přesuňte se do kategorie **Ochrana před viry a hrozbami** a otevřete <span class="green">Nastavení ochrany před viry a hrozbami</span>.
 - Zapněte <span class="green">Řízený přístup ke složkám</span> a následně otevřete <span class="green">Chráněné složky</span>.
 <li style="list-style-type: none">![wd1](https://faq.mople71.cz/img/cs/wd1.png)</li>
 - Klikněte na <span class="green">Přidat chráněnou složku</span>.
@@ -177,11 +191,16 @@ Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows D
 <li style="list-style-type: none">![wd2](https://faq.mople71.cz/img/cs/wd2.png)</li>
 - Obdobným způsobem přidejte na seznam veškeré důležité osobní složky na disku.
 
-> Řízení aplikací a prohlížečů &ndash; nastavení
+> Povolení aplikace v Řízeném přístupu ke složkám (příklad: Heimdal Free)
 
-- Přesuňte se do kategorie **Řízení aplikací a prohlížečů**.
-- Zkontrolujte konfiguraci SmartScreen filtru a případně opravte:
-<li style="list-style-type: none">![wd3](https://faq.mople71.cz/img/cs/wd3.png)</li>
+- Při instalaci některých aplikací budete muset dočasně **Řízený přístup ke složkám** zakázat.
+- Otevřete <span class="green">Povolené aplikace v Řízeném přístupu ke složkám</span>.
+<li style="list-style-type: none">![wd1b](https://faq.mople71.cz/img/cs/wd1b.png)</li>
+- Klikněte na <span class="green">Přidat povolenou aplikaci</span>.
+<li style="list-style-type: none">![wd1c](https://faq.mople71.cz/img/cs/wd1c.png)</li>
+- Nalezněte **Heimdal Free** a přidejte postupně jeho spustitelné programy na seznam.
+<li style="list-style-type: none">![hf2](https://faq.mople71.cz/img/en/hf2.png)</li>
+- **Řízený přístup ke složkám** následně opětovně povolte.
 
 <br>
 
@@ -197,7 +216,7 @@ Pro nižší verze Windows lze instalaci antiviru třetí strany pochopit, jelik
 #### Placená řešení:
 - <a href="https://www.emsisoft.com/en/software/antimalware/" target="_blank">Emsisoft Anti-Malware</a> &ndash; anglické rozhraní
 - <a href="https://www.f-secure.com/en/web/home_global/safe?icid=1526" target="_blank">F-Secure</a> &ndash; české rozhraní
-- <a href="http://www.bitdefender.com/" target="_blank">Bitdefender</a> &ndash; anglické rozhraní, existuje i <a href="http://www.bitdef.cz/" target="_blank">česká verze</a>
+- <a href="https://www.bitdefender.com/" target="_blank">Bitdefender</a> &ndash; anglické rozhraní, existuje i <a href="https://www.bitdef.cz/" target="_blank">česká verze</a>
 
 <br>
 
@@ -221,8 +240,7 @@ Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno
 #### Přehled anti-executable řešení:
 - <a href="https://voodooshield.com/" target="_blank">VoodooShield</a> (VS)
 - <a href="http://www.novirusthanks.org/products/anti-autoexec/" target="_blank">NVT Anti-AutoExec</a>
-
-- <a href="http://www.appguardus.com/index.php/appguard/personal/overview1" target="_blank">AppGuard</a> (AG)
+- <a href="https://www.appguard.us/personal/#purchase" target="_blank">AppGuard</a> (AG)
 - <a href="http://www.novirusthanks.org/products/exe-radar-pro/" target="_blank">NVT ExeRadarPro</a> (NVT ERP)
 - <a href="https://technet.microsoft.com/cs-cz/library/dd759117.aspx" target="_blank">AppLocker</a>
 - <a href="https://technet.microsoft.com/cs-cz/library/hh831534.aspx" target="_blank">Software Restrtiction Policies</a> (SRP)
@@ -279,7 +297,7 @@ Windows využívají velké množství mitigací a exploitace samotného OS a ap
 #### Přehled anti-exploit řešení:
 - Windows Defender Exploit Protection (Windows 10 Fall Creators Update a výše)
 - <a href="https://technet.microsoft.com/en-us/security/jj653751" target="_blank">Microsoft Enhanced Mitigation Experience Toolkit</a> (EMET; Windows 10 November Update a níže)
-- <a href="http://www.surfright.nl/en/alert" target="_blank">HitmanPro.Alert</a> (HMP.A)
+- <a href="https://www.hitmanpro.com/en/alert.aspx" target="_blank">HitmanPro.Alert</a> (HMP.A)
 
 Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implementovány přímo do OS. Konfiguraci mitigací umožňuje *GUI* vestavěného AV/M řešení <span class="green">Windows Defender</span>.
 
@@ -346,7 +364,7 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 
 > Instalace a konfigurace HMP.A
 
-- Stáhněte si <a href="http://www.surfright.nl/en/alert" target="_blank">HMP.A</a>.
+- Stáhněte si <a href="https://www.hitmanpro.com/en/alert.aspx" target="_blank">HMP.A</a>.
 - Aplikaci nainstalujte, ponechte doporučené nastavení a možnost skenu po instalaci.
 - Aplikaci otevřete.
 - Klikněte na ozubené kolečko v pravém horním rohu a zvolte možnost <span class="green">Advanced interface</span>.
@@ -359,7 +377,7 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 - Při zachycení útoku HMP.A školivou aplikaci ukončí a zobrazí následující hlášku:
 <li style="list-style-type: none">![hmpa3](https://faq.mople71.cz/img/en/hmpa3.png)</li>
 
-![idea](https://mople71.cz/img/sm/idea.gif) Více se dozívte v <a href="http://dl.surfright.nl/HitmanPro%20Alert%20Getting%20Started.pdf">manuálu</a>.
+![idea](https://mople71.cz/img/sm/idea.gif) Více se dozívte v <a href="https://www.hitmanpro.com/en-us/medialibrary/Microsites/SurfRight/Resources/HitmanPro-Alert-Getting-Started.pdf?la=en">manuálu</a>.
 
 <br>
 
@@ -369,20 +387,20 @@ Virtualizace může být velmi bezpečný způsob ochrany před malware (zálež
 #### Možnosti virtualizace:
 - virtuální počítač &ndash; <a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a>, <a href="https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0" target="_blank">VMware Player</a>,...
 - lehká virtualizace OS &ndash; <a href="http://www.shadowdefender.com/" target="_blank">Shadow Defender</a>
-- sandbox &ndash; <a href="http://www.sandboxie.com/" target="_blank">Sandboxie</a>
+- sandbox &ndash; <a href="https://www.sandboxie.com/" target="_blank">Sandboxie</a>
 
 Nejbezpečnější způsob virtualizace je virtuální počítač při korektním nastavení a aplikaci snapshotů. Lehká virtualizace OS spočívá ve vrácení změn v OS při restartu, může být velmi užitečná proti např. ransomware. U sandboxu velmi záleží na implementaci, bezplatné řešení Sandboxie poskytující externí sandbox pro aplikace, je spíše na hraní.
 
 > Instalace a konfigurace Sandboxie
 
-- Stáhněte si <a href="http://www.sandboxie.com/index.php?DownloadSandboxie" target="_blank">Sandboxie</a>.
+- Stáhněte si <a href="https://www.sandboxie.com/index.php?DownloadSandboxie" target="_blank">Sandboxie</a>.
 - Aplikaci nainstalujte a projděte úvodním tutoriálem.
 - Otevřete **Ovládání Sandboxie**.
 - Klikněte pravým tlačítkem na **Sandbox DefaultBox** a zvolte možnost <span class="green">Nastavení Sandboxu</span>.
-<li style="list-style-type: none"><img src="https://faq.mople71.cz/img/cs/sbie2.png" alt="sandboxie"></li>
+<li style="list-style-type: none">![sbie2](https://faq.mople71.cz/img/cs/sbie2.png)</li>
 - V pravém panelu rozbalte možnost **Vymazat** a klikněte na <span class="green">Smazat pracovní soubory</span>.
 - Zatrhněte možnost <span class="green">Automaticky smazat obsah Sandboxu</span> a klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none"><img src="https://faq.mople71.cz/img/cs/sbie1.png" alt="sandboxie_2"></li>
+<li style="list-style-type: none">![sbie1](https://faq.mople71.cz/img/cs/sbie1.png)</li>
 
 <br>
 
@@ -396,11 +414,27 @@ Užitečné aplikace, které nespadají ani pod jednu kategorii vrstev zabezpeč
 
 > Instalace a konfigurace Heimdal Free
 
-...
+- Stáhněte si <a href="https://heimdalsecurity.com/en/products/heimdal-free/thank-you" target="_blank">Heimdal Free</a>.
+- Máte-li nastavený **Řízený přístup ke složkám** ve <span class="green">Windows Defender</span>, dočasně jej po dobu instalace vypněte.
+<li style="list-style-type: none">![wd1a](https://faq.mople71.cz/img/cs/wd1a.png)</li>
+- Aplikaci nainstalujte. (**I want to activate Heimdal FREE**)
+- V konfiguraci ponechte zapnuté pouze <span class="green">Software Update Notifications</span>.
+<li style="list-style-type: none">![hf](https://faq.mople71.cz/img/en/hf.png)</li>
+- Zapněte monitorování všech dostupných aplikací a případně i automatickou aktualizaci.
+- Pro změnu nastavení &ndash; např. po instalaci nové aplikace, kterou *Heimdal Free* zatím nemonitoruje &ndash; otevřete **Heimdal Free** a přesuňte se do záložky <span class="green">Patching System</span>.
+<li style="list-style-type: none">![hf1](https://faq.mople71.cz/img/en/hf1.png)</li>
+<li style="list-style-type: none">![idea](https://mople71.cz/img/sm/idea.gif) Ačkoli je **Heimdal Free** velmi kvalitní aplikace, automatická aktualizace aplikací otevírá prostor problémům. Na druhou stranu se jedná o menší zlo v porovnání s neaktuálními aplikacemi. Pokud tedy takto konfigurujete OS člověku, který si s PC nerozumí a nebude aplikace aktualizovat, automatickou aktualizaci možná zapněte.</li>
+- Aplikaci povolte v **Řízeném přístupu ke složkám**, který následně opětovně povolte. Návod <a href="#win2.1">zde</a>.
 
-> Konfigurace HashTab
+> Instalace a konfigurace HashTab
 
-...
+- Stáhněte si <a href="http://implbits.com/products/hashtab/" target="_blank">HashTab</a>.
+- Aplikaci nainstalujte.
+- Nalezněte libovolný soubor na disku a otevřete jeho **Vlastnosti**.
+- V horním panelu se přesuňte do záložky **File Hashes** a klikněte na tlačítko <span class="green">Settings</span>.
+<li style="list-style-type: none">![hashtab](https://faq.mople71.cz/img/en/hashtab.png)</li>
+- Upravte konfiguraci dle obrázku a klikněte na <span class="green">OK</span>.
+<li style="list-style-type: none">![hashtab1](https://faq.mople71.cz/img/en/hashtab1.png)</li>
 
 <br><br><hr><br>
 
