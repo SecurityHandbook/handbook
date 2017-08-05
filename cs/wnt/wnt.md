@@ -476,10 +476,10 @@ Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je 
 - virtualizace &ndash; **nic**
 - internetový prohlížeč &ndash; **MS Edge** / **Google Chrome**
 - zabezpečení prohlížeče &ndash; **kompletní**
-- užitečné aplikace &ndash; **Unchecky**
+- užitečné aplikace &ndash; **Unchecky**, **Heimdal Free**
 - konfigurace pro pokročilé &ndash; dle znalostí
 
-Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nastavit OS (hlavně účet s omezeným oprávněním). V případě instalace 3-P internetového prohlížeče používat MS Edge pro bankovní účely a podobné citlivé věci. Samozřejmě, pokud zvládáte pokročilou konfiguraci popisovanou v FAQ pro pokročilé, úroveň zabezpečení můžete velmi výrazně zvýšit.
+Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nastavit OS (hlavně účet s omezeným oprávněním). V případě instalace 3-P internetového prohlížeče používat MS Edge pro bankovní účely a podobné citlivé věci. *Heimdal Free* nastavit na tichou automatickou aktualizaci aplikací. Samozřejmě, pokud zvládáte pokročilou konfiguraci popisovanou v FAQ pro pokročilé, úroveň zabezpečení můžete velmi výrazně zvýšit.
 
 ![arrow](https://mople71.cz/img/sm/arrow.gif) Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.
 
