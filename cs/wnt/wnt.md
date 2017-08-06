@@ -256,9 +256,6 @@ Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno
 
 ![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">To je vše, nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když budete chtít instalovat libovolnou aplikaci, zvolte **Disable/Install Mode**.</span>
 
-![idea](https://mople71.cz/img/sm/idea.gif) Pokud vaše bezpečnostní konfigurace obsahuje aplikaci <span class="red">EMET</span>, můžete v něm nastavit ochranu aplikace VoodooShield. Tím ztížíte exploitaci VoodooShield.
-![vs6](https://faq.mople71.cz/img/en/vs6.png)
-
 #### Ukázky a poznatky z provozu:
 (obrázky jsou pouze ilustrativní)
 

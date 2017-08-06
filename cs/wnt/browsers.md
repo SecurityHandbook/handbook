@@ -157,7 +157,7 @@ a stiskněte **Enter**.</li>
 - Ze seznamu doporučuji přidat filtry <span class="green">EasyList</span>, <span class="green">EasyList Czech and Slovak</span> a <span class="green">EasyPrivacy</span>.
 
 #### Přidání filtru pro Tracking Protection:
-- Klikněte na takto vypadající odkaz: ![tp](https://mople71.cz/img/tp1.png)
+- Klikněte na takto vypadající odkaz: ![ie4](https://faq.mople71.cz/img/en/ie4.png)
 - V zobrazeném vyskakovacím okně klikněte na tlačítko <span class="green">Přidat seznam</span>.
 
 Další český filtr naleznete např. <a href="http://adblock.dajbych.net/">zde</a>.
