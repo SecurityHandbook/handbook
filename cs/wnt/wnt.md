@@ -22,17 +22,14 @@ Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, je
 
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Rodina a jiní uživatelé</span>.
 - Klikněte na tlačítko <span class="green">Přidat do tohoto počítače někoho dalšího</span>.
-
-![wntus](https://faq.mople71.cz/img/cs/wntus.png)
+<li style="list-style-type: none">![wntus](https://faq.mople71.cz/img/cs/wntus.png)</li>
 - Otevře se dialog pro přidání nového uživatele. V levém dolním rohu klikněte na <span class="green">Nemám přihlašovací údaje této osoby</span>.
 - V levém dolním rohu zvlote možnost <span class="green">Přidat uživatele bez účtu Microsoft</span>.
 - Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné zapamatovatelné heslo.
 - V seznamu jiných uživatelů se zobrazí účet **Admin**. Klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
-
-![wntus1](https://faq.mople71.cz/img/cs/wntus1.png)
+<li style="list-style-type: none">![wntus1](https://faq.mople71.cz/img/cs/wntus1.png)</li>
 - Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Správce</span> a klikněte na <span class="green">OK</span>.
-
-![wntus2](https://faq.mople71.cz/img/cs/wntus2.png)
+<li style="list-style-type: none">![wntus2](https://faq.mople71.cz/img/cs/wntus2.png)</li>
 - Odhlaste se z vašeho účtu a přihlaste se jako **Admin**.
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Rodina a jiní uživatelé</span>.
 - V seznamu jiných uživatelů nalezněte svůj účet, klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
@@ -88,12 +85,10 @@ a stiskněte **Enter**.</li>
 ![idea](https://mople71.cz/img/sm/idea.gif) Pokročilejší si skript mohou upravit &ndash; je v něm několik zakomentovaných bezpečnostních opatření, které nemohou být aplikovány širokopásmově...
 
 ![batch](https://mople71.cz/img/bat.png) **SafeSVC**:
-- Stáhněte si <a href="https://mople71.cz/safersrv.zip" download='SafeSVC'>SafeSVC</a>.
+- Stáhněte si <a href="https://mople71.cz/safesvc.zip" download='SafeSVC'>SafeSVC</a>.
 - Uložte a obsah archivu vyextrahujte <span class="blue">na Plochu</span>.
 - Na skript jménem <span class="green">safesvc</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/admin.png) **Spustit jako správce**.
 - Nechte skript pracovat, na konci procesu vám řekne o souhlas k restartu OS.
-
-<br>
 
 #### Bezpečné nastavení sítě:
 > Konfigurace síťového adaptéru + DNS
@@ -323,7 +318,7 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 
 <br>
 
-<span class="red">EMET</span> je anti-exploit řešení od MS určen pro starší verze OS, které nemají anti-exploit mitigace integrovány.
+<span class="red">EMET</span> je anti-exploit řešení od MS určeno pro **starší verze OS**, které nemají anti-exploit mitigace integrovány.
 
 > Instalace a konfigurace EMET (starší verze Windows)
 
@@ -397,7 +392,7 @@ Nejbezpečnější způsob virtualizace je virtuální počítač při korektní
 - Aplikaci nainstalujte a projděte úvodním tutoriálem.
 - Otevřete **Ovládání Sandboxie**.
 - Klikněte pravým tlačítkem na **Sandbox DefaultBox** a zvolte možnost <span class="green">Nastavení Sandboxu</span>.
-<li style="list-style-type: none">![sbie2](https://faq.mople71.cz/img/cs/sbie2.png)</li>
+<li style="list-style-type: none">![sbie](https://faq.mople71.cz/img/cs/sbie.png)</li>
 - V pravém panelu rozbalte možnost **Vymazat** a klikněte na <span class="green">Smazat pracovní soubory</span>.
 - Zatrhněte možnost <span class="green">Automaticky smazat obsah Sandboxu</span> a klikněte na <span class="green">OK</span>.
 <li style="list-style-type: none">![sbie1](https://faq.mople71.cz/img/cs/sbie1.png)</li>

@@ -184,7 +184,7 @@ a stiskněte **Enter**.</li>
 <li style="list-style-type: none"><pre><code>security.OCSP.GET.enabled</code></pre></li>
 - Tím změníte její výchozí nastavení (zapnete/vypnete požadovanou funkci).
 <li style="list-style-type: none">![ff0](https://faq.mople71.cz/img/cs/ff.png)</li>
-<li style="list-style-type: none"![ff1](https://faq.mople71.cz/img/cs/ff1.png)</li>
+<li style="list-style-type: none">![ff1](https://faq.mople71.cz/img/cs/ff1.png)</li>
 - Výše uvedeným způsobem vyhledejte a změňte nastavení následujících hodnot (pokud se neshoduje):
 <li style="list-style-type: none"><pre><code>accessibility.blockautorefresh  ---  automatické přesměrování; true
 browser.pocket.enabled  ---  vypíná službu Pocket; false
@@ -313,4 +313,4 @@ a stiskněte **Enter**.</li>
 
 > Oddělení prohlížeče od OS a dat
 
-Možno využít libovolný externí způsob, prohlížeč zatím nemá žádný integrovaný.
+Sandbox Firefoxu je v aktivním vývoji.
