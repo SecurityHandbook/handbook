@@ -70,8 +70,6 @@ systemctl enable iptables</code></pre>
 ### Mandatory Access Control:
 <abbr title="Mandatory Access Control">MAC</abbr> se stal důležitou součástí bezpečnostního modelu linuxových distribucí.
 
-**RBAC** je součástí grsecurity patchsetu (viz. níže), jedná se o velmi robustní implementaci MAC, nehodí se ovšem na *rolling release* model OS.
-
 **SELinux** je velmi robustní implementace MAC, její nastavení je ovšem problematické. Využívá ji např. **<span class="fe">Fedora</span>**  a je důelžitou součástí bezpečnostního modelu OS Android.
 
 **AppArmor** je implementace MAC poskytující nižší úroveň ochrany než SELinux (např. neumí omezit ioctl). Využívá ji např. **<span class="os">openSUSE</span>** a **<span class="ub">Ubuntu</span>**.
@@ -149,23 +147,6 @@ PROFILE_VERSION=20110903
 - Po dokončení konfigurace ji následně uložte:
 <li style="list-style-type: none"><pre><code>sudo tomoyo-savepolicy</code></pre></li>
 
-> RBAC
-
-![idea](https://mople71.cz/img/sm/idea.gif) Více informací naleznete <a href="https://wiki.archlinux.org/index.php/Grsecurity#RBAC" target="_blank">zde</a>.
-
-- Pro ovládání RBAC potřebujete následující balíček:
-<li style="list-style-type: none"><pre><code>pacman -S gradm</code></pre></li>
-- Zvolte si heslo a RBAC povolte. (-P, -E)
-- Máte-li zájem o "autolearn" mód, kdy RBAC bude pozorovat aktivity OS a nakonec dle nich vytvoří svá pravidla, můžete jej zapnout následovně:
-<li style="list-style-type: none"><pre><code>gradm -F -L /etc/grsec/learning.log</code></pre></li>
-- Po minimálně 3 dnech aktivního používání můžete vytvořit pravidla na základě akcí v OS.
-<li style="list-style-type: none"><pre><code>gradm -D
-gradm -F -L /etc/grsec/learning.log -O /etc/grsec/learning.roles
-# zauditujte /etc/grsec/learning.roles, jestli jsou vsechna pravidla v poradku a nic duleziteho nechybi
-mv /etc/grsec/learning.roles /etc/grsec/policy
-chmod 0600 /etc/grsec/policy
-gradm -E</code></pre></li>
-
 <br>
 
 ### Virtualizace:
@@ -197,8 +178,8 @@ Grsecurity patchset již není veřejně dostupný a bezplatný. Iniciativu hard
 
 ![idea](https://mople71.cz/img/sm/idea.gif) Konfigurace v předkompilovaném balíčku může být příliš striktní a nemusí se vám podařit nabootovat. V takovém případě je třeba identifikovat problém a kernel si následně zkompilovat ručně. Arch Linux to umožňuje velmi snadno díky *ABS*.
 
-- Nainstalujte si ABS a GPG:
-<li style="list-style-type: none"><pre><code>sudo pacman -S abs gnupg
+- Nainstalujte si **ASP** a **GPG**:
+<li style="list-style-type: none"><pre><code>sudo pacman -S asp gnupg
 asp export community/linux-hardened
 cd ./linux-hardened
 gedit PKGBUILD    #nahradte vami pouzivanym editorem</code></pre></li>
@@ -244,16 +225,18 @@ Balíčky neobsahující zmíněné mitigace je tedy nutné zkompilovat ručně.
 
 > Instalace hardening-wrapper
 
-<pre><code>pacman -S hardening-wrapper</code></pre>
+- Příkaz:
+<li style="list-style-type: none"><pre><code>pacman -S hardening-wrapper</code></pre></li>
+- Restartujte OS a ověřte úspěšnou instalaci:
+<li style="list-style-type: none"><pre><code>which gcc</code></pre></li>
 
 > Kompilace aplikace s mitigacemi:
 
-- Nainstalujte si ABS a GPG:
-<li style="list-style-type: none"><pre><code>sudo pacman -S abs gnupg
-sudo abs
-cp -r /var/abs/extra/networkmanager ~/networkmanager
-cd ~/networkmanager</code></pre></li>
-- Zahajte kompilaci a následně automatickou instalaci:
+- Nainstalujte si **ASP** a **GPG**:
+<li style="list-style-type: none"><pre><code>sudo pacman -S asp gnupg
+asp export extra/networkmanager
+cd ./networkmanager</code></pre></li>
+- Zahajte kompilaci + automatickou instalaci:
 <li style="list-style-type: none"><pre><code>makepkg -si</code></pre></li>
 - Po úspěšné instalaci restartujte OS.
 

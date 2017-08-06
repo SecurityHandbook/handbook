@@ -23,16 +23,16 @@ Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, je
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Rodina a jiní uživatelé</span>.
 - Klikněte na tlačítko <span class="green">Přidat do tohoto počítače někoho dalšího</span>.
 
-![us](https://faq.mople71.cz/img/cs/us.png)
+![wntus](https://faq.mople71.cz/img/cs/wntus.png)
 - Otevře se dialog pro přidání nového uživatele. V levém dolním rohu klikněte na <span class="green">Nemám přihlašovací údaje této osoby</span>.
 - V levém dolním rohu zvlote možnost <span class="green">Přidat uživatele bez účtu Microsoft</span>.
 - Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné zapamatovatelné heslo.
 - V seznamu jiných uživatelů se zobrazí účet **Admin**. Klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
 
-![us1](https://faq.mople71.cz/img/cs/us1.png)
+![wntus1](https://faq.mople71.cz/img/cs/wntus1.png)
 - Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Správce</span> a klikněte na <span class="green">OK</span>.
 
-![us2](https://faq.mople71.cz/img/cs/us2.png)
+![wntus2](https://faq.mople71.cz/img/cs/wntus2.png)
 - Odhlaste se z vašeho účtu a přihlaste se jako **Admin**.
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Rodina a jiní uživatelé</span>.
 - V seznamu jiných uživatelů nalezněte svůj účet, klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
@@ -102,12 +102,12 @@ a stiskněte **Enter**.</li>
 <li style="list-style-type: none"><pre><code>ncpa.cpl</code></pre>
 a stiskněte **Enter**.</li>
 - Otevře se seznam síťových adaptérů. Klikněte na první adaptér (obvykle ethernet) pravým tlačítkem a zvolte možnost <span class="green">Vlastnosti</span>.
-<li style="list-style-type: none">![vlastnosti](https://faq.mople71.cz/img/cs/net.png)</li>
+<li style="list-style-type: none">![wntnet](https://faq.mople71.cz/img/cs/wntnet.png)</li>
 - V seznamu odškrtněte všechny nepotřebné položky. Běžným uživatelům stačí ponechat pouze <span class="green">Sdílení souborů a tiskáren v sítích Microsoft</span>, <span class="green">Protokol IP verze 4 (TCP/IPv4)</span> a <span class="green">Protokol IP verze 6 (TCP/IPv6)</span>.
 - Pokud nesdílíte žádnou tiskárnu v síti a nepoužíváte IPv6 (pokud nevíte, zdali používáte IPv6, můžete to zjistil pomocí následujícího rychlého <a href="http://www.test-ipv6.cz/" target="_blank">online testu</a>), můžete pro vyšší bezpečnost ponechat zaškrtnutý pouze <span class="green">Protokol IP verze 4 (TCP/IPv4)</span>.
-<li style="list-style-type: none">![vlastnosti2](https://faq.mople71.cz/img/cs/net1.png)</li>
+<li style="list-style-type: none">![wntnet1](https://faq.mople71.cz/img/cs/wntnet1.png)</li>
 - Klikněte na **Protokol IP verze 4 (TCP/IPv4)** a zvolte možnost <span class="green">Vlastnosti</span>.
-<li style="list-style-type: none">![vlastnosti3](https://faq.mople71.cz/img/cs/net2.png)</li>
+<li style="list-style-type: none">![wntnet2](https://faq.mople71.cz/img/cs/wntnet2.png)</li>
 
 ![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Nyní nastavíme bezpečné DNS servery.</span>
 - Pokud nevíte, co DNS je, přečtěte si tento <a href="https://www.nic.cz/page/312/o-domenach-a-dns/" target="_blank">krátký článek</a>.
@@ -117,7 +117,7 @@ Adguard DNS:          176.103.130.130, 176.103.130.131
 OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
 - Po zvolení DNS serverů se přepněte zpět do okna Vlastností IPv4 protokolu.
 - Klikněte na <span class="green">Použít následující adresy serverů DNS</span> a do kolonek vepište vámi zvolené DNS.
-<li style="list-style-type: none">![vlastnosti4](https://faq.mople71.cz/img/cs/net3.png)</li>
+<li style="list-style-type: none">![wntnet3](https://faq.mople71.cz/img/cs/wntnet3.png)</li>
 - Klikněte na <span class="green">OK</span> a okno zavřete.
 
 ![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Stejný postup aplikujte pro všechny síťové adaptéry v seznamu (obvykle WLAN).</span>

@@ -89,15 +89,16 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento <a href="https://www.
 > Návod
 
 - Otevřete si <span class="green">Nastavení</span> a klikněte na položku <span class="green">Síť</span>.
-- V seznamu vyhledejte připojení, které používáte (Drátové/WiFi), klikněte na něj a následně klikněte v pravém dolním rohu na ozubené kolo.
-<li style="list-style-type: none">![dnssec](https://faq.mople71.cz/img/cs/dnssec.png)</li>
+- V seznamu zvolte připojení, které používáte (Drátové/WiFi), a otevřete jeho nastavení.
+<li style="list-style-type: none">![lnxnet](https://faq.mople71.cz/img/cs/lnxnet.png)
+![lnxnet1](https://faq.mople71.cz/img/cs/lnxnet1.png)</li>
 - Přepněte se do záložky IPv4 a vypněte možnost <span class="green">Automatické DNS</span>.
 - Do kolonky **Server** vepište:
 <li style="list-style-type: none"><pre><code>217.31.204.130</code></pre></li>
 - Klikněte na tlačítko <span class="green">+</span> pod kolonkou **Server**.
 - Objeví se další kolonka Server, do ní vepište:
 <li style="list-style-type: none"><pre><code>193.29.206.206</code></pre></li>
-<li style="list-style-type: none">![dnssec1](https://faq.mople71.cz/img/cs/dnssec1.png)</li>
+<li style="list-style-type: none">![lnxnet2](https://faq.mople71.cz/img/cs/lnxnet2.png)</li>
 - Klikněte na tlačítko <span class="green">Použít</span> a Nastavení zavřete.
 <li style="list-style-type: none">![idea](https://mople71.cz/img/sm/idea.gif) Další doporučené DNS servery:</li>
 <li style="list-style-type: none"><pre><code>Adguard DNS:         176.103.130.130, 176.103.130.131
