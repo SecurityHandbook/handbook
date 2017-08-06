@@ -4,7 +4,7 @@ Linux se díky svému minoritnímu zastoupení na desktopech těší řádově m
 
 Zde se budeme věnovat pokročilejším možnostem zabezpečení (desktopového) Linuxu. Jako rukojmí použiji distribuci Arch Linux, která v základním nastavení není příliš zabezpečená, ale korektní konfigurací z ní lze vytvořit velmi bezpečnou instalaci. Kroky níže popisované jsou aplikovatelné na většinu distribucí, stačí korektně změnit syntax.
 
-Tato sekce FAQ počítá s tím, že jste pročetli FAQ Linux pro méně pokročilé uživatele a máte znalosti ve zmíněné sekci rozebírané.
+Tato sekce FAQ počítá s tím, že jste pročetli <a href="https://faq.mople71.cz/cs/lnx/index.php#lnx">OS FAQ Linux pro méně pokročilé</a> uživatele a máte znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
 - vrstvy zabezpečení
@@ -76,7 +76,7 @@ systemctl enable iptables</code></pre>
 
 **TOMOYO Linux** je velmi solidní implementace MAC poskytující vyšší úroveň ochrany než AppArmor a zároveň nabízí mnohem jednodušší konfiguraci nežli SELinux.
 
-Na Arch Linux není problém provozovat RBAC, TOMOYO nebo AppArmor. SELinux je o něco problematičtější. Kernel **linux-grsec** má ve výchozím nastavení povolený TOMOYO Linux a RBAC. Pro použití AppArmor je nutné kernel zkompilovat.
+Na Arch Linux není problém provozovat RBAC, TOMOYO nebo AppArmor. SELinux je o něco problematičtější. Pro použití MAC je nutné zkompilovat kernel.
 
 > Instalace TOMOYO Linux
 
@@ -84,7 +84,7 @@ Na Arch Linux není problém provozovat RBAC, TOMOYO nebo AppArmor. SELinux je o
 
 ![idea](https://mople71.cz/img/sm/idea.gif) Dokumentaci k TOMOYO Linux naleznete <a href="http://tomoyo.osdn.jp/2.5/index.html.en" target="_blank">zde</a>.
 
-- Nepoužíváte-li **linux-grsec** kernel, musíte si zkompilovat vlastní. Návod na kompilaci jádra naleznete v sekci <a href="#lnx2.1">Grsecurity</a>. Případně můžete využít předkompilovaný kernel z <a href="https://aur.archlinux.org/packages/linux-lts-tomoyo/" target="_blank">AUR</a>.
+- Návod na kompilaci jádra naleznete v sekci <a href="#lnx2.1">Kernel</a>. Případně můžete využít předkompilovaný kernel z <a href="https://aur.archlinux.org/packages/linux-tomoyo/" target="_blank">AUR</a>.
 - Povolte TOMOYO Linux v GRUB:
 <li style="list-style-type: none"><pre><code>/etc/default/grub
 -----------------------------------
@@ -311,7 +311,6 @@ Checksec je skript určený pro kontrolu nastavení kernelu a zobrazení *memory
 - používejte Wayland, implementace X.org nejsou bezpečné (kromě Xenocara v OpenBSD)
 - používejte Flatpak
 - na běžné prohlížení webu používejte Chromium, na bankovnictví např. Epiphany
-- Firefox používejte na prohlížení PDF souborů (pdf.js je velmi bezpečný způsob prohlížení)
 - ...
 
 <br><br><hr>

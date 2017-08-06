@@ -3,7 +3,8 @@ Linux se díky svému minoritnímu zastoupení na desktopech těší řádově m
 
 Není tedy pravda, že malware na desktopový Linux neexistuje. Pouze máte o něco menší šanci, že na něj někdy narazíte. Pokud by se ovšem tak stalo, je dobré být předem připraven. V této sekci naleznete několik jednoduchých tipů na účinné zvýšení úrovně zabezpečení.
 
-Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Pro pokročilé uživatele je zde sekce v <a href="https://faq.mople71.cz/cs/lin/adv.html#lin">FAQ pro pokročilé</a>.
+Tato sekce FAQ je určena běžným a středně pokročilým uživatelům.
+
 #### FAQ se dělí na několik sekcí:
 - doporučené distribuce
 - bezpečné nastavení OS
@@ -90,15 +91,14 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento <a href="https://www.
 
 - Otevřete si <span class="green">Nastavení</span> a klikněte na položku <span class="green">Síť</span>.
 - V seznamu zvolte připojení, které používáte (Drátové/WiFi), a otevřete jeho nastavení.
-<li style="list-style-type: none">![lnxnet](https://faq.mople71.cz/img/cs/lnxnet.png)
-![lnxnet1](https://faq.mople71.cz/img/cs/lnxnet1.png)</li>
+<li style="list-style-type: none">![lnxnet](https://faq.mople71.cz/img/cs/lnxnet.png)</li>
 - Přepněte se do záložky IPv4 a vypněte možnost <span class="green">Automatické DNS</span>.
 - Do kolonky **Server** vepište:
 <li style="list-style-type: none"><pre><code>217.31.204.130</code></pre></li>
 - Klikněte na tlačítko <span class="green">+</span> pod kolonkou **Server**.
 - Objeví se další kolonka Server, do ní vepište:
 <li style="list-style-type: none"><pre><code>193.29.206.206</code></pre></li>
-<li style="list-style-type: none">![lnxnet2](https://faq.mople71.cz/img/cs/lnxnet2.png)</li>
+<li style="list-style-type: none">![lnxnet1](https://faq.mople71.cz/img/cs/lnxnet1.png)</li>
 - Klikněte na tlačítko <span class="green">Použít</span> a Nastavení zavřete.
 <li style="list-style-type: none">![idea](https://mople71.cz/img/sm/idea.gif) Další doporučené DNS servery:</li>
 <li style="list-style-type: none"><pre><code>Adguard DNS:         176.103.130.130, 176.103.130.131

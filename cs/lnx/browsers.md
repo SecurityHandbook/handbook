@@ -52,8 +52,6 @@ Chromium používá špičkovou implementaci sandboxu.
 
 <h3 id="win3.4" class="ff">![ff](https://mople71.cz/img/ff.png) Mozilla Firefox</h3>
 
-<h3 id="win3.4" class="ff">![ff](https://mople71.cz/img/ff.png) Mozilla Firefox</h3>
-
 > Bezpečnější nastavení
 
 - Do adresního řádku prohlížeče zadejte:
@@ -67,7 +65,7 @@ a stiskněte **Enter**.</li>
 <li style="list-style-type: none"><pre><code>security.OCSP.GET.enabled</code></pre></li>
 - Tím změníte její výchozí nastavení (zapnete/vypnete požadovanou funkci).
 <li style="list-style-type: none">![ff0](https://faq.mople71.cz/img/cs/ff.png)</li>
-<li style="list-style-type: none"![ff1](https://faq.mople71.cz/img/cs/ff1.png)</li>
+<li style="list-style-type: none">![ff1](https://faq.mople71.cz/img/cs/ff1.png)</li>
 - Výše uvedeným způsobem vyhledejte a změňte nastavení následujících hodnot (pokud se neshoduje):
 <li style="list-style-type: none"><pre><code>accessibility.blockautorefresh  ---  automatické přesměrování; true
 browser.pocket.enabled  ---  vypíná službu Pocket; false
@@ -191,3 +189,7 @@ a stiskněte **Enter**.</li>
 - Následně v pravém horním rohu klikněte na tlačítko: ![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)
 - Přesuňte se na začátek stránky, zkontrolujte zatržítko u položky <span class="green">Automaticky aktualizovat seznamy filtrů</span> a klikněte na tlačítko <span class="green">Aktualizovat nyní</span>. Během aktualizace panel nezavírejte.
 <li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
+
+> Oddělení prohlížeče od OS a dat
+
+Sandbox Firefoxu je v aktivním vývoji. Také je zde možnost využití Flatpak sandboxu.
