@@ -86,11 +86,11 @@ pause</code></pre></li>
 <br>
 
 ### Anti-executable:
-<span class="red">AppLocker</span> je anti-executable integrovaný ve Windows v edicích Ultimate, Education a Enterprise. Umožňuje ovládání spustitelných souborů, skriptů, DLL knihoven, MSI instalátorů a ModernUI aplikací. Poskytuje velmi slušnou ochranu.
+<span class="red">AppLocker</span> je anti-executable integrovaný ve Windows v edicích Ultimate, Education a Enterprise. Umožňuje ovládání spustitelných souborů, skriptů, DLL knihoven, MSI instalátorů a ModernUI aplikací. Poskytuje vcelku slušnou ochranu, na druhou stranu existují známé způsoby jeho obejití.
 
 <span class="red">NVT Anti-AutoExec</span> je drobná aplikace, která automaticky zabraňuje šíření USB malware. Stačí nainstalovat a ochrana je aktivní.
 
-<span class="red">AppGuard</span> je profesionální anti-executable určený převážně pro firemní sféru, je ovšem dostupný i v domácí verzi. Jeho nastavení je vcelku komplikované a přizpůsobené pro odborníky. Návod na něj není v plánu.
+<span class="red">AppGuard</span> je profesionální anti-executable určený převážně pro firemní sféru, je ovšem dostupný i v domácí verzi. Jeho nastavení je vcelku komplikované a přizpůsobené pro odborníky. Návod na něj aktuálně není v plánu.
 
 <br>
 
@@ -220,16 +220,17 @@ Má to ovšem jednu zásadní komfortní nevýhodu. Vždy, když spustíte aplik
 
 Windows má vestavěný nástroj jménem <span class="green">icacls</span>, který umožňuje měnit úrovně integrity, neumožňuje ovšem pokročilé nastavení integritní politiky. Z tohoto důvodu musíme použít nástroj třetí strany, který je dle mého názoru v mnoha ohledech lepší než vestavěný.
 
-- Stáhněte si [chml](http://www.minasi.com/apps/chml.exe) a uložte jej <span class="blue">na Plochu</span>.
+- Stáhněte si [chml](https://mople71.cz/mirror/chml.exe) (by *[Mark Minasi](http://minasi.com/)*) a uložte jej <span class="blue">na Plochu</span>.
 - Zkontrolujte checksums aplikace (návod případně naleznete v sekci **Užitečné aplikace** FAQ Windows pro méně pokročilé):
-<li style="list-style-type: none"><pre><code>SHA-1:   e26af472a52039caac5548ecb3c6727b2651e490
-SHA-256: 59aa55d2eac6b295d42ef2aadc607b759f034f4557a66dec0214a4cc032ecc17</code></pre></li>
+<li style="list-style-type: none"><pre><code>SHA-256: 59aa55d2eac6b295d42ef2aadc607b759f034f4557a66dec0214a4cc032ecc17
+SHA-512: a22317552f90e896fb6f0e4a30f7834baf97a771211a37aca12f52d55ff8b85212d4ded5138ab66a70eaaa1193002b98158938bc17185ea94ccc9f7f4b8120f4</code></pre></li>
 - Aplikaci přesuňte do umístění: <span class="blue">C:\Windows\System32</span>
-    - Klikněte na aplikaci a stiskněte <span class="green">Ctrl + X</span>
+    - Klikněte na aplikaci a stiskněte <span class="green">Ctrl + C</span>
     - Stiskněte kláv. zkratku  ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
     <li style="list-style-type: none"><pre><code>C:\Windows\System32</code></pre>
 a stiskněte **Enter**.</li>
     - Otevře se složka System32. Stiskněte <span class="green">Ctrl + V</span> a a potvrďte přesun do složky.
+    - Smažte *chml* z původní lokace.
 
 - Stiskněte kláv. zkratku <img src="https://mople71.cz/img/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
 <li style="list-style-type: none">![wx](https://mople71.cz/img/cs/wx.png)</li>
@@ -256,7 +257,6 @@ chml C:\Users\(uživ. jméno)\Videos -i:m -nw -nx
 > Tipy
 
 - Můžete nastavit nižší integritu i dalším aplikacím, které nepotřebují zapisovat do osobních složek (např. PDF prohlížeč, VLC etc.).
-- Můžete např. všem osobním složkám nastavit integritní politiku <span class="dblue">NO_READ_UP</span> a tím kompletně oddělit rizikové aplikace od vašich osobních dat &ndash; v případě exploitace a kompromitace aplikace se na vaše data ani nepodívá...
 - Také můžete osobním složkám nastavit vysokou integritu a soubory, které budete chtít upravit, dočasně překopírovat jinam a následně zpět.
 - ...
 

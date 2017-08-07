@@ -211,7 +211,7 @@ Pro nižší verze Windows lze instalaci antiviru třetí strany pochopit, jelik
 #### Placená řešení:
 - [Emsisoft Anti-Malware](https://www.emsisoft.com/en/software/antimalware/) &ndash; anglické rozhraní
 - [F-Secure](https://www.f-secure.com/en/web/home_global/safe?icid=1526) &ndash; české rozhraní
-- [Bitdefender](https://www.bitdefender.com/) &ndash; anglické rozhraní, existuje i [česká verze](https://www.bitdef.cz/)
+- [Bitdefender](https://www.bitdefender.com/solutions/internet-security.html) &ndash; anglické rozhraní, existuje i [česká verze](https://www.bitdef.cz/)
 
 <br>
 
@@ -244,7 +244,7 @@ Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno
 
 > Instalace a konfigurace VoodooShield
 
-- Stáhněte si [VoodooShield](https://voodooshield.com/).
+- Stáhněte si [VoodooShield](https://voodooshield.com/#download).
 - Aplikaci nainstalujte.
 - Vyčkejte na dokončení konfigurace aplikace a při dotázání zvolte <span class="green">Application Whitelisting Mode</span>. Uvítací okno následně zavřete.
 - Klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a vyberte možnost <span class="green">Hide</span>, čímž skryjete widget aplikace z pracovního prostoru.

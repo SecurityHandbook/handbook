@@ -33,7 +33,7 @@ Veškeré aplikace jsou uzavřeny v sandboxu (*IsolatedProcess*), tudíž každ�
 
 Android **Marshmallow** a výše nabízí rozšířený model oprávnění &ndash; uživatel si může zvolit, k jakým komponentům/souborům bude mít daná aplikace přístup. Vestavěný správce oprávnění zatím není perfektní, jelikož neumožňuje nastavení všech důležitých oprávnění, ale funguje spolehlivě, což se nedá říci o správcích oprávnění třetích stran (např. XPrivacy).
 
-Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect*), zde nebudou rozebírány. Pro další informace o architektuře nahlédněte do návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/iot/andr_vyber.php).
+Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect*), zde nebudou rozebírány. Pro další informace o architektuře nahlédněte do návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/cs/iot/andr_vyber.php).
 
 <br><br><hr><br>
 
@@ -76,7 +76,7 @@ Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se d
 
 ### Zařízení s OS Android splňující bezpečnostní požadavky:
 
-Seznam zařízení naleznete v návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/iot/andr_vyber.php#vyber2).
+Seznam zařízení naleznete v návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/cs/iot/andr_vyber.php#vyber2).
 
 <br><br><hr><br>
 
@@ -99,7 +99,7 @@ Android je bezpečně nastaven již v základu, není ovšem od věci podívat s
 - Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
 <li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
 - Máte-li starší *verzi systému Android* než **7.1.1**, telefon není implicitně bezpečný &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* nežli **5. července 2017** (a k nápravě nedojde do konce září), telefon je nebezpečný &ndash; můžete se dívat po náhradě.
-- Více informací o této problematice naleznete v návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/iot/andr_vyber.php).
+- Více informací o této problematice naleznete v návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/cs/iot/andr_vyber.php).
 - Aplikaci zavřete.
 
 <br>
@@ -170,7 +170,6 @@ Blokování reklamy je z hlediska bezpečnosti esenciální kvůli četnému vý
 
 #### DNS:</h3>
 - Adguard DNS: https://adguard.com/en/adguard-dns/overview.html
-- NoAd: https://noad.zone
 
 DNS je jednoduchý způsob blokace reklam, vyžaduje to ovšem důvěru v poskytovatele DNS. Použití prohlížeče blokující reklamy je nejlepším řešením. *Chrome(ium)* od verze 62 umožní nativně blokovat agresivní reklamy nesplňující podmínky. VPN je také dobrý způsob, ovšem implementace OpenVPN na Androidu není 100% ideální.
 
@@ -203,7 +202,7 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 
 > Technické informace o XPrivacy
 
-XPrivacy primárně nahrazuje Java API novým kódem a často pouze kódem strany klienta &ndash; většina dat může být stále získána. Například skrývá sériové číslo v Java system property API &ndash; [link](https://github.com/M66B/XPrivacy/blob/master/src/biz/bokhorst/xprivacy/XSystemProperties.java). Sériové číslo je ovšem stále přístupné nativnímu kódu, případně Java kódu používajícímu jiné rozhraní pro přístup. Tímto způsobem evidentně (ne)funguje větší část XPrivacy.
+XPrivacy primárně nahrazuje Java API novým kódem a často pouze kódem strany klienta &ndash; většina dat může být stále získána. Například skrývá sériové číslo v Java system property API ([link](https://github.com/M66B/XPrivacy/blob/master/src/biz/bokhorst/xprivacy/XSystemProperties.java)\). Sériové číslo je ovšem stále přístupné nativnímu kódu, případně Java kódu používajícímu jiné rozhraní pro přístup. Tímto způsobem evidentně (ne)funguje větší část XPrivacy.
 
 Mít bezpečnostní aplikaci, kterou lze obejít i bez exploitace, moc nemá smysl. ![wink](https://mople71.cz/img/sm/wink.gif)
 
@@ -215,8 +214,7 @@ Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na
 ![Bezpečnostní model Chromium](https://faq.mople71.cz/img/en/chmandr.png)
 
 #### FOSS:
-- Chromium: https://www.chromium.org/developers/how-tos/android-build-instructions
-https://play.google.com/store/apps/details?id=com.anddevw.getchromium
+- Chromium: https://chromium.googlesource.com/chromium/src/+/master/docs/android_build_instructions.md
 - Brave: https://play.google.com/store/apps/details?id=com.brave.browser
 
 #### Proprietární:
