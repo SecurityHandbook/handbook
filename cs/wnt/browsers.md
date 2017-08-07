@@ -30,7 +30,7 @@ a stiskněte **Enter**.</li>
 
 > Blokování reklamy
 
-- Nainstalujte si následující bezpečnostní doplněk: <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=cs" target="_blank">uBlock Origin</a>.
+- Nainstalujte si následující bezpečnostní doplněk: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=cs)
 
 #### Nastavení uBlock:
 
@@ -58,7 +58,7 @@ Nechcete-li používat *Google Chrome*, doporučuji použít open-source Chromiu
 
 > Instalace a nastavení chrlauncher
 
-- Stáhněte si nejnovější verzi <a href="https://github.com/henrypp/chrlauncher/releases" target="_blank">Chrlauncher</a>.
+- Stáhněte si nejnovější verzi [Chrlauncher](https://github.com/henrypp/chrlauncher/releases).
 - Archiv extrahujte. V závislosti na bitové verzi vašeho OS určete, kterou složku z archivu budete potřebovat (64-bit OS &ndash; složka **64**), a následně ji přesuňte na důstojné místo (ideálně *%localappdata%*, ale stačí *Dokumenty*). Také je vhodné ji přejmenovat.
 - Ve složce nalezněte a otevřete konfigurační soubor <span class="green">chrlauncher.ini</span>.
 - Nalezněte řádek začínající na **ChromiumArchitecture** a za rovnítko vepište požadovanou architekturu (na novějších zařízeních <span class="green">64</span>):
@@ -93,7 +93,7 @@ Použijte postup pro **Google Chrome** výše, je identický.
 
 > Blokování reklamy
 
-- Nainstalujte si následující bezpečnostní doplněk: <a href="https://www.microsoft.com/cs-cz/store/p/ublock-origin/9nblggh444l4" target="_blank">uBlock Origin</a>.
+- Nainstalujte si následující bezpečnostní doplněk: [uBlock Origin](https://www.microsoft.com/cs-cz/store/p/ublock-origin/9nblggh444l4)
 
 #### Nastavení uBlock:
 - Klikněte na ikonu uBlock v panelu ikon a následně otevřete **Nastavení**.
@@ -152,7 +152,7 @@ a stiskněte **Enter**.</li>
 
 > Blokování reklamy
 
-- Otevřete v IE <a href="http://dayngo.com/static/filter.html" target="_blank">následující stránku</a>.
+- Otevřete v IE [následující stránku](http://dayngo.com/static/filter.html).
 - Zobrazí se seznam filtrů pro Tracking Protection (vestavěný blokátor nejen reklam).
 - Ze seznamu doporučuji přidat filtry <span class="green">EasyList</span>, <span class="green">EasyList Czech and Slovak</span> a <span class="green">EasyPrivacy</span>.
 
@@ -160,7 +160,7 @@ a stiskněte **Enter**.</li>
 - Klikněte na takto vypadající odkaz: ![ie4](https://faq.mople71.cz/img/en/ie4.png)
 - V zobrazeném vyskakovacím okně klikněte na tlačítko <span class="green">Přidat seznam</span>.
 
-Další český filtr naleznete např. <a href="http://adblock.dajbych.net/">zde</a>.
+Další český filtr naleznete např. [zde](http://adblock.dajbych.net/).
 
 
 > Oddělení prohlížeče od OS a dat
@@ -296,7 +296,7 @@ a stiskněte **Enter**.</li>
 
 > Blokování reklamy
 
-- Nainstalujte si následující bezpečnostní doplněk: <a href="https://addons.mozilla.org/cs/firefox/addon/ublock-origin/" target="_blank">uBlock Origin</a>.</li>
+- Nainstalujte si následující bezpečnostní doplněk: [uBlock Origin](https://addons.mozilla.org/cs/firefox/addon/ublock-origin/)
 
 #### Nastavení uBlock:
 - Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.

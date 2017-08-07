@@ -51,7 +51,7 @@ Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často
 
 Windows by se měly ve výchozím nastavení aktualizovat samy (v edici Home automatické aktualizace dokonce nelze vypnout). Mnohé důležité aplikace (např. prohlížeče) se obvykle aktualizují automaticky.
 
-Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <span class="green">Heimdal Free</span>, která běží na pozadí a upozorní vás v případě neaktuálního SW, případně jej sama aktualizuje, automatické aktualizace ovšem teoreticky mohou způsobit problémy. Návod k *Heimdal Free* naleznete v sekci <a href="#win2.6">Ostatní aplikace</a>.
+Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <span class="green">Heimdal Free</span>, která běží na pozadí a upozorní vás v případě neaktuálního SW, případně jej sama aktualizuje, automatické aktualizace ovšem teoreticky mohou způsobit problémy. Návod k *Heimdal Free* naleznete v sekci [Ostatní aplikace](#win2.6).
 
 > Kontrola nastavení aktualizací OS (starší verze Windows):
 
@@ -85,7 +85,7 @@ a stiskněte **Enter**.</li>
 ![idea](https://mople71.cz/img/sm/idea.gif) Pokročilejší si skript mohou upravit &ndash; je v něm několik zakomentovaných bezpečnostních opatření, které nemohou být aplikovány širokopásmově...
 
 ![batch](https://mople71.cz/img/bat.png) **SafeSVC**:
-- Stáhněte si <a href="https://mople71.cz/safesvc.zip" download='SafeSVC'>SafeSVC</a>.
+- Stáhněte si [SafeSVC](https://mople71.cz/safesvc.zip).
 - Uložte a obsah archivu vyextrahujte <span class="blue">na Plochu</span>.
 - Na skript jménem <span class="green">safesvc</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/admin.png) **Spustit jako správce**.
 - Nechte skript pracovat, na konci procesu vám řekne o souhlas k restartu OS.
@@ -99,13 +99,13 @@ a stiskněte **Enter**.</li>
 - Otevře se seznam síťových adaptérů. Klikněte na první adaptér (obvykle ethernet) pravým tlačítkem a zvolte možnost <span class="green">Vlastnosti</span>.
 <li style="list-style-type: none">![wntnet](https://faq.mople71.cz/img/cs/wntnet.png)</li>
 - V seznamu odškrtněte všechny nepotřebné položky. Běžným uživatelům stačí ponechat pouze <span class="green">Sdílení souborů a tiskáren v sítích Microsoft</span>, <span class="green">Protokol IP verze 4 (TCP/IPv4)</span> a <span class="green">Protokol IP verze 6 (TCP/IPv6)</span>.
-- Pokud nesdílíte žádnou tiskárnu v síti a nepoužíváte IPv6 (pokud nevíte, zdali používáte IPv6, můžete to zjistil pomocí následujícího rychlého <a href="http://www.test-ipv6.cz/" target="_blank">online testu</a>), můžete pro vyšší bezpečnost ponechat zaškrtnutý pouze <span class="green">Protokol IP verze 4 (TCP/IPv4)</span>.
+- Pokud nesdílíte žádnou tiskárnu v síti a nepoužíváte IPv6 (pokud nevíte, zdali používáte IPv6, můžete to zjistil pomocí následujícího rychlého [online testu](http://www.test-ipv6.cz/)\), můžete pro vyšší bezpečnost ponechat zaškrtnutý pouze <span class="green">Protokol IP verze 4 (TCP/IPv4)</span>.
 <li style="list-style-type: none">![wntnet1](https://faq.mople71.cz/img/cs/wntnet1.png)</li>
 - Klikněte na **Protokol IP verze 4 (TCP/IPv4)** a zvolte možnost <span class="green">Vlastnosti</span>.
 <li style="list-style-type: none">![wntnet2](https://faq.mople71.cz/img/cs/wntnet2.png)</li>
 
 ![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Nyní nastavíme bezpečné DNS servery.</span>
-- Pokud nevíte, co DNS je, přečtěte si tento <a href="https://www.nic.cz/page/312/o-domenach-a-dns/" target="_blank">krátký článek</a>.
+- Pokud nevíte, co DNS je, přečtěte si tento [krátký článek](https://www.nic.cz/page/312/o-domenach-a-dns/).
 - Doporučuji použít DNSSEC. Ale můžete si vybrat z mnoha DNS serverů, zde je pár příkladů:
 <li style="list-style-type: none"><pre><code>CZ.NIC DNSSEC:        217.31.204.130, 193.29.206.206
 Adguard DNS:          176.103.130.130, 176.103.130.131
@@ -161,7 +161,7 @@ Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &
 
 <span class="green">Windows Defender</span> integrovaný ve **Windows 8.1 Update 3** a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vstrvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a v OS mnohdy provádí v porovnání s integrovaným řešením naprosté šílenosti.
 
-Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům (tzv. *Řízený přístup ke složkám*) a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci <a href="#win2.4">anti-exploit</a>).
+Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům (tzv. *Řízený přístup ke složkám*) a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci [anti-exploit](#win2.4)\).
 
 > Ochrana před viry a hrozbami &ndash; nastavení
 
@@ -204,14 +204,14 @@ Pro nižší verze Windows lze instalaci antiviru třetí strany pochopit, jelik
 > Doporučené antiviry pro Windows 8 a níže
 
 #### Bezplatná řešení:
-- <a href="https://www.sophos.com/en-us/lp/sophos-home.aspx" target="_blank">Sophos Home</a> &ndash; anglické rozhraní, špičková administrace
-- <a href="https://www.microsoft.com/cs-cz/download/details.aspx?id=5201" target="_blank">Microsoft Security Essentials</a> &ndash; české rozhraní, substituce Defenderu pro Windows 7 a Windows Vista
-- <a href="https://www.bitdefender.com/solutions/free.html" target="_blank">Bitdefender Free</a> &ndash; anglické rozhraní
+- [Sophos Home](https://www.sophos.com/en-us/lp/sophos-home.aspx) &ndash; anglické rozhraní, špičková administrace
+- [Microsoft Security Essentials](https://www.microsoft.com/cs-cz/download/details.aspx?id=5201) &ndash; české rozhraní, substituce Defenderu pro Windows 7 a Windows Vista
+- [Bitdefender Free](https://www.bitdefender.com/solutions/free.html) &ndash; anglické rozhraní
 
 #### Placená řešení:
-- <a href="https://www.emsisoft.com/en/software/antimalware/" target="_blank">Emsisoft Anti-Malware</a> &ndash; anglické rozhraní
-- <a href="https://www.f-secure.com/en/web/home_global/safe?icid=1526" target="_blank">F-Secure</a> &ndash; české rozhraní
-- <a href="https://www.bitdefender.com/" target="_blank">Bitdefender</a> &ndash; anglické rozhraní, existuje i <a href="https://www.bitdef.cz/" target="_blank">česká verze</a>
+- [Emsisoft Anti-Malware](https://www.emsisoft.com/en/software/antimalware/) &ndash; anglické rozhraní
+- [F-Secure](https://www.f-secure.com/en/web/home_global/safe?icid=1526) &ndash; české rozhraní
+- [Bitdefender](https://www.bitdefender.com/) &ndash; anglické rozhraní, existuje i [česká verze](https://www.bitdef.cz/)
 
 <br>
 
@@ -233,18 +233,18 @@ Anti-executable je jedna z nejúčinnějších vrstev ochrany. Jak napovídá n�
 Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně souboru rovnou zabraní spustit se. Nastavení whitelistu není úkol pro běžné uživatele, existují ovšem i řešení, která umí whitelist vytvořit prakticky bez uživatelské interakce.
 
 #### Přehled anti-executable řešení:
-- <a href="https://voodooshield.com/" target="_blank">VoodooShield</a> (VS)
-- <a href="http://www.novirusthanks.org/products/anti-autoexec/" target="_blank">NVT Anti-AutoExec</a>
-- <a href="https://www.appguard.us/personal/#purchase" target="_blank">AppGuard</a> (AG)
-- <a href="http://www.novirusthanks.org/products/exe-radar-pro/" target="_blank">NVT ExeRadarPro</a> (NVT ERP)
-- <a href="https://technet.microsoft.com/cs-cz/library/dd759117.aspx" target="_blank">AppLocker</a>
-- <a href="https://technet.microsoft.com/cs-cz/library/hh831534.aspx" target="_blank">Software Restrtiction Policies</a> (SRP)
+- [VoodooShield](https://voodooshield.com/) (VS)
+- [NVT Anti-AutoExec](http://www.novirusthanks.org/products/anti-autoexec/)
+- [AppGuard](https://www.appguard.us/personal/#purchase) (AG)
+- [NVT ExeRadarPro](http://www.novirusthanks.org/products/exe-radar-pro/) (NVT ERP)
+- [AppLocker](https://technet.microsoft.com/cs-cz/library/dd759117.aspx)
+- [Software Restrtiction Policies](https://technet.microsoft.com/cs-cz/library/hh831534.aspx) (SRP)
 
 <span class="red">VoodooShield</span> je nejpřívětivější anti-executable a nejlepší volba pro obyčejné uživatele. Kromě placené verze poskytuje i bezplatnou pro nekomerční využití, která poskytuje srovnatelnou ochranu, akorát nenabízí možnost rozšířené konfigurace, což běžnému uživateli nevadí. V základu je nakonfigurován bezpečně. Bohužel zatím nenabízí české rozhraní.
 
 > Instalace a konfigurace VoodooShield
 
-- Stáhněte si <a href="https://voodooshield.com/" target="_blank">VoodooShield</a>.
+- Stáhněte si [VoodooShield](https://voodooshield.com/).
 - Aplikaci nainstalujte.
 - Vyčkejte na dokončení konfigurace aplikace a při dotázání zvolte <span class="green">Application Whitelisting Mode</span>. Uvítací okno následně zavřete.
 - Klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a vyberte možnost <span class="green">Hide</span>, čímž skryjete widget aplikace z pracovního prostoru.
@@ -288,8 +288,8 @@ Windows využívají velké množství mitigací a exploitace samotného OS a ap
 
 #### Přehled anti-exploit řešení:
 - Windows Defender Exploit Protection (Windows 10 Fall Creators Update a výše)
-- <a href="https://technet.microsoft.com/en-us/security/jj653751" target="_blank">Microsoft Enhanced Mitigation Experience Toolkit</a> (EMET; Windows 10 November Update a níže)
-- <a href="https://www.hitmanpro.com/en/alert.aspx" target="_blank">HitmanPro.Alert</a> (HMP.A)
+- [Microsoft Enhanced Mitigation Experience Toolkit](https://technet.microsoft.com/en-us/security/jj653751) (EMET; Windows 10 November Update a níže)
+- [HitmanPro.Alert](https://www.hitmanpro.com/en/alert.aspx) (HMP.A)
 
 Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implementovány přímo do OS. Konfiguraci mitigací umožňuje *GUI* vestavěného AV/M řešení <span class="green">Windows Defender</span>.
 
@@ -319,7 +319,7 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 
 > Instalace a konfigurace EMET (starší verze Windows)
 
-- Stáhněte si nejnovější verzi <a href="https://technet.microsoft.com/en-us/security/jj653751" target="_blank">EMET</a>.
+- Stáhněte si nejnovější verzi [EMET](https://technet.microsoft.com/en-us/security/jj653751).
 - Aplikaci nainstalujte, licenci odsouhlaste tlačítkem <span class="green">I Agree</span>.
 - V průběhu instalace se zobrazí okno se základním nastavením aplikace. Zvolte možnost <span class="green">Use Recommended Settings</span> a klikněte na <span class="green">Finish</span>.
 <li style="list-style-type: none">![emet](https://faq.mople71.cz/img/en/emet.png)</li>
@@ -356,7 +356,7 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 
 > Instalace a konfigurace HMP.A
 
-- Stáhněte si <a href="https://www.hitmanpro.com/en/alert.aspx" target="_blank">HMP.A</a>.
+- Stáhněte si [HMP.A](https://www.hitmanpro.com/en/alert.aspx).
 - Aplikaci nainstalujte, ponechte doporučené nastavení a možnost skenu po instalaci.
 - Aplikaci otevřete.
 - Klikněte na ozubené kolečko v pravém horním rohu a zvolte možnost <span class="green">Advanced interface</span>.
@@ -369,7 +369,7 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 - Při zachycení útoku HMP.A školivou aplikaci ukončí a zobrazí následující hlášku:
 <li style="list-style-type: none">![hmpa3](https://faq.mople71.cz/img/en/hmpa3.png)</li>
 
-![idea](https://mople71.cz/img/sm/idea.gif) Více se dozívte v <a href="https://www.hitmanpro.com/en-us/medialibrary/Microsites/SurfRight/Resources/HitmanPro-Alert-Getting-Started.pdf?la=en">manuálu</a>.
+![idea](https://mople71.cz/img/sm/idea.gif) Více se dozívte v [manuálu](https://www.hitmanpro.com/en-us/medialibrary/Microsites/SurfRight/Resources/HitmanPro-Alert-Getting-Started.pdf?la=en).
 
 <br>
 
@@ -377,15 +377,15 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 Virtualizace může být velmi bezpečný způsob ochrany před malware (záleží na způsobu aplikace), jelikož odděluje požadovanou část OS od fyzického OS.
 
 #### Možnosti virtualizace:
-- virtuální počítač &ndash; <a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a>, <a href="https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0" target="_blank">VMware Player</a>,...
-- lehká virtualizace OS &ndash; <a href="http://www.shadowdefender.com/" target="_blank">Shadow Defender</a>
-- sandbox &ndash; <a href="https://www.sandboxie.com/" target="_blank">Sandboxie</a>
+- virtuální počítač &ndash; [VirtualBox](https://www.virtualbox.org/), [VMware Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0),...
+- lehká virtualizace OS &ndash; [Shadow Defender](http://www.shadowdefender.com/)
+- sandbox &ndash; [Sandboxie](https://www.sandboxie.com/)
 
 Nejbezpečnější způsob virtualizace je virtuální počítač při korektním nastavení a aplikaci snapshotů. Lehká virtualizace OS spočívá ve vrácení změn v OS při restartu, může být velmi užitečná proti např. ransomware. U sandboxu velmi záleží na implementaci, bezplatné řešení Sandboxie poskytující externí sandbox pro aplikace, je spíše na hraní.
 
 > Instalace a konfigurace Sandboxie
 
-- Stáhněte si <a href="https://www.sandboxie.com/index.php?DownloadSandboxie" target="_blank">Sandboxie</a>.
+- Stáhněte si [Sandboxie](https://www.sandboxie.com/index.php?DownloadSandboxie).
 - Aplikaci nainstalujte a projděte úvodním tutoriálem.
 - Otevřete **Ovládání Sandboxie**.
 - Klikněte pravým tlačítkem na **Sandbox DefaultBox** a zvolte možnost <span class="green">Nastavení Sandboxu</span>.
@@ -400,13 +400,13 @@ Nejbezpečnější způsob virtualizace je virtuální počítač při korektní
 Užitečné aplikace, které nespadají ani pod jednu kategorii vrstev zabezpečení.
 
 #### Doporučené ostatní aplikace:
-- <a href="https://heimdalsecurity.com/en/products/heimdal-free" target="_blank">Heimdal Free</a>
-- <a href="https://unchecky.com/" target="_blank">Unchecky</a>
-- <a href="http://implbits.com/products/hashtab/" target="_blank">HashTab</a>
+- [Heimdal Free](https://heimdalsecurity.com/en/products/heimdal-free)
+- [Unchecky](https://unchecky.com/)
+- [HashTab](http://implbits.com/products/hashtab/)
 
 > Instalace a konfigurace Heimdal Free
 
-- Stáhněte si <a href="https://heimdalsecurity.com/en/products/heimdal-free/thank-you" target="_blank">Heimdal Free</a>.
+- Stáhněte si [Heimdal Free](https://heimdalsecurity.com/en/products/heimdal-free/thank-you).
 - Máte-li nastavený **Řízený přístup ke složkám** ve <span class="green">Windows Defender</span>, dočasně jej po dobu instalace vypněte.
 <li style="list-style-type: none">![wd1a](https://faq.mople71.cz/img/cs/wd1a.png)</li>
 - Aplikaci nainstalujte. (**I want to activate Heimdal FREE**)
@@ -416,11 +416,11 @@ Užitečné aplikace, které nespadají ani pod jednu kategorii vrstev zabezpeč
 - Pro změnu nastavení &ndash; např. po instalaci nové aplikace, kterou *Heimdal Free* zatím nemonitoruje &ndash; otevřete **Heimdal Free** a přesuňte se do záložky <span class="green">Patching System</span>.
 <li style="list-style-type: none">![hf1](https://faq.mople71.cz/img/en/hf1.png)</li>
 <li style="list-style-type: none">![idea](https://mople71.cz/img/sm/idea.gif) Ačkoli je **Heimdal Free** velmi kvalitní aplikace, automatická aktualizace aplikací otevírá prostor problémům. Na druhou stranu se jedná o menší zlo v porovnání s neaktuálními aplikacemi. Pokud tedy takto konfigurujete OS člověku, který si s PC nerozumí a nebude aplikace aktualizovat, automatickou aktualizaci možná zapněte.</li>
-- Aplikaci povolte v **Řízeném přístupu ke složkám**, který následně opětovně povolte. Návod <a href="#win2.1">zde</a>.
+- Aplikaci povolte v **Řízeném přístupu ke složkám**, který následně opětovně povolte. Návod [zde](#win2.1).
 
 > Instalace a konfigurace HashTab
 
-- Stáhněte si <a href="http://implbits.com/products/hashtab/" target="_blank">HashTab</a>.
+- Stáhněte si [HashTab](http://implbits.com/products/hashtab/).
 - Aplikaci nainstalujte.
 - Nalezněte libovolný soubor na disku a otevřete jeho **Vlastnosti**.
 - V horním panelu se přesuňte do záložky **File Hashes** a klikněte na tlačítko <span class="green">Settings</span>.
@@ -439,7 +439,7 @@ Užitečné aplikace, které nespadají ani pod jednu kategorii vrstev zabezpeč
 
 Všechny prohlížeče jsou po korektním nastavení relativně bezpečné, nejvíce také záleží na vás. Proto zde rozeberu pouze teoretické zabezpečení prohlížečů z hlediska mitigací exploitů apod. Níže v sekci naleznete návody na zabezpečení **Mozilla Firefox**, **Internet Explorer**, **Google Chrome** a **Microsoft Edge** kvůli jejich dominantnímu postavení.
 
-Ze zmíněných prohlížečů bych doporučil <span class="green">Microsoft Edge</span> a <span class="green">Chromium</span>, případně jeho proprietární variantu <a href="https://www.google.com/chrome/browser/index.html" target="_blank">Google Chrome</a>. S prohlížečem **Internet Explorer** není zásadní problém, na druhou stranu již není v aktivním vývoji.
+Ze zmíněných prohlížečů bych doporučil <span class="green">Microsoft Edge</span> a <span class="green">Chromium</span>, případně jeho proprietární variantu [Google Chrome](https://www.google.com/chrome/browser/index.html). S prohlížečem **Internet Explorer** není zásadní problém, na druhou stranu již není v aktivním vývoji.
 
 <span class="red">Mozilla Firefox</span>. Tento prohlížeč z hlediska zabezpečení nelze doporučit, v porovnání s ostatními zmíněnými prohlížeči výrazně zaostává. Má starý kód výrazně nižší kvality nežli Edge či Chromium a postrádá základní mitigace proti exploitům (v poslední době se toto snaží dohánět implementací sandboxu prohlížeče Chromium). Externí sandbox typu Sandboxie nedosahuje zdaleka takové kvality jako vestavěný sandbox.
 

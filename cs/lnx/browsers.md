@@ -30,7 +30,7 @@ a stiskněte **Enter**.</li>
 
 > Blokování reklamy
 
-- Nainstalujte si následující bezpečnostní doplněk: <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=cs" target="_blank">uBlock Origin</a>.
+- Nainstalujte si následující bezpečnostní doplněk: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=cs)
 
 #### Nastavení uBlock:
 - Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
@@ -176,7 +176,7 @@ a stiskněte **Enter**.</li>
 
 > Blokování reklamy
 
-- Nainstalujte si následující bezpečnostní doplněk: <a href="https://addons.mozilla.org/cs/firefox/addon/ublock-origin/" target="_blank">uBlock Origin</a>.</li>
+- Nainstalujte si následující bezpečnostní doplněk: [uBlock Origin](https://addons.mozilla.org/cs/firefox/addon/ublock-origin/)
 
 #### Nastavení uBlock:
 - Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.

@@ -27,7 +27,7 @@ U některých kroků také naleznete pokyny pro distribuci Ubuntu, která je vel
 Chcete-li používat jinou distribuci, níže uvedené kroky můžete aplikovat i na ostatní distribuce, pouze si musíte zjistit správný syntax vaší distribuce a informace o kompatibilitě.
 
 ### Doporučené grafické prostředí:
-Z bezpečnostního hlediska doporučuji <a href="https://www.gnome.org/">GNOME</a>, jelikož používá wayland místo X.org a podílí se na vývoji Flatpaku. Vyjímku tvoří rozhraní *GNOME Classic*, které využívá primárně X.org &ndash; není tedy doporučeno.
+Z bezpečnostního hlediska doporučuji [GNOME](https://www.gnome.org/), jelikož používá wayland místo X.org a podílí se na vývoji Flatpaku. Vyjímku tvoří rozhraní *GNOME Classic*, které využívá primárně X.org &ndash; není tedy doporučeno.
 
 <br><br><hr><br>
 
@@ -65,7 +65,7 @@ gedit /etc/fstab</code></pre></li>
 <br>
 
 ### Zakázání IPv6:
-Pokud nepoužíváte a nepotřebujete IPv6 (pokud nevíte, můžete to zjistit pomocí následujícího <a href="http://www.test-ipv6.cz/" target="_blank">testu</a>), je rozumné protokol vypnout pro snížení prostoru pro útok.
+Pokud nepoužíváte a nepotřebujete IPv6 (pokud nevíte, můžete to zjistit pomocí následujícího [testu](http://www.test-ipv6.cz/), je rozumné protokol vypnout pro snížení prostoru pro útok.
 
 > Návod
 
@@ -85,7 +85,7 @@ exit</code></pre></li>
 <br>
 
 ### Nastavení DNS:
-Pokud vám zkratka DNS nic neříká, přečtěte si tento <a href="https://www.nic.cz/page/312/o-domenach-a-dns/" target="_blank">krátký článek</a>.
+Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](https://www.nic.cz/page/312/o-domenach-a-dns/).
 
 > Návod
 
@@ -125,7 +125,7 @@ Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před út
 <br>
 
 ### MAC:
-<abbr title="Mandatory Access Control">MAC</abbr> se stal důležitou součástí bezpečnostního modelu linuxových distribucí. Podrobné vysvětlení naleznete např. na <a href="https://cs.wikipedia.org/wiki/Mandatory_access_control" target="_blank">Wikipedii</a>.
+<abbr title="Mandatory Access Control">MAC</abbr> se stal důležitou součástí bezpečnostního modelu linuxových distribucí. Podrobné vysvětlení naleznete např. na [Wikipedii](https://cs.wikipedia.org/wiki/Mandatory_access_control).
 
 **<span class="fe">Fedora</span>** používá implementaci **SELinux**.
 
@@ -157,7 +157,7 @@ Flatpak je nový způsob distribuce aplikací. Má za cíl odstranit chyby a ned
 **<span class="os">openSUSE</span>** Flatpak předinstalovaný nemá, lze jej ovšem nainstalovat jednoduchým příkazem:
 <pre><code>sudo zypper install flatpak</code></pre>
 
-**<span class="ub">Ubuntu</span>** Flatpak předinstalovaný nemá, jelikož propaguje svou alternativu k Flatpaku &ndash; <a href="https://www.ubuntu.com/desktop/snappy" target="_blank">Snap</a>. Každopádně pokud se rozhodnete upřednostnit Flatpak před Snap (doporučeno), můžete jej nainstalovat následujícími příkazy:
+**<span class="ub">Ubuntu</span>** Flatpak předinstalovaný nemá, jelikož propaguje svou alternativu k Flatpaku &ndash; [Snap](https://www.ubuntu.com/desktop/snappy). Každopádně pokud se rozhodnete upřednostnit Flatpak před Snap (doporučeno), můžete jej nainstalovat následujícími příkazy:
 <pre><code>sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
 sudo apt install flatpak</code></pre>
@@ -166,7 +166,7 @@ sudo apt install flatpak</code></pre>
 
 > Návod k použití Flatpak
 
-Několik aplikací můžete nalézt na <a href="http://flatpak.org/apps.html" target="_blank">stránkách Flatpak</a> a většinu poté v repozitáři **Flathub**. Je důrazně doporučeno překliknout se do záložky <span class="green">Command Line</span> a příkazy provést ručně.
+Několik aplikací můžete nalézt na [stránkách Flatpak](http://flatpak.org/apps.html) a většinu poté v repozitáři **Flathub**. Je důrazně doporučeno překliknout se do záložky <span class="green">Command Line</span> a příkazy provést ručně.
 
 Nikdy před příkaz **flatpak** nedávejte <span class="red">sudo</span>. Flatpak si o autorizaci řekne sám, bude-li ji potřebovat.
 
@@ -199,7 +199,7 @@ Flathub je oficiální platforma pro distribuci Flatpak aplikací. Naleznete v n
 <li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.valvesoftware.Steam</code></pre></li>
 - Bude-li vám v průběhu nabídnut výběr mezi *gnome* a *flathub* repozitáři, zvolte <span class="green">flathub</span>.
-- Spusťte Steam a doufejte, že vámi oblíbené hry jsou ve flatpaku funkční. Seznam otestovaných her naleznete <a href="https://github.com/flathub/com.valvesoftware.Steam/wiki/Tested-Games" target="_blank">zde</a>.
+- Spusťte Steam a doufejte, že vámi oblíbené hry jsou ve flatpaku funkční. Seznam otestovaných her naleznete [zde](https://github.com/flathub/com.valvesoftware.Steam/wiki/Tested-Games).
 
 > Instalace GNOME aplikací
 

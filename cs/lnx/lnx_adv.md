@@ -4,7 +4,7 @@ Linux se díky svému minoritnímu zastoupení na desktopech těší řádově m
 
 Zde se budeme věnovat pokročilejším možnostem zabezpečení (desktopového) Linuxu. Jako rukojmí použiji distribuci Arch Linux, která v základním nastavení není příliš zabezpečená, ale korektní konfigurací z ní lze vytvořit velmi bezpečnou instalaci. Kroky níže popisované jsou aplikovatelné na většinu distribucí, stačí korektně změnit syntax.
 
-Tato sekce FAQ počítá s tím, že jste pročetli <a href="https://faq.mople71.cz/cs/lnx/index.php#lnx">OS FAQ Linux pro méně pokročilé</a> uživatele a máte znalosti ve zmíněné sekci rozebírané.
+Tato sekce FAQ počítá s tím, že jste pročetli [OS FAQ Linux pro méně pokročilé](https://faq.mople71.cz/cs/lnx/index.php#lnx) uživatele a máte znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
 - vrstvy zabezpečení
@@ -82,9 +82,9 @@ Na Arch Linux není problém provozovat RBAC, TOMOYO nebo AppArmor. SELinux je o
 
 ![idea](https://mople71.cz/img/sm/idea.gif) TOMOYO Linux není příliš rozšířený MAC a velmi těžko někde naleznete profily pro aplikace. Budete si je tedy muset sami vytvořit (příp. přepsat z AppArmor profilů &ndash; ty jsou všude).
 
-![idea](https://mople71.cz/img/sm/idea.gif) Dokumentaci k TOMOYO Linux naleznete <a href="http://tomoyo.osdn.jp/2.5/index.html.en" target="_blank">zde</a>.
+![idea](https://mople71.cz/img/sm/idea.gif) Dokumentaci k TOMOYO Linux naleznete [zde](https://tomoyo.osdn.jp/2.5/index.html.en).
 
-- Návod na kompilaci jádra naleznete v sekci <a href="#lnx2.1">Kernel</a>. Případně můžete využít předkompilovaný kernel z <a href="https://aur.archlinux.org/packages/linux-tomoyo/" target="_blank">AUR</a>.
+- Návod na kompilaci jádra naleznete v sekci [Kernel](#lnx2.1). Případně můžete využít předkompilovaný kernel z [AUR](https://aur.archlinux.org/packages/linux-tomoyo/).
 - Povolte TOMOYO Linux v GRUB:
 <li style="list-style-type: none"><pre><code>/etc/default/grub
 -----------------------------------
@@ -158,13 +158,13 @@ Externí sandbox není zdaleka tak účinný jako sandbox integrovaný v aplikac
 
 **Flatpak** i **firejail** jsou rozebírány v FAQ pro méně pokročilé.
 
-Pro pokročilou virtualizaci za použití **KVM** se podívejte <a href="https://wiki.archlinux.org/index.php/QEMU" target="_blank">zde</a>.
+Pro pokročilou virtualizaci za použití **KVM** se podívejte [zde](https://wiki.archlinux.org/index.php/QEMU).
 
 <br><br><hr><br>
 
 ## Anti-exploit mitigace:
 ### Kernel:
-Grsecurity patchset již není veřejně dostupný a bezplatný. Iniciativu hardeningu kernelu tedy (mimo *KSPP*) převzala komunita, která se stará o portaci mitigací ze starých grsecurity patchů a vývoj nových mitigací. Projekt naleznete <a href="https://github.com/copperhead/linux-hardened" target="_blank">zde</a>.
+Grsecurity patchset již není veřejně dostupný a bezplatný. Iniciativu hardeningu kernelu tedy (mimo *KSPP*) převzala komunita, která se stará o portaci mitigací ze starých grsecurity patchů a vývoj nových mitigací. Projekt naleznete [zde](https://github.com/copperhead/linux-hardened).
 
 > Instalace linux-hardened
 
@@ -276,7 +276,7 @@ ALLOWHIDDENFILE="/etc/.updated"
 ALLOWHIDDENFILE="/usr/share/man/man5/.k5identity.5.gz"
 ALLOWHIDDENFILE="/usr/share/man/man5/.k5login.5.gz"</code></pre></li>
 - Nyní byste již měli být bez false positive varování a rkhunter by měl být plně funkční. Má uloženou databázi kritických souborů OS, takže v případě jakékoli změny (např. pomocí malware) zobrazí varování. Sken můžete dát do cronu.
-- Více informací naleznete na <a href="http://rkhunter.sourceforge.net/" target="_blank">oficiálních stránkách</a> a <a href="https://www.digitalocean.com/community/tutorials/how-to-use-rkhunter-to-guard-against-rootkits-on-an-ubuntu-vps" target="_blank">zde</a>.
+- Více informací naleznete na [oficiálních stránkách](http://rkhunter.sourceforge.net/) a [zde](https://www.digitalocean.com/community/tutorials/how-to-use-rkhunter-to-guard-against-rootkits-on-an-ubuntu-vps).
 
 <br>
 
@@ -303,7 +303,7 @@ Checksec je skript určený pro kontrolu nastavení kernelu a zobrazení *memory
 <li style="list-style-type: none"><pre><code>checksec --kernel</code></pre></li>
 - Dále můžete auditovat bezpečnostní funkce balíčků:
 <li style="list-style-type: none"><pre><code>checksec --proc-all</code></pre></li>
-- Více informací naleznete na <a href="https://github.com/slimm609/checksec.sh" target="_blank">oficiálních stránkách</a>.
+- Více informací naleznete na [oficiálních stránkách](https://github.com/slimm609/checksec.sh).
 
 <br><br><hr><br>
 

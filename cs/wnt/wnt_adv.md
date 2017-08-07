@@ -95,7 +95,7 @@ pause</code></pre></li>
 <br>
 
 ### FIDES:
-<a href="https://excubits.com/content/en/products_pumpernickelfides.html" target="_blank">FIDES</a> je drobný ovladač na úrovni kernelu, který si můžete představit jako nějakou obdobu MAC na Linuxu &ndash; program určuje, které procesy mají ke kterým souborům přístup. Jedná se o špičkové řešení, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
+[FIDES](https://excubits.com/content/en/products_pumpernickelfides.html) je drobný ovladač na úrovni kernelu, který si můžete představit jako nějakou obdobu MAC na Linuxu &ndash; program určuje, které procesy mají ke kterým souborům přístup. Jedná se o špičkové řešení, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
 
 Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, akorát podporuje konfigurační soubor pouze do velikosti 2 kB, což není dostatek pro pokročilé nastavení. Doporučuji tedy investovat do plné verze a podpořit vývojáře, 12 € jako jednorázová platba mi přijde jako dobrá cena.
 
@@ -112,7 +112,7 @@ Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, a
 <br>
 
 ### MemProtect:
-<a href="https://excubits.com/content/en/products_memprotect.html" target="_blank">MemProtect</a> je drobný ovladač na úrovni kernelu, který určuje, které procesy mají přístup k ostatním procesům v RAM. Jedná se o špičkové řešení nejen proti řadám rodin exploitům, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
+[MemProtect](https://excubits.com/content/en/products_memprotect.html) je drobný ovladač na úrovni kernelu, který určuje, které procesy mají přístup k ostatním procesům v RAM. Jedná se o špičkové řešení nejen proti řadám rodin exploitům, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
 
 Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, akorát podporuje konfigurační soubor pouze do velikosti 2 kB, což není dostatek pro pokročilé nastavení. Doporučuji tedy investovat do plné verze a podpořit vývojáře, 12 € jako jednorázová platba mi přijde jako dobrá cena.
 
@@ -220,7 +220,7 @@ Má to ovšem jednu zásadní komfortní nevýhodu. Vždy, když spustíte aplik
 
 Windows má vestavěný nástroj jménem <span class="green">icacls</span>, který umožňuje měnit úrovně integrity, neumožňuje ovšem pokročilé nastavení integritní politiky. Z tohoto důvodu musíme použít nástroj třetí strany, který je dle mého názoru v mnoha ohledech lepší než vestavěný.
 
-- Stáhněte si <a href="http://www.minasi.com/apps/chml.exe">chml</a> a uložte jej <span class="blue">na Plochu</span>.
+- Stáhněte si [chml](http://www.minasi.com/apps/chml.exe) a uložte jej <span class="blue">na Plochu</span>.
 - Zkontrolujte checksums aplikace (návod případně naleznete v sekci **Užitečné aplikace** FAQ Windows pro méně pokročilé):
 <li style="list-style-type: none"><pre><code>SHA-1:   e26af472a52039caac5548ecb3c6727b2651e490
 SHA-256: 59aa55d2eac6b295d42ef2aadc607b759f034f4557a66dec0214a4cc032ecc17</code></pre></li>
@@ -305,9 +305,9 @@ icacls "C:\Users\(uživ. jméno)" /c /deny Everyone:(OI)(CI)(X)</code></pre></li
 <br><br><hr><br>
 
 ## AppContainer:
-AppContainer je implementace sandboxu integrovaná v OS od Windows 8. Je vyvinut pro ModernUI aplikace a např. MS Edge na něm má postavený svůj bezpečnostní model (používá několik AppContainerů zároveň). Existují také možnosti, jak upravit Win32 aplikaci, aby běžela v AppContainer, viz. <a href="https://www.howtogeek.com/250041/how-to-convert-a-windows-desktop-app-to-a-universal-windows-app/" target="_blank">zde</a> nebo <a href="https://news.saferbytes.it/analisi/2013/07/securing-microsoft-windows-8-appcontainers/" target="_blank">zde</a>.
+AppContainer je implementace sandboxu integrovaná v OS od Windows 8. Je vyvinut pro ModernUI aplikace a např. MS Edge na něm má postavený svůj bezpečnostní model (používá několik AppContainerů zároveň). Existují také možnosti, jak upravit Win32 aplikaci, aby běžela v AppContainer, viz. [zde](https://www.howtogeek.com/250041/how-to-convert-a-windows-desktop-app-to-a-universal-windows-app/) nebo [zde](https://news.saferbytes.it/analisi/2013/07/securing-microsoft-windows-8-appcontainers/).
 
-AppContainer odděluje aplikace od sebe a částí OS. Podobnou snahu můžeme pozorovat i u Linuxu (Flatpak). Více o izolaci si můžete přečíst <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/mt595898(v=vs.85).aspx" target="_blank">zde</a>.
+AppContainer odděluje aplikace od sebe a částí OS. Podobnou snahu můžeme pozorovat i u Linuxu (Flatpak). Více o izolaci si můžete přečíst [zde](https://msdn.microsoft.com/en-us/library/windows/desktop/mt595898(v=vs.85).aspx).
 
 <br><br><hr>
 
