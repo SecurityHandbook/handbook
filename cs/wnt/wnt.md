@@ -439,7 +439,7 @@ Užitečné aplikace, které nespadají ani pod jednu kategorii vrstev zabezpeč
 
 Všechny prohlížeče jsou po korektním nastavení relativně bezpečné, nejvíce také záleží na vás. Proto zde rozeberu pouze teoretické zabezpečení prohlížečů z hlediska mitigací exploitů apod. Níže v sekci naleznete návody na zabezpečení **Mozilla Firefox**, **Internet Explorer**, **Google Chrome** a **Microsoft Edge** kvůli jejich dominantnímu postavení.
 
-Ze zmíněných prohlížečů bych doporučil <span class="green">Microsoft Edge</span> a <a href="https://chromium.woolyss.com/" target="_blank"><span class="green underline">Chromium</span></a>, případně jeho proprietární variantu <a href="https://www.google.com/chrome/browser/index.html" target="_blank">Google Chrome</a>. S prohlížečem **Internet Explorer** není zásadní problém, na druhou stranu již není v aktivním vývoji.
+Ze zmíněných prohlížečů bych doporučil <span class="green">Microsoft Edge</span> a <span class="green">Chromium</span>, případně jeho proprietární variantu <a href="https://www.google.com/chrome/browser/index.html" target="_blank">Google Chrome</a>. S prohlížečem **Internet Explorer** není zásadní problém, na druhou stranu již není v aktivním vývoji.
 
 <span class="red">Mozilla Firefox</span>. Tento prohlížeč z hlediska zabezpečení nelze doporučit, v porovnání s ostatními zmíněnými prohlížeči výrazně zaostává. Má starý kód výrazně nižší kvality nežli Edge či Chromium a postrádá základní mitigace proti exploitům (v poslední době se toto snaží dohánět implementací sandboxu prohlížeče Chromium). Externí sandbox typu Sandboxie nedosahuje zdaleka takové kvality jako vestavěný sandbox.
 
@@ -477,7 +477,7 @@ Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nas
 
 <br>
 
-#### Bezplatná konfigurace pro mírně pokročilého, který umí anglicky:
+#### Bezplatná konfigurace pro středně pokročilého, který umí anglicky:
 > Konfigurace
 
 - OS &ndash; Windows **10** / **8.1 Update 3**
@@ -487,7 +487,7 @@ Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nas
 - anti-exploit &ndash; **Windows Defender** / **EMET**
 - anti-executable &ndash; **VoodooShield**, **NVT Anti-AutoExec**
 - virtualizace &ndash; **Sandboxie**
-- internetový prohlížeč &ndash; **MS Edge** / **Google Chrome** / **Internet Explorer**
+- internetový prohlížeč &ndash; **MS Edge** / **Google Chrome**
 - zabezpečení prohlížeče &ndash; **kompletní**
 - užitečné aplikace &ndash; **Unchecky**, **HashTab**
 - konfigurace pro pokročilé &ndash; dle znalostí

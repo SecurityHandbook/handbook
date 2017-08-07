@@ -138,68 +138,26 @@ Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před út
 ### Virtualizace:
 Virtualizace může být velmi bezpečný způsob ochrany před malware (záleží na způsobu implementace), jelikož odděluje požadovanou část OS od fyzického OS.
 
-Zde budou rozebírány implementace **sandboxu**. Implementací existuje několik:
+Nejčastější implementací virtualizace je **sandbox**. Existují dva druhy sandboxu:
 
 - sandbox nativně integrovaný v aplikaci (např. Chromium)
-- externí sandbox &ndash; Flatpak, firejail
+- externí sandbox &ndash; např. Flatpak
 
 Sandbox nativně integrovaný v aplikaci je nejúčinnější možností implementace sandboxu, jelikož je nastaven přesně na míru dané aplikaci.
 
-Externí sandbox není zdaleka tak účinný jako sandbox integrovaný v aplikaci a ponechává výrazně větší prostor pro exploitaci, ale stále je mnohonásobně lepší, než žádný sandbox.
-
-**Flatpak** je rozebírán v následující sekci.
-
-#### Firejail:
-Firejail je solidní aplikace umožňující sandbox rizikových aplikací &ndash; pro spoustu z nich má předdefinované profily (např. Empathy, Evince, Filezilla, Firefox, Chrome, Chromium, HexChat, KMail, Opera, Pidgin, Transmission, Rhythmbox, SeaMonkey, Skype, Spotify, Steam, Thunderbird, Totem, VLC,...).
-
-Důrazně doporučuji upřednostnit **Flatpak**, kde je to možné.
-
-![idea](https://mople71.cz/img/sm/idea.gif) Používate-li aplikaci s integrovaným sandboxem jako např. **Chrome/ium**, rozhodně ji nesandboxujte pomocí firejail, integrovaný sandbox je řádově účinnější.
-
-> Instalace Firejail
-
-- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
-<li style="list-style-type: none"><pre><code>sudo -i
-dnf copr enable heikoada/firejail
-dnf clean metadata && dnf check-update
-dnf install firejail
-chmod u+s /usr/bin/firejail</code></pre></li>
-
-> Návod k použití Firejail
-
-- Následující příkaz budete (bohužel) muset vždy spustit po aktualizaci aplikace firejail:
-<li style="list-style-type: none"><pre><code>sudo chmod u+s /usr/bin/firejail</code></pre></li>
-- Následujícím příkazem nastavíte automatické spouštění všech podporovaných aplikací v běžném sandboxu, pokud nainstalujete zbrusu novou podporovanou aplikaci, musíte příkaz zopakovat:
-<li style="list-style-type: none">![exclaim](https://mople71.cz/img/sm/exclaim.gif) Máte-li nainstalovanou aplikaci **Chromium** / **Google Chrome**, před použitím následujícího příkazu ji musíte nejprve odinstalovat a po použití příkazu následně opět nainstalovat.</li>
-<li style="list-style-type: none"><pre><code>sudo firecfg</code></pre></li>
-- Aplikaci můžete spustit v sandboxu zadáním následujícího příkazu do konzole:
-<li style="list-style-type: none"><pre><code>firejail nazev_aplikace
-např. firejail firefox</code></pre></li>
-- Tím spustíte Firefox v přednastaveném profilu &ndash; Firefox má z osobních složek přístup pouze k Ploše a Staženým souborům, data zůstávají na disku i po ukončení sandboxu => vhodné pro každodenní využití.
-- Chcete-li, aby se aplikace spustila v prázdném sanboxu, který se po ukončení aplikace celý smaže, můžete použít následující příkaz:
-<li style="list-style-type: none"><pre><code>firejail --private nazev_aplikace
-např. firejail --private firefox</code></pre></li>
-- Tato možnost se hodí v případě, kdy potřebujete otevřit rizikovou stránku, na kterou byste museli dočasně snížit bezpečnostní nastavení prohlížeče a mohli tak rizikovat kompromitaci profilu vašeho prohlížeče.
-- V takovém případě se hodí znát příkaz, který Firefox spustí ve zmíněném sandboxu jako nový proces &ndash; jinak je nemožné mít otevřeno více Firefoxů ve více sandboxech.
-<li style="list-style-type: none"><pre><code>firejail --private nazev_aplikace
-např. firejail --private firefox</code></pre></li>
-- Libovolnou aplikaci také můžete spustit bez přístupu k internetu použitím jednoduchého příkazu:
-<li style="list-style-type: none"><pre><code>firejail --net=none nazev_aplikace
-např. firejail --net=none evince</code></pre></li>
-
-![idea](https://mople71.cz/img/sm/idea.gif) Více užitečných příkazů naleznete na <a href="https://firejail.wordpress.com/" target="_blank">oficiálních stránkách aplikace</a>.
+Externí sandbox není zdaleka tak účinný jako sandbox integrovaný v aplikaci a při porovnání ponechává větší prostor pro exploitaci, ale stále může být vcelku účinný a přirozeně je nesrovnatelně lepší, nežli žádný sandbox.
 
 <br>
 
 ### Flatpak:
-Flatpak je nový způsob distribuce aplikací. Má za cíl odstranit chyby a nedostatky současné architektury &ndash; odděluje aplikace od sebe a částí OS, unifikuje instalaci aplikací pro linuxové distribuce apod.
+Flatpak je nový způsob distribuce aplikací. Má za cíl odstranit chyby a nedostatky současné architektury &ndash; odděluje aplikace od sebe a částí OS, sjednocuje instalaci aplikací pro linuxové distribuce etc.
 
-**<span class="fe">Fedora</span>** má balíček **flatpak** předinstalovaný.
+**<span class="fe">Fedora</span>** má **flatpak** předinstalovaný.
 
 **<span class="os">openSUSE</span>** Flatpak předinstalovaný nemá, lze jej ovšem nainstalovat jednoduchým příkazem:
 <pre><code>sudo zypper install flatpak</code></pre>
 
-**<span class="ub">Ubuntu</span>** Flatpak předinstalovaný nemá, jelikož propaguje svou alternativu k Flatpaku &ndash; <a href="https://www.ubuntu.com/desktop/snappy" target="_blank">Snap</a>. Každopádně pokud se rozhodnete používat raději Flatpak než Snap, můžete jej nainstalovat následujícími příkazy:
+**<span class="ub">Ubuntu</span>** Flatpak předinstalovaný nemá, jelikož propaguje svou alternativu k Flatpaku &ndash; <a href="https://www.ubuntu.com/desktop/snappy" target="_blank">Snap</a>. Každopádně pokud se rozhodnete upřednostnit Flatpak před Snap (doporučeno), můžete jej nainstalovat následujícími příkazy:
 <pre><code>sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
 sudo apt install flatpak</code></pre>
@@ -208,15 +166,24 @@ sudo apt install flatpak</code></pre>
 
 > Návod k použití Flatpak
 
-Několik dostupných aplikací naleznete zde: <a href="http://flatpak.org/apps.html" target="_blank">http://flatpak.org/apps.html</a>
+Několik aplikací můžete nalézt na <a href="http://flatpak.org/apps.html" target="_blank">stránkách Flatpak</a> a většinu poté v repozitáři **Flathub**. Je důrazně doporučeno překliknout se do záložky <span class="green">Command Line</span> a příkazy provést ručně.
 
-Pokud ve vaší distribuci nebude fungovat odkaz na stáhnutí, překlikněte se do záložky <span class="green">Command Line</span> a postupujte dle instrukcí.
+Nikdy před příkaz **flatpak** nedávejte <span class="red">sudo</span>. Flatpak si o autorizaci řekne sám, bude-li ji potřebovat.
 
-Flatpak aplikace lze aktualizovat následujícím příkazem:
-<pre><code>flatpak update</code></pre>
+- Nainstalované Flatpak aplikace vypíšete následujícím příkazem:
+<li style="list-style-type: none"><pre><code>flatpak list</code></pre></li>
+- Aplikace aktualizujete náledujícím příkazem:
+<li style="list-style-type: none"><pre><code>flatpak update</code></pre></li>
+- Dostupné aplikace v repozitáři vypíšete takto:
+<li style="list-style-type: none"><pre><code>flatpak remote-ls <repozitář></code></pre></li>
+- Instalaci aplikace z repozitáře je možno provést následovně:
+<li style="list-style-type: none"><pre><code>flatpak install <repozitář> <název_aplikace></code></pre></li>
+- Aplikaci poté můžete jednoduše odinstalovat:
+<li style="list-style-type: none"><pre><code>flatpak uninstall <název_aplikace></code></pre></li>
 
-#### LibreOffice:
-- Odinstalujte současnou verzi LibreOffice.
+> Instalace Flatpak verze LibreOffice
+
+- Odinstalujte současnou verzi LibreOffice, máte-li nějakou nainstalovanou.
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
 <li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
 wget http://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffice.flatpak
@@ -230,10 +197,31 @@ Flathub je oficiální platforma pro distribuci Flatpak aplikací. Naleznete v n
 #### Steam:
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
 <li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub com.valvesoftware.Steam
-</code></pre></li>
+flatpak install flathub com.valvesoftware.Steam</code></pre></li>
 - Bude-li vám v průběhu nabídnut výběr mezi *gnome* a *flathub* repozitáři, zvolte <span class="green">flathub</span>.
 - Spusťte Steam a doufejte, že vámi oblíbené hry jsou ve flatpaku funkční. Seznam otestovaných her naleznete <a href="https://github.com/flathub/com.valvesoftware.Steam/wiki/Tested-Games" target="_blank">zde</a>.
+
+> Instalace GNOME aplikací
+
+GNOME poskytuje flatpak verzi pro většinu svých aplikací. Ve Flatpaku by správně měly být všechny aplikace ve výchozím nastavení, na to si ovšem budeme ještě muset chvíli počkat. (*Fedora 28?*)
+
+Je důležité ve Flatpaku mít alespoň nejrizikovější aplikace &ndash; **Evince** (prohlížeč PDF) a **Eye of GNOME** (prohlížeč obrázků).
+
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
+<li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome-apps.flatpakrepo
+flatpak update
+flatpak install flathub org.gnome.eog
+flatpak install gnome-apps org.gnome.Evince</code></pre></li>
+- Následně můžete odebrat původní verzi *Eye of GNOME*:
+<li style="list-style-type: none"><pre><code>sudo dnf remove eog</code></pre></li>
+- Původní verze *Evince* odebrat nelze, jelikož poskytuje náhledy ve spráci souborů a také náhledy tisku. Lze ovšem jednoduše odebrat jeho ikonu ze seznamu aplikací:
+<li style="list-style-type: none"><pre><code>sudo rm /usr/share/applications/evince.desktop</code></pre></li>
+- Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Podrobnosti** a následně zvolte podkategorii <span class="green">Výchozí aplikace</span>.
+- Nastavte Flatpak verzi *Eye of GNOME* aplikací jako výchozí:
+<li style="list-style-type: none">![lnxdapp](https://faq.mople71.cz/img/cs/lnxdapp.png)</li>
+- Nalezněte libovolný **PDF** soubor. Klikněte na něj pravým tlačítkem a zvolte <span class="green">Otevřít jinou aplikací</span>.
+- V seznamu zvolte Flatpak verzi **Prohlížeč dokumentů** a klikněte na tlačítko <span class="green">Vybrat</span>.
+<li style="list-style-type: none">![lnxdapp1](https://faq.mople71.cz/img/cs/lnxdapp1.png)</li>
 
 <br><br><hr><br>
 

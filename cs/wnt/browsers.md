@@ -110,7 +110,7 @@ Použijte postup pro **Google Chrome** výše, je identický.
 
 > Oddělení prohlížeče od OS a dat
 
-Microsoft Edge nyní používá velmi robustní implementaci sandboxu.
+Microsoft Edge používá špičkovou implementaci sandboxu.
 
 <br>
 
@@ -165,7 +165,7 @@ Další český filtr naleznete např. <a href="http://adblock.dajbych.net/">zde
 
 > Oddělení prohlížeče od OS a dat
 
-Prohlížeč je částečně oddělen od OS díky technologii **Protected Mode**. Jedná se o relativně spolehlivou metodu.
+Prohlížeč je částečně oddělen od OS díky technologii **Protected Mode**.
 
 <br>
 
