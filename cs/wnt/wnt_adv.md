@@ -14,11 +14,6 @@ Tato sekce FAQ počítá s tím, že jste pročetli FAQ Windows pro méně pokro
 <br>
 
 ## Vrstvy zabezpečení:
-### Antivirus:
-<span class="green">Windows Defender</span> integrovaný ve **Windows 8.1 Update 3** a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vstrvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a v OS mnohdy provádí v porovnání s integrovaným řešením naprosté šílenosti. Defender mj. běží jako jediné antivirové řešení s **CFG**.
-
-<br>
-
 ### Firewall:
 Windows obsahují vestavěný <span class="green">Windows Defender Firewall</span> (WDF), který je na velmi dobré úrovni.
 
@@ -33,13 +28,13 @@ Co se týče blokování odchozí komunikace, *Windows Defender Firewall* tuto f
 - Otevřete si **hledání Windows**, do vyhledávacího pole zadejte:
 <li style="list-style-type: none"><pre><code>wf.msc</code></pre></li>
 - Na nalezenou položku klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/admin.png) **Spustit jako správce**.
-<li style="list-style-type: none">![wdf](https://faq.mople71.cz/img/cs/wdf.png)</li>
+<li style="list-style-type: none">![wdf](https://beta.mople71.cz/img/cs/wdf.png)</li>
 - Otevře se pokročilé nastavení Windows Firewall. V prostředním sloupci zvolte možnost <span class="green">Vlastnosti brány Firewall v programu Windows Defender</span>.
 - V horním panelu si otevřete záložku **Privátní profil**. U položky **Odchozí připojení** zvolte možnost <span class="green">Blokovat</span>.
-<li style="list-style-type: none">![wdf1](https://faq.mople71.cz/img/cs/wdf1.png)</li>
+<li style="list-style-type: none">![wdf1](https://beta.mople71.cz/img/cs/wdf1.png)</li>
 - Postup zopakujte pro záložku **Veřejný profil**.
 - Klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![wdf2](https://faq.mople71.cz/img/cs/wdf2.png)</li>
+<li style="list-style-type: none">![wdf2](https://beta.mople71.cz/img/cs/wdf2.png)</li>
 
 ![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Nyní WDF blokuje veškerou odchozí kouminakci, která není na whitelistu. Dále je třeba nastavit whitelist.</span>
 
@@ -54,9 +49,9 @@ Co se týče blokování odchozí komunikace, *Windows Defender Firewall* tuto f
 - Zadejte název pravidla &ndash; v tomto případě např. **All MoUI Apps**
 - Klikněte na <span class="green">Dokončit</span>.
 - Nové pravidlo otevřete. Přesuňte se do záložky **Programy a služby** a v sekci **Balíčky aplikací** klikněte na <span class="green">Nastavení...</span>
-<li style="list-style-type: none">![wdf3](https://faq.mople71.cz/img/cs/wdf3.png)</li>
+<li style="list-style-type: none">![wdf3](https://beta.mople71.cz/img/cs/wdf3.png)</li>
 - Zvolte možnost <span class="green">Použít pouze pro balíčky aplikací</span> a potvrďte. Následně uložte změny v pravidle.
-<li style="list-style-type: none">![wdf4](https://faq.mople71.cz/img/cs/wdf4.png)</li>
+<li style="list-style-type: none">![wdf4](https://beta.mople71.cz/img/cs/wdf4.png)</li>
 
 > Povolení odchozí komunikace pro všechny služby Windows
 
@@ -69,7 +64,7 @@ Co se týče blokování odchozí komunikace, *Windows Defender Firewall* tuto f
 - Klikněte na <span class="green">Dokončit</span>.
 - Nové pravidlo otevřete. Přesuňte se do záložky **Programy a služby** a v sekci **Služby** klikněte na <span class="green">Nastavení...</span>
 - Zvolte možnost <span class="green">Použít pouze pro balíčky aplikací</span> a potvrďte. Následně uložte změny v pravidle.
-<li style="list-style-type: none">![wdf5](https://faq.mople71.cz/img/cs/wdf5.png)</li>
+<li style="list-style-type: none">![wdf5](https://beta.mople71.cz/img/cs/wdf5.png)</li>
 
 > Povolení odchozí komunikace pro důležité aplikace
 
@@ -77,7 +72,7 @@ Co se týče blokování odchozí komunikace, *Windows Defender Firewall* tuto f
 - Jako typ pravidla zvolte **Program** a klikněte na tlačítko <span class="green">Další</span>.
 - Zvolte možnost **Cesta k tomuto programu** a do textového pole vložte cestu k následujícímu souboru:
 <li style="list-style-type: none"><pre><code>%SystemRoot%\System32\smartscreen.exe</code></pre></li>
-<li style="list-style-type: none">![wdf6](https://faq.mople71.cz/img/cs/wdf6.png)</li>
+<li style="list-style-type: none">![wdf6](https://beta.mople71.cz/img/cs/wdf6.png)</li>
 - Klikněte na tlačítko <span class="green">Další</span>.
 - Zvolte možnost **Povolit připojení** a klikněte na tlačítko <span class="green">Další</span>.
 - Zkontrolujte zatržítka u všech položek a klikněte na tlačítko <span class="green">Další</span>.
@@ -246,13 +241,13 @@ Pokud je úroveň integrity tokenu menší než úroveň integrity deskriptoru, 
 - NO_WRITE_UP &ndash; omezuje práva k zápisu
 - NO_EXECUTE_UP &ndash; omezuje práva ke spouštění
 
-Pravidla určovaná integritní politikou jsou absolutní &ndash; aplikaci je natvrdo zamezen přístup a jediné, co s tím může dělat, je úroveň integrity navýšit. Což může pouze skrz UAC dialog, rozhodnutí je následně samozřejmě na uživateli. Malware ovšem obvykle chce zůstat utajen, dokud nedokončí svoji práci &dnash; UAC dialog by ho tak nějak prozradil.
+Pravidla určovaná integritní politikou jsou absolutní &ndash; aplikaci je natvrdo zamezen přístup a jediné, co s tím může dělat, je úroveň integrity navýšit. Což může pouze skrz UAC dialog, rozhodnutí je následně samozřejmě na uživateli. Malware ovšem obvykle chce zůstat utajen, dokud nedokončí svoji práci &ndash; UAC dialog by ho tak nějak prozradil.
 
-Většina lépe naprogramovaného malware pozná, že běží s nízkou integritou a hrdě spáchá *seppuku*. Exploitace UAC (samo-povýšení) je v jistých případech teoreticky možná a proveditelná se střední úrovní integrity &dnash; proces s nízkou úrovní integrity nemůže nic, maximálně se pokusit o exploitaci kernelu.
+Většina lépe naprogramovaného malware pozná, že běží s nízkou integritou a hrdě spáchá *seppuku*. Exploitace UAC (samo-povýšení) je v jistých případech teoreticky možná a proveditelná se střední úrovní integrity &ndash; proces s nízkou úrovní integrity nemůže nic, maximálně se pokusit o exploitaci kernelu.
 
 <br>
 
-Níže naleznete návod na konfiguraci integritní politiky pro osobní složky &ndash *střední integrita*, **NO_WRITE_UP**, **NO_EXECUTE_UP**. Možností je ovšem více. Můžete například osobním složkám (kromě *Stažených soborů*) nastavit místo střední integrity **vysokou** integritu a tím zamezit většině uživatelských aplikací manipulaci s daty. V takovém případě soubory, které budete chtít v uživatelské aplikaci upravit, budete muset dočasně překopírovat jinam a následně zpět.
+Níže naleznete návod na konfiguraci integritní politiky pro osobní složky &ndash; *střední integrita*, **NO_WRITE_UP**, **NO_EXECUTE_UP**. Možností je ovšem více. Můžete například osobním složkám (kromě *Stažených soborů*) nastavit místo střední integrity **vysokou** integritu a tím zamezit většině uživatelských aplikací manipulaci s daty. V takovém případě soubory, které budete chtít v uživatelské aplikaci upravit, budete muset dočasně překopírovat jinam a následně zpět.
 
 Kromě složek můžete přenastavit nižší úroveň integrity i aplikacím. Mělo by se jednat o aplikace, které nepotřebují zapisovat do osobních složek &ndash; PDF prohlížeč, VLC etc. Nejedná se ovšem o komfortní a jednoduchou konfiguraci. Pro nastavení přístupu aplikací k disku je doporučeno použít <span class="green">FIDES</span>.
 
@@ -266,17 +261,10 @@ Windows má vestavěný nástroj jménem <span class="green">icacls</span>, kter
 - Zkontrolujte *checksums* aplikace:
 <li style="list-style-type: none"><pre><code>SHA-256: 59aa55d2eac6b295d42ef2aadc607b759f034f4557a66dec0214a4cc032ecc17
 SHA-512: a22317552f90e896fb6f0e4a30f7834baf97a771211a37aca12f52d55ff8b85212d4ded5138ab66a70eaaa1193002b98158938bc17185ea94ccc9f7f4b8120f4</code></pre></li>
-- Aplikaci přesuňte do umístění: <span class="blue">C:\Windows\System32</span>
-    - Klikněte na aplikaci a stiskněte <span class="green">Ctrl + C</span>
-    - Stiskněte kláv. zkratku  ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
-    <li style="list-style-type: none"><pre><code>C:\Windows\System32</code></pre>
-a stiskněte **Enter**.</li>
-    - Otevře se složka System32. Stiskněte <span class="green">Ctrl + V</span> a a potvrďte přesun do složky.
-    - Smažte *chml* z původní lokace.
-
+- Aplikaci zkopírujte do umístění: <span class="blue">C:\Windows\System32</span>
+- Smažte *chml* z původní lokace.
 - Stiskněte kláv. zkratku <img src="https://mople71.cz/img/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
 <li style="list-style-type: none">![wx](https://mople71.cz/img/cs/wx.png)</li>
-
 - Do příkazové řádky zadejte následující příkaz pro validaci úspěšné instalace aplikace:
 <li style="list-style-type: none"><pre><code>chml /?</code></pre></li>
 - Pokud chml zareagoval svým výstupem, je správně nainstalován.
@@ -284,10 +272,10 @@ a stiskněte **Enter**.</li>
 > Nastavení integritní politiky osobních složek
 
 - Nyní můžeme nastavit integritní politiku osobních složek, jejichž obsah chceme chránit před malware. Cestu ke složkám tedy upravte pro váš OS.:
-<li style="list-style-type: none"><pre><code>chml C:\Users\(uživ. jméno)\Documents -i:m -nw -nx
-chml C:\Users\<uživatel>\Pictures -i:m -nw -nx
-chml C:\Users\<uživatel>\Music -i:m -nw -nx
-chml C:\Users\<uživatel>\Videos -i:m -nw -nx
+<li style="list-style-type: none"><pre><code>chml C:\Users\[uživatel]\Documents -i:m -nw -nx
+chml C:\Users\[uživatel]\Pictures -i:m -nw -nx
+chml C:\Users\[uživatel]\Music -i:m -nw -nx
+chml C:\Users\[uživatel]\Videos -i:m -nw -nx
 
 /* -i:l (nízká úroveň integrity)
 -i:m (střední úroveň integrity)
