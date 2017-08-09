@@ -27,7 +27,7 @@ U některých kroků také naleznete pokyny pro distribuci Ubuntu, která je vel
 Chcete-li používat jinou distribuci, níže uvedené kroky můžete aplikovat i na ostatní distribuce, pouze si musíte zjistit správný syntax vaší distribuce a informace o kompatibilitě.
 
 ### Doporučené grafické prostředí:
-Z bezpečnostního hlediska doporučuji [GNOME](https://www.gnome.org/), jelikož používá wayland místo X.org a podílí se na vývoji Flatpaku. Vyjímku tvoří rozhraní *GNOME Classic*, které využívá primárně X.org &ndash; není tedy doporučeno.
+Z bezpečnostního hlediska doporučuji [GNOME](https://www.gnome.org/), jelikož používá wayland místo X.org a podílí se na vývoji Flatpaku. výjimku tvoří rozhraní *GNOME Classic*, které využívá primárně X.org &ndash; není tedy doporučeno.
 
 <br><br><hr><br>
 
@@ -214,7 +214,7 @@ flatpak install flathub org.gnome.eog
 flatpak install gnome-apps org.gnome.Evince</code></pre></li>
 - Následně můžete odebrat původní verzi *Eye of GNOME*:
 <li style="list-style-type: none"><pre><code>sudo dnf remove eog</code></pre></li>
-- Původní verze *Evince* odebrat nelze, jelikož poskytuje náhledy ve spráci souborů a také náhledy tisku. Lze ovšem jednoduše odebrat jeho ikonu ze seznamu aplikací:
+- Původní verze *Evince* odebrat nelze, jelikož poskytuje náhledy ve správci souborů a také náhledy tisku. Lze ovšem jednoduše odebrat jeho ikonu ze seznamu aplikací:
 <li style="list-style-type: none"><pre><code>sudo rm /usr/share/applications/evince.desktop</code></pre></li>
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Podrobnosti** a následně zvolte podkategorii <span class="green">Výchozí aplikace</span>.
 - Nastavte Flatpak verzi *Eye of GNOME* aplikací jako výchozí:

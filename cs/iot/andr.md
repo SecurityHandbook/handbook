@@ -121,7 +121,7 @@ Pod uživatelem hosta můžete relativně bezpečně např. prohlížet rizikov�
 <br><br><hr><br>
 
 ## Doporučené aplikace:
-V následující sekci naleznete doporučené bezpečnostní aplikace a aplikace s bezpečností úzce související. Aplikace jsou děleny na FOSS (free and open source) a poprietární. Důvod je prostý: někteří lidé nevěří proprietárním aplikacím a používání bezpečnostní aplikace s uzavřeným kódem, považují za nepřijatelné.
+V následující sekci naleznete doporučené bezpečnostní aplikace a aplikace s bezpečností úzce související. Aplikace jsou děleny na FOSS (free and open source) a proprietární. Důvod je prostý: někteří lidé nevěří proprietárním aplikacím a používání bezpečnostní aplikace s uzavřeným kódem, považují za nepřijatelné.
 
 ### Obchod s aplikacemi:
 Obchod s aplikacemi velmi úzce souvisí s bezpečností, jelikož z něj stahujete a instalujete veškeré aplikace do OS. Z tohoto důvodu musí být důvěryhodný a bezpečný.
@@ -228,7 +228,7 @@ Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na
 - Zablokujte spouštění JS.
 <li style="list-style-type: none">![chmandrjs](https://faq.mople71.cz/img/cs/chmandrjs.png)</li>
 - Klikněte na tlačítko <span class="green">Přidat výjimku pro konkrétní web</span>.
-- Zadejte adresu důvěryhodnéhu webu, na kterém se může spouštět JS. Syntax je oproti desktopové verzi značně omezený.
+- Zadejte adresu důvěryhodného webu, na kterém se může spouštět JS. Syntax je oproti desktopové verzi značně omezený.
 <li style="list-style-type: none">![chmandrjs1](https://faq.mople71.cz/img/cs/chmandrjs1.png)</li>
 - Klikněte na <span class="green">Přidat</span>.
 

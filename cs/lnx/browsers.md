@@ -24,7 +24,7 @@ a stiskněte **Enter**.</li>
 - V sekci **JavaScript** zablokujte spouštění JS.
 <li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
 - Klikněte na tlačítko <span class="green">Přidat</span> v sekci **Povolit**.
-- Zadejte adresu důvěryhodnéhu webu, na kterém se může spouštět JS. Syntax je jednoduchý.
+- Zadejte adresu důvěryhodného webu, na kterém se může spouštět JS. Syntax je jednoduchý.
 <li style="list-style-type: none">![ch5](https://faq.mople71.cz/img/cs/ch5.png)</li>
 - Klikněte na <span class="green">Přidat</span>.
 

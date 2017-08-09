@@ -98,7 +98,7 @@ Je zde několik možností:
 
 ![arrow](https://mople71.cz/img/sm/arrow.gif) Problémem ovšem je, že přes WU se aktualizují definice <span class="green">Windows Defender</span>, které je důležité mít aktuální.
 
-Jako nejrozumější varianta se tedy jeví následující:
+Jako nejrozumnější varianta se tedy jeví následující:
 
 Vytvořit pravidlo pro povolení celého *SVCHost.exe* ve WDF, pojmenovat jej **SVCHost** a pravidlo zakázat (pravým tlačítkem). Následně pro aktualizaci definicí WD napsat jednoduchý skript a naplánovat v *Plánovači úloh* jeho spuštění 1x za 6 hodin.
 <pre><code>@echo off
@@ -183,7 +183,7 @@ Token obsahuje mnoho věcí, pro nás je ale aktuálně důležitá jedna polož
 
 **SID** je unikátní hodnota určená k identifikaci vlastníka &ndash; uživatelského účtu nebo uživatelské skupiny. Např.: *S-1-5-32-544*.
 
-Kontrola přístupu z tokenu aplikace získá jeho SID a následně v ACL seznamu vyhledá veškeré záznamy (ACE), ve kterých je daný SID. Následně všechny naleznené ACE sekvenčně prozkoumá, dokud nenalezne ACE, který přístup k objektu explicitně zakáže/povolí. ACE zakazující přístup jsou zkoumány přednostně.
+Kontrola přístupu z tokenu aplikace získá jeho SID a následně v ACL seznamu vyhledá veškeré záznamy (ACE), ve kterých je daný SID. Následně všechny nalezené ACE sekvenčně prozkoumá, dokud nenalezne ACE, který přístup k objektu explicitně zakáže/povolí. ACE zakazující přístup jsou zkoumány přednostně.
 
 <br>
 

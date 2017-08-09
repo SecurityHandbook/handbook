@@ -70,7 +70,7 @@ systemctl enable iptables</code></pre>
 ### Mandatory Access Control:
 <abbr title="Mandatory Access Control">MAC</abbr> se stal důležitou součástí bezpečnostního modelu linuxových distribucí.
 
-**SELinux** je velmi robustní implementace MAC, její nastavení je ovšem problematické. Využívá ji např. **<span class="fe">Fedora</span>**  a je důelžitou součástí bezpečnostního modelu OS Android.
+**SELinux** je velmi robustní implementace MAC, její nastavení je ovšem problematické. Využívá ji např. **<span class="fe">Fedora</span>**  a je důležitou součástí bezpečnostního modelu OS Android.
 
 **AppArmor** je implementace MAC poskytující nižší úroveň ochrany než SELinux (např. neumí omezit ioctl). Využívá ji např. **<span class="os">openSUSE</span>** a **<span class="ub">Ubuntu</span>**.
 
@@ -182,7 +182,7 @@ Grsecurity patchset již není veřejně dostupný a bezplatný. Iniciativu hard
 <li style="list-style-type: none"><pre><code>sudo pacman -S asp gnupg
 asp export community/linux-hardened
 cd ./linux-hardened
-gedit PKGBUILD    #nahradte vami pouzivanym editorem</code></pre></li>
+gedit PKGBUILD    #nahraďte vámi používaným editorem</code></pre></li>
 - V PKGBUILD nalezněte <span class="green">#make menuconfig</span>, příkaz odkomentujte, uložte a zavřete.
 <li style="list-style-type: none"><pre><code>gpg --recv-keys 79BE3E4300411886
 gpg --recv-keys 38DBBDC86092693E
