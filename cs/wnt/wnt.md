@@ -217,7 +217,7 @@ Pro nižší verze Windows lze instalaci antiviru třetí strany pochopit, jelik
 
 ### Firewall:
 
-Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před útoky ze sítě. Windows obsahují vestavěný <span class="green">Windows Defender Firewall</span> (WDF), který je na velmi dobré úrovni a plně dostačující (spousta AV/M produktů přestala vyvíjet vlastní FW a maximálně nabízet alternativní rozhraní pro Windows Firewall). *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*
+Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před útoky ze sítě. Windows obsahují vestavěný <span class="green">Windows Defender Firewall</span> (WDF), který je na velmi dobré úrovni a plně dostačující (spousta AV/M produktů přestala vyvíjet vlastní FW a maximálně nabízet alternativní rozhraní pro WDF). *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*
 
 Základní nevýhoda WDF pro běžné uživatele je absence pokročilejšího intuitivního rozhraní. Jednoduché rozhraní naleznete v <span class="green">Centru zabezpečení v programu Windows Defender</span>.
 
@@ -462,8 +462,8 @@ Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je 
 - OS &ndash; Windows 10 Fall Creators Update
 - bezpečné nastavení OS &ndash; **kompletní**
 - AV/M &ndash; **Windows Defender**
-- FW &ndash; **Windows Firewall**
-- anti-exploit &ndash; **Windows Defender**
+- FW &ndash; **Windows Defender Firewall**
+- anti-exploit &ndash; **Windows Defender Exploit Guard**
 - anti-executable &ndash; **NVT Anti-AutoExec**
 - virtualizace &ndash; **nic**
 - internetový prohlížeč &ndash; **MS Edge** / **Google Chrome**
@@ -483,8 +483,8 @@ Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nas
 - OS &ndash; Windows **10** / **8.1 Update 3**
 - bezpečné nastavení OS &ndash; **kompletní**
 - AV/M &ndash; **Windows Defender**
-- FW &ndash; **Windows Firewall**
-- anti-exploit &ndash; **Windows Defender** / **EMET**
+- FW &ndash; **Windows Defender Firewall**
+- anti-exploit &ndash; **Windows Defender Exploit Guard** / **EMET**
 - anti-executable &ndash; **VoodooShield**, **NVT Anti-AutoExec**
 - virtualizace &ndash; **Sandboxie**
 - internetový prohlížeč &ndash; **MS Edge** / **Google Chrome**
