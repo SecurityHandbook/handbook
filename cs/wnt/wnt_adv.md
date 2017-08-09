@@ -28,13 +28,13 @@ Co se týče blokování odchozí komunikace, *Windows Defender Firewall* tuto f
 - Otevřete si **hledání Windows**, do vyhledávacího pole zadejte:
 <li style="list-style-type: none"><pre><code>wf.msc</code></pre></li>
 - Na nalezenou položku klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/admin.png) **Spustit jako správce**.
-<li style="list-style-type: none">![wdf](https://beta.mople71.cz/img/cs/wdf.png)</li>
+<li style="list-style-type: none">![wdf](https://faq.mople71.cz/img/cs/wdf.png)</li>
 - Otevře se pokročilé nastavení Windows Firewall. V prostředním sloupci zvolte možnost <span class="green">Vlastnosti brány Firewall v programu Windows Defender</span>.
 - V horním panelu si otevřete záložku **Privátní profil**. U položky **Odchozí připojení** zvolte možnost <span class="green">Blokovat</span>.
-<li style="list-style-type: none">![wdf1](https://beta.mople71.cz/img/cs/wdf1.png)</li>
+<li style="list-style-type: none">![wdf1](https://faq.mople71.cz/img/cs/wdf1.png)</li>
 - Postup zopakujte pro záložku **Veřejný profil**.
 - Klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![wdf2](https://beta.mople71.cz/img/cs/wdf2.png)</li>
+<li style="list-style-type: none">![wdf2](https://faq.mople71.cz/img/cs/wdf2.png)</li>
 
 ![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Nyní WDF blokuje veškerou odchozí kouminakci, která není na whitelistu. Dále je třeba nastavit whitelist.</span>
 
@@ -49,9 +49,9 @@ Co se týče blokování odchozí komunikace, *Windows Defender Firewall* tuto f
 - Zadejte název pravidla &ndash; v tomto případě např. **All MoUI Apps**
 - Klikněte na <span class="green">Dokončit</span>.
 - Nové pravidlo otevřete. Přesuňte se do záložky **Programy a služby** a v sekci **Balíčky aplikací** klikněte na <span class="green">Nastavení...</span>
-<li style="list-style-type: none">![wdf3](https://beta.mople71.cz/img/cs/wdf3.png)</li>
+<li style="list-style-type: none">![wdf3](https://faq.mople71.cz/img/cs/wdf3.png)</li>
 - Zvolte možnost <span class="green">Použít pouze pro balíčky aplikací</span> a potvrďte. Následně uložte změny v pravidle.
-<li style="list-style-type: none">![wdf4](https://beta.mople71.cz/img/cs/wdf4.png)</li>
+<li style="list-style-type: none">![wdf4](https://faq.mople71.cz/img/cs/wdf4.png)</li>
 
 > Povolení odchozí komunikace pro všechny služby Windows
 
@@ -64,7 +64,7 @@ Co se týče blokování odchozí komunikace, *Windows Defender Firewall* tuto f
 - Klikněte na <span class="green">Dokončit</span>.
 - Nové pravidlo otevřete. Přesuňte se do záložky **Programy a služby** a v sekci **Služby** klikněte na <span class="green">Nastavení...</span>
 - Zvolte možnost <span class="green">Použít pouze pro balíčky aplikací</span> a potvrďte. Následně uložte změny v pravidle.
-<li style="list-style-type: none">![wdf5](https://beta.mople71.cz/img/cs/wdf5.png)</li>
+<li style="list-style-type: none">![wdf5](https://faq.mople71.cz/img/cs/wdf5.png)</li>
 
 > Povolení odchozí komunikace pro důležité aplikace
 
@@ -72,7 +72,7 @@ Co se týče blokování odchozí komunikace, *Windows Defender Firewall* tuto f
 - Jako typ pravidla zvolte **Program** a klikněte na tlačítko <span class="green">Další</span>.
 - Zvolte možnost **Cesta k tomuto programu** a do textového pole vložte cestu k následujícímu souboru:
 <li style="list-style-type: none"><pre><code>%SystemRoot%\System32\smartscreen.exe</code></pre></li>
-<li style="list-style-type: none">![wdf6](https://beta.mople71.cz/img/cs/wdf6.png)</li>
+<li style="list-style-type: none">![wdf6](https://faq.mople71.cz/img/cs/wdf6.png)</li>
 - Klikněte na tlačítko <span class="green">Další</span>.
 - Zvolte možnost **Povolit připojení** a klikněte na tlačítko <span class="green">Další</span>.
 - Zkontrolujte zatržítka u všech položek a klikněte na tlačítko <span class="green">Další</span>.
