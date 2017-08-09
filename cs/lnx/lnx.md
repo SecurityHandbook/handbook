@@ -27,7 +27,7 @@ U některých kroků také naleznete pokyny pro distribuci Ubuntu, která je vel
 Chcete-li používat jinou distribuci, níže uvedené kroky můžete aplikovat i na ostatní distribuce, pouze si musíte zjistit správný syntax vaší distribuce a informace o kompatibilitě.
 
 ### Doporučené grafické prostředí:
-Z bezpečnostního hlediska doporučuji [GNOME](https://www.gnome.org/), jelikož používá wayland místo X.org a podílí se na vývoji Flatpaku. výjimku tvoří rozhraní *GNOME Classic*, které využívá primárně X.org &ndash; není tedy doporučeno.
+Z bezpečnostního hlediska doporučuji [GNOME](https://www.gnome.org/), jelikož používá wayland místo X.org a podílí se na vývoji Flatpaku. Výjimku tvoří rozhraní *GNOME Classic*, které využívá primárně X.org &ndash; není tedy doporučeno.
 
 <br><br><hr><br>
 
