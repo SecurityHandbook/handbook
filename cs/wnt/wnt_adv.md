@@ -20,68 +20,99 @@ Tato sekce FAQ počítá s tím, že jste pročetli FAQ Windows pro méně pokro
 <br>
 
 ### Firewall:
-Windows obsahují vestavěný <span class="green">Windows Firewall</span> (WF), který je na velmi dobré úrovni.
+Windows obsahují vestavěný <span class="green">Windows Defender Firewall</span> (WDF), který je na velmi dobré úrovni.
 
 Použití FW třetí strany je zbytečné rozšiřování attack surface. Základem síťového zabezpečení v domácnosti je rozumný router s použitelným FW (např. Mikrotik, kde si FW ovšem samozřejmě musíte nastavit).
 
-Co se týče blokování odchozí komunikace, Windows Firewall tuto funkci podporuje a umožňuje vcelku jednoduše nastavit.
+Co se týče blokování odchozí komunikace, *Windows Defender Firewall* tuto funkci podporuje a umožňuje vcelku jednoduše nastavit.
 
-![idea](https://mople71.cz/img/sm/idea.gif) Návod měl původně být v sekci pro méně pokročilé, ovšem z důvodu nepříjemného bugu (nebo funkce) Windows 10 Creators Update, automatické aktualizace OS nelze ve whitelistu rozumně definovat.
+![idea](https://mople71.cz/img/sm/idea.gif) Návod měl původně být v sekci pro méně pokročilé, ovšem z důvodu nepříjemného bugu (nebo funkce) Windows 10, automatické aktualizace OS nelze ve whitelistu rozumně definovat.
 
-> Nastavení WF na blokování odchozí komunikace
+> Konfigurace WDF pro blokování odchozí komunikace
 
 - Otevřete si **hledání Windows**, do vyhledávacího pole zadejte:
 <li style="list-style-type: none"><pre><code>wf.msc</code></pre></li>
 - Na nalezenou položku klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/admin.png) **Spustit jako správce**.
-<li style="list-style-type: none">![wf](https://faq.mople71.cz/img/cs/wf.png)</li>
-- Otevře se pokročilé nastavení Windows Firewall. V prostředním sloupci zvolte možnost <span class="green">Vlastnosti brány firewall</span>.
+<li style="list-style-type: none">![wdf](https://faq.mople71.cz/img/cs/wdf.png)</li>
+- Otevře se pokročilé nastavení Windows Firewall. V prostředním sloupci zvolte možnost <span class="green">Vlastnosti brány Firewall v programu Windows Defender</span>.
 - V horním panelu si otevřete záložku **Privátní profil**. U položky **Odchozí připojení** zvolte možnost <span class="green">Blokovat</span>.
-<li style="list-style-type: none">![wf1](https://faq.mople71.cz/img/cs/wf1.png)</li>
+<li style="list-style-type: none">![wdf1](https://faq.mople71.cz/img/cs/wdf1.png)</li>
 - Postup zopakujte pro záložku **Veřejný profil**.
 - Klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![wf2](https://faq.mople71.cz/img/cs/wf2.png)</li>
+<li style="list-style-type: none">![wdf2](https://faq.mople71.cz/img/cs/wdf2.png)</li>
 
-![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Nyní WF blokuje veškerou odchozí kouminakci, která není na whitelistu. Dále je třeba nastavit whitelist.</span>
+![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Nyní WDF blokuje veškerou odchozí kouminakci, která není na whitelistu. Dále je třeba nastavit whitelist.</span>
 
-> Povolení odchozí komunikace pro důležité aplikace
+> Povolení odchozí komunikace pro všechny moderní aplikace
 
 - V levém sloupci otevřete <span class="green">Odchozí pravidla</span>.
 - V pravém sloupci zvolte možnost <span class="green">Nové pravidlo...</span>
 - Jako typ pravidla zvolte **Program** a klikněte na tlačítko <span class="green">Další</span>.
-- Zvolte možnost **Cesta k tomuto programu** a klikněte na tlačítko <span class="green">Procházet...</span>
-- Nalezněte a zvolte následující aplikaci: <span class="blue">C:\Windows\System32\smartscreen.exe</span>
-<li style="list-style-type: none">![wf3](https://faq.mople71.cz/img/cs/wf3.png)</li>
+- Zvolte možnost **Všechny programy** a klikněte na tlačítko <span class="green">Další</span>.
+- Zvolte možnost **Povolit připojení** a klikněte na tlačítko <span class="green">Další</span>.
+- Zkontrolujte zatržítka u všech položek a klikněte na tlačítko <span class="green">Další</span>.
+- Zadejte název pravidla &ndash; v tomto případě např. **All MoUI Apps**
+- Klikněte na <span class="green">Dokončit</span>.
+- Nové pravidlo otevřete. Přesuňte se do záložky **Programy a služby** a v sekci **Balíčky aplikací** klikněte na <span class="green">Nastavení...</span>
+<li style="list-style-type: none">![wdf3](https://faq.mople71.cz/img/cs/wdf3.png)</li>
+- Zvolte možnost <span class="green">Použít pouze pro balíčky aplikací</span> a potvrďte. Následně uložte změny v pravidle.
+<li style="list-style-type: none">![wdf4](https://faq.mople71.cz/img/cs/wdf4.png)</li>
+
+> Povolení odchozí komunikace pro všechny služby Windows
+
+- V pravém sloupci zvolte možnost <span class="green">Nové pravidlo...</span>
+- Jako typ pravidla zvolte **Program** a klikněte na tlačítko <span class="green">Další</span>.
+- Zvolte možnost **Všechny programy** a klikněte na tlačítko <span class="green">Další</span>.
+- Zvolte možnost **Povolit připojení** a klikněte na tlačítko <span class="green">Další</span>.
+- Zkontrolujte zatržítka u všech položek a klikněte na tlačítko <span class="green">Další</span>.
+- Zadejte název pravidla &ndash; v tomto případě např. **All Services**
+- Klikněte na <span class="green">Dokončit</span>.
+- Nové pravidlo otevřete. Přesuňte se do záložky **Programy a služby** a v sekci **Služby** klikněte na <span class="green">Nastavení...</span>
+- Zvolte možnost <span class="green">Použít pouze pro balíčky aplikací</span> a potvrďte. Následně uložte změny v pravidle.
+<li style="list-style-type: none">![wdf5](https://faq.mople71.cz/img/cs/wdf5.png)</li>
+
+> Povolení odchozí komunikace pro důležité aplikace
+
+- V pravém sloupci zvolte možnost <span class="green">Nové pravidlo...</span>
+- Jako typ pravidla zvolte **Program** a klikněte na tlačítko <span class="green">Další</span>.
+- Zvolte možnost **Cesta k tomuto programu** a do textového pole vložte cestu k následujícímu souboru:
+<li style="list-style-type: none"><pre><code>%SystemRoot%\System32\smartscreen.exe</code></pre></li>
+<li style="list-style-type: none">![wdf6](https://faq.mople71.cz/img/cs/wdf6.png)</li>
 - Klikněte na tlačítko <span class="green">Další</span>.
 - Zvolte možnost **Povolit připojení** a klikněte na tlačítko <span class="green">Další</span>.
-- Zkontrolujte zatržítka u všech možností a klikněte na tlačítko <span class="green">Další</span>.
-- Zadejte název pravidla &ndash; v tomto případě např. **SmartScreen.exe**
+- Zkontrolujte zatržítka u všech položek a klikněte na tlačítko <span class="green">Další</span>.
+- Zadejte název pravidla &ndash; v tomto případě např. **SmartScreen**
 - Klikněte na <span class="green">Dokončit</span>.
+- Stejný postup aplikujte pro následující aplikace:
+<li style="list-style-type: none"><pre><code>%SystemRoot%\ImmersiveControlPanel\SystemSettings.exe
+%programfiles%\Windows Defender\MsMpEng.exe
+%programfiles%\Windows Defender\MpUXSrv.exe
+%programfiles%\Windows Defender\MpCmdRun.exe
+%programfiles%\Windows Defender\wdnsfltr.exe</code></pre></li>
 
-![idea](https://mople71.cz/img/sm/idea.gif) Stejným způsobem povolte veškeré další aplikace, které potřebují přístup k internetu (např. internetové prohlížeče, "%programfiles%\Windows Defender\MpCmdRun.exe", VoodooShield,...)
+> Windows Update na Windows 10
 
-> Windows Update na Windows 10 (Creators Update)
-
-Ve W10 CU není možné rozumně povolit Windows Update &ndash; nestačí povolit pouze nezbytné služby, je nutné povolit celý *svchost.exe*.
+Od verze **Windows 10 Creators Update** není možné rozumně povolit Windows Update &ndash; nestačí povolit pouze nezbytné služby, je nutné povolit celý *svchost.exe*.
 
 Je zde několik možností:
 
-- Permanentně povolit SVCHost.exe pro porty 80 a 443 **(nedoporučeno)**.
+- <span class="s">Permanentně povolit SVCHost.exe pro porty 80 a 443</span>. (<span class="red">nedoporučeno</span>)
 - Povolit SVCHost.exe pouze po dobu instalace aktualizací.
 - Instalovat aktualizace 1x měsíčně ručně a WU neřešit.
 - ...
 
-![arrow](https://mople71.cz/img/sm/arrow.gif) Problémem ovšem je, že přes WU se aktualizují definice Windows Defender, které je důležité mít aktuální.
+![arrow](https://mople71.cz/img/sm/arrow.gif) Problémem ovšem je, že přes WU se aktualizují definice <span class="green">Windows Defender</span>, které je důležité mít aktuální.
 
-Zde existuje také několik možností:
+Jako nejrozumější varianta se tedy jeví následující:
 
-- Permanentně povolit WU.
-- Vytvořit pravidlo pro povolení SVCHost.exe ve WF a pravidlo zakázat. Následně pro aktualizaci definicí WD napsat jednoduchý skript a naplánovat jeho spuštění 1x za 12 hodin. Např.:
-<li style="list-style-type: none"><pre><code>@echo off
-netsh advfirewall firewall set rule name="SVCHost.exe" new enable=yes
+Vytvořit pravidlo pro povolení celého *SVCHost.exe* ve WDF, pojmenovat jej **SVCHost** a pravidlo zakázat (pravým tlačítkem). Následně pro aktualizaci definicí WD napsat jednoduchý skript a naplánovat v *Plánovači úloh* jeho spuštění 1x za 6 hodin.
+<pre><code>@echo off
+netsh advfirewall firewall set rule name="SVCHost" new enable=yes
 "%programfiles%\Windows Defender\MpCmdRun.exe" -SignatureUpdate
-netsh advfirewall firewall set rule name="SVCHost.exe" new enable=no
-pause</code></pre></li>
-- ...
+netsh advfirewall firewall set rule name="SVCHost" new enable=no
+pause</code></pre>
+
+Windows Update následně můžete řešit libovolným způsobem.
 
 <br>
 
@@ -191,7 +222,7 @@ icacls "C:\Users\(uživ. jméno)" /c /deny Everyone:(OI)(CI)(X)</code></pre></li
 ## Integritní politika:
 Pomocí integritní politiky &ndash; součásti bezpečnostního modelu OS &ndash; je možné omezit přístup aplikacím s nízkou úrovní integrity do osobních složek.
 
-> Nutná teorie k úrovních integrity a integritní politice
+> Nutná teorie k úrovním integrity a integritní politice
 
 - Windows obsahuje mechanismus jménem **Kontrola přístupu**, který by se dal označit za základ bezpečnostního modelu Windows.
 - Vždy, když libovolná aplikace žádá o přístup k nějakému objektu apod., musí projít Kontrolou přístupu. Bezpečnostní systém Windows získá tzv. **token** aplikace, což je zjednodušeně řečeno souhrn důkazů, proč má, potažmo nemá aplikace právo na vykonání dané akce.
@@ -254,9 +285,9 @@ a stiskněte **Enter**.</li>
 
 - Nyní můžeme nastavit integritní politiku osobních složek, jejichž obsah chceme chránit před malware. Cestu ke složkám tedy upravte pro váš OS.:
 <li style="list-style-type: none"><pre><code>chml C:\Users\(uživ. jméno)\Documents -i:m -nw -nx
-chml C:\Users\<uživ._jméno>\Pictures -i:m -nw -nx
-chml C:\Users\<uživ._jméno>\Music -i:m -nw -nx
-chml C:\Users\<uživ._jméno>\Videos -i:m -nw -nx
+chml C:\Users\<uživatel>\Pictures -i:m -nw -nx
+chml C:\Users\<uživatel>\Music -i:m -nw -nx
+chml C:\Users\<uživatel>\Videos -i:m -nw -nx
 
 /* -i:l (nízká úroveň integrity)
 -i:m (střední úroveň integrity)

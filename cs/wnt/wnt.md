@@ -217,13 +217,13 @@ Pro nižší verze Windows lze instalaci antiviru třetí strany pochopit, jelik
 
 ### Firewall:
 
-Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před útoky ze sítě. Windows obsahují vestavěný <span class="green">Windows Firewall</span> (WF), který je na velmi dobré úrovni a plně dostačující (spousta AV/M produktů přestala vyvíjet vlastní FW a maximálně nabízet alternativní rozhraní pro Windows Firewall). *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*
+Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před útoky ze sítě. Windows obsahují vestavěný <span class="green">Windows Defender Firewall</span> (WDF), který je na velmi dobré úrovni a plně dostačující (spousta AV/M produktů přestala vyvíjet vlastní FW a maximálně nabízet alternativní rozhraní pro Windows Firewall). *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*
 
-Základní nevýhoda WF pro běžné uživatele je absence jakéhokoli intuitivního rozhraní. Velmi jednoduché rozhraní naleznete v <span class="green">Centru zabezpečení v programu Windows Defender</span>.
+Základní nevýhoda WDF pro běžné uživatele je absence pokročilejšího intuitivního rozhraní. Jednoduché rozhraní naleznete v <span class="green">Centru zabezpečení v programu Windows Defender</span>.
 
 <span class="red">Comodo Firewall</span>. Velmi oblíbená alternativa. Ano, je intuitivnější a obsahuje HIPS. Na druhou stranu, osobně důrazně nedoporučuji jakýkoli produkt od firmy **Comodo**.
 
-**Windows Firewall** je v základu nastaven na blokování příchozí komunikace, která není explicitně povolena. Chcete-li posunout bezpečnost na výrazně vyšší úroveň, je dobrý nápad nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V nejnovější verzi Windows je ovšem takové nastavení problematické, a návod proto naleznete pouze v FAQ pro pokročilé.
+**Windows Defender Firewall** je v základu nastaven na blokování příchozí komunikace, která není explicitně povolena. Chcete-li posunout bezpečnost na výrazně vyšší úroveň, je dobrý nápad nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V nejnovější verzi Windows je ovšem takové nastavení problematické, a návod proto naleznete pouze v FAQ pro pokročilé.
 
 <br>
 
@@ -287,7 +287,7 @@ Každý kód obsahuje minimálně jednu chybu. Toho zneužívají exploity ší�
 Windows využívají velké množství mitigací a exploitace samotného OS a aplikací OS je tedy velmi nákladná. Některé aplikace (např. Chrome) jsou také na velmi vysoké úrovni a jejich exploitace je nákladná. Jsou zde ovšem aplikace, které žádné anti-exploit mitigace nepoužívají a někdy je používání těchto aplikací nezbytné. V takovém případě existují anti-exploit řešení, která umí exploitaci zmíněných aplikací výrazně ztížit.
 
 #### Přehled anti-exploit řešení:
-- Windows Defender Exploit Protection (Windows 10 Fall Creators Update a výše)
+- Windows Defender Exploit Guard (DEG; Windows 10 Fall Creators Update a výše)
 - [Microsoft Enhanced Mitigation Experience Toolkit](https://technet.microsoft.com/en-us/security/jj653751) (EMET; Windows 10 November Update a níže)
 - [HitmanPro.Alert](https://www.hitmanpro.com/en/alert.aspx) (HMP.A)
 
