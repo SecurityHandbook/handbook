@@ -83,22 +83,15 @@ Seznam zařízení naleznete v návodu [Výběr telefonu &ndash; OS Android](htt
 ## Bezpečné nastavení OS:
 Android je bezpečně nastaven již v základu, není ovšem od věci podívat se do nastavení a zkontrolovat jej.
 
-> Kontrola korektního nastavení OS Android
-
-- Otevřete si aplikaci <span class="green">Nastavení</span>.
-- Nalezněte podkategorii **Zabezpečení** a otevřete ji.
-- Nemáte-li, nastavte si <span class="green">zámek obrazovky</span>. Ověřte konfiguraci zabezpečení, případně opravte.
-<li style="list-style-type: none">![andset](https://faq.mople71.cz/img/cs/andset.png)</li>
-- Aplikaci zavřete.
-
 > Kontrola aktuálního OS
 
 - Otevřete si aplikaci <span class="green">Nastavení</span>.
-- Nalezněte podkategorii **Informace o telefonu** a otevřete ji.
+- Nalezněte podkategorii **Systém** a otevřete ji.
+- Klikněte na <span class="green">Informace o telefonu</span>.
 - Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **7.1.2** a **8.0**.
 - Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
 <li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
-- Máte-li starší *verzi systému Android* než **7.1.1**, telefon není implicitně bezpečný &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* nežli **5. července 2017** (a k nápravě nedojde do konce září), telefon je nebezpečný &ndash; můžete se dívat po náhradě.
+- Máte-li starší *verzi systému Android* než **7.1.1**, telefon není implicitně bezpečný &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* nežli **5. července 2017** (a k nápravě nedojde do konce září), telefon není bezpečný &ndash; můžete se dívat po náhradě.
 - Více informací o této problematice naleznete v návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/cs/iot/andr_vyber.php).
 - Aplikaci zavřete.
 
@@ -115,7 +108,7 @@ Pod uživatelem hosta můžete relativně bezpečně např. prohlížet rizikov�
 <li style="list-style-type: none">![andg](https://faq.mople71.cz/img/cs/andg.png)</li>
 - Budete automaticky přepnuti na uživatele hosta.
 - Jakmile z účtu hosta budete chtít odejít, stáhněte notifikační lištu a klikněte na tlačítko <span class="green">Odstranit hosta</span>.
-<li style="list-style-type: none">![andg2](https://faq.mople71.cz/img/cs/andg2.png)</li>
+<li style="list-style-type: none">![andg1](https://faq.mople71.cz/img/cs/andg1.png)</li>
 - Odstranění potvrďte.
 
 <br><br><hr><br>
@@ -184,16 +177,15 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 > Využití vestavěného správce oprávnění
 
 - Otevřete si aplikaci <span class="green">Nastavení</span>.
-- Nalezněte podkategorii **Aplikace** a otevřete ji.
-- V pravém horním rohu klikněte na <span class="green">ozubené kolo</span>.
-<li style="list-style-type: none">![andapp](https://faq.mople71.cz/img/cs/andapp.png)</li>
+- Nalezněte podkategorii **Aplikace a oznámení** a otevřete ji.
 - Klikněte na <span class="green">Oprávnění aplikací</span>.
 - Otevřete postupně všechny kategorie a zakažte všem aplikacím nepotřebný přístup.
+<li style="list-style-type: none">![andapp](https://faq.mople71.cz/img/cs/andapp.png)</li>
 <li style="list-style-type: none">![andapp1](https://faq.mople71.cz/img/cs/andapp1.png)</li>
-<li style="list-style-type: none">![andapp2](https://faq.mople71.cz/img/cs/andapp2.png)</li>
-- Po dokončení nastavení oprávnění se z kategorie **Oprávnění aplikací** přesuňte o úroveň výše a otevřete si <span class="green">Speciální přístup</span>.
+- Po dokončení nastavení oprávnění se z kategorie **Oprávnění aplikací** přesuňte o úroveň výše, rozklikněte **Rozšířená nastavení**.
+- Otevřete <span class="green">Přístup ke spec. aplikacím</span>.
 - Zde můžete nastavit např. které aplikace mají přístup k prémiovým SMS nebo mohou na pozadí neomezeně používat mobilní data.
-<li style="list-style-type: none">![andapp3](https://faq.mople71.cz/img/cs/andapp3.png)</li>
+<li style="list-style-type: none">![andapp2](https://faq.mople71.cz/img/cs/andapp2.png)</li>
 - Aplikaci zavřete.
 
 <br>

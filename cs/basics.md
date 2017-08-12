@@ -20,7 +20,7 @@
 - Nepoužívejte nelegální software &ndash; většina cracků běžně dostupná na internetu je infikována.
 - Používejte silná hesla dostatečně jednoduchá na zapamatování:
 <li style="list-style-type: none">![password_strength_sm](https://faq.mople71.cz/img/en/passwd.png)</li>
-- Používejte více hesel na různé služby, zvažte použití klíčenky.
+- Používejte více hesel na různé služby, zvažte použití [klíčenky](#basics7).
 - Nepřipojujte se k neznámým/veřejným bezdrátovým sítím, případně přes ně neposílejte citlivé údaje a vyvarujte se nebezpečným protokolům (HTTP, FTP apod.). Ideálně použijte VPN.
 - Dávejte si pozor, kam jaké údaje zadáváte &ndash; s osobními údaji se dobře obchoduje.
 - Omezte citlivé informace na sociálních sítích a zkontrolujte, pro koho jsou jaké informace viditelné.
@@ -37,45 +37,43 @@
 - Programy stahujte výhradně ze stránek výrobce, vyvarujte se stránkám třetích stran jako Stahuj/Slunečnice apod.
 - Vyvarujte se nebezpečnému síťovému SW jako <span class="red">Flash Player</span> a <span class="red">Java</span>, jeho exploitace je oblíbená a velmi častá. Případně jej alespoň zakažte ve vašem prohlížeči.
 - Otevírejte pouze důvěryhodné e-mailové přílohy.
-- Máte-li podezření na infikovaný soubor, vždy jej před otevřením otestujte pomocí např. <a href="https://www.virustotal.com/" target="_blank">VirusTotal</a>.
+- Máte-li podezření na infikovaný soubor, vždy jej před otevřením otestujte pomocí např. [VirusTotal](https://www.virustotal.com/).
 
 ![idea](https://mople71.cz/sm/img/idea.gif) Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpečně nastavený live OS</span>. Nutno podotknout, že také není 100% &ndash; v případě, že PC, ze kterého je OS spouštěn, byl dříve napaden, může být infikováno EFI.
 
 <br>
 
 ## Informace o aktuálních událostech v počítačové bezpečnosti:
-- <a href="https://csirt.cz/news/security/" target="_blank">CSIRT.cz</a>
-- <a href="http://www.root.cz/bezpecnost/" target="_blank">Root.cz &ndash; bezpečnost</a>
-- <a href="https://twitter.com/hashtag/ITbezpecnost" target="_blank">Twitter &ndash; #ITbezpecnost</a>
+- [CSIRT.cz](https://csirt.cz/news/security/)
+- [Root.cz &ndash; bezpečnost](https://www.root.cz/bezpecnost/)
+- [Twitter &ndash; #ITbezpecnost](https://twitter.com/hashtag/ITbezpecnost)
 
 <h3 id="basics4.1" class="nocol">Anglické zdroje:</h3>
-- <a href="http://thehackernews.com/" target="_blank">The Hacker News</a>
-- <a href="http://www.bleepingcomputer.com/" target="_blank">BleepingComputer</a>
-- <a href="https://threatpost.com/" target="_blank">Threatpost</a>
-- <a href="http://www.securityweek.com/" target="_blank">SecurityWeek</a>
-- <a href="http://securityaffairs.co/wordpress/" target="_blank">Security Affairs</a>
-- <a href="https://nakedsecurity.sophos.com/" target="_blank">Naked Security</a>
-- <a href="http://linuxsecurity.com/" target="_blank">LinuxSecurity</a>
+- [BleepingComputer](https://www.bleepingcomputer.com/)
+- [The Hacker News](http://thehackernews.com/)
+- [Threatpost](https://threatpost.com/)
+- [Naked Security](https://nakedsecurity.sophos.com/)
+- [LinuxSecurity](http://www.linuxsecurity.com/)
 
 <br>
 
 ## Online analýza souborů:
-- <a href="https://www.virustotal.com/" target="_blank">VirusTotal</a> &ndash; AV databáze
-- <a href="https://www.metadefender.com/" target="_blank">Metadefender</a> &ndash; AV databáze
-- <a href="https://malwr.com/submission/" target="_blank">Malwr</a> &ndash; Cuckoo sandbox
-- <a href="https://www.reverse.it/" target="_blank">Hybrid Analysis</a> &ndash; sandbox + VT
+- [VirusTotal](https://www.virustotal.com/) &ndash; AV databáze
+- [Metadefender](https://www.metadefender.com/) &ndash; AV databáze
+- [Hybrid Analysis](https://www.reverse.it/) &ndash; sandbox + VT
+- [Malwr](https://malwr.com/submission/) &ndash; Cuckoo sandbox
 
 <br>
 
 ## Doporučené VPN:
-- <a href="https://www.f-secure.com/en/web/home_global/freedome?icid=1545" target="_blank">Freedome VPN</a> &ndash; blokuje malware, trackery a reklamy
-- <a href="https://airvpn.org/" target="_blank">AirVPN</a> &ndash; pokročilé funkce, vcelku důvěryhodná
-- <a href="https://www.ivpn.net/" target="_blank">IVPN</a> &ndash; důvěryhodná
-- <a href="https://cryptostorm.is/" target="_blank">Cryptostorm</a> &ndash; důvěryhodná
+- [Freedome VPN](https://www.f-secure.com/en/web/home_global/freedome/) &ndash; blokuje malware, trackery a reklamy
+- [AirVPN](https://airvpn.org/) &ndash; pokročilé funkce, vcelku důvěryhodná
+- [IVPN](https://www.ivpn.net/) &ndash; důvěryhodná
+- [Cryptostorm](https://cryptostorm.is/) &ndash; důvěryhodná
 
 <br>
 
 ## Doporučené klíčenky:
-- <a href="https://1password.com/" target="_blank">1Password</a> &ndash; špičková platforma, placená
-- <a href="https://www.keepassx.org/" target="_blank">KeePassX</a> &ndash; bezplatná
-- <a href="https://spideroak.com/solutions/encryptr" target="_blank">Encryptr</a> &ndash; bezplatná
+- [1Password](https://1password.com/) &ndash; špičková platforma, placená
+- [KeePassX](https://www.keepassx.org/) &ndash; bezplatná
+- [Encryptr](https://spideroak.com/solutions/encryptr/) &ndash; bezplatná
