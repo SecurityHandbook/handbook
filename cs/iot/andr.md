@@ -16,7 +16,7 @@ Android má robustní bezpečnostní model, který předpokládá, že aplikace 
 ## Bezpečnostní model OS:
 Android má robustní vícevrstevný bezpečnostní model. Používá linuxové jádro, implementuje <abbr title="Mandatory Access Control">MAC</abbr> a mitigace proti *memory corruption* exploitům &ndash; Android je jediná linuxová distribuce, která neumožňuje spuštění *non-<abbr title="Position Independent Executable">PIE</abbr>* kódu. Každé aplikaci je přiřazen unikátní uživatelský ID, aplikace je uzavřena v sandboxovaném prostředí, nemůže operovat s žádnou jinou aplikací a je jí umožněno operovat pouze se soubory/komponenty OS, ke kterým dostane oprávnění od vlastníka zařízení.
 
-![Android Security Model](https://mople71.cz/faq/android.png)
+![Android Security Model](https://faq.mople71.cz/img/android.png)
 
 > Trocha teorie o bezpečnostním modelu OS Android
 
@@ -33,7 +33,7 @@ Veškeré aplikace jsou uzavřeny v sandboxu (*IsolatedProcess*), tudíž každ�
 
 Android **Marshmallow** a výše nabízí rozšířený model oprávnění &ndash; uživatel si může zvolit, k jakým komponentům/souborům bude mít daná aplikace přístup. Vestavěný správce oprávnění zatím není perfektní, jelikož neumožňuje nastavení všech důležitých oprávnění, ale funguje spolehlivě, což se nedá říci o správcích oprávnění třetích stran (např. XPrivacy).
 
-Další funkce závislé na službách Google (např. *SafetyNet*), zde nebudou rozebírány.
+Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect*), zde nebudou rozebírány. Pro další informace o architektuře nahlédněte do návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/cs/iot/andr_vyber.php).
 
 <br><br><hr><br>
 
@@ -67,7 +67,7 @@ Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se d
 
 ### Bezpečnostní požadavky na zařízení s OS Android:
 - 64-bit architektura (x86/ARM)
-- jádro > 3.18 (ideálně 4.x)
+- jádro > 3.18 (ideálně 4.4)
 - full verified boot (ideálně i pro custom ROM)
 - časté (ideálně měsíční) bezpečnostní aktualizace pro firmware a proprietární komponenty
 - garance bezpečnostních aktualizací po dobu morální životnosti modelu (min. 1 rok od koupi)
@@ -76,25 +76,23 @@ Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se d
 
 ### Zařízení s OS Android splňující bezpečnostní požadavky:
 
-(tento seznam nebude aktualizován mimo pravidelnou půlroční aktualizaci, proto obsažené informace nemusí být vždy 100% aktuální)
-
-<!--- ./andr_devices.md -->
+Seznam zařízení naleznete v návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/cs/iot/andr_vyber.php#vyber2).
 
 <br><br><hr><br>
 
 ## Bezpečné nastavení OS:
 Android je bezpečně nastaven již v základu, není ovšem od věci podívat se do nastavení a zkontrolovat jej.
 
-> Kontrola korektního nastavení OS Android
+> Kontrola aktuálního OS
 
 - Otevřete si aplikaci <span class="green">Nastavení</span>.
-- Nalezněte podkategorii **Zabezpečení** a otevřete ji.
-- Nemáte-li, nastavte si <span class="green">zámek obrazovky</span>.
-<li style="list-style-type: none">![andset](https://mople71.cz/faq/andset.png)</li>
-- Ověřte nastavení šifrování úložište telefonu.
-<li style="list-style-type: none">![andset1](https://mople71.cz/faq/andset1.png)</li>
-- Ověřte vypnutou instalaci aplikací z <span class="green">neznámých zdrojů</span>.
-<li style="list-style-type: none">![andset2](https://mople71.cz/faq/andset2.png)</li>
+- Nalezněte podkategorii **Systém** a otevřete ji.
+- Klikněte na <span class="green">Informace o telefonu</span>.
+- Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **7.1.2** a **8.0**.
+- Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
+<li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
+- Máte-li starší *verzi systému Android* než **7.1.1**, telefon není implicitně bezpečný &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* nežli **5. července 2017** (a k nápravě nedojde do konce září), telefon není bezpečný &ndash; můžete se dívat po náhradě.
+- Více informací o této problematice naleznete v návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/cs/iot/andr_vyber.php).
 - Aplikaci zavřete.
 
 <br>
@@ -106,29 +104,29 @@ Pod uživatelem hosta můžete relativně bezpečně např. prohlížet rizikov�
 
 - Stáhněte dolů notifikační lištu dvěma prsty, případně ji rozšiřte kliknutím na šipku v pravém horním rohu.
 - V pravé horní liště klikněte na obrázek svého uživatelského účtu.
-<li style="list-style-type: none">![andg](https://mople71.cz/faq/andg.png)</li>
 - Zobrazí se seznam uživatelských účtů. Klikněte na tlačítko <span class="green">Přidat hosta</span>.
-<li style="list-style-type: none">![andg1](https://mople71.cz/faq/andg1.png)</li>
+<li style="list-style-type: none">![andg](https://faq.mople71.cz/img/cs/andg.png)</li>
 - Budete automaticky přepnuti na uživatele hosta.
 - Jakmile z účtu hosta budete chtít odejít, stáhněte notifikační lištu a klikněte na tlačítko <span class="green">Odstranit hosta</span>.
-<li style="list-style-type: none">![andg2](https://mople71.cz/faq/andg2.png)</li>
+<li style="list-style-type: none">![andg1](https://faq.mople71.cz/img/cs/andg1.png)</li>
 - Odstranění potvrďte.
 
 <br><br><hr><br>
 
 ## Doporučené aplikace:
-V následující sekci naleznete doporučené bezpečnostní aplikace a aplikace s bezpečností úzce související. Aplikace jsou děleny na FOSS (free and open source) a poprietární. Důvod je prostý: někteří lidé nevěří proprietárním aplikacím a používání bezpečnostní aplikace s uzavřeným kódem, považují za nepřijatelné.
+V následující sekci naleznete doporučené bezpečnostní aplikace a aplikace s bezpečností úzce související. Aplikace jsou děleny na FOSS (free and open source) a proprietární. Důvod je prostý: někteří lidé nevěří proprietárním aplikacím a používání bezpečnostní aplikace s uzavřeným kódem, považují za nepřijatelné.
 
 ### Obchod s aplikacemi:
 Obchod s aplikacemi velmi úzce souvisí s bezpečností, jelikož z něj stahujete a instalujete veškeré aplikace do OS. Z tohoto důvodu musí být důvěryhodný a bezpečný.
 
 #### FOSS:
-- F-Droid: <a href="https://f-droid.org/" target="_blank">https://f-droid.org/</a>
+- F-Droid: https://f-droid.org/
 
 #### Proprietární:
-- Google Play: <a href="https://play.google.com/" target="_blank">https://play.google.com/</a>
-- Amazon: <a href="https://www.amazon.com/appstore" target="_blank">https://www.amazon.com/appstore</a>
-- Yandex.Store: <a href="https://store.yandex.com/" target="_blank">https://store.yandex.com/</a>
+- Google Play: https://play.google.com/
+- Amazon: https://www.amazon.com/appstore
+
+*Amazon* má zdlouhavý proces kontroly aplikací (jsou kontrolovány manuálně), proto má témeř vždy zastaralé verze aplikací, zvláště těch, které jsou často aktualizovány.
 
 <br>
 
@@ -139,10 +137,10 @@ Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenab�
 
 #### FOSS:
 - integrovaný (CopperheadOS)
-- NetGuard (VPN): <a href="https://github.com/M66B/NetGuard" target="_blank">https://github.com/M66B/NetGuard</a>
+- NetGuard (VPN): https://github.com/M66B/NetGuard
 
 #### Proprietární:
-- NoRoot Data Firewall (VPN): <a href="https://play.google.com/store/apps/details?id=com.jianjia.firewall" target="_blank">https://play.google.com/store/apps/details?id=com.jianjia.firewall</a>
+- NoRoot Data Firewall (VPN): https://play.google.com/store/apps/details?id=com.jianjia.firewall
 
 <br>
 
@@ -150,23 +148,23 @@ Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenab�
 Blokování reklamy je z hlediska bezpečnosti esenciální kvůli četnému výskytu škodlivých reklam na internetu. Doporučuji oblíbené stránky podporovat jinou bezpečnější &ndash; finanční &ndash; formou.
 
 #### FOSS lokální VPN:
-- DNS66: <a href="https://github.com/julian-klode/dns66" target="_blank">https://github.com/julian-klode/dns66</a>
+- DNS66: https://github.com/julian-klode/dns66
 
 #### Proprietární lokální VPN:
-- Adguard: <a href="https://adguard.com/en/adguard-android/overview.html" target="_blank">https://adguard.com/en/adguard-android/overview.html</a>
+- Adguard: https://adguard.com/en/adguard-android/overview.html
 
 #### VPN:
-- Freedome: <a href="https://play.google.com/store/apps/details?id=com.fsecure.freedome.vpn.security.privacy.android" target="_blank">https://play.google.com/store/apps/details?id=com.fsecure.freedome.vpn.security.privacy.android</a>
+- Freedome: https://play.google.com/store/apps/details?id=com.fsecure.freedome.vpn.security.privacy.android
 
 #### Internetový prohlížeč:
-- Brave: <a href="https://play.google.com/store/apps/details?id=com.brave.browser" target="_blank">https://play.google.com/store/apps/details?id=com.brave.browser</a>
+- Google Chrome / Chromium
+- Brave: https://play.google.com/store/apps/details?id=com.brave.browser
 - atd.
 
 #### DNS:</h3>
-- Adguard DNS: <a href="https://adguard.com/en/adguard-dns/overview.html" target="_blank">https://adguard.com/en/adguard-dns/overview.html</a>
-- NoAd: <a href="https://noad.zone" target="_blank">https://noad.zone</a>
+- Adguard DNS: https://adguard.com/en/adguard-dns/overview.html
 
-Použití DNS je dle mého názoru dobrý způsob, můžete jej nastavit na routeru, ovšem pro mobilní data DNS servery nelze změnit. Potom doporučím použití prohlížeče blokující reklamy, pro pokročilejší prohlížeče umožňující vypnutí JS s výjimkami. VPN je také dobrý způsob, ovšem implementace OpenVPN na Androidu není 100% ideální.
+DNS je jednoduchý způsob blokace reklam, vyžaduje to ovšem důvěru v poskytovatele DNS. Použití prohlížeče blokující reklamy je nejlepším řešením. *Chrome(ium)* od verze 62 umožní nativně blokovat agresivní reklamy nesplňující podmínky. VPN je také dobrý způsob, ovšem implementace OpenVPN na Androidu není 100% ideální.
 
 <br>
 
@@ -179,16 +177,15 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 > Využití vestavěného správce oprávnění
 
 - Otevřete si aplikaci <span class="green">Nastavení</span>.
-- Nalezněte podkategorii **Aplikace** a otevřete ji.
-- V pravém horním rohu klikněte na <span class="green">ozubené kolo</span>.
-<li style="list-style-type: none">![andapp](https://mople71.cz/faq/andapp.png)</li>
+- Nalezněte podkategorii **Aplikace a oznámení** a otevřete ji.
 - Klikněte na <span class="green">Oprávnění aplikací</span>.
 - Otevřete postupně všechny kategorie a zakažte všem aplikacím nepotřebný přístup.
-<li style="list-style-type: none">![andapp1](https://mople71.cz/faq/andapp1.png)</li>
-<li style="list-style-type: none">![andapp2](https://mople71.cz/faq/andapp2.png)</li>
-- Po dokončení nastavení oprávnění se z kategorie **Oprávnění aplikací** přesuňte o úroveň výše a otevřete si <span class="green">Speciální přístup</span>.
+<li style="list-style-type: none">![andapp](https://faq.mople71.cz/img/cs/andapp.png)</li>
+<li style="list-style-type: none">![andapp1](https://faq.mople71.cz/img/cs/andapp1.png)</li>
+- Po dokončení nastavení oprávnění se z kategorie **Oprávnění aplikací** přesuňte o úroveň výše, rozklikněte **Rozšířená nastavení**.
+- Otevřete <span class="green">Přístup ke spec. aplikacím</span>.
 - Zde můžete nastavit např. které aplikace mají přístup k prémiovým SMS nebo mohou na pozadí neomezeně používat mobilní data.
-<li style="list-style-type: none">![andapp3](https://mople71.cz/faq/andapp3.png)</li>
+<li style="list-style-type: none">![andapp2](https://faq.mople71.cz/img/cs/andapp2.png)</li>
 - Aplikaci zavřete.
 
 <br>
@@ -197,41 +194,45 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 
 > Technické informace o XPrivacy
 
-XPrivacy primárně nahrazuje Java API novým kódem a často pouze kódem strany klienta &ndash; většina dat může být stále získána. Například skrývá sériové číslo v Java system property API (<a href="https://github.com/M66B/XPrivacy/blob/master/src/biz/bokhorst/xprivacy/XSystemProperties.java" target="_blank">link</a>). Sériové číslo je ovšem stále přístupné nativnímu kódu, případně Java kódu používajícímu jiné rozhraní pro přístup. Tímto způsobem evidentně (ne)funguje větší část XPrivacy.
+XPrivacy primárně nahrazuje Java API novým kódem a často pouze kódem strany klienta &ndash; většina dat může být stále získána. Například skrývá sériové číslo v Java system property API ([link](https://github.com/M66B/XPrivacy/blob/master/src/biz/bokhorst/xprivacy/XSystemProperties.java)\). Sériové číslo je ovšem stále přístupné nativnímu kódu, případně Java kódu používajícímu jiné rozhraní pro přístup. Tímto způsobem evidentně (ne)funguje větší část XPrivacy.
 
-Mít bezpečnostní aplikaci, kterou lze obejít i bez exploitace, moc nemá smysl. ![wink](https://mople71.cz/sm/wink.gif)
+Mít bezpečnostní aplikaci, kterou lze obejít i bez exploitace, moc nemá smysl. ![wink](https://mople71.cz/img/sm/wink.gif)
 
 <br>
 
 ### Internetový prohlížeč:
-Prohlížeč samozřejmě závisí na osobních preferencích. Přesto je fakt, že Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům. Prohlížeče založené na Mozilla Firefox jsou několik let za Chromium v oblasti mitigací proti exploitům, na Androidu je situace ovšem méně kritická než na desktopových OS.
+Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na Linuxu &ndash; tedy i na Androidu. Prohlížeče založené na Mozilla Firefox jsou několik let za Chromium v oblasti mitigací proti exploitům, na Androidu je situace ovšem méně kritická než na desktopových OS.
+
+![Bezpečnostní model Chromium](https://faq.mople71.cz/img/en/chmandr.png)
 
 #### FOSS:
-- Chromium: <a href="https://www.chromium.org/developers/how-tos/android-build-instructions" target="_blank">https://www.chromium.org/developers/how-tos/android-build-instructions</a>  <a href="https://play.google.com/store/apps/details?id=com.anddevw.getchromium" target="_blank">https://play.google.com/store/apps/details?id=com.anddevw.getchromium</a>
-- Brave: <a href="https://play.google.com/store/apps/details?id=com.brave.browser" target="_blank">https://play.google.com/store/apps/details?id=com.brave.browser</a>
+- Chromium: https://chromium.googlesource.com/chromium/src/+/master/docs/android_build_instructions.md
+- Brave: https://play.google.com/store/apps/details?id=com.brave.browser
 
 #### Proprietární:
-- Google Chrome: <a href="https://play.google.com/store/apps/details?id=com.android.chrome" target="_blank">https://play.google.com/store/apps/details?id=com.android.chrome</a>
+- Google Chrome: https://play.google.com/store/apps/details?id=com.android.chrome
 
-> Omezení JavaScriptu v Google Chrome
+> Omezení JavaScriptu v Google Chrome / Chromium
 
-- Otevřete si aplikaci <span class="green">Google Chrome</span>.
+- Otevřete si aplikaci <span class="green">Google Chrome</span> / <span class="green">Chromium</span>.
 - Kliknutím na tři tečky v horním pravém rohu otevřete boční panel a klikněte na tlačítko <span class="green">Nastavení</span>.
-- Klikněte na <span class="green">Nastavení webu</span>.
-- Zobrazí se nastavení určující, které internetové stránky mají jaké konkrétní pravomoce. Otevřete podkategorii <span class="green">JavaScript</span>.
-- Kliknutím vypněte JavaScript a následně přidejte výjimky pro všechny stránky, jejichž JS potřebujete.
-<li style="list-style-type: none">![andchr](https://mople71.cz/faq/andchr.png)</li>
-- Aplikaci zavřete.
+- Klikněte na **Nastavení webu** a Otevřete podkategorii <span class="green">JavaScript</span>.
+- Zablokujte spouštění JS.
+<li style="list-style-type: none">![chmandrjs](https://faq.mople71.cz/img/cs/chmandrjs.png)</li>
+- Klikněte na tlačítko <span class="green">Přidat výjimku pro konkrétní web</span>.
+- Zadejte adresu důvěryhodného webu, na kterém se může spouštět JS. Syntax je oproti desktopové verzi značně omezený.
+<li style="list-style-type: none">![chmandrjs1](https://faq.mople71.cz/img/cs/chmandrjs1.png)</li>
+- Klikněte na <span class="green">Přidat</span>.
 
 <br><br><hr><br>
 
 ## Bezpečné ROM:
 Seznam je řazen od nejbezpečnější po nejméně bezpečnou.
 
-- CopperheadOS: <a href="https://copperhead.co/android/" target="_blank">https://copperhead.co/android/</a>
-- UnaOS*: <a href="https://unaos.com/os.html" target="_blank">https://unaos.com/os.html</a>
-- Silent OS*: <a href="https://www.silentcircle.com/products-and-solutions/devices/silent-os/" target="_blank">https://www.silentcircle.com/products-and-solutions/devices/silent-os/</a>
-- Blackberry Android*: <a href="http://ca.blackberry.com/software/smartphones/android.html" target="_blank">http://ca.blackberry.com/software/smartphones/android.html</a>
+- CopperheadOS: https://copperhead.co/android/
+- UnaOS*: https://unaos.com/os.html
+- Silent OS*: https://www.silentcircle.com/products-and-solutions/devices/silent-os/
+- Blackberry Android*: https://ca.blackberry.com/software/smartphones/android.html
 - čistý Android &ndash; Nexus / Pixel
 - Android předinstalovaný výrobcem bez zbytečného nízko-úrovňového bloatware
 - Android předinstalovaný výrobcem s bloatware od výrobce
@@ -242,4 +243,4 @@ Seznam je řazen od nejbezpečnější po nejméně bezpečnou.
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/sm/smile.gif)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.gif)</h3>
