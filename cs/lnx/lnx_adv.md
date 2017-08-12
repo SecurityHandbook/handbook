@@ -156,7 +156,7 @@ Sandbox nativně integrovaný v aplikaci je nejúčinnější možností impleme
 
 Externí sandbox není zdaleka tak účinný jako sandbox integrovaný v aplikaci a ponechává výrazně větší prostor pro exploitaci, ale stále je mnohonásobně lepší, než žádný sandbox. Jsou případy, kdy lze špatně implementovaný externí sandbox prolomit přes *PulseAudio*...
 
-**Flatpak** i **firejail** jsou rozebírány v FAQ pro méně pokročilé.
+**Flatpak** je rozebírán v FAQ pro méně pokročilé.
 
 Pro pokročilou virtualizaci za použití **KVM** se podívejte [zde](https://wiki.archlinux.org/index.php/QEMU).
 

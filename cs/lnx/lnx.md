@@ -100,9 +100,10 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](h
 <li style="list-style-type: none"><pre><code>193.29.206.206</code></pre></li>
 <li style="list-style-type: none">![lnxnet1](https://faq.mople71.cz/img/cs/lnxnet1.png)</li>
 - Klikněte na tlačítko <span class="green">Použít</span> a Nastavení zavřete.
-<li style="list-style-type: none">![idea](https://mople71.cz/img/sm/idea.gif) Další doporučené DNS servery:</li>
-<li style="list-style-type: none"><pre><code>Adguard DNS:         176.103.130.130, 176.103.130.131
-OpenDNS:             208.67.222.222, 208.67.220.220</code></pre></li>
+
+![idea](https://mople71.cz/img/sm/idea.gif) Další doporučené DNS servery:
+<pre><code>Adguard DNS:         176.103.130.130, 176.103.130.131
+OpenDNS:             208.67.222.222, 208.67.220.220</code></pre>
 
 <br><br><hr><br>
 
