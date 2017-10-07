@@ -3,7 +3,7 @@ Linux se díky svému minoritnímu zastoupení na desktopech těší řádově m
 
 Není tedy pravda, že malware na desktopový Linux neexistuje. Pouze máte o něco menší šanci, že na něj někdy narazíte. Pokud by se ovšem tak stalo, je dobré být předem připraven. V této sekci naleznete několik jednoduchých tipů na účinné zvýšení úrovně zabezpečení.
 
-Tato sekce FAQ je určena běžným a středně pokročilým uživatelům.
+Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/lnx/adv.php#lnx).
 
 #### FAQ se dělí na několik sekcí:
 - doporučené distribuce
@@ -100,10 +100,9 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](h
 <li style="list-style-type: none"><pre><code>193.29.206.206</code></pre></li>
 <li style="list-style-type: none">![lnxnet1](https://faq.mople71.cz/img/cs/lnxnet1.png)</li>
 - Klikněte na tlačítko <span class="green">Použít</span> a Nastavení zavřete.
-
-![idea](https://mople71.cz/img/sm/idea.gif) Další doporučené DNS servery:
-<pre><code>Adguard DNS:         176.103.130.130, 176.103.130.131
-OpenDNS:             208.67.222.222, 208.67.220.220</code></pre>
+<li style="list-style-type: none">![idea](https://mople71.cz/img/sm/idea.gif) Další doporučené DNS servery:</li>
+<li style="list-style-type: none"><pre><code>Adguard DNS:         176.103.130.130, 176.103.130.131
+OpenDNS:             208.67.222.222, 208.67.220.220</code></pre></li>
 
 <br><br><hr><br>
 
@@ -187,7 +186,7 @@ Nikdy před příkaz **flatpak** nedávejte <span class="red">sudo</span>. Flatp
 - Odinstalujte současnou verzi LibreOffice, máte-li nějakou nainstalovanou.
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
 <li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
-wget http://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffice.flatpak
+wget https://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffice.flatpak
 flatpak install --bundle LibreOffice.flatpak</code></pre></li>
 - Na všechny otázky odpovězte kladně.
 

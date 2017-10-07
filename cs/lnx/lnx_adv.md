@@ -4,7 +4,7 @@ Linux se díky svému minoritnímu zastoupení na desktopech těší řádově m
 
 Zde se budeme věnovat pokročilejším možnostem zabezpečení (desktopového) Linuxu. Jako rukojmí použiji distribuci Arch Linux, která v základním nastavení není příliš zabezpečená, ale korektní konfigurací z ní lze vytvořit velmi bezpečnou instalaci. Kroky níže popisované jsou aplikovatelné na většinu distribucí, stačí korektně změnit syntax.
 
-Tato sekce FAQ počítá s tím, že jste pročetli [OS FAQ Linux pro méně pokročilé](https://faq.mople71.cz/cs/lnx/index.php#lnx) uživatele a máte znalosti ve zmíněné sekci rozebírané.
+Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pokročilé](https://faq.mople71.cz/cs/lnx/index.php#lnx) uživatele a máte znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
 - vrstvy zabezpečení
@@ -156,7 +156,7 @@ Sandbox nativně integrovaný v aplikaci je nejúčinnější možností impleme
 
 Externí sandbox není zdaleka tak účinný jako sandbox integrovaný v aplikaci a ponechává výrazně větší prostor pro exploitaci, ale stále je mnohonásobně lepší, než žádný sandbox. Jsou případy, kdy lze špatně implementovaný externí sandbox prolomit přes *PulseAudio*...
 
-**Flatpak** je rozebírán v FAQ pro méně pokročilé.
+**Flatpak** i **firejail** jsou rozebírány v FAQ pro méně pokročilé.
 
 Pro pokročilou virtualizaci za použití **KVM** se podívejte [zde](https://wiki.archlinux.org/index.php/QEMU).
 

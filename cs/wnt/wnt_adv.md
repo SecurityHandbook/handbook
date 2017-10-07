@@ -3,7 +3,7 @@ Windows se jakožto nejrozšířenější desktopový OS těší velké pozornos
 
 V FAQ pro pokročilé se budeme věnovat hlavně vestavěným funkcím OS &ndash; cílem je dosáhnout špičkového zabezpečení za použití co nejméně řádků kódu, jejichž počet s 3-P aplikacemi rapidně roste.
 
-Tato sekce FAQ počítá s tím, že jste pročetli FAQ Windows pro méně pokročilé uživatele a máte znalosti ve zmíněné sekci rozebírané.
+Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Windows pro méně pokročilé](https://faq.mople71.cz/cs/wnt/index.php#wnt) uživatele a máte znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
 - vrstvy zabezpečení
@@ -210,10 +210,7 @@ Pomocí integritní politiky &ndash; součásti bezpečnostního modelu OS &ndas
 
 > Nutná teorie k úrovním integrity a integritní politice
 
-- Windows obsahuje mechanismus jménem **Kontrola přístupu**, který by se dal označit za základ bezpečnostního modelu Windows.
-- Vždy, když libovolná aplikace žádá o přístup k nějakému objektu apod., musí projít Kontrolou přístupu. Bezpečnostní systém Windows získá tzv. **token** aplikace, což je zjednodušeně řečeno souhrn důkazů, proč má, potažmo nemá aplikace právo na vykonání dané akce.
-- Na druhé straně (u požadovaného objektu) leží tzv. **deskriptor zabezpečení**, který říká, kdo k objektu má/nemá přístup a pravomoci k jeho manipulaci.
-- Tokeny a deskriptory zabezpečení obsahují mnoho věcí, pro nás jsou ale důležité dvě položky: <span class='green'>úroveň integrity</span> a <span class='green'>integritní politika</span>.
+Windows obsahuje mechanismus jménem **Kontrola přístupu**, který by se dal označit za základ bezpečnostního modelu Windows. Vždy, když libovolná aplikace žádá o přístup k nějakému objektu apod., musí projít Kontrolou přístupu. Bezpečnostní systém Windows získá tzv. **token** aplikace, což je zjednodušeně řečeno souhrn důkazů, proč má, potažmo nemá aplikace právo na vykonání dané akce. Na druhé straně (u požadovaného objektu) leží tzv. **deskriptor zabezpečení**, který říká, kdo k objektu má/nemá přístup a pravomoci k jeho manipulaci. Tokeny a deskriptory zabezpečení obsahují mnoho věcí, pro nás jsou ale důležité dvě položky: <span class='green'>úroveň integrity</span> a <span class='green'>integritní politika</span>.
 
 **Úroveň integrity** je číslo udávající důvěryhodnost aplikace/objektu. Existují následující úrovně integrity:
 
