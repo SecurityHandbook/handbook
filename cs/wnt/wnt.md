@@ -184,11 +184,7 @@ Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows D
 
 - Přesuňte se do kategorie **Ochrana před viry a hrozbami** a otevřete <span class="green">Nastavení ochrany před viry a hrozbami</span>.
 - Zapněte <span class="green">Řízený přístup ke složkám</span> a následně otevřete <span class="green">Chráněné složky</span>.
-<li style="list-style-type: none">![wd1](https://faq.mople71.cz/img/cs/wd1.png)</li>
-- Klikněte na <span class="green">Přidat chráněnou složku</span>.
-- Nalezněte svojí složku **Dokumenty** v levém panelu, zvolte ji a následně klikněte na <span class="green">Vybrat složku</span>.
-<li style="list-style-type: none">![wd2](https://faq.mople71.cz/img/cs/wd2.png)</li>
-- Obdobným způsobem přidejte na seznam veškeré důležité osobní složky na disku.
+- Kliknutím na <span class="green">Přidat chráněnou složku</span> přidejte na seznam veškeré důležité osobní složky na disku, které nejsou v seznamu.
 
 > Povolení aplikace v Řízeném přístupu ke složkám (příklad: Heimdal Free)
 
@@ -309,7 +305,7 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 > Konfigurace anti-exploit mitigací pro jednotlivé aplikace (příklad: VoodooShield)
 
 - V horním panelu se přesuňte do záložky **Nastavení programu**.
-- Klikněte na <span class="green">Přidat program, který chcete přizpůsobit</span>.
+- Klikněte na <span class="green">Přidat program, který chcete přizpůsobit</span> a <span class="green">Zvolit přesnou cestu k souboru</span>.
 <li style="list-style-type: none">![wd6](https://faq.mople71.cz/img/cs/wd6.png)</li>
 - Nalezněte a zvolte požadovanou aplikaci, kterou chcete mitigovat.
 <li style="list-style-type: none">![wd7](https://faq.mople71.cz/img/cs/wd7.png)</li>
