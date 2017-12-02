@@ -32,35 +32,48 @@ Z bezpečnostního hlediska doporučuji [GNOME](https://www.gnome.org/), jeliko�
 <br><br><hr><br>
 
 ## Bezpečné nastavení OS:
-### Oddělení /tmp oddílu a jeho bezpečné připojení:
+### Oddělení /tmp oddílu během instalace a jeho bezpečné připojení:
 Malware se často spouští z dočasných složek. Zakázání exekuce spustitelných souborů v dočasných složkách (konkrétně /tmp) tedy dokáže vyřadit z provozu mnoho rodin malware.
 
 > Návod
 
 - Při instalaci OS otevřete možnosti rozdělení disků.
-- Zvolte možnost <span class="green">Ruční nastavení rozdělení</span> a v levém horním rohu klikněte na <span class="green">Hotovo</span>.
-- Rozklikněte nabídku **schémat rozdělení** a zvolte <span class="green">Standardní oddíl</span>.
-- Klikněte na tlačítko <span class="green">+</span> dole pro přidání oddílu.
-- Do kolonky velikost zadejte plnou velikost disku/velikost, kterou chcete vyhradit pro Fedoru, akorát od ní odečtěte <span class="blue">4 GiB</span>.
-<li style="list-style-type: none">![tmp1](https://faq.mople71.cz/img/cs/tmp1.png)</li>
-- Přípojný bod zvolte "<span class="red">/</span>" a klikněte na <span class="green">Přidat bod připojení</span>.
-- Klikněte na tlačítko <span class="green">+</span> dole pro přidání oddílu.
-- Přípojný bod zvolte "<span class="red">/tmp</span>".
-- Do požadované kapacity zadejte "<span class="blue">2 GiB</span>" a klikněte na <span class="green">Přidat bod připojení</span>.
-- Klikněte na tlačítko <span class="green">+</span> dole pro přidání oddílu.
-- Přípojný bod zvolte "<span class="red">swap</span>"
-- Do požadované kapacity zadejte "<span class="blue">2 GiB</span>" a klikněte na <span class="green">Přidat bod připojení</span>.
-- V levém horním rohu klikněte na Hotovo a následně na Přijmout změny.
+- V sekci **Konfigurace úložiště** zvolte možnost <span class="green">Pokročilé uživatelské nastavení (Blivet-GUI)</span> a v levém horním rohu klikněte na <span class="green">Hotovo</span>.
+- V levém sloupci zvolte disk, na který chcete OS instalovat a klikněte na tlačítko <span class="green">+</span> pro přidání oddílu.
+- Jako **typ zařízení** vyberte <span class="green">Oddíl</span>.
+- Do kolonky **velikost** zadejte <span class="blue">0,5 GiB</span>.
+- Jako **souborový systém** zvolte <span class="green">ext4</span>, jako **label** zadejte *boot*, **přípojný bod** nastavte na "<span class="red">/boot</span>" a následně klikněte na tlačítko <span class="green">Budiž</span>.
+<li style="list-style-type: none">![lnxtmp](https://faq.mople71.cz/img/cs/lnxtmp.png)</li>
+- V pravém sloupci kliknutím označte **volné místo** a klikněte na tlačítko <span class="green">+</span> pro přidání dalšího oddílu.
+- Jako **typ zařízení** vyberte <span class="green">Oddíl</span>.
+- Do kolonky **velikost** zadejte velikost, kterou chcete vyhradit pro OS, akorát od ní odečtěte <span class="blue">4 GiB</span>.
+- Jako **souborový systém** zvolte <span class="green">btrfs</span>, jako **přípojný bod** nastavte na "<span class="red">/</span>" a následně klikněte na tlačítko <span class="green">Budiž</span>.
+<li style="list-style-type: none">![lnxtmp1](https://faq.mople71.cz/img/cs/lnxtmp1.png)</li>
+- V pravém sloupci kliknutím označte **volné místo** a klikněte na tlačítko <span class="green">+</span> pro přidání dalšího oddílu.
+- Jako **typ zařízení** vyberte <span class="green">Oddíl</span>.
+- Do kolonky **velikost** zadejte <span class="blue">2,0 GiB</span> (budete muset přepnout jednotky na *GiB*).
+- Jako **souborový systém** zvolte <span class="green">ext4</span>, jako **label** zadejte *tmp*, **přípojný bod** nastavte na "<span class="red">/tmp</span>" a následně klikněte na tlačítko <span class="green">Budiž</span>.
+<li style="list-style-type: none">![lnxtmp2](https://faq.mople71.cz/img/cs/lnxtmp2.png)</li>
+- V pravém sloupci kliknutím označte **volné místo** a klikněte na tlačítko <span class="green">+</span> pro přidání dalšího oddílu.
+- Jako **typ zařízení** vyberte <span class="green">Oddíl</span>.
+- V kolonce **velikost** ponechte původní hodnotu (měla by být <span class="blue">2047 MiB</span>).
+- Jako **souborový systém** zvolte <span class="green">swap</span>, jako **label** zadejte *swap* a následně klikněte na tlačítko <span class="green">Budiž</span>.
+- V levém horním rohu klikněte na <span class="green">Hotovo</span>.
+- Rozložení disku potvrďte tlačítkem <span class="green">Přijmout změny</span>.
 - Pokračujte v instalaci.
 - Po úspěšné instalaci si otevřete <span class="green">Terminál</span>. Zadejte do něj následující příkaz:
 <li style="list-style-type: none"><pre><code>sudo -i
 dnf -y install nano
-gedit /etc/fstab</code></pre></li>
+nano -\$ /etc/fstab</code></pre></li>
 - V textovém souboru šipkami nalezněte řádek, který obsahuje "<span class="red">/tmp</span>". Řádek by měl vypadat následovně:
-<li style="list-style-type: none"><pre><code>UUID=... /tmp           ext4    defaults   1   2</code></pre></li>
+<li style="list-style-type: none"><pre><code>UUID=... /tmp           ext4    defaults     1 2</code></pre></li>
 - Na řádku nalezněte slovo "<span class="green">defaults</span>" a a za něj dopište "<span class="red">,nodev,noexec,nosuid</span>". Fstab tedy bude vypadat následovně:
-<li style="list-style-type: none">![fstab](https://faq.mople71.cz/img/en/fstab.png)</li>
-- V horním pravém rohu klikněte na tlačítko <span class="green">Uložit</span>. Aplikaci zavřete a následně zavřete i konzoli.
+<li style="list-style-type: none">![lnxfstab](https://faq.mople71.cz/img/en/lnxfstab.png)</li>
+- Stiskněte klávesovou zkratku <span class="green">Ctrl + X</span>. Pro uložení změn v sobouru stiskněte tlačítko <span class="red">Y</span> a následně <span class="green">Enter</span>.
+- Budete vráceni do konzole. Zadejte do ní následující příkazy:
+<li style="list-style-type: none"><pre><code>exit
+exit</code></pre></li>
+- Restartujte OS.
 
 <br>
 
@@ -91,18 +104,16 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](h
 
 - Otevřete si <span class="green">Nastavení</span> a klikněte na položku <span class="green">Síť</span>.
 - V seznamu zvolte připojení, které používáte (Drátové/WiFi), a otevřete jeho nastavení.
-<li style="list-style-type: none">![lnxnet](https://faq.mople71.cz/img/cs/lnxnet.png)</li>
-- Přepněte se do záložky IPv4 a vypněte možnost <span class="green">Automatické DNS</span>.
-- Do kolonky **Server** vepište:
-<li style="list-style-type: none"><pre><code>217.31.204.130</code></pre></li>
-- Klikněte na tlačítko <span class="green">+</span> pod kolonkou **Server**.
-- Objeví se další kolonka Server, do ní vepište:
-<li style="list-style-type: none"><pre><code>193.29.206.206</code></pre></li>
-<li style="list-style-type: none">![lnxnet1](https://faq.mople71.cz/img/cs/lnxnet1.png)</li>
-- Klikněte na tlačítko <span class="green">Použít</span> a Nastavení zavřete.
+<li style="list-style-type: none">![lnxnet](https://faq.mople71.cz/img/cs/lnxnet.png)
+![lnxnet1](https://faq.mople71.cz/img/cs/lnxnet1.png)</li>
+- Přepněte se do záložky IPv4 a v sekci **DNS** vypněte možnost <span class="green">Automatické</span>.
+- Do řádku vepište následující DNS servery:
+<li style="list-style-type: none"><pre><code>217.31.204.130,193.29.206.206</code></pre></li>
+<li style="list-style-type: none">![lnxnet2](https://faq.mople71.cz/img/cs/lnxnet2.png)</li>
+- Klikněte na tlačítko <span class="green">Použít</span> a nastavení zavřete.
 <li style="list-style-type: none">![idea](https://mople71.cz/img/sm/idea.gif) Další doporučené DNS servery:</li>
-<li style="list-style-type: none"><pre><code>Adguard DNS:         176.103.130.130, 176.103.130.131
-OpenDNS:             208.67.222.222, 208.67.220.220</code></pre></li>
+<li style="list-style-type: none"><pre><code>Adguard DNS:         176.103.130.130,176.103.130.131
+OpenDNS:             208.67.222.222,208.67.220.220</code></pre></li>
 
 <br><br><hr><br>
 
@@ -181,47 +192,51 @@ Nikdy před příkaz **flatpak** nedávejte <span class="red">sudo</span>. Flatp
 - Aplikaci poté můžete jednoduše odinstalovat:
 <li style="list-style-type: none"><pre><code>flatpak uninstall <název_aplikace></code></pre></li>
 
-> Instalace Flatpak verze LibreOffice
+#### Flathub:
 
-- Odinstalujte současnou verzi LibreOffice, máte-li nějakou nainstalovanou.
+Flathub je oficiální platforma pro distribuci Flatpak aplikací. Naleznete zde již vcelku obstojný počet aplikací, který se neustále rozšiřuje. Například **LibreOffice**, GIMP, Atom, Signal, Audacity, Corebird, Blender, **Steam**, GeoGebra, Inkscape, Warmux,...
+
+> Nastavení repozitáře Flathub
+
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
 <li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
-wget https://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffice.flatpak
-flatpak install --bundle LibreOffice.flatpak</code></pre></li>
-- Na všechny otázky odpovězte kladně.
-
-> Flathub
-
-Flathub je oficiální platforma pro distribuci Flatpak aplikací. Naleznete v ní vcelku malý počet aplikací, který se bude pouze zvyšovat. Například Audacity, Corebird, Blender, **Steam**, GeoGebra, Inkscape, Warmux,...
-
-#### Steam:
-- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
-<li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub com.valvesoftware.Steam</code></pre></li>
-- Bude-li vám v průběhu nabídnut výběr mezi *gnome* a *flathub* repozitáři, zvolte <span class="green">flathub</span>.
-- Spusťte Steam a doufejte, že vámi oblíbené hry jsou ve flatpaku funkční. Seznam otestovaných her naleznete [zde](https://github.com/flathub/com.valvesoftware.Steam/wiki/Tested-Games).
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</li>
 
 > Instalace GNOME aplikací
 
-GNOME poskytuje flatpak verzi pro většinu svých aplikací. Ve Flatpaku by správně měly být všechny aplikace ve výchozím nastavení, na to si ovšem budeme ještě muset chvíli počkat. (*Fedora 28?*)
+Ve Flatpaku by správně měly být všechny aplikace ve výchozím nastavení, na to si ovšem budeme ještě muset chvíli počkat. (*Fedora 28/29?*)
 
-Je důležité ve Flatpaku mít alespoň nejrizikovější aplikace &ndash; **Evince** (prohlížeč PDF) a **Eye of GNOME** (prohlížeč obrázků).
+Je vhodné mít ve Flatpaku alespoň rizikové aplikace jako **Evince** (prohlížeč PDF) nebo **Eye of GNOME** (prohlížeč obrázků). Také je dobrý nápad nainstalovat flatpak verzi GNOME prohlížeče **Epiphany**, který následně můžete odděleně používat pro citlivé věci jako bankovnictví apod.
 
-- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
-<li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome-apps.flatpakrepo
-flatpak update
-flatpak install flathub org.gnome.eog
-flatpak install gnome-apps org.gnome.Evince</code></pre></li>
-- Následně můžete odebrat původní verzi *Eye of GNOME*:
-<li style="list-style-type: none"><pre><code>sudo dnf remove eog</code></pre></li>
-- Původní verze *Evince* odebrat nelze, jelikož poskytuje náhledy ve správci souborů a také náhledy tisku. Lze ovšem jednoduše odebrat jeho ikonu ze seznamu aplikací:
+- Otevřete si <span class="green">Terminál</span>. Odinstalujte původní aplikace:
+<li style="list-style-type: none"><pre><code>sudo dnf -y remove eog</code></pre></li>
+- Aplikace *Evince* odebrat nelze, jelikož poskytuje náhledy ve správci souborů a také náhledy tisku. Lze ovšem jednoduše odebrat jeho ikonu ze seznamu aplikací:
 <li style="list-style-type: none"><pre><code>sudo rm /usr/share/applications/evince.desktop</code></pre></li>
-- Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Podrobnosti** a následně zvolte podkategorii <span class="green">Výchozí aplikace</span>.
+- Nainstalujte flatpak verze aplikací:
+<li style="list-style-type: none"><pre><code>flatpak install flathub org.gnome.Evince
+flatpak install flathub org.gnome.eog
+flatpak install flathub org.gnome.Epiphany</code></pre></li>
+- Nyní nastavte zpět aplikace jako výchozí. Otevřete si <span class="green">Nastavení</span>.
+- Rozklikněte kategorii **Podrobnosti** a následně zvolte podkategorii <span class="green">Výchozí aplikace</span>.
 - Nastavte Flatpak verzi *Eye of GNOME* aplikací jako výchozí:
 <li style="list-style-type: none">![lnxdapp](https://faq.mople71.cz/img/cs/lnxdapp.png)</li>
 - Nalezněte libovolný **PDF** soubor. Klikněte na něj pravým tlačítkem a zvolte <span class="green">Otevřít jinou aplikací</span>.
 - V seznamu zvolte Flatpak verzi **Prohlížeč dokumentů** a klikněte na tlačítko <span class="green">Vybrat</span>.
 <li style="list-style-type: none">![lnxdapp1](https://faq.mople71.cz/img/cs/lnxdapp1.png)</li>
+
+> Instalace LibreOffice
+
+- Otevřete si <span class="green">Terminál</span>. Odinstalujte původní LibreOffice, které jsou součástí standardní instalace:
+<li style="list-style-type: none"><pre><code>sudo dnf -y remove libreoffice*</code></pre></li>
+- Nainstalujte flatpak verzi LibreOffice:
+<li style="list-style-type: none"><pre><code>flatpak install flathub org.libreoffice.LibreOffice</code></pre></li>
+
+> Instalace Steam
+
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkaz:
+<li style="list-style-type: none"><pre><code>flatpak install flathub com.valvesoftware.Steam</code></pre></li>
+- Bude-li vám v průběhu nabídnut výběr mezi *gnome* a *flathub* repozitáři, zvolte <span class="green">flathub</span>.
+- Spusťte Steam a doufejte, že vaše oblíbené hry jsou ve flatpaku funkční. Seznam otestovaných her naleznete [zde](https://github.com/flathub/com.valvesoftware.Steam/wiki/Tested-Games).
 
 <br><br><hr><br>
 
