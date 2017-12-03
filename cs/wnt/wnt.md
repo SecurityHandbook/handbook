@@ -44,7 +44,7 @@ Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, je
 
 > Přidání účtu Správce (starší verze Windows):
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>control userpasswords</code></pre>
 a stiskněte **Enter**.</li>
 - Otevře se nastavení uživatelského účtu. Klikněte na možnost <span class="green">Spravovat jiný účet</span> a vytvořte Standardní účet s omezenými oprávněními, ze kterého můžete prohlížet internet apod.
@@ -61,7 +61,7 @@ Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <span class="
 
 > Kontrola nastavení aktualizací OS (starší verze Windows):
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>wuapp</code></pre>
 a stiskněte **Enter**.</li>
 - V levém panelu klikněte na tlačítko <span class="green">Změnit nastavení</span>.
@@ -77,7 +77,7 @@ User Account Control je důležitá součást bezpečnostního modelu OS od Wind
 
 > Nastavení UAC:
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>useraccountcontrolsettings</code></pre>
 a stiskněte **Enter**.</li>
 - Otevře se nastavení UAC. To změňte na nejvyšší možnost.
@@ -90,16 +90,16 @@ a stiskněte **Enter**.</li>
 
 ![idea](https://mople71.cz/img/sm/idea.gif) Pokročilejší si skript mohou upravit &ndash; je v něm několik zakomentovaných bezpečnostních opatření, které nemohou být aplikovány širokopásmově...
 
-![batch](https://mople71.cz/img/bat.png) **SafeSVC**:
+![batch](https://mople71.cz/img/icons/bat.png) **SafeSVC**:
 - Stáhněte si [SafeSVC](https://mople71.cz/safesvc.zip).
 - Uložte a obsah archivu vyextrahujte <span class="blue">na Plochu</span>.
-- Na skript jménem <span class="green">safesvc</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/admin.png) **Spustit jako správce**.
+- Na skript jménem <span class="green">safesvc</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/icons/admin.png) **Spustit jako správce**.
 - Nechte skript pracovat, na konci procesu vám řekne o souhlas k restartu OS.
 
 #### Bezpečné nastavení sítě:
 > Konfigurace síťového adaptéru + DNS
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>ncpa.cpl</code></pre>
 a stiskněte **Enter**.</li>
 - Otevře se seznam síťových adaptérů. Klikněte na první adaptér (obvykle ethernet) pravým tlačítkem a zvolte možnost <span class="green">Vlastnosti</span>.
@@ -134,7 +134,7 @@ OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
     - Automatické přehrávání vypněte.
     <li style="list-style-type: none">![autoplay](https://faq.mople71.cz/img/cs/autoplay.png)</li>
 - Vypněte Remote Assistance:
-    - Stiskněte kláv. zkratku ![win](https://mople71.cz/img/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+    - Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
     <li style="list-style-type: none"><pre><code>sysdm.cpl</code></pre>
 a stiskněte **Enter**.</li>
     - Zobrazí se Vlastnosti systému.

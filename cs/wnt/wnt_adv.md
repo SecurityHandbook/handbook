@@ -27,7 +27,7 @@ Co se týče blokování odchozí komunikace, *Windows Defender Firewall* tuto f
 
 - Otevřete si **hledání Windows**, do vyhledávacího pole zadejte:
 <li style="list-style-type: none"><pre><code>wf.msc</code></pre></li>
-- Na nalezenou položku klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/admin.png) **Spustit jako správce**.
+- Na nalezenou položku klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/icons/admin.png) **Spustit jako správce**.
 <li style="list-style-type: none">![wdf](https://faq.mople71.cz/img/cs/wdf.png)</li>
 - Otevře se pokročilé nastavení Windows Firewall. V prostředním sloupci zvolte možnost <span class="green">Vlastnosti brány Firewall v programu Windows Defender</span>.
 - V horním panelu si otevřete záložku **Privátní profil**. U položky **Odchozí připojení** zvolte možnost <span class="green">Blokovat</span>.
@@ -188,16 +188,16 @@ ACL můžeme využít následovně: můžeme zakázat spouštění spustitelnýc
 
 > Odebrání pravomoce exekuce souborů v uživatelských složkách
 
-- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
-<li style="list-style-type: none">![wx](https://mople71.cz/img/cs/wx.png)</li>
+- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
+<li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs//wx.png)</li>
 - Do příkazové řádky zadejte následující příkazy (cestu ke složce uživatele patřičně upravte):</li>
 <li style="list-style-type: none"><pre><code>icacls "C:\Users\(uživ. jméno)" /c /inheritance:d
 icacls "C:\Users\(uživ. jméno)" /c /deny Everyone:(OI)(CI)(X)</code></pre></li>
 
 > Opětovné přidání pravomoce exekuce souborů v uživatelské složce
 
-- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
-<li style="list-style-type: none">![wx](https://mople71.cz/img/cs/wx.png)</li>
+- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
+<li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs//wx.png)</li>
 - Do příkazové řádky zadejte následující příkaz (cestu ke složce patřičně upravte):</li>
 <li style="list-style-type: none"><pre><code>icacls "C:\Users\User\AppData\Local\Temp" /remove Everyone /t</code></pre></li>
 
@@ -251,8 +251,8 @@ Windows má vestavěný nástroj jménem <span class="green">icacls</span>, kter
 SHA-512: a22317552f90e896fb6f0e4a30f7834baf97a771211a37aca12f52d55ff8b85212d4ded5138ab66a70eaaa1193002b98158938bc17185ea94ccc9f7f4b8120f4</code></pre></li>
 - Aplikaci zkopírujte do umístění: <span class="blue">C:\Windows\System32</span>
 - Smažte *chml* z původní lokace.
-- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
-<li style="list-style-type: none">![wx](https://mople71.cz/img/cs/wx.png)</li>
+- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
+<li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs//wx.png)</li>
 - Do příkazové řádky zadejte následující příkaz pro validaci úspěšné instalace aplikace:
 <li style="list-style-type: none"><pre><code>chml /?</code></pre></li>
 - Pokud chml zareagoval svým výstupem, je správně nainstalován.
