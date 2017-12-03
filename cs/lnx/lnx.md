@@ -158,6 +158,22 @@ Sandbox nativně integrovaný v aplikaci je nejúčinnější možností impleme
 
 Externí sandbox není zdaleka tak účinný jako sandbox integrovaný v aplikaci a při porovnání ponechává větší prostor pro exploitaci, ale stále může být vcelku účinný a přirozeně je nesrovnatelně lepší, nežli žádný sandbox.
 
+Další možností virtualizace je **virtuální počítač**, kdy je místo aplikace oddělen celý OS. Tato metoda drasticky snižuje prostor pro exploitaci, snižuje ovšem také přívětivost, výkon a použitelnost. Jednoduché nastavení a používání virtuálního počítače umožňují následující aplikace:
+
+- GNOME Boxes
+- VirtualBox
+
+> Konfigurace GNOME Boxes
+
+- Stáhněte si obraz OS (ISO), který chcete virtualizovat.
+- Otevřete si aplikaci <span class="green">Boxy</span>.
+- V levém horním rohu aplikace klikněte na tlačítko <span class="green">Nový</span>.
+- Klikněte na <span class="green">Vybrat soubor</span> a nalezněte požadovaný ISO soubor.
+- Klikněte na tlačítko <span class="green">Přizpůsobit...</span>
+- Nastavte požadované množství alokované paměti (pro 64-bitový OS alespoň 3 GiB) a místa na disku.
+<li style="list-style-type: none">![gboxes](https://faq.mople71.cz/img/cs/gboxes.png)</li>
+- Přesuňte se zpět a v pravém horním rohu klikněte na <span class="green">Vytvořit</span>.
+
 <br>
 
 ### Flatpak:
@@ -241,7 +257,7 @@ flatpak install flathub org.gnome.Epiphany</code></pre></li>
 <br><br><hr><br>
 
 ## Zabezpečení internetového prohlížeče:
-Z bezpečnostního hlediska doporučuji prohlížeč <span class="green">Chromium</span>. Používá špičkovou implementaci sandboxu a jeho kód je na velmi dobré úrovni. Celkově je v ohledu bezpečnosti mnohem dále než **Mozilla Firefox**.
+Z bezpečnostního hlediska doporučuji prohlížeč <span class="green">Chromium</span>. Používá špičkovou implementaci sandboxu a jeho kód je na velmi dobré úrovni. Celkově je v ohledu bezpečnosti v současném stavu dále než **Mozilla Firefox**. Prohlížeč **Epiphany** není nijak zvlášť zaměřený na bezpečnost, nehodí se tedy ke každodennímu používání. Můžete jej ovšem použít jako oddělený prohlížeč pro citlivé věci jako bankovnictví apod.
 
 <!--- ./browsers.md -->
 

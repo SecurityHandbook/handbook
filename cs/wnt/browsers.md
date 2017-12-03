@@ -1,4 +1,4 @@
-<h3 id="win3.1" class="ch">![ch](https://mople71.cz/img/ch16.png) Google Chrome</h3>
+<h3 id="wnt3.1" class="ch">![ch](https://mople71.cz/img/ch16.png) Google Chrome</h3>
 
 > Bezpečnější nastavení
 
@@ -52,7 +52,7 @@ Google Chrome používá velmi dobrou implementaci sandboxu.
 
 <br>
 
-<h3 id="lin4.1" class="chm">![chm](https://mople71.cz/img/chm16.ico) Chromium:</h3>
+<h3 id="wnt3.2" class="chm">![chm](https://mople71.cz/img/chm16.ico) Chromium:</h3>
 
 Nechcete-li používat *Google Chrome*, doporučuji použít open-source Chromium, na kterém je *Google Chrome* založen. Chromium na Windows se bohužel neumí automaticky aktualizovat. Můžete ovšem použít komunitní open-source nástroj.
 
@@ -81,7 +81,7 @@ Použijte postup pro **Google Chrome** výše, je identický.
 
 <br>
 
-<h3 id="win3.2" class="ed">![edge](https://mople71.cz/img/edge16.png) Microsoft Edge</h3>
+<h3 id="wnt3.3" class="ed">![edge](https://mople71.cz/img/edge16.png) Microsoft Edge</h3>
 
 > Bezpečnější nastavení
 
@@ -114,7 +114,7 @@ Microsoft Edge používá špičkovou implementaci sandboxu.
 
 <br>
 
-<h3 id="win3.3" class="ie">![ie](https://mople71.cz/img/ie16.png) Internet Explorer</h3>
+<h3 id="wnt3.4" class="ie">![ie](https://mople71.cz/img/ie16.png) Internet Explorer</h3>
 
 > Bezpečnější nastavení
 
@@ -169,7 +169,7 @@ Prohlížeč je částečně oddělen od OS díky technologii **Protected Mode**
 
 <br>
 
-<h3 id="win3.4" class="ff">![ff](https://mople71.cz/img/ff.png) Mozilla Firefox</h3>
+<h3 id="wnt3.5" class="ff">![ff](https://mople71.cz/img/ff.png) Mozilla Firefox</h3>
 
 > Bezpečnější nastavení
 
@@ -313,4 +313,4 @@ a stiskněte **Enter**.</li>
 
 > Oddělení prohlížeče od OS a dat
 
-Sandbox Firefoxu je v aktivním vývoji.
+Sandbox Firefoxu je v aktivním vývoji a již nyní je v celkem použitelném stavu.

@@ -441,9 +441,9 @@ Užitečné aplikace, které nespadají ani pod jednu kategorii vrstev zabezpeč
 
 Všechny prohlížeče jsou po korektním nastavení relativně bezpečné, nejvíce také záleží na vás. Proto zde rozeberu pouze teoretické zabezpečení prohlížečů z hlediska mitigací exploitů apod. Níže v sekci naleznete návody na zabezpečení **Mozilla Firefox**, **Internet Explorer**, **Google Chrome** a **Microsoft Edge** kvůli jejich dominantnímu postavení.
 
-Ze zmíněných prohlížečů bych doporučil <span class="green">Microsoft Edge</span> a <span class="green">Chromium</span>, případně jeho proprietární variantu [Google Chrome](https://www.google.com/chrome/browser/index.html). S prohlížečem **Internet Explorer** není zásadní problém, na druhou stranu již není v aktivním vývoji.
+Ze zmíněných prohlížečů bych doporučil <span class="green">Microsoft Edge</span> a <span class="green">Chromium</span>, případně jeho proprietární variantu [Google Chrome](https://www.google.com/chrome/browser/index.html). S prohlížečem **Internet Explorer** není zásadní problém, na druhou stranu již není v aktivním vývoji, nepoužíval bych ho tedy pro každodenní účely.
 
-<span class="red">Mozilla Firefox</span>. Tento prohlížeč z hlediska zabezpečení nelze doporučit, v porovnání s ostatními zmíněnými prohlížeči výrazně zaostává. Má starý kód výrazně nižší kvality nežli Edge či Chromium a postrádá základní mitigace proti exploitům (v poslední době se toto snaží dohánět implementací sandboxu prohlížeče Chromium). Externí sandbox typu Sandboxie nedosahuje zdaleka takové kvality jako vestavěný sandbox.
+<span class="red">Mozilla Firefox</span>. Tento prohlížeč z hlediska zabezpečení v současném stavu nemohu doporučit, v porovnání s ostatními zmíněnými prohlížeči stále zaostává. Má starý kód výrazně nižší kvality nežli Edge či Chromium a postrádá moderní mitigace proti exploitům. Na druhou stranu tvrdě pracuje na nápravě.
 
 <span class="green">Chrome(ium)</span> používá vestavěný sandbox velmi dobré kvality. Také nabízí možnost využití vestavěného sandboxu ve Windows (AppContainer). Nové verze jsou kompilovány s **CFG**, což je významné plus.
 

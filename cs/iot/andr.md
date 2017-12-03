@@ -1,7 +1,7 @@
 # FAQ &ndash; OS Android
 Android je dominantní OS na mobilním trhu (>88% podíl) vyvíjený společností **Google, Inc.** Díky svému majoritnímu zastoupení se těší velké pozornosti hackerů.
 
-Android má robustní bezpečnostní model, který předpokládá, že aplikace třetích stran běžící v OS nejsou důvěryhodné. Hlavním bezpečnostním problémem je rozmanitost zařízení, z nichž většina modelů nedostává pravidelné bezpečnostní aktualizace a běží na zastaralých verzích OS.
+Android má robustní bezpečnostní model, který předpokládá, že aplikace třetích stran běžící v OS nejsou důvěryhodné. Hlavním bezpečnostním problémem je rozmanitost zařízení, z nichž většina modelů nedostává pravidelné bezpečnostní aktualizace a/nebo běží na zastaralých verzích OS.
 
 #### FAQ se dělí na několik sekcí:
 - bezpečnostní model OS (teorie)
@@ -21,34 +21,34 @@ Android má robustní vícevrstevný bezpečnostní model. Používá linuxové 
 > Trocha teorie o bezpečnostním modelu OS Android
 
 #### Jádro:
-Android je postaven na linuxovém jádru. Linuxové jádro Androidu z bezpečnostního hlediska nabízí slušný model oprávnění založený na uživatelích a uživatelských skupinách, izolaci procesů atd. V poslední době se vývojáři linuxového jádra začali více soustředit na zabezpečení samotného jádra, z čehož benefituje i Android.
+Android je postaven na linuxovém jádru. Linuxové jádro není nejbezpečnější jádro na trhu, Androidu ovšem z bezpečnostního hlediska nabízí slušný model oprávnění založený na uživatelích a uživatelských skupinách, izolaci procesů atd. V poslední době se vývojáři linuxového jádra začali více soustředit na zabezpečení samotného jádra, z čehož benefituje i OS Android.
 
 #### MAC:
-Android **Kitkat** a výše používá silně modifikovanou implementaci linuxového MAC *SELinux* &ndash; tzv. **SEAndroid**. SEAndroid výrazně snižuje prostor pro exploitaci. Také hraje roli v modelu oprávnění OS Android. Díky implementaci MAC nyní pouze velmi malá část kódu běží s plným root oprávněním.
+Android **Kitkat** a výše používá silně modifikovanou implementaci linuxového MAC *SELinux* &ndash; tzv. **SEAndroid**. SEAndroid výrazně snižuje prostor pro exploitaci. Také hraje roli v modelu oprávnění OS Android. Díky implementaci MAC nyní pouze velmi malá část kódu běží s plným root oprávněním. Výrazná zlepšení z pohledu MAC byla představena ve verzích **Lollipop** a **Oreo**.
 
 #### Aplikace:
-Android vyžaduje digitální podpis aplikací &ndash; nepodepsané aplikace nemohou být nainstalovány. Také implementuje několik bezpečnostních kontrolních bodů pro aplikace, díky kterým aplikaci vyhodnotí jako škodlivou a její instalaci odepře (tato funkce je závislá na službách Google). Ve výchozím nastavením lze také instalovat aplikace pouze z předinstalovaného obchodu aplikací &ndash; obvykle **Google Play**.
+Android vyžaduje digitální podpis aplikací &ndash; nepodepsané aplikace nemohou být nainstalovány. Také implementuje několik bezpečnostních kontrolních bodů pro aplikace, díky kterým aplikaci může vyhodnotit jako škodlivou a její instalaci odepře (tato funkce je závislá na službách Google). Ve výchozím nastavením lze také instalovat aplikace pouze z předinstalovaného obchodu aplikací &ndash; obvykle **Google Play**.
 
-Veškeré aplikace jsou uzavřeny v sandboxu (*IsolatedProcess*), tudíž každá aplikace je izolovaná od ostatních aplikací a OS. Android také podporuje použití **seccomp** sandboxu, který nabízí pokročilejší možnosti izolace a vyšší míru bezpečnosti. Je využíván například aplikací Google Chrome.
+Veškeré aplikace jsou uzavřeny v sandboxu (*IsolatedProcess*), tudíž každá aplikace je izolovaná od ostatních aplikací a OS. Android implementuje **seccomp** sandbox, který nabízí pokročilejší možnosti izolace a vyšší míru bezpečnosti. Interně je využíván například aplikací *Google Chrome*.
 
 Android **Marshmallow** a výše nabízí rozšířený model oprávnění &ndash; uživatel si může zvolit, k jakým komponentům/souborům bude mít daná aplikace přístup. Vestavěný správce oprávnění zatím není perfektní, jelikož neumožňuje nastavení všech důležitých oprávnění, ale funguje spolehlivě, což se nedá říci o správcích oprávnění třetích stran (např. XPrivacy).
 
-Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect*), zde nebudou rozebírány. Pro další informace o architektuře nahlédněte do návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/cs/iot/andr_vyber.php).
+Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect*), zde nebudou rozebírány.
 
 <br><br><hr><br>
 
 ## Obecné bezpečnostní rady:
-- používejte aktuální záplatovanou verzi Androidu, minimálně **Marshmallow**
+- používejte aktuální záplatovanou verzi Androidu, minimálně **Nougat**
 - nerootujte své zařízení &ndash; rootem rozbíjíte bezpečnostní model OS popsaný výše
 - neodemykejte bootloader svého zařízení a neflashujte potenciálně nebezpečné recovery oddíly (např. TWRP)
 - používejte stock Android s minimálním množstvím předinstalovaných aplikací od výrobce
-- neflashujte nebezpečné ROM se špatnou root implementací (např. CM / Lineage OS)
+- neflashujte nebezpečné ROM se špatnou root implementací (např. Lineage OS)
 - instalujte aplikace pouze z důvěryhodných zdrojů &ndash; Google Play, Amazon, F-Droid
 - neinstalujte aplikace vyžadující nesmyslná oprávnění (např. Flashlight+++ vyžadující přístup k SMS a kontaktům)
-- zvažte využívání open source aplikací (FOSS &ndash; free and open-source software
+- zvažte využívání open source aplikací (FOSS &ndash; free and open-source software)
 - nepřipojujte se k nedostatečné zabezpečeným sítím (např. v kavárně), zvažte použití VPN
 - všechny rizikové činnosti provádějte pod uživatelem hosta
-- šifrujte své zařízení, nezapomínejte na fyzické zabezpečení
+- šifrujte a zamykejte své zařízení, nezapomínejte na fyzické zabezpečení
 
 ### Bezpečnostní rady pro pokročilé:
 - nerootujte a už vůbec root oprávnění neposkytujte aplikacím, rozbíjíte tím velmi solidní bezpečnostní model OS a výrazně tím zvyšujete prostor pro exploitaci &ndash; škodlivá aplikace, která úspěšně provede exploitaci jiné aplikace běžící s root oprávněním, získává plná root oprávnění, která ve stock Androidu má pouze drobná část kódu
@@ -67,7 +67,7 @@ Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se d
 
 ### Bezpečnostní požadavky na zařízení s OS Android:
 - 64-bit architektura (x86/ARM)
-- jádro > 3.18 (ideálně 4.4)
+- jádro >= 3.18 (ideálně 4.4)
 - full verified boot (ideálně i pro custom ROM)
 - časté (ideálně měsíční) bezpečnostní aktualizace pro firmware a proprietární komponenty
 - garance bezpečnostních aktualizací po dobu morální životnosti modelu (min. 1 rok od koupi)
@@ -88,10 +88,10 @@ Android je bezpečně nastaven již v základu, není ovšem od věci podívat s
 - Otevřete si aplikaci <span class="green">Nastavení</span>.
 - Nalezněte podkategorii **Systém** a otevřete ji.
 - Klikněte na <span class="green">Informace o telefonu</span>.
-- Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **7.1.2** a **8.0**.
+- Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **8.0**.
 - Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
 <li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
-- Máte-li starší *verzi systému Android* než **7.1.1**, telefon není implicitně bezpečný &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* nežli **5. července 2017** (a k nápravě nedojde do konce září), telefon není bezpečný &ndash; můžete se dívat po náhradě.
+- Máte-li starší *verzi systému Android* než **8** a výrobce nepotvrdil aktualizaci, telefon je implicitně nebezpečný &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než 3 měsíce, telefon není bezpečný &ndash; můžete se dívat po náhradě.
 - Více informací o této problematice naleznete v návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/cs/iot/andr_vyber.php).
 - Aplikaci zavřete.
 
@@ -133,7 +133,7 @@ Obchod s aplikacemi velmi úzce souvisí s bezpečností, jelikož z něj stahuj
 ### Firewall:
 Firewall je velmi důležitá bezpečnostní vrstva OS, která poskytuje ochranu před síťovými útoky. Na veřejných WiFi připojeních je prakticky nutností.
 
-Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenabízí. Znásilnění VPN API (NetGuard, NoRoot Data Firewall) není nejlepší a nejspolehlivější implementace FW, ale alespoň nevyžaduje destrukci bezpečnostního modelu OS. Bohužel, vypadá to, že pouze velmi málo lidí má zájem implementovat tyto věci správně &ndash; přímo do OS.
+Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenabízí. Zneužití VPN API (NetGuard, NoRoot Data Firewall) není nejlepší a nejspolehlivější implementace FW, ale alespoň nevyžaduje destrukci bezpečnostního modelu OS. Bohužel, vypadá to, že pouze velmi málo lidí má zájem implementovat tyto věci správně &ndash; přímo do OS.
 
 #### FOSS:
 - integrovaný (CopperheadOS)
@@ -149,6 +149,7 @@ Blokování reklamy je z hlediska bezpečnosti esenciální kvůli četnému vý
 
 #### FOSS lokální VPN:
 - DNS66: https://github.com/julian-klode/dns66
+- Blokada: http://blokada.org/
 
 #### Proprietární lokální VPN:
 - Adguard: https://adguard.com/en/adguard-android/overview.html
@@ -230,16 +231,11 @@ Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na
 Seznam je řazen od nejbezpečnější po nejméně bezpečnou.
 
 - CopperheadOS: https://copperhead.co/android/
-- UnaOS*: https://unaos.com/os.html
-- Silent OS*: https://www.silentcircle.com/products-and-solutions/devices/silent-os/
-- Blackberry Android*: https://ca.blackberry.com/software/smartphones/android.html
 - čistý Android &ndash; Nexus / Pixel
-- Android předinstalovaný výrobcem bez zbytečného nízko-úrovňového bloatware
+- Android předinstalovaný výrobcem bez zbytečného nízkoúrovňového bloatware
 - Android předinstalovaný výrobcem s bloatware od výrobce
 - custom ROM bez root implementace
 - ...
-
-\* tyto ROM byly v době psaní FAQ postavené na **Marshmallow**, který je v ohledu bezpečnosti o úroveň níže než **Nougat**, po aktualizaci všech ROM na Nougat bude seznam 100% platný
 
 <br><br><hr>
 

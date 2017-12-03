@@ -1,4 +1,4 @@
-<h3 id="lin4.1" class="chm">![chm](https://mople71.cz/img/chm16.ico) Chromium:</h3>
+<h3 id="lnx4.1" class="chm">![chm](https://mople71.cz/img/chm16.ico) Chromium:</h3>
 
 > Bezpečnější nastavení
 
@@ -50,7 +50,28 @@ Chromium používá špičkovou implementaci sandboxu.
 
 <br>
 
-<h3 id="win3.4" class="ff">![ff](https://mople71.cz/img/ff.png) Mozilla Firefox</h3>
+<h3 id="lnx4.2" class="epiph">![epiph](https://mople71.cz/img/chm16.ico) Epiphany:</h3>
+
+>  Bezpečnější nastavení
+
+- Rozklikněte nabídku v kontextovém menu a otevřete <span class="green">Předvolby</span>.
+<li style="list-style-type: none">![epiph](https://faq.mople71.cz/img/cs/epiph.png)</li>
+- V sekci **Obsah WWW** zatrhněte možnost <span class="green">Blokovat vyskakovací okna</span> a <span style="color: #BF0000">odstraňte</span> zatržítko u možnosti <span class="green">Povolit zásuvné moduly</span>.
+<li style="list-style-type: none">![epiph1](https://faq.mople71.cz/img/cs/epiph1.png)</li>
+- Přesuňte se do záložky **Uchovaná data** a v sekci **Cookies** zvolte možnost <span class="green">Jen ze serverů, které navštěvujete</span>.
+<li style="list-style-type: none">![epiph2](https://faq.mople71.cz/img/cs/epiph2.png)</li>
+
+> Blokování reklamy
+
+Prohlížeč má vestavěný blokátor reklam se základními filtry.
+
+> Oddělení prohlížeče od OS a dat
+
+Epiphany podporuje flatpak sandbox. Lepší, nežli žádný.
+
+<br>
+
+<h3 id="lnx4.3" class="ff">![ff](https://mople71.cz/img/ff.png) Mozilla Firefox</h3>
 
 > Bezpečnější nastavení
 
@@ -192,4 +213,4 @@ a stiskněte **Enter**.</li>
 
 > Oddělení prohlížeče od OS a dat
 
-Sandbox Firefoxu je v aktivním vývoji. Také je zde možnost využití Flatpak sandboxu.
+Sandbox Firefoxu je v aktivním vývoji a již nyní je v celkem použitelném stavu. Využití Flatpak sandboxu proto není nutné ani rozumné.
