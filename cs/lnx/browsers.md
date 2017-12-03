@@ -50,7 +50,7 @@ Chromium používá špičkovou implementaci sandboxu.
 
 <br>
 
-<h3 id="lnx4.2" class="epiph">![epiph](https://mople71.cz/img/chm16.ico) Epiphany:</h3>
+<h3 id="lnx4.2" class="epiph">![epiph](https://mople71.cz/img/epiph.png) Epiphany:</h3>
 
 >  Bezpečnější nastavení
 
