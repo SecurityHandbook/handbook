@@ -3,6 +3,8 @@ Windows se jakožto nejrozšířenější desktopový OS těší velké pozornos
 Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (tzv. *layered config*) &ndash; pokud selže jedna vrstva, nastupuje druhá. Spousta běžných uživatelů spoléhá pouze na jednu tradiční vrstvu &ndash; antivir &ndash; což je z hlediska bezpečnosti tristní.
 Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na verzi a edici OS. V základním nastavení ovšem nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
 
+Podporovanou verzí Windows v následující sekci je **Windows 10 Fall Creators Update** jakožto nejnovější OS s podporou do roku 2025. Obsažené informací jsou platné i pro OS **Windows 8.1 Update 3**, jen je místy nutné upravit postup. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí (pokud již neskončil) cyklus rozšířené podpory. Majitelé starších verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro starší verze zde nebude uváděn.
+
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/wnt/adv.php#wnt).
 
 
@@ -486,7 +488,7 @@ Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nas
 - FW &ndash; **Windows Defender Firewall**
 - anti-exploit &ndash; **Windows Defender Exploit Guard** / **EMET**
 - anti-executable &ndash; **VoodooShield**, **NVT Anti-AutoExec**
-- virtualizace &ndash; **Sandboxie**
+- virtualizace &ndash; **nic**
 - internetový prohlížeč &ndash; **MS Edge** / **Google Chrome**
 - zabezpečení prohlížeče &ndash; **kompletní**
 - užitečné aplikace &ndash; **Unchecky**, **HashTab**

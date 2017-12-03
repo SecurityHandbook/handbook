@@ -18,23 +18,25 @@
 ## Základy bezpečnosti:
 - Pravidelně zálohujte data.
 - Nepoužívejte nelegální software &ndash; většina cracků běžně dostupná na internetu je infikována.
+- Před vykonáním libovolné akce 2x zkontrolujte její autenticitu.
+-	Veškerý SW stahujte výhradně ze stránek výrobce.
 - Používejte silná hesla dostatečně jednoduchá na zapamatování:
 <li style="list-style-type: none">![password_strength_sm](https://faq.mople71.cz/img/en/passwd.png)</li>
 - Používejte více hesel na různé služby, zvažte použití [klíčenky](#basics7).
 - Nepřipojujte se k neznámým/veřejným bezdrátovým sítím, případně přes ně neposílejte citlivé údaje a vyvarujte se nebezpečným protokolům (HTTP, FTP apod.). Ideálně použijte VPN.
 - Dávejte si pozor, kam jaké údaje zadáváte &ndash; s osobními údaji se dobře obchoduje.
 - Omezte citlivé informace na sociálních sítích a zkontrolujte, pro koho jsou jaké informace viditelné.
-- Nezapomeňte na fyzické zabezpečení PC &ndash; nastavte BIOS heslo, vypněte boot menu apod.
+- Nezapomeňte na fyzické zabezpečení zařízení &ndash; nastavte UEFI heslo, vypněte boot menu apod.
 
 <br>
 
 ## Bezpečný pohyb na internetu:
 - Používejte bezpečně nastavený prohlížeč (viz. níže).
+-	Zvažte využití odděleného prohlížeče pro citlivé věci (např. bankovnictví
 - Nenavštěvujte pochybné/neznámé stránky a nestahujte z nich žádné soubory.
 - Omezte navštěvování erotických stránek, velmi často jsou oběti malwaretisingu a obsahují škodlivý kód.
-- Nepoužívejte sociální tlačítka na žádných stránkách kromě stránek dané sociální sítě. Falšování sociálních tlačítek je triviální a velmi oblíbené.
+-	Nepoužívejte sociální tlačítka na žádných stránkách mimo stránky dané sociální sítě. Falšování sociálních tlačítek je triviální a velmi oblíbené.
 - Vyvarujte se tzv. **zkráceným odkazům** &ndash; např. http://bit.ly/tinyurlwiki apod. Mohou jednoduše maskovat nebezpečné odkazy.
-- Programy stahujte výhradně ze stránek výrobce, vyvarujte se stránkám třetích stran jako Stahuj/Slunečnice apod.
 - Vyvarujte se nebezpečnému síťovému SW jako <span class="red">Flash Player</span> a <span class="red">Java</span>, jeho exploitace je oblíbená a velmi častá. Případně jej alespoň zakažte ve vašem prohlížeči.
 - Otevírejte pouze důvěryhodné e-mailové přílohy.
 - Máte-li podezření na infikovaný soubor, vždy jej před otevřením otestujte pomocí např. [VirusTotal](https://www.virustotal.com/).
