@@ -16,7 +16,7 @@ Android má robustní bezpečnostní model, který předpokládá, že aplikace 
 ## Bezpečnostní model OS:
 Android má robustní vícevrstevný bezpečnostní model. Používá linuxové jádro, implementuje <abbr title="Mandatory Access Control">MAC</abbr> a mitigace proti *memory corruption* exploitům &ndash; Android je jediná linuxová distribuce, která neumožňuje spuštění *non-<abbr title="Position Independent Executable">PIE</abbr>* kódu. Každé aplikaci je přiřazen unikátní uživatelský ID, aplikace je uzavřena v sandboxovaném prostředí, nemůže operovat s žádnou jinou aplikací a je jí umožněno operovat pouze se soubory/komponenty OS, ke kterým dostane oprávnění od vlastníka zařízení.
 
-![Android Security Model](https://faq.mople71.cz/img/android.png)
+![Android Security Model](https://faq.mople71.cz/img/en/and.png)
 
 > Trocha teorie o bezpečnostním modelu OS Android
 
