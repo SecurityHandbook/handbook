@@ -189,7 +189,7 @@ ACL můžeme využít následovně: můžeme zakázat spouštění spustitelnýc
 > Odebrání pravomoce exekuce souborů v uživatelských složkách
 
 - Stiskněte kláv. zkratku <img src="https://mople71.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
-<li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs//wx.png)</li>
+<li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs/wx.png)</li>
 - Do příkazové řádky zadejte následující příkazy (cestu ke složce uživatele patřičně upravte):</li>
 <li style="list-style-type: none"><pre><code>icacls "C:\Users\(uživ. jméno)" /c /inheritance:d
 icacls "C:\Users\(uživ. jméno)" /c /deny Everyone:(OI)(CI)(X)</code></pre></li>
@@ -197,7 +197,7 @@ icacls "C:\Users\(uživ. jméno)" /c /deny Everyone:(OI)(CI)(X)</code></pre></li
 > Opětovné přidání pravomoce exekuce souborů v uživatelské složce
 
 - Stiskněte kláv. zkratku <img src="https://mople71.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
-<li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs//wx.png)</li>
+<li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs/wx.png)</li>
 - Do příkazové řádky zadejte následující příkaz (cestu ke složce patřičně upravte):</li>
 <li style="list-style-type: none"><pre><code>icacls "C:\Users\User\AppData\Local\Temp" /remove Everyone /t</code></pre></li>
 
@@ -252,7 +252,7 @@ SHA-512: a22317552f90e896fb6f0e4a30f7834baf97a771211a37aca12f52d55ff8b85212d4ded
 - Aplikaci zkopírujte do umístění: <span class="blue">C:\Windows\System32</span>
 - Smažte *chml* z původní lokace.
 - Stiskněte kláv. zkratku <img src="https://mople71.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
-<li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs//wx.png)</li>
+<li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs/wx.png)</li>
 - Do příkazové řádky zadejte následující příkaz pro validaci úspěšné instalace aplikace:
 <li style="list-style-type: none"><pre><code>chml /?</code></pre></li>
 - Pokud chml zareagoval svým výstupem, je správně nainstalován.
