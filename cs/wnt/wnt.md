@@ -165,7 +165,7 @@ Tradiční mechanismus antiviru funguje na bázi databáze (někdy také nazýv�
 Další problém antivirů je ten, že většina z nich je stará &ndash; mají starý kód který je tak komplexní, že jej vývojáři nebudou přepisovat, pouze záplatovat a nabalovat na něj nové funkce. Z tohoto důvodu je mnoho antivirů náchylných na hackerské postupy klidně 10 let staré.
 Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &ndash; natož jedinou &ndash; vrstvu zabezpečení. Antivirus ovšem stále má v bezpečnostní konfiguraci místo.
 
-<span class="green">Windows Defender</span> integrovaný ve **Windows 8.1 Update 3** a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vrstrvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a v OS mnohdy provádí v porovnání s integrovaným řešením naprosté šílenosti.
+<span class="green">Windows Defender</span> integrovaný ve **Windows 8.1 Update 3** a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vrstvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a v OS mnohdy provádí v porovnání s integrovaným řešením naprosté šílenosti.
 
 Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům (tzv. *Řízený přístup ke složkám*) a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci [anti-exploit](#win2.4)\).
 
@@ -253,7 +253,7 @@ Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno
 - Klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Training</span>.
 <li style="list-style-type: none">![vs](https://faq.mople71.cz/img/en/vs.png)</li>
 - Nyní se VoodooShield učí aplikace, které používáte, a povoluje je. V tréninkovém módu postupně spusťte všechny aplikace, které používáte. Ideální je v tréninkovém módu PC používat jeden den, aby VoodooShield vše stihl zapsat.
-- Po ukončení tréniku VoodooShield klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Always On</span>.
+- Po ukončení tréninku VoodooShield klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Always On</span>.
 <li style="list-style-type: none">![vs1](https://faq.mople71.cz/img/en/vs1.png)</li>
 
 ![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">To je vše, nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když budete chtít instalovat libovolnou aplikaci, zvolte **Disable/Install Mode**.</span>
@@ -363,7 +363,7 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 - Pro rychlou konfiguraci aplikace danou aplikaci nejprve spusťte.
 - Otevřete <span class="green">EMET GUI</span>.
 - V listu běžících procesů nalezněte danou aplikaci, klikněte na ni pravým tlačítkem a zvolte možnost <span class="green">Configure Process...</span>
-- Otevře se nastavení aplikací s nově přidanou zvolenou aplikací, pro kterou následně nakonfigurujte mitigace, a klikěnte na <span class="green">OK</span>.
+- Otevře se nastavení aplikací s nově přidanou zvolenou aplikací, pro kterou následně nakonfigurujte mitigace, a klikněte na <span class="green">OK</span>.
 <li style="list-style-type: none">![emet6](https://faq.mople71.cz/img/en/emet6.png)</li>
 
 <br>

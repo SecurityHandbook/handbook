@@ -69,7 +69,7 @@ nano -\$ /etc/fstab</code></pre></li>
 <li style="list-style-type: none"><pre><code>UUID=... /tmp           ext4    defaults     1 2</code></pre></li>
 - Na řádku nalezněte slovo "<span class="green">defaults</span>" a a za něj dopište "<span class="red">,nodev,noexec,nosuid</span>". Fstab tedy bude vypadat následovně:
 <li style="list-style-type: none">![lnxfstab](https://faq.mople71.cz/img/en/lnxfstab.png)</li>
-- Stiskněte klávesovou zkratku <span class="green">Ctrl + X</span>. Pro uložení změn v sobouru stiskněte tlačítko <span class="red">Y</span> a následně <span class="green">Enter</span>.
+- Stiskněte klávesovou zkratku <span class="green">Ctrl + X</span>. Pro uložení změn v souboru stiskněte tlačítko <span class="red">Y</span> a následně <span class="green">Enter</span>.
 - Budete vráceni do konzole. Zadejte do ní následující příkazy:
 <li style="list-style-type: none"><pre><code>exit
 exit</code></pre></li>
@@ -88,7 +88,7 @@ dnf -y install nano
 nano /etc/default/grub</code></pre></li>
 - Nalezněte řádek <span class="green">GRUB_CMDLINE_LINUX_DEFAULT</span> a před poslední uvozovku vepište "<span class="red"> ipv6.disable=1</span>". Řádek tedy bude vypadat nějak takto:
 <li style="list-style-type: none"><pre><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash ipv6.disable=1"</code></pre></li>
-- Stiskněte klávesovou zkratku <span class="green">Ctrl + X</span>. Pro uložení změn v sobouru stiskněte tlačítko <span class="red">Y</span> a následně <span class="green">Enter</span>.
+- Stiskněte klávesovou zkratku <span class="green">Ctrl + X</span>. Pro uložení změn v souboru stiskněte tlačítko <span class="red">Y</span> a následně <span class="green">Enter</span>.
 - Budete vráceni do konzole. Zadejte do ní následující příkazy:
 <li style="list-style-type: none"><pre><code>grub2-mkconfig -o /boot/grub2/grub.cfg
 exit

@@ -126,7 +126,7 @@ Obchod s aplikacemi velmi úzce souvisí s bezpečností, jelikož z něj stahuj
 - Google Play: https://play.google.com/
 - Amazon: https://www.amazon.com/appstore
 
-*Amazon* má zdlouhavý proces kontroly aplikací (jsou kontrolovány manuálně), proto má témeř vždy zastaralé verze aplikací, zvláště těch, které jsou často aktualizovány.
+*Amazon* má zdlouhavý proces kontroly aplikací (jsou kontrolovány manuálně), proto má téměř vždy zastaralé verze aplikací, zvláště těch, které jsou často aktualizovány.
 
 <br>
 

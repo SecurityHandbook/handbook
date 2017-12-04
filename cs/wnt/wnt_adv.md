@@ -36,7 +36,7 @@ Co se týče blokování odchozí komunikace, *Windows Defender Firewall* tuto f
 - Klikněte na <span class="green">OK</span>.
 <li style="list-style-type: none">![wdf2](https://faq.mople71.cz/img/cs/wdf2.png)</li>
 
-![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Nyní WDF blokuje veškerou odchozí kouminakci, která není na whitelistu. Dále je třeba nastavit whitelist.</span>
+![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Nyní WDF blokuje veškerou odchozí komunikaci, která není na whitelistu. Dále je třeba nastavit whitelist.</span>
 
 > Povolení odchozí komunikace pro všechny moderní aplikace
 
