@@ -230,7 +230,7 @@ Balíčky neobsahující zmíněné mitigace je tedy nutné zkompilovat ručně.
 - Restartujte OS a ověřte úspěšnou instalaci:
 <li style="list-style-type: none"><pre><code>which gcc</code></pre></li>
 
-> Kompilace aplikace s mitigacemi:
+> Kompilace aplikace s mitigacemi
 
 - Nainstalujte si **ASP** a **GPG**:
 <li style="list-style-type: none"><pre><code>sudo pacman -S asp gnupg
@@ -240,7 +240,7 @@ cd ./networkmanager</code></pre></li>
 <li style="list-style-type: none"><pre><code>makepkg -si</code></pre></li>
 - Po úspěšné instalaci restartujte OS.
 
-> Automatizace kompilace problémových balíčků:
+> Automatizace kompilace problémových balíčků
 
 - Použijte **srcpac**.
 <li style="list-style-type: none"><pre><code>sudo pacman -S srcpac
