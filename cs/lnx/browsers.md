@@ -1,4 +1,4 @@
-<h3 id="lnx4.1" class="chm">![chm](https://mople71.cz/img/icons/chm16.ico) Chromium:</h3>
+<h3 class="chm">![chm](https://mople71.cz/img/icons/chm16.ico) Chromium:</h3>
 
 > Bezpečnější nastavení
 
@@ -50,7 +50,7 @@ Chromium používá špičkovou implementaci sandboxu.
 
 <br>
 
-<h3 id="lnx4.2" class="epiph">![epiph](https://mople71.cz/img/icons/epiph.png) Epiphany:</h3>
+<h3 class="epiph">![epiph](https://mople71.cz/img/icons/epiph.png) Epiphany:</h3>
 
 >  Bezpečnější nastavení
 
@@ -71,7 +71,7 @@ Epiphany podporuje flatpak sandbox. Lepší, nežli žádný.
 
 <br>
 
-<h3 id="lnx4.3" class="ff">![ff](https://mople71.cz/img/icons/ff.png) Mozilla Firefox</h3>
+<h3 class="ff">![ff](https://mople71.cz/img/icons/ff.png) Mozilla Firefox</h3>
 
 > Bezpečnější nastavení
 

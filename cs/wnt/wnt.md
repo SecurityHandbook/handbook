@@ -24,7 +24,7 @@ OS Windows má dva typy uživatelských účtů: <span class="green">Standardní
 Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, jelikož má omezená oprávnění. Pokud se tedy do OS i přes všechna zdejší doporučení dostane malware, infikuje pouze uživatelský účet &ndash; na infikaci OS nemá potřebná oprávnění.
 <span class="red">Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá další opatření naprosto zbytečná.</span>
 
-> Přidání účtu Správce a změna stávajícího uživatele na Standardního:
+> Přidání účtu Správce a změna stávajícího uživatele na Standardního
 
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Rodina a jiní uživatelé</span>.
 - Klikněte na tlačítko <span class="green">Přidat do tohoto počítače někoho dalšího</span>.
@@ -42,7 +42,7 @@ Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, je
 - Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Standardní uživatel</span> a klikněte na <span class="green">OK</span>.
 - Přihlaste se zpět na svůj uživatelský účet.
 
-> Přidání účtu Správce (starší verze Windows):
+> Přidání účtu Správce (starší verze Windows)
 
 - Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>control userpasswords</code></pre>
@@ -59,7 +59,7 @@ Windows by se měly ve výchozím nastavení aktualizovat samy (v edici Home aut
 
 Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <span class="green">Heimdal Free</span>, která běží na pozadí a upozorní vás v případě neaktuálního SW, případně jej sama aktualizuje, automatické aktualizace ovšem teoreticky mohou způsobit problémy. Návod k *Heimdal Free* naleznete v sekci [Ostatní aplikace](#win2.6).
 
-> Kontrola nastavení aktualizací OS (starší verze Windows):
+> Kontrola nastavení aktualizací OS (starší verze Windows)
 
 - Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>wuapp</code></pre>
@@ -75,7 +75,7 @@ a stiskněte **Enter**.</li>
 
 User Account Control je důležitá součást bezpečnostního modelu OS od Windows Vista, kde se dočkala obrovské kritiky a ve Windows 7 proto byla v základním nastavení oslabena. Vypnutí UAC je z hlediska bezpečnosti sebevražda. Naopak je doporučeno nastavení UAC upravit na ještě přísnější úroveň.
 
-> Nastavení UAC:
+> Nastavení UAC
 
 - Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>useraccountcontrolsettings</code></pre>
