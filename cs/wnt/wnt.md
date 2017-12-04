@@ -57,7 +57,7 @@ Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často
 
 Windows by se měly ve výchozím nastavení aktualizovat samy (v edici Home automatické aktualizace dokonce nelze vypnout). Mnohé důležité aplikace (např. prohlížeče) se obvykle aktualizují automaticky.
 
-Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <span class="green">Heimdal Free</span>, která běží na pozadí a upozorní vás v případě neaktuálního SW, případně jej sama aktualizuje, automatické aktualizace ovšem teoreticky mohou způsobit problémy. Návod k *Heimdal Free* naleznete v sekci [Ostatní aplikace](#win2.6).
+Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <span class="green">Heimdal Free</span>, která běží na pozadí a upozorní vás v případě neaktuálního SW, případně jej sama aktualizuje, automatické aktualizace ovšem teoreticky mohou způsobit problémy. Návod k *Heimdal Free* naleznete v sekci [Ostatní aplikace](#wnt2.6).
 
 > Kontrola nastavení aktualizací OS (starší verze Windows)
 
@@ -167,7 +167,7 @@ Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &
 
 <span class="green">Windows Defender</span> integrovaný ve **Windows 8.1 Update 3** a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vrstvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a v OS mnohdy provádí v porovnání s integrovaným řešením naprosté šílenosti.
 
-Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům (tzv. *Řízený přístup ke složkám*) a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci [anti-exploit](#win2.4)\).
+Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům (tzv. *Řízený přístup ke složkám*) a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci [anti-exploit](#wnt2.4)\).
 
 > Ochrana před viry a hrozbami &ndash; nastavení
 
@@ -432,7 +432,7 @@ Užitečné aplikace, které nespadají ani pod jednu kategorii vrstev zabezpeč
 - Pro změnu nastavení &ndash; např. po instalaci nové aplikace, kterou *Heimdal Free* zatím nemonitoruje &ndash; otevřete **Heimdal Free** a přesuňte se do záložky <span class="green">Patching System</span>.
 <li style="list-style-type: none">![hf1](https://faq.mople71.cz/img/en/hf1.png)</li>
 <li style="list-style-type: none">![idea](https://mople71.cz/img/sm/idea.gif) Ačkoli je **Heimdal Free** velmi kvalitní aplikace, automatická aktualizace aplikací otevírá prostor problémům. Na druhou stranu se jedná o menší zlo v porovnání s neaktuálními aplikacemi. Pokud tedy takto konfigurujete OS člověku, který si s PC nerozumí a nebude aplikace aktualizovat, automatickou aktualizaci možná zapněte.</li>
-- Aplikaci povolte v **Řízeném přístupu ke složkám**, který následně opětovně povolte. Návod [zde](#win2.1).
+- Aplikaci povolte v **Řízeném přístupu ke složkám**, který následně opětovně povolte. Návod [zde](#wnt2.1).
 
 > Instalace a konfigurace HashTab
 

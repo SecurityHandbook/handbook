@@ -216,7 +216,7 @@ Flathub je oficiální platforma pro distribuci Flatpak aplikací. Naleznete zde
 
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
 <li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</li>
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</code></pre></li>
 
 > Instalace GNOME aplikací
 
