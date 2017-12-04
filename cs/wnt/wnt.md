@@ -273,7 +273,7 @@ Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno
 
 <br>
 
-<span class="red">NVT Anti-AutoExec</span> je drobná aplikace, která automaticky zabraňuje šíření USB malware. Stačí nainstalovat a ochrana je aktivní bez jakékoli interakce.
+<span class="red">NVT Anti-AutoExec</span> je drobná aplikace, která automaticky zabraňuje šíření USB malware. Stačí nainstalovat a ochrana je aktivní bez jakékoli interakce. Bohužel v současném stavu nefunguje s nejnovější verzí **Fall Creators Update**, snad brzy dojde k nápravě.
 
 <span class="red">AppGuard</span> je profesionální anti-executable určený převážně pro firemní sféru, je ovšem dostupný i v domácí verzi. Jeho nastavení je vcelku komplikované a přizpůsobené pro odborníky.
 
@@ -314,6 +314,20 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 - Upravte konfiguraci dle obrázku:
 <li style="list-style-type: none">![wd8](https://faq.mople71.cz/img/cs/wd8.png)</li>
 - Klikněte na tlačítko <span class="green">Použít</span>.
+
+> Konfigurace anti-exploit mitigací pro Microsoft Office
+
+- V horním panelu se přesuňte do záložky **Nastavení programu**.
+- Klikněte na <span class="green">Přidat program, který chcete přizpůsobit</span> a <span class="green">Přidat podle názvu aplikace</span>.
+- Do textového pole zadejte:
+<li style="list-style-type: none"><pre><code>WINWORD.EXE</code></pre></li>
+- Upravte konfiguraci dle obrázku:
+<li style="list-style-type: none">![wd8](https://faq.mople71.cz/img/cs/wd9.png)</li>
+- Klikněte na tlačítko <span class="green">Použít</span>.
+- Obdobný způsob proveďte pro aplikaci MS Excel:
+<li style="list-style-type: none"><pre><code>EXCEL.EXE</code></pre></li>
+- Obdobný způsob proveďte pro aplikaci MS PowerPoint:
+<li style="list-style-type: none"><pre><code>POWERPNT.EXE</code></pre></li>
 
 <br>
 
@@ -461,12 +475,12 @@ Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je 
 #### Bezplatná konfigurace pro BFU, který neumí anglicky (např. prarodiče):
 > Konfigurace
 
-- OS &ndash; Windows 10 Fall Creators Update
+- OS &ndash; Windows **10 Fall Creators Update**
 - bezpečné nastavení OS &ndash; **kompletní**
 - AV/M &ndash; **Windows Defender**
 - FW &ndash; **Windows Defender Firewall**
 - anti-exploit &ndash; **Windows Defender Exploit Guard**
-- anti-executable &ndash; **NVT Anti-AutoExec**
+- anti-executable &ndash; **NVT Anti-AutoExec** *(aktuálně nefunkční)*
 - virtualizace &ndash; **nic**
 - internetový prohlížeč &ndash; **MS Edge** / **Google Chrome**
 - zabezpečení prohlížeče &ndash; **kompletní**
@@ -482,12 +496,12 @@ Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nas
 #### Bezplatná konfigurace pro středně pokročilého, který umí anglicky:
 > Konfigurace
 
-- OS &ndash; Windows **10** / **8.1 Update 3**
+- OS &ndash; Windows **10 Fall Creators Update** / **8.1 Update 3**
 - bezpečné nastavení OS &ndash; **kompletní**
 - AV/M &ndash; **Windows Defender**
 - FW &ndash; **Windows Defender Firewall**
 - anti-exploit &ndash; **Windows Defender Exploit Guard** / **EMET**
-- anti-executable &ndash; **VoodooShield**, **NVT Anti-AutoExec**
+- anti-executable &ndash; **VoodooShield**, **NVT Anti-AutoExec** *(aktuálně nefunkční)*
 - virtualizace &ndash; **nic**
 - internetový prohlížeč &ndash; **MS Edge** / **Google Chrome**
 - zabezpečení prohlížeče &ndash; **kompletní**
