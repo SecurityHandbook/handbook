@@ -4,7 +4,7 @@ Android je dominantní OS na mobilním trhu (>88% podíl) vyvíjený společnost
 Android má robustní bezpečnostní model, který předpokládá, že aplikace třetích stran běžící v OS nejsou důvěryhodné. Hlavním bezpečnostním problémem je rozmanitost zařízení, z nichž většina modelů nedostává pravidelné bezpečnostní aktualizace a/nebo běží na zastaralých verzích OS.
 
 #### FAQ se dělí na několik sekcí:
-- bezpečnostní model OS (teorie)
+- bezpečnostní model OS
 - obecné bezpečnostní rady
 - bezpečná zařízení
 - bezpečné nastavení OS
@@ -31,7 +31,7 @@ Android vyžaduje digitální podpis aplikací &ndash; nepodepsané aplikace nem
 
 Veškeré aplikace jsou uzavřeny v sandboxu (*IsolatedProcess*), tudíž každá aplikace je izolovaná od ostatních aplikací a OS. Android implementuje **seccomp** sandbox, který nabízí pokročilejší možnosti izolace a vyšší míru bezpečnosti. Interně je využíván například aplikací *Google Chrome*.
 
-Android **Marshmallow** a výše nabízí rozšířený model oprávnění &ndash; uživatel si může zvolit, k jakým komponentům/souborům bude mít daná aplikace přístup. Vestavěný správce oprávnění zatím není perfektní, jelikož neumožňuje nastavení všech důležitých oprávnění, ale funguje spolehlivě, což se nedá říci o správcích oprávnění třetích stran (např. XPrivacy).
+Android **Marshmallow** a výše nabízí rozšířený model oprávnění &ndash; uživatel si může zvolit, k jakým komponentům/souborům bude mít daná aplikace přístup. Vestavěný správce oprávnění zatím není perfektní, jelikož neumožňuje nastavení všech důležitých oprávnění, ale funguje spolehlivě, což se nedá říci o správcích oprávnění třetích stran (např. *XPrivacy*).
 
 Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect*), zde nebudou rozebírány.
 
@@ -42,7 +42,7 @@ Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect
 - nerootujte své zařízení &ndash; rootem rozbíjíte bezpečnostní model OS popsaný výše
 - neodemykejte bootloader svého zařízení a neflashujte potenciálně nebezpečné recovery oddíly (např. TWRP)
 - používejte stock Android s minimálním množstvím předinstalovaných aplikací od výrobce
-- neflashujte nebezpečné ROM se špatnou root implementací (např. Lineage OS)
+- neflashujte nebezpečné ROM se špatnou root implementací (např. LineageOS)
 - instalujte aplikace pouze z důvěryhodných zdrojů &ndash; Google Play, Amazon, F-Droid
 - neinstalujte aplikace vyžadující nesmyslná oprávnění (např. Flashlight+++ vyžadující přístup k SMS a kontaktům)
 - zvažte využívání open source aplikací (FOSS &ndash; free and open-source software)
@@ -203,8 +203,6 @@ Mít bezpečnostní aplikaci, kterou lze obejít i bez exploitace, moc nemá smy
 
 ### Internetový prohlížeč:
 Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na Linuxu &ndash; tedy i na Androidu. Prohlížeče založené na Mozilla Firefox jsou několik let za Chromium v oblasti mitigací proti exploitům, na Androidu je situace ovšem méně kritická než na desktopových OS.
-
-![Bezpečnostní model Chromium](https://faq.mople71.cz/img/en/chmandr.png)
 
 #### FOSS:
 - Chromium: https://chromium.googlesource.com/chromium/src/+/master/docs/android_build_instructions.md
