@@ -51,10 +51,10 @@ Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect
 - šifrujte a zamykejte své zařízení, nezapomínejte na fyzické zabezpečení
 
 ### Bezpečnostní rady pro pokročilé:
-- nerootujte a už vůbec root oprávnění neposkytujte aplikacím, rozbíjíte tím velmi solidní bezpečnostní model OS a výrazně tím zvyšujete prostor pro exploitaci &ndash; škodlivá aplikace, která úspěšně provede exploitaci jiné aplikace běžící s root oprávněním, získává plná root oprávnění, která ve stock Androidu má pouze drobná část kódu
+- nerootujte a už vůbec root oprávnění neposkytujte aplikacím, rozbíjíte tím velmi solidní bezpečnostní model OS a výrazně tím zvyšujete prostor pro exploitaci &ndash; je-li aplikace běžící s root oprávněním exploitována, vaše zařízení je tzv. &bdquo;*pwned*&ldquo;
 - používejte aktualizované ROM bez bloatware od výrobce
-- neflashujte do ROM nic typu Open GApps &ndash; je to řádově méně bezpečné než správná integrace služeb Google výrobcem
-- kompilujte ROM (+ jádro) a aplikaci sami, ošklivá oprávnění aplikací poté můžete zakázat přímo v AndroidManifest.xml
+- neflashujte nic typu *Open GApps* &ndash; je to řádově méně bezpečné než správná integrace služeb Google výrobcem
+- kompilujte ROM (+ jádro) a aplikaci sami, ošklivá oprávnění aplikací následně můžete případně zakázat přímo v *AndroidManifest.xml*
 
 <br><br><hr><br>
 
@@ -69,29 +69,29 @@ Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se d
 - 64-bit architektura (x86/ARM)
 - jádro >= 3.18 (ideálně 4.4)
 - full verified boot (ideálně i pro custom ROM)
-- časté (ideálně měsíční) bezpečnostní aktualizace pro firmware a proprietární komponenty
+- podpora *Treble*
+- časté (měsíční, minimálně čtvrtletní) bezpečnostní aktualizace pro firmware a proprietární komponenty
 - garance bezpečnostních aktualizací po dobu morální životnosti modelu (min. 1 rok od koupi)
 
 <br>
 
 ### Zařízení s OS Android splňující bezpečnostní požadavky:
-
 Seznam zařízení naleznete v návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/cs/iot/andr_vyber.php#vyber2).
 
 <br><br><hr><br>
 
 ## Bezpečné nastavení OS:
-Android je bezpečně nastaven již v základu, není ovšem od věci podívat se do nastavení a zkontrolovat jej.
+Android je (většinou) bezpečně nastaven již v základu, není ovšem od věci podívat se do nastavení a zkontrolovat jej.
 
 > Kontrola aktuálního OS
 
 - Otevřete si aplikaci <span class="green">Nastavení</span>.
 - Nalezněte podkategorii **Systém** a otevřete ji.
 - Klikněte na <span class="green">Informace o telefonu</span>.
-- Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **8.0**.
+- Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **8.1**.
 - Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
 <li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
-- Máte-li starší *verzi systému Android* než **8** a výrobce nepotvrdil aktualizaci, telefon je implicitně nebezpečný &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než 3 měsíce, telefon není bezpečný &ndash; můžete se dívat po náhradě.
+- Máte-li starší *verzi systému Android* než **8.0** a výrobce nepotvrdil aktualizaci, zařízení je implicitně nebezpečné &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než **3 měsíce**, zařízení není bezpečné &ndash; můžete se dívat po náhradě.
 - Více informací o této problematice naleznete v návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/cs/iot/andr_vyber.php).
 - Aplikaci zavřete.
 
@@ -102,8 +102,8 @@ Pod uživatelem hosta můžete relativně bezpečně např. prohlížet rizikov�
 
 > Přepnutí se na účet hosta
 
-- Stáhněte dolů notifikační lištu dvěma prsty, případně ji rozšiřte kliknutím na šipku v pravém horním rohu.
-- V pravé horní liště klikněte na obrázek svého uživatelského účtu.
+- Stáhněte dolů notifikační lištu dvěma prsty, případně ji rozšiřte kliknutím na šipku v pravém dolním rohu.
+- V pravém dolním sloupci klikněte na obrázek svého uživatelského účtu.
 - Zobrazí se seznam uživatelských účtů. Klikněte na tlačítko <span class="green">Přidat hosta</span>.
 <li style="list-style-type: none">![andg](https://faq.mople71.cz/img/cs/andg.png)</li>
 - Budete automaticky přepnuti na uživatele hosta.
@@ -133,7 +133,7 @@ Obchod s aplikacemi velmi úzce souvisí s bezpečností, jelikož z něj stahuj
 ### Firewall:
 Firewall je velmi důležitá bezpečnostní vrstva OS, která poskytuje ochranu před síťovými útoky. Na veřejných WiFi připojeních je prakticky nutností.
 
-Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenabízí. Zneužití VPN API (NetGuard, NoRoot Data Firewall) není nejlepší a nejspolehlivější implementace FW, ale alespoň nevyžaduje destrukci bezpečnostního modelu OS. Bohužel, vypadá to, že pouze velmi málo lidí má zájem implementovat tyto věci správně &ndash; přímo do OS.
+Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenabízí. Zneužití *VPN API* (NetGuard, NoRoot Data Firewall) není nejlepší a nejspolehlivější implementace FW, ale alespoň nevyžaduje destrukci bezpečnostního modelu OS. Bohužel, vypadá to, že pouze velmi málo lidí má zájem implementovat tyto věci správně &ndash; přímo do OS.
 
 #### FOSS:
 - integrovaný (CopperheadOS)
@@ -162,10 +162,10 @@ Blokování reklamy je z hlediska bezpečnosti esenciální kvůli četnému vý
 - Brave: https://play.google.com/store/apps/details?id=com.brave.browser
 - atd.
 
-#### DNS:</h3>
+#### DNS:
 - Adguard DNS: https://adguard.com/en/adguard-dns/overview.html
 
-DNS je jednoduchý způsob blokace reklam, vyžaduje to ovšem důvěru v poskytovatele DNS. Použití prohlížeče blokující reklamy je nejlepším řešením. *Chrome(ium)* od verze 62 umožní nativně blokovat agresivní reklamy nesplňující podmínky. VPN je také dobrý způsob, ovšem implementace OpenVPN na Androidu není 100% ideální.
+DNS je jednoduchý způsob blokace reklam, vyžaduje to ovšem důvěru v poskytovatele DNS. VPN je také dobrý způsob, ovšem implementace *OpenVPN* na Androidu není 100% ideální. Použití prohlížeče blokující reklamy je nejlepším řešením. **Chrome(ium)** od verze 62 umožní nativně blokovat agresivní reklamy nesplňující podmínky.
 
 <br>
 
@@ -185,27 +185,17 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 <li style="list-style-type: none">![andapp1](https://faq.mople71.cz/img/cs/andapp1.png)</li>
 - Po dokončení nastavení oprávnění se z kategorie **Oprávnění aplikací** přesuňte o úroveň výše, rozklikněte **Rozšířená nastavení**.
 - Otevřete <span class="green">Přístup ke spec. aplikacím</span>.
-- Zde můžete nastavit např. které aplikace mají přístup k prémiovým SMS nebo mohou na pozadí neomezeně používat mobilní data.
+- Zde můžete nastavit např. které aplikace mají přístup k prémiovým SMS nebo mohou měnit nastavení systému.
 <li style="list-style-type: none">![andapp2](https://faq.mople71.cz/img/cs/andapp2.png)</li>
 - Aplikaci zavřete.
 
 <br>
 
-<span class="red">XPrivacy</span>. Když pominu, že všechno využívající Xposed je hack a není korektně implementováno do OS, XPrivacy je nefunkční a nedoporučená varianta.
-
-> Technické informace o XPrivacy
-
-XPrivacy primárně nahrazuje Java API novým kódem a často pouze kódem strany klienta &ndash; většina dat může být stále získána. Například skrývá sériové číslo v Java system property API ([link](https://github.com/M66B/XPrivacy/blob/master/src/biz/bokhorst/xprivacy/XSystemProperties.java)\). Sériové číslo je ovšem stále přístupné nativnímu kódu, případně Java kódu používajícímu jiné rozhraní pro přístup. Tímto způsobem evidentně (ne)funguje větší část XPrivacy.
-
-Mít bezpečnostní aplikaci, kterou lze obejít i bez exploitace, moc nemá smysl. ![wink](https://mople71.cz/img/sm/wink.gif)
-
-<br>
-
 ### Internetový prohlížeč:
-Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na Linuxu &ndash; tedy i na Androidu. Prohlížeče založené na Mozilla Firefox jsou několik let za Chromium v oblasti mitigací proti exploitům, na Androidu je situace ovšem méně kritická než na desktopových OS.
+Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na Linuxu &ndash; tedy i na Androidu. Prohlížeče založené na Mozilla Firefox jsou několik let za Chromium v oblasti mitigací proti exploitům.
 
 #### FOSS:
-- Chromium: https://chromium.googlesource.com/chromium/src/+/master/docs/android_build_instructions.md
+- Chromium: https://www.chromium.org/developers/how-tos/android-build-instructions
 - Brave: https://play.google.com/store/apps/details?id=com.brave.browser
 
 #### Proprietární:
