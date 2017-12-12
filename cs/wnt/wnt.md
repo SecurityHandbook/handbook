@@ -211,19 +211,19 @@ Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows D
 
 <br>
 
-Pro nižší verze Windows lze instalaci antiviru třetí strany pochopit, jelikož OS nemá integrované AV/M řešení.
+Ve verzi OS **Windows 8.1 Update 3** obsahuje <span class="green">Windows Defender</span> méně funkcí, stále se ovšem jedná o nejlepší volbu. Pro nižší verze OS poté existuje substituce Defenderu &ndash; [Microsoft Security Essentials](https://www.microsoft.com/cs-cz/download/details.aspx?id=5201).
 
-> Doporučené antiviry pro Windows 8 a níže
+> Ochrana před viry a hrozbami &ndash; nastavení (starší verze Windows)
 
-#### Bezplatná řešení:
-- [Sophos Home](https://www.sophos.com/en-us/lp/sophos-home.aspx) &ndash; anglické rozhraní, špičková administrace
-- [Microsoft Security Essentials](https://www.microsoft.com/cs-cz/download/details.aspx?id=5201) &ndash; české rozhraní, substituce Defenderu pro Windows 7 a Windows Vista
-- [Bitdefender Free](https://www.bitdefender.com/solutions/free.html) &ndash; anglické rozhraní
-
-#### Placená řešení:
-- [Emsisoft Anti-Malware](https://www.emsisoft.com/en/software/antimalware/) &ndash; anglické rozhraní
-- [F-Secure](https://www.f-secure.com/en/web/home_global/safe?icid=1526) &ndash; české rozhraní
-- [Bitdefender](https://www.bitdefender.com/solutions/internet-security.html) &ndash; anglické rozhraní, existuje i [česká verze](https://www.bitdef.cz/)
+- Otevřete si <span class="green">Windows Defender</span>.
+- Přesuňte se do záložky **Nastavení** a zvolte podkategorii <span class="green">Ochrana v reálném čase</span>.
+- Zkontrolujte zatržítko u volby <span class="green">Zapnout ochranu v reálném čase</span>.
+- Přesuňte se do podkategorie **Upřesnit**. Zkontrolujte konfiguraci ochrany a případně opravte:
+<li style="list-style-type: none">![wdleg](https://faq.mople71.cz/img/cs/wdleg.png)</li>
+- Přesuňte se do podkategorie **Komunita MAPS**. Zkontrolujte konfiguraci ochrany a případně opravte:
+<li style="list-style-type: none">![wdleg1](https://faq.mople71.cz/img/cs/wdleg1.png)</li>
+- Přesuňte se do podkategorie **Správce** a zkontrolujte zatržítko u volby <span class="green">Zapnout tuto aplikaci</span>.
+- Případné změny uložte a aplikaci zavřete.
 
 <br>
 
