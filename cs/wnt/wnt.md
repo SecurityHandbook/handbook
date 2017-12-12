@@ -44,10 +44,21 @@ Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, je
 
 > Přidání účtu Správce (starší verze Windows)
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
-<li style="list-style-type: none"><pre><code>control userpasswords</code></pre>
-a stiskněte **Enter**.</li>
-- Otevře se nastavení uživatelského účtu. Klikněte na možnost <span class="green">Spravovat jiný účet</span> a vytvořte Standardní účet s omezenými oprávněními, ze kterého můžete prohlížet internet apod.
+- Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Jiné účty</span>.
+- Zvolte možnost <span class="green">Přidat účet</span>.
+- Otevře se dialog pro přidání nového uživatele. V pravém dolním rohu klikněte na <span class="green">Přihlásit se bez účtu Microsoft</span>.
+- Klikněte na tlačítko <span class="green">Místní účet</span>.
+- Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné zapamatovatelné heslo.
+- Potvrďte přidání uživatele (<span class="green">Dokončit</span>).
+- V seznamu dalších účtů se zobrazí účet **Admin**. Klikněte na něj a následně zvolte <span class="green">Upravit</span>.
+<li style="list-style-type: none">![wntusleg](https://faq.mople71.cz/img/cs/wntusleg.png)</li>
+- Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Správce</span> a klikněte na <span class="green">OK</span>.
+<li style="list-style-type: none">![wntusleg1](https://faq.mople71.cz/img/cs/wntusleg1.png)</li>
+- Odhlaste se z vašeho účtu a přihlaste se jako **Admin**.
+- Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Jiné účty</span>.
+- V seznamu dalších účtů nalezněte svůj účet, klikněte na něj a následně zvolte <span class="green">Upravit</span>.
+- Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Standardní uživatel</span> a klikněte na <span class="green">OK</span>.
+- Přihlaste se zpět na svůj uživatelský účet.
 
 <br>
 
@@ -130,7 +141,6 @@ OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
 - Vypněte Usnadnění přístupu na přihlašovací obrazovce &ndash; součást skriptu **SafeSVC**.
 - Vypněte AutoPlay:
     - Otevřete si <span class="green">Nastavení.</span> Rozklikněte kategorii **Zařízení** a následně zvolte podkategorii <span class="green">Automatické přehrávání</span>.
-    - Klikněte na tlačítko <span class="green">Přidat do tohoto počítače někoho dalšího</span>.
     - Automatické přehrávání vypněte.
     <li style="list-style-type: none">![autoplay](https://faq.mople71.cz/img/cs/autoplay.png)</li>
 - Vypněte Remote Assistance:
@@ -335,36 +345,30 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 
 > Instalace a konfigurace EMET (starší verze Windows)
 
-- Stáhněte si nejnovější verzi [EMET](https://technet.microsoft.com/en-us/security/jj653751).
-- Aplikaci nainstalujte, licenci odsouhlaste tlačítkem <span class="green">I Agree</span>.
+- Stáhněte si nejnovější verzi [EMET](https://aka.ms/emetdownload).
+- Aplikaci nainstalujte.
 - V průběhu instalace se zobrazí okno se základním nastavením aplikace. Zvolte možnost <span class="green">Use Recommended Settings</span> a klikněte na <span class="green">Finish</span>.
 <li style="list-style-type: none">![emet](https://faq.mople71.cz/img/en/emet.png)</li>
-- Po dokončení instalace otevřete EMET dvojitým poklepáním na jeho ikonu na hlavním panelu.
-<li style="list-style-type: none">![emet1](https://faq.mople71.cz/img/en/emettray.png)</li>
-
-![idea](https://mople71.cz/img/sm/idea.gif) <span class="green">Nyní máte nainstalovaný EMET v základní konfiguraci. Dále musíte nastavit ochranu pro všechny rizikové aplikace.</span>
-
+- Otevřete si <span class="green">EMET GUI</span>.
 - V horním menu EMET klikněte na tlačítko <span class="green">Apps</span>.
-- Zobrazí se seznam aplikací chráněných EMETem, pro přidání nové klikněte na tlačítko <span class="green">Add Application</span>.
+- Zobrazí se seznam mitigovaných aplikací, pro přidání nové klikněte na tlačítko <span class="green">Add Application</span>.
+<li style="list-style-type: none">![emet1](https://faq.mople71.cz/img/en/emet1.png)</li>
+- Nalezněte a zvolte požadovanou aplikaci, kterou chcete mitigovat.
+<li style="list-style-type: none">![wd7](https://faq.mople71.cz/img/cs/wd7.png)</li>
+- Upravte konfiguraci dle obrázku:
 <li style="list-style-type: none">![emet2](https://faq.mople71.cz/img/en/emet2.png)</li>
-- Otevře se okno průzkumníka Windows, v něm nalezněte aplikaci, kterou chcete mitigovat pomocí EMET a potvrďte ji. Tento proces opakujte pro všechny aplikace.
-
-![idea](https://mople71.cz/img/sm/idea.gif) Jaké aplikace mitigovat? Všechny internetové prohlížeče, PDF čtečky, aplikace pracující s archivy (7-zip apod.), přehrávače hudby (VLC), LibreOffice, Steam atd. Veškerý rizikový SW třetí strany. Pokud se ve složce aplikace nachází více spustitelných souborů, mitigujte všechny (kromě odinstalátorů).
-
-![emet3](https://faq.mople71.cz/img/cs/emet3.png)
-- Pro více rizikovější síťový SW &ndash; webové prohlížeče, Java, Flash, Steam apod. &ndash; zaškrtněte v seznamu <span style="color: #008000">všechny</span> možnosti mitigace kromě <span class="green">Fonts</span>.
-- Pro méně rizikový SW nemusíte zatrhávat mitigace <span class="green">EAF+</span> a <span class="green">ASR</span>. ASR může způsobovat pády aplikací.
-<li style="list-style-type: none">![emet4](https://faq.mople71.cz/img/en/emet4.png)</li>
 - Po dokončení nastavení všech aplikací zkontrolujte nastavení mitigací, případně opravte dle obrázku:
-<li style="list-style-type: none">![emet5](https://faq.mople71.cz/img/en/emet5.png)</li>
+<li style="list-style-type: none">![emet3](https://faq.mople71.cz/img/en/emet3.png)</li>
 - Klikněte na <span class="green">OK</span> a zavřete EMET spolu s vyskakovacím oknem, které se objeví.
+
+![idea](https://mople71.cz/img/sm/idea.gif) Jaké další aplikace mitigovat? Veškerý rizikový SW třetí strany &ndash; např. VLC, 7-Zip, PDF prohlížeč, Steam apod.
 
 ![idea](https://mople71.cz/img/sm/idea.gif) **TIP pro rychlou konfiguraci aplikace:**
 - Pro rychlou konfiguraci aplikace danou aplikaci nejprve spusťte.
-- Otevřete <span class="green">EMET GUI</span>.
+- Otevřete si <span class="green">EMET GUI</span>.
 - V listu běžících procesů nalezněte danou aplikaci, klikněte na ni pravým tlačítkem a zvolte možnost <span class="green">Configure Process...</span>
 - Otevře se nastavení aplikací s nově přidanou zvolenou aplikací, pro kterou následně nakonfigurujte mitigace, a klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![emet6](https://faq.mople71.cz/img/en/emet6.png)</li>
+<li style="list-style-type: none">![emet4](https://faq.mople71.cz/img/en/emet4.png)</li>
 
 <br>
 
