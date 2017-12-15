@@ -148,7 +148,7 @@ OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
     <li style="list-style-type: none"><pre><code>sysdm.cpl</code></pre>
 a stiskněte **Enter**.</li>
     - Zobrazí se Vlastnosti systému.
-    - Přesuňte se do záložky **Vzdálený přístup** a odstraňte zatržítko u položky <span class="green">Povolit připojení vzdálené pomoci k tomuto počítači</span>.
+    - Přesuňte se do záložky **Vzdálený přístup** a <span style="color: #BF0000">odstraňte</span> zatržítko u položky <span class="green">Povolit připojení vzdálené pomoci k tomuto počítači</span>.
     <li style="list-style-type: none">![sysdm](https://faq.mople71.cz/img/cs/sysdm.png)</li>
     - Klikněte na <span class="green">OK</span>.
 
