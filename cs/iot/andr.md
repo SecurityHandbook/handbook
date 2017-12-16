@@ -24,7 +24,7 @@ Android má robustní vícevrstevný bezpečnostní model. Používá linuxové 
 Android je postaven na linuxovém jádru. Linuxové jádro není nejbezpečnější jádro na trhu, Androidu ovšem z bezpečnostního hlediska nabízí slušný model oprávnění založený na uživatelích a uživatelských skupinách, izolaci procesů atd. V poslední době se vývojáři linuxového jádra začali více soustředit na zabezpečení samotného jádra, z čehož benefituje i OS Android.
 
 #### MAC:
-Android **Kitkat** a výše používá silně modifikovanou implementaci linuxového MAC *SELinux* &ndash; tzv. **SEAndroid**. SEAndroid výrazně snižuje prostor pro exploitaci. Také hraje roli v modelu oprávnění OS Android. Díky implementaci MAC nyní pouze velmi malá část kódu běží s plným root oprávněním. Výrazná zlepšení z pohledu MAC byla představena ve verzích **Lollipop** a **Oreo**.
+Android **Kitkat** a výše používá silně modifikovanou implementaci linuxového MAC **SELinux** &ndash; tzv. *SEAndroid*. SEAndroid výrazně snižuje prostor pro exploitaci. Také hraje roli v modelu oprávnění OS Android. Díky implementaci MAC nyní pouze velmi malá část kódu běží s plným root oprávněním. Výrazná zlepšení z pohledu MAC byla představena ve verzích **Lollipop** a **Oreo**.
 
 #### Aplikace:
 Android vyžaduje digitální podpis aplikací &ndash; nepodepsané aplikace nemohou být nainstalovány. Také implementuje několik bezpečnostních kontrolních bodů pro aplikace, díky kterým aplikaci může vyhodnotit jako škodlivou a její instalaci odepře (tato funkce je závislá na službách Google). Ve výchozím nastavením lze také instalovat aplikace pouze z předinstalovaného obchodu aplikací &ndash; obvykle **Google Play**.
@@ -41,7 +41,6 @@ Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect
 - používejte aktuální záplatovanou verzi Androidu, minimálně **Nougat**
 - nerootujte své zařízení &ndash; rootem rozbíjíte bezpečnostní model OS popsaný výše
 - neodemykejte bootloader svého zařízení a neflashujte potenciálně nebezpečné recovery oddíly (např. TWRP)
-- používejte stock Android s minimálním množstvím předinstalovaných aplikací od výrobce
 - neflashujte nebezpečné ROM se špatnou root implementací (např. LineageOS)
 - instalujte aplikace pouze z důvěryhodných zdrojů &ndash; Google Play, Amazon, F-Droid
 - neinstalujte aplikace vyžadující nesmyslná oprávnění (např. Flashlight+++ vyžadující přístup k SMS a kontaktům)
@@ -71,7 +70,7 @@ Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se d
 - full verified boot (ideálně i pro custom ROM)
 - podpora *Treble*
 - časté (měsíční, minimálně čtvrtletní) bezpečnostní aktualizace pro firmware a proprietární komponenty
-- garance bezpečnostních aktualizací po dobu morální životnosti modelu (min. 1 rok od koupi)
+- garance bezpečnostních aktualizací po dobu morální životnosti modelu (jak dlouho chcete zařízení používat)
 
 <br>
 
@@ -83,9 +82,18 @@ Seznam zařízení naleznete v návodu [Výběr telefonu &ndash; OS Android](htt
 ## Bezpečné nastavení OS:
 Android je (většinou) bezpečně nastaven již v základu, není ovšem od věci podívat se do nastavení a zkontrolovat jej.
 
+> Kontrola nastavení zabezpečení
+
+- Otevřete si <span class="green">Nastavení</span>.
+- Nalezněte podkategorii **Zabezpečení a poloha** a otevřete ji.
+- Zkontrolujte bezpečnou konfiguraci **Zámku obrazovky** &ndash; <span class="green">PIN</span> nebo <span class="green">Heslo</span>
+- Zkontrolujte **Administrátorské aplikace v zařízení**. Neměly by zde být žádné aplikace kromě aplikací Google, pokud je používáte.
+- Zkontrolujte **Šifrování** vašeho zařízení.
+- Aplikaci zavřete.
+
 > Kontrola aktuálního OS
 
-- Otevřete si aplikaci <span class="green">Nastavení</span>.
+- Otevřete si <span class="green">Nastavení</span>.
 - Nalezněte podkategorii **Systém** a otevřete ji.
 - Klikněte na <span class="green">Informace o telefonu</span>.
 - Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **8.1**.
@@ -177,7 +185,7 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 
 > Využití vestavěného správce oprávnění
 
-- Otevřete si aplikaci <span class="green">Nastavení</span>.
+- Otevřete si <span class="green">Nastavení</span>.
 - Nalezněte podkategorii **Aplikace a oznámení** a otevřete ji.
 - Klikněte na <span class="green">Oprávnění aplikací</span>.
 - Otevřete postupně všechny kategorie a zakažte všem aplikacím nepotřebný přístup.
@@ -203,7 +211,7 @@ Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na
 
 > Omezení JavaScriptu v Google Chrome / Chromium
 
-- Otevřete si aplikaci <span class="green">Google Chrome</span> / <span class="green">Chromium</span>.
+- Otevřete si <span class="green">Google Chrome</span> / <span class="green">Chromium</span>.
 - Kliknutím na tři tečky v horním pravém rohu otevřete boční panel a klikněte na tlačítko <span class="green">Nastavení</span>.
 - Klikněte na **Nastavení webu** a Otevřete podkategorii <span class="green">JavaScript</span>.
 - Zablokujte spouštění JS.
