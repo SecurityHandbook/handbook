@@ -31,12 +31,12 @@
 <br>
 
 ## Bezpečný pohyb na internetu:
-- Používejte bezpečně nastavený prohlížeč (viz. níže).
--	Zvažte využití odděleného prohlížeče pro citlivé věci (např. bankovnictví
+- Používejte bezpečně nastavený prohlížeč (viz. ostatní kapitoly FAQ).
+-	Zvažte využití odděleného prohlížeče pro citlivé věci (např. bankovnictví).
 - Nenavštěvujte pochybné/neznámé stránky a nestahujte z nich žádné soubory.
 - Omezte navštěvování erotických stránek, velmi často jsou oběti malwaretisingu a obsahují škodlivý kód.
 -	Nepoužívejte sociální tlačítka na žádných stránkách mimo stránky dané sociální sítě. Falšování sociálních tlačítek je triviální a velmi oblíbené.
-- Vyvarujte se tzv. **zkráceným odkazům** &ndash; např. http://bit.ly/tinyurlwiki apod. Mohou jednoduše maskovat nebezpečné odkazy.
+- Vyvarujte se tzv. **zkráceným odkazům** &ndash; např. https://bit.ly/tinyurlwiki apod. Mohou jednoduše maskovat nebezpečné odkazy.
 - Vyvarujte se nebezpečnému síťovému SW jako <span class="red">Flash Player</span> a <span class="red">Java</span>, jeho exploitace je oblíbená a velmi častá. Případně jej alespoň zakažte ve vašem prohlížeči.
 - Otevírejte pouze důvěryhodné e-mailové přílohy.
 - Máte-li podezření na infikovaný soubor, vždy jej před otevřením otestujte pomocí např. [VirusTotal](https://www.virustotal.com/).
