@@ -2,29 +2,29 @@
 
 ## Glossary:
 - <span class="green">hacker</span> &ndash; person (mis)using their knowledge (eg. in computer security area) for personal, usually illegal, profit; this definition was originally taken from the word *cracker*
-- <span class="green">malware</span> &ndash; generic term for malicious software further organized into many (more or less malicious) subgroups
-- **adware** &ndash; malware containing ads and showing them to the user
+- <span class="green">malware</span> &ndash; generic term for malicious software further split into many (more or less malicious) categories
+- **adware** &ndash; malware category; SW containing ads and showing them to the user
 - **bundleware** &ndash; superfluous (not necessarily malicious) software bundled to other software
-- **foistware** &ndash; software installed without user's knowledge, usually trying to convince users that the OS isn't properly working and offers remedy for a price
-- **rootkit** &ndash; code that hides presence of malware on the device and aggravates its detection
-- **exploit** &ndash; code taking advantage of a vulnerability in SW (including OS) to perform a specific action
+- **foistware** &ndash; SW installed without user's knowledge designed to obtain money from user, usually by prompting that the OS is infected/broken and offering remedy for a price
+- **rootkit** &ndash; code designed to hide presence of other malware on the device and aggravate their detection
+- <span class="green">exploit</span> &ndash; code taking advantage of a vulnerability in SW (including OS) in order to perform a specific action
 - **zero-day (0-day)** &ndash; vulnerability exploited at the day of its disclosure or prior to it
-- **APT** &ndash; &bdquo;Advanced Persistent Threat&ldquo;; advanced threat usually tailored for a specific target, common users usually don't bump into these
-- <span class="green">payload</span> &ndash; core piece of malware code that performs the crucial action
+- **APT** &ndash; &bdquo;Advanced Persistent Threat&ldquo;; advanced threat usually tailored for a specific target, common users don't bump into these
+- <span class="green">payload</span> &ndash; core part of malware code that's responsible for the crucial malicious action
 
 <br>
 
 ## Security Basics:
 - Periodically backup your data.
-- Don't use illegal software &ndash; the majority of cracks found on internet is infected
-- Prior to any action, double check its autencity.
+- Don't use illegal software &ndash; most cracks found on internet are infected
+- Prior to any action, double-check its autencity.
 - Download SW only from its official website.
 - Use strong passwords that are easy to remember:
 <li style="list-style-type: none">![password_strength_sm](https://faq.mople71.cz/img/en/passwd.png)</li>
 - Use different passwords for different services, consider using a [keyring](#basics7).
 - Don't connect to unknown/unsafe networks, or at least never send any personal data through them and avoid using dangerous protocols (HTTP, FTP atc.). Ideally use a VPN.
 - Pay attention to what data you enter and where you enter them &ndash; selling personal data is a profitable business.
-- Don't forget the physical security aspect &ndash; lock your device, set a UEFI password, disable boot menu etc.
+- Don't forget the physical security factor &ndash; lock your device, set a UEFI password, disable boot menu etc.
 
 <br>
 
@@ -34,8 +34,8 @@
 - Don't visit unknown/untrusted sites and never download any files from them.
 - Reduce visiting 18+ sites as it's quite common for them to serve malicious ads and code.
 - Don't use social buttons outside the specific social network, these can be trivially mimicked.
-- Avoid the **short URLs** &ndash; like https://bit.ly/tinyurlwiki etc. They can easily mask dangerous links.
-- Avoid using unsafe network SW such as <span class="red">Flash Player</span> or <span class="red">Java</span>, its exploitation is very common. At least disable it inside your browser.
+- Avoid the **short URLs** &ndash; like https://bit.ly/tinyurlwiki etc. &ndash; as they can easily mask dangerous links.
+- Refrain from using unsafe network SW such as <span class="red">Flash Player</span> or <span class="red">Java</span>, its exploitation is very common. At least disable it inside your browser.
 - Only open email attachments from trusted senders.
 - If you suspect a file to be malicious, always scan it before opening with eg.  [VirusTotal](https://www.virustotal.com/).
 
@@ -43,7 +43,7 @@
 
 <br>
 
-## Security News Sources:
+## Security Info Sources:
 - [BleepingComputer](https://www.bleepingcomputer.com/)
 - [The Hacker News](http://thehackernews.com/)
 - [Threatpost](https://threatpost.com/)
@@ -69,6 +69,6 @@
 <br>
 
 ## Recommended Keyrings:
-- [1Password](https://1password.com/) &ndash; impeccalbe platform, paid
+- [1Password](https://1password.com/) &ndash; perfect platform, paid
 - [KeePassX](https://www.keepassx.org/) &ndash; free
 - [Encryptr](https://spideroak.com/solutions/encryptr/) &ndash; free
