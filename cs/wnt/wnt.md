@@ -97,7 +97,7 @@ a stiskněte **Enter**.</li>
 
 <br>
 
-### Vypnutí nebezpečných služeb a funkcí Windows
+### Bezpečné nastavení služeb a funkcí Windows
 
 ![idea](https://mople71.cz/img/sm/idea.gif) Pokročilejší si skript mohou upravit &ndash; je v něm několik zakomentovaných bezpečnostních opatření, které nemohou být aplikovány širokopásmově...
 
@@ -106,6 +106,17 @@ a stiskněte **Enter**.</li>
 - Uložte a obsah archivu vyextrahujte <span class="blue">na Plochu</span>.
 - Na skript jménem <span class="green">safesvc</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/icons/admin.png) **Spustit jako správce**.
 - Nechte skript pracovat, na konci procesu vám řekne o souhlas k restartu OS.
+
+<br>
+
+> Nastavení SmartScreen (starší verze Windows)
+
+- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+<li style="list-style-type: none"><pre><code>smartscreensettings</code></pre>
+a stiskněte **Enter**.</li>
+- Otevře se nastavení SmartScreen filtru. Upravte jej dle obrázku:
+<li style="list-style-type: none">![smartscreen](https://faq.mople71.cz/img/cs/smartscreen.png)</li>
+- Klikněte na <span class="green">OK</span>.
 
 #### Bezpečné nastavení sítě:
 > Konfigurace síťového adaptéru + DNS

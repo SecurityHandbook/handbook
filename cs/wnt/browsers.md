@@ -72,7 +72,8 @@ ChromiumBringToFront=true
 ChromiumWaitForDownloadEnd=true</code></pre></li>
 - Změny uložte a konfigurační soubor zavřete.
 - Spusťte aplikaci <span class="green">chrlauncher</span>.
-- Chrlauncher následně můžete připnout na panel a nastavit jako výchozí prohlížeč v **Nastavení**.
+- Chcete-li nastavit chrlauncher jako výchozí prohlížeč, klikněte pravým tlačítkem na skript <span class="green">SetDefaultBrowser</span> ve složce a zvolte možnost: ![admin](https://mople71.cz/img/icons/admin.png) **Spustit jako správce**.
+- Na Windows 10 budete muset následně výchozí prohlížeč ještě zvolit v **Nastavení**.
 <li style="list-style-type: none">![chrl2](https://faq.mople71.cz/img/cs/chrl2.png)</li>
 
 > Bezpečnější nastavení a blokování reklam
@@ -134,13 +135,13 @@ a stiskněte **Enter**.</li>
 - V horní liště se přesuňte do záložky <span class="green">Upřesnit</span>.
 - V sekci **Procházení** <span style="color: #BF0000">odstraňte</span> zatržítko u položky <span class="green">Povolit rozšíření prohlížečů jiných výrobců</span>.
 - V sekci **Zabezpečení** <span style="color: #BF0000">odstraňte</span> zatržítko u následujících položek:
-    - Používat protokol SSL 3.0
-    - Povolit úložiště DOM (volitelné, může znefunkčnit některé stránky)
+  - Používat protokol SSL 3.0
+  - Povolit úložiště DOM (volitelné, může znefunkčnit některé stránky)
 - A naopak <span style="color: #BF0000">přidejte</span> zatržítko k následujícím položkám:
-    - Blokovat nezabezpečené bitové kopie s ostatním smíšeným obsahem
-    - Povolit filtr SmartScreen
-    - Povolit rozšířený chráněný režim
-    - Povolit striktní ověřování P3P
+  - Blokovat nezabezpečené bitové kopie s ostatním smíšeným obsahem
+  - Povolit filtr SmartScreen
+  - Povolit rozšířený chráněný režim
+  - Povolit striktní ověřování P3P
 - V dolním panelu aplikace klikněte na tlačítko <span class="green">OK</span> a nastavení zavřete.
 
 - Otevřete prohlížeč.
