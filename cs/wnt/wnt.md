@@ -182,11 +182,22 @@ Antivirus nebo antimalware (AV/M) je uživateli chápán jako základní vrstva 
 
 > Rozebrání problematiky antivirů
 
-Tradiční mechanismus antiviru funguje na bázi databáze (někdy také nazýváno podpisy) &ndash; detekuje známý malware, jejichž otisk má v databázi. V dnešní době již antiviry mají tzv. heuristiku, kdy spustitelný soubor vyhodnocují na základě jeho aktivit po spuštění (obvykle vzorek testují v izolovaném prostředí &ndash; sandboxu). Tato metoda ovšem není ani z daleka dokonalá ze dvou důvodů. Zaprvé, tato metoda stále detekuje malware na základě předvolených pravidel, které u vzorku pozoruje. Pokud vzorek provede škodlivou akci, která ale není v heuristickém systému daného antiviru označena jako škodlivá, heuristika vyhodnotí vzorek jako neškodný. Zadruhé, mnoho vzorků malware je schopno poznat, že je spuštěno v sandboxu a žádné škodlivé aktivity neprovést. V takovém případě bude vzorek také vyhodnocen jako neškodný.
-Další problém antivirů je ten, že většina z nich je stará &ndash; mají starý kód který je tak komplexní, že jej vývojáři nebudou přepisovat, pouze záplatovat a nabalovat na něj nové funkce. Z tohoto důvodu je mnoho antivirů náchylných na hackerské postupy klidně 10 let staré.
-Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &ndash; natož jedinou &ndash; vrstvu zabezpečení. Antivirus ovšem stále má v bezpečnostní konfiguraci místo.
+Tradiční mechanismus antiviru pracuje na bázi databáze &ndash; detekuje známý malware, jejichž otisk má v databázi. Tento systém má vcelku očividnou slabinu &ndash; pokud otisk pro malware neexistuje, antivir jej nevyhodnotí jako škodlivý.
+Další technologií je tzv. *heuristika*, kdy je škodlivost kódu vyhodnocována na základě jeho aktivit po spuštění (vzorek je zpravidla testován v izolovaném prostředí &ndash; sandboxu). Tato technologie má také slabinu &ndash; škodlivost je posuzována na základě předvolených pravidel a indikací, které u vzorku pozoruje. Pokud malware provede činnost, která není zaznamenána heuristickým systémem jako škodlivá, antivir jej nevyhodnotí jako škodlivý. Tvůrci malware tedy používají různé postupy, aby heuristickou detekcí jejich kód prošel.
+
+Další problém antivirů je ten, že většina z nich je stará &ndash; mají starý kód, který je tak komplexní, že jej vývojáři nepřepisují, pouze záplatují a přidávají nové funkce. V důsledku je mnoho antivirů náchylných na hackerské útoky 10 let staré.
+
+Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &ndash; natož jedinou &ndash; vrstvu zabezpečení. Antivirus ovšem má v bezpečnostní konfiguraci místo.
 
 <span class="green">Windows Defender</span> integrovaný ve **Windows 8.1 Update 3** a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vrstvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a v OS mnohdy provádí v porovnání s integrovaným řešením naprosté šílenosti.
+
+> Porovnání Windows Defender a AV/M řešení třetích stran
+
+Donedávna byla pravda, že surová detekce malware AV/M třetích stran je lepší nežli detekce *Windows Defender*, v současné době to již pravda není. Do příchodu **Windows 8.1 Update 3** bylo AV/M řešení třetích stran bráno jako nutné zlo, jelikož být bez AV/M řešení je výrazně horší, nežli být s AV/M řešením třetí strany. Do této doby také OS neobsahoval použitelné vestavěné AV/M řešení. S příchodem **Windows 10** byl <span class="green">Windows Defender</span> z velké části přepsán a s každou novou verzí OS dosáhl vylepšení. V aktuálním stavu se jedná o moderní AV/M řešení špičkové kvality.
+
+Ostatní AV/M řešení nejsou vestavěná v OS &ndash; kvalita jejich kódu nemusí (může) být na úrovni zbytku OS, s každým řádkem kódu navíc se ovšem zvětšuje prostor pro exploitaci. Na rozdíl od <span class="green">Windows Defender</span> nejsou korektně integrovány do OS a pracují proto na bázi hacku a zásahu do bezpečnostního modelu OS (a aplikací &ndash; např. internetových prohlížečů). Také v porovnání s integrovaným řešením postrádají moderní mitigace proti exploitaci.
+
+Detekce <span class="green">Windows Defender</span> je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na všech instalacích aktuálních verzí OS &ndash; více uživatelů znamená větší šanci narazit na nový malware. Nabízí pokročilý cloudový systém detekce a další pokročilé funkce.
 
 Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům (tzv. *Řízený přístup ke složkám*) a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci [anti-exploit](#wnt2.4)\).
 
