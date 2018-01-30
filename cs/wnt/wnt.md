@@ -3,7 +3,7 @@ Windows se jakožto nejrozšířenější desktopový OS těší velké pozornos
 Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (tzv. *layered config*) &ndash; pokud selže jedna vrstva, nastupuje druhá. Spousta běžných uživatelů spoléhá pouze na jednu tradiční vrstvu &ndash; antivir &ndash; což je z hlediska bezpečnosti tristní.
 Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na verzi a edici OS. V základním nastavení ovšem nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
 
-Podporovanou verzí Windows v následující sekci je **Windows 10 Fall Creators Update** jakožto nejnovější OS s podporou do roku 2025. Obsažené informací jsou platné i pro OS **Windows 8.1 Update 3**, jen je místy nutné upravit postup. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí (pokud již neskončil) cyklus rozšířené podpory. Majitelé starších verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro starší verze zde nebude uváděn.
+Podporovanou verzí Windows v následující sekci je **Windows 10 Fall Creators Update** jakožto nejnovější OS s podporou do roku 2025. Obsažené informací jsou platné i pro OS **Windows 8.1 Update 3**, jen je místy nutné upravit postup. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí (pokud již neskončil) cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
 
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/wnt/adv.php#wnt).
 
@@ -66,7 +66,7 @@ Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, je
 
 Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často opravují mnoho bezpečnostních chyb. Neaktuální děravý SW je implicitně nebezpečný.
 
-Windows by se měly ve výchozím nastavení aktualizovat samy (v edici Home automatické aktualizace dokonce nelze vypnout). Mnohé důležité aplikace (např. prohlížeče) se obvykle aktualizují automaticky.
+Windows by se měly ve výchozím nastavení aktualizovat samy (v edici *Home* automatické aktualizace dokonce nelze vypnout). Mnohé důležité aplikace (např. prohlížeče) se obvykle aktualizují automaticky.
 
 Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <span class="green">Heimdal Free</span>, která běží na pozadí a upozorní vás v případě neaktuálního SW, případně jej sama aktualizuje, automatické aktualizace ovšem teoreticky mohou způsobit problémy. Návod k *Heimdal Free* naleznete v sekci [Ostatní aplikace](#wnt2.6).
 
@@ -84,7 +84,7 @@ a stiskněte **Enter**.</li>
 
 ### User Account Control
 
-User Account Control je důležitá součást bezpečnostního modelu OS od Windows Vista, kde se dočkala obrovské kritiky a ve Windows 7 proto byla v základním nastavení oslabena. Vypnutí UAC je z hlediska bezpečnosti sebevražda. Naopak je doporučeno nastavení UAC upravit na ještě přísnější úroveň.
+*User Account Control* je důležitá součást bezpečnostního modelu OS od **Windows Vista**, kde se dočkala obrovské kritiky a ve Windows 7 proto byla v základním nastavení oslabena. Vypnutí UAC je z hlediska bezpečnosti sebevražda. Naopak je doporučeno konfiguraci UAC nastavit na ještě přísnější úroveň.
 
 > Nastavení UAC
 
@@ -173,12 +173,12 @@ a stiskněte **Enter**.</li>
 - virtualizace
 - užitečné aplikace
 
-Vrstev zabezpečení existuje mnohem více a spousta lidí jich kombinuje desítky dohromady. Osobně to považuji za nerozumné, kombinování příliš mnoho vrstev zvětšuje prostor pro exploitaci a ve finále má spíše opačný účinek. Cílem by mělo být použít co nejméně aplikací třetích stran k dosáhnutí účinného zabezpečení. Níže si rozebereme jednotlivé vrstvy.
+Vrstev zabezpečení existuje násobně více, výše jsou zmíněny pouze vrstvy vyhodnoceny jako důležité. Kombinování příliš mnoha vrstev rozšiřuje prostor pro exploitaci a ve finále má spíše opačný účinek. Cílem by mělo být použít co nejméně kódu třetí strany k dosáhnutí účinného zabezpečení.
 
 <br>
 
 ### Antivirus / Antimalware:
-Antivirus nebo antimalware (AV/M) je uživateli chápán jako základní vrstva zabezpečení, která stačí k zabezpečení OS. To již ovšem není tak úplně pravda.
+Antivirus nebo antimalware (AV/M) je uživateli chápán jako základní vrstva zabezpečení, která stačí k zabezpečení OS. Tato teze již ovšem nějakou dobu není pravdivá.
 
 > Rozebrání problematiky antivirů
 
@@ -255,16 +255,16 @@ Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před út
 
 Základní nevýhoda WDF pro běžné uživatele je absence pokročilejšího intuitivního rozhraní. Jednoduché rozhraní naleznete v <span class="green">Centru zabezpečení v programu Windows Defender</span>.
 
-<span class="red">Comodo Firewall</span>. Velmi oblíbená alternativa. Ano, je intuitivnější a obsahuje HIPS. Na druhou stranu, osobně důrazně nedoporučuji jakýkoli produkt od firmy **Comodo**.
+**Windows Defender Firewall** je v základu nastaven na blokování příchozí komunikace, která není explicitně povolena. Chcete-li posunout bezpečnost na výrazně vyšší úroveň, je nutné nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V nejnovější verzi Windows je ovšem taková konfigurace značně problematická, návod proto naleznete pouze v [FAQ pro pokročilé](https://faq.mople71.cz/cs/wnt/adv.php#wnt1).
 
-**Windows Defender Firewall** je v základu nastaven na blokování příchozí komunikace, která není explicitně povolena. Chcete-li posunout bezpečnost na výrazně vyšší úroveň, je dobrý nápad nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V nejnovější verzi Windows je ovšem takové nastavení problematické, a návod proto naleznete pouze v [FAQ pro pokročilé](https://faq.mople71.cz/cs/wnt/adv.php#wnt1).
+Firewall aplikace třetích stran jako <span class="red">Comodo Firewall</span> je nedoporučeno.
 
 <br>
 
 ### Anti-executable:
 Anti-executable je jedna z nejúčinnějších vrstev ochrany. Jak napovídá název, anti-executable řešení zabraňuje spuštění malware.
 
-Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně souboru rovnou zabraní spustit se. Nastavení whitelistu není úkol pro běžné uživatele, existují ovšem i řešení, která umí whitelist vytvořit prakticky bez uživatelské interakce.
+Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně souboru rovnou zabraní ve spuštění. Nastavení whitelistu není úkol pro běžné uživatele, existují ovšem i řešení, která umí whitelist vytvořit s minimem uživatelské interakce.
 
 #### Přehled anti-executable řešení:
 - [VoodooShield](https://voodooshield.com/) (VS)
@@ -274,7 +274,7 @@ Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno
 - [AppLocker](https://technet.microsoft.com/cs-cz/library/dd759117.aspx)
 - [Software Restrtiction Policies](https://technet.microsoft.com/cs-cz/library/hh831534.aspx) (SRP)
 
-<span class="red">VoodooShield</span> je nejpřívětivější anti-executable a nejlepší volba pro obyčejné uživatele. Kromě placené verze poskytuje i bezplatnou pro nekomerční využití, která poskytuje srovnatelnou ochranu, akorát nenabízí možnost rozšířené konfigurace, což běžnému uživateli nevadí. V základu je nakonfigurován bezpečně. Bohužel zatím nenabízí české rozhraní.
+<span class="red">VoodooShield</span> je nejpřívětivější anti-executable a nejlepší volba pro obyčejné uživatele. Kromě placené verze poskytuje i bezplatnou pro nekomerční využití, která poskytuje srovnatelnou ochranu, akorát nenabízí možnost rozšířené konfigurace &ndash; což běžného uživatele nemusí trápit. V základu je nakonfigurován bezpečně. Bohužel zatím nenabízí české rozhraní.
 
 > Instalace a konfigurace VoodooShield
 
@@ -307,7 +307,7 @@ Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno
 
 <span class="red">NVT Anti-AutoExec</span> je drobná aplikace, která automaticky zabraňuje šíření USB malware. Stačí nainstalovat a ochrana je aktivní bez jakékoli interakce. Bohužel v současném stavu nefunguje s nejnovější verzí **Fall Creators Update**, snad brzy dojde k nápravě.
 
-<span class="red">AppGuard</span> je profesionální anti-executable určený převážně pro firemní sféru, je ovšem dostupný i v domácí verzi. Jeho nastavení je vcelku komplikované a přizpůsobené pro odborníky.
+<span class="red">AppGuard</span> je profesionální anti-executable určený převážně pro firemní sféru, je ovšem dostupný i v domácí verzi. Jeho nastavení je vcelku komplikované a uzpůsobené pro odborníky.
 
 <span class="red">AppLocker</span> je anti-executable integrovaný ve Windows v edicích Ultimate, Education a Enterprise. Umožňuje ovládání spustitelných souborů, skriptů, DLL knihoven, MSI instalátorů a ModernUI (metro) aplikací. Poskytuje vcelku slušnou ochranu, na druhou stranu existují známé způsoby jeho obejití.
 
@@ -316,7 +316,7 @@ Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno
 <br>
 
 ### Anti-exploit:
-Každý kód obsahuje minimálně jednu chybu. Toho zneužívají exploity šířící se internetem. Anti-exploit aplikace přicházejí s mitigacemi, které mají za cíl znemožnit využití jednoduchých způsobů exploitace a proces exploitace výrazně ztížit.
+Každý kód obsahuje minimálně jednu chybu. Toho zneužívají *exploity* šířící se internetem. Anti-exploit aplikace přicházejí s mitigacemi, které mají za cíl znemožnit využití jednoduchých způsobů exploitace a proces exploitace výrazně ztížit.
 
 Windows využívají velké množství mitigací a exploitace samotného OS a aplikací OS je tedy velmi nákladná. Některé aplikace (např. Chrome) jsou také na velmi vysoké úrovni a jejich exploitace je nákladná. Jsou zde ovšem aplikace, které žádné anti-exploit mitigace nepoužívají a někdy je používání těchto aplikací nezbytné. V takovém případě existují anti-exploit řešení, která umí exploitaci zmíněných aplikací výrazně ztížit.
 
@@ -423,7 +423,7 @@ Virtualizace může být velmi bezpečný způsob ochrany před malware (zálež
 - lehká virtualizace OS &ndash; [Shadow Defender](http://www.shadowdefender.com/)
 - sandbox &ndash; [Sandboxie](https://www.sandboxie.com/)
 
-Nejbezpečnější způsob virtualizace je virtuální počítač při korektním nastavení a aplikaci snapshotů. Lehká virtualizace OS spočívá ve vrácení změn v OS při restartu, může být velmi užitečná proti např. ransomware. U sandboxu velmi záleží na implementaci, bezplatné řešení Sandboxie poskytující externí sandbox pro aplikace, je spíše na hraní.
+Nejbezpečnější způsob virtualizace je virtuální počítač při korektním nastavení a využití snapshotů. Lehká virtualizace OS spočívá ve vrácení změn v OS při restartu, může být velmi užitečná proti např. ransomware. U sandboxu velmi záleží na implementaci, bezplatné řešení Sandboxie poskytující externí sandbox pro aplikace, je spíše na hraní.
 
 > Instalace a konfigurace Sandboxie
 
@@ -513,7 +513,7 @@ Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je 
 - užitečné aplikace &ndash; **Unchecky**, **Heimdal Free**
 - konfigurace pro pokročilé &ndash; dle znalostí
 
-Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nastavit OS (hlavně účet s omezeným oprávněním). V případě instalace 3-P internetového prohlížeče používat MS Edge pro bankovní účely a podobné citlivé věci. *Heimdal Free* nastavit na tichou automatickou aktualizaci aplikací. Samozřejmě, pokud zvládáte pokročilou konfiguraci popisovanou v FAQ pro pokročilé, úroveň zabezpečení můžete velmi výrazně zvýšit.
+Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nastavit OS. **MS Edge** používat pro bankovní účely a podobné citlivé věci, **Google Chrome** pro běžné brouzdání. **Heimdal Free** nastavit na tichou automatickou aktualizaci aplikací. Samozřejmě, pokud zvládáte pokročilou konfiguraci popisovanou v FAQ pro pokročilé, úroveň zabezpečení můžete velmi výrazně zvýšit.
 
 ![arrow](https://mople71.cz/img/sm/arrow.gif) Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.
 
