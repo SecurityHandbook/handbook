@@ -17,9 +17,9 @@ Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Windows pro méně p
 ### Firewall:
 Windows obsahují vestavěný <span class="green">Windows Defender Firewall</span> (WDF), který je na velmi dobré úrovni.
 
-Použití FW třetí strany je zbytečné rozšiřování attack surface. Základem síťového zabezpečení v domácnosti je rozumný router s použitelným FW (např. Mikrotik, kde si FW ovšem samozřejmě musíte nastavit).
+Použití FW třetí strany je zbytečné rozšiřování attack surface. Základem síťového zabezpečení v domácnosti je rozumný router s použitelným FW (NAT; např. Mikrotik, kde si FW ovšem samozřejmě musíte nastavit).
 
-Co se týče blokování odchozí komunikace, *Windows Defender Firewall* tuto funkci podporuje a umožňuje vcelku jednoduše nastavit.
+Co se blokování odchozí komunikace týče, *Windows Defender Firewall* tuto funkci podporuje a umožňuje vcelku jednoduše nastavit.
 
 ![idea](https://mople71.cz/img/sm/idea.gif) Návod měl původně být v sekci pro méně pokročilé, ovšem z důvodu nepříjemného bugu (nebo funkce) Windows 10, automatické aktualizace OS nelze ve whitelistu rozumně definovat.
 
@@ -112,9 +112,9 @@ Windows Update následně můžete řešit libovolným způsobem.
 <br>
 
 ### FIDES:
-[FIDES](https://excubits.com/content/en/products_pumpernickelfides.html) je drobný ovladač na úrovni kernelu, který si můžete představit jako nějakou obdobu MAC na Linuxu &ndash; program určuje, které procesy mají ke kterým souborům přístup. Jedná se o špičkové řešení, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
+[FIDES](https://excubits.com/content/en/products_pumpernickelfides.html) je drobný ovladač na úrovni kernelu, který si můžete představit jako nějakou obdobu *MAC* na Linuxu &ndash; program určuje, které procesy mají ke kterým souborům přístup. Jedná se o špičkové řešení, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
 
-Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, akorát podporuje konfigurační soubor pouze do velikosti 2 kB, což není dostatek pro pokročilé nastavení. Doporučuji tedy investovat do plné verze a podpořit vývojáře, 12 € jako jednorázová platba mi přijde jako dobrá cena.
+Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, akorát podporuje konfigurační soubor pouze do velikosti 2 kB, což není dostatek pro pokročilé nastavení. Doporučuji tedy investovat do plné verze a podpořit vývojáře.
 
 > Instalace FIDES
 
@@ -131,7 +131,7 @@ Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, a
 ### MemProtect:
 [MemProtect](https://excubits.com/content/en/products_memprotect.html) je drobný ovladač na úrovni kernelu, který určuje, které procesy mají přístup k ostatním procesům v RAM. Jedná se o špičkové řešení nejen proti řadám rodin exploitům, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
 
-Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, akorát podporuje konfigurační soubor pouze do velikosti 2 kB, což není dostatek pro pokročilé nastavení. Doporučuji tedy investovat do plné verze a podpořit vývojáře, 12 € jako jednorázová platba mi přijde jako dobrá cena.
+Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, akorát podporuje konfigurační soubor pouze do velikosti 2 kB, což není dostatek pro pokročilé nastavení. Doporučuji tedy investovat do plné verze a podpořit vývojáře.
 
 > Instalace MemProtect
 
@@ -178,9 +178,7 @@ Kontrola přístupu z tokenu aplikace získá jeho SID a následně v ACL seznam
 
 <br>
 
-Pokud jste si přečetli teorii, snad máte alespoň matnou představu o tom, jak ACL a kontrola přístupu funguje. Nyní se podívejme na praktické využití.
-
-![idea](https://mople71.cz/img/sm/idea.gif) Předpoklad pro mnou uvedený příklad využití je separátní administrátorský účet, který beru jako samozřejmost.
+Pokud jste si přečetli teorii, snad máte alespoň matnou představu o tom, jak ACL a kontrola přístupu funguje.
 
 ACL můžeme využít následovně: můžeme zakázat spouštění spustitelných souborů v uživatelských složkách. Běžný uživatel nepotřebuje spouštět ve svých složkách spustitelné soubory &ndash; a pokud ano, nic mu nebrání v přesunutí souboru mimo jeho osobní složky. Výhody jsou doufám jasné &ndash; pokud se malware dostane na disk, nespustí se.
 
@@ -231,7 +229,7 @@ Pokud je úroveň integrity tokenu menší než úroveň integrity deskriptoru, 
 
 Pravidla určovaná integritní politikou jsou absolutní &ndash; aplikaci je natvrdo zamezen přístup a jediné, co s tím může dělat, je úroveň integrity navýšit. Což může pouze skrz UAC dialog, rozhodnutí je následně samozřejmě na uživateli. Malware ovšem obvykle chce zůstat utajen, dokud nedokončí svoji práci &ndash; UAC dialog by ho tak nějak prozradil.
 
-Většina lépe naprogramovaného malware pozná, že běží s nízkou integritou a hrdě spáchá *seppuku*. Exploitace UAC (samo-povýšení) je v jistých případech teoreticky možná a proveditelná se střední úrovní integrity &ndash; proces s nízkou úrovní integrity nemůže nic, maximálně se pokusit o exploitaci kernelu.
+Většina lépe naprogramovaného malware pozná, že běží s nízkou integritou, a hrdě spáchá *seppuku*. Exploitace UAC (samo-povýšení) je v jistých případech teoreticky možná a proveditelná se střední úrovní integrity &ndash; proces s nízkou úrovní integrity nemůže nic, maximálně se pokusit o exploitaci kernelu.
 
 <br>
 
