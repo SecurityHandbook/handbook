@@ -193,11 +193,11 @@ Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &
 
 > Porovnání Windows Defender a AV/M řešení třetích stran
 
-Donedávna byla pravda, že surová detekce malware AV/M třetích stran je lepší nežli detekce *Windows Defender*, v současné době to již pravda není. Do příchodu **Windows 8.1 Update 3** bylo AV/M řešení třetích stran bráno jako nutné zlo, jelikož být bez AV/M řešení je výrazně horší, nežli být s AV/M řešením třetí strany. Do této doby také OS neobsahoval použitelné vestavěné AV/M řešení. S příchodem **Windows 10** byl <span class="green">Windows Defender</span> z velké části přepsán a s každou novou verzí OS dosáhl vylepšení. V aktuálním stavu se jedná o moderní AV/M řešení špičkové kvality.
+Donedávna bylo možné říci, že surová detekce malware AV/M systémy třetích stran je lepší nežli detekce <span class="green">Windows Defender</span>, nyní to již ovšem není pravda. Do příchodu **Windows 8.1 Update 3** byla AV/M řešení třetích stran brána jako nutné zlo, jelikož být bez AV/M řešení je výrazně horší, nežli být s AV/M řešením třetí strany, a OS neobsahoval použitelné vestavěné AV/M řešení. S příchodem **Windows 10** byl *Windows Defender* z velké části přepsán a s každou novou verzí OS se dočkal vylepšení. V aktuálním stavu se jedná o kvalitní moderní AV/M řešení.
 
-Ostatní AV/M řešení nejsou vestavěná v OS &ndash; kvalita jejich kódu nemusí (může) být na úrovni zbytku OS, s každým řádkem kódu navíc se ovšem zvětšuje prostor pro exploitaci. Na rozdíl od <span class="green">Windows Defender</span> nejsou korektně integrovány do OS a pracují proto na bázi hacku a zásahu do bezpečnostního modelu OS (a aplikací &ndash; např. internetových prohlížečů). Také v porovnání s integrovaným řešením postrádají moderní mitigace proti exploitaci.
+Ostatní AV/M řešení nejsou vestavěná v OS &ndash; kvalita jejich kódu nemusí (může) být na úrovni zbytku OS, s každým řádkem kódu navíc se ovšem zvětšuje prostor pro exploitaci. Na rozdíl od <span class="green">Windows Defender</span> nejsou korektně integrovány do OS &ndash; operují proto na bázi hacku a zásahu do bezpečnostního modelu OS (+ aplikací jako internetových prohlížečů). V porovnání s integrovaným řešením navíc zpravidla postrádají/nevyužívají moderní mitigace proti exploitaci, které mají všechny systémové aplikace.
 
-Detekce <span class="green">Windows Defender</span> je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na všech instalacích aktuálních verzí OS &ndash; více uživatelů znamená větší šanci narazit na nový malware. Nabízí pokročilý cloudový systém detekce a další pokročilé funkce.
+Detekce <span class="green">Windows Defender</span> je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na všech instalacích aktuálních verzí OS &ndash; více uživatelů znamená větší šanci narazit na nový malware. Využívá vyspělý cloudový systém, díky kterému nabízí užitečné pokročilé funkce (např. *block on first sight*).
 
 Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům (tzv. *Řízený přístup ke složkám*) a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci [anti-exploit](#wnt2.4)\).
 
@@ -257,7 +257,7 @@ Základní nevýhoda WDF pro běžné uživatele je absence pokročilejšího in
 
 <span class="red">Comodo Firewall</span>. Velmi oblíbená alternativa. Ano, je intuitivnější a obsahuje HIPS. Na druhou stranu, osobně důrazně nedoporučuji jakýkoli produkt od firmy **Comodo**.
 
-**Windows Defender Firewall** je v základu nastaven na blokování příchozí komunikace, která není explicitně povolena. Chcete-li posunout bezpečnost na výrazně vyšší úroveň, je dobrý nápad nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V nejnovější verzi Windows je ovšem takové nastavení problematické, a návod proto naleznete pouze v FAQ pro pokročilé.
+**Windows Defender Firewall** je v základu nastaven na blokování příchozí komunikace, která není explicitně povolena. Chcete-li posunout bezpečnost na výrazně vyšší úroveň, je dobrý nápad nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V nejnovější verzi Windows je ovšem takové nastavení problematické, a návod proto naleznete pouze v [FAQ pro pokročilé](https://faq.mople71.cz/cs/wnt/adv.php#wnt1).
 
 <br>
 
