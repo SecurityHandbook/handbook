@@ -141,6 +141,10 @@ OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
 - Po zvolení DNS serverů se přepněte zpět do okna Vlastností IPv4 protokolu.
 - Klikněte na <span class="green">Použít následující adresy serverů DNS</span> a do kolonek vepište vámi zvolené DNS.
 <li style="list-style-type: none">![wntnet3](https://faq.mople71.cz/img/cs/wntnet3.png)</li>
+- Klikněte na tlačítko <span class="green">Upřesnit...</span>
+- V horním panelu se přesuňte do záložky **WINS** a zvolte možnost <span class="green">Zakázat rozhraní NetBIOS nad protokolem TCP/IP</span>.
+<li style="list-style-type: none">![wntnet3](https://faq.mople71.cz/img/cs/wntnet4.png)</li>
+- Klikněte na <span class="green">OK</span>.
 - Klikněte na <span class="green">OK</span> a okno zavřete.
 
 ![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Stejný postup aplikujte pro všechny síťové adaptéry v seznamu (obvykle WLAN).</span>
