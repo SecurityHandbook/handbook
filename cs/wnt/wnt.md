@@ -143,7 +143,7 @@ OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
 <li style="list-style-type: none">![wntnet3](https://faq.mople71.cz/img/cs/wntnet3.png)</li>
 - Klikněte na tlačítko <span class="green">Upřesnit...</span>
 - V horním panelu se přesuňte do záložky **WINS** a zvolte možnost <span class="green">Zakázat rozhraní NetBIOS nad protokolem TCP/IP</span>.
-<li style="list-style-type: none">![wntnet3](https://faq.mople71.cz/img/cs/wntnet4.png)</li>
+<li style="list-style-type: none">![wntnet4](https://faq.mople71.cz/img/cs/wntnet4.png)</li>
 - Klikněte na <span class="green">OK</span>.
 - Klikněte na <span class="green">OK</span> a okno zavřete.
 
@@ -197,11 +197,11 @@ Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &
 
 > Porovnání Windows Defender a AV/M řešení třetích stran
 
-Donedávna bylo možné říci, že surová detekce malware AV/M systémy třetích stran je lepší nežli detekce <span class="green">Windows Defender</span>, nyní to již ovšem není pravda. Do příchodu **Windows 8.1 Update 3** byla AV/M řešení třetích stran brána jako nutné zlo, jelikož být bez AV/M řešení je výrazně horší, nežli být s AV/M řešením třetí strany, a OS neobsahoval použitelné vestavěné AV/M řešení. S příchodem **Windows 10** byl *Windows Defender* z velké části přepsán a s každou novou verzí OS se dočkal vylepšení. V aktuálním stavu se jedná o kvalitní moderní AV/M řešení.
+Do příchodu **Windows 8.1 Update 3** byla AV/M řešení třetích stran brána jako nutné zlo, jelikož být bez žádného AV/M řešení je výrazně horší, nežli být s AV/M řešením třetí strany, a OS tehdy neobsahoval použitelné vestavěné AV/M řešení. S příchodem **Windows 10** byl <span class="green">Windows Defender</span> z velké části přepsán a s každou novou verzí OS se dočkal vylepšení. V aktuálním stavu se jedná o kvalitní moderní AV/M řešení.
 
-Ostatní AV/M řešení nejsou vestavěná v OS &ndash; kvalita jejich kódu nemusí (může) být na úrovni zbytku OS, s každým řádkem kódu navíc se ovšem zvětšuje prostor pro exploitaci. Na rozdíl od <span class="green">Windows Defender</span> nejsou korektně integrovány do OS &ndash; operují proto na bázi hacku a zásahu do bezpečnostního modelu OS (+ aplikací jako internetových prohlížečů). V porovnání s integrovaným řešením navíc zpravidla postrádají/nevyužívají moderní mitigace proti exploitaci, které mají všechny systémové aplikace.
+Ostatní AV/M řešení nejsou vestavěná v OS &ndash; kvalita jejich kódu nemusí (může) být na úrovni zbytku OS, s každým řádkem kódu navíc se ovšem zvětšuje prostor pro exploitaci. Na rozdíl od <span class="green">Windows Defender</span> nejsou korektně integrovány do OS &ndash; operují proto na bázi hacku a zásahu do bezpečnostního modelu OS (a aplikací jako internetových prohlížečů). V porovnání s integrovaným řešením navíc zpravidla postrádají/nevyužívají moderní mitigace proti exploitaci, které mají všechny systémové aplikace.
 
-Detekce <span class="green">Windows Defender</span> je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na všech instalacích aktuálních verzí OS &ndash; více uživatelů znamená větší šanci narazit na nový malware. Využívá vyspělý cloudový systém, díky kterému nabízí užitečné pokročilé funkce (např. *block on first sight*).
+Detekce <span class="green">Windows Defender</span> je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na instalacích aktuálních verzí OS &ndash; počet uživatelů zvyšuje šanci zachytit nový malware. Implementuje vyspělý cloudový systém, díky kterému nabízí užitečné pokročilé funkce (např. *block on first sight*).
 
 Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům (tzv. *Řízený přístup ke složkám*) a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci [anti-exploit](#wnt2.4)\).
 
