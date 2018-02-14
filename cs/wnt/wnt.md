@@ -261,14 +261,14 @@ Základní nevýhoda WDF pro běžné uživatele je absence pokročilejšího in
 
 **Windows Defender Firewall** je v základu nastaven na blokování příchozí komunikace, která není explicitně povolena. Chcete-li posunout bezpečnost na výrazně vyšší úroveň, je nutné nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V nejnovější verzi Windows je ovšem taková konfigurace značně problematická, návod proto naleznete pouze v [FAQ pro pokročilé](https://faq.mople71.cz/cs/wnt/adv.php#wnt1).
 
-Firewall aplikace třetích stran jako <span class="red">Comodo Firewall</span> je nedoporučeno.
+Firewall aplikace třetích stran jako <span class="red">Comodo Firewall</span> jsou nedoporučeny.
 
 <br>
 
 ### Anti-executable:
 Anti-executable je jedna z nejúčinnějších vrstev ochrany. Jak napovídá název, anti-executable řešení zabraňuje spuštění malware.
 
-Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně souboru rovnou zabraní ve spuštění. Nastavení whitelistu není úkol pro běžné uživatele, existují ovšem i řešení, která umí whitelist vytvořit s minimem uživatelské interakce.
+Většina řešení funguje na principu *whitelistu* &ndash; má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně souboru rovnou zabraní ve spuštění. Nastavení whitelistu není úkol pro běžné uživatele, existují ovšem i řešení, která umí whitelist vytvořit s minimem uživatelské interakce.
 
 #### Přehled anti-executable řešení:
 - [VoodooShield](https://voodooshield.com/) (VS)
@@ -278,7 +278,7 @@ Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno
 - [AppLocker](https://technet.microsoft.com/cs-cz/library/dd759117.aspx)
 - [Software Restrtiction Policies](https://technet.microsoft.com/cs-cz/library/hh831534.aspx) (SRP)
 
-<span class="red">VoodooShield</span> je nejpřívětivější anti-executable a nejlepší volba pro obyčejné uživatele. Kromě placené verze poskytuje i bezplatnou pro nekomerční využití, která poskytuje srovnatelnou ochranu, akorát nenabízí možnost rozšířené konfigurace &ndash; což běžného uživatele nemusí trápit. V základu je nakonfigurován bezpečně. Bohužel zatím nenabízí české rozhraní.
+<span class="red">VoodooShield</span> je nejpřívětivější anti-executable a nejlepší volba pro obyčejné uživatele. Pro profesionální nasazení není z důvodů implementace ochrany vhodný. Kromě placené verze poskytuje i bezplatnou pro nekomerční využití, která poskytuje srovnatelnou ochranu, akorát nenabízí možnost rozšířené konfigurace &ndash; což běžného uživatele nemusí trápit. V základu je nakonfigurován bezpečně. Bohužel zatím nenabízí české rozhraní.
 
 > Instalace a konfigurace VoodooShield
 

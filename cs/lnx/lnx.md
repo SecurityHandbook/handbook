@@ -152,7 +152,7 @@ Virtualizace může být velmi bezpečný způsob ochrany před malware (zálež
 Nejčastější implementací virtualizace je **sandbox**. Existují dva druhy sandboxu:
 
 - sandbox nativně integrovaný v aplikaci (např. Chromium)
-- externí sandbox &ndash; např. Flatpak
+- externí sandbox &ndash; např. Flatpak, firejail
 
 Sandbox nativně integrovaný v aplikaci je nejúčinnější možností implementace sandboxu, jelikož je nastaven přesně na míru dané aplikaci.
 
@@ -210,7 +210,7 @@ Nikdy před příkaz **flatpak** nedávejte <span class="red">sudo</span>. Flatp
 
 #### Flathub:
 
-Flathub je oficiální platforma pro distribuci Flatpak aplikací. Naleznete zde již vcelku obstojný počet aplikací, který se neustále rozšiřuje. Například **LibreOffice**, GIMP, Atom, Signal, Audacity, Corebird, Blender, **Steam**, GeoGebra, Inkscape, Warmux,...
+Flathub je oficiální platforma pro distribuci Flatpak aplikací. Naleznete zde již vcelku obstojný počet aplikací, který se neustále rozšiřuje. Například **LibreOffice**, GIMP, Atom, Signal, VLC, Audacity, Blender, **Steam**, GeoGebra, Inkscape,...
 
 > Nastavení repozitáře Flathub
 
@@ -220,7 +220,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 > Instalace GNOME aplikací
 
-Ve Flatpaku by správně měly být všechny aplikace ve výchozím nastavení, na to si ovšem budeme ještě muset chvíli počkat. (*Fedora 28/29?*)
+Ve Flatpaku by správně měly být všechny aplikace ve výchozím nastavení, na to si ovšem budeme ještě muset chvíli počkat. (*Fedora 29?*)
 
 Je vhodné mít ve Flatpaku alespoň rizikové aplikace jako **Evince** (prohlížeč PDF) nebo **Eye of GNOME** (prohlížeč obrázků). Také je dobrý nápad nainstalovat flatpak verzi GNOME prohlížeče **Epiphany**, který následně můžete odděleně používat pro citlivé věci jako bankovnictví apod.
 

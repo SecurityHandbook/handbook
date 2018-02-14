@@ -276,7 +276,7 @@ chml C:\Users\[uživatel]\Videos -i:m -nw -nx
 <br><br><hr><br>
 
 ## AppContainer:
-AppContainer je implementace sandboxu integrovaná v OS od Windows 8. Je vyvinut pro ModernUI aplikace a např. MS Edge na něm má postavený svůj bezpečnostní model (používá několik AppContainerů zároveň). Existují také možnosti, jak upravit Win32 aplikaci, aby běžela v AppContainer, viz. [zde](https://www.howtogeek.com/250041/how-to-convert-a-windows-desktop-app-to-a-universal-windows-app/) nebo [zde](https://news.saferbytes.it/analisi/2013/07/securing-microsoft-windows-8-appcontainers/).
+AppContainer je implementace sandboxu integrovaná v OS od **Windows 8**. Je vyvinut pro ModernUI aplikace a např. MS Edge na něm má postavený svůj bezpečnostní model (používá několik AppContainerů zároveň). Existují také možnosti, jak upravit Win32 aplikaci, aby běžela v AppContainer, viz. [zde](https://www.howtogeek.com/250041/how-to-convert-a-windows-desktop-app-to-a-universal-windows-app/) nebo [zde](https://news.saferbytes.it/analisi/2013/07/securing-microsoft-windows-8-appcontainers/).
 
 AppContainer odděluje aplikace od sebe a částí OS. Podobnou snahu můžeme pozorovat i u Linuxu (Flatpak). Více o izolaci si můžete přečíst [zde](https://msdn.microsoft.com/en-us/library/windows/desktop/mt595898(v=vs.85).aspx).
 
