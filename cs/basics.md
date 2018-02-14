@@ -21,7 +21,8 @@
 - Před vykonáním libovolné akce 2x zkontrolujte její autenticitu.
 -	Veškerý SW stahujte výhradně ze stránek výrobce.
 - Používejte silná hesla dostatečně jednoduchá na zapamatování:
-<li style="list-style-type: none">![password_strength_sm](https://faq.mople71.cz/img/en/passwd.png)</li>
+<li style="list-style-type: none"><p class="imgsrc">*Password Strength.* Zdroj: https://xkcd.com/936/</p>
+![password_strength_sm](https://faq.mople71.cz/img/en/passwd.png)</li>
 - Používejte více hesel na různé služby, zvažte použití [klíčenky](#basics7).
 - Nepřipojujte se k neznámým/veřejným bezdrátovým sítím, případně přes ně neposílejte citlivé údaje a vyvarujte se nebezpečným protokolům (HTTP, FTP apod.). Ideálně použijte VPN.
 - Dávejte si pozor, kam jaké údaje zadáváte &ndash; s osobními údaji se dobře obchoduje.
