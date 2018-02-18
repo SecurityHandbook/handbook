@@ -5,11 +5,11 @@
 - Do adresního řádku prohlížeče zadejte:
 <li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
 a stiskněte **Enter**.</li>
-- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch1](https://faq.mople71.cz/img/cs/ch1.png)
+- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch](https://faq.mople71.cz/img/cs/ch.png)
 - V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu...</span>
-<li style="list-style-type: none">![ch2](https://faq.mople71.cz/img/cs/ch2.png)</li>
+<li style="list-style-type: none">![ch1](https://faq.mople71.cz/img/cs/ch1.png)</li>
 - V sekci **Soubory cookie** zatrhněte možnost <span class="green">Blokovat soubory cookie třetích stran a data webových stránek</span>.
-<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
+<li style="list-style-type: none">![ch2](https://faq.mople71.cz/img/cs/ch2.png)</li>
 - V pravém dolním rohu klikněte na <span class="green">Hotovo</span>.
 - Prohlížeč restartujte.
 
@@ -18,14 +18,14 @@ a stiskněte **Enter**.</li>
 - Do adresního řádku prohlížeče zadejte:
 <li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
 a stiskněte **Enter**.</li>
-- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch1](https://faq.mople71.cz/img/cs/ch1.png)
+- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch](https://faq.mople71.cz/img/cs/ch.png)
 - V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu</span>
-<li style="list-style-type: none">![ch2](https://faq.mople71.cz/img/cs/ch2.png)</li>
+<li style="list-style-type: none">![ch1](https://faq.mople71.cz/img/cs/ch1.png)</li>
 - V sekci **JavaScript** zablokujte spouštění JS.
-<li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
+<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
 - Klikněte na tlačítko <span class="green">Přidat</span> v sekci **Povolit**.
 - Zadejte adresu důvěryhodného webu, na kterém se může spouštět JS. Syntax je jednoduchý.
-<li style="list-style-type: none">![ch5](https://faq.mople71.cz/img/cs/ch5.png)</li>
+<li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
 - Klikněte na <span class="green">Přidat</span>.
 
 > Blokování reklamy
@@ -72,7 +72,8 @@ ChromiumBringToFront=true
 ChromiumWaitForDownloadEnd=true</code></pre></li>
 - Změny uložte a konfigurační soubor zavřete.
 - Spusťte aplikaci <span class="green">chrlauncher</span>.
-- Chrlauncher následně můžete připnout na panel a nastavit jako výchozí prohlížeč v **Nastavení**.
+- Chcete-li nastavit chrlauncher jako výchozí prohlížeč, klikněte pravým tlačítkem na skript <span class="green">SetDefaultBrowser</span> ve složce a zvolte možnost: ![admin](https://mople71.cz/img/icons/admin.png) **Spustit jako správce**.
+- Na Windows 10 budete muset následně výchozí prohlížeč ještě zvolit v **Nastavení**.
 <li style="list-style-type: none">![chrl2](https://faq.mople71.cz/img/cs/chrl2.png)</li>
 
 > Bezpečnější nastavení a blokování reklam
@@ -134,13 +135,13 @@ a stiskněte **Enter**.</li>
 - V horní liště se přesuňte do záložky <span class="green">Upřesnit</span>.
 - V sekci **Procházení** <span style="color: #BF0000">odstraňte</span> zatržítko u položky <span class="green">Povolit rozšíření prohlížečů jiných výrobců</span>.
 - V sekci **Zabezpečení** <span style="color: #BF0000">odstraňte</span> zatržítko u následujících položek:
-    - Používat protokol SSL 3.0
-    - Povolit úložiště DOM (volitelné, může znefunkčnit některé stránky)
+  - Používat protokol SSL 3.0
+  - Povolit úložiště DOM (volitelné, může znefunkčnit některé stránky)
 - A naopak <span style="color: #BF0000">přidejte</span> zatržítko k následujícím položkám:
-    - Blokovat nezabezpečené bitové kopie s ostatním smíšeným obsahem
-    - Povolit filtr SmartScreen
-    - Povolit rozšířený chráněný režim
-    - Povolit striktní ověřování P3P
+  - Blokovat nezabezpečené bitové kopie s ostatním smíšeným obsahem
+  - Povolit filtr SmartScreen
+  - Povolit rozšířený chráněný režim
+  - Povolit striktní ověřování P3P
 - V dolním panelu aplikace klikněte na tlačítko <span class="green">OK</span> a nastavení zavřete.
 
 - Otevřete prohlížeč.

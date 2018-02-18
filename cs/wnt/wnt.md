@@ -1,9 +1,8 @@
 # FAQ &ndash; OS Windows
 Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto velmi důležité.
-Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (tzv. *layered config*) &ndash; pokud selže jedna vrstva, nastupuje druhá. Spousta běžných uživatelů spoléhá pouze na jednu tradiční vrstvu &ndash; antivir &ndash; což je z hlediska bezpečnosti tristní.
-Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na verzi a edici OS. V základním nastavení ovšem nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
+Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (tzv. *layered config*) &ndash; pokud selže jedna vrstva, nastupuje druhá. Spousta běžných uživatelů spoléhá pouze na jednu tradiční vrstvu &ndash; antivir &ndash; což je z hlediska bezpečnosti tristní. Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na verzi a edici OS. V základním nastavení ovšem nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
 
-Podporovanou verzí Windows v následující sekci je **Windows 10 Fall Creators Update** jakožto nejnovější OS s podporou do roku 2025. Obsažené informací jsou platné i pro OS **Windows 8.1 Update 3**, jen je místy nutné upravit postup. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí (pokud již neskončil) cyklus rozšířené podpory. Majitelé starších verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro starší verze zde nebude uváděn.
+Podporovanou verzí Windows v následující sekci je **Windows 10 Fall Creators Update** jakožto nejnovější OS s podporou do roku 2025. Obsažené informací jsou platné i pro OS **Windows 8.1 Update 3**, jen je místy nutné upravit postup. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí (pokud již neskončil) cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
 
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/wnt/adv.php#wnt).
 
@@ -44,10 +43,21 @@ Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, je
 
 > Přidání účtu Správce (starší verze Windows)
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
-<li style="list-style-type: none"><pre><code>control userpasswords</code></pre>
-a stiskněte **Enter**.</li>
-- Otevře se nastavení uživatelského účtu. Klikněte na možnost <span class="green">Spravovat jiný účet</span> a vytvořte Standardní účet s omezenými oprávněními, ze kterého můžete prohlížet internet apod.
+- Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Jiné účty</span>.
+- Zvolte možnost <span class="green">Přidat účet</span>.
+- Otevře se dialog pro přidání nového uživatele. V pravém dolním rohu klikněte na <span class="green">Přihlásit se bez účtu Microsoft</span>.
+- Klikněte na tlačítko <span class="green">Místní účet</span>.
+- Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné zapamatovatelné heslo.
+- Potvrďte přidání uživatele (<span class="green">Dokončit</span>).
+- V seznamu dalších účtů se zobrazí účet **Admin**. Klikněte na něj a následně zvolte <span class="green">Upravit</span>.
+<li style="list-style-type: none">![wntusleg](https://faq.mople71.cz/img/cs/wntusleg.png)</li>
+- Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Správce</span> a klikněte na <span class="green">OK</span>.
+<li style="list-style-type: none">![wntusleg1](https://faq.mople71.cz/img/cs/wntusleg1.png)</li>
+- Odhlaste se z vašeho účtu a přihlaste se jako **Admin**.
+- Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Jiné účty</span>.
+- V seznamu dalších účtů nalezněte svůj účet, klikněte na něj a následně zvolte <span class="green">Upravit</span>.
+- Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Standardní uživatel</span> a klikněte na <span class="green">OK</span>.
+- Přihlaste se zpět na svůj uživatelský účet.
 
 <br>
 
@@ -55,7 +65,7 @@ a stiskněte **Enter**.</li>
 
 Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často opravují mnoho bezpečnostních chyb. Neaktuální děravý SW je implicitně nebezpečný.
 
-Windows by se měly ve výchozím nastavení aktualizovat samy (v edici Home automatické aktualizace dokonce nelze vypnout). Mnohé důležité aplikace (např. prohlížeče) se obvykle aktualizují automaticky.
+Windows by se měly ve výchozím nastavení aktualizovat samy (v edici *Home* automatické aktualizace dokonce nelze vypnout). Mnohé důležité aplikace (např. prohlížeče) se obvykle aktualizují automaticky.
 
 Pro kontrolu aktualizací ostatního SW můžete použít aplikaci <span class="green">Heimdal Free</span>, která běží na pozadí a upozorní vás v případě neaktuálního SW, případně jej sama aktualizuje, automatické aktualizace ovšem teoreticky mohou způsobit problémy. Návod k *Heimdal Free* naleznete v sekci [Ostatní aplikace](#wnt2.6).
 
@@ -73,7 +83,7 @@ a stiskněte **Enter**.</li>
 
 ### User Account Control
 
-User Account Control je důležitá součást bezpečnostního modelu OS od Windows Vista, kde se dočkala obrovské kritiky a ve Windows 7 proto byla v základním nastavení oslabena. Vypnutí UAC je z hlediska bezpečnosti sebevražda. Naopak je doporučeno nastavení UAC upravit na ještě přísnější úroveň.
+*User Account Control* je důležitá součást bezpečnostního modelu OS od **Windows Vista**, kde se dočkala obrovské kritiky a ve Windows 7 proto byla v základním nastavení oslabena. Vypnutí UAC je z hlediska bezpečnosti sebevražda. Naopak je doporučeno konfiguraci UAC nastavit na ještě přísnější úroveň.
 
 > Nastavení UAC
 
@@ -86,7 +96,7 @@ a stiskněte **Enter**.</li>
 
 <br>
 
-### Vypnutí nebezpečných služeb a funkcí Windows
+### Bezpečné nastavení služeb a funkcí Windows
 
 ![idea](https://mople71.cz/img/sm/idea.gif) Pokročilejší si skript mohou upravit &ndash; je v něm několik zakomentovaných bezpečnostních opatření, které nemohou být aplikovány širokopásmově...
 
@@ -95,6 +105,17 @@ a stiskněte **Enter**.</li>
 - Uložte a obsah archivu vyextrahujte <span class="blue">na Plochu</span>.
 - Na skript jménem <span class="green">safesvc</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/icons/admin.png) **Spustit jako správce**.
 - Nechte skript pracovat, na konci procesu vám řekne o souhlas k restartu OS.
+
+<br>
+
+> Nastavení SmartScreen (starší verze Windows)
+
+- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+<li style="list-style-type: none"><pre><code>smartscreensettings</code></pre>
+a stiskněte **Enter**.</li>
+- Otevře se nastavení SmartScreen filtru. Upravte jej dle obrázku:
+<li style="list-style-type: none">![smartscreen](https://faq.mople71.cz/img/cs/smartscreen.png)</li>
+- Klikněte na <span class="green">OK</span>.
 
 #### Bezpečné nastavení sítě:
 > Konfigurace síťového adaptéru + DNS
@@ -119,6 +140,10 @@ OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
 - Po zvolení DNS serverů se přepněte zpět do okna Vlastností IPv4 protokolu.
 - Klikněte na <span class="green">Použít následující adresy serverů DNS</span> a do kolonek vepište vámi zvolené DNS.
 <li style="list-style-type: none">![wntnet3](https://faq.mople71.cz/img/cs/wntnet3.png)</li>
+- Klikněte na tlačítko <span class="green">Upřesnit...</span>
+- V horním panelu se přesuňte do záložky **WINS** a zvolte možnost <span class="green">Zakázat rozhraní NetBIOS nad protokolem TCP/IP</span>.
+<li style="list-style-type: none">![wntnet4](https://faq.mople71.cz/img/cs/wntnet4.png)</li>
+- Klikněte na <span class="green">OK</span>.
 - Klikněte na <span class="green">OK</span> a okno zavřete.
 
 ![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Stejný postup aplikujte pro všechny síťové adaptéry v seznamu (obvykle WLAN).</span>
@@ -130,7 +155,6 @@ OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
 - Vypněte Usnadnění přístupu na přihlašovací obrazovce &ndash; součást skriptu **SafeSVC**.
 - Vypněte AutoPlay:
     - Otevřete si <span class="green">Nastavení.</span> Rozklikněte kategorii **Zařízení** a následně zvolte podkategorii <span class="green">Automatické přehrávání</span>.
-    - Klikněte na tlačítko <span class="green">Přidat do tohoto počítače někoho dalšího</span>.
     - Automatické přehrávání vypněte.
     <li style="list-style-type: none">![autoplay](https://faq.mople71.cz/img/cs/autoplay.png)</li>
 - Vypněte Remote Assistance:
@@ -138,7 +162,7 @@ OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
     <li style="list-style-type: none"><pre><code>sysdm.cpl</code></pre>
 a stiskněte **Enter**.</li>
     - Zobrazí se Vlastnosti systému.
-    - Přesuňte se do záložky **Vzdálený přístup** a odstraňte zatržítko u položky <span class="green">Povolit připojení vzdálené pomoci k tomuto počítači</span>.
+    - Přesuňte se do záložky **Vzdálený přístup** a <span style="color: #BF0000">odstraňte</span> zatržítko u položky <span class="green">Povolit připojení vzdálené pomoci k tomuto počítači</span>.
     <li style="list-style-type: none">![sysdm](https://faq.mople71.cz/img/cs/sysdm.png)</li>
     - Klikněte na <span class="green">OK</span>.
 
@@ -152,20 +176,31 @@ a stiskněte **Enter**.</li>
 - virtualizace
 - užitečné aplikace
 
-Vrstev zabezpečení existuje mnohem více a spousta lidí jich kombinuje desítky dohromady. Osobně to považuji za nerozumné, kombinování příliš mnoho vrstev zvětšuje prostor pro exploitaci a ve finále má spíše opačný účinek. Cílem by mělo být použít co nejméně aplikací třetích stran k dosáhnutí účinného zabezpečení. Níže si rozebereme jednotlivé vrstvy.
+Vrstev zabezpečení existuje násobně více, výše jsou zmíněny pouze vrstvy vyhodnoceny jako důležité. Kombinování příliš mnoha vrstev rozšiřuje prostor pro exploitaci a ve finále má spíše opačný účinek. Cílem by mělo být použít co nejméně kódu třetí strany k dosáhnutí účinného zabezpečení.
 
 <br>
 
 ### Antivirus / Antimalware:
-Antivirus nebo antimalware (AV/M) je uživateli chápán jako základní vrstva zabezpečení, která stačí k zabezpečení OS. To již ovšem není tak úplně pravda.
+Antivirus nebo antimalware (AV/M) je uživateli chápán jako základní vrstva zabezpečení, která stačí k zabezpečení OS. Tato teze již ovšem nějakou dobu není pravdivá.
 
 > Rozebrání problematiky antivirů
 
-Tradiční mechanismus antiviru funguje na bázi databáze (někdy také nazýváno podpisy) &ndash; detekuje známý malware, jejichž otisk má v databázi. V dnešní době již antiviry mají tzv. heuristiku, kdy spustitelný soubor vyhodnocují na základě jeho aktivit po spuštění (obvykle vzorek testují v izolovaném prostředí &ndash; sandboxu). Tato metoda ovšem není ani z daleka dokonalá ze dvou důvodů. Zaprvé, tato metoda stále detekuje malware na základě předvolených pravidel, které u vzorku pozoruje. Pokud vzorek provede škodlivou akci, která ale není v heuristickém systému daného antiviru označena jako škodlivá, heuristika vyhodnotí vzorek jako neškodný. Zadruhé, mnoho vzorků malware je schopno poznat, že je spuštěno v sandboxu a žádné škodlivé aktivity neprovést. V takovém případě bude vzorek také vyhodnocen jako neškodný.
-Další problém antivirů je ten, že většina z nich je stará &ndash; mají starý kód který je tak komplexní, že jej vývojáři nebudou přepisovat, pouze záplatovat a nabalovat na něj nové funkce. Z tohoto důvodu je mnoho antivirů náchylných na hackerské postupy klidně 10 let staré.
-Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &ndash; natož jedinou &ndash; vrstvu zabezpečení. Antivirus ovšem stále má v bezpečnostní konfiguraci místo.
+Tradiční mechanismus antiviru pracuje na bázi databáze &ndash; detekuje známý malware, jejichž otisk má v databázi. Tento systém má vcelku očividnou slabinu &ndash; pokud otisk pro malware neexistuje, antivir jej nevyhodnotí jako škodlivý.
+Další technologií je tzv. *heuristika*, kdy je škodlivost kódu vyhodnocována na základě jeho aktivit po spuštění (vzorek je zpravidla testován v izolovaném prostředí &ndash; sandboxu). Tato technologie má také slabinu &ndash; škodlivost je posuzována na základě předvolených pravidel a indikací, které u vzorku pozoruje. Pokud malware provede činnost, která není zaznamenána heuristickým systémem jako škodlivá, antivir jej nevyhodnotí jako škodlivý. Tvůrci malware tedy používají různé postupy, aby heuristickou detekcí jejich kód prošel.
+
+Další problém antivirů je ten, že většina z nich je stará &ndash; mají starý kód, který je tak komplexní, že jej vývojáři nepřepisují, pouze záplatují a přidávají nové funkce. V důsledku je mnoho antivirů náchylných na hackerské útoky 10 let staré.
+
+Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &ndash; natož jedinou &ndash; vrstvu zabezpečení. Antivirus ovšem má v bezpečnostní konfiguraci místo.
 
 <span class="green">Windows Defender</span> integrovaný ve **Windows 8.1 Update 3** a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vrstvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a v OS mnohdy provádí v porovnání s integrovaným řešením naprosté šílenosti.
+
+> Porovnání Windows Defender a AV/M řešení třetích stran
+
+Do příchodu **Windows 8.1 Update 3** byla AV/M řešení třetích stran brána jako nutné zlo, jelikož být bez žádného AV/M řešení je výrazně horší, nežli být s AV/M řešením třetí strany, a OS tehdy neobsahoval použitelné vestavěné AV/M řešení. S příchodem **Windows 10** byl <span class="green">Windows Defender</span> z velké části přepsán a s každou novou verzí OS se dočkal vylepšení. V aktuálním stavu se jedná o kvalitní moderní AV/M řešení.
+
+Ostatní AV/M řešení nejsou vestavěná v OS &ndash; kvalita jejich kódu nemusí (může) být na úrovni zbytku OS, s každým řádkem kódu navíc se ovšem zvětšuje prostor pro exploitaci. Na rozdíl od <span class="green">Windows Defender</span> nejsou korektně integrovány do OS &ndash; operují proto na bázi hacku a zásahu do bezpečnostního modelu OS (a aplikací jako internetových prohlížečů). V porovnání s integrovaným řešením navíc zpravidla postrádají/nevyužívají moderní mitigace proti exploitaci, které mají všechny systémové aplikace.
+
+Detekce <span class="green">Windows Defender</span> je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na instalacích aktuálních verzí OS &ndash; počet uživatelů zvyšuje šanci zachytit nový malware. Implementuje vyspělý cloudový systém, díky kterému nabízí užitečné pokročilé funkce (např. *block on first sight*).
 
 Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům (tzv. *Řízený přístup ke složkám*) a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci [anti-exploit](#wnt2.4)\).
 
@@ -201,19 +236,19 @@ Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows D
 
 <br>
 
-Pro nižší verze Windows lze instalaci antiviru třetí strany pochopit, jelikož OS nemá integrované AV/M řešení.
+Ve verzi OS **Windows 8.1 Update 3** obsahuje <span class="green">Windows Defender</span> méně funkcí, stále se ovšem jedná o nejlepší volbu. Pro nižší verze OS poté existuje substituce Defenderu &ndash; [Microsoft Security Essentials](https://www.microsoft.com/cs-cz/download/details.aspx?id=5201).
 
-> Doporučené antiviry pro Windows 8 a níže
+> Ochrana před viry a hrozbami &ndash; nastavení (starší verze Windows)
 
-#### Bezplatná řešení:
-- [Sophos Home](https://www.sophos.com/en-us/lp/sophos-home.aspx) &ndash; anglické rozhraní, špičková administrace
-- [Microsoft Security Essentials](https://www.microsoft.com/cs-cz/download/details.aspx?id=5201) &ndash; české rozhraní, substituce Defenderu pro Windows 7 a Windows Vista
-- [Bitdefender Free](https://www.bitdefender.com/solutions/free.html) &ndash; anglické rozhraní
-
-#### Placená řešení:
-- [Emsisoft Anti-Malware](https://www.emsisoft.com/en/software/antimalware/) &ndash; anglické rozhraní
-- [F-Secure](https://www.f-secure.com/en/web/home_global/safe?icid=1526) &ndash; české rozhraní
-- [Bitdefender](https://www.bitdefender.com/solutions/internet-security.html) &ndash; anglické rozhraní, existuje i [česká verze](https://www.bitdef.cz/)
+- Otevřete si <span class="green">Windows Defender</span>.
+- Přesuňte se do záložky **Nastavení** a zvolte podkategorii <span class="green">Ochrana v reálném čase</span>.
+- Zkontrolujte zatržítko u volby <span class="green">Zapnout ochranu v reálném čase</span>.
+- Přesuňte se do podkategorie **Upřesnit**. Zkontrolujte konfiguraci ochrany a případně opravte:
+<li style="list-style-type: none">![wdleg](https://faq.mople71.cz/img/cs/wdleg.png)</li>
+- Přesuňte se do podkategorie **Komunita MAPS**. Zkontrolujte konfiguraci ochrany a případně opravte:
+<li style="list-style-type: none">![wdleg1](https://faq.mople71.cz/img/cs/wdleg1.png)</li>
+- Přesuňte se do podkategorie **Správce** a zkontrolujte zatržítko u volby <span class="green">Zapnout tuto aplikaci</span>.
+- Případné změny uložte a aplikaci zavřete.
 
 <br>
 
@@ -223,16 +258,16 @@ Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před út
 
 Základní nevýhoda WDF pro běžné uživatele je absence pokročilejšího intuitivního rozhraní. Jednoduché rozhraní naleznete v <span class="green">Centru zabezpečení v programu Windows Defender</span>.
 
-<span class="red">Comodo Firewall</span>. Velmi oblíbená alternativa. Ano, je intuitivnější a obsahuje HIPS. Na druhou stranu, osobně důrazně nedoporučuji jakýkoli produkt od firmy **Comodo**.
+**Windows Defender Firewall** je v základu nastaven na blokování příchozí komunikace, která není explicitně povolena. Chcete-li posunout bezpečnost na výrazně vyšší úroveň, je nutné nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V nejnovější verzi Windows je ovšem taková konfigurace značně problematická, návod proto naleznete pouze v [FAQ pro pokročilé](https://faq.mople71.cz/cs/wnt/adv.php#wnt1).
 
-**Windows Defender Firewall** je v základu nastaven na blokování příchozí komunikace, která není explicitně povolena. Chcete-li posunout bezpečnost na výrazně vyšší úroveň, je dobrý nápad nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V nejnovější verzi Windows je ovšem takové nastavení problematické, a návod proto naleznete pouze v FAQ pro pokročilé.
+Firewall aplikace třetích stran jako <span class="red">Comodo Firewall</span> jsou nedoporučeny.
 
 <br>
 
 ### Anti-executable:
 Anti-executable je jedna z nejúčinnějších vrstev ochrany. Jak napovídá název, anti-executable řešení zabraňuje spuštění malware.
 
-Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně souboru rovnou zabraní spustit se. Nastavení whitelistu není úkol pro běžné uživatele, existují ovšem i řešení, která umí whitelist vytvořit prakticky bez uživatelské interakce.
+Většina řešení funguje na principu *whitelistu* &ndash; má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně souboru rovnou zabraní ve spuštění. Nastavení whitelistu není úkol pro běžné uživatele, existují ovšem i řešení, která umí whitelist vytvořit s minimem uživatelské interakce.
 
 #### Přehled anti-executable řešení:
 - [VoodooShield](https://voodooshield.com/) (VS)
@@ -242,7 +277,7 @@ Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno
 - [AppLocker](https://technet.microsoft.com/cs-cz/library/dd759117.aspx)
 - [Software Restrtiction Policies](https://technet.microsoft.com/cs-cz/library/hh831534.aspx) (SRP)
 
-<span class="red">VoodooShield</span> je nejpřívětivější anti-executable a nejlepší volba pro obyčejné uživatele. Kromě placené verze poskytuje i bezplatnou pro nekomerční využití, která poskytuje srovnatelnou ochranu, akorát nenabízí možnost rozšířené konfigurace, což běžnému uživateli nevadí. V základu je nakonfigurován bezpečně. Bohužel zatím nenabízí české rozhraní.
+<span class="red">VoodooShield</span> je nejpřívětivější anti-executable a nejlepší volba pro obyčejné uživatele. Pro profesionální nasazení není z důvodů implementace ochrany vhodný. Kromě placené verze poskytuje i bezplatnou pro nekomerční využití, která poskytuje srovnatelnou ochranu, akorát nenabízí možnost rozšířené konfigurace &ndash; což běžného uživatele nemusí trápit. V základu je nakonfigurován bezpečně. Bohužel zatím nenabízí české rozhraní.
 
 > Instalace a konfigurace VoodooShield
 
@@ -275,7 +310,7 @@ Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno
 
 <span class="red">NVT Anti-AutoExec</span> je drobná aplikace, která automaticky zabraňuje šíření USB malware. Stačí nainstalovat a ochrana je aktivní bez jakékoli interakce. Bohužel v současném stavu nefunguje s nejnovější verzí **Fall Creators Update**, snad brzy dojde k nápravě.
 
-<span class="red">AppGuard</span> je profesionální anti-executable určený převážně pro firemní sféru, je ovšem dostupný i v domácí verzi. Jeho nastavení je vcelku komplikované a přizpůsobené pro odborníky.
+<span class="red">AppGuard</span> je profesionální anti-executable určený převážně pro firemní sféru, je ovšem dostupný i v domácí verzi. Jeho nastavení je vcelku komplikované a uzpůsobené pro odborníky.
 
 <span class="red">AppLocker</span> je anti-executable integrovaný ve Windows v edicích Ultimate, Education a Enterprise. Umožňuje ovládání spustitelných souborů, skriptů, DLL knihoven, MSI instalátorů a ModernUI (metro) aplikací. Poskytuje vcelku slušnou ochranu, na druhou stranu existují známé způsoby jeho obejití.
 
@@ -284,7 +319,7 @@ Správný anti-executable funguje na principu *whitelistu* &ndash; má nastaveno
 <br>
 
 ### Anti-exploit:
-Každý kód obsahuje minimálně jednu chybu. Toho zneužívají exploity šířící se internetem. Anti-exploit aplikace přicházejí s mitigacemi, které mají za cíl znemožnit využití jednoduchých způsobů exploitace a proces exploitace výrazně ztížit.
+Každý kód obsahuje minimálně jednu chybu. Toho zneužívají *exploity* šířící se internetem. Anti-exploit aplikace přicházejí s mitigacemi, které mají za cíl znemožnit využití jednoduchých způsobů exploitace a proces exploitace výrazně ztížit.
 
 Windows využívají velké množství mitigací a exploitace samotného OS a aplikací OS je tedy velmi nákladná. Některé aplikace (např. Chrome) jsou také na velmi vysoké úrovni a jejich exploitace je nákladná. Jsou zde ovšem aplikace, které žádné anti-exploit mitigace nepoužívají a někdy je používání těchto aplikací nezbytné. V takovém případě existují anti-exploit řešení, která umí exploitaci zmíněných aplikací výrazně ztížit.
 
@@ -335,36 +370,30 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 
 > Instalace a konfigurace EMET (starší verze Windows)
 
-- Stáhněte si nejnovější verzi [EMET](https://technet.microsoft.com/en-us/security/jj653751).
-- Aplikaci nainstalujte, licenci odsouhlaste tlačítkem <span class="green">I Agree</span>.
+- Stáhněte si nejnovější verzi [EMET](https://aka.ms/emetdownload).
+- Aplikaci nainstalujte.
 - V průběhu instalace se zobrazí okno se základním nastavením aplikace. Zvolte možnost <span class="green">Use Recommended Settings</span> a klikněte na <span class="green">Finish</span>.
 <li style="list-style-type: none">![emet](https://faq.mople71.cz/img/en/emet.png)</li>
-- Po dokončení instalace otevřete EMET dvojitým poklepáním na jeho ikonu na hlavním panelu.
-<li style="list-style-type: none">![emet1](https://faq.mople71.cz/img/en/emettray.png)</li>
-
-![idea](https://mople71.cz/img/sm/idea.gif) <span class="green">Nyní máte nainstalovaný EMET v základní konfiguraci. Dále musíte nastavit ochranu pro všechny rizikové aplikace.</span>
-
+- Otevřete si <span class="green">EMET GUI</span>.
 - V horním menu EMET klikněte na tlačítko <span class="green">Apps</span>.
-- Zobrazí se seznam aplikací chráněných EMETem, pro přidání nové klikněte na tlačítko <span class="green">Add Application</span>.
+- Zobrazí se seznam mitigovaných aplikací, pro přidání nové klikněte na tlačítko <span class="green">Add Application</span>.
+<li style="list-style-type: none">![emet1](https://faq.mople71.cz/img/en/emet1.png)</li>
+- Nalezněte a zvolte požadovanou aplikaci, kterou chcete mitigovat.
+<li style="list-style-type: none">![wd7](https://faq.mople71.cz/img/cs/wd7.png)</li>
+- Upravte konfiguraci dle obrázku:
 <li style="list-style-type: none">![emet2](https://faq.mople71.cz/img/en/emet2.png)</li>
-- Otevře se okno průzkumníka Windows, v něm nalezněte aplikaci, kterou chcete mitigovat pomocí EMET a potvrďte ji. Tento proces opakujte pro všechny aplikace.
-
-![idea](https://mople71.cz/img/sm/idea.gif) Jaké aplikace mitigovat? Všechny internetové prohlížeče, PDF čtečky, aplikace pracující s archivy (7-zip apod.), přehrávače hudby (VLC), LibreOffice, Steam atd. Veškerý rizikový SW třetí strany. Pokud se ve složce aplikace nachází více spustitelných souborů, mitigujte všechny (kromě odinstalátorů).
-
-![emet3](https://faq.mople71.cz/img/cs/emet3.png)
-- Pro více rizikovější síťový SW &ndash; webové prohlížeče, Java, Flash, Steam apod. &ndash; zaškrtněte v seznamu <span style="color: #008000">všechny</span> možnosti mitigace kromě <span class="green">Fonts</span>.
-- Pro méně rizikový SW nemusíte zatrhávat mitigace <span class="green">EAF+</span> a <span class="green">ASR</span>. ASR může způsobovat pády aplikací.
-<li style="list-style-type: none">![emet4](https://faq.mople71.cz/img/en/emet4.png)</li>
 - Po dokončení nastavení všech aplikací zkontrolujte nastavení mitigací, případně opravte dle obrázku:
-<li style="list-style-type: none">![emet5](https://faq.mople71.cz/img/en/emet5.png)</li>
+<li style="list-style-type: none">![emet3](https://faq.mople71.cz/img/en/emet3.png)</li>
 - Klikněte na <span class="green">OK</span> a zavřete EMET spolu s vyskakovacím oknem, které se objeví.
+
+![idea](https://mople71.cz/img/sm/idea.gif) Jaké další aplikace mitigovat? Veškerý rizikový SW třetí strany &ndash; např. VLC, 7-Zip, PDF prohlížeč, Steam apod.
 
 ![idea](https://mople71.cz/img/sm/idea.gif) **TIP pro rychlou konfiguraci aplikace:**
 - Pro rychlou konfiguraci aplikace danou aplikaci nejprve spusťte.
-- Otevřete <span class="green">EMET GUI</span>.
+- Otevřete si <span class="green">EMET GUI</span>.
 - V listu běžících procesů nalezněte danou aplikaci, klikněte na ni pravým tlačítkem a zvolte možnost <span class="green">Configure Process...</span>
 - Otevře se nastavení aplikací s nově přidanou zvolenou aplikací, pro kterou následně nakonfigurujte mitigace, a klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![emet6](https://faq.mople71.cz/img/en/emet6.png)</li>
+<li style="list-style-type: none">![emet4](https://faq.mople71.cz/img/en/emet4.png)</li>
 
 <br>
 
@@ -397,7 +426,7 @@ Virtualizace může být velmi bezpečný způsob ochrany před malware (zálež
 - lehká virtualizace OS &ndash; [Shadow Defender](http://www.shadowdefender.com/)
 - sandbox &ndash; [Sandboxie](https://www.sandboxie.com/)
 
-Nejbezpečnější způsob virtualizace je virtuální počítač při korektním nastavení a aplikaci snapshotů. Lehká virtualizace OS spočívá ve vrácení změn v OS při restartu, může být velmi užitečná proti např. ransomware. U sandboxu velmi záleží na implementaci, bezplatné řešení Sandboxie poskytující externí sandbox pro aplikace, je spíše na hraní.
+Nejbezpečnější způsob virtualizace je virtuální počítač při korektním nastavení a využití snapshotů. Lehká virtualizace OS spočívá ve vrácení změn v OS při restartu, může být velmi užitečná proti např. ransomware. U sandboxu velmi záleží na implementaci, bezplatné řešení Sandboxie poskytující externí sandbox pro aplikace, je spíše na hraní.
 
 > Instalace a konfigurace Sandboxie
 
@@ -487,7 +516,7 @@ Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je 
 - užitečné aplikace &ndash; **Unchecky**, **Heimdal Free**
 - konfigurace pro pokročilé &ndash; dle znalostí
 
-Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nastavit OS (hlavně účet s omezeným oprávněním). V případě instalace 3-P internetového prohlížeče používat MS Edge pro bankovní účely a podobné citlivé věci. *Heimdal Free* nastavit na tichou automatickou aktualizaci aplikací. Samozřejmě, pokud zvládáte pokročilou konfiguraci popisovanou v FAQ pro pokročilé, úroveň zabezpečení můžete velmi výrazně zvýšit.
+Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nastavit OS. **MS Edge** používat pro bankovní účely a podobné citlivé věci, **Google Chrome** pro běžné brouzdání. **Heimdal Free** nastavit na tichou automatickou aktualizaci aplikací. Samozřejmě, pokud zvládáte pokročilou konfiguraci popisovanou v FAQ pro pokročilé, úroveň zabezpečení můžete velmi výrazně zvýšit.
 
 ![arrow](https://mople71.cz/img/sm/arrow.gif) Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.
 
