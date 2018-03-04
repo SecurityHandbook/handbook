@@ -61,7 +61,7 @@ Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, je
 
 <br>
 
-### Aktualizace OS a SW
+### Aktualizace OS a SW:
 
 Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často opravují mnoho bezpečnostních chyb. Neaktuální děravý SW je implicitně nebezpečný.
 
@@ -81,7 +81,7 @@ a stiskněte **Enter**.</li>
 
 <br>
 
-### User Account Control
+### User Account Control:
 
 *User Account Control* je důležitá součást bezpečnostního modelu OS od **Windows Vista**, kde se dočkala obrovské kritiky a ve Windows 7 proto byla v základním nastavení oslabena. Vypnutí UAC je z hlediska bezpečnosti sebevražda. Naopak je doporučeno konfiguraci UAC nastavit na ještě přísnější úroveň.
 
@@ -96,17 +96,16 @@ a stiskněte **Enter**.</li>
 
 <br>
 
-### Bezpečné nastavení služeb a funkcí Windows
+### Bezpečné nastavení služeb a funkcí Windows:
 
-![idea](https://mople71.cz/img/sm/idea.gif) Pokročilejší si skript mohou upravit &ndash; je v něm několik zakomentovaných bezpečnostních opatření, které nemohou být aplikovány širokopásmově...
+<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+Pokročilejší si skript mohou upravit &ndash; je v něm několik zakomentovaných bezpečnostních opatření, které nemohou být aplikovány širokopásmově...</p></div>
 
 ![batch](https://mople71.cz/img/icons/bat.png) **SafeSVC**:
 - Stáhněte si [SafeSVC](https://mople71.cz/safesvc.zip).
 - Uložte a obsah archivu vyextrahujte <span class="blue">na Plochu</span>.
 - Na skript jménem <span class="green">safesvc</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/icons/admin.png) **Spustit jako správce**.
 - Nechte skript pracovat, na konci procesu vám řekne o souhlas k restartu OS.
-
-<br>
 
 > Nastavení SmartScreen (starší verze Windows)
 
@@ -117,7 +116,9 @@ a stiskněte **Enter**.</li>
 <li style="list-style-type: none">![smartscreen](https://faq.mople71.cz/img/cs/smartscreen.png)</li>
 - Klikněte na <span class="green">OK</span>.
 
-#### Bezpečné nastavení sítě:
+<br>
+
+### Bezpečné nastavení sítě:
 > Konfigurace síťového adaptéru + DNS
 
 - Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
@@ -131,7 +132,9 @@ a stiskněte **Enter**.</li>
 - Klikněte na **Protokol IP verze 4 (TCP/IPv4)** a zvolte možnost <span class="green">Vlastnosti</span>.
 <li style="list-style-type: none">![wntnet2](https://faq.mople71.cz/img/cs/wntnet2.png)</li>
 
-![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Nyní nastavíme bezpečné DNS servery.</span>
+<div class="alert success"><p><img src="https://mople71.cz/img/success.png" alt="success"> **Úspěch**<br>
+Potenciálně nebezpečné protokoly jsou nyní vypnuty. Dále nastavíme bezpečné DNS servery.</p></div>
+
 - Pokud nevíte, co DNS je, přečtěte si tento [krátký článek](https://www.nic.cz/page/312/o-domenach-a-dns/).
 - Doporučuji použít DNSSEC. Ale můžete si vybrat z mnoha DNS serverů, zde je pár příkladů:
 <li style="list-style-type: none"><pre><code>CZ.NIC DNSSEC:        217.31.204.130, 193.29.206.206
@@ -146,11 +149,12 @@ OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
 - Klikněte na <span class="green">OK</span>.
 - Klikněte na <span class="green">OK</span> a okno zavřete.
 
-![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Stejný postup aplikujte pro všechny síťové adaptéry v seznamu (obvykle WLAN).</span>
+<div class="alert exclaim"><p><img src="https://mople71.cz/img/exclaim.png" alt="exclaim"> **Varování**<br>
+Pro dosáhnutí kýženého efektu je nutné kompletní postup aplikovat pro všechny síťové adaptéry v seznamu (obvykle WLAN).</p></div>
 
 <br>
 
-### Ostatní bezpečnostní nastavení
+### Ostatní bezpečnostní nastavení:
 
 - Vypněte Usnadnění přístupu na přihlašovací obrazovce &ndash; součást skriptu **SafeSVC**.
 - Vypněte AutoPlay:
@@ -168,7 +172,7 @@ a stiskněte **Enter**.</li>
 
 <br><br><hr><br>
 
-## Vrstvy zabezpečení OS Windows:
+## Vrstvy zabezpečení OS Windows
 - antivirus / antimalware
 - firewall
 - anti-executable
@@ -194,7 +198,7 @@ Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &
 
 <span class="green">Windows Defender</span> integrovaný ve **Windows 8.1 Update 3** a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vrstvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a v OS mnohdy provádí v porovnání s integrovaným řešením naprosté šílenosti.
 
-> Porovnání Windows Defender a AV/M řešení třetích stran
+> Porovnání Windows Defender vs. AV/M řešení třetích stran
 
 Do příchodu **Windows 8.1 Update 3** byla AV/M řešení třetích stran brána jako nutné zlo, jelikož být bez žádného AV/M řešení je výrazně horší, nežli být s AV/M řešením třetí strany, a OS tehdy neobsahoval použitelné vestavěné AV/M řešení. S příchodem **Windows 10** byl <span class="green">Windows Defender</span> z velké části přepsán a s každou novou verzí OS se dočkal vylepšení. V aktuálním stavu se jedná o kvalitní moderní AV/M řešení.
 
@@ -291,7 +295,8 @@ Většina řešení funguje na principu *whitelistu* &ndash; má nastaveno, kter
 - Po ukončení tréninku VoodooShield klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Always On</span>.
 <li style="list-style-type: none">![vs1](https://faq.mople71.cz/img/en/vs1.png)</li>
 
-![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">To je vše, nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když budete chtít instalovat libovolnou aplikaci, zvolte **Disable/Install Mode**.</span>
+<div class="alert success"><p><img src="https://mople71.cz/img/success.png" alt="success"> **Úspěch**<br>
+Nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když budete chtít instalovat libovolnou aplikaci, zvolte <strong>Disable/Install Mode</strong>.</p></div>
 
 #### Ukázky a poznatky z provozu:
 (obrázky jsou pouze ilustrativní)
@@ -386,9 +391,10 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 <li style="list-style-type: none">![emet3](https://faq.mople71.cz/img/en/emet3.png)</li>
 - Klikněte na <span class="green">OK</span> a zavřete EMET spolu s vyskakovacím oknem, které se objeví.
 
-![idea](https://mople71.cz/img/sm/idea.gif) Jaké další aplikace mitigovat? Veškerý rizikový SW třetí strany &ndash; např. VLC, 7-Zip, PDF prohlížeč, Steam apod.
+<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+Jaké další aplikace mitigovat? Veškerý rizikový SW třetí strany – např. VLC, 7-Zip, PDF prohlížeč, Steam apod.</p></div>
 
-![idea](https://mople71.cz/img/sm/idea.gif) **TIP pro rychlou konfiguraci aplikace:**
+**TIP pro rychlou konfiguraci aplikace:**
 - Pro rychlou konfiguraci aplikace danou aplikaci nejprve spusťte.
 - Otevřete si <span class="green">EMET GUI</span>.
 - V listu běžících procesů nalezněte danou aplikaci, klikněte na ni pravým tlačítkem a zvolte možnost <span class="green">Configure Process...</span>
@@ -414,7 +420,8 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 - Při zachycení útoku HMP.A školivou aplikaci ukončí a zobrazí následující hlášku:
 <li style="list-style-type: none">![hmpa3](https://faq.mople71.cz/img/en/hmpa3.png)</li>
 
-![idea](https://mople71.cz/img/sm/idea.gif) Více se dozívte v [manuálu](https://www.hitmanpro.com/en-us/medialibrary/Microsites/SurfRight/Resources/HitmanPro-Alert-Getting-Started.pdf?la=en).
+<div class="alert success"><p><img src="https://mople71.cz/img/success.png" alt="success"> **Tip**<br>
+Více informací můžete nalézt v [manuálu](https://www.hitmanpro.com/en-us/medialibrary/Microsites/SurfRight/Resources/HitmanPro-Alert-Getting-Started.pdf?la=en) [EN].</p></div>
 
 <br>
 
@@ -458,9 +465,12 @@ Užitečné aplikace, které nespadají ani pod jednu kategorii vrstev zabezpeč
 - V konfiguraci ponechte zapnuté pouze <span class="green">Software Update Notifications</span>.
 <li style="list-style-type: none">![hf](https://faq.mople71.cz/img/en/hf.png)</li>
 - Zapněte monitorování všech dostupných aplikací a případně i automatickou aktualizaci.
+
+<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+Ačkoli je *Heimdal Free* velmi kvalitní aplikace, automatická aktualizace aplikací otevírá prostor problémům. Na druhou stranu se jedná o menší zlo v porovnání s neaktuálními aplikacemi. Pokud tedy takto konfigurujete OS člověku, který si s PC nerozumí a nebude aplikace aktualizovat, povolení automatických aktualizací zvažte.</p></div>
+
 - Pro změnu nastavení &ndash; např. po instalaci nové aplikace, kterou *Heimdal Free* zatím nemonitoruje &ndash; otevřete **Heimdal Free** a přesuňte se do záložky <span class="green">Patching System</span>.
 <li style="list-style-type: none">![hf1](https://faq.mople71.cz/img/en/hf1.png)</li>
-<li style="list-style-type: none">![idea](https://mople71.cz/img/sm/idea.gif) Ačkoli je **Heimdal Free** velmi kvalitní aplikace, automatická aktualizace aplikací otevírá prostor problémům. Na druhou stranu se jedná o menší zlo v porovnání s neaktuálními aplikacemi. Pokud tedy takto konfigurujete OS člověku, který si s PC nerozumí a nebude aplikace aktualizovat, automatickou aktualizaci možná zapněte.</li>
 - Aplikaci povolte v **Řízeném přístupu ke složkám**, který následně opětovně povolte. Návod [zde](#wnt2.1).
 
 > Instalace a konfigurace HashTab
@@ -475,7 +485,7 @@ Užitečné aplikace, které nespadají ani pod jednu kategorii vrstev zabezpeč
 
 <br><br><hr><br>
 
-## Zabezpečení internetového prohlížeče:
+## Zabezpečení internetového prohlížeče
 - bezpečnější nastavení (vypnutí nebezpečných funkcí, ideálně vč. javascriptu)
 - blokování reklamy
 - oddělení prohlížeče od dat a fyzického OS (sandbox &lt; VM &lt; live OS)
@@ -498,11 +508,14 @@ Ze zmíněných prohlížečů bych doporučil <span class="green">Microsoft Edg
 
 <br><br><hr><br>
 
-## Doporučené bezpečnostní konfigurace:
+## Doporučené bezpečnostní konfigurace
 Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je slovo od slova kopírovat, stačí se inspirovat. Na druhou stranu níže zmíněné příklady konfigurací jsou plně funkční a relativně účinné. Pokud byste chtěli příklad aplikovat, počítá se s prostudováním celé sekce OS Windows v FAQ &ndash; hlavně návodů na jednotlivé programy &ndash; a aplikací zmíněných doporučení.
 
 #### Bezplatná konfigurace pro BFU, který neumí anglicky (např. prarodiče):
 > Konfigurace
+
+<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> <strong>Info</strong><br>
+Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.</p></div>
 
 - OS &ndash; Windows **10 Fall Creators Update**
 - bezpečné nastavení OS &ndash; **kompletní**
@@ -518,12 +531,13 @@ Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je 
 
 Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nastavit OS. **MS Edge** používat pro bankovní účely a podobné citlivé věci, **Google Chrome** pro běžné brouzdání. **Heimdal Free** nastavit na tichou automatickou aktualizaci aplikací. Samozřejmě, pokud zvládáte pokročilou konfiguraci popisovanou v FAQ pro pokročilé, úroveň zabezpečení můžete velmi výrazně zvýšit.
 
-![arrow](https://mople71.cz/img/sm/arrow.gif) Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.
-
 <br>
 
 #### Bezplatná konfigurace pro středně pokročilého, který umí anglicky:
 > Konfigurace
+
+<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> <strong>Info</strong><br>
+Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.</p></div>
 
 - OS &ndash; Windows **10 Fall Creators Update** / **8.1 Update 3**
 - bezpečné nastavení OS &ndash; **kompletní**
@@ -536,8 +550,6 @@ Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nas
 - zabezpečení prohlížeče &ndash; **kompletní**
 - užitečné aplikace &ndash; **Unchecky**, **HashTab**
 - konfigurace pro pokročilé &ndash; dle znalostí
-
-![arrow](https://mople71.cz/img/sm/arrow.gif) Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.
 
 <br><br><hr>
 

@@ -21,7 +21,8 @@ Použití FW třetí strany je zbytečné rozšiřování attack surface. Zákla
 
 Co se blokování odchozí komunikace týče, *Windows Defender Firewall* tuto funkci podporuje a umožňuje vcelku jednoduše nastavit.
 
-![idea](https://mople71.cz/img/sm/idea.gif) Návod měl původně být v sekci pro méně pokročilé, ovšem z důvodu nepříjemného bugu (nebo funkce) Windows 10, automatické aktualizace OS nelze ve whitelistu rozumně definovat.
+<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+Návod měl původně být v sekci pro méně pokročilé, ovšem z důvodu nepříjemného bugu (nebo funkce) Windows 10, automatické aktualizace OS nelze ve whitelistu rozumně definovat.</p></div>
 
 > Konfigurace WDF pro blokování odchozí komunikace
 
@@ -96,7 +97,7 @@ Je zde několik možností:
 - Instalovat aktualizace 1x měsíčně ručně a WU neřešit.
 - ...
 
-![arrow](https://mople71.cz/img/sm/arrow.gif) Problémem ovšem je, že přes WU se aktualizují definice <span class="green">Windows Defender</span>, které je důležité mít aktuální.
+Problémem ovšem je, že přes WU se aktualizují definice <span class="green">Windows Defender</span>, které je důležité mít aktuální.
 
 Jako nejrozumnější varianta se tedy jeví následující:
 
@@ -199,7 +200,8 @@ icacls "C:\Users\(uživ. jméno)" /c /deny Everyone:(OI)(CI)(X)</code></pre></li
 - Do příkazové řádky zadejte následující příkaz (cestu ke složce patřičně upravte):</li>
 <li style="list-style-type: none"><pre><code>icacls "C:\Users\User\AppData\Local\Temp" /remove Everyone /t</code></pre></li>
 
-![idea](https://mople71.cz/img/sm/idea.gif) V příkladu byla použita složka **Temp**, jejíž pravomoc exekuce obsahujících souborů může být vyžadována některými aplikacemi (včetně systémových &ndash; MS Edge). Každopádně z bezpečnostního hlediska není úplně ideální exekuci ve složce povolit.
+<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+V příkladu byla použita složka **Temp**, jejíž pravomoc exekuce obsahujících souborů může být vyžadována některými aplikacemi (včetně systémových &ndash; MS Edge). Každopádně z bezpečnostního hlediska není úplně ideální exekuci ve složce povolit.</p></div>
 
 <br><br><hr><br>
 
@@ -271,7 +273,8 @@ chml C:\Users\[uživatel]\Videos -i:m -nw -nx
 -nr (NO_READ_UP) */</code></pre></li>
 - Stejným způsobem můžete nastavit integritu pro libovolnou privátní složku na disku. Úroveň integrity a integritní politika se *dědí*, není tedy potřeba nastavovat integritu pro složky nacházející se v již nakonfigurovaných složkách.
 
-![arrow](https://mople71.cz/img/sm/arrow.gif) <span class='green'>Nyní máte nastavenou integritní politiku pro vaše privátní složky.</span>
+<div class="alert success"><p><img src="https://mople71.cz/img/success.png" alt="success"> **Úspěch**<br>
+Nyní máte nastavenou integritní politiku pro vaše privátní složky.</p></div>
 
 <br><br><hr><br>
 
