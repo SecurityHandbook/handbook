@@ -79,9 +79,8 @@ Na Arch Linux není problém provozovat RBAC, TOMOYO nebo AppArmor. SELinux je o
 
 > Instalace TOMOYO Linux
 
-![idea](https://mople71.cz/img/sm/idea.gif) TOMOYO Linux není příliš rozšířený MAC a velmi těžko někde naleznete profily pro aplikace. Budete si je tedy muset sami vytvořit (příp. přepsat z AppArmor profilů &ndash; ty jsou všude).
-
-![idea](https://mople71.cz/img/sm/idea.gif) Dokumentaci k TOMOYO Linux naleznete [zde](https://tomoyo.osdn.jp/2.5/index.html.en).
+<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+TOMOYO Linux není příliš rozšířený MAC a velmi těžko někde naleznete profily pro aplikace. Budete si je tedy muset sami vytvořit (příp. přepsat z AppArmor profilů – ty jsou všude). Dokumentaci naleznete [zde](https://tomoyo.osdn.jp/2.5/index.html.en).</p></div>
 
 - Návod na kompilaci jádra naleznete v sekci [Kernel](#lnx2.1). Případně můžete využít předkompilovaný kernel z [AUR](https://aur.archlinux.org/packages/linux-tomoyo/).
 - Povolte TOMOYO Linux v GRUB:
@@ -137,8 +136,11 @@ PROFILE_VERSION=20110903
 - Restartujte OS.
 - Otevřete konfiguraci TOMOYO pro aplikace:
 <li style="list-style-type: none"><pre><code>sudo tomoyo-editpolicy</code></pre></li>
+
+<div class="alert exclaim"><p><img src="https://mople71.cz/img/exclaim.png" alt="exclaim"> **Varování**<br>
+TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spuštěny.</p></div>
+
 - Šipkami se posunujete mezi aplikacemi. Profil aplikace změníte klávesou <span class="red">S</span>, zadáním čísla profilu a stisknutím **Enter**.
-<li style="list-style-type: none">![exclaim](https://mople71.cz/img/sm/exclaim.gif) TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spuštěny.</li>
 <li style="list-style-type: none"><pre><code>0     #bez přístupu k internetu
 1     #s přístupem k internetu
 </code></pre></li>
@@ -175,7 +177,8 @@ Grsecurity patchset již není veřejně dostupný a bezplatný. Iniciativu hard
 
 > Ruční konfigurace a kompilace linux-hardened kernelu
 
-![idea](https://mople71.cz/img/sm/idea.gif) Konfigurace v předkompilovaném balíčku může být příliš striktní a nemusí se vám podařit nabootovat. V takovém případě je třeba identifikovat problém a kernel si následně zkompilovat ručně. Arch Linux to umožňuje velmi snadno díky *ABS*.
+<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+Konfigurace v předkompilovaném balíčku může být příliš striktní a nemusí se vám podařit nabootovat. V takovém případě je třeba identifikovat problém a kernel si následně zkompilovat ručně. Arch Linux to umožňuje velmi snadno díky *ABS*.</p></div>
 
 - Nainstalujte si **ASP** a **GPG**:
 <li style="list-style-type: none"><pre><code>sudo pacman -S asp gnupg
@@ -218,9 +221,10 @@ Balíčky neobsahující zmíněné mitigace je tedy nutné zkompilovat ručně.
 
 > Audit mitigací běžících procesů
 
-![idea](https://mople71.cz/img/sm/idea.gif) Pro audit použijeme skript **checksec**, který je podrobněji rozebírán níže.
-
 <pre><code>checksec --proc-all</code></pre>
+
+<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> <strong>Info</strong><br>
+Skript <strong>checksec</strong> je podrobněji rozebírán níže.</p></div>
 
 > Instalace hardening-wrapper
 

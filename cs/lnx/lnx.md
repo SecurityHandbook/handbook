@@ -109,18 +109,10 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](h
 <li style="list-style-type: none"><pre><code>217.31.204.130,193.29.206.206</code></pre></li>
 <li style="list-style-type: none">![lnxnet2](https://faq.mople71.cz/img/cs/lnxnet2.png)</li>
 - Klikněte na tlačítko <span class="green">Použít</span> a nastavení zavřete.
-<li style="list-style-type: none">![idea](https://mople71.cz/img/sm/idea.gif) Další doporučené DNS servery:</li>
-<li style="list-style-type: none"><pre><code>Adguard DNS:         176.103.130.130,176.103.130.131
-OpenDNS:             208.67.222.222,208.67.220.220</code></pre></li>
 
 <br><br><hr><br>
 
 ## Vrstvy zabezpečení OS:
-### Antivirus:
-Just kidding.
-
-<br>
-
 ### Firewall:
 Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před útoky ze sítě. *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*
 
