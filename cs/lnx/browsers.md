@@ -10,7 +10,12 @@ a stiskněte **Enter**.</li>
 <li style="list-style-type: none">![ch1](https://faq.mople71.cz/img/cs/ch1.png)</li>
 - V sekci **Soubory cookie** zatrhněte možnost <span class="green">Blokovat soubory cookie třetích stran a data webových stránek</span>.
 <li style="list-style-type: none">![ch2](https://faq.mople71.cz/img/cs/ch2.png)</li>
-- V pravém dolním rohu klikněte na <span class="green">Hotovo</span>.
+- V sekci **Flash** zablokujte spouštění obsahu Flash na webech.
+<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
+- V sekci **Synchronizace na pozadí** zablokujte nedávno zavřeným webům dokončit odeslání a příjem dat.
+<li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
+- V sekci **Přístup pluginu mimo izolovaný prostor** zablokujte webům přístup do počítače pomocí pluginu.
+<li style="list-style-type: none">![ch5](https://faq.mople71.cz/img/cs/ch5.png)</li>
 - Prohlížeč restartujte.
 
 > Omezení JavaScript
@@ -22,11 +27,12 @@ a stiskněte **Enter**.</li>
 - V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu</span>
 <li style="list-style-type: none">![ch1](https://faq.mople71.cz/img/cs/ch1.png)</li>
 - V sekci **JavaScript** zablokujte spouštění JS.
-<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
+<li style="list-style-type: none">![ch7](https://faq.mople71.cz/img/cs/ch7.png)</li>
 - Klikněte na tlačítko <span class="green">Přidat</span> v sekci **Povolit**.
 - Zadejte adresu důvěryhodného webu, na kterém se může spouštět JS. Syntax je jednoduchý.
-<li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
+<li style="list-style-type: none">![ch8](https://faq.mople71.cz/img/cs/ch8.png)</li>
 - Klikněte na <span class="green">Přidat</span>.
+- Prohlížeč restartujte.
 
 > Blokování reklamy
 
