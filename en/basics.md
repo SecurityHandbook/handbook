@@ -6,8 +6,9 @@
 - **adware** &ndash; malware category; SW containing ads and showing them to the user
 - **bundleware** &ndash; superfluous (not necessarily malicious) software bundled to other software
 - **foistware** &ndash; SW installed without user's knowledge designed to obtain money from user, usually by prompting that the OS is infected/broken and offering remedy for a price
+- <span class="green">ransomware</span> &ndash; SW blocking user from accessing to user data and demanding payment to allow such access
 - **rootkit** &ndash; code designed to hide presence of other malware on the device and aggravate their detection
-- <span class="green">exploit</span> &ndash; code taking advantage of a vulnerability in SW (including OS) in order to perform a specific action
+- **exploit** &ndash; code taking advantage of a vulnerability in SW (including OS) in order to perform a specific action
 - **zero-day (0-day)** &ndash; vulnerability exploited at the day of its disclosure or prior to it
 - **APT** &ndash; &bdquo;Advanced Persistent Threat&ldquo;; advanced threat usually tailored for a specific target, common users don't bump into these
 - <span class="green">payload</span> &ndash; core part of malware code that's responsible for the crucial malicious action
@@ -20,7 +21,8 @@
 - Prior to any action, double-check its autencity.
 - Download SW only from its official website.
 - Use strong passwords that are easy to remember:
-<li style="list-style-type: none">![password_strength_sm](https://faq.mople71.cz/img/en/passwd.png)</li>
+<li style="list-style-type: none"><p class="imgsrc">*Password Strength.* Source: https://xkcd.com/936/</p>
+![password_strength_sm](https://faq.mople71.cz/img/en/passwd.png)</li>
 - Use different passwords for different services, consider using a [keyring](#basics7).
 - Don't connect to unknown/unsafe networks, or at least never send any personal data through them and avoid using dangerous protocols (HTTP, FTP atc.). Ideally use a VPN.
 - Pay attention to what data you enter and where you enter them &ndash; selling personal data is a profitable business.
@@ -28,9 +30,9 @@
 
 <br>
 
-## Web Browsing Safely:
+## Safe Web Browsing:
 - Use a securely configured web browser (see other FAQ chapters).
-- Consider using a separate browser for personal things like online banking etc.
+- Consider using a separate browser for personal things (eg. online banking).
 - Don't visit unknown/untrusted sites and never download any files from them.
 - Reduce visiting 18+ sites as it's quite common for them to serve malicious ads and code.
 - Don't use social buttons outside the specific social network, these can be trivially mimicked.
@@ -39,7 +41,8 @@
 - Only open email attachments from trusted senders.
 - If you suspect a file to be malicious, always scan it before opening with eg.  [VirusTotal](https://www.virustotal.com/).
 
-![idea](https://mople71.cz/img/sm/idea.gif) The safest way to browse the web: <span class="green">securely configured live OS</span>. However, it should be pointed out that this option doesn't have to be 100% safe as well &ndash; for example the EFI can be exploited if the device was infected in the past.
+<div class="alert success"><p><img src="https://mople71.cz/img/success.png" alt="success"> <strong>Tip</strong><br>
+The safest way to browse the web: <span class="green">securely configured live OS</span>. However, it should be pointed out that this option doesn't have to be 100% safe as well &ndash; for example the EFI can be exploited if the device was infected in the past.</p></div>
 
 <br>
 

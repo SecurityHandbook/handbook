@@ -1,7 +1,7 @@
 # FAQ &ndash; Základní informace
 
 ## Základní pojmy:
-- <span class="green">hacker</span> &ndash; člověk zneužívající svých znalostí (např. v oblasti počítačové bezpečnosti) za účelem osobního zisku, tento význam je původně převzatý ze slova cracker
+- <span class="green">hacker</span> &ndash; člověk zneužívající svých znalostí (např. v oblasti počítačové bezpečnosti) za účelem osobního zisku, tento význam je původně převzatý ze slova *cracker*
 - <span class="green">malware</span> &ndash; termín pro škodlivý software, jež se dělí na mnoho (méně či více škodlivých) podskupin
 - **adware** &ndash; malware, který obsahuje reklamy a zobrazuje je uživateli
 - **bundleware** &ndash; nadbytečný (ne nutně škodlivý) software, který je přibalen k validnímu software
@@ -26,7 +26,6 @@
 - Používejte více hesel na různé služby, zvažte použití [klíčenky](#basics7).
 - Nepřipojujte se k neznámým/veřejným bezdrátovým sítím, případně přes ně neposílejte citlivé údaje a vyvarujte se nebezpečným protokolům (HTTP, FTP apod.). Ideálně použijte VPN.
 - Dávejte si pozor, kam jaké údaje zadáváte &ndash; s osobními údaji se dobře obchoduje.
-- Omezte citlivé informace na sociálních sítích a zkontrolujte, pro koho jsou jaké informace viditelné.
 - Nezapomeňte na fyzické zabezpečení zařízení &ndash; nastavte UEFI heslo, vypněte boot menu apod.
 
 <br>
