@@ -159,6 +159,7 @@ Další možností virtualizace je **virtuální počítač**, kdy je místo apl
 - Otevřete si aplikaci <span class="green">Boxy</span>.
 - V levém horním rohu aplikace klikněte na tlačítko <span class="green">Nový</span>.
 - Klikněte na <span class="green">Vybrat soubor</span> a nalezněte požadovaný ISO soubor.
+- Odmítněte případnou expresní instalaci.
 - Klikněte na tlačítko <span class="green">Přizpůsobit...</span>
 - Nastavte požadované množství alokované paměti (pro 64-bitový OS alespoň 3 GiB) a místa na disku.
 <li style="list-style-type: none">![gboxes](https://faq.mople71.cz/img/cs/gboxes.png)</li>
