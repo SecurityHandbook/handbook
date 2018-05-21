@@ -254,4 +254,4 @@ Z bezpečnostního hlediska doporučuji prohlížeč <span class="green">Chromiu
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.gif)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.svg)</h3>

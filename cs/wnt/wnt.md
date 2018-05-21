@@ -106,7 +106,9 @@ a stiskněte **Enter**.</li>
 
 ### User Account Control:
 
-*User Account Control* je důležitá součást bezpečnostního modelu OS od **Windows Vista**, kde se dočkala obrovské kritiky a ve Windows 7 proto byla v základním nastavení oslabena. Vypnutí UAC je z hlediska bezpečnosti sebevražda, naopak je doporučeno konfiguraci UAC nastavit na ještě přísnější úroveň. Od verze **Windows 10 April 2018 Update** je konfigurace UAC v základu nastavena na nejvyšší možnou úroveň.
+*User Account Control* je důležitá součást bezpečnostního modelu OS od **Windows Vista**, kde se dočkala obrovské kritiky a ve Windows 7 proto byla v základním nastavení oslabena. Vypnutí UAC je z hlediska bezpečnosti sebevražda, naopak je doporučeno konfiguraci UAC nastavit na ještě přísnější úroveň.
+
+Od verze **Windows 10 April 2018 Update** je konfigurace UAC v základu nastavena na nejvyšší možnou úroveň.
 
 > Nastavení UAC (starší verze Windows)
 
@@ -576,4 +578,4 @@ Tato konfigurace by při správném použití měla spolehlivě zabránit malwar
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.gif)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.svg)</h3>

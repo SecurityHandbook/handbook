@@ -318,4 +318,4 @@ Checksec je skript určený pro kontrolu nastavení kernelu a zobrazení *memory
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.gif)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.svg)</h3>
