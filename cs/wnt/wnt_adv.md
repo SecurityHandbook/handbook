@@ -21,7 +21,7 @@ Použití FW třetí strany je zbytečné rozšiřování attack surface. Zákla
 
 Co se blokování odchozí komunikace týče, *Windows Defender Firewall* tuto funkci podporuje a umožňuje vcelku jednoduše nastavit.
 
-<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Návod měl původně být v sekci pro méně pokročilé, ovšem z důvodu nepříjemného bugu (nebo funkce) Windows 10, automatické aktualizace OS nelze ve whitelistu rozumně definovat.</p></div>
 
 > Konfigurace WDF pro blokování odchozí komunikace
@@ -37,7 +37,8 @@ Návod měl původně být v sekci pro méně pokročilé, ovšem z důvodu nep�
 - Klikněte na <span class="green">OK</span>.
 <li style="list-style-type: none">![wdf2](https://faq.mople71.cz/img/cs/wdf2.png)</li>
 
-![arrow](https://mople71.cz/img/sm/arrow.gif) <span class="green">Nyní WDF blokuje veškerou odchozí komunikaci, která není na whitelistu. Dále je třeba nastavit whitelist.</span>
+<div class="alert success"><p><em class="icon-ok-circled"></em>**Úspěch**<br>
+Nyní WDF blokuje veškerou odchozí komunikaci, která není na whitelistu. Dále je třeba nastavit whitelist.</p></div>
 
 > Povolení odchozí komunikace pro všechny moderní aplikace
 
@@ -189,7 +190,7 @@ ACL můžeme využít následovně: můžeme zakázat spouštění spustitelnýc
 
 - Stiskněte kláv. zkratku <img src="https://mople71.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
 <li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs/wx.png)</li>
-- Do příkazové řádky zadejte následující příkazy (cestu ke složce uživatele patřičně upravte):</li>
+- Do příkazové řádky zadejte následující příkazy (cestu ke složce uživatele patřičně upravte):
 <li style="list-style-type: none"><pre><code>icacls "C:\Users\(uživ. jméno)" /c /inheritance:d
 icacls "C:\Users\(uživ. jméno)" /c /deny Everyone:(OI)(CI)(X)</code></pre></li>
 
@@ -197,10 +198,10 @@ icacls "C:\Users\(uživ. jméno)" /c /deny Everyone:(OI)(CI)(X)</code></pre></li
 
 - Stiskněte kláv. zkratku <img src="https://mople71.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
 <li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs/wx.png)</li>
-- Do příkazové řádky zadejte následující příkaz (cestu ke složce patřičně upravte):</li>
+- Do příkazové řádky zadejte následující příkaz (cestu ke složce patřičně upravte):
 <li style="list-style-type: none"><pre><code>icacls "C:\Users\User\AppData\Local\Temp" /remove Everyone /t</code></pre></li>
 
-<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 V příkladu byla použita složka **Temp**, jejíž pravomoc exekuce obsahujících souborů může být vyžadována některými aplikacemi (včetně systémových &ndash; MS Edge). Každopádně z bezpečnostního hlediska není úplně ideální exekuci ve složce povolit.</p></div>
 
 <br><br><hr><br>
@@ -273,7 +274,7 @@ chml C:\Users\[uživatel]\Videos -i:m -nw -nx
 -nr (NO_READ_UP) */</code></pre></li>
 - Stejným způsobem můžete nastavit integritu pro libovolnou privátní složku na disku. Úroveň integrity a integritní politika se *dědí*, není tedy potřeba nastavovat integritu pro složky nacházející se v již nakonfigurovaných složkách.
 
-<div class="alert success"><p><img src="https://mople71.cz/img/success.png" alt="success"> **Úspěch**<br>
+<div class="alert success"><p><em class="icon-ok-circled"></em>**Úspěch**<br>
 Nyní máte nastavenou integritní politiku pro vaše privátní složky.</p></div>
 
 <br><br><hr><br>

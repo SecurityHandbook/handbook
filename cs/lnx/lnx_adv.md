@@ -79,7 +79,7 @@ Na Arch Linux není problém provozovat RBAC, TOMOYO nebo AppArmor. SELinux je o
 
 > Instalace TOMOYO Linux
 
-<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 TOMOYO Linux není příliš rozšířený MAC a velmi těžko někde naleznete profily pro aplikace. Budete si je tedy muset sami vytvořit (příp. přepsat z AppArmor profilů – ty jsou všude). Dokumentaci naleznete [zde](https://tomoyo.osdn.jp/2.5/index.html.en).</p></div>
 
 - Návod na kompilaci jádra naleznete v sekci [Kernel](#lnx2.1). Případně můžete využít předkompilovaný kernel z [AUR](https://aur.archlinux.org/packages/linux-tomoyo/).
@@ -137,7 +137,7 @@ PROFILE_VERSION=20110903
 - Otevřete konfiguraci TOMOYO pro aplikace:
 <li style="list-style-type: none"><pre><code>sudo tomoyo-editpolicy</code></pre></li>
 
-<div class="alert exclaim"><p><img src="https://mople71.cz/img/exclaim.png" alt="exclaim"> **Varování**<br>
+<div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
 TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spuštěny.</p></div>
 
 - Šipkami se posunujete mezi aplikacemi. Profil aplikace změníte klávesou <span class="red">S</span>, zadáním čísla profilu a stisknutím **Enter**.
@@ -177,7 +177,7 @@ Grsecurity patchset již není veřejně dostupný a bezplatný. Iniciativu hard
 
 > Ruční konfigurace a kompilace linux-hardened kernelu
 
-<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Konfigurace v předkompilovaném balíčku může být příliš striktní a nemusí se vám podařit nabootovat. V takovém případě je třeba identifikovat problém a kernel si následně zkompilovat ručně. Arch Linux to umožňuje velmi snadno díky *ABS*.</p></div>
 
 - Nainstalujte si **ASP** a **GPG**:
@@ -223,7 +223,7 @@ Balíčky neobsahující zmíněné mitigace je tedy nutné zkompilovat ručně.
 
 <pre><code>checksec --proc-all</code></pre>
 
-<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> <strong>Info</strong><br>
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Skript <strong>checksec</strong> je podrobněji rozebírán níže.</p></div>
 
 > Instalace hardening-wrapper

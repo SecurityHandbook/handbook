@@ -2,7 +2,7 @@
 Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto velmi důležité.
 Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (tzv. *layered config*) &ndash; pokud selže jedna vrstva, nastupuje druhá. Spousta běžných uživatelů spoléhá pouze na jednu tradiční vrstvu &ndash; antivir &ndash; což je z hlediska bezpečnosti tristní. Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na verzi a edici OS. V základním nastavení ovšem nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
 
-Podporovanou verzí Windows v následující sekci je **Windows 10 Fall Creators Update** jakožto nejnovější OS s podporou do roku 2025. Obsažené informací jsou platné i pro OS **Windows 8.1 Update 3**, jen je místy nutné upravit postup. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí (pokud již neskončil) cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
+Podporovanou verzí Windows v následující sekci je **Windows 10 April 2018 Update** jakožto nejnovější OS s podporou do roku 2025. Obsažené informace jsou platné také pro **Windows 8.1 Update 3**. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí &ndash; pokud již neskončil &ndash; cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
 
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/wnt/adv.php#wnt).
 
@@ -23,6 +23,8 @@ OS Windows má dva typy uživatelských účtů: <span class="green">Standardní
 Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, jelikož má omezená oprávnění. Pokud se tedy do OS i přes všechna zdejší doporučení dostane malware, infikuje pouze uživatelský účet &ndash; na infikaci OS nemá potřebná oprávnění.
 <span class="red">Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá další opatření naprosto zbytečná.</span>
 
+Od verze OS **Windows 10 April 2018 Update** je nutné při vytváření lokálního účtu přes nastavení zvolit tři bezpečnostní otázky. Nechcete-li nastavovat bezpečnostní otázky, můžete jejich zadání obejít vytvořením účtu pomocí příkazového řádku.
+
 > Přidání účtu Správce a změna stávajícího uživatele na Standardního
 
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Rodina a jiní uživatelé</span>.
@@ -30,15 +32,36 @@ Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, je
 <li style="list-style-type: none">![wntus](https://faq.mople71.cz/img/cs/wntus.png)</li>
 - Otevře se dialog pro přidání nového uživatele. V levém dolním rohu klikněte na <span class="green">Nemám přihlašovací údaje této osoby</span>.
 - V levém dolním rohu zvolte možnost <span class="green">Přidat uživatele bez účtu Microsoft</span>.
-- Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné zapamatovatelné heslo.
-- V seznamu jiných uživatelů se zobrazí účet **Admin**. Klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
+- Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné zapamatovatelné heslo. Vyplňte bezpečnostní otázky a klikněte na <span class="green">Další</span>.
 <li style="list-style-type: none">![wntus1](https://faq.mople71.cz/img/cs/wntus1.png)</li>
-- Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Správce</span> a klikněte na <span class="green">OK</span>.
+- V seznamu jiných uživatelů se zobrazí účet **Admin**. Klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
 <li style="list-style-type: none">![wntus2](https://faq.mople71.cz/img/cs/wntus2.png)</li>
+- Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Správce</span> a klikněte na <span class="green">OK</span>.
+<li style="list-style-type: none">![wntus3](https://faq.mople71.cz/img/cs/wntus3.png)</li>
 - Odhlaste se z vašeho účtu a přihlaste se jako **Admin**.
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Rodina a jiní uživatelé</span>.
 - V seznamu jiných uživatelů nalezněte svůj účet, klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
 - Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Standardní uživatel</span> a klikněte na <span class="green">OK</span>.
+- Přihlaste se zpět na svůj uživatelský účet.
+
+> Přidání účtu Správce a změna stávajícího uživatele na Standardního (příkazový řádek)
+
+- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
+<li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs/wx.png)</li>
+- Vymyslete název účtu Správce (např. **Admin**) a zvolte pro něj silné zapamatovatelné heslo.
+- Pomocí příkazové řádky vytvořte následujícím způsobem účet Správce:
+<li style="list-style-type: none"><pre><code>net user "uživatelské_jméno" "heslo_uživatele" /add</code></pre></li>
+- Příklad:
+<li style="list-style-type: none"><pre><code>net user "Admin" "Mila mele maso." /add</code></pre></li>
+- Použijete-li heslo delší než 14 znaků, zobrazí se varování o zpětné kompatibilitě. To stisknutím klávesy **Enter** potvrďte.
+- Nově vytvořeného uživatele přidejte do administrátorské skupiny:
+<li style="list-style-type: none"><pre><code>net localgroup Administrators "Admin" /add</code></pre></li>
+- Odhlaste se z vašeho účtu a přihlaste se jako **Admin**.
+- Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Rodina a jiní uživatelé</span>.
+- V seznamu jiných uživatelů nalezněte svůj účet, klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
+<li style="list-style-type: none">![wntus](https://faq.mople71.cz/img/cs/wntusterm.png)</li>
+- Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Standardní uživatel</span> a klikněte na <span class="green">OK</span>.
+<li style="list-style-type: none">![wntus1](https://faq.mople71.cz/img/cs/wntusterm1.png)</li>
 - Přihlaste se zpět na svůj uživatelský účet.
 
 > Přidání účtu Správce (starší verze Windows)
@@ -83,9 +106,9 @@ a stiskněte **Enter**.</li>
 
 ### User Account Control:
 
-*User Account Control* je důležitá součást bezpečnostního modelu OS od **Windows Vista**, kde se dočkala obrovské kritiky a ve Windows 7 proto byla v základním nastavení oslabena. Vypnutí UAC je z hlediska bezpečnosti sebevražda. Naopak je doporučeno konfiguraci UAC nastavit na ještě přísnější úroveň.
+*User Account Control* je důležitá součást bezpečnostního modelu OS od **Windows Vista**, kde se dočkala obrovské kritiky a ve Windows 7 proto byla v základním nastavení oslabena. Vypnutí UAC je z hlediska bezpečnosti sebevražda, naopak je doporučeno konfiguraci UAC nastavit na ještě přísnější úroveň. Od verze **Windows 10 April 2018 Update** je konfigurace UAC v základu nastavena na nejvyšší možnou úroveň.
 
-> Nastavení UAC
+> Nastavení UAC (starší verze Windows)
 
 - Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>useraccountcontrolsettings</code></pre>
@@ -98,7 +121,7 @@ a stiskněte **Enter**.</li>
 
 ### Bezpečné nastavení služeb a funkcí Windows:
 
-<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Pokročilejší si skript mohou upravit &ndash; je v něm několik zakomentovaných bezpečnostních opatření, které nemohou být aplikovány širokopásmově...</p></div>
 
 ![batch](https://mople71.cz/img/icons/bat.png) **SafeSVC**:
@@ -132,7 +155,7 @@ a stiskněte **Enter**.</li>
 - Klikněte na **Protokol IP verze 4 (TCP/IPv4)** a zvolte možnost <span class="green">Vlastnosti</span>.
 <li style="list-style-type: none">![wntnet2](https://faq.mople71.cz/img/cs/wntnet2.png)</li>
 
-<div class="alert success"><p><img src="https://mople71.cz/img/success.png" alt="success"> **Úspěch**<br>
+<div class="alert success"><p><em class="icon-ok-circled"></em>**Úspěch**<br>
 Potenciálně nebezpečné protokoly jsou nyní vypnuty. Dále nastavíme bezpečné DNS servery.</p></div>
 
 - Pokud nevíte, co DNS je, přečtěte si tento [krátký článek](https://www.nic.cz/page/312/o-domenach-a-dns/).
@@ -149,7 +172,7 @@ OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
 - Klikněte na <span class="green">OK</span>.
 - Klikněte na <span class="green">OK</span> a okno zavřete.
 
-<div class="alert exclaim"><p><img src="https://mople71.cz/img/exclaim.png" alt="exclaim"> **Varování**<br>
+<div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
 Pro dosáhnutí kýženého efektu je nutné kompletní postup aplikovat pro všechny síťové adaptéry v seznamu (obvykle WLAN).</p></div>
 
 <br>
@@ -200,13 +223,13 @@ Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &
 
 > Porovnání Windows Defender vs. AV/M řešení třetích stran
 
-Do příchodu **Windows 8.1 Update 3** byla AV/M řešení třetích stran brána jako nutné zlo, jelikož být bez žádného AV/M řešení je výrazně horší, nežli být s AV/M řešením třetí strany, a OS tehdy neobsahoval použitelné vestavěné AV/M řešení. S příchodem **Windows 10** byl <span class="green">Windows Defender</span> z velké části přepsán a s každou novou verzí OS se dočkal vylepšení. V aktuálním stavu se jedná o kvalitní moderní AV/M řešení.
+Do příchodu **Windows 8.1 Update 3** byla AV/M řešení třetích stran brána jako nutné zlo, jelikož být bez žádného AV/M řešení je výrazně horší, nežli být s AV/M řešením třetí strany, a OS tehdy neobsahoval použitelné vestavěné AV/M řešení. S příchodem **Windows 10** byl <span class="green">Windows Defender</span> z velké části přepsán a s každou novou verzí OS se dočkává vylepšení. V aktuálním stavu se jedná o kvalitní moderní AV/M řešení.
 
 Ostatní AV/M řešení nejsou vestavěná v OS &ndash; kvalita jejich kódu nemusí (může) být na úrovni zbytku OS, s každým řádkem kódu navíc se ovšem zvětšuje prostor pro exploitaci. Na rozdíl od <span class="green">Windows Defender</span> nejsou korektně integrovány do OS &ndash; operují proto na bázi hacku a zásahu do bezpečnostního modelu OS (a aplikací jako internetových prohlížečů). V porovnání s integrovaným řešením navíc zpravidla postrádají/nevyužívají moderní mitigace proti exploitaci, které mají všechny systémové aplikace.
 
 Detekce <span class="green">Windows Defender</span> je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na instalacích aktuálních verzí OS &ndash; počet uživatelů zvyšuje šanci zachytit nový malware. Implementuje vyspělý cloudový systém, díky kterému nabízí užitečné pokročilé funkce (např. *block on first sight*).
 
-Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům (tzv. *Řízený přístup ke složkám*) a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci [anti-exploit](#wnt2.4)\).
+Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows Defender</span> dočkal výrazného zlepšení. Mimo jiné nově nabízí možnost nastavení *chráněných složek*, do kterých je následně zakázán přístup podezřelým procesům (tzv. *Řízený přístup ke složkám*) a GUI pro ovládání *anti-exploit mitigací* implementovaných v samotném OS (více informací k tomuto naleznete v sekci [anti-exploit](#wnt2.4)\). Tyto funkce byly dále rozšířeny ve verzi **April 2018 Update**.
 
 > Ochrana před viry a hrozbami &ndash; nastavení
 
@@ -219,21 +242,22 @@ Ve verzi OS **Windows 10 Fall Creators Update** se <span class="green">Windows D
 
 - Přesuňte se do kategorie **Řízení aplikací a prohlížečů**.
 - Zkontrolujte konfiguraci SmartScreen filtru a případně opravte:
-<li style="list-style-type: none">![wd3](https://faq.mople71.cz/img/cs/wd3.png)</li>
+<li style="list-style-type: none">![wd1](https://faq.mople71.cz/img/cs/wd1.png)</li>
 
 > Konfigurace Řízeného přístupu ke složkám
 
-- Přesuňte se do kategorie **Ochrana před viry a hrozbami** a otevřete <span class="green">Nastavení ochrany před viry a hrozbami</span>.
+- Přesuňte se do kategorie **Ochrana před viry a hrozbami** a otevřete <span class="green">Ochranu před ransomwarem</span>.
 - Zapněte <span class="green">Řízený přístup ke složkám</span> a následně otevřete <span class="green">Chráněné složky</span>.
+<li style="list-style-type: none">![wd2a](https://faq.mople71.cz/img/cs/wd2a.png)</li>
 - Kliknutím na <span class="green">Přidat chráněnou složku</span> přidejte na seznam veškeré důležité osobní složky na disku, které nejsou v seznamu.
 
 > Povolení aplikace v Řízeném přístupu ke složkám (příklad: Heimdal Free)
 
 - Při instalaci některých aplikací budete muset dočasně **Řízený přístup ke složkám** zakázat.
-- Otevřete <span class="green">Povolené aplikace v Řízeném přístupu ke složkám</span>.
-<li style="list-style-type: none">![wd1b](https://faq.mople71.cz/img/cs/wd1b.png)</li>
+- Otevřete <span class="green">povolené aplikace v Řízeném přístupu ke složkám</span>.
+<li style="list-style-type: none">![wd2](https://faq.mople71.cz/img/cs/wd2.png)</li>
 - Klikněte na <span class="green">Přidat povolenou aplikaci</span>.
-<li style="list-style-type: none">![wd1c](https://faq.mople71.cz/img/cs/wd1c.png)</li>
+<li style="list-style-type: none">![wd3](https://faq.mople71.cz/img/cs/wd3.png)</li>
 - Nalezněte **Heimdal Free** a přidejte postupně jeho spustitelné programy na seznam.
 <li style="list-style-type: none">![hf2](https://faq.mople71.cz/img/en/hf2.png)</li>
 - **Řízený přístup ke složkám** následně opětovně povolte.
@@ -295,7 +319,7 @@ Většina řešení funguje na principu *whitelistu* &ndash; má nastaveno, kter
 - Po ukončení tréninku VoodooShield klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Always On</span>.
 <li style="list-style-type: none">![vs1](https://faq.mople71.cz/img/en/vs1.png)</li>
 
-<div class="alert success"><p><img src="https://mople71.cz/img/success.png" alt="success"> **Úspěch**<br>
+<div class="alert success"><p><em class="icon-ok-circled"></em>**Úspěch**<br>
 Nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když budete chtít instalovat libovolnou aplikaci, zvolte <strong>Disable/Install Mode</strong>.</p></div>
 
 #### Ukázky a poznatky z provozu:
@@ -313,7 +337,7 @@ Nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když
 
 <br>
 
-<span class="red">NVT Anti-AutoExec</span> je drobná aplikace, která automaticky zabraňuje šíření USB malware. Stačí nainstalovat a ochrana je aktivní bez jakékoli interakce. Bohužel v současném stavu nefunguje s nejnovější verzí **Fall Creators Update**, snad brzy dojde k nápravě.
+<span class="red">NVT Anti-AutoExec</span> je drobná aplikace, která automaticky zabraňuje šíření USB malware. Stačí nainstalovat a ochrana je aktivní bez jakékoli interakce. Bohužel v současném stavu nefunguje s nejnovější verzí **April 2018 Update**, snad brzy dojde k nápravě.
 
 <span class="red">AppGuard</span> je profesionální anti-executable určený převážně pro firemní sféru, je ovšem dostupný i v domácí verzi. Jeho nastavení je vcelku komplikované a uzpůsobené pro odborníky.
 
@@ -339,7 +363,7 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 
 - Otevřete si <span class="green">Centrum zabezpečení v programu Windows Defender</span>.
 - Přesuňte se do kategorie **Řízení aplikací a prohlížečů**.
-- Sjeďte na konec stránky a otevřete <span class="green">Nastavení Exploit Protection</span>.
+- Sjeďte na konec stránky a otevřete <span class="green">Nastavení Ochrany Exploit Protection</span>.
 <li style="list-style-type: none">![wd4](https://faq.mople71.cz/img/cs/wd4.png)</li>
 - Zkontrolujte konfiguraci celosystémových mitigací a případně opravte:
 <li style="list-style-type: none">![wd5](https://faq.mople71.cz/img/cs/wd5.png)</li>
@@ -391,7 +415,7 @@ Od verze **Windows 10 Fall Creators Update** jsou anti-exploit mitigace implemen
 <li style="list-style-type: none">![emet3](https://faq.mople71.cz/img/en/emet3.png)</li>
 - Klikněte na <span class="green">OK</span> a zavřete EMET spolu s vyskakovacím oknem, které se objeví.
 
-<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Jaké další aplikace mitigovat? Veškerý rizikový SW třetí strany – např. VLC, 7-Zip, PDF prohlížeč, Steam apod.</p></div>
 
 **TIP pro rychlou konfiguraci aplikace:**
@@ -420,7 +444,7 @@ Jaké další aplikace mitigovat? Veškerý rizikový SW třetí strany – nap�
 - Při zachycení útoku HMP.A školivou aplikaci ukončí a zobrazí následující hlášku:
 <li style="list-style-type: none">![hmpa3](https://faq.mople71.cz/img/en/hmpa3.png)</li>
 
-<div class="alert success"><p><img src="https://mople71.cz/img/success.png" alt="success"> **Tip**<br>
+<div class="alert success"><p><em class="icon-ok-circled"></em>**Tip**<br>
 Více informací můžete nalézt v [manuálu](https://www.hitmanpro.com/en-us/medialibrary/Microsites/SurfRight/Resources/HitmanPro-Alert-Getting-Started.pdf?la=en) [EN].</p></div>
 
 <br>
@@ -460,13 +484,12 @@ Užitečné aplikace, které nespadají ani pod jednu kategorii vrstev zabezpeč
 
 - Stáhněte si [Heimdal Free](https://heimdalsecurity.com/en/products/heimdal-free/thank-you).
 - Máte-li nastavený **Řízený přístup ke složkám** ve <span class="green">Windows Defender</span>, dočasně jej po dobu instalace vypněte.
-<li style="list-style-type: none">![wd1a](https://faq.mople71.cz/img/cs/wd1a.png)</li>
 - Aplikaci nainstalujte. (**I want to activate Heimdal FREE**)
 - V konfiguraci ponechte zapnuté pouze <span class="green">Software Update Notifications</span>.
 <li style="list-style-type: none">![hf](https://faq.mople71.cz/img/en/hf.png)</li>
 - Zapněte monitorování všech dostupných aplikací a případně i automatickou aktualizaci.
 
-<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> **Info**<br>
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Ačkoli je *Heimdal Free* velmi kvalitní aplikace, automatická aktualizace aplikací otevírá prostor problémům. Na druhou stranu se jedná o menší zlo v porovnání s neaktuálními aplikacemi. Pokud tedy takto konfigurujete OS člověku, který si s PC nerozumí a nebude aplikace aktualizovat, povolení automatických aktualizací zvažte.</p></div>
 
 - Pro změnu nastavení &ndash; např. po instalaci nové aplikace, kterou *Heimdal Free* zatím nemonitoruje &ndash; otevřete **Heimdal Free** a přesuňte se do záložky <span class="green">Patching System</span>.
@@ -514,10 +537,10 @@ Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je 
 #### Bezplatná konfigurace pro BFU, který neumí anglicky (např. prarodiče):
 > Konfigurace
 
-<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> <strong>Info</strong><br>
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.</p></div>
 
-- OS &ndash; Windows **10 Fall Creators Update**
+- OS &ndash; Windows **10 April 2018 Update**
 - bezpečné nastavení OS &ndash; **kompletní**
 - AV/M &ndash; **Windows Defender**
 - FW &ndash; **Windows Defender Firewall**
@@ -536,10 +559,10 @@ Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nas
 #### Bezplatná konfigurace pro středně pokročilého, který umí anglicky:
 > Konfigurace
 
-<div class="alert info"><p><img src="https://mople71.cz/img/info.png" alt="info"> <strong>Info</strong><br>
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.</p></div>
 
-- OS &ndash; Windows **10 Fall Creators Update** / **8.1 Update 3**
+- OS &ndash; Windows **10 April 2018 Update** / **8.1 Update 3**
 - bezpečné nastavení OS &ndash; **kompletní**
 - AV/M &ndash; **Windows Defender**
 - FW &ndash; **Windows Defender Firewall**

@@ -41,7 +41,7 @@
 - Otevírejte pouze důvěryhodné e-mailové přílohy.
 - Máte-li podezření na infikovaný soubor, vždy jej před otevřením otestujte pomocí např. [VirusTotal](https://www.virustotal.com/).
 
-<div class="alert success"><p><img src="https://mople71.cz/img/success.png" alt="success"> <strong>Tip</strong><br>
+<div class="alert success"><p><em class="icon-ok-circled"></em>**Tip**<br>
 Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpečně nastavený live OS</span>. Také ovšem nemusí být 100% – např. pokud zařízení, ze kterého je OS spouštěn, bylo dříve napadeno, může být infikováno EFI.</p></div>
 
 <br>
