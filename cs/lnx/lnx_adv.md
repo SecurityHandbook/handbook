@@ -82,7 +82,7 @@ Na Arch Linux není problém provozovat RBAC, TOMOYO nebo AppArmor. SELinux je o
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 TOMOYO Linux není příliš rozšířený MAC a velmi těžko někde naleznete profily pro aplikace. Budete si je tedy muset sami vytvořit (příp. přepsat z AppArmor profilů – ty jsou všude). Dokumentaci naleznete [zde](https://tomoyo.osdn.jp/2.5/index.html.en).</p></div>
 
-- Návod na kompilaci jádra naleznete v sekci [Kernel](#lnx2.1). Případně můžete využít předkompilovaný kernel z [AUR](https://aur.archlinux.org/packages/linux-tomoyo/).
+- Pokud si neumíte zkompilovat jádro, můžete využít předkompilovaný kernel z [AUR](https://aur.archlinux.org/packages/linux-tomoyo/).
 - Povolte TOMOYO Linux v GRUB:
 <li style="list-style-type: none"><pre><code>/etc/default/grub
 -----------------------------------
@@ -157,57 +157,11 @@ Sandbox nativně integrovaný v aplikaci je nejúčinnější možností impleme
 
 Externí sandbox není zdaleka tak účinný jako sandbox integrovaný v aplikaci a ponechává výrazně větší prostor pro exploitaci, ale stále je mnohonásobně lepší, než žádný sandbox. Jsou případy, kdy lze špatně implementovaný externí sandbox prolomit přes *PulseAudio*...
 
-**Flatpak** i **firejail** jsou rozebírány v FAQ pro méně pokročilé.
-
-Pro pokročilou virtualizaci za použití **KVM** se podívejte [zde](https://wiki.archlinux.org/index.php/QEMU).
+Virtualizace pomocí **GNOME Boxes** je rozebírána v sekci pro méně pokročilé. Ve zmíněné sekci je rozebírán také **Flatpak**. Pro pokročilou virtualizaci za použití **KVM** se podívejte [zde](https://wiki.archlinux.org/index.php/QEMU).
 
 <br><br><hr><br>
 
 ## Anti-exploit mitigace:
-### Kernel:
-Grsecurity patchset již není veřejně dostupný a bezplatný. Iniciativu hardeningu kernelu tedy (mimo *KSPP*) převzala komunita, která se stará o portaci mitigací ze starých grsecurity patchů a vývoj nových mitigací. Projekt naleznete [zde](https://github.com/copperhead/linux-hardened).
-
-> Instalace linux-hardened
-
-- Otevřete root konzoli a zadejte:
-<li style="list-style-type: none"><pre><code>pacman -S linux-hardened</code></pre></li>
-- Po úspěšné instalaci aktualizujte bootloader, pokud máte GRUB, stačí jednoduchý příkaz:
-<li style="list-style-type: none"><pre><code>grub-mkconfig -o /boot/grub/grub.cfg</code></pre></li>
-- Restartujte OS a vyzkoušejte, zdali pro vás výchozí nastavení funguje.
-
-> Ruční konfigurace a kompilace linux-hardened kernelu
-
-<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Konfigurace v předkompilovaném balíčku může být příliš striktní a nemusí se vám podařit nabootovat. V takovém případě je třeba identifikovat problém a kernel si následně zkompilovat ručně. Arch Linux to umožňuje velmi snadno díky *ABS*.</p></div>
-
-- Nainstalujte si **ASP** a **GPG**:
-<li style="list-style-type: none"><pre><code>sudo pacman -S asp gnupg
-asp export community/linux-hardened
-cd ./linux-hardened
-gedit PKGBUILD    #nahraďte vámi používaným editorem</code></pre></li>
-- V PKGBUILD nalezněte <span class="green">#make menuconfig</span>, příkaz odkomentujte, uložte a zavřete.
-<li style="list-style-type: none"><pre><code>gpg --recv-keys 79BE3E4300411886
-gpg --recv-keys 38DBBDC86092693E
-gpg --recv-keys F9E712E59AF5F22A
-makepkg -s</code></pre></li>
-- Po chvíli se zobrazí menu s možnostmi kernelu. Zvolte, co potřebujete, a zrušte, co nepotřebujete. Celkově je dobrý nápad z kernelu vyházet věci, které nepotřebujete, docílíte tím snížení prostoru pro exploitaci.
-- 2x ESC a uložte konfiguraci. Tím započnete kompilaci kernelu.
-- Po kompilaci kernelu balíček nainstalujte:
-<li style="list-style-type: none"><pre><code>sudo pacman -U linux-hardened-*.pkg.tar.xz
-sudo pacman -U linux-hardened-headers-*.pkg.tar.xz</code></pre></li>
-- Aktualizujte GRUB:
-<li style="list-style-type: none"><pre><code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code></pre></li>
-- Nastavte ignorování aktualizací pro linux-hardened (a linux-hardened-headers):
-<li style="list-style-type: none"><pre><code>/etc/pacman.conf
------------------------------------
-
-# Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup
-IgnorePkg   = linux-hardened linux-hardened-headers
-#IgnoreGroup =</code></pre></li>
-- Tento proces budete muset zopakovat při každé aktualizaci kernelu, pacman vás na aktualizaci při *-Syu* upozorní.
-
-<br>
-
 ### Hardening aplikací:
 Balíčky mohou být kompilovány s *memory corruption* mitigacemi (ASLR, PIE, RELRO,...), které následně významně ztěžují jejich exploitaci.
 
