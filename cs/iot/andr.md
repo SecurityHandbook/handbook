@@ -145,7 +145,7 @@ Firewall je velmi důležitá bezpečnostní vrstva OS, která poskytuje ochranu
 Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenabízí. Zneužití *VPN API* (NetGuard, NoRoot Data Firewall) není nejlepší a nejspolehlivější implementace FW, ale alespoň nevyžaduje destrukci bezpečnostního modelu OS. Bohužel, vypadá to, že pouze velmi málo lidí má zájem implementovat tyto věci správně &ndash; přímo do OS.
 
 #### FOSS:
-- integrovaný (CopperheadOS)
+- integrovaný
 - NetGuard (VPN): https://github.com/M66B/NetGuard
 
 #### Proprietární:
@@ -157,8 +157,8 @@ Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenab�
 Blokování reklamy je z hlediska bezpečnosti esenciální kvůli četnému výskytu škodlivých reklam na internetu. Doporučuji oblíbené stránky podporovat jinou bezpečnější &ndash; finanční &ndash; formou.
 
 #### FOSS lokální VPN:
-- DNS66: https://github.com/julian-klode/dns66
 - Blokada: http://blokada.org/
+- DNS66: https://github.com/julian-klode/dns66
 
 #### Proprietární lokální VPN:
 - Adguard: https://adguard.com/en/adguard-android/overview.html
@@ -167,14 +167,11 @@ Blokování reklamy je z hlediska bezpečnosti esenciální kvůli četnému vý
 - Freedome: https://play.google.com/store/apps/details?id=com.fsecure.freedome.vpn.security.privacy.android
 
 #### Internetový prohlížeč:
-- Google Chrome / Chromium
 - Brave: https://play.google.com/store/apps/details?id=com.brave.browser
-- atd.
+- Google Chrome / Chromium
+- &#8230;
 
-#### DNS:
-- Adguard DNS: https://adguard.com/en/adguard-dns/overview.html
-
-DNS je jednoduchý způsob blokace reklam, vyžaduje to ovšem důvěru v poskytovatele DNS. VPN je také dobrý způsob, ovšem implementace *OpenVPN* na Androidu není 100% ideální. Použití prohlížeče blokující reklamy je nejlepším řešením. **Chrome(ium)** od verze 62 umožní nativně blokovat agresivní reklamy nesplňující podmínky.
+VPN je dobrý způsob blokace reklam, ovšem implementace *OpenVPN* na Androidu není perfektní. Lokální VPN tímto problémem netrpí. Použití prohlížeče blokující reklamy je nejlepším řešením. **Chrome** již umožňuje nativně blokovat agresivní reklamy nesplňující podmínky.
 
 <br>
 
@@ -201,7 +198,7 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 <br>
 
 ### Internetový prohlížeč:
-Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na Linuxu &ndash; tedy i na Androidu. Prohlížeče založené na Mozilla Firefox jsou několik let za Chromium v oblasti mitigací proti exploitům.
+Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na Linuxu &ndash; tedy i na Androidu. Prohlížeče založené na Mozilla Firefox stále v této oblasti za Chromium zaostávají.
 
 #### FOSS:
 - Chromium: https://www.chromium.org/developers/how-tos/android-build-instructions
@@ -209,6 +206,10 @@ Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na
 
 #### Proprietární:
 - Google Chrome: https://play.google.com/store/apps/details?id=com.android.chrome
+
+> Omezení JavaScriptu v Brave
+
+- ...
 
 > Omezení JavaScriptu v Google Chrome / Chromium
 
@@ -227,12 +228,11 @@ Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na
 ## Bezpečné ROM:
 Seznam je řazen od nejbezpečnější po nejméně bezpečnou.
 
-- CopperheadOS: https://copperhead.co/android/
 - čistý Android &ndash; Nexus / Pixel
 - Android předinstalovaný výrobcem bez zbytečného nízkoúrovňového bloatware
 - Android předinstalovaný výrobcem s bloatware od výrobce
 - custom ROM bez root implementace
-- ...
+- &#8230;
 
 <br><br><hr>
 
