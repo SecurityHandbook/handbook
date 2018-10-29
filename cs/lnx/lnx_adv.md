@@ -6,10 +6,9 @@ Zde se budeme věnovat pokročilejším možnostem zabezpečení (desktopového)
 Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pokročilé](https://faq.mople71.cz/cs/lnx/index.php#lnx) uživatele a máte znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
-- vrstvy zabezpečení
-- anti-exploit mitigace
-- audit
-- ostatní doporučení
+- Vrstvy zabezpečení
+- Anti-exploit mitigace
+- Audit
 
 <br>
 
@@ -178,7 +177,7 @@ Balíčky neobsahující zmíněné mitigace je tedy nutné zkompilovat ručně.
 <pre><code>checksec --proc-all</code></pre>
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Skript <strong>checksec</strong> je podrobněji rozebírán níže.</p></div>
+Skript **checksec** je podrobněji rozebírán níže.</p></div>
 
 > Instalace hardening-wrapper
 
@@ -261,14 +260,6 @@ Checksec je skript určený pro kontrolu nastavení kernelu a zobrazení *memory
 - Dále můžete auditovat bezpečnostní funkce balíčků:
 <li style="list-style-type: none"><pre><code>checksec --proc-all</code></pre></li>
 - Více informací naleznete na [oficiálních stránkách](https://github.com/slimm609/checksec.sh).
-
-<br><br><hr><br>
-
-## Ostatní doporučení:
-- používejte Wayland, implementace X.org nejsou bezpečné (kromě Xenocara v OpenBSD)
-- používejte Flatpak
-- na běžné prohlížení webu používejte Chromium, na bankovnictví např. Epiphany
-- ...
 
 <br><br><hr>
 

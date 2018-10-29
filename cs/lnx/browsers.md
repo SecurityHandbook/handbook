@@ -16,6 +16,8 @@ a stiskněte **Enter**.</li>
 <li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
 - V sekci **Přístup pluginu mimo izolovaný prostor** zablokujte webům přístup do počítače pomocí pluginu.
 <li style="list-style-type: none">![ch5](https://faq.mople71.cz/img/cs/ch5.png)</li>
+- V sekci **Schránka** zablokujte webům přístup k datům ve schránce.
+<li style="list-style-type: none">![ch6](https://faq.mople71.cz/img/cs/ch6.png)</li>
 - Prohlížeč restartujte.
 
 > Omezení JavaScript
@@ -56,7 +58,7 @@ Chromium používá špičkovou implementaci sandboxu.
 
 <br>
 
-<h3 class="epiph">![epiph](https://mople71.cz/img/icons/epiph.png) Epiphany:</h3>
+<h3 class="epiph">![epiph](https://mople71.cz/img/icons/epiph.png) GNOME Web:</h3>
 
 >  Bezpečnější nastavení
 

@@ -4,10 +4,10 @@ Linux se díky svému minoritnímu zastoupení na desktopech těší řádově m
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/lnx/adv.php#lnx).
 
 #### FAQ se dělí na několik sekcí:
-- doporučené distribuce
-- bezpečné nastavení OS
-- vrstvy zabezpečení OS
-- zabezpečení internetového prohlížeče
+- Doporučené distribuce
+- Bezpečné nastavení OS
+- Vrstvy zabezpečení
+- Zabezpečení internetového prohlížeče
 
 <br>
 
@@ -20,12 +20,12 @@ V sekci OS Linux naleznete tipy převážně pro distribuci <span class="green">
 
 Fedora je nejlepší a nejbezpečnější volbou pro běžného uživatele, jelikož je již v základu špičkově zabezpečená. Používá GNOME, nabízí uživateli možnost snadné instalace Flatpak aplikací, obsahuje velmi robustní implementaci SELinux a má velmi vysoké standardy na své balíčky &ndash; všechny musí mít důležité mitigace proti memory corruption exploitům. Mimo technické funkce nabízí stabilní nejnovější SW a velmi rychle záplatuje objevené bezpečnostní zranitelnosti.
 
-U některých kroků také naleznete pokyny pro distribuci Ubuntu, která je velmi populární, z hlediska bezpečnosti ovšem *mnohem* méně vhodná.
+U některých kroků také naleznete pokyny pro distribuci Ubuntu, která je velmi populární, z hlediska bezpečnosti ovšem méně vhodná.
 
 Chcete-li používat jinou distribuci, níže uvedené kroky můžete aplikovat i na ostatní distribuce, pouze si musíte zjistit správný syntax vaší distribuce a informace o kompatibilitě.
 
 ### Doporučené grafické prostředí:
-Z bezpečnostního hlediska doporučuji [GNOME](https://www.gnome.org/), jelikož používá wayland místo X.org a podílí se na vývoji Flatpaku. Výjimku tvoří rozhraní *GNOME Classic*, které využívá primárně X.org &ndash; není tedy doporučeno.
+Z bezpečnostního hlediska doporučuji [GNOME](https://www.gnome.org/), jelikož používá Wayland místo X.org a podílí se na vývoji Flatpaku. Výjimku tvoří rozhraní *GNOME Classic*, které využívá primárně X.org &ndash; není tedy doporučeno.
 
 <br><br><hr><br>
 
@@ -112,7 +112,7 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](h
 
 <br><br><hr><br>
 
-## Vrstvy zabezpečení OS:
+## Vrstvy zabezpečení:
 ### Firewall:
 Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před útoky ze sítě. *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*
 
@@ -248,7 +248,7 @@ flatpak install flathub org.gnome.Epiphany</code></pre></li>
 <br><br><hr><br>
 
 ## Zabezpečení internetového prohlížeče:
-Z bezpečnostního hlediska doporučuji prohlížeč <span class="green">Chromium</span>. Používá špičkovou implementaci sandboxu a jeho kód je na velmi dobré úrovni. Celkově je v ohledu bezpečnosti v současném stavu dále než **Mozilla Firefox**. Prohlížeč **Epiphany** není nijak zvlášť zaměřený na bezpečnost, nehodí se tedy ke každodennímu používání. Můžete jej ovšem použít jako oddělený prohlížeč pro citlivé věci jako bankovnictví apod.
+Z bezpečnostního hlediska doporučuji prohlížeč <span class="green">Chromium</span>. Používá špičkovou implementaci sandboxu a jeho kód je na velmi dobré úrovni. Celkově je v ohledu bezpečnosti v současném stavu dále než **Mozilla Firefox**. Prohlížeč **GNOME Web (Epiphany)** není nijak zvlášť zaměřený na bezpečnost, nehodí se tedy ke každodennímu používání. Je možné jej ovšem použít jako oddělený prohlížeč pro citlivé věci jako bankovnictví apod.
 
 <!--- ./browsers.md -->
 

@@ -16,6 +16,8 @@ a stiskněte **Enter**.</li>
 <li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
 - V sekci **Přístup pluginu mimo izolovaný prostor** zablokujte webům přístup do počítače pomocí pluginu.
 <li style="list-style-type: none">![ch5](https://faq.mople71.cz/img/cs/ch5.png)</li>
+- V sekci **Schránka** zablokujte webům přístup k datům ve schránce.
+<li style="list-style-type: none">![ch6](https://faq.mople71.cz/img/cs/ch6.png)</li>
 - Prohlížeč restartujte.
 
 > Omezení JavaScript

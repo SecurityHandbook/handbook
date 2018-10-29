@@ -1,25 +1,15 @@
 # FAQ &ndash; OS Android
 Android je dominantní OS na mobilním trhu (>88% podíl) vyvíjený společností **Google, Inc.** Díky svému majoritnímu zastoupení se těší velké pozornosti hackerů.
 
-Android má robustní bezpečnostní model, který předpokládá, že aplikace třetích stran běžící v OS nejsou důvěryhodné. Hlavním bezpečnostním problémem je rozmanitost zařízení, z nichž většina modelů nedostává pravidelné bezpečnostní aktualizace a/nebo běží na zastaralých verzích OS.
+Android má robustní bezpečnostní model, který předpokládá, že aplikace třetích stran běžící v OS, nejsou důvěryhodné. Hlavním bezpečnostním problémem je rozmanitost zařízení, z nichž většina modelů nedostává pravidelné bezpečnostní aktualizace a/nebo běží na zastaralých verzích OS.
 
-#### FAQ se dělí na několik sekcí:
-- bezpečnostní model OS
-- obecné bezpečnostní rady
-- bezpečná zařízení
-- bezpečné nastavení OS
-- doporučené aplikace
-- bezpečné ROM
-
-<br>
+> Trocha teorie o bezpečnostním modelu OS Android
 
 ## Bezpečnostní model OS:
 Android má robustní vícevrstevný bezpečnostní model. Používá linuxové jádro, implementuje <abbr title="Mandatory Access Control">MAC</abbr> a mitigace proti *memory corruption* exploitům &ndash; Android je jediná linuxová distribuce, která neumožňuje spuštění *non-<abbr title="Position Independent Executable">PIE</abbr>* kódu. Každé aplikaci je přiřazen unikátní uživatelský ID, aplikace je uzavřena v sandboxovaném prostředí, nemůže operovat s žádnou jinou aplikací a je jí umožněno operovat pouze se soubory/komponenty OS, ke kterým dostane oprávnění od vlastníka zařízení.
 
 ![Android Security Model](https://faq.mople71.cz/img/en/and.png)
 <p class="imgsrcf">*The Android security model (upraveno).* Zdroj: [Android Security 2015 Annual Report](http://source.android.com/security/reports/Google_Android_Security_2015_Report_Final.pdf)</p>
-
-> Trocha teorie o bezpečnostním modelu OS Android
 
 #### Jádro:
 Android je postaven na linuxovém jádru. Linuxové jádro není nejbezpečnější jádro na trhu, Androidu ovšem z bezpečnostního hlediska nabízí slušný model oprávnění založený na uživatelích a uživatelských skupinách, izolaci procesů atd. V poslední době se vývojáři linuxového jádra začali více soustředit na zabezpečení samotného jádra, z čehož benefituje i OS Android.
@@ -36,34 +26,36 @@ Android **Marshmallow** a výše nabízí rozšířený model oprávnění &ndas
 
 Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect*), zde nebudou rozebírány.
 
-<br><br><hr><br>
+#### FAQ se dělí na několik sekcí:
+- Obecné bezpečnostní zásady
+- Bezpečná zařízení
+- Bezpečné nastavení OS
+- Doporučené aplikace
 
-## Obecné bezpečnostní rady:
-- používejte aktuální záplatovanou verzi Androidu, minimálně **Nougat**
-- nerootujte své zařízení &ndash; rootem rozbíjíte bezpečnostní model OS popsaný výše
-- neodemykejte bootloader svého zařízení a neflashujte potenciálně nebezpečné recovery oddíly (např. TWRP)
-- neflashujte nebezpečné ROM se špatnou root implementací (např. LineageOS)
-- instalujte aplikace pouze z důvěryhodných zdrojů &ndash; Google Play, Amazon, F-Droid
-- neinstalujte aplikace vyžadující nesmyslná oprávnění (např. Flashlight+++ vyžadující přístup k SMS a kontaktům)
-- zvažte využívání open source aplikací (FOSS &ndash; free and open-source software)
-- nepřipojujte se k nedostatečné zabezpečeným sítím (např. v kavárně), zvažte použití VPN
-- všechny rizikové činnosti provádějte pod uživatelem hosta
-- šifrujte a zamykejte své zařízení, nezapomínejte na fyzické zabezpečení
+<br>
 
-### Bezpečnostní rady pro pokročilé:
-- nerootujte a už vůbec root oprávnění neposkytujte aplikacím, rozbíjíte tím velmi solidní bezpečnostní model OS a výrazně tím zvyšujete prostor pro exploitaci &ndash; je-li aplikace běžící s root oprávněním exploitována, vaše zařízení je tzv. &bdquo;*pwned*&ldquo;
+## Obecné bezpečnostní zásady:
+- používejte aktuální záplatovanou verzi OS, minimálně **Oreo**
+- nerootujte své zařízení &ndash; rootem rozbíjíte bezpečnostní model OS
+- neodemykejte bootloader svého zařízení &ndash; vystavujete se riziku krádeže dat
+- neflashujte nebezpečné ROM se špatnou root implementací (např. *LineageOS*)
+- instalujte aplikace pouze z důvěryhodných zdrojů &ndash; Google Play, F-Droid,&#8230;
+- neinstalujte aplikace vyžadující nesmyslná oprávnění (např. Flashlight+ vyžadující přístup k SMS a kontaktům)
+- zvažte využívání open source aplikací
+- všechny rizikové činnosti provádějte pod účtem hosta
+- zamykejte své zařízení
+
+### Bezpečnostní tipy pro pokročilé:
 - používejte aktualizované ROM bez bloatware od výrobce
-- neflashujte nic typu *Open GApps* &ndash; je to řádově méně bezpečné než správná integrace služeb Google výrobcem
-- kompilujte ROM (+ jádro) a aplikaci sami, ošklivá oprávnění aplikací následně můžete případně zakázat přímo v *AndroidManifest.xml*
+- neflashujte nic typu *Open GApps* &ndash; je to řádově méně bezpečné než korektní integrace služeb Google výrobcem
+- ošklivá oprávnění aplikací následně můžete zakázat přímo v *AndroidManifest.xml*
 
 <br><br><hr><br>
 
 ## Bezpečná zařízení:
-Jak již bylo zmíněno, rozmanitost zařízení s OS Android je možná z jistého úhlu výhoda, ovšem z pohledu bezpečnosti velký problém.
+Jak již bylo zmíněno, rozmanitost zařízení s OS Android je z pohledu bezpečnosti velký problém.
 
-V dnešní době není problém pořídit si telefon s OS Android za velmi malou finanční částku. Co již ovšem nikdo neřeší, je podpora a aktualizace. Většina levných zařízení se nikdy nedočkají žádné bezpečnostní aktualizace, natož pak aktualizace na nejnovější verzi OS. Tato zařízení mohou obsahovat stovky známých bezpečnostních děr, které se lehce dají zneužít, pokud zařízení není záplatováno výrobcem. Situace ovšem nemusí být o nic lepší u dražších modelů.
-
-Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se dalo nazvat bezpečným. Také zde naleznete seznam modelů, které zmíněné požadavky splňují.
+V dnešní době není problém pořídit si telefon s OS Android za směšnou finanční částku. Pořizovací cena ovšem není všechno, a neměla by být hlavním faktorem při výběru. Většina levných zařízení se nikdy nedočká žádné bezpečnostní aktualizace, natož pak aktualizace na novější verzi OS. Tato zařízení mohou obsahovat stovky známých bezpečnostních děr, které lze lehce zneužít, pokud zařízení není záplatováno výrobcem. Situace u dražších modelů ale nemusí být o nic lepší. Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se s ním z hlediska bezpečnosti dalo pracovat.
 
 ### Bezpečnostní požadavky na zařízení s OS Android:
 - 64-bit architektura (x86/ARM)
@@ -101,13 +93,12 @@ Android je (většinou) bezpečně nastaven již v základu, není ovšem od vě
 - Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
 <li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
 - Máte-li starší *verzi systému Android* než **8.0** a výrobce nepotvrdil aktualizaci, zařízení je implicitně nebezpečné &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než **3 měsíce**, zařízení není bezpečné &ndash; můžete se dívat po náhradě.
-- Více informací o této problematice naleznete v návodu [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/cs/iot/andr_vyber.php).
 - Aplikaci zavřete.
 
 <br>
 
 ### Využití účtu hosta:
-Pod uživatelem hosta můžete relativně bezpečně např. prohlížet rizikové internetové stránky. Instalaci pochybných aplikací nedoporučuji ani pod uživatelem hosta, jelikož aplikace může OS exploitovat mnohem snadněji než internetová stránka. Pokud by aplikace úspěšně získala root pravomoce (např. pomocí *CVE-2015-1805* aka KingRoot), nepomůže vám ani reset zařízení do továrního nastavení.
+Pod účtem hosta můžete relativně bezpečně např. prohlížet rizikové internetové stránky. Instalace pochybných aplikací není doporučena ani pod uživatelem hosta, jelikož aplikace může OS exploitovat mnohem snadněji než internetová stránka. Pokud by aplikace úspěšně získala root pravomoce (např. pomocí *CVE-2015-1805* aka KingRoot), nepomůže vám ani reset zařízení do továrního nastavení.
 
 > Přepnutí se na účet hosta
 
@@ -123,10 +114,10 @@ Pod uživatelem hosta můžete relativně bezpečně např. prohlížet rizikov�
 <br><br><hr><br>
 
 ## Doporučené aplikace:
-V následující sekci naleznete doporučené bezpečnostní aplikace a aplikace s bezpečností úzce související. Aplikace jsou děleny na FOSS (free and open source) a proprietární. Důvod je prostý: někteří lidé nevěří proprietárním aplikacím a používání bezpečnostní aplikace s uzavřeným kódem, považují za nepřijatelné.
+V následující sekci naleznete doporučené bezpečnostní aplikace a aplikace s bezpečností úzce související. Aplikace jsou děleny na FOSS (free and open source) a proprietární.
 
 ### Obchod s aplikacemi:
-Obchod s aplikacemi velmi úzce souvisí s bezpečností, jelikož z něj stahujete a instalujete veškeré aplikace do OS. Z tohoto důvodu musí být důvěryhodný a bezpečný.
+Obchod s aplikacemi velmi úzce souvisí s bezpečností, jelikož z něj stahujete a instalujete veškeré aplikace do OS.
 
 #### FOSS:
 - F-Droid: https://f-droid.org/
@@ -154,7 +145,7 @@ Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenab�
 <br>
 
 ### Blokování reklamy:
-Blokování reklamy je z hlediska bezpečnosti esenciální kvůli četnému výskytu škodlivých reklam na internetu. Doporučuji oblíbené stránky podporovat jinou bezpečnější &ndash; finanční &ndash; formou.
+Blokování reklamy je z hlediska bezpečnosti nezbytné z důvodu výskytu škodlivých reklam na internetu. Rozumnější je oblíbené stránky podporovat jinou a bezpečnější &ndash; finanční &ndash; formou.
 
 #### FOSS lokální VPN:
 - Blokada: http://blokada.org/
@@ -198,7 +189,7 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 <br>
 
 ### Internetový prohlížeč:
-Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na Linuxu &ndash; tedy i na Androidu. Prohlížeče založené na Mozilla Firefox stále v této oblasti za Chromium zaostávají.
+Chrome/Chromium je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na Linuxu &ndash; tedy i na Androidu. Prohlížeče založené na Mozilla Firefox stále v této oblasti za Chromium zaostávají.
 
 #### FOSS:
 - Chromium: https://www.chromium.org/developers/how-tos/android-build-instructions
@@ -207,32 +198,33 @@ Chrome(ium) je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na
 #### Proprietární:
 - Google Chrome: https://play.google.com/store/apps/details?id=com.android.chrome
 
-> Omezení JavaScriptu v Brave
+> Bezpečné nastavení Brave
 
-- ...
+- Otevřete prohlížeč <span class="green">Brave</span>.
+- Přes menu v pravém rohu otevřete <span class="green">Nastavení</span>.
+- Rozklikněte nabídku **Ochrana soukromí**. Zatrhněte položky <span class="green">Režim ochrany proti sledování</span>, <span class="green">Blokování reklam</span>, <span class="green">Blokování regionálních reklam</span> a <span class="green">Ochrana proti otisku prohlížeče</span>.
+<li style="list-style-type: none">![brvand](https://faq.mople71.cz/img/cs/brvand.png)</li>
+- Vraťte se o úroveň výše a rozklikněte nabídku <span class="green">Nastavení webu</span>.
+- V sekci **JavaScript** zablokujte spouštění JS.
+<li style="list-style-type: none">![brvand1](https://faq.mople71.cz/img/cs/brvand1.png)</li>
+- V sekci **Schránka** zablokujte webům přístup k datům ve schránce.
+<li style="list-style-type: none">![brvand2](https://faq.mople71.cz/img/cs/brvand2.png)</li>
+
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
+Nyní máte ve výchozím nastavení vypnutý JS pro všechny weby. Jakmile budete chtít spuštění JS pro určitý web povolit, stačí kliknout na ikonu prohlížeče v horním panelu a skripty povolit.<br>
+![brvand3](https://faq.mople71.cz/img/cs/brvand3.png)</p></div>
 
 > Omezení JavaScriptu v Google Chrome / Chromium
 
 - Otevřete si <span class="green">Google Chrome</span> / <span class="green">Chromium</span>.
 - Kliknutím na tři tečky v horním pravém rohu otevřete boční panel a klikněte na tlačítko <span class="green">Nastavení</span>.
-- Klikněte na **Nastavení webu** a Otevřete podkategorii <span class="green">JavaScript</span>.
+- Klikněte na **Nastavení webu** a otevřete podkategorii <span class="green">JavaScript</span>.
 - Zablokujte spouštění JS.
 <li style="list-style-type: none">![chmandrjs](https://faq.mople71.cz/img/cs/chmandrjs.png)</li>
 - Klikněte na tlačítko <span class="green">Přidat výjimku pro konkrétní web</span>.
 - Zadejte adresu důvěryhodného webu, na kterém se může spouštět JS. Syntax je oproti desktopové verzi značně omezený.
 <li style="list-style-type: none">![chmandrjs1](https://faq.mople71.cz/img/cs/chmandrjs1.png)</li>
 - Klikněte na <span class="green">Přidat</span>.
-
-<br><br><hr><br>
-
-## Bezpečné ROM:
-Seznam je řazen od nejbezpečnější po nejméně bezpečnou.
-
-- čistý Android &ndash; Nexus / Pixel
-- Android předinstalovaný výrobcem bez zbytečného nízkoúrovňového bloatware
-- Android předinstalovaný výrobcem s bloatware od výrobce
-- custom ROM bez root implementace
-- &#8230;
 
 <br><br><hr>
 
