@@ -2,16 +2,16 @@
 Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto velmi důležité.
 Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (tzv. *layered config*) &ndash; pokud selže jedna vrstva, nastupuje druhá. Spousta běžných uživatelů spoléhá pouze na jednu tradiční vrstvu &ndash; antivir &ndash; což je z hlediska bezpečnosti tristní. Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na verzi a edici OS. V základním nastavení ovšem nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
 
-Podporovanou verzí Windows v následující sekci je **Windows 10 April 2018 Update** jakožto nejnovější OS s podporou do roku 2025. Obsažené informace jsou platné také pro **Windows 8.1 Update 3**. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí &ndash; pokud již neskončil &ndash; cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
+Podporovanou verzí Windows v následující sekci je **Windows 10 September 2018 Update** jakožto nejnovější OS s podporou do roku 2025. Obsažené informace jsou platné také pro **Windows 8.1 Update 3**. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí &ndash; pokud již neskončil &ndash; cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
 
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/wnt/adv.php#wnt).
 
 
 #### FAQ se dělí na několik sekcí:
-- bezpečné nastavení OS
-- vrstvy zabezpečení
-- zabezpečení internetového prohlížeče
-- doporučené bezpečnostní konfigurace
+- Bezpečné nastavení OS
+- Vrstvy zabezpečení
+- Zabezpečení internetového prohlížeče
+- Doporučené bezpečnostní konfigurace
 
 <br>
 
@@ -108,9 +108,7 @@ a stiskněte **Enter**.</li>
 
 *User Account Control* je důležitá součást bezpečnostního modelu OS od **Windows Vista**, kde se dočkala obrovské kritiky a ve Windows 7 proto byla v základním nastavení oslabena. Vypnutí UAC je z hlediska bezpečnosti sebevražda, naopak je doporučeno konfiguraci UAC nastavit na ještě přísnější úroveň.
 
-Od verze **Windows 10 April 2018 Update** je konfigurace UAC v základu nastavena na nejvyšší možnou úroveň.
-
-> Nastavení UAC (starší verze Windows)
+> Nastavení UAC
 
 - Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>useraccountcontrolsettings</code></pre>
@@ -179,7 +177,7 @@ Pro dosáhnutí kýženého efektu je nutné kompletní postup aplikovat pro vš
 
 <br>
 
-### Ostatní bezpečnostní nastavení:
+### Další bezpečnostní nastavení:
 
 - Vypněte Usnadnění přístupu na přihlašovací obrazovce &ndash; součást skriptu **SafeSVC**.
 - Vypněte AutoPlay:
@@ -542,16 +540,16 @@ Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.</p></div>
 
-- OS &ndash; Windows **10 April 2018 Update**
+- OS &ndash; Windows **10 September 2018 Update**
 - bezpečné nastavení OS &ndash; **kompletní**
 - AV/M &ndash; **Windows Defender**
 - FW &ndash; **Windows Defender Firewall**
 - anti-exploit &ndash; **Windows Defender Exploit Guard**
-- anti-executable &ndash; **NVT Anti-AutoExec** *(aktuálně nefunkční)*
+- anti-executable &ndash; **NVT Anti-AutoExec**
 - virtualizace &ndash; **nic**
 - internetový prohlížeč &ndash; **MS Edge** / **Google Chrome**
 - zabezpečení prohlížeče &ndash; **kompletní**
-- užitečné aplikace &ndash; **Unchecky**, **Heimdal Free**
+- užitečné aplikace &ndash; **Unchecky**, **Thor Free**
 - konfigurace pro pokročilé &ndash; dle znalostí
 
 Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nastavit OS. **MS Edge** používat pro bankovní účely a podobné citlivé věci, **Google Chrome** pro běžné brouzdání. **Heimdal Free** nastavit na tichou automatickou aktualizaci aplikací. Samozřejmě, pokud zvládáte pokročilou konfiguraci popisovanou v FAQ pro pokročilé, úroveň zabezpečení můžete velmi výrazně zvýšit.
@@ -564,16 +562,16 @@ Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nas
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.</p></div>
 
-- OS &ndash; Windows **10 April 2018 Update** / **8.1 Update 3**
+- OS &ndash; Windows **10 September 2018 Update** / **8.1 Update 3**
 - bezpečné nastavení OS &ndash; **kompletní**
 - AV/M &ndash; **Windows Defender**
 - FW &ndash; **Windows Defender Firewall**
 - anti-exploit &ndash; **Windows Defender Exploit Guard** / **EMET**
-- anti-executable &ndash; **VoodooShield**, **NVT Anti-AutoExec** *(aktuálně nefunkční)*
+- anti-executable &ndash; **VoodooShield**, **NVT Anti-AutoExec**
 - virtualizace &ndash; **nic**
-- internetový prohlížeč &ndash; **MS Edge** / **Google Chrome**
+- internetový prohlížeč &ndash; **MS Edge** / **Chromium**
 - zabezpečení prohlížeče &ndash; **kompletní**
-- užitečné aplikace &ndash; **Unchecky**, **HashTab**
+- užitečné aplikace &ndash; **Thor Free**, **HashTab**
 - konfigurace pro pokročilé &ndash; dle znalostí
 
 <br><br><hr>
