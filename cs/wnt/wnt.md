@@ -324,7 +324,7 @@ Od verze **Windows 10 Fall Creators Update** je schopnost mitigace aplikací tř
 <br>
 
 #### Ochrana proti exploitaci starších verzí Windows:
-- [Microsoft Enhanced Mitigation Experience Toolkit](https://technet.microsoft.com/en-us/security/jj653751) (EMET; Windows 10 November Update a níže)
+- [Microsoft Enhanced Mitigation Experience Toolkit](https://support.microsoft.com/cs-cz/help/2458544/the-enhanced-mitigation-experience-toolkit) (EMET; Windows 8.1 Update 3 a níže)
 - [HitmanPro.Alert](https://www.hitmanpro.com/en/alert.aspx) (HMP.A)
 
 <span class="red">EMET</span> je anti-exploit řešení od MS určeno pro **starší verze OS**, které anti-exploit mitigace nemají integrovány.
@@ -377,7 +377,7 @@ Jaké další aplikace mitigovat? Veškerý rizikový SW třetí strany – nap�
 <li style="list-style-type: none">![hmpa3](https://faq.mople71.cz/img/en/hmpa3.png)</li>
 
 <div class="alert success"><p><em class="icon-ok-circled"></em>**Tip**<br>
-Více informací můžete nalézt v [manuálu](https://www.hitmanpro.com/en-us/medialibrary/Microsites/SurfRight/Resources/HitmanPro-Alert-Getting-Started.pdf?la=en) [EN].</p></div>
+Více informací můžete nalézt v [manuálu](https://www.hitmanpro.com/en-us/medialibrary/Microsites/SurfRight/Resources/HitmanPro-Alert-Getting-Started.pdf) [EN].</p></div>
 
 <br>
 
@@ -387,9 +387,9 @@ Anti-executable je velmi účinná vrstva ochrany. Jak název napovídá, anti-e
 Většina řešení funguje na principu *whitelistu* &ndash; má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně souboru rovnou zabraní ve spuštění. Nastavení whitelistu není úkol pro běžné uživatele, existují ovšem i řešení, která umí whitelist vytvořit s minimem uživatelské interakce.
 
 #### Přehled anti-executable řešení:
-- [NVT Anti-AutoExec](http://www.novirusthanks.org/products/anti-autoexec/)
+- [NVT Anti-AutoExec](https://www.novirusthanks.org/products/anti-autoexec/)
 - [VoodooShield](https://voodooshield.com/) (VS)
-- [NVT ExeRadarPro](http://www.novirusthanks.org/products/exe-radar-pro/) (NVT ERP)
+- [NVT ExeRadarPro](https://www.novirusthanks.org/products/exe-radar-pro/) (NVT ERP)
 - [AppLocker](https://technet.microsoft.com/cs-cz/library/dd759117.aspx)
 - [Software Restrtiction Policies](https://technet.microsoft.com/cs-cz/library/hh831534.aspx) (SRP)
 
@@ -426,8 +426,6 @@ Nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když
 - Po povolení aplikace a provedení vámi požadované akce se vždy přesvědčte, že VS běží v módu <span class="green">Always On</span>.
 
 <br>
-
-<span class="red">AppGuard</span> je profesionální anti-executable určený převážně pro firemní sféru, je ovšem dostupný i v domácí verzi. Jeho nastavení je vcelku komplikované a uzpůsobené pro odborníky.
 
 <span class="red">AppLocker</span> je anti-executable integrovaný ve Windows v edicích **Ultimate**, **Education** a **Enterprise**. Umožňuje ovládání spustitelných souborů, skriptů, DLL knihoven, MSI instalátorů a ModernUI (metro) aplikací. Poskytuje vcelku slušnou ochranu, na druhou stranu existují známé způsoby jeho obejití.
 
@@ -478,7 +476,7 @@ U sandboxu velmi záleží na implementaci, např. bezplatné řešení [Sandbox
 
 > Instalace a konfigurace Sandboxie
 
-- Stáhněte si [Sandboxie](https://www.sandboxie.com/index.php?DownloadSandboxie).
+- Stáhněte si [Sandboxie](https://www.sandboxie.com/DownloadSandboxie).
 - Aplikaci nainstalujte a projděte úvodním tutoriálem.
 - Otevřete **Ovládání Sandboxie**.
 - Klikněte pravým tlačítkem na **Sandbox DefaultBox** a zvolte možnost <span class="green">Nastavení Sandboxu</span>.
@@ -516,6 +514,12 @@ Užitečné aplikace, které nelze zařadit pod určitou vrstvu zabezpečení.
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Ačkoli je *Kaspersky Software Updater* kvalitní aplikace, automatická aktualizace aplikací otevírá prostor problémům. Na druhou stranu se jedná o menší zlo v porovnání s neaktuálními aplikacemi. Pokud tedy takto konfigurujete OS člověku, který si s PC nerozumí a nebude aplikace aktualizovat, povolení automatických aktualizací zvažte.</p></div>
+
+> Instalace a konfigurace Unchecky
+
+- Stáhněte si [Unchecky](https://unchecky.com/files/unchecky_setup.exe).
+- Aplikaci nainstalujte.
+- ...
 
 > Instalace a konfigurace HashTab
 
