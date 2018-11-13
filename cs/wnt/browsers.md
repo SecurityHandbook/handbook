@@ -1,5 +1,10 @@
 <h3 class="ch">![ch](https://mople71.cz/img/icons/ch16.png) Google Chrome</h3>
 
+> Instalace
+
+- Stáhněte si nejnovější verzi [Google Chrome](https://www.google.com/chrome/).
+- Aplikaci nainstalujte.
+
 > Bezpečnější nastavení
 
 - Do adresního řádku prohlížeče zadejte:
@@ -56,7 +61,7 @@ a stiskněte **Enter**.</li>
 
 > Oddělení prohlížeče od OS a dat
 
-Google Chrome používá velmi dobrou implementaci sandboxu.
+Google Chrome používá špičkovou implementaci sandboxu.
 
 <br>
 
@@ -87,6 +92,66 @@ ChromiumWaitForDownloadEnd=true</code></pre></li>
 > Bezpečnější nastavení a blokování reklam
 
 Použijte postup pro **Google Chrome** výše, je identický.
+
+<br>
+
+<h3 class="brv">![brv](https://mople71.cz/img/icons/brv.png) Brave</h3>
+
+> Instalace
+
+- Stáhněte si nejnovější verzi [Brave](https://brave.com/download/).
+- Aplikaci nainstalujte.
+
+> Bezpečnější nastavení
+
+- Do adresního řádku prohlížeče zadejte:
+<li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
+a stiskněte **Enter**.</li>
+- Zobrazí se nastavení. V sekci **Brave shields defaults** zkontrolujte konfiguraci a případně opravte:
+ <li style="list-style-type: none">![brv](https://faq.mople71.cz/img/en/brv.png)</li>
+- Sjeďte na konec stránky a klikněte na tlačítko ![ch](https://faq.mople71.cz/img/cs/ch.png)
+- V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu...</span>
+<li style="list-style-type: none">![ch1](https://faq.mople71.cz/img/cs/ch1.png)</li>
+- V sekci **Flash** zablokujte spouštění obsahu Flash na webech.
+<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
+- V sekci **Synchronizace na pozadí** zablokujte nedávno zavřeným webům dokončit odeslání a příjem dat.
+<li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
+- V sekci **Přístup pluginu mimo izolovaný prostor** zablokujte webům přístup do počítače pomocí pluginu.
+<li style="list-style-type: none">![ch5](https://faq.mople71.cz/img/cs/ch5.png)</li>
+- V sekci **Schránka** zablokujte webům přístup k datům ve schránce.
+<li style="list-style-type: none">![ch6](https://faq.mople71.cz/img/cs/ch6.png)</li>
+- Prohlížeč restartujte.
+
+> Omezení JavaScript
+
+- Do adresního řádku prohlížeče zadejte:
+<li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
+a stiskněte **Enter**.</li>
+- Zobrazí se nastavení. V sekci **Brave shields defaults** upravte konfiguraci dle obrázku:
+ <li style="list-style-type: none">![brv1](https://faq.mople71.cz/img/en/brv1.png)</li>
+- Prohlížeč restartujte.
+
+> Blokování reklamy
+
+- Nainstalujte si následující bezpečnostní doplněk: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=cs)
+
+#### Nastavení uBlock:
+
+- Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
+<li style="list-style-type: none">![chublock](https://faq.mople71.cz/img/en/chublock.png)</li>
+- Zobrazí se nastavení uBlock Origin. V sekci **Soukromí** zatrhněte možnost <span class="green">Předejít úniku lokálních IP adres přes WebRTC</span>.
+- Následně se přesuňte do záložky <span class="green">Filtry třetích stran</span>.
+<li style="list-style-type: none">![ublock](https://faq.mople71.cz/img/cs/ublock.png)</li>
+- Zde vyberte filtry pro blokování webového obsahu. Doporučuji kromě výchozích zvolit následující:</li>
+<li style="list-style-type: none">![ublock1](https://faq.mople71.cz/img/cs/ublock1.png)</li>
+- Následně v pravém horním rohu klikněte na tlačítko: ![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)
+- Přesuňte se na začátek stránky, zkontrolujte zatržítko u položky <span class="green">Automaticky aktualizovat seznamy filtrů</span> a klikněte na tlačítko <span class="green">Aktualizovat nyní</span>. Během aktualizace panel nezavírejte.
+<li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
+
+
+> Oddělení prohlížeče od OS a dat
+
+Brave používá velmi dobrou implementaci sandboxu.
 
 <br>
 
@@ -124,6 +189,11 @@ Microsoft Edge používá špičkovou implementaci sandboxu.
 <br>
 
 <h3 class="ff">![ff](https://mople71.cz/img/icons/ff.png) Mozilla Firefox</h3>
+
+> Instalace
+
+- Stáhněte si nejnovější verzi [Mozilla Firefox](https://www.mozilla.org/cs/firefox/new/).
+- Aplikaci nainstalujte.
 
 > Bezpečnější nastavení
 

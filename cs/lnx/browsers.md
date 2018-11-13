@@ -1,5 +1,11 @@
 <h3 class="chm">![chm](https://mople71.cz/img/icons/chm16.ico) Chromium:</h3>
 
+> Instalace
+
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
+<li style="list-style-type: none"><pre><code>sudo dnf install -y chromium
+exit</code></pre></li>
+
 > Bezpečnější nastavení
 
 - Do adresního řádku prohlížeče zadejte:
@@ -58,7 +64,81 @@ Chromium používá špičkovou implementaci sandboxu.
 
 <br>
 
+<h3 class="brv">![brv](https://mople71.cz/img/icons/brv.png) Brave</h3>
+
+> Instalace
+
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
+Níže uvedený postup je platný pro distribuci **<span class="fe">Fedora</span>**. Používáte-li jinou distribuci, návod k instalaci naleznete [zde](https://brave-browser.readthedocs.io/en/latest/installing-brave.html#release-channel-installation).</p></div>
+
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
+<li style="list-style-type: none"><pre><code>sudo -i
+dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
+rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+dnf install -y brave-browser brave-keyring
+exit
+exit</code></pre></li>
+
+> Bezpečnější nastavení
+
+- Do adresního řádku prohlížeče zadejte:
+<li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
+a stiskněte **Enter**.</li>
+- Zobrazí se nastavení. V sekci **Brave shields defaults** zkontrolujte konfiguraci a případně opravte:
+ <li style="list-style-type: none">![brv](https://faq.mople71.cz/img/en/brv.png)</li>
+- Sjeďte na konec stránky a klikněte na tlačítko ![ch](https://faq.mople71.cz/img/cs/ch.png)
+- V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu...</span>
+<li style="list-style-type: none">![ch1](https://faq.mople71.cz/img/cs/ch1.png)</li>
+- V sekci **Flash** zablokujte spouštění obsahu Flash na webech.
+<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
+- V sekci **Synchronizace na pozadí** zablokujte nedávno zavřeným webům dokončit odeslání a příjem dat.
+<li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
+- V sekci **Přístup pluginu mimo izolovaný prostor** zablokujte webům přístup do počítače pomocí pluginu.
+<li style="list-style-type: none">![ch5](https://faq.mople71.cz/img/cs/ch5.png)</li>
+- V sekci **Schránka** zablokujte webům přístup k datům ve schránce.
+<li style="list-style-type: none">![ch6](https://faq.mople71.cz/img/cs/ch6.png)</li>
+- Prohlížeč restartujte.
+
+> Omezení JavaScript
+
+- Do adresního řádku prohlížeče zadejte:
+<li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
+a stiskněte **Enter**.</li>
+- Zobrazí se nastavení. V sekci **Brave shields defaults** upravte konfiguraci dle obrázku:
+ <li style="list-style-type: none">![brv1](https://faq.mople71.cz/img/en/brv1.png)</li>
+- Prohlížeč restartujte.
+
+> Blokování reklamy
+
+- Nainstalujte si následující bezpečnostní doplněk: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=cs)
+
+#### Nastavení uBlock:
+
+- Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
+<li style="list-style-type: none">![chublock](https://faq.mople71.cz/img/en/chublock.png)</li>
+- Zobrazí se nastavení uBlock Origin. V sekci **Soukromí** zatrhněte možnost <span class="green">Předejít úniku lokálních IP adres přes WebRTC</span>.
+- Následně se přesuňte do záložky <span class="green">Filtry třetích stran</span>.
+<li style="list-style-type: none">![ublock](https://faq.mople71.cz/img/cs/ublock.png)</li>
+- Zde vyberte filtry pro blokování webového obsahu. Doporučuji kromě výchozích zvolit následující:</li>
+<li style="list-style-type: none">![ublock1](https://faq.mople71.cz/img/cs/ublock1.png)</li>
+- Následně v pravém horním rohu klikněte na tlačítko: ![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)
+- Přesuňte se na začátek stránky, zkontrolujte zatržítko u položky <span class="green">Automaticky aktualizovat seznamy filtrů</span> a klikněte na tlačítko <span class="green">Aktualizovat nyní</span>. Během aktualizace panel nezavírejte.
+<li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
+
+
+> Oddělení prohlížeče od OS a dat
+
+Brave používá velmi dobrou implementaci sandboxu.
+
+<br>
+
 <h3 class="epiph">![epiph](https://mople71.cz/img/icons/epiph.png) GNOME Web:</h3>
+
+> Instalace
+
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
+<li style="list-style-type: none"><pre><code>sudo dnf install -y epiphany
+exit</code></pre></li>
 
 >  Bezpečnější nastavení
 
@@ -80,6 +160,12 @@ Epiphany podporuje flatpak sandbox. Lepší, nežli žádný.
 <br>
 
 <h3 class="ff">![ff](https://mople71.cz/img/icons/ff.png) Mozilla Firefox</h3>
+
+> Instalace
+
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
+<li style="list-style-type: none"><pre><code>sudo dnf install -y firefox
+exit</code></pre></li>
 
 > Bezpečnější nastavení
 
