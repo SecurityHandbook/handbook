@@ -345,7 +345,7 @@ Od verze **Windows 10 Fall Creators Update** je schopnost mitigace aplikací tř
 - Zobrazí se seznam mitigovaných aplikací, pro přidání nové klikněte na tlačítko <span class="green">Add Application</span>.
 <li style="list-style-type: none">![emet1](https://faq.mople71.cz/img/en/emet1.png)</li>
 - Nalezněte a zvolte požadovanou aplikaci, kterou chcete mitigovat.
-<li style="list-style-type: none">![wd7](https://faq.mople71.cz/img/cs/wd7.png)</li>
+<li style="list-style-type: none">![wd8](https://faq.mople71.cz/img/cs/wd8.png)</li>
 - Upravte konfiguraci dle obrázku:
 <li style="list-style-type: none">![emet2](https://faq.mople71.cz/img/en/emet2.png)</li>
 - Po dokončení nastavení všech aplikací zkontrolujte nastavení mitigací, případně opravte dle obrázku:

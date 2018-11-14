@@ -1,4 +1,4 @@
-<h3 class="chm">![chm](https://mople71.cz/img/icons/chm16.ico) Chromium:</h3>
+<h3 class="chm">![chm_icon](https://mople71.cz/img/icons/chm16.ico) Chromium:</h3>
 
 > Instalace
 
@@ -64,7 +64,7 @@ Chromium používá špičkovou implementaci sandboxu.
 
 <br>
 
-<h3 class="epiph">![epiph](https://mople71.cz/img/icons/epiph.png) GNOME Web:</h3>
+<h3 class="epiph">![epiph_icon](https://mople71.cz/img/icons/epiph.png) GNOME Web:</h3>
 
 > Instalace
 
@@ -91,7 +91,7 @@ Epiphany podporuje flatpak sandbox. Lepší, nežli žádný.
 
 <br>
 
-<h3 class="brv">![brv](https://mople71.cz/img/icons/brv.png) Brave</h3>
+<h3 class="brv">![brv_icon](https://mople71.cz/img/icons/brv.png) Brave</h3>
 
 > Instalace
 
@@ -135,31 +135,13 @@ a stiskněte **Enter**.</li>
  <li style="list-style-type: none">![brv1](https://faq.mople71.cz/img/en/brv1.png)</li>
 - Prohlížeč restartujte.
 
-> Blokování reklamy
-
-- Nainstalujte si následující bezpečnostní doplněk: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=cs)
-
-#### Nastavení uBlock:
-
-- Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
-<li style="list-style-type: none">![chublock](https://faq.mople71.cz/img/en/chublock.png)</li>
-- Zobrazí se nastavení uBlock Origin. V sekci **Soukromí** zatrhněte možnost <span class="green">Předejít úniku lokálních IP adres přes WebRTC</span>.
-- Následně se přesuňte do záložky <span class="green">Filtry třetích stran</span>.
-<li style="list-style-type: none">![ublock](https://faq.mople71.cz/img/cs/ublock.png)</li>
-- Zde vyberte filtry pro blokování webového obsahu. Doporučuji kromě výchozích zvolit následující:</li>
-<li style="list-style-type: none">![ublock1](https://faq.mople71.cz/img/cs/ublock1.png)</li>
-- Následně v pravém horním rohu klikněte na tlačítko: ![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)
-- Přesuňte se na začátek stránky, zkontrolujte zatržítko u položky <span class="green">Automaticky aktualizovat seznamy filtrů</span> a klikněte na tlačítko <span class="green">Aktualizovat nyní</span>. Během aktualizace panel nezavírejte.
-<li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
-
-
 > Oddělení prohlížeče od OS a dat
 
 Brave používá slušnou implementaci sandboxu.
 
 <br>
 
-<h3 class="ff">![ff](https://mople71.cz/img/icons/ff.png) Mozilla Firefox</h3>
+<h3 class="ff">![ff_icon](https://mople71.cz/img/icons/ff.png) Mozilla Firefox</h3>
 
 > Instalace
 
@@ -175,11 +157,11 @@ a stiskněte **Enter**.</li>
 - V levém panelu se přesuňte do záložky <span class="green">Soukromí a zabezpečení</span>.
 - V sekci **Nastavení soukromí** zapněte blokování <span class="green">Všech nalezených sledovacích prvků</span> a <span class="green">Cookies třetích stran</span>.
 - U nastavení blokování zvolte možnost <span class="green">Vždy</span>, u nastavení cookies třetích stran zvolte <span class="green">Cookies sledovacích prvků</span>. Následně klikněte na tlačítko <span class="green">Změnit seznam blokací</span>.
-<li style="list-style-type: none">![ff2](https://faq.mople71.cz/img/cs/ff.png)</li>
+<li style="list-style-type: none">![ff](https://faq.mople71.cz/img/cs/ff.png)</li>
 - V seznamu vyberte možnost **Přísná ochrana s Disconnect.me** a klikněte na <span class="green">Uložit změny</span>.
 - Sjeďte níže do sekce **Oprávnění**.
 - Zatrhněte položku <span class="green">Zabránit službám pro přístupnost v přístupu k vašemu prohlížeči</span> a potvrďte restart aplikace.
-<li style="list-style-type: none">![ff2](https://faq.mople71.cz/img/cs/ff1.png)</li>
+<li style="list-style-type: none">![ff1](https://faq.mople71.cz/img/cs/ff1.png)</li>
 
 - Do adresního řádku prohlížeče zadejte:
 <li style="list-style-type: none"><pre><code>about:config</code></pre>
@@ -190,8 +172,8 @@ a stiskněte **Enter**.</li>
 - Vyhledávání zobrazí veškeré hodnoty s **OCSP** v názvu. Dvakrát poklepejte levým myšítkem na následující hodnotu:
 <li style="list-style-type: none"><pre><code>security.OCSP.require</code></pre></li>
 - Tím změníte konfiguraci hodnoty (zapnete/vypnete požadovanou funkci).
-<li style="list-style-type: none">![ff0](https://faq.mople71.cz/img/cs/ff2.png)
-![ff1](https://faq.mople71.cz/img/cs/ff3.png)</li>
+<li style="list-style-type: none">![ff2](https://faq.mople71.cz/img/cs/ff2.png)
+![ff3](https://faq.mople71.cz/img/cs/ff3.png)</li>
 - Výše uvedeným způsobem vyhledejte a změňte nastavení následujících hodnot (pokud se neshoduje):
 <li style="list-style-type: none"><pre><code>accessibility.blockautorefresh  ---  automatické přesměrování; true
 security.mixed_content.block_display_content  ---  nezabezpečený obsah; true
