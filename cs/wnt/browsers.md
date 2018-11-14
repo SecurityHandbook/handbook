@@ -206,7 +206,7 @@ a stiskněte **Enter**.</li>
 <li style="list-style-type: none">![ff2](https://faq.mople71.cz/img/cs/ff.png)</li>
 - V seznamu vyberte možnost **Přísná ochrana s Disconnect.me** a klikněte na <span class="green">Uložit změny</span>.
 - Sjeďte níže do sekce **Oprávnění**.
-- Zatrhněte položku <span class="green">Zabránit službám pro přístupnost v přístupu k vašemu prohlížeči</span> a povtrďte restart aplikace.
+- Zatrhněte položku <span class="green">Zabránit službám pro přístupnost v přístupu k vašemu prohlížeči</span> a potvrďte restart aplikace.
 <li style="list-style-type: none">![ff2](https://faq.mople71.cz/img/cs/ff1.png)</li>
 
 - Do adresního řádku prohlížeče zadejte:

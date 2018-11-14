@@ -64,6 +64,33 @@ Chromium používá špičkovou implementaci sandboxu.
 
 <br>
 
+<h3 class="epiph">![epiph](https://mople71.cz/img/icons/epiph.png) GNOME Web:</h3>
+
+> Instalace
+
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
+<li style="list-style-type: none"><pre><code>sudo dnf install -y epiphany
+exit</code></pre></li>
+
+>  Bezpečnější nastavení
+
+- Rozklikněte nabídku v kontextovém menu a otevřete <span class="green">Předvolby</span>.
+<li style="list-style-type: none">![epiph](https://faq.mople71.cz/img/cs/epiph.png)</li>
+- V sekci **Obsah WWW** zatrhněte možnost <span class="green">Blokovat vyskakovací okna</span> a <span style="color: #BF0000">odstraňte</span> zatržítko u možnosti <span class="green">Povolit zásuvné moduly</span>.
+<li style="list-style-type: none">![epiph1](https://faq.mople71.cz/img/cs/epiph1.png)</li>
+- Přesuňte se do záložky **Uchovaná data** a v sekci **Cookies** zvolte možnost <span class="green">Jen ze serverů, které navštěvujete</span>.
+<li style="list-style-type: none">![epiph2](https://faq.mople71.cz/img/cs/epiph2.png)</li>
+
+> Blokování reklamy
+
+Prohlížeč má vestavěný blokátor reklam se základními filtry.
+
+> Oddělení prohlížeče od OS a dat
+
+Epiphany podporuje flatpak sandbox. Lepší, nežli žádný.
+
+<br>
+
 <h3 class="brv">![brv](https://mople71.cz/img/icons/brv.png) Brave</h3>
 
 > Instalace
@@ -128,34 +155,7 @@ a stiskněte **Enter**.</li>
 
 > Oddělení prohlížeče od OS a dat
 
-Brave používá velmi dobrou implementaci sandboxu.
-
-<br>
-
-<h3 class="epiph">![epiph](https://mople71.cz/img/icons/epiph.png) GNOME Web:</h3>
-
-> Instalace
-
-- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
-<li style="list-style-type: none"><pre><code>sudo dnf install -y epiphany
-exit</code></pre></li>
-
->  Bezpečnější nastavení
-
-- Rozklikněte nabídku v kontextovém menu a otevřete <span class="green">Předvolby</span>.
-<li style="list-style-type: none">![epiph](https://faq.mople71.cz/img/cs/epiph.png)</li>
-- V sekci **Obsah WWW** zatrhněte možnost <span class="green">Blokovat vyskakovací okna</span> a <span style="color: #BF0000">odstraňte</span> zatržítko u možnosti <span class="green">Povolit zásuvné moduly</span>.
-<li style="list-style-type: none">![epiph1](https://faq.mople71.cz/img/cs/epiph1.png)</li>
-- Přesuňte se do záložky **Uchovaná data** a v sekci **Cookies** zvolte možnost <span class="green">Jen ze serverů, které navštěvujete</span>.
-<li style="list-style-type: none">![epiph2](https://faq.mople71.cz/img/cs/epiph2.png)</li>
-
-> Blokování reklamy
-
-Prohlížeč má vestavěný blokátor reklam se základními filtry.
-
-> Oddělení prohlížeče od OS a dat
-
-Epiphany podporuje flatpak sandbox. Lepší, nežli žádný.
+Brave používá slušnou implementaci sandboxu.
 
 <br>
 
@@ -178,7 +178,7 @@ a stiskněte **Enter**.</li>
 <li style="list-style-type: none">![ff2](https://faq.mople71.cz/img/cs/ff.png)</li>
 - V seznamu vyberte možnost **Přísná ochrana s Disconnect.me** a klikněte na <span class="green">Uložit změny</span>.
 - Sjeďte níže do sekce **Oprávnění**.
-- Zatrhněte položku <span class="green">Zabránit službám pro přístupnost v přístupu k vašemu prohlížeči</span> a povtrďte restart aplikace.
+- Zatrhněte položku <span class="green">Zabránit službám pro přístupnost v přístupu k vašemu prohlížeči</span> a potvrďte restart aplikace.
 <li style="list-style-type: none">![ff2](https://faq.mople71.cz/img/cs/ff1.png)</li>
 
 - Do adresního řádku prohlížeče zadejte:
@@ -228,4 +228,4 @@ network.allow-experiments --- false</code></pre></li>
 
 > Oddělení prohlížeče od OS a dat
 
-Sandbox Firefoxu je v aktivním vývoji a již nyní je v celkem použitelném stavu. Využití Flatpak sandboxu proto není nutné ani rozumné.
+Sandbox Firefoxu je v aktivním vývoji a již nyní je v celkem použitelném stavu.

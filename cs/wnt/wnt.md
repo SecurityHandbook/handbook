@@ -176,7 +176,7 @@ Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často
 
 Windows by se měly ve výchozím nastavení aktualizovat samy (v edici *Home* automatické aktualizace dokonce nelze vypnout). Mnohé důležité aplikace (např. prohlížeče) se obvykle aktualizují automaticky.
 
-Pro kontrolu aktualizací ostatního SW můžete použít např. aplikaci <span class="green">Kaspersky Software Updater</span>, která vás v případě neaktuálního SW upozorní a umožní jeho akutalizaci &ndash; automatické aktualizace ovšem teoreticky mohou způsobit problémy. Návod ke *Kaspersky Software Updater* naleznete v sekci [Ostatní aplikace](#wnt2.4).
+Pro kontrolu aktualizací ostatního SW můžete použít např. aplikaci <span class="green">Kaspersky Software Updater</span>, která vás v případě neaktuálního SW upozorní a umožní jeho aktualizaci &ndash; automatické aktualizace ovšem teoreticky mohou způsobit problémy. Návod ke *Kaspersky Software Updater* naleznete v sekci [Ostatní aplikace](#wnt2.4).
 
 > Kontrola nastavení aktualizací OS (starší verze Windows)
 
