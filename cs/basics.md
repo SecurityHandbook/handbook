@@ -1,24 +1,24 @@
 # FAQ &ndash; Základní informace
 
 ## Základní pojmy:
-- <span class="green">hacker</span> &ndash; člověk zneužívající svých znalostí (např. v oblasti počítačové bezpečnosti) za účelem osobního zisku, tento význam je původně převzatý ze slova *cracker*
+- <span class="green">hacker</span> &ndash; člověk zneužívající svých znalostí (např. v oblasti počítačové bezpečnosti) za účelem osobního zisku, tento význam je původně převzatý z pojmu *cracker*
 - <span class="green">malware</span> &ndash; termín pro škodlivý software, jež se dělí na mnoho (méně či více škodlivých) podskupin
 - **adware** &ndash; malware, který obsahuje reklamy a zobrazuje je uživateli
 - **bundleware** &ndash; nadbytečný (ne nutně škodlivý) software, který je přibalen k validnímu software
-- **foistware** &ndash; software nainstalovaný bez vědomí uživatele, který se snaží přesvědčit uživatele o chybách v OS a nabízí jejich odstranění za poplatek
+- **foistware** &ndash; software nainstalovaný bez vědomí uživatele, který se zpravidla snaží přesvědčit uživatele o chybách v OS a nabízí jejich odstranění za poplatek
 - <span class="green">ransomware</span> &ndash; software, který zabraňuje uživateli v přístupu ke svým datům a za obnovení přístupu požaduje poplatek
 - **rootkit** &ndash; kód, který skrývá přítomnost malware v OS a ztěžuje jeho detekci
-- **exploit** &ndash; kód využívající chyby v jiném SW (klidně přímo v OS) za účelem provedení požadované akce
+- <span class="green">exploit</span> &ndash; kód využívající chyby v jiném SW (klidně přímo v OS) za účelem provedení požadované akce
 - **zero-day (0-day)** &ndash; zranitelnost, která byla zneužita v den jejího zveřejnění (příp. před ním)
 - **APT** &ndash; &bdquo;Advanced Persistent Threat&ldquo;; pokročilejší hrozba, většinou vytvářená na míru, běžný uživatel s ní obvykle nepřijde do styku
-- <span class="green">payload</span> &ndash; část kódu malware, která vykonává klíčovou škodlivou akci
+- **payload** &ndash; část kódu malware, která vykonává klíčovou škodlivou akci
 
 <br>
 
 ## Základy bezpečnosti:
 - Pravidelně zálohujte data.
 - Nepoužívejte nelegální software &ndash; většina cracků běžně dostupná na internetu je infikována.
-- Před vykonáním libovolné akce 2x zkontrolujte její autenticitu.
+- Před vykonáním libovolné akce dvakrát zkontrolujte její autenticitu.
 -	Veškerý SW stahujte výhradně ze stránek výrobce.
 - Používejte silná hesla dostatečně jednoduchá na zapamatování:
 <li style="list-style-type: none"><p class="imgsrc">*Password Strength.* Zdroj: https://xkcd.com/936/ | [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)</p>
@@ -55,7 +55,6 @@ Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpeč
 - [BleepingComputer](https://www.bleepingcomputer.com/)
 - [The Hacker News](http://thehackernews.com/)
 - [Threatpost](https://threatpost.com/)
-- [Naked Security](https://nakedsecurity.sophos.com/)
 - [LinuxSecurity](http://www.linuxsecurity.com/)
 
 <br>
@@ -78,5 +77,5 @@ Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpeč
 
 ## Doporučené klíčenky:
 - [1Password](https://1password.com/) &ndash; špičková platforma, placená
+- [Bitwarden](https://bitwarden.com/) &ndash; bezplatná
 - [KeePassX](https://www.keepassx.org/) &ndash; bezplatná
-- [Encryptr](https://spideroak.com/solutions/encryptr/) &ndash; bezplatná

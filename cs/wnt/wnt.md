@@ -20,7 +20,9 @@ Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci
 OS Windows má dva typy uživatelských účtů: <span class="green">Standardní uživatel</span> a <span class="green">Správce</span>.
 
 Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, jelikož má omezená oprávnění. Pokud se tedy do OS i přes všechna zdejší doporučení dostane malware, infikuje pouze uživatelský účet &ndash; na infikaci OS nemá potřebná oprávnění.
-<span class="red">Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá další opatření naprosto zbytečná.</span>
+
+<div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
+Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá další opatření naprosto zbytečná.</p></div>
 
 > Přidání účtu Správce a změna stávajícího uživatele na Standardního
 
@@ -213,6 +215,10 @@ Ostatní AV/M řešení nejsou vestavěná v OS &ndash; kvalita jejich kódu nem
 
 Detekce <span class="green">Windows Defender</span> je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na instalacích aktuálních verzí OS &ndash; počet uživatelů zvyšuje šanci zachytit nový malware. Implementuje vyspělý cloudový systém, díky kterému nabízí užitečné pokročilé funkce (např. *block on first sight*).
 
+<div class="alert info"><p><em class="icon-info-circled"></em>**Tip**<br>
+Používáte-li lokální uživatelský účet bez propojení s účtem Microsoftu, *Windows Defender* bude zobrazovat varování o nezabezpečení účtu. Zmíněného varování se snadno zbavíte otevřením **Centra zabezpečení v programu Windows Defender** a kliknutím na **Zavřít** v sekci *Ochrana účtu*.<br>
+![wdmsa](https://faq.mople71.cz/img/cs/wdmsa.png)</p></div>
+
 > Ochrana před viry a hrozbami &ndash; nastavení
 
 - Otevřete si <span class="green">Centrum zabezpečení v programu Windows Defender</span>.
@@ -249,7 +255,6 @@ Detekce <span class="green">Windows Defender</span> je na velmi dobré úrovni. 
 - Klikněte na <span class="green">Přidat povolenou aplikaci</span>. Zvolte možnost <span class="green">Procházet všechny aplikace</span>.
 <li style="list-style-type: none">![wd4](https://faq.mople71.cz/img/cs/wd4.png)</li>
 - Nalezněte **Kaspersky Software Updater** a přidejte postupně jeho spustitelné programy na seznam.
-<li style="list-style-type: none">![ksu2](https://faq.mople71.cz/img/en/ksu2.png)</li>
 - **Řízený přístup ke složkám** následně opětovně povolte.
 
 <br>
@@ -310,7 +315,7 @@ Od verze **Windows 10 Fall Creators Update** je schopnost mitigace aplikací tř
 > Konfigurace anti-exploit mitigací pro Microsoft Office
 
 - V horním panelu se přesuňte do záložky **Nastavení programu**.
-- Klikněte na <span class="green">Přidat program, který chcete přizpůsobit</span> a <span class="green">Přidat podle názvu aplikace</span>.
+- Klikněte na <span class="green">Přidat program, který chcete přizpůsobit</span> a zvolte <span class="green">Přidat podle názvu aplikace</span>.
 - Do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>WINWORD.EXE</code></pre></li>
 - Upravte konfiguraci dle obrázku:
@@ -460,7 +465,19 @@ Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce.
 
 - Stáhněte si [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 - Aplikaci nainstalujte.
-- ...
+- Po otevření aplikace v horním menu klikněte na tlačítko <span class="green">Nový</span>.
+- V dolním panelu zvolte <span class="green">Expertní režim</span>.
+- Zvolte název VM a požadovaný OS. Následně určete velikost paměti OS a tlačítkem <span class="green">Vytvořit</span> otevřete dialog k vytvoření virtuálního pevného disku.
+- Zvolte jeho velikost (alespoň *20 GB*) a vytvořte jej.
+- Upravte nastavení VM dle potřeby a následně virtuální stroj spusťte. Vyberte bootovací disk požadovaného OS a klikněte na tlačítko <span class="green">Spustit</span>.
+- Nainstalujte a nakonfigurujte OS. Po úspěšné konfiguraci pro požadované účely virtuální stroj vypněte.
+- V pravém horním menu rozklikněte nabídku **Machine Tools** a zvolte <span class="green">Snímky</span>.
+<li style="list-style-type: none">![vbox](https://faq.mople71.cz/img/cs/vbox.png)</li>
+- Tlačítkem <span class="green">Take</span> vytvořte nový snapshot virtuálního stroje.
+- Snapshot pojmenujte a klikněte na <span class="green">OK</span>.
+<li style="list-style-type: none">![vbox1](https://faq.mople71.cz/img/cs/vbox1.png)</li>
+- Při následujícím vypnutí virtuálního stroje nastavte automatické obnovení vytvořeného snapshotu.
+- Čas od času (např. 1x měsíčně) virtuální OS aktualizujte a vytvořte nový snapshot.
 
 <br>
 
@@ -519,7 +536,9 @@ Ačkoli je *Kaspersky Software Updater* kvalitní aplikace, automatická aktuali
 
 - Stáhněte si [Unchecky](https://unchecky.com/files/unchecky_setup.exe).
 - Aplikaci nainstalujte.
-- ...
+- Otevřete rozhraní aplikace a přesuňte se do sekce **Nastavení**.
+- Vypněte zobrazování ikony v oznamovací oblasti a klikněte na <span class="green">Použít</span>.
+<li style="list-style-type: none">![un](https://faq.mople71.cz/img/cs/un.png)</li>
 
 > Instalace a konfigurace HashTab
 
@@ -564,9 +583,6 @@ Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je 
 #### Bezplatná konfigurace pro BFU, který neumí anglicky (např. prarodiče):
 > Konfigurace
 
-<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.</p></div>
-
 - OS &ndash; Windows **10 September 2018 Update**
 - bezpečné nastavení OS &ndash; **kompletní**
 - AV/M &ndash; **Windows Defender**
@@ -579,15 +595,12 @@ Tato konfigurace by při správném použití měla spolehlivě zabránit malwar
 - užitečné aplikace &ndash; **Unchecky**, **Kaspersky Software Updater**
 - konfigurace pro pokročilé &ndash; dle znalostí
 
-Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nastavit OS. **MS Edge** používat pro bankovní účely a podobné citlivé věci, **Google Chrome** či **Brave** pro běžné brouzdání. Samozřejmě, pokud zvládáte pokročilou konfiguraci popisovanou v FAQ pro pokročilé, úroveň zabezpečení můžete velmi výrazně zvýšit.
+Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nastavit OS. **MS Edge** používat pro bankovní účely a podobné citlivé věci, **Google Chrome** či **Brave** pro běžné brouzdání.
 
 <br>
 
 #### Bezplatná konfigurace pro středně pokročilého, který umí anglicky:
 > Konfigurace
-
-<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Tato konfigurace by při správném použití měla spolehlivě zabránit malware infekci.</p></div>
 
 - OS &ndash; Windows **10 September 2018 Update** / **8.1 Update 3**
 - bezpečné nastavení OS &ndash; **kompletní**
