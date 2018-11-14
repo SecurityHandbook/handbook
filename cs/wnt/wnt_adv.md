@@ -1,23 +1,23 @@
 # FAQ &ndash; OS Windows
-Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto velmi důležité.
+Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto nezbytné.
 
-V FAQ pro pokročilé se budeme věnovat hlavně vestavěným funkcím OS &ndash; cílem je dosáhnout špičkového zabezpečení za použití co nejméně řádků kódu, jejichž počet s 3-P aplikacemi rapidně roste.
+V FAQ pro pokročilé se budeme věnovat hlavně vestavěným funkcím OS &ndash; cílem je dosáhnout špičkového zabezpečení za použití co nejméně kódu, jehož velikost s third-party aplikacemi rapidně roste.
 
 Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Windows pro méně pokročilé](https://faq.mople71.cz/cs/wnt/index.php#wnt) uživatele a máte znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
-- vrstvy zabezpečení
+- bezpečnostní aplikace
 - integritní politika
 - ACL
 - AppContainer
 
 <br>
 
-## Vrstvy zabezpečení:
+## Bezpečnostní aplikace:
 ### Firewall:
 Windows obsahují vestavěný <span class="green">Windows Defender Firewall</span> (WDF), který je na velmi dobré úrovni.
 
-Použití FW třetí strany je zbytečné rozšiřování attack surface. Základem síťového zabezpečení v domácnosti je rozumný router s použitelným FW (NAT; např. Mikrotik, kde si FW ovšem samozřejmě musíte nastavit).
+Použití FW třetí strany je zbytečné rozšiřování attack surface. Základem síťového zabezpečení v domácnosti je rozumný router s NAT a použitelným FW (např. libovolný Mikrotik, kde si FW ovšem musíte nastavit).
 
 Co se blokování odchozí komunikace týče, *Windows Defender Firewall* tuto funkci podporuje a umožňuje vcelku jednoduše nastavit.
 
@@ -113,23 +113,6 @@ Windows Update následně můžete řešit libovolným způsobem.
 
 <br>
 
-### FIDES:
-[FIDES](https://excubits.com/content/en/products_pumpernickelfides.html) je drobný ovladač na úrovni kernelu, který si můžete představit jako nějakou obdobu *MAC* na Linuxu &ndash; program určuje, které procesy mají ke kterým souborům přístup. Jedná se o špičkové řešení, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
-
-Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, akorát podporuje konfigurační soubor pouze do velikosti 2 kB, což není dostatek pro pokročilé nastavení. Doporučuji tedy investovat do plné verze a podpořit vývojáře.
-
-> Instalace FIDES
-
-- Stáhněte si demo verzi ze stránek výrobce, soubor spusťte a aplikaci vybalte.
-- V závislosti na bitové verzi OS otevřete složku **32-bit** / **64-bit**.
-- Klikněte pravým tlačítkem na INF soubor a zvolte **Install**.
-- Vraťte se do rootu aplikace a otevřete **Pumpernickel.ini**.
-- Otevře se konfigurační soubor, kde definujete pravidla. V základu tam naleznete pravidlo, že Notepad nemá právo k modifikaci žádného souboru kromě TXT na Plochách uživatelů. RTFM, je v rootu aplikace.
-- Po dokončení úprav konfiguračního souboru jej přesuňte do lokace **C:\Windows**.
-- Následně ovladač aktivujte pomocí *net start pumpernickel*.
-
-<br>
-
 ### MemProtect:
 [MemProtect](https://excubits.com/content/en/products_memprotect.html) je drobný ovladač na úrovni kernelu, který určuje, které procesy mají přístup k ostatním procesům v RAM. Jedná se o špičkové řešení nejen proti řadám rodin exploitům, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
 
@@ -162,6 +145,46 @@ Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, a
 [EOF]
 </code></pre></li>
 - ...
+
+<br>
+
+### FIDES:
+[FIDES](https://excubits.com/content/en/products_pumpernickelfides.html) je drobný ovladač na úrovni kernelu, který si můžete představit jako nějakou obdobu *MAC* na Linuxu &ndash; program určuje, které procesy mají ke kterým souborům přístup. Jedná se o špičkové řešení, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
+
+Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, akorát podporuje konfigurační soubor pouze do velikosti 2 kB, což není dostatek pro pokročilé nastavení. Doporučuji tedy investovat do plné verze a podpořit vývojáře. Návod s příklady konfigurace bude někdy v budoucnu pravděpodobně doplněn.
+
+> Instalace FIDES
+
+- Stáhněte si demo verzi ze stránek výrobce, soubor spusťte a aplikaci vybalte.
+- V závislosti na bitové verzi OS otevřete složku **32-bit** / **64-bit**.
+- Klikněte pravým tlačítkem na INF soubor a zvolte **Install**.
+- Vraťte se do rootu aplikace a otevřete **Pumpernickel.ini**.
+- Otevře se konfigurační soubor, kde definujete pravidla. V základu tam naleznete pravidlo, že Notepad nemá právo k modifikaci žádného souboru kromě TXT na Plochách uživatelů. RTFM, je v rootu aplikace.
+- Po dokončení úprav konfiguračního souboru jej přesuňte do lokace **C:\Windows**.
+- Následně ovladač aktivujte pomocí *net start pumpernickel*.
+
+<br>
+
+### Bouncer:
+[Bouncer](https://excubits.com/content/en/products_bouncer.html) je drobný ovladač na úrovni kernelu, který umožňuje pokročilý whitelist spustitelných souborů. Jedná se o špičkové řešení, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
+
+Existuje demo verze, která je po nějakou dobu plně funkční, akorát podporuje konfigurační soubor pouze do velikosti 5 kB, což není dostatek pro pokročilé nastavení. Doporučuji tedy investovat do plné verze a podpořit vývojáře.
+
+Postup je podobný jako u výše zmíněných produktů stejné společnosti. Návod s příklady konfigurace bude někdy v budoucnu pravděpodobně doplněn.
+
+<br>
+
+### Smart Object Blocker:
+[Smart Object Blocker](https://www.novirusthanks.org/products/smart-object-blocker/) je možnou alternativou k výše zmíněnému řešení.
+
+Návod s příklady konfigurace bude někdy v budoucnu pravděpodobně doplněn.
+
+<br>
+
+### OSArmor:
+[OSArmor](https://www.novirusthanks.org/products/osarmor/) je řešení založené na bázi behaviorálních pravidel, které nabízí několik zajímavých možností ochrany. Aktuálně je řazeno mezi experimentální aplikace, funguje již vcelku spolehlivě. Stejně jako např. *VoodooShield* ovšem není určeno k profesionálnímu nasazení.
+
+Návod s doporučenou konfigurací bude někdy v budoucnu pravděpodobně doplněn. Každopádně je doporučeno vypnout anti-exploit ochranu u aplikací, které mají implementovány vlastní účinné mitigace (MS Office, Chrome,&#8230;) a vyzkoušet různé možnosti ochrany v sekci *Advanced*.
 
 <br><br><hr><br>
 

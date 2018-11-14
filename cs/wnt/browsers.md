@@ -1,4 +1,9 @@
-<h3 class="ch">![ch](https://mople71.cz/img/icons/ch16.png) Google Chrome</h3>
+<h3 class="ch">![ch_icon](https://mople71.cz/img/icons/ch16.png) Google Chrome</h3>
+
+> Instalace
+
+- Stáhněte si nejnovější verzi [Google Chrome](https://www.google.com/chrome/).
+- Aplikaci nainstalujte.
 
 > Bezpečnější nastavení
 
@@ -56,11 +61,53 @@ a stiskněte **Enter**.</li>
 
 > Oddělení prohlížeče od OS a dat
 
-Google Chrome používá velmi dobrou implementaci sandboxu.
+Google Chrome používá špičkovou implementaci sandboxu.
 
 <br>
 
-<h3 class="chm">![chm](https://mople71.cz/img/icons/chm16.ico) Chromium:</h3>
+<h3 class="brv">![brv_icon](https://mople71.cz/img/icons/brv.png) Brave</h3>
+
+> Instalace
+
+- Stáhněte si nejnovější verzi [Brave](https://brave.com/download/).
+- Aplikaci nainstalujte.
+
+> Bezpečnější nastavení
+
+- Do adresního řádku prohlížeče zadejte:
+<li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
+a stiskněte **Enter**.</li>
+- Zobrazí se nastavení. V sekci **Brave shields defaults** zkontrolujte konfiguraci a případně opravte:
+ <li style="list-style-type: none">![brv](https://faq.mople71.cz/img/en/brv.png)</li>
+- Sjeďte na konec stránky a klikněte na tlačítko ![ch](https://faq.mople71.cz/img/cs/ch.png)
+- V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu...</span>
+<li style="list-style-type: none">![ch1](https://faq.mople71.cz/img/cs/ch1.png)</li>
+- V sekci **Flash** zablokujte spouštění obsahu Flash na webech.
+<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
+- V sekci **Synchronizace na pozadí** zablokujte nedávno zavřeným webům dokončit odeslání a příjem dat.
+<li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
+- V sekci **Přístup pluginu mimo izolovaný prostor** zablokujte webům přístup do počítače pomocí pluginu.
+<li style="list-style-type: none">![ch5](https://faq.mople71.cz/img/cs/ch5.png)</li>
+- V sekci **Schránka** zablokujte webům přístup k datům ve schránce.
+<li style="list-style-type: none">![ch6](https://faq.mople71.cz/img/cs/ch6.png)</li>
+- Prohlížeč restartujte.
+
+> Omezení JavaScript
+
+- Do adresního řádku prohlížeče zadejte:
+<li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
+a stiskněte **Enter**.</li>
+- Zobrazí se nastavení. V sekci **Brave shields defaults** upravte konfiguraci dle obrázku:
+ <li style="list-style-type: none">![brv1](https://faq.mople71.cz/img/en/brv1.png)</li>
+- Prohlížeč restartujte.
+
+> Oddělení prohlížeče od OS a dat
+
+Brave používá špičkovou implementaci sandboxu.
+
+<br>
+
+<h3 class="chm">![chm_icon](https://mople71.cz/img/icons/chm16.ico) Chromium:</h3>
 
 Nechcete-li používat *Google Chrome*, doporučuji použít open-source Chromium, na kterém je *Google Chrome* založen. Chromium na Windows se bohužel neumí automaticky aktualizovat. Můžete ovšem použít komunitní open-source nástroj.
 
@@ -90,7 +137,7 @@ Použijte postup pro **Google Chrome** výše, je identický.
 
 <br>
 
-<h3 class="ed">![edge](https://mople71.cz/img/icons/edge16.png) Microsoft Edge</h3>
+<h3 class="ed">![edge_icon](https://mople71.cz/img/icons/edge16.png) Microsoft Edge</h3>
 
 > Bezpečnější nastavení
 
@@ -123,7 +170,12 @@ Microsoft Edge používá špičkovou implementaci sandboxu.
 
 <br>
 
-<h3 class="ff">![ff](https://mople71.cz/img/icons/ff.png) Mozilla Firefox</h3>
+<h3 class="ff">![ff_icon](https://mople71.cz/img/icons/ff.png) Mozilla Firefox</h3>
+
+> Instalace
+
+- Stáhněte si nejnovější verzi [Mozilla Firefox](https://www.mozilla.org/cs/firefox/new/).
+- Aplikaci nainstalujte.
 
 > Bezpečnější nastavení
 
@@ -133,11 +185,11 @@ a stiskněte **Enter**.</li>
 - V levém panelu se přesuňte do záložky <span class="green">Soukromí a zabezpečení</span>.
 - V sekci **Nastavení soukromí** zapněte blokování <span class="green">Všech nalezených sledovacích prvků</span> a <span class="green">Cookies třetích stran</span>.
 - U nastavení blokování zvolte možnost <span class="green">Vždy</span>, u nastavení cookies třetích stran zvolte <span class="green">Cookies sledovacích prvků</span>. Následně klikněte na tlačítko <span class="green">Změnit seznam blokací</span>.
-<li style="list-style-type: none">![ff2](https://faq.mople71.cz/img/cs/ff.png)</li>
+<li style="list-style-type: none">![ff](https://faq.mople71.cz/img/cs/ff.png)</li>
 - V seznamu vyberte možnost **Přísná ochrana s Disconnect.me** a klikněte na <span class="green">Uložit změny</span>.
 - Sjeďte níže do sekce **Oprávnění**.
-- Zatrhněte položku <span class="green">Zabránit službám pro přístupnost v přístupu k vašemu prohlížeči</span> a povtrďte restart aplikace.
-<li style="list-style-type: none">![ff2](https://faq.mople71.cz/img/cs/ff1.png)</li>
+- Zatrhněte položku <span class="green">Zabránit službám pro přístupnost v přístupu k vašemu prohlížeči</span> a potvrďte restart aplikace.
+<li style="list-style-type: none">![ff1](https://faq.mople71.cz/img/cs/ff1.png)</li>
 
 - Do adresního řádku prohlížeče zadejte:
 <li style="list-style-type: none"><pre><code>about:config</code></pre>
@@ -148,8 +200,8 @@ a stiskněte **Enter**.</li>
 - Vyhledávání zobrazí veškeré hodnoty s **OCSP** v názvu. Dvakrát poklepejte levým myšítkem na následující hodnotu:
 <li style="list-style-type: none"><pre><code>security.OCSP.require</code></pre></li>
 - Tím změníte konfiguraci hodnoty (zapnete/vypnete požadovanou funkci).
-<li style="list-style-type: none">![ff0](https://faq.mople71.cz/img/cs/ff2.png)
-![ff1](https://faq.mople71.cz/img/cs/ff3.png)</li>
+<li style="list-style-type: none">![ff2](https://faq.mople71.cz/img/cs/ff2.png)
+![ff3](https://faq.mople71.cz/img/cs/ff3.png)</li>
 - Výše uvedeným způsobem vyhledejte a změňte nastavení následujících hodnot (pokud se neshoduje):
 <li style="list-style-type: none"><pre><code>accessibility.blockautorefresh  ---  automatické přesměrování; true
 security.mixed_content.block_display_content  ---  nezabezpečený obsah; true
@@ -190,7 +242,7 @@ Sandbox Firefoxu je v aktivním vývoji a již nyní je v celkem použitelném s
 
 <br>
 
-<h3 class="ie">![ie](https://mople71.cz/img/icons/ie16.png) Internet Explorer</h3>
+<h3 class="ie">![ie_icon](https://mople71.cz/img/icons/ie16.png) Internet Explorer</h3>
 
 > Bezpečnější nastavení
 
@@ -199,7 +251,7 @@ Sandbox Firefoxu je v aktivním vývoji a již nyní je v celkem použitelném s
 a stiskněte **Enter**.</li>
 - Zobrazí se Vlastnosti internetu. V horní liště se přesuňte do záložky <span class="green">Zabezpečení</span>.
 - Zobrazí se nastavení úrovně zabezpečení internetových zón.
-<li style="list-style-type: none">![ie0](https://faq.mople71.cz/img/cs/ie.png)</li>
+<li style="list-style-type: none">![ie](https://faq.mople71.cz/img/cs/ie.png)</li>
 - V zóně **Internet** se ujistěte, že má nastavenou výchozí úroveň zabezpečení. Pokud nemá, klikněte na tlačítko <span class="green">Výchozí úroveň</span>, čímž nastavení opravíte.
 - Přesuňte se do zóny **Místní intranet** a upravte její úroveň zabezpečení dle obrázku:
 <li style="list-style-type: none">![ie1](https://faq.mople71.cz/img/cs/ie1.png)</li>
