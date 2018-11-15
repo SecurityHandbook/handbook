@@ -176,7 +176,7 @@ Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často
 
 Windows by se měly ve výchozím nastavení aktualizovat samy (v edici *Home* automatické aktualizace dokonce nelze vypnout). Mnohé důležité aplikace (např. prohlížeče) se obvykle aktualizují automaticky.
 
-Pro kontrolu aktualizací ostatního SW můžete použít např. aplikaci <span class="green">Kaspersky Software Updater</span>, která vás v případě neaktuálního SW upozorní a umožní jeho aktualizaci &ndash; automatické aktualizace ovšem teoreticky mohou způsobit problémy. Návod ke *Kaspersky Software Updater* naleznete v sekci [Ostatní aplikace](#wnt2.4).
+Pro kontrolu aktualizací ostatního SW můžete použít např. aplikaci <span class="green">Kaspersky Software Updater</span>, která vás v případě neaktuálního SW upozorní a umožní jeho aktualizaci &ndash; automatické aktualizace ovšem teoreticky mohou způsobit problémy. Návod ke *Kaspersky Software Updater* naleznete v sekci [Ostatní aplikace](#wnt2.6).
 
 > Kontrola nastavení aktualizací OS (starší verze Windows)
 
@@ -443,7 +443,7 @@ Virtualizace může být velmi bezpečný způsob ochrany před malware (zálež
 
 - virtuální stroj (VM; virtual machine)
 - částečná virtualizace OS
-- sandbox &ndash;
+- sandbox
 
 #### Virtuální stroj:
 Nejbezpečnější způsob virtualizace je emulace virtuálního zařízení, kdy je virtualizován celý OS &ndash; za korektního nastavení a využití snapshotů. Po správné konfiguraci můžete virtuální stroj používat např. k vcelku bezpečnému brouzdání internetem.
@@ -527,7 +527,7 @@ Užitečné aplikace, které nelze zařadit pod určitou vrstvu zabezpečení.
 - Kaspersky Software Updater zobrazí dostupné aktualizace vašich aplikací. Aktualizaci můžete provést ručně přes stránky výrobce, nebo pomocí KSU kliknutím na tlačítko <span class="green">Aktualizovat</span>.
 - Aplikaci zavřete. Marketingovou řečnickou otázku v horní liště aplikace okázale ignorujte.
 <li style="list-style-type: none">![ksu1](https://faq.mople71.cz/img/cs/ksu1.png)</li>
-- Aplikaci pravděpodobně budete muset povolit v **Řízeném přístupu ke složkám**, který nyní opětovně zapněte. Návod [zde](#wnt2.1).
+- Aplikaci pravděpodobně budete muset povolit v **Řízeném přístupu ke složkám**, který nyní opětovně zapněte. Návod [zde](#wnt2.2.1).
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Ačkoli je *Kaspersky Software Updater* kvalitní aplikace, automatická aktualizace aplikací otevírá prostor problémům. Na druhou stranu se jedná o menší zlo v porovnání s neaktuálními aplikacemi. Pokud tedy takto konfigurujete OS člověku, který si s PC nerozumí a nebude aplikace aktualizovat, povolení automatických aktualizací zvažte.</p></div>
