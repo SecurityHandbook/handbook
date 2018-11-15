@@ -144,7 +144,7 @@ Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, a
 *>C:\Program Files\VoodooShield\*
 [EOF]
 </code></pre></li>
-- ...
+- &#8230;
 
 <br>
 

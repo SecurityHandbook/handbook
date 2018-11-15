@@ -161,9 +161,17 @@ Další možností virtualizace je **virtuální počítač**, kdy je místo apl
 - Klikněte na <span class="green">Vybrat soubor</span> a nalezněte požadovaný ISO soubor.
 - Odmítněte případnou expresní instalaci.
 - Klikněte na tlačítko <span class="green">Přizpůsobit...</span>
-- Nastavte požadované množství alokované paměti (pro 64-bitový OS alespoň 3 GiB) a místa na disku.
+- Nastavte požadované množství alokované paměti (pro 64-bitový OS alespoň *3 GiB*) a místa na disku (alespoň *20 GiB*).
 <li style="list-style-type: none">![gboxes](https://faq.mople71.cz/img/cs/gboxes.png)</li>
 - Přesuňte se zpět a v pravém horním rohu klikněte na <span class="green">Vytvořit</span>.
+- Nainstalujte a nakonfigurujte OS. Následně jej vypněte.
+- V seznamu na požadovaný virtuální stroj klikněte pravým tlačítkem a otevřete <span class="green">Vlastnosti</span>.
+- Přesuňte se do záložky **Snímky**. Existuje-li již nějaký snapshot, ozubeným kolem vpravo otevřete jeho konfiguraci a smažte jej.
+- Tlačítkem <span class="green">+</span> v dolním menu vytvořte nový snapshot.
+- Ozubeným kolem vpravo otevřete jeho konfiguraci a tlačítkem <span class="green">Přejmenovat</span> si jej pojmenujte jako výchozí snapshot.
+<li style="list-style-type: none">![gboxes1](https://faq.mople71.cz/img/cs/gboxes1.png)</li>
+- Nyní můžete kdykoli virtuální stroj po jeho vypnutí snadno obnovit do výchozího stavu.
+- Čas od času (např. 1x měsíčně) virtuální OS aktualizujte a vytvořte nový snapshot.
 
 <br>
 
@@ -248,7 +256,7 @@ flatpak install flathub org.gnome.Epiphany</code></pre></li>
 <br><br><hr><br>
 
 ## Zabezpečení internetového prohlížeče:
-Z bezpečnostního hlediska doporučuji prohlížeč <span class="green">Chromium</span>. Používá špičkovou implementaci sandboxu a jeho kód je na velmi dobré úrovni. Celkově je v ohledu bezpečnosti v současném stavu dále než **Mozilla Firefox**. Prohlížeč **GNOME Web (Epiphany)** není nijak zvlášť zaměřený na bezpečnost, nehodí se tedy ke každodennímu používání. Je možné jej ovšem použít jako oddělený prohlížeč pro citlivé věci jako bankovnictví apod.
+Z bezpečnostního hlediska doporučuji prohlížeč <span class="green">Chromium</span>. Používá špičkovou implementaci sandboxu a jeho kód je na velmi dobré úrovni. Celkově je v ohledu bezpečnosti v současném stavu dále než **Mozilla Firefox**. Prohlížeč **GNOME Web (Epiphany)** není nijak zvlášť zaměřený na bezpečnost, nehodí se tedy ke každodennímu používání. Je možné jej ovšem použít jako oddělený prohlížeč pro citlivé věci jako bankovnictví apod. Prohlížeč **Brave** vychází z prohlížeče Chromium, v základu integruje blokování reklam a trackerů. Jeho sandbox aktuálně není na úrovni prohlížeče Chromium, i tak je ovšem solidní.
 
 <!--- ./browsers.md -->
 

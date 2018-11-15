@@ -46,12 +46,22 @@ Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpeč
 
 <br>
 
+## Bezpečné používání mobilních zařízení:
+- Používejte aktuální záplatovanou **originální** verzi OS.
+- Neprovádějte na své zařízením *root* / *jailbreak* &ndash; touto akcí rozbíjíte bezpečnostní model mobilních OS.
+- Instalujte aplikace pouze z důvěryhodných zdrojů &ndash; *Google Play, F-Droid* / *Apple Store* / *Microsoft Store*.
+- Neinstalujte aplikace vyžadující nesmyslná oprávnění (např. Flashlight+ vyžadující přístup k SMS a kontaktům).
+- Všechny rizikové činnosti provádějte pod účtem hosta.
+- Nezapomeňte na fyzické zabezpečení zařízení &ndash; nastavte zamykací heslo, neodemykejte bootloader apod.
+
+<br>
+
 ## Informace o aktuálních událostech v počítačové bezpečnosti:
 - [CSIRT.cz](https://csirt.cz/news/security/)
 - [Root.cz &ndash; bezpečnost](https://www.root.cz/bezpecnost/)
 - [Twitter &ndash; #ITbezpecnost](https://twitter.com/hashtag/ITbezpecnost)
 
-<h3 id="basics4.1" class="nocol">Anglické zdroje:</h3>
+<h3 class="nocol">Anglické zdroje:</h3>
 - [BleepingComputer](https://www.bleepingcomputer.com/)
 - [The Hacker News](http://thehackernews.com/)
 - [Threatpost](https://threatpost.com/)

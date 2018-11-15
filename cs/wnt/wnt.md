@@ -559,17 +559,17 @@ Ačkoli je *Kaspersky Software Updater* kvalitní aplikace, automatická aktuali
 
 > Porovnání prohlížečů z ohledu bezpečnosti
 
-Všechny prohlížeče jsou po korektním nastavení relativně bezpečné, velmi důležitým faktorem je také samotný uživatel. Níže v sekci naleznete návody na zabezpečení **Google Chrome**, **Microsoft Edge**, **Mozilla Firefox** a **Internet Explorer**, z důvodu jejich dominantního postavení.
+Všechny prohlížeče jsou po korektním nastavení relativně bezpečné, velmi důležitým faktorem je také samotný uživatel. Níže v sekci naleznete návody na zabezpečení **Google Chrome**, **Microsoft Edge**, **Mozilla Firefox** a **Internet Explorer**, z důvodu jejich dominantního postavení. Také zde naleznete **Chromium** (open-source prohlížeč, ze kterého vychází Google Chrome) a **Brave** (open-source prohlížeč vycházející z prohlížeče Chromium, v základu integruje blokování reklam a trackerů).
 
 Ze zmíněných prohlížečů jsou na vrcholu <span class="green">Microsoft Edge</span> a <span class="green">Chromium</span>, případně jeho proprietární varianta [Google Chrome](https://www.google.com/chrome/browser/index.html).
 
-<span class="green">Chrome / Chromium</span> využívá špičkovou implementaci vestavěného sandboxu OS (LP-AC). Také integruje všechny moderní mitigace včetně **CFG**, což je významné plus.
+<span class="green">Chrome / Chromium</span> využívá špičkovou implementaci vestavěného sandboxu OS (LP-AC). Také integruje všechny moderní mitigace včetně **CFG**, což je významné plus. Prohlížeč *Brave* je na tom obdobně.
 
 <span class="green">Microsoft Edge</span> je nový a moderní prohlížeč využívající implementaci vestavěného sandboxu OS (AC). Používá moderní mitigace jako **CFG**, což je významné plus.
 
 <span class="red">Mozilla Firefox</span>. Tento prohlížeč z hlediska zabezpečení v porovnání s ostatními zmíněnými prohlížeči stále o něco zaostává. Oproti svým konkurentům má starý kód nižší kvality a postrádá moderní mitigace proti exploitaci. Na druhou stranu již integruje solidní implementaci sandboxu a tvrdě pracuje na nápravě.
 
-Prohlížeč **Internet Explorer** již není v aktivním vývoji, jeho používání tedy není pro denní užití doporučeno.
+Prohlížeč **Internet Explorer** již není v aktivním vývoji, jeho denní užívání tedy není doporučeno.
 
 <br>
 

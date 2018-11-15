@@ -1,7 +1,7 @@
 # FAQ &ndash; OS Android
 Android je dominantní OS na mobilním trhu (>88% podíl) vyvíjený společností **Google, Inc.** Díky svému majoritnímu zastoupení se těší velké pozornosti hackerů.
 
-Android má robustní bezpečnostní model, který předpokládá, že aplikace třetích stran běžící v OS, nejsou důvěryhodné. Hlavním bezpečnostním problémem je rozmanitost zařízení, z nichž většina modelů nedostává pravidelné bezpečnostní aktualizace a/nebo běží na zastaralých verzích OS.
+Android má robustní bezpečnostní model, který předpokládá, že aplikace třetích stran běžící v OS nejsou důvěryhodné. Hlavním bezpečnostním problémem je rozmanitost zařízení, z nichž většina modelů nedostává pravidelné bezpečnostní aktualizace a/nebo běží na zastaralých verzích OS.
 
 > Trocha teorie o bezpečnostním modelu OS Android
 
@@ -27,48 +27,54 @@ Android **Marshmallow** a výše nabízí rozšířený model oprávnění &ndas
 Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect*), zde nebudou rozebírány.
 
 #### FAQ se dělí na několik sekcí:
-- Obecné bezpečnostní zásady
 - Bezpečná zařízení
 - Bezpečné nastavení OS
 - Doporučené aplikace
 
 <br>
 
-## Obecné bezpečnostní zásady:
-- používejte aktuální záplatovanou verzi OS, minimálně **Oreo**
-- nerootujte své zařízení &ndash; rootem rozbíjíte bezpečnostní model OS
-- neodemykejte bootloader svého zařízení &ndash; vystavujete se riziku krádeže dat
-- neflashujte nebezpečné ROM se špatnou root implementací (např. *LineageOS*)
-- instalujte aplikace pouze z důvěryhodných zdrojů &ndash; Google Play, F-Droid,&#8230;
-- neinstalujte aplikace vyžadující nesmyslná oprávnění (např. Flashlight+ vyžadující přístup k SMS a kontaktům)
-- zvažte využívání open source aplikací
-- všechny rizikové činnosti provádějte pod účtem hosta
-- zamykejte své zařízení
-
-### Bezpečnostní tipy pro pokročilé:
-- používejte aktualizované ROM bez bloatware od výrobce
-- neflashujte nic typu *Open GApps* &ndash; je to řádově méně bezpečné než korektní integrace služeb Google výrobcem
-- ošklivá oprávnění aplikací následně můžete zakázat přímo v *AndroidManifest.xml*
-
-<br><br><hr><br>
-
 ## Bezpečná zařízení:
 Jak již bylo zmíněno, rozmanitost zařízení s OS Android je z pohledu bezpečnosti velký problém.
 
 V dnešní době není problém pořídit si telefon s OS Android za směšnou finanční částku. Pořizovací cena ovšem není všechno, a neměla by být hlavním faktorem při výběru. Většina levných zařízení se nikdy nedočká žádné bezpečnostní aktualizace, natož pak aktualizace na novější verzi OS. Tato zařízení mohou obsahovat stovky známých bezpečnostních děr, které lze lehce zneužít, pokud zařízení není záplatováno výrobcem. Situace u dražších modelů ale nemusí být o nic lepší. Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se s ním z hlediska bezpečnosti dalo pracovat.
 
-### Bezpečnostní požadavky na zařízení s OS Android:
+### Bezpečnostní kritéria pro zařízení s OS Android:
 - 64-bit architektura (x86/ARM)
 - jádro >= 3.18 (ideálně 4.4)
-- full verified boot (ideálně i pro custom ROM)
+- verze dodávaného OS minimálně **Oreo** (*8.1*)
 - podpora *Treble*
+- full verified boot (ideálně i pro custom ROM)
 - časté (měsíční, minimálně čtvrtletní) bezpečnostní aktualizace pro firmware a proprietární komponenty
 - garance bezpečnostních aktualizací po dobu morální životnosti modelu (jak dlouho chcete zařízení používat)
 
+> Proč záleží na verzi OS
+
+Každá verze OS Android přináší mnohá bezpečnostní a jiná vylepšení. **Kitkat** (4.4) přinesl implementaci **SELinux**, která byla ve verzi **Lollipop** (5.0) výrazně zrobustněna. **Marshmallow** přinesl správu oprávnění pro aplikace, kdy si uživatel může zvolit, jaká aplikace má k čemu přístup.
+
+**Nougat** přinesl přepsaný *MediaServer*, který likviduje celé rodiny exploitů a zabraňuje exploitaci na principu exploitu *Stagefright*. Je možné s klidným svědomím říci, že <span class="red">žádná verze OS Android před verzí *Nougat* není bezpečná a neměla by být používána.</span>
+
+**Oreo** posunul sandboxing na mnohonásobně vyšší úroveň díky *Project Treble*, zároveň přinesl celoplošené využítí *seccomp* pro veškeré aplikace. Také výrazně zvýšil bezpečnost *WebView*, zrobustnil model oprávnění aplikací atd.
+
+![Treble case study: media stack](https://guide.mople71.cz/img/en/mstreble.png)
+<p class="imgsrcf">*Treble case study: media stack (upraveno).* Zdroj: [What's New in Android Security (Google I/O '17)](https://www.youtube.com/watch?v=C9_ytg6MUP0) | &#169; 2017 Google</p>
+
+Drobný příklad. Nainstalujete škodlivou aplikaci na *Android 5.0* &ndash; nemáte kontrolu nad oprávněními aplikace, aplikace si může dělat, co chce. Nainstalujete škodlivou aplikaci na *Android 8.1* &ndash; aplikaci můžete odebrat oprávnění, která nechcete. Už se tedy nestane, aby aplikace na svítilnu měla přístup k vašim datům, mikrofonu a videu.
+
+> Proč záleží na bezpečnostních aktualizacích
+
+Další příklad. Nainstalujete si škodlivou aplikaci na <span class="green">8.1</span> &ndash; máte kontrolu nad oprávněními aplikace a všechna nepotřebná oprávnění tedy můžete zakázat. Nemáte ovšem nejnovější bezpečnostní záplaty. Aplikace tedy může využít známou bezpečnostní díru a dostat se díky ní na úroveň OS, který následně infikuje a uživatel se o tom nikdy nedozví. Toto v praxi aplikuje každý slušný malware pro OS Android, jelikož se jedná o nejjednodušší cestu infekce &ndash; cca. **90% zařízení nemá základní bezpečnostní záplaty**. Z mediálně známých např. Kemoge, Godless,...
+
 <br>
 
-### Zařízení s OS Android splňující bezpečnostní požadavky:
-Informace potřebné k výběru takového zařízení naleznete v odděleném návodě [Výběr telefonu &ndash; OS Android](https://guide.mople71.cz/cs/iot/andr_vyber.php).
+### Přijatelné modely dle bezpečnostních kritérií:
+- **libovolný model** řady **<span class="go">Pixel</span>**
+- **libovolný model** výrobce **<span class="no">Nokia</span>**
+- *Essential Phone*
+- vlajkové lodě výrobců **<span class="sam">Samsung</span>**, **<span class="lg">LG</span>**, **<span class="hu">Huawei</span>** a **SONY**
+- vyšší modely výrobců **<span class="sam">Samsung</span>** a **SONY**
+
+<div class="alert info"><p><em class="icon-info-circled"></em>**Tip**<br>
+Pro inspiraci se také můžete podívat na [seznam doporučených modelů pro firemní sféru](https://androidenterprisepartners.withgoogle.com/#!/results/browse-all/2) od Google.</p></div>
 
 <br><br><hr><br>
 
@@ -93,6 +99,25 @@ Android je (většinou) bezpečně nastaven již v základu, není ovšem od vě
 - Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
 <li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
 - Máte-li starší *verzi systému Android* než **8.0** a výrobce nepotvrdil aktualizaci, zařízení je implicitně nebezpečné &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než **3 měsíce**, zařízení není bezpečné &ndash; můžete se dívat po náhradě.
+- Aplikaci zavřete.
+
+<br>
+
+### Správce oprávnění:
+Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům má konkrétní aplikace přístup. Jedná se více o záležitost soukromí než bezpečnosti.
+
+> Nastavení oprávnění aplikací
+
+- Otevřete si <span class="green">Nastavení</span>.
+- Nalezněte podkategorii **Aplikace a oznámení** a otevřete ji.
+- Klikněte na <span class="green">Oprávnění aplikací</span>.
+- Otevřete postupně všechny kategorie a zakažte všem aplikacím nepotřebný přístup.
+<li style="list-style-type: none">![andapp](https://faq.mople71.cz/img/cs/andapp.png)</li>
+<li style="list-style-type: none">![andapp1](https://faq.mople71.cz/img/cs/andapp1.png)</li>
+- Po dokončení nastavení oprávnění se z kategorie **Oprávnění aplikací** přesuňte o úroveň výše, rozklikněte **Rozšířená nastavení**.
+- Otevřete <span class="green">Přístup ke spec. aplikacím</span>.
+- Zde můžete nastavit např. které aplikace mají přístup k prémiovým SMS nebo mohou měnit nastavení systému.
+<li style="list-style-type: none">![andapp2](https://faq.mople71.cz/img/cs/andapp2.png)</li>
 - Aplikaci zavřete.
 
 <br>
@@ -163,28 +188,6 @@ Blokování reklamy je z hlediska bezpečnosti nezbytné z důvodu výskytu ško
 - &#8230;
 
 VPN je dobrý způsob blokace reklam, ovšem implementace *OpenVPN* na Androidu není perfektní. Lokální VPN tímto problémem netrpí. Použití prohlížeče blokující reklamy je nejlepším řešením. **Chrome** již umožňuje nativně blokovat agresivní reklamy nesplňující podmínky.
-
-<br>
-
-### Správce oprávnění:
-Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům má konkrétní aplikace přístup. Jedná se více o záležitost soukromí než bezpečnosti.
-
-#### FOSS:
-- integrovaný (Marshmallow a výše)
-
-> Využití vestavěného správce oprávnění
-
-- Otevřete si <span class="green">Nastavení</span>.
-- Nalezněte podkategorii **Aplikace a oznámení** a otevřete ji.
-- Klikněte na <span class="green">Oprávnění aplikací</span>.
-- Otevřete postupně všechny kategorie a zakažte všem aplikacím nepotřebný přístup.
-<li style="list-style-type: none">![andapp](https://faq.mople71.cz/img/cs/andapp.png)</li>
-<li style="list-style-type: none">![andapp1](https://faq.mople71.cz/img/cs/andapp1.png)</li>
-- Po dokončení nastavení oprávnění se z kategorie **Oprávnění aplikací** přesuňte o úroveň výše, rozklikněte **Rozšířená nastavení**.
-- Otevřete <span class="green">Přístup ke spec. aplikacím</span>.
-- Zde můžete nastavit např. které aplikace mají přístup k prémiovým SMS nebo mohou měnit nastavení systému.
-<li style="list-style-type: none">![andapp2](https://faq.mople71.cz/img/cs/andapp2.png)</li>
-- Aplikaci zavřete.
 
 <br>
 

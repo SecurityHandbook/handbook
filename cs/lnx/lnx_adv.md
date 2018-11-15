@@ -168,9 +168,7 @@ Jediná distribuce, která má balíčky velmi vysoké úrovně s  důležitými
 
 Pro plnou funkčnost ASLR musí být všechny běžící procesy zkompilovány jako **PIE**. Poté se bude jednat o velmi robustní implementaci &ndash; alespoň tedy na platformě *x86_64*. Na 32-bit OS není problém ASLR prolomit pomocí brute-force.
 
-Balíčky neobsahující zmíněné mitigace je tedy nutné zkompilovat ručně. Repozitáře Arch Linux obsahují **hardening-wrapper**, který automaticky nastaví kompilátor a veškeré kompilované balíčky po jeho instalaci budou kompilovány s dostupnými mitigacemi.
-
-**Hardening-wrapper** již není kriticky nutný, jelikož nejnovější verze *gcc* automaticky kompiluje aplikace jako *PIE*. Za chvíli *gcc* adoptuje v základu veškeré funkce a hardening-wrapper bude naprosto nepotřebný &ndash; bude odebrán z repozitářů.
+Balíčky neobsahující zmíněné mitigace je tedy nutné zkompilovat ručně.
 
 > Audit mitigací běžících procesů
 
@@ -178,13 +176,6 @@ Balíčky neobsahující zmíněné mitigace je tedy nutné zkompilovat ručně.
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Skript **checksec** je podrobněji rozebírán níže.</p></div>
-
-> Instalace hardening-wrapper
-
-- Příkaz:
-<li style="list-style-type: none"><pre><code>pacman -S hardening-wrapper</code></pre></li>
-- Restartujte OS a ověřte úspěšnou instalaci:
-<li style="list-style-type: none"><pre><code>which gcc</code></pre></li>
 
 > Kompilace aplikace s mitigacemi
 
