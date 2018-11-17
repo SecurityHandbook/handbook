@@ -101,6 +101,10 @@ a stiskněte **Enter**.</li>
  <li style="list-style-type: none">![brv1](https://faq.mople71.cz/img/en/brv1.png)</li>
 - Prohlížeč restartujte.
 
+> Blokování reklamy
+
+Prohlížeč v základu integruje blokování reklam a trackerů.
+
 > Oddělení prohlížeče od OS a dat
 
 Brave používá špičkovou implementaci sandboxu.

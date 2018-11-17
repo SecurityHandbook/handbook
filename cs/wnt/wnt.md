@@ -1,7 +1,7 @@
 # FAQ &ndash; OS Windows
 Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto nezbytné.
 
-Podporovanou verzí Windows v následující sekci je **Windows 10 September 2018 Update** jakožto nejnovější OS s podporou do roku 2025. Obsažené informace jsou platné také pro **Windows 8.1 Update 3**. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí &ndash; pokud již neskončil &ndash; cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
+Podporovanou verzí Windows v následující sekci je <span class="green">Windows 10 September 2018 Update</span> jakožto nejnovější OS s podporou do roku 2025. Obsažené informace jsou platné také pro **Windows 8.1 Update 3**. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí &ndash; pokud již neskončil &ndash; cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
 
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/wnt/adv.php#wnt).
 
@@ -138,7 +138,7 @@ Pro dosáhnutí kýženého efektu je nutné kompletní postup aplikovat pro vš
 
 ### Další bezpečnostní nastavení:
 
-- Vypněte Usnadnění přístupu na přihlašovací obrazovce &ndash; součást skriptu **SafeSVC**.
+- Vypněte Usnadnění přístupu na přihlašovací obrazovce &ndash; součást skriptu *SafeSVC*.
 - Vypněte AutoPlay:
     - Otevřete si <span class="green">Nastavení.</span> Rozklikněte kategorii **Zařízení** a následně zvolte podkategorii <span class="green">Automatické přehrávání</span>.
     - Automatické přehrávání vypněte.
@@ -205,8 +205,6 @@ Další problém antivirů je ten, že většina z nich je stará &ndash; mají 
 
 Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &ndash; natož jedinou &ndash; vrstvu zabezpečení. Antivirus ovšem má v bezpečnostní konfiguraci místo.
 
-<span class="green">Windows Defender</span> integrovaný ve **Windows 8.1 Update 3** a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vrstvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a s OS mnohdy provádí oproti integrovanému řešení naprosté šílenosti.
-
 > Porovnání Windows Defender a AV/M řešení třetích stran
 
 Do příchodu **Windows 8.1 Update 3** byla AV/M řešení třetích stran brána jako nutné zlo, jelikož být bez žádného AV/M řešení je výrazně horší, nežli být s AV/M řešením třetí strany, a OS tehdy neobsahoval použitelné vestavěné AV/M řešení. S příchodem **Windows 10** byl <span class="green">Windows Defender</span> z velké části přepsán a s každou novou verzí OS se dočkává vylepšení. V aktuálním stavu se jedná o kvalitní moderní AV/M řešení.
@@ -215,9 +213,7 @@ Ostatní AV/M řešení nejsou vestavěná v OS &ndash; kvalita jejich kódu nem
 
 Detekce <span class="green">Windows Defender</span> je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na instalacích aktuálních verzí OS &ndash; počet uživatelů zvyšuje šanci zachytit nový malware. Implementuje vyspělý cloudový systém, díky kterému nabízí užitečné pokročilé funkce (např. *block on first sight*).
 
-<div class="alert info"><p><em class="icon-info-circled"></em>**Tip**<br>
-Používáte-li lokální uživatelský účet bez propojení s účtem Microsoftu, *Windows Defender* bude zobrazovat varování o nezabezpečení účtu. Zmíněného varování se snadno zbavíte otevřením **Centra zabezpečení v programu Windows Defender** a kliknutím na **Zavřít** v sekci *Ochrana účtu*.<br>
-![wdmsa](https://faq.mople71.cz/img/cs/wdmsa.png)</p></div>
+**Windows Defender** integrovaný ve **Windows 8.1 Update 3** a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vrstvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a s OS mnohdy provádí oproti integrovanému řešení naprosté šílenosti.
 
 > Ochrana před viry a hrozbami &ndash; nastavení
 
@@ -259,7 +255,11 @@ Používáte-li lokální uživatelský účet bez propojení s účtem Microsof
 
 <br>
 
-Ve verzi OS **Windows 8.1 Update 3** obsahuje <span class="green">Windows Defender</span> méně funkcí, stále se ovšem jedná o nejlepší volbu. Pro nižší verze OS poté existuje substituce Defenderu &ndash; [Microsoft Security Essentials](https://www.microsoft.com/cs-cz/download/details.aspx?id=5201).
+<div class="alert info"><p><em class="icon-info-circled"></em>**Tip**<br>
+Používáte-li lokální uživatelský účet bez propojení s účtem Microsoftu, *Windows Defender* bude zobrazovat varování o nezabezpečení účtu. Zmíněného varování se snadno zbavíte otevřením **Centra zabezpečení v programu Windows Defender** a kliknutím na **Zavřít** v sekci *Ochrana účtu*.</p></div>
+
+
+Ve verzi OS **Windows 8.1 Update 3** obsahuje *Windows Defender* méně funkcí, stále se ovšem jedná o nejlepší volbu. Pro nižší verze OS poté existuje substituce Defenderu &ndash; [Microsoft Security Essentials](https://www.microsoft.com/cs-cz/download/details.aspx?id=5201).
 
 > Ochrana před viry a hrozbami &ndash; nastavení (starší verze Windows)
 
@@ -362,8 +362,6 @@ Jaké další aplikace mitigovat? Veškerý rizikový SW třetí strany – nap�
 - Otevře se nastavení aplikací s nově přidanou zvolenou aplikací, pro kterou následně nakonfigurujte mitigace, a klikněte na <span class="green">OK</span>.
 <li style="list-style-type: none">![emet4](https://faq.mople71.cz/img/en/emet4.png)</li>
 
-<br>
-
 <span class="red">HitmanPro.Alert</span> je placená aplikace, která nabízí komplexní zabezpečení včetně mitigací proti exploitům. Investice do něj má smysl u starších verzí OS, verze **Windows 10 Fall Creators Update** a novější ovšem mají většinu hlavních funkcí HMP.A integrovanou v OS.
 
 > Instalace a konfigurace HMP.A (starší verze Windows)
@@ -455,11 +453,11 @@ Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce.
 - [VirtualBox](https://www.virtualbox.org/)
 - &#8230;
 
-<span class="red">Hyper-V</span> je integrované řešení ve Windows v edicích **Pro** a **Enterprise**.
+<span class="red">Hyper-V</span> je integrované řešení OS Windows v edicích **Pro** a **Enterprise**.
 
 <span class="red">VMware Workstation Player</span> je bezplatný virtualizační software, který je oproti své placené mutaci značně funkčně omezený.
 
-<span class="red">VirtualBox</span> je nejpopulárnější bezplatné open-source řešení, které umožňuje důležitou konfiguraci bezpečnostních funkcí jako snapshotů. Není ideální k profesionálnímu nasazení.
+<span class="red">VirtualBox</span> je populární bezplatné open-source řešení, které umožňuje důležitou konfiguraci bezpečnostních funkcí jako snapshotů. Není ideální k profesionálnímu nasazení.
 
 > Příklad vytvoření VM s linuxovou distribucí pomocí VirtualBox
 
@@ -484,7 +482,7 @@ Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce.
 #### Částečná virtualizace OS:
 Implementací částečné virtualizace OS je mnoho. Může spočívat ve virtualizaci jádra či jiné části OS, nebo např. ve vrácení změn v OS při restartu ([Shadow Defender](http://www.shadowdefender.com/),&#8230;).
 
-Od verze **Windows 10 September 2018 update** je částečná virtualizace implementována v OS. Konfigurace je možná pomocí <span class="green">Centra zabezpečení v programu Windows Defender</span> v sekci **Zabezpečení zařízení**.
+Od verze **Windows 10 September 2018 update** je částečná virtualizace implementována v OS. Konfigurace je možná pomocí *Centra zabezpečení v programu Windows Defender* v sekci **Zabezpečení zařízení**.
 
 <br>
 

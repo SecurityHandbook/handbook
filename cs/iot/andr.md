@@ -5,7 +5,6 @@ Android má robustní bezpečnostní model, který předpokládá, že aplikace 
 
 > Trocha teorie o bezpečnostním modelu OS Android
 
-## Bezpečnostní model OS:
 Android má robustní vícevrstevný bezpečnostní model. Používá linuxové jádro, implementuje <abbr title="Mandatory Access Control">MAC</abbr> a mitigace proti *memory corruption* exploitům &ndash; Android je jediná linuxová distribuce, která neumožňuje spuštění *non-<abbr title="Position Independent Executable">PIE</abbr>* kódu. Každé aplikaci je přiřazen unikátní uživatelský ID, aplikace je uzavřena v sandboxovaném prostředí, nemůže operovat s žádnou jinou aplikací a je jí umožněno operovat pouze se soubory/komponenty OS, ke kterým dostane oprávnění od vlastníka zařízení.
 
 ![Android Security Model](https://faq.mople71.cz/img/en/and.png)
@@ -74,7 +73,7 @@ Další příklad. Nainstalujete si škodlivou aplikaci na <span class="green">8
 - vyšší modely výrobců **<span class="sam">Samsung</span>** a **SONY**
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Tip**<br>
-Pro inspiraci se také můžete podívat na [seznam doporučených modelů pro firemní sféru](https://androidenterprisepartners.withgoogle.com/#!/results/browse-all/2) od Google.</p></div>
+Pro inspiraci se také můžete podívat na [seznam doporučených modelů pro firemní sféru](https://androidenterprisepartners.withgoogle.com/devices/) od Google.</p></div>
 
 <br><br><hr><br>
 
@@ -95,10 +94,10 @@ Android je (většinou) bezpečně nastaven již v základu, není ovšem od vě
 - Otevřete si <span class="green">Nastavení</span>.
 - Nalezněte podkategorii **Systém** a otevřete ji.
 - Klikněte na <span class="green">Informace o telefonu</span>.
-- Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **8.1**.
+- Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **8.1** či výše.
 - Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
 <li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
-- Máte-li starší *verzi systému Android* než **8.0** a výrobce nepotvrdil aktualizaci, zařízení je implicitně nebezpečné &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než **3 měsíce**, zařízení není bezpečné &ndash; můžete se dívat po náhradě.
+- Máte-li starší *verzi systému Android* než **8.1** a výrobce nepotvrdil aktualizaci, zařízení je implicitně nebezpečné &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než **3 měsíce**, zařízení není bezpečné &ndash; můžete se dívat po náhradě.
 - Aplikaci zavřete.
 
 <br>
@@ -187,7 +186,7 @@ Blokování reklamy je z hlediska bezpečnosti nezbytné z důvodu výskytu ško
 - Google Chrome / Chromium
 - &#8230;
 
-VPN je dobrý způsob blokace reklam, ovšem implementace *OpenVPN* na Androidu není perfektní. Lokální VPN tímto problémem netrpí. Použití prohlížeče blokující reklamy je nejlepším řešením. **Chrome** již umožňuje nativně blokovat agresivní reklamy nesplňující podmínky.
+VPN je dobrý způsob blokace reklam, ovšem implementace *OpenVPN* na Androidu není perfektní. Lokální VPN tímto problémem netrpí. Použití prohlížeče blokující reklamy je na OS Android nejlepším řešením. **Chrome** již umožňuje nativně blokovat agresivní reklamy nesplňující podmínky. Prohlížeč **Brave** v základu integruje blokování reklam a trackerů.
 
 <br>
 
