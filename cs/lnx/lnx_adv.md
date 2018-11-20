@@ -6,13 +6,13 @@ Zde se budeme věnovat pokročilejším možnostem zabezpečení (desktopového)
 Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pokročilé](https://faq.mople71.cz/cs/lnx/index.php#lnx) uživatele a máte znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
-- Vrstvy zabezpečení
-- Anti-exploit mitigace
-- Audit
+- [Ochrana proti malware](#lnx1)
+- [Ochrana proti exploitaci](#lnx2)
+- [Audit](#lnx3)
 
 <br>
 
-## Vrstvy zabezpečení:
+## Ochrana proti malware:
 ### Firewall:
 Pro běžné počítače stačí zakázat FORWARD chain a bezpečně nastavit INPUT.
 
@@ -65,7 +65,7 @@ systemctl enable iptables</code></pre>
 
 <br>
 
-### Mandatory Access Control:
+### MAC:
 <abbr title="Mandatory Access Control">MAC</abbr> se stal důležitou součástí bezpečnostního modelu linuxových distribucí.
 
 **SELinux** je velmi robustní implementace MAC, její nastavení je ovšem problematické. Využívá ji např. **<span class="fe">Fedora</span>**  a je důležitou součástí bezpečnostního modelu OS Android.
@@ -147,20 +147,9 @@ TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spušt�
 - Po dokončení konfigurace ji následně uložte:
 <li style="list-style-type: none"><pre><code>sudo tomoyo-savepolicy</code></pre></li>
 
-<br>
-
-### Virtualizace:
-Virtualizace může být velmi bezpečný způsob ochrany před malware (záleží na způsobu implementace), jelikož odděluje požadovanou část OS od fyzického OS.
-
-Sandbox nativně integrovaný v aplikaci je nejúčinnější možností implementace sandboxu, jelikož je nastaven přesně na míru dané aplikaci.
-
-Externí sandbox není zdaleka tak účinný jako sandbox integrovaný v aplikaci a ponechává výrazně větší prostor pro exploitaci, ale stále je mnohonásobně lepší, než žádný sandbox. Jsou případy, kdy lze špatně implementovaný externí sandbox prolomit přes *PulseAudio*...
-
-Virtualizace pomocí **GNOME Boxes** je rozebírána v sekci pro méně pokročilé. Ve zmíněné sekci je rozebírán také **Flatpak**. Pro pokročilou virtualizaci za použití **KVM** se podívejte [zde](https://wiki.archlinux.org/index.php/QEMU).
-
 <br><br><hr><br>
 
-## Anti-exploit mitigace:
+## Ochrana proti exploitaci:
 ### Hardening aplikací:
 Balíčky mohou být kompilovány s *memory corruption* mitigacemi (ASLR, PIE, RELRO,...), které následně významně ztěžují jejich exploitaci.
 

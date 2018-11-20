@@ -4,10 +4,10 @@ Linux se díky svému minoritnímu zastoupení na desktopech těší řádově m
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/lnx/adv.php#lnx).
 
 #### FAQ se dělí na několik sekcí:
-- Doporučené distribuce
-- Bezpečné nastavení OS
-- Vrstvy zabezpečení
-- Zabezpečení internetového prohlížeče
+- [Doporučené distribuce](#lnx1)
+- [Základní bezpečnostní nastavení](#lnx2)
+- [Ochrana proti malware](#lnx3)
+- [Zabezpečení internetového prohlížeče](#lnx4)
 
 <br>
 
@@ -29,7 +29,7 @@ Z bezpečnostního hlediska doporučuji [GNOME](https://www.gnome.org/), jeliko�
 
 <br><br><hr><br>
 
-## Bezpečné nastavení OS:
+## Základní bezpečnostní nastavení:
 ### Oddělení /tmp oddílu během instalace a jeho bezpečné připojení:
 Malware se často spouští z dočasných složek. Zakázání exekuce spustitelných souborů v dočasných složkách (konkrétně /tmp) tedy dokáže vyřadit z provozu mnoho rodin malware.
 
@@ -75,10 +75,16 @@ exit</code></pre></li>
 
 <br>
 
-### Zakázání IPv6:
-Pokud nepoužíváte a nepotřebujete IPv6 (pokud nevíte, můžete to zjistit pomocí následujícího [testu](http://www.test-ipv6.cz/), je rozumné protokol vypnout pro snížení prostoru pro útok.
+### Práce pod uživatelem bez sudo pravomocí:
+...
 
-> Návod
+<br>
+
+### Bezpečné nastavení sítě:
+
+> Zakázání IPv6
+
+Pokud nepoužíváte a nepotřebujete IPv6 (pokud nevíte, můžete to zjistit pomocí následujícího [testu](http://www.test-ipv6.cz/), je rozumné protokol vypnout pro snížení prostoru pro útok.
 
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
 <li style="list-style-type: none"><pre><code>sudo -i
@@ -93,12 +99,9 @@ exit
 exit</code></pre></li>
 - Restartujte OS.
 
-<br>
+> Nastavení DNS
 
-### Nastavení DNS:
 Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](https://www.nic.cz/page/312/o-domenach-a-dns/).
-
-> Návod
 
 - Otevřete si <span class="green">Nastavení</span> a klikněte na položku <span class="green">Síť</span>.
 - V seznamu zvolte připojení, které používáte (Drátové/WiFi), a otevřete jeho nastavení.
@@ -110,9 +113,21 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](h
 <li style="list-style-type: none">![lnxnet2](https://faq.mople71.cz/img/cs/lnxnet2.png)</li>
 - Klikněte na tlačítko <span class="green">Použít</span> a nastavení zavřete.
 
+<br>
+
+### Další bezpečnostní nastavení:
+- Vypněte AutoPlay:
+  - ...
+- ...
+
 <br><br><hr><br>
 
-## Vrstvy zabezpečení:
+## Ochrana proti malware:
+...
+
+### Aktualizace OS a SW:
+...
+
 ### Firewall:
 Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před útoky ze sítě. *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*
 
@@ -137,46 +152,20 @@ Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před út
 <br>
 
 ### Virtualizace:
-Virtualizace může být velmi bezpečný způsob ochrany před malware (záleží na způsobu implementace), jelikož odděluje požadovanou část OS od fyzického OS.
+Virtualizace může být velmi bezpečný způsob ochrany před malware (záleží na způsobu aplikace), jelikož odděluje požadovanou část OS od fyzického OS. Základních možností aplikace virtualizace je několik.
 
-Nejčastější implementací virtualizace je **sandbox**. Existují dva druhy sandboxu:
+- sandbox
+- virtuální stroj (VM; virtual machine)
 
-- sandbox nativně integrovaný v aplikaci (např. Chromium)
-- externí sandbox &ndash; např. Flatpak, firejail
+#### Flatpak:
+Sandbox je populární způsob aplikace virtualizace. Existují dva druhy sandboxu:
 
-Sandbox nativně integrovaný v aplikaci je nejúčinnější možností implementace sandboxu, jelikož je nastaven přesně na míru dané aplikaci.
+- sandbox nativně integrovaný v aplikaci (např. *Chromium*)
+- externí sandbox &ndash; např. **Flatpak**, *firejail*
 
-Externí sandbox není zdaleka tak účinný jako sandbox integrovaný v aplikaci a při porovnání ponechává větší prostor pro exploitaci, ale stále může být vcelku účinný a přirozeně je nesrovnatelně lepší, nežli žádný sandbox.
+Sandbox nativně integrovaný v aplikaci je nejúčinnější možností implementace sandboxu, jelikož je nastaven přesně na míru dané aplikaci. Externí sandbox nemusí být nutně účinný jako sandbox integrovaný v aplikaci, jelikož není dělaný přesně na míru určité aplikaci, a při porovnání může ponechat větší prostor pro exploitaci. Stále ovšem může být velmi účinný a přirozeně je nesrovnatelně lepší, nežli žádný sandbox.
 
-Další možností virtualizace je **virtuální počítač**, kdy je místo aplikace oddělen celý OS. Tato metoda drasticky snižuje prostor pro exploitaci, snižuje ovšem také přívětivost, výkon a použitelnost. Jednoduché nastavení a používání virtuálního počítače umožňují následující aplikace:
-
-- GNOME Boxes
-- VirtualBox
-
-> Konfigurace GNOME Boxes
-
-- Stáhněte si obraz OS (ISO), který chcete virtualizovat.
-- Otevřete si aplikaci <span class="green">Boxy</span>.
-- V levém horním rohu aplikace klikněte na tlačítko <span class="green">Nový</span>.
-- Klikněte na <span class="green">Vybrat soubor</span> a nalezněte požadovaný ISO soubor.
-- Odmítněte případnou expresní instalaci.
-- Klikněte na tlačítko <span class="green">Přizpůsobit...</span>
-- Nastavte požadované množství alokované paměti (pro 64-bitový OS alespoň *3 GiB*) a místa na disku (alespoň *20 GiB*).
-<li style="list-style-type: none">![gboxes](https://faq.mople71.cz/img/cs/gboxes.png)</li>
-- Přesuňte se zpět a v pravém horním rohu klikněte na <span class="green">Vytvořit</span>.
-- Nainstalujte a nakonfigurujte OS. Následně jej vypněte.
-- V seznamu na požadovaný virtuální stroj klikněte pravým tlačítkem a otevřete <span class="green">Vlastnosti</span>.
-- Přesuňte se do záložky **Snímky**. Existuje-li již nějaký snapshot, ozubeným kolem vpravo otevřete jeho konfiguraci a smažte jej.
-- Tlačítkem <span class="green">+</span> v dolním menu vytvořte nový snapshot.
-- Ozubeným kolem vpravo otevřete jeho konfiguraci a tlačítkem <span class="green">Přejmenovat</span> si jej pojmenujte jako výchozí snapshot.
-<li style="list-style-type: none">![gboxes1](https://faq.mople71.cz/img/cs/gboxes1.png)</li>
-- Nyní můžete kdykoli virtuální stroj po jeho vypnutí snadno obnovit do výchozího stavu.
-- Čas od času (např. 1x měsíčně) virtuální OS aktualizujte a vytvořte nový snapshot.
-
-<br>
-
-### Flatpak:
-Flatpak je nový způsob distribuce aplikací. Má za cíl odstranit chyby a nedostatky současné architektury &ndash; odděluje aplikace od sebe a částí OS, sjednocuje instalaci aplikací pro linuxové distribuce etc.
+<span class="green">Flatpak</span> je nový způsob distribuce aplikací. Má za cíl odstranit chyby a nedostatky současné architektury &ndash; odděluje aplikace od sebe a částí OS (obsahuje implementaci sandboxu), sjednocuje instalaci aplikací pro linuxové distribuce apod.
 
 **<span class="fe">Fedora</span>** má **flatpak** předinstalovaný.
 
@@ -207,9 +196,7 @@ Nikdy před příkaz **flatpak** nedávejte <span class="red">sudo</span>. Flatp
 - Aplikaci poté můžete jednoduše odinstalovat:
 <li style="list-style-type: none"><pre><code>flatpak uninstall <název_aplikace></code></pre></li>
 
-#### Flathub:
-
-Flathub je oficiální platforma pro distribuci Flatpak aplikací. Naleznete zde již vcelku obstojný počet aplikací, který se neustále rozšiřuje. Například **LibreOffice**, GIMP, Atom, Signal, VLC, Audacity, Blender, **Steam**, GeoGebra, Inkscape,...
+<span class="green">Flathub</span> je oficiální platforma pro distribuci Flatpak aplikací. Naleznete zde již vcelku obstojný počet aplikací, který se neustále rozšiřuje. Například **LibreOffice**, **GIMP**, **Atom**, Signal, **VLC**, Audacity, Blender, **Steam**, GeoGebra, Inkscape,&#8230;
 
 > Nastavení repozitáře Flathub
 
@@ -252,6 +239,36 @@ flatpak install flathub org.gnome.Epiphany</code></pre></li>
 <li style="list-style-type: none"><pre><code>flatpak install flathub com.valvesoftware.Steam</code></pre></li>
 - Bude-li vám v průběhu nabídnut výběr mezi *gnome* a *flathub* repozitáři, zvolte <span class="green">flathub</span>.
 - Spusťte Steam a doufejte, že vaše oblíbené hry jsou ve flatpaku funkční. Seznam otestovaných her naleznete [zde](https://github.com/flathub/com.valvesoftware.Steam/wiki/Tested-Games).
+
+<br>
+
+#### Virtuální stroj:
+Nejbezpečnější způsob virtualizace je emulace virtuálního zařízení, kdy je virtualizován celý OS &ndash; za korektního nastavení a využití snapshotů. Po správné konfiguraci můžete virtuální stroj používat např. k vcelku bezpečnému brouzdání internetem.
+
+Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce. Pro virtualizaci OS Windows pro něj ovšem budete potřebovat dodatečnou licenci. Jednoduché nastavení a používání virtuálního počítače umožňují následující aplikace:
+
+- [GNOME Boxes](https://wiki.gnome.org/Apps/Boxes)
+- [VirtualBox](https://www.virtualbox.org/)
+
+> Konfigurace GNOME Boxes
+
+- Stáhněte si obraz OS (ISO), který chcete virtualizovat.
+- Otevřete si aplikaci <span class="green">Boxy</span>.
+- V levém horním rohu aplikace klikněte na tlačítko <span class="green">Nový</span>.
+- Klikněte na <span class="green">Vybrat soubor</span> a nalezněte požadovaný ISO soubor.
+- Odmítněte případnou expresní instalaci.
+- Klikněte na tlačítko <span class="green">Přizpůsobit...</span>
+- Nastavte požadované množství alokované paměti (pro 64-bitový OS alespoň *3 GiB*) a místa na disku (alespoň *20 GiB*).
+<li style="list-style-type: none">![gboxes](https://faq.mople71.cz/img/cs/gboxes.png)</li>
+- Přesuňte se zpět a v pravém horním rohu klikněte na <span class="green">Vytvořit</span>.
+- Nainstalujte a nakonfigurujte OS. Následně jej vypněte.
+- V seznamu na požadovaný virtuální stroj klikněte pravým tlačítkem a otevřete <span class="green">Vlastnosti</span>.
+- Přesuňte se do záložky **Snímky**. Existuje-li již nějaký snapshot, ozubeným kolem vpravo otevřete jeho konfiguraci a smažte jej.
+- Tlačítkem <span class="green">+</span> v dolním menu vytvořte nový snapshot.
+- Ozubeným kolem vpravo otevřete jeho konfiguraci a tlačítkem <span class="green">Přejmenovat</span> si jej pojmenujte jako výchozí snapshot.
+<li style="list-style-type: none">![gboxes1](https://faq.mople71.cz/img/cs/gboxes1.png)</li>
+- Nyní můžete kdykoli virtuální stroj po jeho vypnutí snadno obnovit do výchozího stavu.
+- Čas od času (např. 1x měsíčně) virtuální OS aktualizujte a vytvořte nový snapshot.
 
 <br><br><hr><br>
 

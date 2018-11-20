@@ -137,7 +137,6 @@ Pro dosáhnutí kýženého efektu je nutné kompletní postup aplikovat pro vš
 <br>
 
 ### Další bezpečnostní nastavení:
-
 - Vypněte Usnadnění přístupu na přihlašovací obrazovce &ndash; součást skriptu *SafeSVC*.
 - Vypněte AutoPlay:
     - Otevřete si <span class="green">Nastavení.</span> Rozklikněte kategorii **Zařízení** a následně zvolte podkategorii <span class="green">Automatické přehrávání</span>.
@@ -487,7 +486,14 @@ Od verze **Windows 10 September 2018 update** je částečná virtualizace imple
 <br>
 
 #### Sandbox:
-U sandboxu velmi záleží na implementaci, např. bezplatné řešení [Sandboxie](https://www.sandboxie.com/) poskytující externí sandbox pro aplikace, je spíše na hraní. Windows implementují svůj vestavěný sandbox (*AppContainer*), pokročilejší virtualizaci integrují ve verzích pro firemní sféru.
+Existují dva druhy sandboxu:
+
+- sandbox nativně integrovaný v aplikaci (např. *Google Chrome*)
+- externí sandbox &ndash; např. *AppContainer*, [Sandboxie](https://www.sandboxie.com/)
+
+Sandbox nativně integrovaný v aplikaci je nejúčinnější možností implementace sandboxu, jelikož je nastaven přesně na míru dané aplikaci. Externí sandbox nemusí být nutně účinný jako sandbox integrovaný v aplikaci, jelikož není dělaný přesně na míru určité aplikaci, a při porovnání může ponechat větší prostor pro exploitaci. Stále ovšem může být velmi účinný a přirozeně je nesrovnatelně lepší, nežli žádný sandbox.
+
+Windows implementují svůj vestavěný sandbox (*AppContainer*), pokročilejší virtualizaci poté integrují ve verzích pro firemní sféru. Bezplatné řešení [Sandboxie](https://www.sandboxie.com/) poskytující externí sandbox pro aplikace, je spíše na hraní.
 
 > Instalace a konfigurace Sandboxie
 

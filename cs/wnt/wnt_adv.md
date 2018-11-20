@@ -6,10 +6,10 @@ V FAQ pro pokročilé se budeme věnovat hlavně vestavěným funkcím OS &ndash
 Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Windows pro méně pokročilé](https://faq.mople71.cz/cs/wnt/index.php#wnt) uživatele a máte znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
-- bezpečnostní aplikace
-- integritní politika
-- ACL
-- AppContainer
+- [Bezpečnostní aplikace](#wnt1)
+- [Integritní politika](#wnt2)
+- [ACL](#wnt3)
+- [AppContainer](#wnt4)
 
 <br>
 

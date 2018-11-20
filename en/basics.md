@@ -7,11 +7,11 @@
 - **bundleware** &ndash; superfluous (not necessarily malicious) software bundled to a valid software
 - **foistware** &ndash; software installed without user's knowledge designed to obtain money from user, usually by prompting the OS is infected/broken and offering remedy for a price
 - <span class="green">ransomware</span> &ndash; software preventing user from accessing their data and demanding payment to allow such access
-- **rootkit** &ndash; code designed to hide the presence of other malware on the device and aggravate their detection
+- **rootkit** &ndash; code designed to hide the presence of malware on the device and aggravate their detection
 - <span class="green">exploit</span> &ndash; code taking advantage of a vulnerability in SW (including OS) in order to perform a specific action
 - **zero-day (0-day)** &ndash; vulnerability exploited at the day of its disclosure (or prior to it)
 - **APT** &ndash; &bdquo;Advanced Persistent Threat&ldquo;; advanced threat tyúically tailored for a specific target, common user doesn't bump into these
-- <span class="green">payload</span> &ndash; core part of malware code that's responsible for the malicious action
+- **payload** &ndash; core part of malware code that's responsible for the malicious action
 
 <br>
 
