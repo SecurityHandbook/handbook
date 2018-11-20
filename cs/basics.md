@@ -79,9 +79,9 @@ Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpeč
 
 ## Doporučené VPN:
 - [Freedome VPN](https://www.f-secure.com/en/web/home_global/freedome/) &ndash; blokuje malware, trackery a reklamy
-- [AirVPN](https://airvpn.org/) &ndash; pokročilé funkce, vcelku důvěryhodná
 - [IVPN](https://www.ivpn.net/) &ndash; důvěryhodná
 - [Cryptostorm](https://cryptostorm.is/) &ndash; důvěryhodná
+- [AirVPN](https://airvpn.org/) &ndash; pokročilé funkce, vcelku důvěryhodná
 
 <br>
 
