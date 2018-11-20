@@ -213,7 +213,7 @@ Ostatní AV/M řešení nejsou vestavěná v OS &ndash; kvalita jejich kódu nem
 
 Detekce <span class="green">Windows Defender</span> je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na instalacích aktuálních verzí OS &ndash; počet uživatelů zvyšuje šanci zachytit nový malware. Implementuje vyspělý cloudový systém, díky kterému nabízí užitečné pokročilé funkce (např. *block on first sight*).
 
-**Windows Defender** integrovaný ve **Windows 8.1 Update 3** a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vrstvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a s OS mnohdy provádí oproti integrovanému řešení naprosté šílenosti.
+**Windows Defender** integrovaný ve *Windows 8.1 Update 3* a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vrstvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a s OS mnohdy provádí oproti integrovanému řešení naprosté šílenosti.
 
 > Ochrana před viry a hrozbami &ndash; nastavení
 
