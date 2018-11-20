@@ -41,7 +41,7 @@
 - Only open email attachments from trusted senders.
 - If you suspect a file to be malicious, always scan it before opening with e.g.  [VirusTotal](https://www.virustotal.com/).
 
-<div class="alert success"><p><img src="https://mople71.cz/img/success.png" alt="success"> <strong>Tip</strong><br>
+<div class="alert success"><p><em class="icon-ok-circled"></em><strong>Tip</strong><br>
 The safest way to browse the web: <span class="green">securely configured live OS</span>. However, it should be pointed out that this option doesn't have to be 100% safe as well &ndash; for example the EFI can be infected if the device has been hacked in the past.</p></div>
 
 <br>
@@ -81,6 +81,6 @@ The safest way to browse the web: <span class="green">securely configured live O
 <br>
 
 ## Recommended password managers:
-- [1Password](https://1password.com/) &ndash; impeccable ecosystem, paid access
+- [1Password](https://1password.com/) &ndash; impeccable service, requires payment
 - [Bitwarden](https://bitwarden.com/) &ndash; free of charge
 - [KeePassX](https://www.keepassx.org/) &ndash; free of charge
