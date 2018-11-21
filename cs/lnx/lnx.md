@@ -13,12 +13,12 @@ Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci
 
 ## Doporučené distribuce:
 - Fedora: https://getfedora.org/cs/workstation/
-- openSUSE: https://www.opensuse.org/
+- openSUSE (Leap): https://www.opensuse.org/#Leap
 - Ubuntu: https://www.ubuntu.com/desktop
 
 V sekci OS Linux naleznete tipy převážně pro distribuci <span class="green">Fedora</span>.
 
-Fedora je nejlepší a nejbezpečnější volbou pro běžného uživatele, jelikož je již v základu špičkově zabezpečená. Používá GNOME, nabízí uživateli možnost snadné instalace Flatpak aplikací, obsahuje velmi robustní implementaci SELinux a má velmi vysoké standardy na své balíčky &ndash; všechny musí mít důležité mitigace proti memory corruption exploitům. Mimo technické funkce nabízí stabilní nejnovější SW a velmi rychle záplatuje objevené bezpečnostní zranitelnosti.
+Fedora je nejlepší a nejbezpečnější volbou pro běžného uživatele, jelikož je v základu vcelku bezpečně nastavená. Používá GNOME, nabízí uživateli možnost snadné instalace Flatpak aplikací, obsahuje velmi robustní implementaci SELinux a má velmi vysoké standardy na své balíčky &ndash; všechny musí mít důležité mitigace proti memory corruption exploitům. Mimo technické funkce nabízí stabilní nejnovější SW a velmi rychle záplatuje objevené bezpečnostní zranitelnosti.
 
 U některých kroků také naleznete pokyny pro distribuci Ubuntu, která je velmi populární, z hlediska bezpečnosti ovšem méně vhodná.
 
@@ -75,11 +75,6 @@ exit</code></pre></li>
 
 <br>
 
-### Práce pod uživatelem bez sudo pravomocí:
-...
-
-<br>
-
 ### Bezpečné nastavení sítě:
 
 > Zakázání IPv6
@@ -116,17 +111,45 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](h
 <br>
 
 ### Další bezpečnostní nastavení:
-- Vypněte AutoPlay:
-  - ...
-- ...
+- Vypněte AutoPlay/AutoRun:
+  - Otevřete si <span class="green">Nastavení</span> a rozklikněte kategorii **Zařízení**.
+  - Klikněte na položku <span class="green">Výměnná média</span>.
+  - Zatrhněte možnost <span class="green">Nikdy se nedotazovat nebo spouštět programy na vloženém médiu</span>,
+  <li style="list-style-type: none">![lnxar](https://faq.mople71.cz/img/cs/lnxar.png)</li>
+- Vypněte sdílení:
+  - Otevřete si <span class="green">Nastavení</span> a klikněte na položku <span class="green">Sdílení</span>.
+  - Zkontrolujte, že je sdílení vypnuto, případně napravte.
+  <li style="list-style-type: none">![lnxshare](https://faq.mople71.cz/img/cs/lnxshare.png)</li>
 
 <br><br><hr><br>
 
 ## Ochrana proti malware:
-...
+Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (*&bdquo;layered config&ldquo;*) &ndash; pokud selže jedna vrstva, nastupuje druhá. Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na distribuci. V základním nastavení ovšem většinou bohužel nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
+
+Vrstev existuje mnoho, níže jsou zmíněny pouze vrstvy vyhodnoceny jako důležité.
+
+- antivirus / antimalware
+- firewall
+- anti-exploit
+- anti-executable
+- virtualizace
+- &#8230;
+
+<br>
 
 ### Aktualizace OS a SW:
-...
+Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často opravují mnoho bezpečnostních chyb. Neaktuální děravý SW je implicitně nebezpečný.
+
+V distribuci **<span class="fe">Fedora</span>** teoreticky můžete aktualizace nechat na aplikaci **GNOME Software**, nebo je můžete jednou za čas spustit ručně pomocí jednoduchého příkazu:
+<pre><code>sudo dnf update</code></pre>
+
+Pro distribuci **<span class="os">openSUSE</span>** platí to stejné, co výše, akorát se liší syntax příkazu:
+<pre><code>sudo zypper up</code></pre>
+
+Pro distribuci **<span class="ub">Ubuntu</span>** platí to stejné, co výše, akorát se liší syntax příkazu:
+<pre><code>sudo apt update && sudo apt updgrade</code></pre>
+
+<br>
 
 ### Firewall:
 Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před útoky ze sítě. *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*

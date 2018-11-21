@@ -170,7 +170,6 @@ Vrstev existuje mnoho, níže jsou zmíněny pouze vrstvy vyhodnoceny jako důle
 <br>
 
 ### Aktualizace OS a SW:
-
 Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často opravují mnoho bezpečnostních chyb. Neaktuální děravý SW je implicitně nebezpečný.
 
 Windows by se měly ve výchozím nastavení aktualizovat samy (v edici *Home* automatické aktualizace dokonce nelze vypnout). Mnohé důležité aplikace (např. prohlížeče) se obvykle aktualizují automaticky.

@@ -26,9 +26,9 @@ Android **Marshmallow** a výše nabízí rozšířený model oprávnění &ndas
 Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect*), zde nebudou rozebírány.
 
 #### FAQ se dělí na několik sekcí:
-- Bezpečná zařízení
-- Bezpečné nastavení OS
-- Doporučené aplikace
+- [Bezpečná zařízení](#andr1)
+- [Základní bezpečnostní nastavení](#andr2)
+- [Doporučené aplikace](#andr3)
 
 <br>
 
@@ -77,7 +77,7 @@ Pro inspiraci se také můžete podívat na [seznam doporučených modelů pro f
 
 <br><br><hr><br>
 
-## Bezpečné nastavení OS:
+## Základní bezpečnostní nastavení:
 Android je (většinou) bezpečně nastaven již v základu, není ovšem od věci podívat se do nastavení a zkontrolovat jej.
 
 > Kontrola nastavení zabezpečení
