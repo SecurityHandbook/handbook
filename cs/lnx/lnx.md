@@ -1,5 +1,5 @@
 # FAQ &ndash; OS Linux
-Linux se díky svému minoritnímu zastoupení na desktopech těší řádově menší pozornosti hackerů nežli Windows, většina malware pro Linux je směřována na servery. Malware pro desktopové linuxové distribuce existuje &ndash; v mnohonásobně menším množství, ale existuje. Mimo jiné, exploit kity se poslední dobou snaží být co nejvíce multiplatformní a např. JS ransomware spolehlivě funguje i přes prohlížeč na Linuxu.
+Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů &ndash; většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce ovšem také existuje, ač v mnohonásobně menším množství. Moderní *exploit kity* jsou multiplatformní a např. JS ransomware spolehlivě funguje i přes prohlížeč na Linuxu. Dostatečné zabezpečení OS je proto nezbytné.
 
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/lnx/adv.php#lnx).
 
@@ -18,14 +18,14 @@ Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci
 
 V sekci OS Linux naleznete tipy převážně pro distribuci <span class="green">Fedora</span>.
 
-Fedora je nejlepší a nejbezpečnější volbou pro běžného uživatele, jelikož je v základu vcelku bezpečně nastavená. Používá GNOME, nabízí uživateli možnost snadné instalace Flatpak aplikací, obsahuje velmi robustní implementaci SELinux a má velmi vysoké standardy na své balíčky &ndash; všechny musí mít důležité mitigace proti memory corruption exploitům. Mimo technické funkce nabízí stabilní nejnovější SW a velmi rychle záplatuje objevené bezpečnostní zranitelnosti.
+**Fedora** je nejlepší volbou pro běžného uživatele, jelikož je v základu vcelku bezpečně nastavená. Používá GNOME, nabízí uživateli možnost snadné instalace Flatpak aplikací, obsahuje robustní implementaci SELinux a má velmi vysoké standardy na své balíčky &ndash; všechny musí mít důležité mitigace proti memory corruption exploitům. Mimo technické funkce nabízí stabilní nejnovější. Jediný problém zmíněné distribuce, a to vcelku zásadní, jsou pomalé aktualizace webových prohlížečů &ndash; pravděpodobně z důvodu mnoha vlastních úprav (patchů), které je nutno pro každou novou verzi aktualizovat.
 
-U některých kroků také naleznete pokyny pro distribuci Ubuntu, která je velmi populární, z hlediska bezpečnosti ovšem méně vhodná.
+U některých kroků také naleznete pokyny pro distribuci **<span class="os">openSUSE</span>** a distribuci **<span class="ub">Ubuntu</span>**, která je velmi populární, z hlediska bezpečnosti ovšem o něco méně vhodná.
 
-Chcete-li používat jinou distribuci, níže uvedené kroky můžete aplikovat i na ostatní distribuce, pouze si musíte zjistit správný syntax vaší distribuce a informace o kompatibilitě.
+Většina obsažených informací je platná i pro jiné distribuce, pouze se bude lišit přesný postup aplikace různých kroků &ndash; syntax.
 
 ### Doporučené grafické prostředí:
-Z bezpečnostního hlediska doporučuji [GNOME](https://www.gnome.org/), jelikož používá Wayland místo X.org a podílí se na vývoji Flatpaku. Výjimku tvoří rozhraní *GNOME Classic*, které využívá primárně X.org &ndash; není tedy doporučeno.
+Z bezpečnostního hlediska je rozumnou volbou prostředí [GNOME](https://www.gnome.org/), jelikož používá Wayland místo X.org a podílí se na vývoji Flatpaku. Výjimku tvoří rozhraní *GNOME Classic*, které využívá primárně X.org &ndash; není tedy doporučeno.
 
 <br><br><hr><br>
 
