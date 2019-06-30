@@ -51,7 +51,6 @@ Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpeč
 - Neprovádějte na své zařízením *root* / *jailbreak* &ndash; touto akcí rozbíjíte bezpečnostní model mobilních OS.
 - Instalujte aplikace pouze z důvěryhodných zdrojů &ndash; *Google Play, F-Droid* / *Apple Store* / *Microsoft Store*.
 - Neinstalujte aplikace vyžadující nesmyslná oprávnění (např. Flashlight+ vyžadující přístup k SMS a kontaktům).
-- Všechny rizikové činnosti provádějte pod účtem hosta.
 - Nezapomeňte na fyzické zabezpečení zařízení &ndash; nastavte zamykací heslo, neodemykejte bootloader apod.
 
 <br>
@@ -87,5 +86,5 @@ Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpeč
 
 ## Doporučené klíčenky:
 - [1Password](https://1password.com/) &ndash; špičková platforma, placená
-- [Bitwarden](https://bitwarden.com/) &ndash; bezplatná
+- [Bitwarden](https://bitwarden.com/) &ndash; bezplatná/placená
 - [KeePassX](https://www.keepassx.org/) &ndash; bezplatná
