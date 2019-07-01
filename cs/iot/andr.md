@@ -33,7 +33,7 @@ Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect
 <br>
 
 ## Bezpečná zařízení:
-Jak již bylo zmíněno, rozmanitost zařízení s OS Android je z pohledu bezpečnosti velký problém.
+Jak již bylo zmíněno, diverzita zařízení s OS Android je z pohledu bezpečnosti velký problém.
 
 V dnešní době není problém pořídit si telefon s OS Android za směšnou finanční částku. Pořizovací cena ovšem není všechno, a neměla by být hlavním faktorem při výběru. Většina levných zařízení se nikdy nedočká žádné bezpečnostní aktualizace, natož pak aktualizace na novější verzi OS. Tato zařízení mohou obsahovat stovky známých bezpečnostních děr, které lze lehce zneužít, pokud zařízení není záplatováno výrobcem. Situace u dražších modelů ale nemusí být o nic lepší. Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se s ním z hlediska bezpečnosti dalo pracovat.
 
@@ -48,11 +48,7 @@ V dnešní době není problém pořídit si telefon s OS Android za směšnou f
 
 > Proč záleží na verzi OS
 
-Každá verze OS Android přináší mnohá bezpečnostní a jiná vylepšení. **Kitkat** (4.4) přinesl implementaci **SELinux**, která byla ve verzi **Lollipop** (5.0) výrazně zrobustněna. **Marshmallow** přinesl správu oprávnění pro aplikace, kdy si uživatel může zvolit, jaká aplikace má k čemu přístup.
-
-**Nougat** přinesl přepsaný *MediaServer*, který likviduje celé rodiny exploitů a zabraňuje exploitaci na principu exploitu *Stagefright*. Je možné s klidným svědomím říci, že <span class="red">žádná verze OS Android před verzí *Nougat* není bezpečná a neměla by být používána.</span>
-
-**Oreo** posunul sandboxing na mnohonásobně vyšší úroveň díky *Project Treble*, zároveň přinesl celoplošené využítí *seccomp* pro veškeré aplikace. Také výrazně zvýšil bezpečnost *WebView*, zrobustnil model oprávnění aplikací atd.
+Každá verze OS Android přináší mnohá bezpečnostní a jiná vylepšení. **Marshmallow** přinesl správu oprávnění pro aplikace, kdy si uživatel může zvolit, jaká aplikace má k čemu přístup. **Nougat** přinesl přepsaný *MediaServer*, který likviduje řadu typů exploitů jako např. *Stagefright*. **Oreo** posunul sandboxing na vyšší úroveň díky *Project Treble* a celoplošenému využítí *seccomp* pro veškeré aplikace. Dále například zrobustnil *WebView* a model oprávnění aplikací. Je možné s klidným svědomím říci, že <span class="red">žádná verze OS Android starší nežli *Oreo* není bezpečná a neměla by být používána.</span>
 
 ![Treble case study: media stack](https://guide.mople71.cz/img/en/mstreble.png)
 <p class="imgsrcf">*Treble case study: media stack (upraveno).* Zdroj: [What's New in Android Security (Google I/O '17)](https://www.youtube.com/watch?v=C9_ytg6MUP0) | &#169; 2017 Google</p>
@@ -61,15 +57,15 @@ Drobný příklad. Nainstalujete škodlivou aplikaci na *Android 5.0* &ndash; ne
 
 > Proč záleží na bezpečnostních aktualizacích
 
-Další příklad. Nainstalujete si škodlivou aplikaci na <span class="green">8.1</span> &ndash; máte kontrolu nad oprávněními aplikace a všechna nepotřebná oprávnění tedy můžete zakázat. Nemáte ovšem nejnovější bezpečnostní záplaty. Aplikace tedy může využít známou bezpečnostní díru a dostat se díky ní na úroveň OS, který následně infikuje a uživatel se o tom nikdy nedozví. Toto v praxi aplikuje každý slušný malware pro OS Android, jelikož se jedná o nejjednodušší cestu infekce &ndash; cca. **90% zařízení nemá základní bezpečnostní záplaty**. Z mediálně známých např. Kemoge, Godless,...
+Další příklad. Nainstalujete si škodlivou aplikaci na starší verzi <span class="green">8.1</span> &ndash; máte kontrolu nad oprávněními aplikace a všechna nepotřebná oprávnění tedy můžete zakázat. Nemáte ovšem nejnovější bezpečnostní záplaty. Aplikace tedy může využít známou bezpečnostní díru a exploitovat OS &ndash; uživatel se o tom nikdy nedozví. Toto je bežná praxe malware pro OS Android, jelikož se jedná o nejjednodušší a nejméně nákladný způsob infikace &ndash; cca. **90% zařízení nemá základní bezpečnostní záplaty**.
 
 <br>
 
 ### Přijatelné modely dle bezpečnostních kritérií:
 - **libovolný model** řady **<span class="go">Pixel</span>**
 - **libovolný model** výrobce **<span class="no">Nokia</span>**
-- *Essential Phone*
-- vlajkové lodě výrobců **<span class="sam">Samsung</span>**, **<span class="lg">LG</span>**, **<span class="hu">Huawei</span>** a **SONY**
+- **libovolný model** projektu [Android One](https://www.android.com/one/)
+- vlajkové lodě většiny známých výrobců jako **SONY**, **<span class="sam">Samsung</span>**, **<span class="lg">LG</span>**, **<span class="hu">Huawei</span>** apod.
 - vyšší modely výrobců **<span class="sam">Samsung</span>** a **SONY**
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Tip**<br>
@@ -94,7 +90,7 @@ Android je (většinou) bezpečně nastaven již v základu, není ovšem od vě
 - Otevřete si <span class="green">Nastavení</span>.
 - Nalezněte podkategorii **Systém** a otevřete ji.
 - Klikněte na <span class="green">Informace o telefonu</span>.
-- Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **8.1** či výše.
+- Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **9.0** či výše.
 - Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
 <li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
 - Máte-li starší *verzi systému Android* než **8.1** a výrobce nepotvrdil aktualizaci, zařízení je implicitně nebezpečné &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než **3 měsíce**, zařízení není bezpečné &ndash; můžete se dívat po náhradě.
@@ -122,7 +118,7 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 <br>
 
 ### Využití účtu hosta:
-Pod účtem hosta můžete relativně bezpečně např. prohlížet rizikové internetové stránky. Instalace pochybných aplikací není doporučena ani pod uživatelem hosta, jelikož aplikace může OS exploitovat mnohem snadněji než internetová stránka. Pokud by aplikace úspěšně získala root pravomoce (např. pomocí *CVE-2015-1805* aka KingRoot), nepomůže vám ani reset zařízení do továrního nastavení.
+Pod účtem hosta můžete relativně v bezpečí např. prohlížet rizikové internetové stránky. Instalace pochybných aplikací není bezpečná ani pod uživatelem hosta, jelikož aplikace může OS exploitovat mnohem snadněji než internetová stránka. Pokud by aplikace úspěšně získala root pravomoce (např. pomocí *CVE-2015-1805* aka KingRoot), nemusí pomoci ani reset zařízení do továrního nastavení.
 
 > Přepnutí se na účet hosta
 
@@ -145,12 +141,12 @@ Obchod s aplikacemi velmi úzce souvisí s bezpečností, jelikož z něj stahuj
 
 #### FOSS:
 - F-Droid: https://f-droid.org/
+- Yalp Store &ndash; opensource frontend pro obchod Google Play
 
 #### Proprietární:
 - Google Play: https://play.google.com/
-- Amazon: https://www.amazon.com/appstore
 
-*Amazon* má zdlouhavý proces kontroly aplikací (jsou kontrolovány manuálně), proto má téměř vždy zastaralé verze aplikací, zvláště těch, které jsou často aktualizovány.
+Obchody typu *Amazon* či *Samsung* nemusí vždy mít nejnovější verze aplikací, zvláště těch, které jsou často aktualizovány. Zvláště Amazon má extrémně zdlouhavý proces kontroly aplikací (jsou kontrolovány ručně).
 
 <br>
 
@@ -183,7 +179,7 @@ Blokování reklamy je z hlediska bezpečnosti nezbytné z důvodu výskytu ško
 
 #### Internetový prohlížeč:
 - Brave: https://play.google.com/store/apps/details?id=com.brave.browser
-- Google Chrome / Chromium
+- Google Chrome
 - &#8230;
 
 VPN je dobrý způsob blokace reklam, ovšem implementace *OpenVPN* na Androidu není perfektní. Lokální VPN tímto problémem netrpí. Použití prohlížeče blokující reklamy je na OS Android nejlepším řešením. **Chrome** již umožňuje nativně blokovat agresivní reklamy nesplňující podmínky. Prohlížeč **Brave** v základu integruje blokování reklam a trackerů.
@@ -191,7 +187,7 @@ VPN je dobrý způsob blokace reklam, ovšem implementace *OpenVPN* na Androidu 
 <br>
 
 ### Internetový prohlížeč:
-Chrome/Chromium je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům na Linuxu &ndash; tedy i na Androidu. Prohlížeče založené na Mozilla Firefox stále v této oblasti za Chromium zaostávají.
+Chrome/Chromium je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům. Prohlížeče založené na Mozilla Firefox stále v této oblasti za Chromium zaostávají, na OS Android obzvlášť.
 
 #### FOSS:
 - Chromium: https://www.chromium.org/developers/how-tos/android-build-instructions
