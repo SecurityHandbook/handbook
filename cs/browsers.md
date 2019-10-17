@@ -1,3 +1,7 @@
+# Google Chrome:
+- WNT &ndash; **3**
+- LNX &ndash; **N/A**
+
 <h3 class="ch">![ch_icon](https://mople71.cz/img/icons/ch16.png) Google Chrome</h3>
 
 > Instalace
@@ -46,7 +50,6 @@ a stiskněte **Enter**.</li>
 - Nainstalujte si následující bezpečnostní doplněk: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=cs)
 
 #### Nastavení uBlock:
-
 - Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
 <li style="list-style-type: none">![chublock](https://faq.mople71.cz/img/en/chublock.png)</li>
 - Zobrazí se nastavení uBlock Origin. V sekci **Soukromí** zatrhněte možnost <span class="green">Předejít úniku lokálních IP adres přes WebRTC</span>.
@@ -63,7 +66,12 @@ a stiskněte **Enter**.</li>
 
 Google Chrome používá špičkovou implementaci sandboxu.
 
-<br>
+-----------------------------------
+-----------------------------------
+
+# Brave:
+- WNT &ndash; **2**
+- LNX &ndash; **N/A**
 
 <h3 class="brv">![brv_icon](https://mople71.cz/img/icons/brv.png) Brave</h3>
 
@@ -80,17 +88,7 @@ a stiskněte **Enter**.</li>
 - Zobrazí se nastavení. V sekci **Brave shields defaults** zkontrolujte konfiguraci a případně opravte:
  <li style="list-style-type: none">![brv](https://faq.mople71.cz/img/en/brv.png)</li>
 - Sjeďte na konec stránky a klikněte na tlačítko ![ch](https://faq.mople71.cz/img/cs/ch.png)
-- V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu...</span>
-<li style="list-style-type: none">![ch1](https://faq.mople71.cz/img/cs/ch1.png)</li>
-- V sekci **Flash** zablokujte spouštění obsahu Flash na webech.
-<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
-- V sekci **Synchronizace na pozadí** zablokujte nedávno zavřeným webům dokončit odeslání a příjem dat.
-<li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
-- V sekci **Přístup pluginu mimo izolovaný prostor** zablokujte webům přístup do počítače pomocí pluginu.
-<li style="list-style-type: none">![ch5](https://faq.mople71.cz/img/cs/ch5.png)</li>
-- V sekci **Schránka** zablokujte webům přístup k datům ve schránce.
-<li style="list-style-type: none">![ch6](https://faq.mople71.cz/img/cs/ch6.png)</li>
-- Prohlížeč restartujte.
+- *Google Chrome &ndash; L18-30*
 
 > Omezení JavaScript
 
@@ -109,11 +107,17 @@ Prohlížeč v základu integruje blokování reklam a trackerů.
 
 Brave používá špičkovou implementaci sandboxu.
 
-<br>
+-----------------------------------
+-----------------------------------
+
+# Chromium:
+- WNT &ndash; **3**
+- LNX &ndash; **1**
 
 <h3 class="chm">![chm_icon](https://mople71.cz/img/icons/chm16.ico) Chromium:</h3>
 
-Nechcete-li používat *Google Chrome*, doporučuji použít open-source Chromium, na kterém je *Google Chrome* založen. Chromium na Windows se bohužel neumí automaticky aktualizovat. Můžete ovšem použít komunitní open-source nástroj.
+## WNT:
+Nechcete-li používat *Google Chrome* ani *Brave*, doporučuji použít open-source Chromium, na kterém je *Google Chrome* založen. Chromium na Windows se bohužel neumí automaticky aktualizovat. Můžete ovšem použít komunitní open-source nástroj.
 
 > Instalace a nastavení chrlauncher
 
@@ -139,7 +143,37 @@ ChromiumWaitForDownloadEnd=true</code></pre></li>
 
 Použijte postup pro **Google Chrome** výše, je identický.
 
-<br>
+-----------------------------------
+
+## LNX:
+> Instalace
+
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
+<li style="list-style-type: none"><pre><code>sudo dnf install -y chromium
+exit</code></pre></li>
+
+> Bezpečnější nastavení
+
+- *Google Chrome &ndash; L14-30*
+
+> Omezení JavaScript
+
+- *Google Chrome &ndash; L34-46*
+
+> Blokování reklamy
+
+- *Google Chrome &ndash; L50-62*
+
+> Oddělení prohlížeče od OS a dat
+
+Chromium používá špičkovou implementaci sandboxu.
+
+-----------------------------------
+-----------------------------------
+
+# Microsoft Edge:
+- WNT &ndash; **4**
+- LNX &ndash; **N/A**
 
 <h3 class="ed">![edge_icon](https://mople71.cz/img/icons/edge16.png) Microsoft Edge</h3>
 
@@ -158,24 +192,22 @@ Použijte postup pro **Google Chrome** výše, je identický.
 #### Nastavení uBlock:
 - Klikněte na ikonu uBlock v panelu ikon a následně otevřete **Nastavení**.
 <li style="list-style-type: none">![edublock](https://faq.mople71.cz/img/en/edublock.png)</li>
-- Zobrazí se nastavení uBlock Origin. V sekci **Soukromí** zatrhněte možnost <span class="green">Předejít úniku lokálních IP adres přes WebRTC</span>.
-- Následně se přesuňte do záložky <span class="green">Filtry třetích stran</span>.
-<li style="list-style-type: none">![ublock](https://faq.mople71.cz/img/cs/ublock.png)</li>
-- Zde vyberte filtry pro blokování webového obsahu. Doporučuji kromě výchozích zvolit následující:</li>
-<li style="list-style-type: none">![ublock1](https://faq.mople71.cz/img/cs/ublock1.png)</li>
-- Následně v pravém horním rohu klikněte na tlačítko: ![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)
-- Přesuňte se na začátek stránky, zkontrolujte zatržítko u položky <span class="green">Automaticky aktualizovat seznamy filtrů</span> a klikněte na tlačítko <span class="green">Aktualizovat nyní</span>. Během aktualizace panel nezavírejte.
-<li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
-
+- *Google Chrome &ndash; L55-62*
 
 > Oddělení prohlížeče od OS a dat
 
 Microsoft Edge používá špičkovou implementaci sandboxu.
 
-<br>
+-----------------------------------
+-----------------------------------
+
+# Mozilla Firefox:
+- WNT &ndash; **5**
+- LNX &ndash; **3**
 
 <h3 class="ff">![ff_icon](https://mople71.cz/img/icons/ff.png) Mozilla Firefox</h3>
 
+## WNT:
 > Instalace
 
 - Stáhněte si nejnovější verzi [Mozilla Firefox](https://www.mozilla.org/cs/firefox/new/).
@@ -231,20 +263,41 @@ network.allow-experiments --- false</code></pre></li>
 #### Nastavení uBlock:
 - Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
 <li style="list-style-type: none">![ffublock](https://faq.mople71.cz/img/en/ffublock.png)</li>
-- Zobrazí se nastavení uBlock Origin. V sekci **Soukromí** zatrhněte možnost <span class="green">Předejít úniku lokálních IP adres přes WebRTC</span>.
-- Následně se přesuňte do záložky <span class="green">Filtry třetích stran</span>.
-<li style="list-style-type: none">![ublock](https://faq.mople71.cz/img/cs/ublock.png)</li>
-- Zde vyberte filtry pro blokování webového obsahu. Doporučuji kromě výchozích zvolit následující:</li>
-<li style="list-style-type: none">![ublock1](https://faq.mople71.cz/img/cs/ublock1.png)</li>
-- Následně v pravém horním rohu klikněte na tlačítko: ![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)
-- Přesuňte se na začátek stránky, zkontrolujte zatržítko u položky <span class="green">Automaticky aktualizovat seznamy filtrů</span> a klikněte na tlačítko <span class="green">Aktualizovat nyní</span>. Během aktualizace panel nezavírejte.
-<li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
+- *Google Chrome &ndash; L55-62*
 
 > Oddělení prohlížeče od OS a dat
 
 Sandbox Firefoxu je v aktivním vývoji a již nyní je v celkem použitelném stavu.
 
-<br>
+-----------------------------------
+
+## LNX:
+<h3 class="ff">![ff_icon](https://mople71.cz/img/icons/ff.png) Mozilla Firefox</h3>
+
+> Instalace
+
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
+<li style="list-style-type: none"><pre><code>sudo dnf install -y firefox
+exit</code></pre></li>
+
+> Bezpečnější nastavení
+
+- *Mozilla Firefox WNT &ndash; L218-257*
+
+> Blokování reklamy
+
+- *Mozilla Firefox WNT &ndash; L261-266*
+
+> Oddělení prohlížeče od OS a dat
+
+Sandbox Firefoxu je v aktivním vývoji. Lepší, nežli žádný.
+
+-----------------------------------
+-----------------------------------
+
+# Internet Explorer:
+- WNT &ndash; **6**
+- LNX &ndash; **N/A**
 
 <h3 class="ie">![ie_icon](https://mople71.cz/img/icons/ie16.png) Internet Explorer</h3>
 
@@ -296,3 +349,38 @@ Další český filtr naleznete např. [zde](http://adblock.dajbych.net/).
 > Oddělení prohlížeče od OS a dat
 
 Prohlížeč je částečně oddělen od OS díky technologii **Protected Mode**.
+
+-----------------------------------
+-----------------------------------
+
+# Epiphany:
+- WNT &ndash; **N/A**
+- LNX &ndash; **2**
+
+<h3 class="epiph">![epiph_icon](https://mople71.cz/img/icons/epiph.png) GNOME Web:</h3>
+
+> Instalace
+
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
+<li style="list-style-type: none"><pre><code>sudo dnf install -y epiphany
+exit</code></pre></li>
+
+>  Bezpečnější nastavení
+
+- Rozklikněte nabídku v kontextovém menu a otevřete <span class="green">Předvolby</span>.
+<li style="list-style-type: none">![epiph](https://faq.mople71.cz/img/cs/epiph.png)</li>
+- V sekci **Obsah WWW** zatrhněte možnost <span class="green">Blokovat vyskakovací okna</span> a <span style="color: #BF0000">odstraňte</span> zatržítko u možnosti <span class="green">Povolit zásuvné moduly</span>.
+<li style="list-style-type: none">![epiph1](https://faq.mople71.cz/img/cs/epiph1.png)</li>
+- Přesuňte se do záložky **Uchovaná data** a v sekci **Cookies** zvolte možnost <span class="green">Jen ze serverů, které navštěvujete</span>.
+<li style="list-style-type: none">![epiph2](https://faq.mople71.cz/img/cs/epiph2.png)</li>
+
+> Blokování reklamy
+
+Prohlížeč má vestavěný blokátor reklam se základními filtry.
+
+> Oddělení prohlížeče od OS a dat
+
+Epiphany obsahuje základní implementaci sandboxu. Lepší, nežli žádná.
+
+-----------------------------------
+-----------------------------------

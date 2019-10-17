@@ -1,5 +1,5 @@
 # FAQ &ndash; OS Linux
-Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů &ndash; většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce ovšem také existuje, ač v mnohonásobně menším množství. Moderní *exploit kity* jsou multiplatformní a např. JS ransomware spolehlivě funguje i přes prohlížeč na Linuxu. Dostatečné zabezpečení OS je proto nezbytné.
+Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů &ndash; většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce také existuje, akorát v mnohonásobně menším množství. Ačkoliv tedy je stav desktopového Linuxu z pohledu bezpečnosti tristní, v praxi je riziko infikace nižší než u jiných desktopových OS. Moderní *exploit kity* jsou ovšem multiplatformní a jejich počet roste. Dostatečné zabezpečení OS je proto nezbytné.
 
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/lnx/adv.php#lnx).
 
@@ -18,7 +18,7 @@ Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci
 
 V sekci OS Linux naleznete tipy převážně pro distribuci <span class="green">Fedora</span>.
 
-**Fedora** je nejlepší volbou pro běžného uživatele, jelikož je v základu vcelku bezpečně nastavená. Používá GNOME, nabízí uživateli možnost snadné instalace Flatpak aplikací, obsahuje robustní implementaci SELinux a má velmi vysoké standardy na své balíčky &ndash; všechny musí mít důležité mitigace proti memory corruption exploitům. Mimo technické funkce nabízí stabilní nejnovější. Jediný problém zmíněné distribuce, a to vcelku zásadní, jsou pomalé aktualizace webových prohlížečů &ndash; pravděpodobně z důvodu mnoha vlastních úprav (patchů), které je nutno pro každou novou verzi aktualizovat.
+**Fedora** je nejlepší volbou pro běžného uživatele, jelikož je v základu vcelku bezpečně nastavená. Používá GNOME, nabízí uživateli možnost snadné instalace Flatpak aplikací, obsahuje robustní implementaci SELinux a má velmi vysoké standardy na své balíčky &ndash; všechny musí mít důležité mitigace proti memory corruption exploitům. Mimo technické funkce nabízí stabilní nejnovější. Jediný problém zmíněné distribuce, a to vcelku zásadní, jsou pomalé aktualizace webových prohlížečů z důvodu mnoha vlastních úprav (patchů), které je nutno pro každou novou verzi aktualizovat.
 
 U některých kroků také naleznete pokyny pro distribuci **<span class="os">openSUSE</span>** a distribuci **<span class="ub">Ubuntu</span>**, která je velmi populární, z hlediska bezpečnosti ovšem o něco méně vhodná.
 
@@ -79,7 +79,7 @@ exit</code></pre></li>
 
 > Zakázání IPv6
 
-Pokud nepoužíváte a nepotřebujete IPv6 (pokud nevíte, můžete to zjistit pomocí následujícího [testu](http://www.test-ipv6.cz/), je rozumné protokol vypnout pro snížení prostoru pro útok.
+Pokud nepoužíváte a nepotřebujete IPv6 (nejste-li si jistí, můžete to vyzkoušet následující [test](http://www.test-ipv6.cz/), je rozumné protokol vypnout pro snížení prostoru pro útok.
 
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
 <li style="list-style-type: none"><pre><code>sudo -i
@@ -98,14 +98,17 @@ exit</code></pre></li>
 
 Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](https://www.nic.cz/page/312/o-domenach-a-dns/).
 
-- Otevřete si <span class="green">Nastavení</span> a klikněte na položku <span class="green">Síť</span>.
-- V seznamu zvolte připojení, které používáte (Drátové/WiFi), a otevřete jeho nastavení.
+- Otevřete si <span class="green">Nastavení</span>.
+- Rozklikněte položku <span class="green">Wi-Fi</span> nebo <span class="green">Síť</span> v závislosti na druhu vašeho připojení.
+- V seznamu nalezněte příslušné spojení a otevřete jeho nastavení.
 <li style="list-style-type: none">![lnxnet](https://faq.mople71.cz/img/cs/lnxnet.png)
 ![lnxnet1](https://faq.mople71.cz/img/cs/lnxnet1.png)</li>
 - Přepněte se do záložky IPv4 a v sekci **DNS** vypněte možnost <span class="green">Automatické</span>.
 - Do řádku vepište následující DNS servery:
-<li style="list-style-type: none"><pre><code>217.31.204.130,193.29.206.206</code></pre></li>
+<li style="list-style-type: none"><pre><code>193.17.47.1,185.43.135.1</code></pre></li>
 <li style="list-style-type: none">![lnxnet2](https://faq.mople71.cz/img/cs/lnxnet2.png)</li>
+- Pro *IPv6* aplikujte obdobný postup s následujícími servery:
+<li style="list-style-type: none"><pre><code>2001:148f:ffff::1,2001:148f:fffe::1</code></pre></li>
 - Klikněte na tlačítko <span class="green">Použít</span> a nastavení zavřete.
 
 <br>
@@ -126,15 +129,6 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](h
 ## Ochrana proti malware:
 Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (*&bdquo;layered config&ldquo;*) &ndash; pokud selže jedna vrstva, nastupuje druhá. Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na distribuci. V základním nastavení ovšem většinou bohužel nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
 
-Vrstev existuje mnoho, níže jsou zmíněny pouze vrstvy vyhodnoceny jako důležité.
-
-- antivirus / antimalware
-- firewall
-- anti-exploit
-- anti-executable
-- virtualizace
-- &#8230;
-
 <br>
 
 ### Aktualizace OS a SW:
@@ -147,7 +141,7 @@ Pro distribuci **<span class="os">openSUSE</span>** platí to stejné, co výše
 <pre><code>sudo zypper up</code></pre>
 
 Pro distribuci **<span class="ub">Ubuntu</span>** platí to stejné, co výše, akorát se liší syntax příkazu:
-<pre><code>sudo apt update && sudo apt updgrade</code></pre>
+<pre><code>sudo apt update && sudo apt upgrade</code></pre>
 
 <br>
 
@@ -266,7 +260,7 @@ flatpak install flathub org.gnome.Epiphany</code></pre></li>
 <br>
 
 #### Virtuální stroj:
-Nejbezpečnější způsob virtualizace je emulace virtuálního zařízení, kdy je virtualizován celý OS &ndash; za korektního nastavení a využití snapshotů. Po správné konfiguraci můžete virtuální stroj používat např. k vcelku bezpečnému brouzdání internetem.
+Nejbezpečnější způsob virtualizace je emulace zařízení, kdy je virtualizován celý OS &ndash; za korektního nastavení a využití snapshotů. Po správné konfiguraci můžete virtuální stroj používat např. k vcelku bezpečnému brouzdání internetem.
 
 Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce. Pro virtualizaci OS Windows pro něj ovšem budete potřebovat dodatečnou licenci. Jednoduché nastavení a používání virtuálního počítače umožňují následující aplikace:
 
@@ -281,7 +275,7 @@ Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce.
 - Klikněte na <span class="green">Vybrat soubor</span> a nalezněte požadovaný ISO soubor.
 - Odmítněte případnou expresní instalaci.
 - Klikněte na tlačítko <span class="green">Přizpůsobit...</span>
-- Nastavte požadované množství alokované paměti (pro 64-bitový OS alespoň *3 GiB*) a místa na disku (alespoň *20 GiB*).
+- Nastavte požadované množství alokované paměti (alespoň *3 GiB*) a místa na disku (alespoň *20 GiB*).
 <li style="list-style-type: none">![gboxes](https://faq.mople71.cz/img/cs/gboxes.png)</li>
 - Přesuňte se zpět a v pravém horním rohu klikněte na <span class="green">Vytvořit</span>.
 - Nainstalujte a nakonfigurujte OS. Následně jej vypněte.
@@ -296,7 +290,7 @@ Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce.
 <br><br><hr><br>
 
 ## Zabezpečení internetového prohlížeče:
-Z bezpečnostního hlediska doporučuji prohlížeč <span class="green">Chromium</span>. Používá špičkovou implementaci sandboxu a jeho kód je na velmi dobré úrovni. Celkově je v ohledu bezpečnosti v současném stavu dále než **Mozilla Firefox**. Prohlížeč **GNOME Web (Epiphany)** není nijak zvlášť zaměřený na bezpečnost, nehodí se tedy ke každodennímu používání. Je možné jej ovšem použít jako oddělený prohlížeč pro citlivé věci jako bankovnictví apod. Prohlížeč **Brave** vychází z prohlížeče Chromium, v základu integruje blokování reklam a trackerů. Jeho sandbox aktuálně není na úrovni prohlížeče Chromium, i tak je ovšem solidní.
+Z bezpečnostního hlediska lze doporučit prohlížeč <span class="green">Chromium</span>. Používá špičkovou implementaci sandboxu a jeho kód je na velmi dobré úrovni. Celkově je v ohledu bezpečnosti v současném stavu dále než **Mozilla Firefox**. Prohlížeč **GNOME Web (Epiphany)** není nijak zvlášť zaměřený na bezpečnost, nehodí se tedy ke každodennímu používání. Je možné jej ovšem použít jako oddělený prohlížeč pro citlivé věci jako bankovnictví apod. Prohlížeč **Brave** vychází z prohlížeče Chromium, v základu integruje blokování reklam a trackerů. Jeho sandbox aktuálně není na úrovni prohlížeče Chromium, i tak je ovšem solidní.
 
 <!--- ./browsers.md -->
 
