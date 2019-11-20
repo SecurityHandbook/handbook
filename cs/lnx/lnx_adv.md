@@ -1,7 +1,7 @@
 # FAQ &ndash; OS Linux
-Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů &ndash; většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce ovšem také existuje, ač v mnohonásobně menším množství. Moderní *exploit kity* jsou multiplatformní a např. JS ransomware spolehlivě funguje i přes prohlížeč na Linuxu. Dostatečné zabezpečení OS je proto nezbytné.
+Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů &ndash; většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce také existuje, akorát v mnohonásobně menším množství. Ačkoliv tedy je stav desktopového Linuxu z pohledu bezpečnosti tristní, v praxi je riziko infikace nižší než u jiných desktopových OS. Moderní *exploit kity* jsou ovšem multiplatformní a jejich počet roste. Dostatečné zabezpečení OS je proto nezbytné.
 
-Zde se budeme věnovat pokročilejším možnostem zabezpečení (desktopového) Linuxu. Jako rukojmí použijeme distribuci **Arch Linux**, ze které lze korektní konfigurací vytvořit velmi bezpečnou instalaci. Kroky níže popisované jsou aplikovatelné na většinu distribucí, stačí korektně změnit syntax.
+Zde se budeme věnovat pokročilejším možnostem zabezpečení (desktopového) Linuxu. Jako rukojmí použijeme distribuci **Arch Linux**, ze které lze korektní konfigurací vytvořit velmi bezpečnou instalaci (v mezích Linuxu). Kroky níže popisované jsou aplikovatelné na většinu distribucí, stačí korektně změnit syntax.
 
 Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pokročilé](https://faq.mople71.cz/cs/lnx/index.php#lnx) uživatele a máte znalosti ve zmíněné sekci rozebírané.
 
@@ -16,52 +16,29 @@ Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pok
 ### Firewall:
 Pro běžné počítače stačí zakázat FORWARD chain a bezpečně nastavit INPUT.
 
-Co se týče whitelistu odchozí komunikace (application FW), iptables není nejpříjemnější možností. Mnohem jednoduší je application FW implementovat skrz <abbr title="Mandatory Access Control">MAC</abbr>.
+Co se týče whitelistu odchozí komunikace (application FW), nftables není nejpříjemnější možností. Mnohem snazší je application FW implementovat skrz <abbr title="Mandatory Access Control">MAC</abbr>.
 
-> Příklad pravidel pro běžný počítač (zadat do root konzole)
+> Příklad pravidel pro běžný počítač:
 
-<pre><code># zamknout INPUT a FORWARD
-iptables -P INPUT   DROP
-iptables -P FORWARD DROP
-iptables -A INPUT -p tcp -m tcp ! --tcp-flags SYN,RST,ACK SYN -m state --state NEW -j DROP
+<pre><code>/etc/nftables.conf
+-----------------------------------
 
-# zahodit INVALID pakety
-iptables -N drop_invalid
-iptables -A OUTPUT   -m state --state INVALID  -j drop_invalid
-iptables -A INPUT    -m state --state INVALID  -j drop_invalid
-iptables -A INPUT -p tcp -m tcp --sport 1:65535 --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j drop_invalid
-iptables -A drop_invalid -j LOG --log-level debug --log-prefix "INVALID state -- DENY "
-iptables -A drop_invalid -j DROP
+table inet filter {
+    chain input {
+        type filter hook input priority 0; policy drop;
+        ct state invalid drop
+        ct state established,related accept
+        iif "lo" accept
+    }
 
-# povolit ESTABLISHED a RELATED pripojeni
-iptables -A INPUT  -m state --state ESTABLISHED,RELATED  -j ACCEPT
+    chain forward {
+        type filter hook forward priority 0; policy drop;
+    }
 
-# povolit loopback
-iptables -A INPUT -i lo -j ACCEPT
-
-# logovat ostatni UDP
-iptables -N In_RULE_1
-iptables -A INPUT -p udp -m udp  -j In_RULE_1
-iptables -A In_RULE_1  -j LOG  --log-level info --log-prefix "UDP -- DENY "
-iptables -A In_RULE_1  -j DROP
-
-# logovat ostatni TCP
-iptables -N In_RULE_2
-iptables -A INPUT -p tcp -m tcp  -j In_RULE_2
-iptables -A In_RULE_2  -j LOG  --log-level info --log-prefix "TCP -- DENY "
-iptables -A In_RULE_2  -j DROP
-
-# logovat zbytek
-iptables -N In_RULE_3
-iptables -A INPUT  -j In_RULE_3
-iptables -A In_RULE_3  -j LOG  --log-level info --log-prefix "XXX -- DENY "
-iptables -A In_RULE_3  -j DROP
-
-# ulozit pravidla
-iptables-save > /etc/iptables/iptables.rules
-
-# povolit iptables
-systemctl enable iptables</code></pre>
+    chain output {
+        type filter hook output priority 0; policy accept;
+    }
+}</code></pre>
 
 <br>
 
@@ -74,14 +51,13 @@ systemctl enable iptables</code></pre>
 
 **TOMOYO Linux** je velmi solidní implementace MAC poskytující vyšší úroveň ochrany než AppArmor a zároveň nabízí mnohem jednodušší konfiguraci nežli SELinux.
 
-Na Arch Linux není problém provozovat RBAC, TOMOYO nebo AppArmor. SELinux je o něco problematičtější. Pro použití MAC je nutné zkompilovat kernel.
+Na Arch Linux lze bez problému provozovat TOMOYO nebo AppArmor, přičemž pro TOMOYO není třeba kompilovat vlastní kernel. SELinux je o něco složitější.
 
 > Instalace TOMOYO Linux
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-TOMOYO Linux není příliš rozšířený MAC a velmi těžko někde naleznete profily pro aplikace. Budete si je tedy muset sami vytvořit (příp. přepsat z AppArmor profilů – ty jsou všude). Dokumentaci naleznete [zde](https://tomoyo.osdn.jp/2.5/index.html.en).</p></div>
+TOMOYO Linux není příliš rozšířený MAC a velmi těžko někde naleznete profily pro aplikace. Budete si je tedy muset sami vytvořit (příp. přepsat z AppArmor profilů – ty jsou všude). Dokumentaci naleznete [zde](https://tomoyo.osdn.jp/2.6/index.html.en).</p></div>
 
-- Pokud si neumíte zkompilovat jádro, můžete využít předkompilovaný kernel z [AUR](https://aur.archlinux.org/packages/linux-tomoyo/).
 - Povolte TOMOYO Linux v GRUB:
 <li style="list-style-type: none"><pre><code>/etc/default/grub
 -----------------------------------
@@ -94,7 +70,6 @@ gpg --recv-keys 43C83369623D7AD3A96C2FC7425F128D0C64F52A
 git clone https://aur.archlinux.org/tomoyo-tools.git
 cd tomoyo-tools
 gedit PKGBUILD</code></pre></li>
-- Pokud nepoužíváte kernel z AUR, odstraňte závislost na balíčku **linux-tomoyo**.
 - Uložte a spusťte instalaci:
 <li style="list-style-type: none"><pre><code>makepkg -si</code></pre></li>
 - Restartujte OS.
@@ -150,6 +125,12 @@ TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spušt�
 <br><br><hr><br>
 
 ## Ochrana proti exploitaci:
+### Hardened alokátor:
+- https://github.com/grapheneos/hardened_malloc
+- nefungují: **nftables**, man, občas gnome-control-center
+
+<br>
+
 ### Hardening aplikací:
 Balíčky mohou být kompilovány s *memory corruption* mitigacemi (ASLR, PIE, RELRO,...), které následně významně ztěžují jejich exploitaci.
 

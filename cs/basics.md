@@ -3,13 +3,13 @@
 ## Základní pojmy:
 - <span class="green">hacker</span> &ndash; člověk zneužívající svých znalostí (např. v oblasti počítačové bezpečnosti) za účelem osobního zisku, tento význam je původně převzatý z pojmu *cracker*
 - <span class="green">malware</span> &ndash; termín pro škodlivý software, jež se dělí na mnoho (méně či více škodlivých) podskupin
-- **adware** &ndash; malware, který obsahuje reklamy a zobrazuje je uživateli
-- **bundleware** &ndash; nadbytečný (ne nutně škodlivý) software, který je přibalen k validnímu software
-- **foistware** &ndash; software nainstalovaný bez vědomí uživatele, který se zpravidla snaží přesvědčit uživatele o chybách v OS a nabízí jejich odstranění za poplatek
 - <span class="green">ransomware</span> &ndash; software, který zabraňuje uživateli v přístupu ke svým datům a za obnovení přístupu požaduje poplatek
 - **rootkit** &ndash; kód, který skrývá přítomnost malware v OS a ztěžuje jeho detekci
 - <span class="green">exploit</span> &ndash; kód využívající chyby v jiném SW (klidně přímo v OS) za účelem provedení požadované akce
 - **zero-day (0-day)** &ndash; zranitelnost, která byla zneužita v den jejího zveřejnění (příp. před ním)
+- **adware** &ndash; malware, který obsahuje reklamy a zobrazuje je uživateli
+- **bundleware** &ndash; nadbytečný (ne nutně škodlivý) software, který je přibalen k validnímu software
+- **foistware** &ndash; software nainstalovaný bez vědomí uživatele, který se zpravidla snaží přesvědčit uživatele o chybách v OS a nabízí jejich odstranění za poplatek
 - **APT** &ndash; &bdquo;Advanced Persistent Threat&ldquo;; pokročilejší hrozba, většinou vytvářená na míru, běžný uživatel s ní obvykle nepřijde do styku
 - **payload** &ndash; část kódu malware, která vykonává klíčovou škodlivou akci
 
@@ -36,20 +36,20 @@
 - Nenavštěvujte pochybné/neznámé stránky a nestahujte z nich žádné soubory.
 - Omezte navštěvování erotických stránek, velmi často jsou oběti malwaretisingu a obsahují škodlivý kód.
 -	Nepoužívejte sociální tlačítka na žádných stránkách mimo stránky dané sociální sítě. Falšování sociálních tlačítek je triviální a velmi oblíbené.
-- Vyvarujte se tzv. **zkráceným odkazům** &ndash; např. https://bit.ly/tinyurlwiki apod. Mohou jednoduše maskovat nebezpečné odkazy.
+- Vyvarujte se tzv. **zkráceným odkazům** &ndash; např. https://bit.ly/tinyurlwiki &ndash; mohou jednoduše maskovat nebezpečné odkazy.
 - Vyvarujte se nebezpečnému síťovému SW jako <span class="red">Flash Player</span> a <span class="red">Java</span>, jeho exploitace je oblíbená a velmi častá. Případně jej alespoň zakažte ve vašem prohlížeči.
 - Otevírejte pouze důvěryhodné e-mailové přílohy.
 - Máte-li podezření na infikovaný soubor, vždy jej před otevřením otestujte pomocí např. [VirusTotal](https://www.virustotal.com/).
 
 <div class="alert success"><p><em class="icon-ok-circled"></em>**Tip**<br>
-Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpečně nastavený live OS</span>. Také ovšem nemusí být 100% – např. pokud zařízení, ze kterého je OS spouštěn, bylo dříve napadeno, může být infikováno EFI.</p></div>
+Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpečně nastavený live OS</span>. Také ovšem nemusí být 100% &ndash; např. pokud zařízení, ze kterého je OS spouštěn, bylo dříve napadeno, může být infikováno EFI.</p></div>
 
 <br>
 
 ## Bezpečné používání mobilních zařízení:
 - Používejte aktuální záplatovanou **originální** verzi OS.
 - Neprovádějte na své zařízením *root* / *jailbreak* &ndash; touto akcí rozbíjíte bezpečnostní model mobilních OS.
-- Instalujte aplikace pouze z důvěryhodných zdrojů &ndash; *Google Play, F-Droid* / *Apple Store* / *Microsoft Store*.
+- Instalujte aplikace pouze z důvěryhodných zdrojů &ndash; *Google Play* / *Apple Store* / *Microsoft Store*.
 - Neinstalujte aplikace vyžadující nesmyslná oprávnění (např. Flashlight+ vyžadující přístup k SMS a kontaktům).
 - Nezapomeňte na fyzické zabezpečení zařízení &ndash; nastavte zamykací heslo, neodemykejte bootloader apod.
 
@@ -80,11 +80,9 @@ Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpeč
 - [Freedome VPN](https://www.f-secure.com/en/web/home_global/freedome/) &ndash; blokuje malware, trackery a reklamy
 - [IVPN](https://www.ivpn.net/) &ndash; důvěryhodná
 - [Cryptostorm](https://cryptostorm.is/) &ndash; důvěryhodná
-- [AirVPN](https://airvpn.org/) &ndash; pokročilé funkce, vcelku důvěryhodná
 
 <br>
 
 ## Doporučené klíčenky:
 - [1Password](https://1password.com/) &ndash; špičková platforma, placená
 - [Bitwarden](https://bitwarden.com/) &ndash; bezplatná/placená
-- [KeePassX](https://www.keepassx.org/) &ndash; bezplatná
