@@ -219,12 +219,9 @@ Microsoft Edge používá špičkovou implementaci sandboxu.
 <li style="list-style-type: none"><pre><code>about:preferences</code></pre>
 a stiskněte **Enter**.</li>
 - V levém panelu se přesuňte do záložky <span class="green">Soukromí a zabezpečení</span>.
-- V sekci **Nastavení soukromí** zapněte blokování <span class="green">Všech nalezených sledovacích prvků</span> a <span class="green">Cookies třetích stran</span>.
-- U nastavení blokování zvolte možnost <span class="green">Vždy</span>, u nastavení cookies třetích stran zvolte <span class="green">Cookies sledovacích prvků</span>. Následně klikněte na tlačítko <span class="green">Změnit seznam blokací</span>.
+- V sekci **Nastavení soukromí** u položky *Rozšířená ochrana proti sledování* zvolte úroveň <span class="green">Vlastní</span>, kterou nakonfigurujte dle obrázku:
 <li style="list-style-type: none">![ff](https://faq.mople71.cz/img/cs/ff.png)</li>
-- V seznamu vyberte možnost **Přísná ochrana s Disconnect.me** a klikněte na <span class="green">Uložit změny</span>.
-- Sjeďte níže do sekce **Oprávnění**.
-- Zatrhněte položku <span class="green">Zabránit službám pro přístupnost v přístupu k vašemu prohlížeči</span> a potvrďte restart aplikace.
+- Sjeďte níže do sekce **Oprávnění**. Zatrhněte položku <span class="green">Zabránit službám pro přístupnost v přístupu k vašemu prohlížeči</span> a potvrďte restart aplikace.
 <li style="list-style-type: none">![ff1](https://faq.mople71.cz/img/cs/ff1.png)</li>
 
 - Do adresního řádku prohlížeče zadejte:
@@ -238,15 +235,14 @@ a stiskněte **Enter**.</li>
 - Tím změníte konfiguraci hodnoty (zapnete/vypnete požadovanou funkci).
 <li style="list-style-type: none">![ff2](https://faq.mople71.cz/img/cs/ff2.png)
 ![ff3](https://faq.mople71.cz/img/cs/ff3.png)</li>
-- Výše uvedeným způsobem vyhledejte a změňte nastavení následujících hodnot (pokud se neshoduje):
-<li style="list-style-type: none"><pre><code>accessibility.blockautorefresh  ---  automatické přesměrování; true
-security.mixed_content.block_display_content  ---  nezabezpečený obsah; true
+- Výše uvedeným způsobem vyhledejte a opravte nastavení následujících hodnot (pokud se neshoduje):
+<li style="list-style-type: none"><pre><code>accessibility.blockautorefresh  ---  true
+security.mixed_content.block_display_content  ---  true
 security.mixed_content.block_object_subrequest --- true
 media.peerconnection.ice.no_host --- true
 javascript.options.asmjs  ---  false
 shumway.disabled  ---  true
 network.negotiate-auth.allow-insecure-ntlm-v1  ---  false
-security.insecure_password.ui.enabled  ---  true
 network.allow-experiments --- false</code></pre></li>
 - Do vyhledávacího pole ve vrchní části stránky zadejte:
 <li style="list-style-type: none"><pre><code>flash</code></pre></li>
@@ -367,11 +363,11 @@ exit</code></pre></li>
 
 >  Bezpečnější nastavení
 
-- Rozklikněte nabídku v kontextovém menu a otevřete <span class="green">Předvolby</span>.
+- Kliknutím na tři tečky v horním pravém rohu otevřete boční panel a zvolte <span class="green">Předvolby</span>.
 <li style="list-style-type: none">![epiph](https://faq.mople71.cz/img/cs/epiph.png)</li>
-- V sekci **Obsah WWW** zatrhněte možnost <span class="green">Blokovat vyskakovací okna</span> a <span style="color: #BF0000">odstraňte</span> zatržítko u možnosti <span class="green">Povolit zásuvné moduly</span>.
+- V sekci **Obsah webových stránek** zkontrolujte konfiguraci a případně upravte:
 <li style="list-style-type: none">![epiph1](https://faq.mople71.cz/img/cs/epiph1.png)</li>
-- Přesuňte se do záložky **Uchovaná data** a v sekci **Cookies** zvolte možnost <span class="green">Jen ze serverů, které navštěvujete</span>.
+- Přesuňte se do záložky **Uchovaná data** a v sekci **Cookies** zvolte možnost <span class="green">Jen z webových stránek, které navštěvujete</span>.
 <li style="list-style-type: none">![epiph2](https://faq.mople71.cz/img/cs/epiph2.png)</li>
 
 > Blokování reklamy

@@ -1,7 +1,7 @@
 # FAQ &ndash; OS Windows
 Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto nezbytné.
 
-Podporovanou verzí Windows v následující sekci je <span class="green">Windows 10 September 2019 Update</span> jakožto nejnovější OS s podporou do roku 2025. Obsažené informace jsou platné také pro **Windows 8.1 Update 3**. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí &ndash; pokud již neskončil &ndash; cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
+Podporovanou verzí Windows v následující sekci je <span class="green">Windows 10 September 2018 Update</span> jakožto nejnovější OS s podporou do roku 2025. Obsažené informace jsou platné také pro **Windows 8.1 Update 3**. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí &ndash; pokud již neskončil &ndash; cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
 
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/wnt/adv.php#wnt).
 
@@ -117,11 +117,7 @@ a stiskněte **Enter**.</li>
 <div class="alert success"><p><em class="icon-ok-circled"></em>**Úspěch**<br>
 Potenciálně nebezpečné protokoly jsou nyní vypnuty. Dále nastavíme bezpečné DNS servery.</p></div>
 
-- Pokud nevíte, co DNS je, přečtěte si tento [krátký článek](https://www.nic.cz/page/312/o-domenach-a-dns/).
-- Doporučuji použít DNSSEC. Ale můžete si vybrat z mnoha DNS serverů, zde je pár příkladů:
-<li style="list-style-type: none"><pre><code>CZ.NIC DNSSEC:        217.31.204.130, 193.29.206.206
-Adguard DNS:          176.103.130.130, 176.103.130.131
-OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
+- Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](https://www.nic.cz/page/312/o-domenach-a-dns/).
 - Klikněte na <span class="green">Použít následující adresy serverů DNS</span> a do kolonek vepište následující DNS servery:
 <li style="list-style-type: none"><pre><code>193.17.47.1
 185.43.135.1</code></pre></li>

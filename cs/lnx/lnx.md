@@ -1,5 +1,5 @@
 # FAQ &ndash; OS Linux
-Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů &ndash; většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce také existuje, akorát v mnohonásobně menším množství. Ačkoliv tedy je stav desktopového Linuxu z pohledu bezpečnosti tristní, v praxi je riziko infikace nižší než u jiných desktopových OS. Moderní *exploit kity* jsou ovšem multiplatformní a jejich počet roste. Dostatečné zabezpečení OS je proto nezbytné.
+Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů &ndash; většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce také existuje, akorát v mnohonásobně menším množství. Ačkoliv tedy je stav některých desktopových linuxových distribucí z pohledu bezpečnosti tristní, v praxi je riziko infikace nižší nežli u jiných OS. Moderní *exploit kity* jsou ovšem často multiplatformní a jejich počet roste. Dostatečné zabezpečení OS je proto nezbytné.
 
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/lnx/adv.php#lnx).
 
@@ -12,13 +12,13 @@ Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci
 <br>
 
 ## Doporučené distribuce:
-- Fedora: https://getfedora.org/cs/workstation/
-- openSUSE (Leap): https://www.opensuse.org/#Leap
-- Ubuntu: https://www.ubuntu.com/desktop
+- **<span class="fe">Fedora</span>**: https://getfedora.org/cs/workstation/
+- **<span class="os">openSUSE</span>** (Leap): https://www.opensuse.org/#Leap
+- **<span class="ub">Ubuntu</span>**: https://www.ubuntu.com/desktop
 
-V sekci OS Linux naleznete tipy převážně pro distribuci <span class="green">Fedora</span>.
+V sekci OS Linux naleznete tipy převážně pro distribuci **Fedora**.
 
-**Fedora** je nejlepší volbou pro běžného uživatele, jelikož je v základu vcelku bezpečně nastavená. Používá GNOME, nabízí uživateli možnost snadné instalace Flatpak aplikací, obsahuje robustní implementaci SELinux a má velmi vysoké standardy na své balíčky &ndash; všechny musí mít důležité mitigace proti memory corruption exploitům. Mimo technické funkce nabízí stabilní nejnovější. Jediný problém zmíněné distribuce, a to vcelku zásadní, jsou pomalé aktualizace webových prohlížečů z důvodu mnoha vlastních úprav (patchů), které je nutno pro každou novou verzi aktualizovat.
+**<span class="fe">Fedora</span>** je nejlepší volbou pro běžného uživatele, jelikož je v základu vcelku bezpečně nastavená. Používá GNOME, nabízí uživateli možnost snadné instalace Flatpak aplikací, obsahuje robustní implementaci SELinux a má velmi vysoké standardy na své balíčky &ndash; všechny musí mít důležité mitigace proti memory corruption exploitům. Mimo technické funkce nabízí stabilní nejnovější software. Jediný problém zmíněné distribuce jsou občasné pomalejší aktualizace webových prohlížečů z důvodu mnoha vlastních úprav (patchů), které je nutno pro každou novou verzi aktualizovat.
 
 U některých kroků také naleznete pokyny pro distribuci **<span class="os">openSUSE</span>** a distribuci **<span class="ub">Ubuntu</span>**, která je velmi populární, z hlediska bezpečnosti ovšem o něco méně vhodná.
 
@@ -292,7 +292,7 @@ Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce.
 ## Zabezpečení internetového prohlížeče:
 Z bezpečnostního hlediska lze doporučit prohlížeč <span class="green">Chromium</span>. Používá špičkovou implementaci sandboxu a jeho kód je na velmi dobré úrovni. Celkově je v ohledu bezpečnosti v současném stavu dále než **Mozilla Firefox**. Prohlížeč **GNOME Web (Epiphany)** není nijak zvlášť zaměřený na bezpečnost, nehodí se tedy ke každodennímu používání. Je možné jej ovšem použít jako oddělený prohlížeč pro citlivé věci jako bankovnictví apod. Prohlížeč **Brave** vychází z prohlížeče Chromium, v základu integruje blokování reklam a trackerů. Jeho sandbox aktuálně není na úrovni prohlížeče Chromium, i tak je ovšem solidní.
 
-<!--- ./browsers.md -->
+<!--- /browsers.md -->
 
 <br><br><hr>
 

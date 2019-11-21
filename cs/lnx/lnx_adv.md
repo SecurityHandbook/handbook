@@ -1,9 +1,9 @@
 # FAQ &ndash; OS Linux
-Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů &ndash; většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce také existuje, akorát v mnohonásobně menším množství. Ačkoliv tedy je stav desktopového Linuxu z pohledu bezpečnosti tristní, v praxi je riziko infikace nižší než u jiných desktopových OS. Moderní *exploit kity* jsou ovšem multiplatformní a jejich počet roste. Dostatečné zabezpečení OS je proto nezbytné.
+Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů &ndash; většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce také existuje, akorát v mnohonásobně menším množství. Ačkoliv tedy je stav některých desktopových linuxových distribucí z pohledu bezpečnosti tristní, v praxi je riziko infikace nižší nežli u jiných OS. Moderní *exploit kity* jsou ovšem často multiplatformní a jejich počet roste. Dostatečné zabezpečení OS je proto nezbytné.
 
-Zde se budeme věnovat pokročilejším možnostem zabezpečení (desktopového) Linuxu. Jako rukojmí použijeme distribuci **Arch Linux**, ze které lze korektní konfigurací vytvořit velmi bezpečnou instalaci (v mezích Linuxu). Kroky níže popisované jsou aplikovatelné na většinu distribucí, stačí korektně změnit syntax.
+Zde se budeme věnovat pokročilejším možnostem zabezpečení (nejen) desktopového Linuxu. Jako rukojmí použijeme distribuci **Arch Linux**, se kterou lze korektní konfigurací vytvořit vcelku bezpečnou instalaci. Kroky níže popisované jsou aplikovatelné na většinu distribucí, stačí korektně změnit syntax.
 
-Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pokročilé](https://faq.mople71.cz/cs/lnx/index.php#lnx) uživatele a máte znalosti ve zmíněné sekci rozebírané.
+Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pokročilé](https://faq.mople71.cz/cs/lnx/index.php#lnx) uživatele a máte minimálně znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
 - [Ochrana proti malware](#lnx1)
@@ -16,7 +16,7 @@ Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pok
 ### Firewall:
 Pro běžné počítače stačí zakázat FORWARD chain a bezpečně nastavit INPUT.
 
-Co se týče whitelistu odchozí komunikace (application FW), nftables není nejpříjemnější možností. Mnohem snazší je application FW implementovat skrz <abbr title="Mandatory Access Control">MAC</abbr>.
+Co se týče whitelistu odchozí komunikace (aplikační FW), nftables není nejpříjemnější možností. Mnohem snazší by bylo aplikační FW implementovat skrz <abbr title="Mandatory Access Control">MAC</abbr>.
 
 > Příklad pravidel pro běžný počítač:
 
@@ -127,7 +127,7 @@ TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spušt�
 ## Ochrana proti exploitaci:
 ### Hardened alokátor:
 - https://github.com/grapheneos/hardened_malloc
-- nefungují: **nftables**, man, občas gnome-control-center
+- nefungují: man, občas **nftables** či gnome-control-center
 
 <br>
 
