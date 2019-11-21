@@ -35,29 +35,28 @@ Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect
 ## Bezpečná zařízení:
 Jak již bylo zmíněno, diverzita zařízení s OS Android je z pohledu bezpečnosti velký problém.
 
-V dnešní době není problém pořídit si telefon s OS Android za směšnou finanční částku. Pořizovací cena ovšem není všechno, a neměla by být hlavním faktorem při výběru. Většina levných zařízení se nikdy nedočká žádné bezpečnostní aktualizace, natož pak aktualizace na novější verzi OS. Tato zařízení mohou obsahovat stovky známých bezpečnostních děr, které lze lehce zneužít, pokud zařízení není záplatováno výrobcem. Situace u dražších modelů ale nemusí být o nic lepší. Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se s ním z hlediska bezpečnosti dalo pracovat.
+// rewrite the whole section
+
+V dnešní době není problém pořídit si model s OS Android za zanedbatelný finanční obnos. Pořizovací cena ovšem není všechno, a neměla by být hlavním faktorem při výběru. Většina levných modelů se nikdy nedočká žádné bezpečnostní aktualizace, natož pak aktualizace verze OS. Tato zařízení mohou obsahovat stovky známých bezpečnostních děr, které lze lehce zneužít, pokud zařízení není záplatováno výrobcem. Situace u dražších modelů ale nemusí být o nic lepší. Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se s ním z hlediska bezpečnosti dalo pracovat.
+
+// Android One notice
 
 ### Bezpečnostní kritéria pro zařízení s OS Android:
 - 64-bit architektura (x86/ARM)
-- jádro >= 3.18 (ideálně 4.4)
-- verze dodávaného OS minimálně **Oreo** (*8.1*)
+- jádro >= 4.4
+- verze dodávaného OS minimálně **Pie** (*9*)
 - podpora *Treble*
 - full verified boot (ideálně i pro custom ROM)
 - časté (měsíční, minimálně čtvrtletní) bezpečnostní aktualizace pro firmware a proprietární komponenty
-- garance bezpečnostních aktualizací po dobu morální životnosti modelu (jak dlouho chcete zařízení používat)
+- garance bezpečnostních aktualizací po dobu morální životnosti modelu
 
 > Proč záleží na verzi OS
 
-Každá verze OS Android přináší mnohá bezpečnostní a jiná vylepšení. **Marshmallow** přinesl správu oprávnění pro aplikace, kdy si uživatel může zvolit, jaká aplikace má k čemu přístup. **Nougat** přinesl přepsaný *MediaServer*, který likviduje řadu typů exploitů jako např. *Stagefright*. **Oreo** posunul sandboxing na vyšší úroveň díky *Project Treble* a celoplošenému využítí *seccomp* pro veškeré aplikace. Dále například zrobustnil *WebView* a model oprávnění aplikací. Je možné s klidným svědomím říci, že <span class="red">žádná verze OS Android starší nežli *Oreo* není bezpečná a neměla by být používána.</span>
-
-![Treble case study: media stack](https://guide.mople71.cz/img/en/mstreble.png)
-<p class="imgsrcf">*Treble case study: media stack (upraveno).* Zdroj: [What's New in Android Security (Google I/O '17)](https://www.youtube.com/watch?v=C9_ytg6MUP0) | &#169; 2017 Google</p>
-
-Drobný příklad. Nainstalujete škodlivou aplikaci na *Android 5.0* &ndash; nemáte kontrolu nad oprávněními aplikace, aplikace si může dělat, co chce. Nainstalujete škodlivou aplikaci na *Android 8.1* &ndash; aplikaci můžete odebrat oprávnění, která nechcete. Už se tedy nestane, aby aplikace na svítilnu měla přístup k vašim datům, mikrofonu a videu.
+Každá verze OS Android přináší mnohá bezpečnostní a jiná vylepšení. **Marshmallow** přinesl správu oprávnění pro aplikace, kdy si uživatel může zvolit, jaká aplikace má k čemu přístup. **Nougat** přinesl přepsaný *MediaServer*, který likviduje řadu typů exploitů jako např. *Stagefright*. **Oreo** posunul sandboxing na vyšší úroveň díky *Project Treble* a celoplošenému využítí *seccomp* pro veškeré aplikace. Dále například zrobustnil *WebView* a model oprávnění aplikací. Lze s klidným svědomím říci, že <span class="red">žádná verze OS Android starší nežli *Oreo* není bezpečná a neměla by být používána.</span>
 
 > Proč záleží na bezpečnostních aktualizacích
 
-Další příklad. Nainstalujete si škodlivou aplikaci na starší verzi <span class="green">8.1</span> &ndash; máte kontrolu nad oprávněními aplikace a všechna nepotřebná oprávnění tedy můžete zakázat. Nemáte ovšem nejnovější bezpečnostní záplaty. Aplikace tedy může využít známou bezpečnostní díru a exploitovat OS &ndash; uživatel se o tom nikdy nedozví. Toto je bežná praxe malware pro OS Android, jelikož se jedná o nejjednodušší a nejméně nákladný způsob infikace &ndash; cca. **90% zařízení nemá základní bezpečnostní záplaty**.
+Uveďme drobný příklad. Nainstalujete si škodlivou aplikaci na starší verzi <span class="green">8.1</span> &ndash; máte kontrolu nad oprávněními aplikace a všechna nepotřebná oprávnění tedy můžete zakázat. Nemáte ovšem nejnovější bezpečnostní záplaty. Aplikace tedy může využít známou bezpečnostní díru a exploitovat OS &ndash; uživatel se o tom nikdy nedozví. Toto je bežná praxe malware pro OS Android, jelikož se jedná o nejjednodušší a nejméně nákladný způsob infikace &ndash; cca. **90% zařízení nemá kritické bezpečnostní záplaty**.
 
 <br>
 
@@ -90,10 +89,10 @@ Android je (většinou) bezpečně nastaven již v základu, není ovšem od vě
 - Otevřete si <span class="green">Nastavení</span>.
 - Nalezněte podkategorii **Systém** a otevřete ji.
 - Klikněte na <span class="green">Informace o telefonu</span>.
-- Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **9.0** či výše.
+- Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **10.0** či výše.
 - Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
 <li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
-- Máte-li starší *verzi systému Android* než **8.1** a výrobce nepotvrdil aktualizaci, zařízení je implicitně nebezpečné &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než **3 měsíce**, zařízení není bezpečné &ndash; můžete se dívat po náhradě.
+- Máte-li starší *verzi systému Android* než **9.O** a výrobce nepotvrdil aktualizaci, zařízení je implicitně nebezpečné &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než **3 měsíce**, zařízení není bezpečné &ndash; můžete se dívat po náhradě.
 - Aplikaci zavřete.
 
 <br>
@@ -118,7 +117,7 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 <br>
 
 ### Využití účtu hosta:
-Pod účtem hosta můžete relativně v bezpečí např. prohlížet rizikové internetové stránky. Instalace pochybných aplikací není bezpečná ani pod uživatelem hosta, jelikož aplikace může OS exploitovat mnohem snadněji než internetová stránka. Pokud by aplikace úspěšně získala root pravomoce (např. pomocí *CVE-2015-1805* aka KingRoot), nemusí pomoci ani reset zařízení do továrního nastavení.
+Pod účtem hosta můžete relativně v bezpečí např. prohlížet rizikové internetové stránky. Instalace pochybných aplikací není doporučena ani pod uživatelem hosta, jelikož aplikace může OS exploitovat mnohem snadněji než internetová stránka. Pokud by aplikace úspěšně získala root pravomoce, nemusí pomoci ani reset zařízení do továrního nastavení.
 
 > Přepnutí se na účet hosta
 
@@ -141,17 +140,17 @@ Obchod s aplikacemi velmi úzce souvisí s bezpečností, jelikož z něj stahuj
 
 #### FOSS:
 - F-Droid: https://f-droid.org/
-- Yalp Store &ndash; opensource frontend pro obchod Google Play
+- Aurora Store &ndash; open-source frontend pro obchod Google Play
 
 #### Proprietární:
 - Google Play: https://play.google.com/
 
-Obchody typu *Amazon* či *Samsung* nemusí vždy mít nejnovější verze aplikací, zvláště těch, které jsou často aktualizovány. Zvláště Amazon má extrémně zdlouhavý proces kontroly aplikací (jsou kontrolovány ručně).
+Obchody typu *Amazon* či *Samsung* nemusí vždy mít nejnovější verze aplikací, zvláště těch, které jsou často aktualizovány. Zejména Amazon má extrémně zdlouhavý proces kontroly aplikací (prováděno ručně).
 
 <br>
 
 ### Firewall:
-Firewall je velmi důležitá bezpečnostní vrstva OS, která poskytuje ochranu před síťovými útoky. Na veřejných WiFi připojeních je prakticky nutností.
+Firewall je velmi důležitá bezpečnostní vrstva OS, která poskytuje ochranu před síťovými útoky. Na veřejných WiFi připojeních je nutností.
 
 Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenabízí. Zneužití *VPN API* (NetGuard, NoRoot Data Firewall) není nejlepší a nejspolehlivější implementace FW, ale alespoň nevyžaduje destrukci bezpečnostního modelu OS. Bohužel, vypadá to, že pouze velmi málo lidí má zájem implementovat tyto věci správně &ndash; přímo do OS.
 
@@ -160,7 +159,7 @@ Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenab�
 - NetGuard (VPN): https://github.com/M66B/NetGuard
 
 #### Proprietární:
-- NoRoot Data Firewall (VPN): https://play.google.com/store/apps/details?id=com.jianjia.firewall
+- NoRoot Data Firewall (VPN): https://play.google.com/store/apps/details?id=com.jianjia.firewall&hl=cs
 
 <br>
 
@@ -175,10 +174,10 @@ Blokování reklamy je z hlediska bezpečnosti nezbytné z důvodu výskytu ško
 - Adguard: https://adguard.com/en/adguard-android/overview.html
 
 #### VPN:
-- Freedome: https://play.google.com/store/apps/details?id=com.fsecure.freedome.vpn.security.privacy.android
+- Freedome: https://play.google.com/store/apps/details?id=com.fsecure.freedome.vpn.security.privacy.android&hl=cs
 
 #### Internetový prohlížeč:
-- Brave: https://play.google.com/store/apps/details?id=com.brave.browser
+- Brave: https://play.google.com/store/apps/details?id=com.brave.browser&hl=cs
 - Google Chrome
 - &#8230;
 
@@ -191,10 +190,10 @@ Chrome/Chromium je prohlížeč s nejkvalitnějšími mitigacemi proti exploitů
 
 #### FOSS:
 - Chromium: https://www.chromium.org/developers/how-tos/android-build-instructions
-- Brave: https://play.google.com/store/apps/details?id=com.brave.browser
+- Brave: https://play.google.com/store/apps/details?id=com.brave.browser&hl=cs
 
 #### Proprietární:
-- Google Chrome: https://play.google.com/store/apps/details?id=com.android.chrome
+- Google Chrome: https://play.google.com/store/apps/details?id=com.android.chrome&hl=cs
 
 > Bezpečné nastavení Brave
 
@@ -209,7 +208,7 @@ Chrome/Chromium je prohlížeč s nejkvalitnějšími mitigacemi proti exploitů
 <li style="list-style-type: none">![brvand2](https://faq.mople71.cz/img/cs/brvand2.png)</li>
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Nyní máte ve výchozím nastavení vypnutý JS pro všechny weby. Jakmile budete chtít spuštění JS pro určitý web povolit, stačí kliknout na ikonu prohlížeče v horním panelu a skripty povolit.<br><br>
+Nyní máte ve výchozím nastavení vypnutý JS pro všechny weby. Jakmile budete chtít spuštění JS pro určitý web povolit, stačí poklepat na ikonu prohlížeče v horním panelu a skripty povolit.<br><br>
 ![brvand3](https://faq.mople71.cz/img/cs/brvand3.png)</p></div>
 
 > Omezení JavaScriptu v Google Chrome / Chromium

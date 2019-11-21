@@ -1,7 +1,7 @@
 # FAQ &ndash; OS Windows
 Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto nezbytné.
 
-Podporovanou verzí Windows v následující sekci je <span class="green">Windows 10 September 2018 Update</span> jakožto nejnovější OS s podporou do roku 2025. Obsažené informace jsou platné také pro **Windows 8.1 Update 3**. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí &ndash; pokud již neskončil &ndash; cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
+Podporovanou verzí Windows v následující sekci je <span class="green">Windows 10 September 2019 Update</span> jakožto nejnovější OS s podporou do roku 2025. Obsažené informace jsou platné také pro **Windows 8.1 Update 3**. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí &ndash; pokud již neskončil &ndash; cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná i pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
 
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/wnt/adv.php#wnt).
 
@@ -122,14 +122,18 @@ Potenciálně nebezpečné protokoly jsou nyní vypnuty. Dále nastavíme bezpe�
 <li style="list-style-type: none"><pre><code>CZ.NIC DNSSEC:        217.31.204.130, 193.29.206.206
 Adguard DNS:          176.103.130.130, 176.103.130.131
 OpenDNS:              208.67.222.222, 208.67.220.220</code></pre></li>
-- Po zvolení DNS serverů se přepněte zpět do okna Vlastností IPv4 protokolu.
-- Klikněte na <span class="green">Použít následující adresy serverů DNS</span> a do kolonek vepište vámi zvolené DNS.
+- Klikněte na <span class="green">Použít následující adresy serverů DNS</span> a do kolonek vepište následující DNS servery:
+<li style="list-style-type: none"><pre><code>193.17.47.1
+185.43.135.1</code></pre></li>
 <li style="list-style-type: none">![wntnet3](https://faq.mople71.cz/img/cs/wntnet3.png)</li>
 - Klikněte na tlačítko <span class="green">Upřesnit&#8230;</span>
 - V horním panelu se přesuňte do záložky **WINS** a zvolte možnost <span class="green">Zakázat rozhraní NetBIOS nad protokolem TCP/IP</span>.
 <li style="list-style-type: none">![wntnet4](https://faq.mople71.cz/img/cs/wntnet4.png)</li>
 - Klikněte na <span class="green">OK</span>.
 - Klikněte na <span class="green">OK</span> a okno zavřete.
+- Pro *IPv6* použijte obdobný postup s následujícími servery:
+<li style="list-style-type: none"><pre><code>2001:148f:ffff::1
+2001:148f:fffe::1</code></pre></li>
 
 <div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
 Pro dosáhnutí kýženého efektu je nutné kompletní postup aplikovat pro všechny síťové adaptéry v seznamu (obvykle WLAN).</p></div>
@@ -158,15 +162,6 @@ Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostn�
 
 Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na verzi a edici OS. V základním nastavení ovšem bohužel nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
 
-Vrstev existuje mnoho, níže jsou zmíněny pouze vrstvy vyhodnoceny jako důležité.
-
-- antivirus / antimalware
-- firewall
-- anti-exploit
-- anti-executable
-- virtualizace
-- &#8230;
-
 <br>
 
 ### Aktualizace OS a SW:
@@ -189,7 +184,7 @@ a stiskněte **Enter**.</li>
 <br>
 
 ### Windows Defender:
-Windows Defender je komplexní řešení, jenž kompletně pokrývá následující vrstvy zabezpečení: **antimalware**, **firewall**, **anti-exploit**. Dále zasahuje i do jiných vrstev jako *anti-ransomware* atd.
+Windows Defender je komplexní řešení, jež kompletně pokrývá následující vrstvy zabezpečení: **antimalware**, **firewall**, **anti-exploit**. Dále zasahuje i do jiných vrstev jako *anti-ransomware* atd.
 
 #### Ochrana proti tradičnímu malware:
 Antivirus nebo antimalware (AV/M) je uživateli chápán jako základní vrstva zabezpečení, která sama o sobě stačí k zabezpečení OS. Tato teze již ovšem nějakou dobu není pravdivá.
@@ -564,13 +559,13 @@ Ačkoli je *Kaspersky Software Updater* kvalitní aplikace, automatická aktuali
 
 Všechny prohlížeče jsou po korektním nastavení relativně bezpečné, velmi důležitým faktorem je také samotný uživatel. Níže v sekci naleznete návody na zabezpečení **Google Chrome**, **Microsoft Edge**, **Mozilla Firefox** a **Internet Explorer**, z důvodu jejich dominantního postavení. Také zde naleznete **Chromium** (open-source prohlížeč, ze kterého vychází Google Chrome) a **Brave** (open-source prohlížeč vycházející z prohlížeče Chromium, v základu integruje blokování reklam a trackerů).
 
-Ze zmíněných prohlížečů jsou na vrcholu <span class="green">Microsoft Edge</span> a <span class="green">Chromium</span>, případně jeho proprietární varianta [Google Chrome](https://www.google.com/chrome/browser/index.html).
+Ze zmíněných prohlížečů jsou na vrcholu <span class="green">Microsoft Edge</span> a <span class="green">Chromium</span>, případně jeho proprietární varianta [Google Chrome](https://www.google.com/chrome/browser/index.html) či prohlížeč [Brave](https://brave.com/).
 
-<span class="green">Chrome / Chromium</span> využívá špičkovou implementaci vestavěného sandboxu OS (LP-AC). Také integruje všechny moderní mitigace včetně **CFG**, což je významné plus. Prohlížeč *Brave* je na tom obdobně.
+<span class="green">Chrome / Chromium</span> využívá špičkovou implementaci vestavěného sandboxu OS (LP-AC). Dále integruje všechny moderní mitigace včetně **CFG**, což je významné plus. Prohlížeč *Brave* je na tom obdobně.
 
 <span class="green">Microsoft Edge</span> je nový a moderní prohlížeč využívající implementaci vestavěného sandboxu OS (AC). Používá moderní mitigace jako **CFG**, což je významné plus.
 
-<span class="red">Mozilla Firefox</span>. Tento prohlížeč z hlediska zabezpečení v porovnání s ostatními zmíněnými prohlížeči stále o něco zaostává. Oproti svým konkurentům má starý kód nižší kvality a postrádá moderní mitigace proti exploitaci. Na druhou stranu již integruje solidní implementaci sandboxu a tvrdě pracuje na nápravě.
+<span class="red">Mozilla Firefox</span> z hlediska zabezpečení v porovnání s ostatními zmíněnými prohlížeči stále o něco zaostává. Oproti svým konkurentům má starý kód nižší kvality a postrádá moderní mitigace proti exploitaci. Na druhou stranu aktivně pracuje na nápravě a na OS Windows již integruje solidní implementaci sandboxu.
 
 Prohlížeč **Internet Explorer** již není v aktivním vývoji, jeho denní užívání tedy není doporučeno.
 
@@ -586,7 +581,7 @@ Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je 
 #### Bezplatná konfigurace pro BFU, který neumí anglicky (např. prarodiče):
 > Konfigurace
 
-- OS &ndash; Windows **10 September 2018 Update**
+- OS &ndash; Windows **10 September 2019 Update**
 - bezpečné nastavení OS &ndash; **kompletní**
 - AV/M &ndash; **Windows Defender**
 - FW &ndash; **Windows Defender Firewall**
@@ -605,7 +600,7 @@ Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nas
 #### Bezplatná konfigurace pro středně pokročilého, který umí anglicky:
 > Konfigurace
 
-- OS &ndash; Windows **10 September 2018 Update** / **8.1 Update 3**
+- OS &ndash; Windows **10 September 2019 Update** / **8.1 Update 3**
 - bezpečné nastavení OS &ndash; **kompletní**
 - AV/M &ndash; **Windows Defender**
 - FW &ndash; **Windows Defender Firewall**
