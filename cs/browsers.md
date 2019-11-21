@@ -1,6 +1,6 @@
 # Google Chrome:
-- WNT &ndash; **3**
-- LNX &ndash; **N/A**
+- WNT – **3**
+- LNX – **N/A**
 
 <h3 class="ch">![ch_icon](https://mople71.cz/img/icons/ch16.png) Google Chrome</h3>
 
@@ -70,8 +70,8 @@ Google Chrome používá špičkovou implementaci sandboxu.
 -----------------------------------
 
 # Brave:
-- WNT &ndash; **2**
-- LNX &ndash; **N/A**
+- WNT – **2**
+- LNX – **N/A**
 
 <h3 class="brv">![brv_icon](https://mople71.cz/img/icons/brv.png) Brave</h3>
 
@@ -88,7 +88,7 @@ a stiskněte **Enter**.</li>
 - Zobrazí se nastavení. V sekci **Brave shields defaults** zkontrolujte konfiguraci a případně opravte:
  <li style="list-style-type: none">![brv](https://faq.mople71.cz/img/en/brv.png)</li>
 - Sjeďte na konec stránky a klikněte na tlačítko ![ch](https://faq.mople71.cz/img/cs/ch.png)
-- *Google Chrome &ndash; L18-30*
+- *Google Chrome – L18-30*
 
 > Omezení JavaScript
 
@@ -111,8 +111,8 @@ Brave používá špičkovou implementaci sandboxu.
 -----------------------------------
 
 # Chromium:
-- WNT &ndash; **3**
-- LNX &ndash; **1**
+- WNT – **3**
+- LNX – **1**
 
 <h3 class="chm">![chm_icon](https://mople71.cz/img/icons/chm16.ico) Chromium:</h3>
 
@@ -122,7 +122,7 @@ Nechcete-li používat *Google Chrome* ani *Brave*, doporučuji použít open-so
 > Instalace a nastavení chrlauncher
 
 - Stáhněte si nejnovější verzi [Chrlauncher](https://github.com/henrypp/chrlauncher/releases).
-- Archiv extrahujte. V závislosti na bitové verzi vašeho OS určete, kterou složku z archivu budete potřebovat (64-bit OS &ndash; složka **64**), a následně ji přesuňte na důstojné místo (ideálně *%localappdata%*, ale stačí *Dokumenty*). Také je vhodné ji přejmenovat.
+- Archiv extrahujte. V závislosti na bitové verzi vašeho OS určete, kterou složku z archivu budete potřebovat (64-bit OS – složka **64**), a následně ji přesuňte na důstojné místo (ideálně *%localappdata%*, ale stačí *Dokumenty*). Také je vhodné ji přejmenovat.
 - Ve složce nalezněte a otevřete konfigurační soubor <span class="green">chrlauncher.ini</span>.
 - Nalezněte řádek začínající na **ChromiumArchitecture** a za rovnítko vepište požadovanou architekturu (na novějších zařízeních <span class="green">64</span>):
 <li style="list-style-type: none">![chrl](https://faq.mople71.cz/img/en/chrl.png)</li>
@@ -154,15 +154,15 @@ exit</code></pre></li>
 
 > Bezpečnější nastavení
 
-- *Google Chrome &ndash; L14-30*
+- *Google Chrome – L14-30*
 
 > Omezení JavaScript
 
-- *Google Chrome &ndash; L34-46*
+- *Google Chrome – L34-46*
 
 > Blokování reklamy
 
-- *Google Chrome &ndash; L50-62*
+- *Google Chrome – L50-62*
 
 > Oddělení prohlížeče od OS a dat
 
@@ -172,8 +172,8 @@ Chromium používá špičkovou implementaci sandboxu.
 -----------------------------------
 
 # Microsoft Edge:
-- WNT &ndash; **4**
-- LNX &ndash; **N/A**
+- WNT – **4**
+- LNX – **N/A**
 
 <h3 class="ed">![edge_icon](https://mople71.cz/img/icons/edge16.png) Microsoft Edge</h3>
 
@@ -192,7 +192,7 @@ Chromium používá špičkovou implementaci sandboxu.
 #### Nastavení uBlock:
 - Klikněte na ikonu uBlock v panelu ikon a následně otevřete **Nastavení**.
 <li style="list-style-type: none">![edublock](https://faq.mople71.cz/img/en/edublock.png)</li>
-- *Google Chrome &ndash; L55-62*
+- *Google Chrome – L55-62*
 
 > Oddělení prohlížeče od OS a dat
 
@@ -202,8 +202,8 @@ Microsoft Edge používá špičkovou implementaci sandboxu.
 -----------------------------------
 
 # Mozilla Firefox:
-- WNT &ndash; **5**
-- LNX &ndash; **3**
+- WNT – **5**
+- LNX – **3**
 
 <h3 class="ff">![ff_icon](https://mople71.cz/img/icons/ff.png) Mozilla Firefox</h3>
 
@@ -259,7 +259,7 @@ network.allow-experiments --- false</code></pre></li>
 #### Nastavení uBlock:
 - Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
 <li style="list-style-type: none">![ffublock](https://faq.mople71.cz/img/en/ffublock.png)</li>
-- *Google Chrome &ndash; L55-62*
+- *Google Chrome – L55-62*
 
 > Oddělení prohlížeče od OS a dat
 
@@ -278,11 +278,11 @@ exit</code></pre></li>
 
 > Bezpečnější nastavení
 
-- *Mozilla Firefox WNT &ndash; L218-257*
+- *Mozilla Firefox WNT – L218-257*
 
 > Blokování reklamy
 
-- *Mozilla Firefox WNT &ndash; L261-266*
+- *Mozilla Firefox WNT – L261-266*
 
 > Oddělení prohlížeče od OS a dat
 
@@ -292,8 +292,8 @@ Sandbox Firefoxu je v aktivním vývoji. Lepší, nežli žádný.
 -----------------------------------
 
 # Internet Explorer:
-- WNT &ndash; **6**
-- LNX &ndash; **N/A**
+- WNT – **6**
+- LNX – **N/A**
 
 <h3 class="ie">![ie_icon](https://mople71.cz/img/icons/ie16.png) Internet Explorer</h3>
 
@@ -350,8 +350,8 @@ Prohlížeč je částečně oddělen od OS díky technologii **Protected Mode**
 -----------------------------------
 
 # Epiphany:
-- WNT &ndash; **N/A**
-- LNX &ndash; **2**
+- WNT – **N/A**
+- LNX – **2**
 
 <h3 class="epiph">![epiph_icon](https://mople71.cz/img/icons/epiph.png) GNOME Web:</h3>
 

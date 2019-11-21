@@ -1,7 +1,7 @@
 # FAQ – Základní informace
 
 ## Základní pojmy:
-- <span class="green">hacker</span> – člověk zneužívající svých znalostí (např. v oblasti počítačové bezpečnosti) za účelem osobního zisku, tento význam je původně převzatý z pojmu *cracker*
+- <span class="green">hacker</span> – člověk zneužívající svých znalostí (např. v oblasti počítačové bezpečnosti) za účelem osobního zisku; tento význam je původně převzatý z pojmu *cracker*
 - <span class="green">malware</span> – termín pro škodlivý software, jež se dělí na mnoho (méně či více škodlivých) podskupin
 - <span class="green">ransomware</span> – software, který zabraňuje uživateli v přístupu ke svým datům a za obnovení přístupu požaduje poplatek
 - **rootkit** – kód, který skrývá přítomnost malware v OS a ztěžuje jeho detekci
@@ -24,7 +24,7 @@
 <li style="list-style-type: none"><p class="imgsrc">*Password Strength.* Zdroj: https://xkcd.com/936/ | [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)</p>
 ![password_strength_sm](https://faq.mople71.cz/img/en/passwd.png)</li>
 - Používejte více hesel na různé služby, zvažte použití [klíčenky](#basics8).
-- Nepřipojujte se k neznámým/veřejným bezdrátovým sítím, případně přes ně neposílejte citlivé údaje a vyvarujte se nebezpečným protokolům (HTTP, FTP apod.). Ideálně použijte VPN.
+- Nepřipojujte se k neznámým/veřejným bezdrátovým sítím a vyvarujte se nebezpečným protokolům – HTTP, FTP,&#8230; – případně přes ně neposílejte citlivé údaje. Zvažte použijtí VPN.
 - Dávejte si pozor, kam jaké údaje zadáváte – s osobními údaji se dobře obchoduje.
 - Nezapomeňte na fyzické zabezpečení zařízení – nastavte UEFI heslo, vypněte boot menu apod.
 
@@ -42,7 +42,7 @@
 - Máte-li podezření na infikovaný soubor, vždy jej před otevřením otestujte pomocí např. [VirusTotal](https://www.virustotal.com/).
 
 <div class="alert success"><p><em class="icon-ok-circled"></em>**Tip**<br>
-Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpečně nastavený live OS</span>. Také ovšem nemusí být 100% – např. pokud zařízení, ze kterého je OS spouštěn, bylo dříve napadeno, může být infikováno EFI.</p></div>
+Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpečně nastavený live OS</span>. Nutno podotknout, že tato možnost také nemusí být 100% – např. pokud zařízení, ze kterého je OS spouštěn, bylo dříve napadeno, může být infikováno EFI.</p></div>
 
 <br>
 
