@@ -1,21 +1,21 @@
 # FAQ &ndash; OS Windows
 Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto nezbytné.
 
-V FAQ pro pokročilé se budeme věnovat hlavně vestavěným funkcím OS &ndash; cílem je dosáhnout špičkového zabezpečení za použití co nejméně kódu, jehož velikost s third-party aplikacemi rapidně roste.
+V FAQ pro pokročilé se budeme věnovat hlavně vestavěným funkcím OS &ndash; cílem je dosáhnout špičkového zabezpečení za použití co nejméně kódu, jehož velikost s aplikacemi třetích stran rapidně roste.
 
 Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Windows pro méně pokročilé](https://faq.mople71.cz/cs/wnt/index.php#wnt) uživatele a máte znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
-- bezpečnostní aplikace
-- integritní politika
-- ACL
-- AppContainer
+- [Bezpečnostní aplikace](#wnt1)
+- [Integritní politika](#wnt2)
+- [ACL](#wnt3)
+- [AppContainer](#wnt4)
 
 <br>
 
 ## Bezpečnostní aplikace:
 ### Firewall:
-Windows obsahují vestavěný <span class="green">Windows Defender Firewall</span> (WDF), který je na velmi dobré úrovni.
+Windows obsahují vestavěný <span class="green">Windows Defender Firewall</span> (WDF), který je na velmi vysoké úrovni.
 
 Použití FW třetí strany je zbytečné rozšiřování attack surface. Základem síťového zabezpečení v domácnosti je rozumný router s NAT a použitelným FW (např. libovolný Mikrotik, kde si FW ovšem musíte nastavit).
 

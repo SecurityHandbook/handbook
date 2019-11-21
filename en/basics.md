@@ -1,77 +1,83 @@
-# FAQ &ndash; Security Basics
+# FAQ – Security Basics
 
 ## Glossary:
-- <span class="green">hacker</span> &ndash; person (mis)using their knowledge (eg. in computer security area) for personal, usually illegal, profit; this definition was originally taken from the word *cracker*
-- <span class="green">malware</span> &ndash; generic term for malicious software further split into many (more or less malicious) categories
-- **adware** &ndash; malware category; SW containing ads and showing them to the user
-- **bundleware** &ndash; superfluous (not necessarily malicious) software bundled to other software
-- **foistware** &ndash; SW installed without user's knowledge designed to obtain money from user, usually by prompting that the OS is infected/broken and offering remedy for a price
-- <span class="green">ransomware</span> &ndash; SW blocking user from accessing to user data and demanding payment to allow such access
-- **rootkit** &ndash; code designed to hide presence of other malware on the device and aggravate their detection
-- **exploit** &ndash; code taking advantage of a vulnerability in SW (including OS) in order to perform a specific action
-- **zero-day (0-day)** &ndash; vulnerability exploited at the day of its disclosure or prior to it
-- **APT** &ndash; &bdquo;Advanced Persistent Threat&ldquo;; advanced threat usually tailored for a specific target, common users don't bump into these
-- <span class="green">payload</span> &ndash; core part of malware code that's responsible for the crucial malicious action
+- <span class="green">hacker</span> – an individual misusing their knowledge (e.g. in computer security area) for personal profit; this definition originally comes from the *cracker* term
+- <span class="green">malware</span> – generic term for malicious software which further divides into many (more or less malicious) categories
+- <span class="green">ransomware</span> – software preventing user from accessing their data and demanding payment to reinstate such permission
+- **rootkit** – code designed to mask presence of malware on the device and aggravate their detection
+- <span class="green">exploit</span> – code taking advantage of a vulnerability in SW (including OS) in order to perform a specific action
+- **zero-day (0-day)** – vulnerability exploited at the day of its disclosure (or prior to it)
+- **adware** – type of malware which contains ads and shows them to the user
+- **bundleware** – superfluous (not necessarily malicious) software bundled to a valid software
+- **foistware** – software installed without user's knowledge, designed to draw money from user typically by prompting the OS is infected/broken and offering remedy for a price
+- **APT** – &bdquo;Advanced Persistent Threat&ldquo;; advanced threat typically tailored for a specific target, everyday user doesn't bump into these
+- **payload** – core part of malware code that's responsible for the malicious action
 
 <br>
 
 ## Security Basics:
 - Periodically backup your data.
-- Don't use illegal software &ndash; most cracks found on internet are infected
-- Prior to any action, double-check its autencity.
-- Download SW only from its official website.
+- Refrain from using illegal software – most cracks generally found on internet are infected.
+- Prior to commencing any action, double-check its autencity.
+- Download all SW exclusively from its official website.
 - Use strong passwords that are easy to remember:
-<li style="list-style-type: none"><p class="imgsrc">*Password Strength.* Source: https://xkcd.com/936/</p>
+<li style="list-style-type: none"><p class="imgsrc">*Password Strength.* Source: https://xkcd.com/936/ | [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)</p>
 ![password_strength_sm](https://faq.mople71.cz/img/en/passwd.png)</li>
-- Use different passwords for different services, consider using a [keyring](#basics7).
-- Don't connect to unknown/unsafe networks, or at least never send any personal data through them and avoid using dangerous protocols (HTTP, FTP atc.). Ideally use a VPN.
-- Pay attention to what data you enter and where you enter them &ndash; selling personal data is a profitable business.
-- Don't forget the physical security factor &ndash; lock your device, set a UEFI password, disable boot menu etc.
+- Use a different password for each service, consider using a [password manager](#basics8).
+- Don't connect to unknown/public networks and avoid using unsafe protocols – HTTP, FTP,&#8230; – or at least don't send any personal data through them. Consider using a VPN.
+- Pay attention to where you enter what data – selling personal data is a highly profitable business.
+- Don't forget the physical security factor – lock your device, set a UEFI password, disable boot menu etc.
 
 <br>
 
-## Safe Web Browsing:
+## Surfing Securely:
 - Use a securely configured web browser (see other FAQ chapters).
-- Consider using a separate browser for personal things (eg. online banking).
+- Consider using a separate browser for personal business (e.g. online banking).
 - Don't visit unknown/untrusted sites and never download any files from them.
-- Reduce visiting 18+ sites as it's quite common for them to serve malicious ads and code.
-- Don't use social buttons outside the specific social network, these can be trivially mimicked.
-- Avoid the **short URLs** &ndash; like https://bit.ly/tinyurlwiki etc. &ndash; as they can easily mask dangerous links.
-- Refrain from using unsafe network SW such as <span class="red">Flash Player</span> or <span class="red">Java</span>, its exploitation is very common. At least disable it inside your browser.
+- Reduce visiting 18+ sites as it's quite common for them to be a victim of malwaretising and serve malicious code.
+- Don't use social buttons outside the specific social network, it's trivial to mimick thse.
+- Avoid the **short URLs** – like https://bit.ly/tinyurlwiki – as they can easily mask dangerous links.
+- Refrain from using unsafe network SW such as <span class="red">Flash Player</span> or <span class="red">Java</span>, their exploitation is popular and very common. At minimum, disable them inside your browser.
 - Only open email attachments from trusted senders.
-- If you suspect a file to be malicious, always scan it before opening with eg.  [VirusTotal](https://www.virustotal.com/).
+- Should you suspect a file to be malicious, always scan it prior to opening with e.g. [VirusTotal](https://www.virustotal.com/).
 
-<div class="alert success"><p><img src="https://mople71.cz/img/success.png" alt="success"> <strong>Tip</strong><br>
-The safest way to browse the web: <span class="green">securely configured live OS</span>. However, it should be pointed out that this option doesn't have to be 100% safe as well &ndash; for example the EFI can be exploited if the device was infected in the past.</p></div>
+<div class="alert success"><p><em class="icon-ok-circled"></em><strong>Tip</strong><br>
+The safest way to browse the web: <span class="green">securely configured live OS</span>. However, it should be pointed out that this option doesn't have to be 100% safe as well – for example if the device has been hacked in the past, the EFI may be infected.</p></div>
 
 <br>
 
-## Security Info Sources:
+## Using Mobile Devices Securely:
+- Use an updated, patched and **original** OS version.
+- Don't *root* / *jailbreak* your device – such action breaks the security model of the OS.
+- Install apps exclusively from trusted sources – *Google Play* / *Apple Store* / *Microsoft Store*.
+- Avoid installing apps requesting unreasonable permissions (e.g. Flashlight+ demanding access to your SMS and contacts).
+- Don't forget the physical security factor – lock your device, keep the bootloader locked etc.
+
+<br>
+
+## Security News Sources:
 - [BleepingComputer](https://www.bleepingcomputer.com/)
 - [The Hacker News](http://thehackernews.com/)
 - [Threatpost](https://threatpost.com/)
-- [Naked Security](https://nakedsecurity.sophos.com/)
 - [LinuxSecurity](http://www.linuxsecurity.com/)
 
 <br>
 
 ## Online File Analysis:
-- [VirusTotal](https://www.virustotal.com/) &ndash; AV database
-- [Metadefender](https://www.metadefender.com/) &ndash; AV database
-- [Hybrid Analysis](https://www.reverse.it/) &ndash; sandbox + VT
-- [Malwr](https://malwr.com/submission/) &ndash; Cuckoo sandbox
+- [VirusTotal](https://www.virustotal.com/) – AV database
+- [Metadefender](https://www.metadefender.com/) – AV database
+- [Hybrid Analysis](https://www.reverse.it/) – sandbox + VT
+- [Malwr](https://malwr.com/submission/) – Cuckoo sandbox
 
 <br>
 
-## Recommended VPN:
-- [Freedome VPN](https://www.f-secure.com/en/web/home_global/freedome/) &ndash; blocks malware, trackers and ads
-- [AirVPN](https://airvpn.org/) &ndash; advanced features, quite trustworthy
-- [IVPN](https://www.ivpn.net/) &ndash; trustworthy
-- [Cryptostorm](https://cryptostorm.is/) &ndash; trustworthy
+## Recommended VPNs:
+- [Freedome VPN](https://www.f-secure.com/en/web/home_global/freedome/) – blocks malware, trackers and ads
+- [IVPN](https://www.ivpn.net/) – trustworthy
+- [Cryptostorm](https://cryptostorm.is/) – trustworthy
 
 <br>
 
-## Recommended Keyrings:
-- [1Password](https://1password.com/) &ndash; perfect platform, paid
-- [KeePassX](https://www.keepassx.org/) &ndash; free
-- [Encryptr](https://spideroak.com/solutions/encryptr/) &ndash; free
+## Recommended Password Managers:
+- [1Password](https://1password.com/) – impeccable service, requires payment
+- [Bitwarden](https://bitwarden.com/) – free of charge

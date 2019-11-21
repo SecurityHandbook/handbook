@@ -1,35 +1,35 @@
-# FAQ &ndash; OS Linux
-Linux se díky svému minoritnímu zastoupení na desktopech těší řádově menší pozornosti hackerů nežli Windows, většina malware pro Linux je směřována na servery. Malware pro desktopové linuxové distribuce existuje &ndash; v mnohonásobně menším množství, ale existuje. Mimo jiné, exploit kity se poslední dobou snaží být co nejvíce multiplatformní a např. JS ransomware spolehlivě funguje i přes prohlížeč na Linuxu.
+# FAQ – OS Linux
+Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů – většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce také existuje, akorát v mnohonásobně menším množství. Ačkoliv tedy je stav některých desktopových linuxových distribucí z pohledu bezpečnosti tristní, v praxi je riziko infikace nižší nežli u jiných OS. Moderní *exploit kity* jsou ovšem často multiplatformní a jejich počet roste. Dostatečné zabezpečení OS je proto nezbytné.
 
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/lnx/adv.php#lnx).
 
 #### FAQ se dělí na několik sekcí:
-- Doporučené distribuce
-- Bezpečné nastavení OS
-- Vrstvy zabezpečení
-- Zabezpečení internetového prohlížeče
+- [Doporučené distribuce](#lnx1)
+- [Základní bezpečnostní nastavení](#lnx2)
+- [Ochrana proti malware](#lnx3)
+- [Zabezpečení internetového prohlížeče](#lnx4)
 
 <br>
 
 ## Doporučené distribuce:
-- Fedora: https://getfedora.org/cs/workstation/
-- openSUSE: https://www.opensuse.org/
-- Ubuntu: https://www.ubuntu.com/desktop
+- **<span class="fe">Fedora</span>**: https://getfedora.org/cs/workstation/
+- **<span class="os">openSUSE</span>** (Leap): https://www.opensuse.org/#Leap
+- **<span class="ub">Ubuntu</span>**: https://www.ubuntu.com/desktop
 
-V sekci OS Linux naleznete tipy převážně pro distribuci <span class="green">Fedora</span>.
+V sekci OS Linux naleznete tipy převážně pro distribuci **Fedora**.
 
-Fedora je nejlepší a nejbezpečnější volbou pro běžného uživatele, jelikož je již v základu špičkově zabezpečená. Používá GNOME, nabízí uživateli možnost snadné instalace Flatpak aplikací, obsahuje velmi robustní implementaci SELinux a má velmi vysoké standardy na své balíčky &ndash; všechny musí mít důležité mitigace proti memory corruption exploitům. Mimo technické funkce nabízí stabilní nejnovější SW a velmi rychle záplatuje objevené bezpečnostní zranitelnosti.
+**<span class="fe">Fedora</span>** je nejlepší volbou pro běžného uživatele, jelikož je v základu vcelku bezpečně nastavená. Používá GNOME, nabízí uživateli možnost snadné instalace Flatpak aplikací, obsahuje robustní implementaci SELinux a má velmi vysoké standardy na své balíčky – všechny musí mít důležité mitigace proti memory corruption exploitům. Mimo technické funkce nabízí stabilní nejnovější software. Jediný problém zmíněné distribuce jsou občasné pomalejší aktualizace webových prohlížečů z důvodu mnoha vlastních úprav (patchů), které je nutno pro každou novou verzi aktualizovat.
 
-U některých kroků také naleznete pokyny pro distribuci Ubuntu, která je velmi populární, z hlediska bezpečnosti ovšem méně vhodná.
+U některých kroků také naleznete pokyny pro distribuci **<span class="os">openSUSE</span>** a distribuci **<span class="ub">Ubuntu</span>**, která je velmi populární, z hlediska bezpečnosti ovšem o něco méně vhodná.
 
-Chcete-li používat jinou distribuci, níže uvedené kroky můžete aplikovat i na ostatní distribuce, pouze si musíte zjistit správný syntax vaší distribuce a informace o kompatibilitě.
+Většina obsažených informací je platná i pro jiné distribuce, pouze se bude lišit přesný postup aplikace různých kroků – syntax.
 
 ### Doporučené grafické prostředí:
-Z bezpečnostního hlediska doporučuji [GNOME](https://www.gnome.org/), jelikož používá Wayland místo X.org a podílí se na vývoji Flatpaku. Výjimku tvoří rozhraní *GNOME Classic*, které využívá primárně X.org &ndash; není tedy doporučeno.
+Z bezpečnostního hlediska je rozumnou volbou prostředí [GNOME](https://www.gnome.org/), jelikož používá Wayland místo X.org a podílí se na vývoji Flatpaku. Výjimku tvoří rozhraní *GNOME Classic*, které využívá primárně X.org – není tedy doporučeno.
 
 <br><br><hr><br>
 
-## Bezpečné nastavení OS:
+## Základní bezpečnostní nastavení:
 ### Oddělení /tmp oddílu během instalace a jeho bezpečné připojení:
 Malware se často spouští z dočasných složek. Zakázání exekuce spustitelných souborů v dočasných složkách (konkrétně /tmp) tedy dokáže vyřadit z provozu mnoho rodin malware.
 
@@ -75,10 +75,11 @@ exit</code></pre></li>
 
 <br>
 
-### Zakázání IPv6:
-Pokud nepoužíváte a nepotřebujete IPv6 (pokud nevíte, můžete to zjistit pomocí následujícího [testu](http://www.test-ipv6.cz/), je rozumné protokol vypnout pro snížení prostoru pro útok.
+### Bezpečné nastavení sítě:
 
-> Návod
+> Zakázání IPv6
+
+Pokud nepoužíváte a nepotřebujete IPv6 (nejste-li si jistí, můžete to vyzkoušet následující [test](http://www.test-ipv6.cz/), je rozumné protokol vypnout pro snížení prostoru pro útok.
 
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
 <li style="list-style-type: none"><pre><code>sudo -i
@@ -93,26 +94,57 @@ exit
 exit</code></pre></li>
 - Restartujte OS.
 
-<br>
+> Nastavení DNS
 
-### Nastavení DNS:
 Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](https://www.nic.cz/page/312/o-domenach-a-dns/).
 
-> Návod
-
-- Otevřete si <span class="green">Nastavení</span> a klikněte na položku <span class="green">Síť</span>.
-- V seznamu zvolte připojení, které používáte (Drátové/WiFi), a otevřete jeho nastavení.
+- Otevřete si <span class="green">Nastavení</span>.
+- Rozklikněte položku <span class="green">Wi-Fi</span> nebo <span class="green">Síť</span> v závislosti na druhu vašeho připojení.
+- V seznamu nalezněte příslušné spojení a otevřete jeho nastavení.
 <li style="list-style-type: none">![lnxnet](https://faq.mople71.cz/img/cs/lnxnet.png)
 ![lnxnet1](https://faq.mople71.cz/img/cs/lnxnet1.png)</li>
 - Přepněte se do záložky IPv4 a v sekci **DNS** vypněte možnost <span class="green">Automatické</span>.
 - Do řádku vepište následující DNS servery:
-<li style="list-style-type: none"><pre><code>217.31.204.130,193.29.206.206</code></pre></li>
+<li style="list-style-type: none"><pre><code>193.17.47.1,185.43.135.1</code></pre></li>
 <li style="list-style-type: none">![lnxnet2](https://faq.mople71.cz/img/cs/lnxnet2.png)</li>
+- Pro *IPv6* aplikujte obdobný postup s následujícími servery:
+<li style="list-style-type: none"><pre><code>2001:148f:ffff::1,2001:148f:fffe::1</code></pre></li>
 - Klikněte na tlačítko <span class="green">Použít</span> a nastavení zavřete.
+
+<br>
+
+### Další bezpečnostní nastavení:
+- Vypněte AutoPlay/AutoRun:
+  - Otevřete si <span class="green">Nastavení</span> a rozklikněte kategorii **Zařízení**.
+  - Klikněte na položku <span class="green">Výměnná média</span>.
+  - Zatrhněte možnost <span class="green">Nikdy se nedotazovat nebo spouštět programy na vloženém médiu</span>,
+  <li style="list-style-type: none">![lnxar](https://faq.mople71.cz/img/cs/lnxar.png)</li>
+- Vypněte sdílení:
+  - Otevřete si <span class="green">Nastavení</span> a klikněte na položku <span class="green">Sdílení</span>.
+  - Zkontrolujte, že je sdílení vypnuto, případně napravte.
+  <li style="list-style-type: none">![lnxshare](https://faq.mople71.cz/img/cs/lnxshare.png)</li>
 
 <br><br><hr><br>
 
-## Vrstvy zabezpečení:
+## Ochrana proti malware:
+Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (*&bdquo;layered config&ldquo;*) – pokud selže jedna vrstva, nastupuje druhá. Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na distribuci. V základním nastavení ovšem většinou bohužel nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
+
+<br>
+
+### Aktualizace OS a SW:
+Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často opravují mnoho bezpečnostních chyb. Neaktuální děravý SW je implicitně nebezpečný.
+
+V distribuci **<span class="fe">Fedora</span>** teoreticky můžete aktualizace nechat na aplikaci **GNOME Software**, nebo je můžete jednou za čas spustit ručně pomocí jednoduchého příkazu:
+<pre><code>sudo dnf update</code></pre>
+
+Pro distribuci **<span class="os">openSUSE</span>** platí to stejné, co výše, akorát se liší syntax příkazu:
+<pre><code>sudo zypper up</code></pre>
+
+Pro distribuci **<span class="ub">Ubuntu</span>** platí to stejné, co výše, akorát se liší syntax příkazu:
+<pre><code>sudo apt update && sudo apt upgrade</code></pre>
+
+<br>
+
 ### Firewall:
 Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před útoky ze sítě. *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*
 
@@ -137,53 +169,27 @@ Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před út
 <br>
 
 ### Virtualizace:
-Virtualizace může být velmi bezpečný způsob ochrany před malware (záleží na způsobu implementace), jelikož odděluje požadovanou část OS od fyzického OS.
+Virtualizace může být velmi bezpečný způsob ochrany před malware (záleží na způsobu aplikace), jelikož odděluje požadovanou část OS od fyzického OS. Základních možností aplikace virtualizace je několik.
 
-Nejčastější implementací virtualizace je **sandbox**. Existují dva druhy sandboxu:
+- sandbox
+- virtuální stroj (VM; virtual machine)
 
-- sandbox nativně integrovaný v aplikaci (např. Chromium)
-- externí sandbox &ndash; např. Flatpak, firejail
+#### Flatpak:
+Sandbox je populární způsob aplikace virtualizace. Existují dva druhy sandboxu:
 
-Sandbox nativně integrovaný v aplikaci je nejúčinnější možností implementace sandboxu, jelikož je nastaven přesně na míru dané aplikaci.
+- sandbox nativně integrovaný v aplikaci (např. *Chromium*)
+- externí sandbox – např. **Flatpak**, *firejail*
 
-Externí sandbox není zdaleka tak účinný jako sandbox integrovaný v aplikaci a při porovnání ponechává větší prostor pro exploitaci, ale stále může být vcelku účinný a přirozeně je nesrovnatelně lepší, nežli žádný sandbox.
+Sandbox nativně integrovaný v aplikaci je nejúčinnější možností implementace sandboxu, jelikož je nastaven přesně na míru dané aplikaci. Externí sandbox nemusí být nutně účinný jako sandbox integrovaný v aplikaci, jelikož není dělaný přesně na míru určité aplikaci, a při porovnání může ponechat větší prostor pro exploitaci. Stále ovšem může být velmi účinný a přirozeně je nesrovnatelně lepší, nežli žádný sandbox.
 
-Další možností virtualizace je **virtuální počítač**, kdy je místo aplikace oddělen celý OS. Tato metoda drasticky snižuje prostor pro exploitaci, snižuje ovšem také přívětivost, výkon a použitelnost. Jednoduché nastavení a používání virtuálního počítače umožňují následující aplikace:
-
-- GNOME Boxes
-- VirtualBox
-
-> Konfigurace GNOME Boxes
-
-- Stáhněte si obraz OS (ISO), který chcete virtualizovat.
-- Otevřete si aplikaci <span class="green">Boxy</span>.
-- V levém horním rohu aplikace klikněte na tlačítko <span class="green">Nový</span>.
-- Klikněte na <span class="green">Vybrat soubor</span> a nalezněte požadovaný ISO soubor.
-- Odmítněte případnou expresní instalaci.
-- Klikněte na tlačítko <span class="green">Přizpůsobit...</span>
-- Nastavte požadované množství alokované paměti (pro 64-bitový OS alespoň *3 GiB*) a místa na disku (alespoň *20 GiB*).
-<li style="list-style-type: none">![gboxes](https://faq.mople71.cz/img/cs/gboxes.png)</li>
-- Přesuňte se zpět a v pravém horním rohu klikněte na <span class="green">Vytvořit</span>.
-- Nainstalujte a nakonfigurujte OS. Následně jej vypněte.
-- V seznamu na požadovaný virtuální stroj klikněte pravým tlačítkem a otevřete <span class="green">Vlastnosti</span>.
-- Přesuňte se do záložky **Snímky**. Existuje-li již nějaký snapshot, ozubeným kolem vpravo otevřete jeho konfiguraci a smažte jej.
-- Tlačítkem <span class="green">+</span> v dolním menu vytvořte nový snapshot.
-- Ozubeným kolem vpravo otevřete jeho konfiguraci a tlačítkem <span class="green">Přejmenovat</span> si jej pojmenujte jako výchozí snapshot.
-<li style="list-style-type: none">![gboxes1](https://faq.mople71.cz/img/cs/gboxes1.png)</li>
-- Nyní můžete kdykoli virtuální stroj po jeho vypnutí snadno obnovit do výchozího stavu.
-- Čas od času (např. 1x měsíčně) virtuální OS aktualizujte a vytvořte nový snapshot.
-
-<br>
-
-### Flatpak:
-Flatpak je nový způsob distribuce aplikací. Má za cíl odstranit chyby a nedostatky současné architektury &ndash; odděluje aplikace od sebe a částí OS, sjednocuje instalaci aplikací pro linuxové distribuce etc.
+<span class="green">Flatpak</span> je nový způsob distribuce aplikací. Má za cíl odstranit chyby a nedostatky současné architektury – odděluje aplikace od sebe a částí OS (obsahuje implementaci sandboxu), sjednocuje instalaci aplikací pro linuxové distribuce apod.
 
 **<span class="fe">Fedora</span>** má **flatpak** předinstalovaný.
 
 **<span class="os">openSUSE</span>** Flatpak předinstalovaný nemá, lze jej ovšem nainstalovat jednoduchým příkazem:
 <pre><code>sudo zypper install flatpak</code></pre>
 
-**<span class="ub">Ubuntu</span>** Flatpak předinstalovaný nemá, jelikož propaguje svou alternativu k Flatpaku &ndash; [Snap](https://www.ubuntu.com/desktop/snappy). Každopádně pokud se rozhodnete upřednostnit Flatpak před Snap (doporučeno), můžete jej nainstalovat následujícími příkazy:
+**<span class="ub">Ubuntu</span>** Flatpak předinstalovaný nemá, jelikož propaguje svou alternativu k Flatpaku – [Snap](https://www.ubuntu.com/desktop/snappy). Každopádně pokud se rozhodnete upřednostnit Flatpak před Snap (doporučeno), můžete jej nainstalovat následujícími příkazy:
 <pre><code>sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
 sudo apt install flatpak</code></pre>
@@ -207,9 +213,7 @@ Nikdy před příkaz **flatpak** nedávejte <span class="red">sudo</span>. Flatp
 - Aplikaci poté můžete jednoduše odinstalovat:
 <li style="list-style-type: none"><pre><code>flatpak uninstall <název_aplikace></code></pre></li>
 
-#### Flathub:
-
-Flathub je oficiální platforma pro distribuci Flatpak aplikací. Naleznete zde již vcelku obstojný počet aplikací, který se neustále rozšiřuje. Například **LibreOffice**, GIMP, Atom, Signal, VLC, Audacity, Blender, **Steam**, GeoGebra, Inkscape,...
+<span class="green">Flathub</span> je oficiální platforma pro distribuci Flatpak aplikací. Naleznete zde již vcelku obstojný počet aplikací, který se neustále rozšiřuje. Například **LibreOffice**, **GIMP**, **Atom**, Signal, **VLC**, Audacity, Blender, **Steam**, GeoGebra, Inkscape,&#8230;
 
 > Nastavení repozitáře Flathub
 
@@ -253,12 +257,42 @@ flatpak install flathub org.gnome.Epiphany</code></pre></li>
 - Bude-li vám v průběhu nabídnut výběr mezi *gnome* a *flathub* repozitáři, zvolte <span class="green">flathub</span>.
 - Spusťte Steam a doufejte, že vaše oblíbené hry jsou ve flatpaku funkční. Seznam otestovaných her naleznete [zde](https://github.com/flathub/com.valvesoftware.Steam/wiki/Tested-Games).
 
+<br>
+
+#### Virtuální stroj:
+Nejbezpečnější způsob virtualizace je emulace zařízení, kdy je virtualizován celý OS – za korektního nastavení a využití snapshotů. Po správné konfiguraci můžete virtuální stroj používat např. k vcelku bezpečnému brouzdání internetem.
+
+Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce. Pro virtualizaci OS Windows pro něj ovšem budete potřebovat dodatečnou licenci. Jednoduché nastavení a používání virtuálního počítače umožňují následující aplikace:
+
+- [GNOME Boxes](https://wiki.gnome.org/Apps/Boxes)
+- [VirtualBox](https://www.virtualbox.org/)
+
+> Konfigurace GNOME Boxes
+
+- Stáhněte si obraz OS (ISO), který chcete virtualizovat.
+- Otevřete si aplikaci <span class="green">Boxy</span>.
+- V levém horním rohu aplikace klikněte na tlačítko <span class="green">Nový</span>.
+- Klikněte na <span class="green">Vybrat soubor</span> a nalezněte požadovaný ISO soubor.
+- Odmítněte případnou expresní instalaci.
+- Klikněte na tlačítko <span class="green">Přizpůsobit...</span>
+- Nastavte požadované množství alokované paměti (alespoň *3 GiB*) a místa na disku (alespoň *20 GiB*).
+<li style="list-style-type: none">![gboxes](https://faq.mople71.cz/img/cs/gboxes.png)</li>
+- Přesuňte se zpět a v pravém horním rohu klikněte na <span class="green">Vytvořit</span>.
+- Nainstalujte a nakonfigurujte OS. Následně jej vypněte.
+- V seznamu na požadovaný virtuální stroj klikněte pravým tlačítkem a otevřete <span class="green">Vlastnosti</span>.
+- Přesuňte se do záložky **Snímky**. Existuje-li již nějaký snapshot, ozubeným kolem vpravo otevřete jeho konfiguraci a smažte jej.
+- Tlačítkem <span class="green">+</span> v dolním menu vytvořte nový snapshot.
+- Ozubeným kolem vpravo otevřete jeho konfiguraci a tlačítkem <span class="green">Přejmenovat</span> si jej pojmenujte jako výchozí snapshot.
+<li style="list-style-type: none">![gboxes1](https://faq.mople71.cz/img/cs/gboxes1.png)</li>
+- Nyní můžete kdykoli virtuální stroj po jeho vypnutí snadno obnovit do výchozího stavu.
+- Čas od času (např. 1x měsíčně) virtuální OS aktualizujte a vytvořte nový snapshot.
+
 <br><br><hr><br>
 
 ## Zabezpečení internetového prohlížeče:
-Z bezpečnostního hlediska doporučuji prohlížeč <span class="green">Chromium</span>. Používá špičkovou implementaci sandboxu a jeho kód je na velmi dobré úrovni. Celkově je v ohledu bezpečnosti v současném stavu dále než **Mozilla Firefox**. Prohlížeč **GNOME Web (Epiphany)** není nijak zvlášť zaměřený na bezpečnost, nehodí se tedy ke každodennímu používání. Je možné jej ovšem použít jako oddělený prohlížeč pro citlivé věci jako bankovnictví apod. Prohlížeč **Brave** vychází z prohlížeče Chromium, v základu integruje blokování reklam a trackerů. Jeho sandbox aktuálně není na úrovni prohlížeče Chromium, i tak je ovšem solidní.
+Z bezpečnostního hlediska lze doporučit prohlížeč <span class="green">Chromium</span>. Používá špičkovou implementaci sandboxu a jeho kód je na velmi dobré úrovni. Celkově je v ohledu bezpečnosti v současném stavu dále než **Mozilla Firefox**. Prohlížeč **GNOME Web (Epiphany)** není nijak zvlášť zaměřený na bezpečnost, nehodí se tedy ke každodennímu používání. Je možné jej ovšem použít jako oddělený prohlížeč pro citlivé věci jako bankovnictví apod. Prohlížeč **Brave** vychází z prohlížeče Chromium, v základu integruje blokování reklam a trackerů. Jeho sandbox aktuálně není na úrovni prohlížeče Chromium, i tak je ovšem solidní.
 
-<!--- ./browsers.md -->
+<!--- /browsers.md -->
 
 <br><br><hr>
 

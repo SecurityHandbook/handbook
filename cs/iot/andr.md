@@ -1,70 +1,64 @@
-# FAQ &ndash; OS Android
+# FAQ – OS Android
 Android je dominantní OS na mobilním trhu (>88% podíl) vyvíjený společností **Google, Inc.** Díky svému majoritnímu zastoupení se těší velké pozornosti hackerů.
 
-Android má robustní bezpečnostní model, který předpokládá, že aplikace třetích stran běžící v OS nejsou důvěryhodné. Hlavním bezpečnostním problémem je rozmanitost zařízení, z nichž většina modelů nedostává pravidelné bezpečnostní aktualizace a/nebo běží na zastaralých verzích OS.
+Android má robustní bezpečnostní model, který předpokládá, že aplikace třetích stran běžící v OS nejsou důvěryhodné. Hlavním bezpečnostním problémem je rozmanitost zařízení, z nichž většina modelů nedostává pravidelné bezpečnostní záplaty a/nebo běží na zastaralých verzích OS.
 
 > Trocha teorie o bezpečnostním modelu OS Android
 
-Android má robustní vícevrstevný bezpečnostní model. Používá linuxové jádro, implementuje <abbr title="Mandatory Access Control">MAC</abbr> a mitigace proti *memory corruption* exploitům &ndash; Android je jediná linuxová distribuce, která neumožňuje spuštění *non-<abbr title="Position Independent Executable">PIE</abbr>* kódu. Každé aplikaci je přiřazen unikátní uživatelský ID, aplikace je uzavřena v sandboxovaném prostředí, nemůže operovat s žádnou jinou aplikací a je jí umožněno operovat pouze se soubory/komponenty OS, ke kterým dostane oprávnění od vlastníka zařízení.
+Android má robustní vícevrstevný bezpečnostní model. Používá linuxové jádro, implementuje <abbr title="Mandatory Access Control">MAC</abbr> a mitigace proti *memory corruption* exploitům – Android je jediná linuxová distribuce, která neumožňuje spuštění *non-<abbr title="Position Independent Executable">PIE</abbr>* kódu. Každé aplikaci je přiřazen unikátní uživatelský ID, aplikace je uzavřena v sandboxovaném prostředí, nemůže operovat s žádnou jinou aplikací a je jí umožněno operovat pouze se soubory/komponenty OS, ke kterými dostane oprávnění od vlastníka zařízení.
 
 ![Android Security Model](https://faq.mople71.cz/img/en/and.png)
 <p class="imgsrcf">*The Android security model (upraveno).* Zdroj: [Android Security 2015 Annual Report](http://source.android.com/security/reports/Google_Android_Security_2015_Report_Final.pdf)</p>
 
 #### Jádro:
-Android je postaven na linuxovém jádru. Linuxové jádro není nejbezpečnější jádro na trhu, Androidu ovšem z bezpečnostního hlediska nabízí slušný model oprávnění založený na uživatelích a uživatelských skupinách, izolaci procesů atd. V poslední době se vývojáři linuxového jádra začali více soustředit na zabezpečení samotného jádra, z čehož benefituje i OS Android.
+Android je postaven na jádru Linux. Linuxové jádro možná není nejlepší volbou z hlediska bezpečnosti, Androidu ovšem nabízí slušný model oprávnění založený na uživatelích a uživatelských skupinách, izolaci procesů apod.
 
 #### MAC:
-Android **Kitkat** a výše používá silně modifikovanou implementaci linuxového MAC **SELinux** &ndash; tzv. *SEAndroid*. SEAndroid výrazně snižuje prostor pro exploitaci. Také hraje roli v modelu oprávnění OS Android. Díky implementaci MAC nyní pouze velmi malá část kódu běží s plným root oprávněním. Výrazná zlepšení z pohledu MAC byla představena ve verzích **Lollipop** a **Oreo**.
+Android **Kitkat** a výše používá silně modifikovanou implementaci linuxového MAC **SELinux** – tzv. *SEAndroid*. SEAndroid výrazně snižuje prostor pro exploitaci. Také hraje roli v modelu oprávnění OS Android. Díky implementaci MAC nyní pouze velmi malá část kódu běží s plným root oprávněním. Výrazná zlepšení z pohledu MAC byla představena ve verzích **Lollipop** a **Oreo**.
 
 #### Aplikace:
-Android vyžaduje digitální podpis aplikací &ndash; nepodepsané aplikace nemohou být nainstalovány. Také implementuje několik bezpečnostních kontrolních bodů pro aplikace, díky kterým aplikaci může vyhodnotit jako škodlivou a její instalaci odepře (tato funkce je závislá na službách Google). Ve výchozím nastavením lze také instalovat aplikace pouze z předinstalovaného obchodu aplikací &ndash; obvykle **Google Play**.
+Android vyžaduje digitální podpis aplikací – nepodepsané aplikace nemohou být nainstalovány. Ve výchozím nastavením lze instalovat aplikace pouze z předinstalovaného obchodu aplikací – obvykle **Google Play**. Veškeré aplikace jsou uzavřeny v sandboxu (*IsolatedProcess*), každá aplikace je tedy izolovaná od ostatních aplikací a OS. Android implementuje **seccomp** sandbox, který nabízí pokročilejší možnosti izolace a přináší vyšší míru bezpečnosti. Interně je využíván například aplikací *Google Chrome*.
 
-Veškeré aplikace jsou uzavřeny v sandboxu (*IsolatedProcess*), tudíž každá aplikace je izolovaná od ostatních aplikací a OS. Android implementuje **seccomp** sandbox, který nabízí pokročilejší možnosti izolace a vyšší míru bezpečnosti. Interně je využíván například aplikací *Google Chrome*.
-
-Android **Marshmallow** a výše nabízí rozšířený model oprávnění &ndash; uživatel si může zvolit, k jakým komponentům/souborům bude mít daná aplikace přístup. Vestavěný správce oprávnění zatím není perfektní, jelikož neumožňuje nastavení všech důležitých oprávnění, ale funguje spolehlivě, což se nedá říci o správcích oprávnění třetích stran (např. *XPrivacy*).
+Android **Marshmallow** a výše nabízí aplikační model oprávnění – uživatel si může zvolit, k jakým komponentům/souborům bude mít daná aplikace přístup. S verzí **Q** byl systém oprávnění zrobustněn. <span class="red">Využití správců oprávnění třetích stran (např. *XPrivacy*) je důrazně nedoporučeno.</span>
 
 Funkce závislé na službách Google (např. *VerifyApps*, *Google Play Protect*), zde nebudou rozebírány.
 
 #### FAQ se dělí na několik sekcí:
-- Bezpečná zařízení
-- Bezpečné nastavení OS
-- Doporučené aplikace
+- [Bezpečná zařízení](#andr1)
+- [Základní bezpečnostní nastavení](#andr2)
+- [Doporučené aplikace](#andr3)
 
 <br>
 
 ## Bezpečná zařízení:
-Jak již bylo zmíněno, diverzita zařízení s OS Android je z pohledu bezpečnosti velký problém.
-
-V dnešní době není problém pořídit si telefon s OS Android za směšnou finanční částku. Pořizovací cena ovšem není všechno, a neměla by být hlavním faktorem při výběru. Většina levných zařízení se nikdy nedočká žádné bezpečnostní aktualizace, natož pak aktualizace na novější verzi OS. Tato zařízení mohou obsahovat stovky známých bezpečnostních děr, které lze lehce zneužít, pokud zařízení není záplatováno výrobcem. Situace u dražších modelů ale nemusí být o nic lepší. Níže naleznete několik bodů, které by mělo zařízení splňovat, aby se s ním z hlediska bezpečnosti dalo pracovat.
+Jak již bylo zmíněno, diverzita zařízení s OS Android je z pohledu bezpečnosti velký problém. Ne všichni výrobci nabízejí pravidelné bezpečnostní záplaty a aktualizace OS pro své modely, důvody mohou být různé. Na trhu tedy můžeme nalézt zbrusu nová zařízení se starou verzí OS Android, která již od výroby obsahují známé bezpečnostní díry a výrazně zvyšují pravděpodobnost exploitace. Tato praxe se bohužel nevztahuje pouze na levné modely, nýbrž i na dražší telefony. Uživatel by se měl při výběru svého zařízení zajímat o jeho bezpečnostní parametry. Níže naleznete několik parametrů, které by mělo zařízení splňovat, aby se o něm dalo uvažovat.
 
 ### Bezpečnostní kritéria pro zařízení s OS Android:
-- 64-bit architektura (x86/ARM)
-- jádro >= 3.18 (ideálně 4.4)
-- verze dodávaného OS minimálně **Oreo** (*8.1*)
-- podpora *Treble*
-- full verified boot (ideálně i pro custom ROM)
+- verze dodávaného OS minimálně **Q** (*10*)
 - časté (měsíční, minimálně čtvrtletní) bezpečnostní aktualizace pro firmware a proprietární komponenty
-- garance bezpečnostních aktualizací po dobu morální životnosti modelu (jak dlouho chcete zařízení používat)
+- garance bezpečnostních aktualizací po dobu morální životnosti modelu
+- full verified boot
+- 64-bit architektura (x86/ARM)
+- jádro >= 4.4
+- podpora *Treble*
+
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
+Existují dvě úrovně měsíčních bezpečnostních aktualizací – **prvního** dne v měsíci a **páteho** dne v měsíci. Obě úrovně jsou aplikovatelné pro většinu modelů na trhu. Pokud výrobce celkem pravidelně zařízení aktualizuje, ale implementuje pouze první úroveň (např. *1. listopadu 2019*), může to značit problém.</p></div>
 
 > Proč záleží na verzi OS
 
-Každá verze OS Android přináší mnohá bezpečnostní a jiná vylepšení. **Marshmallow** přinesl správu oprávnění pro aplikace, kdy si uživatel může zvolit, jaká aplikace má k čemu přístup. **Nougat** přinesl přepsaný *MediaServer*, který likviduje řadu typů exploitů jako např. *Stagefright*. **Oreo** posunul sandboxing na vyšší úroveň díky *Project Treble* a celoplošenému využítí *seccomp* pro veškeré aplikace. Dále například zrobustnil *WebView* a model oprávnění aplikací. Je možné s klidným svědomím říci, že <span class="red">žádná verze OS Android před verzí *Oreo* není bezpečná a neměla by být používána.</span>
-
-![Treble case study: media stack](https://guide.mople71.cz/img/en/mstreble.png)
-<p class="imgsrcf">*Treble case study: media stack (upraveno).* Zdroj: [What's New in Android Security (Google I/O '17)](https://www.youtube.com/watch?v=C9_ytg6MUP0) | &#169; 2017 Google</p>
-
-Drobný příklad. Nainstalujete škodlivou aplikaci na *Android 5.0* &ndash; nemáte kontrolu nad oprávněními aplikace, aplikace si může dělat, co chce. Nainstalujete škodlivou aplikaci na *Android 8.1* &ndash; aplikaci můžete odebrat oprávnění, která nechcete. Už se tedy nestane, aby aplikace na svítilnu měla přístup k vašim datům, mikrofonu a videu.
+Každá verze OS Android přináší mnohá bezpečnostní a jiná vylepšení. **Marshmallow** přinesl správu oprávnění pro aplikace, kdy si uživatel může zvolit, jaká aplikace má k čemu přístup. **Nougat** přinesl přepsaný *MediaServer*, který likviduje řadu typů exploitů jako např. *Stagefright*. **Oreo** posunul sandboxing na vyšší úroveň díky *Project Treble* a celoplošenému využítí *seccomp* pro veškeré aplikace. Dále například zrobustnil *WebView* a model oprávnění aplikací. Lze s klidným svědomím říci, že <span class="red">žádná verze OS Android starší nežli *Pie* není bezpečná a neměla by být používána.</span>
 
 > Proč záleží na bezpečnostních aktualizacích
 
-Další příklad. Nainstalujete si škodlivou aplikaci na starší verzi <span class="green">8.1</span> &ndash; máte kontrolu nad oprávněními aplikace a všechna nepotřebná oprávnění tedy můžete zakázat. Nemáte ovšem nejnovější bezpečnostní záplaty. Aplikace tedy může využít známou bezpečnostní díru a exploitovat OS &ndash; uživatel se o tom nikdy nedozví. Toto je bežná praxe malware pro OS Android, jelikož se jedná o nejjednodušší a nejméně nákladný způsob infikace &ndash; cca. **90% zařízení nemá základní bezpečnostní záplaty**.
+Uveďme drobný příklad. Nainstalujete si škodlivou aplikaci na starší verzi <span class="green">8.1</span> – máte kontrolu nad oprávněními aplikace a všechna nepotřebná oprávnění tedy můžete zakázat. Nemáte ovšem nejnovější bezpečnostní záplaty. Aplikace tedy může využít známou bezpečnostní díru a exploitovat OS – uživatel se o tom nikdy nedozví. Toto je bežná praxe malware pro OS Android, jelikož se jedná o nejjednodušší a nejméně nákladný způsob infikace – cca. **90% zařízení nemá kritické bezpečnostní záplaty**.
 
 <br>
 
 ### Přijatelné modely dle bezpečnostních kritérií:
 - **libovolný model** řady **<span class="go">Pixel</span>**
+- **libovolný model** projektu [Android One](https://www.android.com/one/)
 - **libovolný model** výrobce **<span class="no">Nokia</span>**
-- **libovolný model** projektu Android One
 - vlajkové lodě většiny známých výrobců jako **SONY**, **<span class="sam">Samsung</span>**, **<span class="lg">LG</span>**, **<span class="hu">Huawei</span>** apod.
 - vyšší modely výrobců **<span class="sam">Samsung</span>** a **SONY**
 
@@ -73,14 +67,14 @@ Pro inspiraci se také můžete podívat na [seznam doporučených modelů pro f
 
 <br><br><hr><br>
 
-## Bezpečné nastavení OS:
-Android je (většinou) bezpečně nastaven již v základu, není ovšem od věci podívat se do nastavení a zkontrolovat jej.
+## Základní bezpečnostní nastavení:
+Android je (většinou) bezpečně nastaven již v základu, není ovšem od věci konfiguraci zkontrolovat.
 
 > Kontrola nastavení zabezpečení
 
 - Otevřete si <span class="green">Nastavení</span>.
 - Nalezněte podkategorii **Zabezpečení a poloha** a otevřete ji.
-- Zkontrolujte bezpečnou konfiguraci **Zámku obrazovky** &ndash; <span class="green">PIN</span> nebo <span class="green">Heslo</span>
+- Zkontrolujte bezpečnou konfiguraci **Zámku obrazovky** – <span class="green">PIN</span> nebo <span class="green">Heslo</span>
 - Zkontrolujte **Administrátorské aplikace v zařízení**. Neměly by zde být žádné aplikace kromě aplikací Google, pokud je používáte.
 - Zkontrolujte **Šifrování** vašeho zařízení.
 - Aplikaci zavřete.
@@ -90,16 +84,16 @@ Android je (většinou) bezpečně nastaven již v základu, není ovšem od vě
 - Otevřete si <span class="green">Nastavení</span>.
 - Nalezněte podkategorii **Systém** a otevřete ji.
 - Klikněte na <span class="green">Informace o telefonu</span>.
-- Zkontrolujte, zdali máte aktuální **verzi systému Android** &ndash; **9.0** či výše.
+- Zkontrolujte, zdali máte aktuální **verzi systému Android** – **10.0** či výše.
 - Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
 <li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
-- Máte-li starší *verzi systému Android* než **8.1** a výrobce nepotvrdil aktualizaci, zařízení je implicitně nebezpečné &ndash; můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než **3 měsíce**, zařízení není bezpečné &ndash; můžete se dívat po náhradě.
+- Máte-li starší *verzi systému Android* než **9.O** a výrobce nepotvrdil aktualizaci, zařízení je implicitně nebezpečné – můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než **3 měsíce**, zařízení není bezpečné – můžete se dívat po náhradě.
 - Aplikaci zavřete.
 
 <br>
 
 ### Správce oprávnění:
-Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům má konkrétní aplikace přístup. Jedná se více o záležitost soukromí než bezpečnosti.
+Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům má konkrétní aplikace přístup.
 
 > Nastavení oprávnění aplikací
 
@@ -118,7 +112,7 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 <br>
 
 ### Využití účtu hosta:
-Pod účtem hosta můžete relativně v bezpečí např. prohlížet rizikové internetové stránky. Instalace pochybných aplikací není bezpečná ani pod uživatelem hosta, jelikož aplikace může OS exploitovat mnohem snadněji než internetová stránka. Pokud by aplikace úspěšně získala root pravomoce (např. pomocí *CVE-2015-1805* aka KingRoot), nemusí pomoci ani reset zařízení do továrního nastavení.
+Pod účtem hosta můžete relativně v bezpečí např. prohlížet rizikové internetové stránky. Instalace pochybných aplikací není doporučena ani pod uživatelem hosta, jelikož aplikace může OS exploitovat mnohem snadněji nežli internetová stránka. Pokud by aplikace úspěšně získala administrátorské pravomoce, nemusí pomoci ani reset zařízení do továrního nastavení.
 
 > Přepnutí se na účet hosta
 
@@ -141,31 +135,31 @@ Obchod s aplikacemi velmi úzce souvisí s bezpečností, jelikož z něj stahuj
 
 #### FOSS:
 - F-Droid: https://f-droid.org/
-- Yalp Store &ndash; opensource frontend pro obchod Google Play
+- *Aurora Store – open-source frontend pro obchod Google Play*
 
 #### Proprietární:
 - Google Play: https://play.google.com/
 
-Obchody typu *Amazon* či *Samsung* nemusí vždy mít nejnovější verze aplikací, zvláště těch, které jsou často aktualizovány. Zvláště Amazon má extrémně zdlouhavý proces kontroly aplikací (jsou kontrolovány ručně).
+Obchody typu *Amazon* či *Samsung* nemusí vždy mít nejnovější verze aplikací, zvláště těch, které jsou často aktualizovány. Zejména Amazon má extrémně zdlouhavý proces kontroly aplikací (prováděno ručně).
 
 <br>
 
 ### Firewall:
-Firewall je velmi důležitá bezpečnostní vrstva OS, která poskytuje ochranu před síťovými útoky. Na veřejných WiFi připojeních je prakticky nutností.
+Firewall je velmi důležitá bezpečnostní vrstva OS, která poskytuje ochranu před síťovými útoky. Na veřejných WiFi připojeních je nutností.
 
-Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenabízí. Zneužití *VPN API* (NetGuard, NoRoot Data Firewall) není nejlepší a nejspolehlivější implementace FW, ale alespoň nevyžaduje destrukci bezpečnostního modelu OS. Bohužel, vypadá to, že pouze velmi málo lidí má zájem implementovat tyto věci správně &ndash; přímo do OS.
+Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenabízí. Zneužití *VPN API* (NetGuard, NoRoot Data Firewall) není nejlepší a nejspolehlivější implementace FW, ale alespoň nevyžaduje destrukci bezpečnostního modelu OS. Bohužel, vypadá to, že pouze velmi málo lidí má zájem implementovat tyto věci správně – přímo do OS.
 
 #### FOSS:
 - integrovaný
 - NetGuard (VPN): https://github.com/M66B/NetGuard
 
 #### Proprietární:
-- NoRoot Data Firewall (VPN): https://play.google.com/store/apps/details?id=com.jianjia.firewall
+- NoRoot Data Firewall (VPN): https://play.google.com/store/apps/details?id=com.jianjia.firewall&hl=cs
 
 <br>
 
 ### Blokování reklamy:
-Blokování reklamy je z hlediska bezpečnosti nezbytné z důvodu výskytu škodlivých reklam na internetu. Rozumnější je oblíbené stránky podporovat jinou a bezpečnější &ndash; finanční &ndash; formou.
+Blokování reklamy je z hlediska bezpečnosti nezbytné z důvodu výskytu škodlivých reklam na internetu. Rozumnější je oblíbené stránky podporovat jinou a bezpečnější – finanční – formou.
 
 #### FOSS lokální VPN:
 - Blokada: http://blokada.org/
@@ -175,10 +169,10 @@ Blokování reklamy je z hlediska bezpečnosti nezbytné z důvodu výskytu ško
 - Adguard: https://adguard.com/en/adguard-android/overview.html
 
 #### VPN:
-- Freedome: https://play.google.com/store/apps/details?id=com.fsecure.freedome.vpn.security.privacy.android
+- Freedome: https://play.google.com/store/apps/details?id=com.fsecure.freedome.vpn.security.privacy.android&hl=cs
 
 #### Internetový prohlížeč:
-- Brave: https://play.google.com/store/apps/details?id=com.brave.browser
+- Brave: https://play.google.com/store/apps/details?id=com.brave.browser&hl=cs
 - Google Chrome
 - &#8230;
 
@@ -191,10 +185,10 @@ Chrome/Chromium je prohlížeč s nejkvalitnějšími mitigacemi proti exploitů
 
 #### FOSS:
 - Chromium: https://www.chromium.org/developers/how-tos/android-build-instructions
-- Brave: https://play.google.com/store/apps/details?id=com.brave.browser
+- Brave: https://play.google.com/store/apps/details?id=com.brave.browser&hl=cs
 
 #### Proprietární:
-- Google Chrome: https://play.google.com/store/apps/details?id=com.android.chrome
+- Google Chrome: https://play.google.com/store/apps/details?id=com.android.chrome&hl=cs
 
 > Bezpečné nastavení Brave
 
@@ -209,7 +203,7 @@ Chrome/Chromium je prohlížeč s nejkvalitnějšími mitigacemi proti exploitů
 <li style="list-style-type: none">![brvand2](https://faq.mople71.cz/img/cs/brvand2.png)</li>
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Nyní máte ve výchozím nastavení vypnutý JS pro všechny weby. Jakmile budete chtít spuštění JS pro určitý web povolit, stačí kliknout na ikonu prohlížeče v horním panelu a skripty povolit.<br><br>
+Nyní máte ve výchozím nastavení vypnutý JS pro všechny weby. Jakmile budete chtít spuštění JS pro určitý web povolit, stačí poklepat na ikonu prohlížeče v horním panelu a skripty povolit.<br><br>
 ![brvand3](https://faq.mople71.cz/img/cs/brvand3.png)</p></div>
 
 > Omezení JavaScriptu v Google Chrome / Chromium

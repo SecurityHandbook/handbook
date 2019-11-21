@@ -1,71 +1,48 @@
-# FAQ &ndash; OS Linux
-Linux se díky svému minoritnímu zastoupení na desktopech těší řádově menší pozornosti hackerů nežli Windows, většina malware pro Linux je určena serverům. Malware pro desktopové linuxové distribuce ovšem existuje &ndash; sice v mnohonásobně menším množství, ale existuje. Mimo jiné, exploit kity se poslední dobou snaží být co nejvíce multiplatformní a např. JS ransomware spolehlivě funguje i přes prohlížeč na Linuxu.
+# FAQ – OS Linux
+Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů – většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce také existuje, akorát v mnohonásobně menším množství. Ačkoliv tedy je stav některých desktopových linuxových distribucí z pohledu bezpečnosti tristní, v praxi je riziko infikace nižší nežli u jiných OS. Moderní *exploit kity* jsou ovšem často multiplatformní a jejich počet roste. Dostatečné zabezpečení OS je proto nezbytné.
 
-Zde se budeme věnovat pokročilejším možnostem zabezpečení (desktopového) Linuxu. Jako rukojmí použiji distribuci Arch Linux, která v základním nastavení není příliš zabezpečená, ale korektní konfigurací z ní lze vytvořit velmi bezpečnou instalaci. Kroky níže popisované jsou aplikovatelné na většinu distribucí, stačí korektně změnit syntax.
+Zde se budeme věnovat pokročilejším možnostem zabezpečení (nejen) desktopového Linuxu. Jako rukojmí použijeme distribuci **Arch Linux**, se kterou lze korektní konfigurací vytvořit vcelku bezpečnou instalaci. Kroky níže popisované jsou aplikovatelné na většinu distribucí, stačí korektně změnit syntax.
 
-Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pokročilé](https://faq.mople71.cz/cs/lnx/index.php#lnx) uživatele a máte znalosti ve zmíněné sekci rozebírané.
+Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pokročilé](https://faq.mople71.cz/cs/lnx/index.php#lnx) uživatele a máte minimálně znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
-- Vrstvy zabezpečení
-- Anti-exploit mitigace
-- Audit
+- [Ochrana proti malware](#lnx1)
+- [Ochrana proti exploitaci](#lnx2)
+- [Audit](#lnx3)
 
 <br>
 
-## Vrstvy zabezpečení:
+## Ochrana proti malware:
 ### Firewall:
 Pro běžné počítače stačí zakázat FORWARD chain a bezpečně nastavit INPUT.
 
-Co se týče whitelistu odchozí komunikace (application FW), iptables není nejpříjemnější možností. Mnohem jednoduší je application FW implementovat skrz <abbr title="Mandatory Access Control">MAC</abbr>.
+Co se týče whitelistu odchozí komunikace (aplikační FW), nftables není nejpříjemnější možností. Mnohem snazší by bylo aplikační FW implementovat skrz <abbr title="Mandatory Access Control">MAC</abbr>.
 
-> Příklad pravidel pro běžný počítač (zadat do root konzole)
+> Příklad pravidel pro běžný počítač:
 
-<pre><code># zamknout INPUT a FORWARD
-iptables -P INPUT   DROP
-iptables -P FORWARD DROP
-iptables -A INPUT -p tcp -m tcp ! --tcp-flags SYN,RST,ACK SYN -m state --state NEW -j DROP
+<pre><code>/etc/nftables.conf
+-----------------------------------
 
-# zahodit INVALID pakety
-iptables -N drop_invalid
-iptables -A OUTPUT   -m state --state INVALID  -j drop_invalid
-iptables -A INPUT    -m state --state INVALID  -j drop_invalid
-iptables -A INPUT -p tcp -m tcp --sport 1:65535 --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j drop_invalid
-iptables -A drop_invalid -j LOG --log-level debug --log-prefix "INVALID state -- DENY "
-iptables -A drop_invalid -j DROP
+table inet filter {
+    chain input {
+        type filter hook input priority 0; policy drop;
+        ct state invalid drop
+        ct state established,related accept
+        iif "lo" accept
+    }
 
-# povolit ESTABLISHED a RELATED pripojeni
-iptables -A INPUT  -m state --state ESTABLISHED,RELATED  -j ACCEPT
+    chain forward {
+        type filter hook forward priority 0; policy drop;
+    }
 
-# povolit loopback
-iptables -A INPUT -i lo -j ACCEPT
-
-# logovat ostatni UDP
-iptables -N In_RULE_1
-iptables -A INPUT -p udp -m udp  -j In_RULE_1
-iptables -A In_RULE_1  -j LOG  --log-level info --log-prefix "UDP -- DENY "
-iptables -A In_RULE_1  -j DROP
-
-# logovat ostatni TCP
-iptables -N In_RULE_2
-iptables -A INPUT -p tcp -m tcp  -j In_RULE_2
-iptables -A In_RULE_2  -j LOG  --log-level info --log-prefix "TCP -- DENY "
-iptables -A In_RULE_2  -j DROP
-
-# logovat zbytek
-iptables -N In_RULE_3
-iptables -A INPUT  -j In_RULE_3
-iptables -A In_RULE_3  -j LOG  --log-level info --log-prefix "XXX -- DENY "
-iptables -A In_RULE_3  -j DROP
-
-# ulozit pravidla
-iptables-save > /etc/iptables/iptables.rules
-
-# povolit iptables
-systemctl enable iptables</code></pre>
+    chain output {
+        type filter hook output priority 0; policy accept;
+    }
+}</code></pre>
 
 <br>
 
-### Mandatory Access Control:
+### MAC:
 <abbr title="Mandatory Access Control">MAC</abbr> se stal důležitou součástí bezpečnostního modelu linuxových distribucí.
 
 **SELinux** je velmi robustní implementace MAC, její nastavení je ovšem problematické. Využívá ji např. **<span class="fe">Fedora</span>**  a je důležitou součástí bezpečnostního modelu OS Android.
@@ -74,14 +51,13 @@ systemctl enable iptables</code></pre>
 
 **TOMOYO Linux** je velmi solidní implementace MAC poskytující vyšší úroveň ochrany než AppArmor a zároveň nabízí mnohem jednodušší konfiguraci nežli SELinux.
 
-Na Arch Linux není problém provozovat RBAC, TOMOYO nebo AppArmor. SELinux je o něco problematičtější. Pro použití MAC je nutné zkompilovat kernel.
+Na Arch Linux lze bez problému provozovat TOMOYO nebo AppArmor, přičemž pro TOMOYO není třeba kompilovat vlastní kernel. SELinux je o něco složitější.
 
 > Instalace TOMOYO Linux
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-TOMOYO Linux není příliš rozšířený MAC a velmi těžko někde naleznete profily pro aplikace. Budete si je tedy muset sami vytvořit (příp. přepsat z AppArmor profilů – ty jsou všude). Dokumentaci naleznete [zde](https://tomoyo.osdn.jp/2.5/index.html.en).</p></div>
+TOMOYO Linux není příliš rozšířený MAC a velmi těžko někde naleznete profily pro aplikace. Budete si je tedy muset sami vytvořit (příp. přepsat z AppArmor profilů – ty jsou všude). Dokumentaci naleznete [zde](https://tomoyo.osdn.jp/2.6/index.html.en).</p></div>
 
-- Pokud si neumíte zkompilovat jádro, můžete využít předkompilovaný kernel z [AUR](https://aur.archlinux.org/packages/linux-tomoyo/).
 - Povolte TOMOYO Linux v GRUB:
 <li style="list-style-type: none"><pre><code>/etc/default/grub
 -----------------------------------
@@ -94,7 +70,6 @@ gpg --recv-keys 43C83369623D7AD3A96C2FC7425F128D0C64F52A
 git clone https://aur.archlinux.org/tomoyo-tools.git
 cd tomoyo-tools
 gedit PKGBUILD</code></pre></li>
-- Pokud nepoužíváte kernel z AUR, odstraňte závislost na balíčku **linux-tomoyo**.
 - Uložte a spusťte instalaci:
 <li style="list-style-type: none"><pre><code>makepkg -si</code></pre></li>
 - Restartujte OS.
@@ -147,26 +122,21 @@ TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spušt�
 - Po dokončení konfigurace ji následně uložte:
 <li style="list-style-type: none"><pre><code>sudo tomoyo-savepolicy</code></pre></li>
 
-<br>
-
-### Virtualizace:
-Virtualizace může být velmi bezpečný způsob ochrany před malware (záleží na způsobu implementace), jelikož odděluje požadovanou část OS od fyzického OS.
-
-Sandbox nativně integrovaný v aplikaci je nejúčinnější možností implementace sandboxu, jelikož je nastaven přesně na míru dané aplikaci.
-
-Externí sandbox není zdaleka tak účinný jako sandbox integrovaný v aplikaci a ponechává výrazně větší prostor pro exploitaci, ale stále je mnohonásobně lepší, než žádný sandbox. Jsou případy, kdy lze špatně implementovaný externí sandbox prolomit přes *PulseAudio*...
-
-Virtualizace pomocí **GNOME Boxes** je rozebírána v sekci pro méně pokročilé. Ve zmíněné sekci je rozebírán také **Flatpak**. Pro pokročilou virtualizaci za použití **KVM** se podívejte [zde](https://wiki.archlinux.org/index.php/QEMU).
-
 <br><br><hr><br>
 
-## Anti-exploit mitigace:
+## Ochrana proti exploitaci:
+### Hardened alokátor:
+- https://github.com/grapheneos/hardened_malloc
+- nefungují: man, občas **nftables** či gnome-control-center
+
+<br>
+
 ### Hardening aplikací:
 Balíčky mohou být kompilovány s *memory corruption* mitigacemi (ASLR, PIE, RELRO,...), které následně významně ztěžují jejich exploitaci.
 
 Jediná distribuce, která má balíčky velmi vysoké úrovně s  důležitými *memory corruption* mitigacemi, je <span class="fe">Fedora</span> (+ RHEL, CentOS).
 
-Pro plnou funkčnost ASLR musí být všechny běžící procesy zkompilovány jako **PIE**. Poté se bude jednat o velmi robustní implementaci &ndash; alespoň tedy na platformě *x86_64*. Na 32-bit OS není problém ASLR prolomit pomocí brute-force.
+Pro plnou funkčnost ASLR musí být všechny běžící procesy zkompilovány jako **PIE**. Poté se bude jednat o velmi robustní implementaci – alespoň tedy na platformě *x86_64*. Na 32-bit OS není problém ASLR prolomit pomocí brute-force.
 
 Balíčky neobsahující zmíněné mitigace je tedy nutné zkompilovat ručně.
 
