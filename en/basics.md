@@ -79,5 +79,5 @@ The safest way to browse the web: <span class="green">securely configured live O
 <br>
 
 ## Recommended Password Managers:
-- [1Password](https://1password.com/) – impeccable service, requires payment
+- [1Password](https://1password.com/) – outstanding service, requires payment
 - [Bitwarden](https://bitwarden.com/) – free of charge

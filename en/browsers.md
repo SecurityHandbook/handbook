@@ -16,7 +16,7 @@
 
 - ...
 
-> Adblocking
+> Ad Blocking
 
 - ...
 
@@ -46,7 +46,7 @@
 
 - ...
 
-> Adblocking
+> Ad Blocking
 
 - ...
 
@@ -71,7 +71,7 @@
 
 - ...
 
-> Secure configuration and adblocking
+> Secure configuration and ad blocking
 
 ...
 
@@ -90,7 +90,7 @@
 
 - *Google Chrome – L34-46*
 
-> Adblocking
+> Ad Blocking
 
 - *Google Chrome – L50-62*
 
@@ -111,7 +111,7 @@
 
 - ...
 
-> Adblocking
+> Ad Blocking
 
 - Install the following security addon: [uBlock Origin](https://www.microsoft.com/cs-cz/store/p/ublock-origin/9nblggh444l4)
 
@@ -141,7 +141,7 @@
 
 - ...
 
-> Adblocking
+> Ad Blocking
 
 - Install the following security addon: [uBlock Origin](https://addons.mozilla.org/cs/firefox/addon/ublock-origin/)
 
@@ -166,7 +166,7 @@
 
 - *Mozilla Firefox WNT – L218-257*
 
-> Adblocking
+> Ad Blocking
 
 - *Mozilla Firefox WNT – L261-266*
 
@@ -187,7 +187,7 @@
 
 - ...
 
-> Adblocking
+> Ad Blocking
 
 - ...
 
@@ -212,7 +212,7 @@
 
 - ...
 
-> Adblocking
+> Ad Blocking
 
 ...
 
