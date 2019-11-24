@@ -7,7 +7,7 @@
 
 #### FAQ is divided into several sections:
 - [Secure Devices](#andr1)
-- [Basic Security Configuration](#andr2)
+- [Elementary Security Configuration](#andr2)
 - [Recommended Apps](#andr3)
 
 <br>

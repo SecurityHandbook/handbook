@@ -77,23 +77,6 @@ exit</code></pre></li>
 
 ### Bezpečné nastavení sítě:
 
-> Zakázání IPv6
-
-Pokud nepoužíváte a nepotřebujete IPv6 (nejste-li si jistí, můžete to vyzkoušet následující [test](http://www.test-ipv6.cz/), je rozumné protokol vypnout pro snížení prostoru pro útok.
-
-- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
-<li style="list-style-type: none"><pre><code>sudo -i
-dnf -y install nano
-nano /etc/default/grub</code></pre></li>
-- Nalezněte řádek <span class="green">GRUB_CMDLINE_LINUX_DEFAULT</span> a před poslední uvozovku vepište "<span class="red"> ipv6.disable=1</span>". Řádek tedy bude vypadat nějak takto:
-<li style="list-style-type: none"><pre><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash ipv6.disable=1"</code></pre></li>
-- Stiskněte klávesovou zkratku <span class="green">Ctrl + X</span>. Pro uložení změn v souboru stiskněte tlačítko <span class="red">Y</span> a následně <span class="green">Enter</span>.
-- Budete vráceni do konzole. Zadejte do ní následující příkazy:
-<li style="list-style-type: none"><pre><code>grub2-mkconfig -o /boot/grub2/grub.cfg
-exit
-exit</code></pre></li>
-- Restartujte OS.
-
 > Nastavení DNS
 
 Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](https://www.nic.cz/page/312/o-domenach-a-dns/).
@@ -110,6 +93,23 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](h
 - Pro *IPv6* aplikujte obdobný postup s následujícími servery:
 <li style="list-style-type: none"><pre><code>2001:148f:ffff::1,2001:148f:fffe::1</code></pre></li>
 - Klikněte na tlačítko <span class="green">Použít</span> a nastavení zavřete.
+
+> Zakázání IPv6
+
+Pokud nepoužíváte a nepotřebujete IPv6 (nejste-li si jistí, můžete to vyzkoušet následující [test](http://www.test-ipv6.cz/), je rozumné protokol vypnout pro snížení prostoru pro útok.
+
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
+<li style="list-style-type: none"><pre><code>sudo -i
+dnf -y install nano
+nano /etc/default/grub</code></pre></li>
+- Nalezněte řádek <span class="green">GRUB_CMDLINE_LINUX_DEFAULT</span> a před poslední uvozovku vepište "<span class="red"> ipv6.disable=1</span>". Řádek tedy bude vypadat nějak takto:
+<li style="list-style-type: none"><pre><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash ipv6.disable=1"</code></pre></li>
+- Stiskněte klávesovou zkratku <span class="green">Ctrl + X</span>. Pro uložení změn v souboru stiskněte tlačítko <span class="red">Y</span> a následně <span class="green">Enter</span>.
+- Budete vráceni do konzole. Zadejte do ní následující příkazy:
+<li style="list-style-type: none"><pre><code>grub2-mkconfig -o /boot/grub2/grub.cfg
+exit
+exit</code></pre></li>
+- Restartujte OS.
 
 <br>
 

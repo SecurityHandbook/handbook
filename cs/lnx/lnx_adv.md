@@ -16,7 +16,7 @@ Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pok
 ### Firewall:
 Pro běžné počítače stačí zakázat FORWARD chain a bezpečně nastavit INPUT.
 
-Co se týče whitelistu odchozí komunikace (aplikační FW), nftables není nejpříjemnější možností. Mnohem snazší by bylo aplikační FW implementovat skrz <abbr title="Mandatory Access Control">MAC</abbr>.
+Co se týče whitelistu odchozí komunikace (aplikační FW), *nftables* není nejpříjemnější možností. Mnohem snazší by bylo aplikační FW implementovat skrz <abbr title="Mandatory Access Control">MAC</abbr>.
 
 > Příklad pravidel pro běžný počítač:
 
@@ -70,7 +70,7 @@ gpg --recv-keys 43C83369623D7AD3A96C2FC7425F128D0C64F52A
 git clone https://aur.archlinux.org/tomoyo-tools.git
 cd tomoyo-tools
 gedit PKGBUILD</code></pre></li>
-- Uložte a spusťte instalaci:
+- Zkontrolujte instrukce a následně spusťte instalaci:
 <li style="list-style-type: none"><pre><code>makepkg -si</code></pre></li>
 - Restartujte OS.
 
@@ -115,8 +115,8 @@ PROFILE_VERSION=20110903
 TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spuštěny.</p></div>
 
 - Šipkami se posunujete mezi aplikacemi. Profil aplikace změníte klávesou <span class="red">S</span>, zadáním čísla profilu a stisknutím **Enter**.
-<li style="list-style-type: none"><pre><code>0     #bez přístupu k internetu
-1     #s přístupem k internetu
+<li style="list-style-type: none"><pre><code>0     #  bez přístupu k internetu
+1     #  s přístupem k internetu
 </code></pre></li>
 - Klávesou <span class="red">Q</span> konfiguraci ukončíte.
 - Po dokončení konfigurace ji následně uložte:
@@ -132,11 +132,12 @@ TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spušt�
 <br>
 
 ### Hardening aplikací:
-Balíčky mohou být kompilovány s *memory corruption* mitigacemi (ASLR, PIE, RELRO,...), které následně významně ztěžují jejich exploitaci.
+Balíčky mohou být kompilovány s *memory corruption* mitigacemi (ASLR, PIE, RELRO, Canary,&#8230;), které následně významně ztěžují jejich exploitaci.
 
+// Rewrite //
 Jediná distribuce, která má balíčky velmi vysoké úrovně s  důležitými *memory corruption* mitigacemi, je <span class="fe">Fedora</span> (+ RHEL, CentOS).
 
-Pro plnou funkčnost ASLR musí být všechny běžící procesy zkompilovány jako **PIE**. Poté se bude jednat o velmi robustní implementaci – alespoň tedy na platformě *x86_64*. Na 32-bit OS není problém ASLR prolomit pomocí brute-force.
+Pro plnou funkčnost ASLR musí být všechny běžící procesy zkompilovány jako **PIE**. Poté se bude jednat o vcelku robustní mitigaci – alespoň na *64-bit* architektuře.
 
 Balíčky neobsahující zmíněné mitigace je tedy nutné zkompilovat ručně.
 
