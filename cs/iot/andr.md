@@ -51,7 +51,7 @@ Každá verze OS Android přináší mnohá bezpečnostní a jiná vylepšení. 
 
 > Proč záleží na bezpečnostních aktualizacích
 
-Uveďme drobný příklad. Nainstalujete si škodlivou aplikaci na starší verzi <span class="green">8.1</span> – máte kontrolu nad oprávněními aplikace a všechna nepotřebná oprávnění tedy můžete zakázat. Nemáte ovšem nejnovější bezpečnostní záplaty. Aplikace tedy může využít známou bezpečnostní díru a exploitovat OS – uživatel se o tom nikdy nedozví. Toto je bežná praxe malware pro OS Android, jelikož se jedná o nejjednodušší a nejméně nákladný způsob infikace – cca. **90% zařízení nemá kritické bezpečnostní záplaty**.
+Uveďme drobný příklad. Nainstalujete si škodlivou aplikaci na starší verzi <span class="green">8.1</span> – máte kontrolu nad oprávněními aplikace a všechna nepotřebná oprávnění tedy můžete zakázat. Nemáte ovšem nejnovější bezpečnostní záplaty. Aplikace tedy může využít známou bezpečnostní díru a exploitovat OS – uživatel se o tom nikdy nedozví. Toto je bežná praxe malware pro OS Android, jelikož se jedná o nejjednodušší a nejméně nákladný způsob infikace – cca. **90 % zařízení nemá kritické bezpečnostní záplaty**.
 
 <br>
 
@@ -68,13 +68,13 @@ Pro inspiraci se také můžete podívat na [seznam doporučených modelů pro f
 <br><br><hr><br>
 
 ## Základní bezpečnostní nastavení:
-Android je (většinou) bezpečně nastaven již v základu, není ovšem od věci konfiguraci zkontrolovat.
+Android je většinou bezpečně nastaven již v základu, není ovšem od věci konfiguraci zkontrolovat.
 
 > Kontrola nastavení zabezpečení
 
 - Otevřete si <span class="green">Nastavení</span>.
 - Nalezněte podkategorii **Zabezpečení a poloha** a otevřete ji.
-- Zkontrolujte bezpečnou konfiguraci **Zámku obrazovky** – <span class="green">PIN</span> nebo <span class="green">Heslo</span>
+- Zkontrolujte bezpečnou konfiguraci **Zámku obrazovky** – <span class="green">Heslo</span> nebo alespoň <span class="green">PIN</span>
 - Zkontrolujte **Administrátorské aplikace v zařízení**. Neměly by zde být žádné aplikace kromě aplikací Google, pokud je používáte.
 - Zkontrolujte **Šifrování** vašeho zařízení.
 - Aplikaci zavřete.
@@ -147,7 +147,7 @@ Obchody typu *Amazon* či *Samsung* nemusí vždy mít nejnovější verze aplik
 ### Firewall:
 Firewall je velmi důležitá bezpečnostní vrstva OS, která poskytuje ochranu před síťovými útoky. Na veřejných WiFi připojeních je nutností.
 
-Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenabízí. Zneužití *VPN API* (NetGuard, NoRoot Data Firewall) není nejlepší a nejspolehlivější implementace FW, ale alespoň nevyžaduje destrukci bezpečnostního modelu OS. Bohužel, vypadá to, že pouze velmi málo lidí má zájem implementovat tyto věci správně – přímo do OS.
+Nejlepší volbou je integrovaný FW, bohužel jej prakticky žádná ROM nenabízí. Zneužití *VPN API* (NetGuard, NoRoot Data Firewall) není nejlepší a nejspolehlivější implementace FW, ale alespoň nevyžaduje destrukci bezpečnostního modelu OS.
 
 #### FOSS:
 - integrovaný
@@ -176,47 +176,23 @@ Blokování reklamy je z hlediska bezpečnosti nezbytné z důvodu výskytu ško
 - Google Chrome
 - &#8230;
 
-VPN je dobrý způsob blokace reklam, ovšem implementace *OpenVPN* na Androidu není perfektní. Lokální VPN tímto problémem netrpí. Použití prohlížeče blokující reklamy je na OS Android nejlepším řešením. **Chrome** již umožňuje nativně blokovat agresivní reklamy nesplňující podmínky. Prohlížeč **Brave** v základu integruje blokování reklam a trackerů.
+VPN je dobrý způsob blokace reklam, Android ovšem bohužel neimplementuje *OpenVPN*, uživatel je tedy odkázán na aplikaci svého poskytovatele. Použití prohlížeče blokující reklamy je na OS Android nejlepším řešením. **Chrome** již umožňuje nativně blokovat agresivní reklamy nesplňující podmínky. Prohlížeč **Brave** v základu integruje blokování reklam a trackerů.
 
 <br>
 
 ### Internetový prohlížeč:
-Chrome/Chromium je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům. Prohlížeče založené na Mozilla Firefox stále v této oblasti za Chromium zaostávají, na OS Android obzvlášť.
+Chrome/Chromium je prohlížeč s nejkvalitnějšími mitigacemi proti exploitům. Prohlížeče založené na *Mozilla Firefox* stále v této oblasti za Chromium zaostávají, na OS Android obzvlášť.
 
 #### FOSS:
 - Chromium: https://www.chromium.org/developers/how-tos/android-build-instructions
 - Brave: https://play.google.com/store/apps/details?id=com.brave.browser&hl=cs
 
+<!--- /browsers.md -->
+
 #### Proprietární:
 - Google Chrome: https://play.google.com/store/apps/details?id=com.android.chrome&hl=cs
 
-> Bezpečné nastavení Brave
-
-- Otevřete prohlížeč <span class="green">Brave</span>.
-- Přes menu v pravém rohu otevřete <span class="green">Nastavení</span>.
-- Rozklikněte nabídku **Ochrana soukromí**. Zatrhněte položky <span class="green">Režim ochrany proti sledování</span>, <span class="green">Blokování reklam</span>, <span class="green">Blokování regionálních reklam</span> a <span class="green">Ochrana proti otisku prohlížeče</span>.
-<li style="list-style-type: none">![brvand](https://faq.mople71.cz/img/cs/brvand.png)</li>
-- Vraťte se o úroveň výše a rozklikněte nabídku <span class="green">Nastavení webu</span>.
-- V sekci **JavaScript** zablokujte spouštění JS.
-<li style="list-style-type: none">![brvand1](https://faq.mople71.cz/img/cs/brvand1.png)</li>
-- V sekci **Schránka** zablokujte webům přístup k datům ve schránce.
-<li style="list-style-type: none">![brvand2](https://faq.mople71.cz/img/cs/brvand2.png)</li>
-
-<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Nyní máte ve výchozím nastavení vypnutý JS pro všechny weby. Jakmile budete chtít spuštění JS pro určitý web povolit, stačí poklepat na ikonu prohlížeče v horním panelu a skripty povolit.<br><br>
-![brvand3](https://faq.mople71.cz/img/cs/brvand3.png)</p></div>
-
-> Omezení JavaScriptu v Google Chrome / Chromium
-
-- Otevřete si <span class="green">Google Chrome</span> / <span class="green">Chromium</span>.
-- Kliknutím na tři tečky v horním pravém rohu otevřete boční panel a klikněte na tlačítko <span class="green">Nastavení</span>.
-- Klikněte na **Nastavení webu** a otevřete podkategorii <span class="green">JavaScript</span>.
-- Zablokujte spouštění JS.
-<li style="list-style-type: none">![chmandrjs](https://faq.mople71.cz/img/cs/chmandrjs.png)</li>
-- Klikněte na tlačítko <span class="green">Přidat výjimku pro konkrétní web</span>.
-- Zadejte adresu důvěryhodného webu, na kterém se může spouštět JS. Syntax je oproti desktopové verzi značně omezený.
-<li style="list-style-type: none">![chmandrjs1](https://faq.mople71.cz/img/cs/chmandrjs1.png)</li>
-- Klikněte na <span class="green">Přidat</span>.
+<!--- /browsers.md -->
 
 <br><br><hr>
 

@@ -1,6 +1,7 @@
 # Google Chrome:
 - WNT – **3**
 - LNX – **N/A**
+- ANDR – **2**
 
 <h3 class="ch">![ch_icon](https://mople71.cz/img/icons/ch16.png) Google Chrome</h3>
 
@@ -67,11 +68,27 @@ a stiskněte **Enter**.</li>
 Google Chrome používá špičkovou implementaci sandboxu.
 
 -----------------------------------
+
+## ANDR:
+> Omezení JavaScript v Google Chrome / Chromium
+
+- Otevřete si <span class="green">Google Chrome</span> / <span class="green">Chromium</span>.
+- Kliknutím na tři tečky v horním pravém rohu otevřete boční panel a klikněte na tlačítko <span class="green">Nastavení</span>.
+- Klikněte na **Nastavení webu** a otevřete podkategorii <span class="green">JavaScript</span>.
+- Zablokujte spouštění JS.
+<li style="list-style-type: none">![chmandrjs](https://faq.mople71.cz/img/cs/chmandrjs.png)</li>
+- Klikněte na tlačítko <span class="green">Přidat výjimku pro konkrétní web</span>.
+- Zadejte adresu důvěryhodného webu, na kterém se může spouštět JS. Syntax je oproti desktopové verzi značně omezený.
+<li style="list-style-type: none">![chmandrjs1](https://faq.mople71.cz/img/cs/chmandrjs1.png)</li>
+- Klikněte na <span class="green">Přidat</span>.
+
+-----------------------------------
 -----------------------------------
 
 # Brave:
 - WNT – **2**
 - LNX – **N/A**
+- ANDR – **1**
 
 <h3 class="brv">![brv_icon](https://mople71.cz/img/icons/brv.png) Brave</h3>
 
@@ -106,6 +123,25 @@ Prohlížeč v základu integruje blokování reklam a trackerů.
 > Oddělení prohlížeče od OS a dat
 
 Brave používá špičkovou implementaci sandboxu.
+
+-----------------------------------
+
+## ANDR:
+> Bezpečné nastavení a omezení JavaScript Brave
+
+- Otevřete prohlížeč <span class="green">Brave</span>.
+- Přes menu v pravém rohu otevřete <span class="green">Nastavení</span>.
+- Rozklikněte nabídku **Ochrana soukromí**. Zatrhněte položky <span class="green">Blokování reklam</span>, <span class="green">Blokování regionálních reklam</span> a <span class="green">Ochrana proti otisku prohlížeče</span>.
+<li style="list-style-type: none">![brvand](https://faq.mople71.cz/img/cs/brvand.png)</li>
+- Vraťte se o úroveň výše a rozklikněte nabídku <span class="green">Nastavení webu</span>.
+- V sekci **JavaScript** zablokujte spouštění JS.
+<li style="list-style-type: none">![brvand1](https://faq.mople71.cz/img/cs/brvand1.png)</li>
+- V sekci **Schránka** zablokujte webům přístup k datům ve schránce.
+<li style="list-style-type: none">![brvand2](https://faq.mople71.cz/img/cs/brvand2.png)</li>
+
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
+Nyní máte ve výchozím nastavení vypnutý JS pro všechny weby. Jakmile budete chtít spuštění JS pro určitý web povolit, stačí poklepat na ikonu prohlížeče v horním panelu a skripty povolit.<br><br>
+![brvand3](https://faq.mople71.cz/img/cs/brvand3.png)</p></div>
 
 -----------------------------------
 -----------------------------------
