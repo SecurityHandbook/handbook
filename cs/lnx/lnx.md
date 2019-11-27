@@ -79,7 +79,7 @@ exit</code></pre></li>
 
 > Nastavení DNS
 
-Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](https://www.nic.cz/page/312/o-domenach-a-dns/).
+Pokud vám zkratka DNS nic neříká, podívejte se na následující [jednoduchou stránku](http://www.jakfungujedns.cz/).
 
 - Otevřete si <span class="green">Nastavení</span>.
 - Rozklikněte položku <span class="green">Wi-Fi</span> nebo <span class="green">Síť</span> v závislosti na druhu vašeho připojení.
@@ -96,7 +96,7 @@ Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](h
 
 > Zakázání IPv6
 
-Pokud nepoužíváte a nepotřebujete IPv6 (nejste-li si jistí, můžete to vyzkoušet následující [test](http://www.test-ipv6.cz/), je rozumné protokol vypnout pro snížení prostoru pro útok.
+Pokud nepoužíváte a nepotřebujete IPv6 (nejste-li si jistí, můžete využít následující [test](https://test-ipv6.cz/)), je rozumné protokol vypnout pro snížení prostoru pro útok.
 
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
 <li style="list-style-type: none"><pre><code>sudo -i
@@ -117,7 +117,7 @@ exit</code></pre></li>
 - Vypněte AutoPlay/AutoRun:
   - Otevřete si <span class="green">Nastavení</span> a rozklikněte kategorii **Zařízení**.
   - Klikněte na položku <span class="green">Výměnná média</span>.
-  - Zatrhněte možnost <span class="green">Nikdy se nedotazovat nebo spouštět programy na vloženém médiu</span>,
+  - Zatrhněte možnost <span class="green">Nikdy se nedotazovat nebo spouštět programy na vloženém médiu</span>.
   <li style="list-style-type: none">![lnxar](https://faq.mople71.cz/img/cs/lnxar.png)</li>
 - Vypněte sdílení:
   - Otevřete si <span class="green">Nastavení</span> a klikněte na položku <span class="green">Sdílení</span>.
@@ -132,7 +132,7 @@ Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostn�
 <br>
 
 ### Aktualizace OS a SW:
-Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často opravují mnoho bezpečnostních chyb. Neaktuální děravý SW je implicitně nebezpečný.
+Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často opravují mnoho bezpečnostních chyb. Neaktuální SW je implicitně nebezpečný.
 
 V distribuci **<span class="fe">Fedora</span>** teoreticky můžete aktualizace nechat na aplikaci **GNOME Software**, nebo je můžete jednou za čas spustit ručně pomocí jednoduchého příkazu:
 <pre><code>sudo dnf update</code></pre>

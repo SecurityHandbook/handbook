@@ -145,7 +145,7 @@ Stores like *Amazon* or *Samsung* don't always have the latest app releases, esp
 <br>
 
 ### Firewall:
-Firewall's an essential OS security layer providing protection against network attacks. Its use on public WiFi connections is mandatory.
+Firewall's an essential OS security layer providing protection against network attacks. Its use on public WiFi connections is a must.
 
 Integrated FW makes for the best option, unfortunately few ROMs offer any enhancements to the basic firewall. Abusing *VPN API* (NetGuard, NoRoot Data Firewall,&#8230;) may not be the nicest and most reliable implementation, but at least doesn't require destroying the OS's security model.
 
