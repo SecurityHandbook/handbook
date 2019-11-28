@@ -1,9 +1,9 @@
 # FAQ – OS Linux
-Thanks to its minor share on desktop installations, Linux OS enjoys little attention from hackers – majority of Linux malware is targeted towards servers. Malware for desktops does exist, but in significantly lower numbers. As a result, while some Linux distributions are in horrendous condition from security perspective, the risk of infection is in practice lower than with different OSs. Yet, modern *exploit kits* are often multiplatform and their numbers are rising. Sufficient OS security is therefore essential.
+Thanks to its minor share on desktop installations, Linux OS on desktop gets little attention from hackers – majority of Linux malware's targeted towards servers. Malware for desktops does exist, but in considerably lower numbers. As a result, while some Linux distributions are in horrendous condition from security perspective, the risk of infection's in practice lower than with different OSs. Yet, modern *exploit kits* are often multiplatform and their numbers are rising. Sufficient OS security is therefore essential.
 
-This chapter focuses on advanced techniques of securing (not only) desktop Linux, taking the **Arch Linux** distro, which can be turned into a fairly secure installation with proper configuration, as a hostage. Steps described below can be applied on most distributions with proper change of syntax.
+This chapter focuses on advanced techniques of securing Linux (not only) desktop, taking the **Arch Linux** distro hostage, a distro which can be turned into a fairly secure installation with appropriate configuration. Steps described below can be applied on most distributions with proper modification of syntax.
 
-It's expected you've read FAQ [OS Linux for less advanced](https://faq.mople71.cz/en/lnx/index.php#lnx) users and have at least the knowledge discussed in the mentioned chapter.
+It's expected you've read FAQ [OS Linux for less advanced](https://faq.mople71.cz/en/lnx/index.php#lnx) users and have at least the knowledge discussed there.
 
 #### FAQ is divided into several sections:
 - [Malware protection](#lnx1)
@@ -14,11 +14,11 @@ It's expected you've read FAQ [OS Linux for less advanced](https://faq.mople71.c
 
 ## Malware protection:
 ### Firewall:
-Just disabling FORWARD and securely configuring INPUT chains is sufficient for everyday users.
+Simply disabling FORWARD and properly configuring INPUT chains is sufficient for everyday users.
 
 As for whitelisting outgoing communication (application FW), *nftables* isn't the most comfortable option. Implementing app FW through <abbr title="Mandatory Access Control">MAC</abbr> would be considerably easier.
 
-> Ruleset example for ordinary computer:
+> Ruleset example for an ordinary desktop:
 
 <pre><code>/etc/nftables.conf
 -----------------------------------
@@ -43,7 +43,7 @@ table inet filter {
 <br>
 
 ### MAC:
-<abbr title="Mandatory Access Control">MAC</abbr> has become an important layer of Linux distributions' security model.
+<abbr title="Mandatory Access Control">MAC</abbr>'s become an important layer of Linux distributions' security model.
 
 **SELinux** provides a robust MAC implementation, but the configuration can be tricky. It's used by e.g. **<span class="fe">Fedora</span>** and plays an important role in Android's security model.
 
@@ -51,12 +51,12 @@ table inet filter {
 
 **TOMOYO Linux** is a solid MAC implementation offering better security capabilities than AppArmor and much simpler configuration than SELinux.
 
-It's easy to use TOMOYO or AppArmor with Arch Linux, whilst TOMOYO doesn't require compiling custom kernel. Using SELinux is not that simple.
+It's easy to use TOMOYO or AppArmor with Arch Linux, whilst TOMOYO doesn't require compiling custom kernel. Using SELinux isn't that simple.
 
 > TOMOYO Linux installation
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-TOMOYO Linux isn't a very widespread MAC and you'll have a hard time finding profiles for apps. As such, the only option is creating them yourself (or rewriting AppArmor profiles – those are everywhere). You will find the documentation [here](https://tomoyo.osdn.jp/2.6/index.html.en).</p></div>
+TOMOYO Linux isn't a very widespread MAC and you'll have a hard time finding profiles for apps. As such, the only option's creating them yourself (or rewriting AppArmor profiles – those are everywhere). You will find the documentation [here](https://tomoyo.osdn.jp/2.6/index.html.en).</p></div>
 
 - Enable TOMOYO Linux using GRUB:
 <li style="list-style-type: none"><pre><code>/etc/default/grub
@@ -70,7 +70,7 @@ gpg --recv-keys 43C83369623D7AD3A96C2FC7425F128D0C64F52A
 git clone https://aur.archlinux.org/tomoyo-tools.git
 cd tomoyo-tools
 gedit PKGBUILD</code></pre></li>
-- Check the file and then run the installation:
+- Check the file content and run the installation:
 <li style="list-style-type: none"><pre><code>makepkg -si</code></pre></li>
 - Reboot.
 
@@ -78,7 +78,7 @@ gedit PKGBUILD</code></pre></li>
 
 - After successful installation and reboot, initialize TOMOYO:
 <li style="list-style-type: none"><pre><code>sudo /usr/lib/tomoyo/init_policy</code></pre></li>
-- Then edit TOMOYO policy:
+- Edit TOMOYO policy:
 <li style="list-style-type: none"><pre><code>/etc/tomoyo/policy/current/profile.conf
 -----------------------------------
 
@@ -114,12 +114,12 @@ PROFILE_VERSION=20110903
 <div class="alert exclaim"><p><em class="icon-attention"></em>**Warning**<br>
 TOMOYO only detects apps run at least once after being enabled.</p></div>
 
--  Use arrows to navigate between apps. Change selected app profile by pressing <span class="red">S</span>, entering the profile number and hitting **Enter**.
+-  Use arrows to navigate between apps. Change selected app profile by pressing <span class="red">S</span>, inputing the profile number and hitting **Enter**.
 <li style="list-style-type: none"><pre><code>0     #  no internet access
 1     #  internet access
 </code></pre></li>
-- You'll exit the config editor using <span class="red">Q</span>.
-- Once you finish the config, save and enforce it:
+- You'll exit the config editor via <span class="red">Q</span> key.
+- Afer finishing the config, save and enforce it:
 <li style="list-style-type: none"><pre><code>sudo tomoyo-savepolicy</code></pre></li>
 
 <br><br><hr><br>
@@ -127,25 +127,23 @@ TOMOYO only detects apps run at least once after being enabled.</p></div>
 ## Measurements against exploitation:
 ### Hardened allocator:
 - https://github.com/grapheneos/hardened_malloc
-- not working: man, sometimes **nftables** or gnome-control-center
+- not working: man, on some installations **netfilter** or gnome-control-center,&#8230;
 
 <br>
 
 ### App hardening:
-Packages can be compiled with *memory corruption* mitigations (ASLR, PIE, RELRO, Canary,&#8230;) which later makes their exploitation considerably difficult.
+Packages can be compiled with *memory corruption* mitigations (ASLR, PIE, RELRO, Canary,&#8230;) which makes them considerably harder to exploit later on.
 
-...
+For ASLR to work properly, all running processes need to be compiled as **PIE**. The combination then forms a rather solid mitigation – that is on the *64-bit* architecture anyway. Canaries are not so great, their potential absence can be forgiven.
 
-For ASLR to work properly, all running processes need to be compiled as **PIE**. The combination then forms a fairly solid mitigation – that is on the *64-bit* architecture. Canaries are not so great, their potential absence can be forgiven.
-
-Packages missing mentioned mitigations therefore require manual compilation.
+*Arch Linux*'s packages contain mentioned mitigations. Same applies to e.g. *Fedora*, however the situation may be different with other distributions. Packages missing the mentioned mitigations require manual compilation.
 
 > Audit of running processes
 
 <pre><code>checksec --proc-all</code></pre>
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-**Checksec** script is presented further below.</p></div>
+**Checksec** script's presented further below.</p></div>
 
 > Compiling an app with mitigations
 
@@ -167,7 +165,7 @@ man srcpac</code></pre></li>
 
 ## Audit:
 ### Rootkit Hunter:
-Rootkit Hunter is an on-demand rootkit scanner capable of capturing changes in critical OS files etc. It's a decent application primarily intended for servers but can fulfill its role on a desktop as well.
+Rootkit Hunter's an on-demand rootkit scanner capable of capturing changes in critical OS files etc. It's a decent application primarily intended for servers but can fulfill its role on a desktop as well.
 
 > Guide
 
@@ -176,7 +174,7 @@ Rootkit Hunter is an on-demand rootkit scanner capable of capturing changes in c
 rkhunter --versioncheck
 rkhunter --propupd
 rkhunter -c --enable all --disable none --rwo</code></pre></li>
-- Rkhunter shall print all the warnings, most likely false positives. These should be fixed so they aren't shown in the future.
+- Rkhunter shall print all the warnings, most likely false positives. These should be fixed so they aren't shown in future.
 - Example of my changes:
 <li style="list-style-type: none"><pre><code>gedit /etc/rkhunter.conf
 -----------------------------------
@@ -192,8 +190,8 @@ ALLOWDEVFILE="/dev/shm/user-Valve*"
 ALLOWHIDDENFILE="/etc/.updated"
 ALLOWHIDDENFILE="/usr/share/man/man5/.k5identity.5.gz"
 ALLOWHIDDENFILE="/usr/share/man/man5/.k5login.5.gz"</code></pre></li>
-- Now there should be no false positives and rkhunter should work as intended. It creates a database of critical OS files, therefore any change will prompt a warning. Feel free to put the scan into cron.
-- You will find more details on the [official website](http://rkhunter.sourceforge.net/) and [here](https://www.digitalocean.com/community/tutorials/how-to-use-rkhunter-to-guard-against-rootkits-on-an-ubuntu-vps).
+- Now there should be zero false positives and rkhunter should work as intended. It creates a database of critical OS files, any change will therefore prompt a warning. Feel free to put the scan into cron.
+- You'll find more details on the [official website](http://rkhunter.sourceforge.net/) and [here](https://www.digitalocean.com/community/tutorials/how-to-use-rkhunter-to-guard-against-rootkits-on-an-ubuntu-vps).
 
 <br>
 
@@ -210,7 +208,7 @@ lynic -c</code></pre></li>
 <br>
 
 ### Checksec:
-Checksec is a script enabling kernel security config checkup and review of *memory corruption* mitigations of executables.
+Checksec's a script enabling kernel security config checkup and review of *memory corruption* mitigations of executables.
 
 > Guide
 

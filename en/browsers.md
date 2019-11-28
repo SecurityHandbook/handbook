@@ -33,7 +33,7 @@
 
 - Open <span class="green">Google Chrome</span> / <span class="green">Chromium</span>.
 - Enter <span class="green">Settings</span> via the top right menu.
-- Open the **Site settings** subcategory and <span class="green">JavaScript</span> section.
+- Open **Site settings** subcategory and <span class="green">JavaScript</span> section.
 - Disable running JS.
 <li style="list-style-type: none">![chmandrjs](https://faq.mople71.cz/img/en/chmandrjs.png)</li>
 - Tap <span class="green">Add Site Exception</span>.

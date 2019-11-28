@@ -5,23 +5,23 @@ Android has a robust security model which treats all apps as implicitly untruste
 
 > A little theory regarding Android OS security model
 
-Android has a robust multilayer security model. It uses the Linux kernel, implements a <abbr title="Mandatory Access Control">MAC</abbr> and mitigations against *memory corruption* exploits – Android's the only linux distribution not supporting running *non-<abbr title="Position Independent Executable">PIE</abbr>* code. Each app's assigned their unique user ID and runs in a sandbox, thus can't intervene with other apps and only is allowed to operate with files/OS components for which the user gives their permission.
+Android has a robust multilayer security model. It uses the Linux kernel, implements a <abbr title="Mandatory Access Control">MAC</abbr> and mitigations against *memory corruption* exploits – Android's the only linux distribution not supporting running *non-<abbr title="Position Independent Executable">PIE</abbr>* code. Each app's assigned their unique user ID and runs in sandbox, thus can't intervene with other apps and only is allowed to operate with files/OS components for which the user gives their permission.
 
 ![Android Security Model](https://faq.mople71.cz/img/en/and.png)
 <p class="imgsrcf">*The Android security model (modified).* Source: [Android Security 2015 Annual Report](http://source.android.com/security/reports/Google_Android_Security_2015_Report_Final.pdf)</p>
 
 #### Kernel:
-Android is built on the Linux kernel. Linux kernel might not be the best available choice from security perspective, but offers a decent permission model based on users and user groups, process isolation etc.
+Android's built on the Linux kernel. Linux kernel arguably might not be the best choice from security perspective, but offers a decent permission model based on users and user groups, process isolation etc.
 
 #### MAC:
 Android **Kitkat** and above uses a significantly modified Linux MAC implementation – *SEAndroid*. SEAndroid considerably reduces the attack surface and also plays an important role in Android's permission model. Thanks to the MAC implementation, only a tiny portion of code now runs with full root permissions. Major enhancements regarding MAC have been introduced in **Lollipop** and **Oreo** releases.
 
 #### Apps:
-Android requires all apps to be digitally signed – unsigned apps won't run. By default, apps can only be installed from a preinstalled app store – typically **Google Play**. Each app's confined in its own sandbox (*IsolatedProcess*), being isolated from other apps and the OS. Android implements **seccomp** sandbox, providing advanced isolation and higher degree of security. Mentioned sandbox's internally used e.g. by *Google Chrome* app.
+Android requires all apps to be digitally signed – unsigned apps won't run. By default, apps can only be installed from a preinstalled app store – typically **Google Play**. Each app's confined in its own sandbox (*IsolatedProcess*), effectively being isolated from other apps and the OS. Android implements **seccomp** sandbox, providing advanced means isolation and higher degree of security. Seccomp sandbox's internally used e.g. by *Google Chrome* browser.
 
-Android **Marshmallow** and above offers app permission  model – user chooses to which files/components an app gains access. Several enhancements were introduced with every OS release, the last being **Q** right now. <span class="red">Using third-party permission managers (such as *XPrivacy*) is strongly discouraged.</span>
+Android **Marshmallow** and above implements an app permission model – user chooses to which files/components apps gain access. Several enhancements've been introduced with every OS release, the last being **Q** right now. <span class="red">Using third-party permission managers (such as *XPrivacy*) is strongly discouraged.</span>
 
-Features dependent on Google services (e.g. *VerifyApps*, *Google Play Protect*) will be omitted.
+Features dependent on Google services (e.g. *VerifyApps*, *Google Play Protect*) shall be omitted.
 
 #### FAQ is divided into several sections:
 - [Secure Devices](#andr1)
@@ -31,7 +31,7 @@ Features dependent on Google services (e.g. *VerifyApps*, *Google Play Protect*)
 <br>
 
 ## Secure Devices:
-As mentioned above, variety and diversity of devices running Android OS is a major security issue. Only a few manufacturers provide periodical security patches and OS updates for their models, for different reasons. As a result, brand new devices with old OS version and many known vulnerabilities, significantly raising the risk of exploitation, can be found on the market. Such practise unfortunately isn't only limited to cheap models, but more expensive ones as well. Therefore, users are encouraged to consider security parametres when picking their device. Below you'll find several parametres a device should offer in order to be considered.
+As mentioned above, variety and diversity of devices running Android OS is a major security issue. Only a few manufacturers provide periodical security patches and OS updates for their models, for different reasons. As a result, brand new devices with old OS version and many known vulnerabilities – significantly raising the risk of exploitation – can be found on the market. Such practise unfortunately isn't only limited to cheap models, but more expensive ones as well. Users are therefore encouraged to consider security parametres when picking their device. Below you'll find several parametres a device should offer in order to be considered for selection.
 
 ### Security criteria for devices running Android OS:
 - bundled OS version at least **Q** (*10*)
@@ -43,7 +43,7 @@ As mentioned above, variety and diversity of devices running Android OS is a maj
 - *Treble* support
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-There are two levels of monthly security patches – **1st** day of the month and **5th** day of the month. Both levels are applicable for most devices on the market. If the manufacturer provides frequent updates for their device, but only implements the first patch level (e.g. *1 November 2019*), ...</p></div>
+There're two levels of monthly security patches – **1st** day of the month and **5th** day of the month. Both levels are relevant for most devices on the market. If the manufacturer provides frequent updates for their device, but only implements the first patch level (e.g. *1 November 2019*), this may pose an issue.</p></div>
 
 > Why OS version matters
 
@@ -51,7 +51,7 @@ Each new OS release introduces significant security and other enhancements. For 
 
 > Why security updates matter
 
-Let's look at one example. You install a malicious app on older <span class="green">8.1</span> Android – you've got control over app's permissions and can disable superfluous permissions. However, you don't have newest security patches. The app can therefore exploit the OS using a known vulnerability – and user won't notice a thing, ever. Such practise is daily bread for Android malware as it's the simplest and cheapest way of device infection – more than **90 % of the devices hasn't got critical security patches**.
+Let's look at one example. You install a malicious app on older <span class="green">8.1</span> Android – you've got control over app's permissions and can disable shady permissions. However, you don't have the newest security patches. The app can therefore exploit the OS using a known vulnerability – and user won't notice a thing, ever. Such practise's daily bread for Android malware as it's the simplest and cheapest way of device infection – more than **90 % of the devices hasn't got critical security patches**.
 
 <br>
 
@@ -63,12 +63,12 @@ Let's look at one example. You install a malicious app on older <span class="gre
 - higher **<span class="sam">Samsung</span>**'s and **SONY**'s models
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Tip**<br>
-Pro inspiraci se také můžete podívat na [list of recommended devices for enterprises](https://androidenterprisepartners.withgoogle.com/devices/) od Google.</p></div>
+You can also find inspiration in the [list of recommended devices for enterprises](https://androidenterprisepartners.withgoogle.com/devices/) od Google.</p></div>
 
 <br><br><hr><br>
 
 ## Elementary Security Configuration:
-Android is typically safely configured by default, but it never hurts to check the configuration.
+Android's typically safely configured by default, but it never hurts to check your configuration.
 
 > Security config check
 
@@ -99,11 +99,11 @@ Permissions manager empowers user to configure what information and components c
 
 - Open the <span class="green">Settings</span>.
 - Find **Apps & notification** subcategory and enter it.
-- Tap on the <span class="green">App permissions</span>.
+- Tap <span class="green">App permissions</span>.
 - Go through the categories one by one and deny unnecessary access to all apps.
 <li style="list-style-type: none">![andapp](https://faq.mople71.cz/img/en/andapp.png)</li>
 <li style="list-style-type: none">![andapp1](https://faq.mople71.cz/img/en/andapp1.png)</li>
-- Upon finishing, go up a level from *App permissions* and tap on **Advanced**.
+- Upon finishing go up a level from *App permissions* and expand **Advanced** options.
 - Scroll down and enter <span class="green">Special app access</span>.
 - Here you can set e.g. which apps have access to premium SMS or modifying system settings.
 <li style="list-style-type: none">![andapp2](https://faq.mople71.cz/img/cs/andapp2.png)</li>
@@ -119,7 +119,7 @@ Guest account provides a relatively safe means of e.g. browsing the web. Install
 - Open the <span class="green">Settings</span>.
 - Find **Users & accounts** subcategory and enter it.
 - Tap <span class="green">Users</span>.
-- Switch to **Guest** account by tapping on the account in the list.
+- Switch to **Guest** account by tapping it in the list.
 - Should you wish to return, pull down the notification bar and extend **Android system · Guest user**.
 - Tap <span class="green">Remove Guest</span>.
 <li style="list-style-type: none">![andg1](https://faq.mople71.cz/img/en/andg1.png)</li>
@@ -140,14 +140,14 @@ As the source of installed apps, an application store should be considered a cru
 #### Proprietary:
 - Google Play: https://play.google.com/
 
-Stores like *Amazon* or *Samsung* don't always have the latest app releases, especially those frequently updated. Namely Amazon has an extremely long process of checking apps (done manually).
+Stores like *Amazon* or *Samsung* don't always have the latest app releases, especially of the frequently updated apps. Namely Amazon has an extremely long process of checking applications (done manually).
 
 <br>
 
 ### Firewall:
 Firewall's an essential OS security layer providing protection against network attacks. Its use on public WiFi connections is a must.
 
-Integrated FW makes for the best option, unfortunately few ROMs offer any enhancements to the basic firewall. Abusing *VPN API* (NetGuard, NoRoot Data Firewall,&#8230;) may not be the nicest and most reliable implementation, but at least doesn't require destroying the OS's security model.
+Integrated FW makes for the best option, unfortunately few ROMs offer any enhancements to the basic firewall. Abusing *VPN API* (NetGuard, NoRoot Data Firewall,&#8230;) may not be the nicest and most reliable option, but at least doesn't require destroying the OS's security model and works quite well.
 
 #### FOSS:
 - integrated
@@ -159,7 +159,7 @@ Integrated FW makes for the best option, unfortunately few ROMs offer any enhanc
 <br>
 
 ### Ad Blocking:
-Ad blocking has become a necessity beacuse of the web's amount of malicious ads. Supporting your favourite websites should be done in a different and more secure way – donations, subscribtions,&#8230;
+Ad blocking's become a necessity beacuse of the web's amount of malicious ads. Supporting your favourite websites should be carrited out in a different and more secure way – donations, subscribtions,&#8230;
 
 #### FOSS Local VPN:
 - Blokada: http://blokada.org/
@@ -176,12 +176,12 @@ Ad blocking has become a necessity beacuse of the web's amount of malicious ads.
 - Google Chrome
 - &#8230;
 
-VPN is a great option for blocking ads, unfortunately Android doesn't implement *OpenVPN* and users have to rely on their provider's application. Using a web browser capable of blocking ads would be the best option. **Chrome** already blocks aggressive ads. **Brave** browser by default blocks ads and trackers.
+VPN's a great option for blocking ads, unfortunately Android doesn't natively support *OpenVPN* nor *WireGuard*, and users in most cases have to rely on third-party (typically their provider's) apps. Using a web browser capable of blocking ads appears as the best available option. **Chrome** already blocks aggressive ads. **Brave** browser by default blocks ads and trackers.
 
 <br>
 
 ### Web Browser:
-Chrome/Chromium is a browser with superior exploit mitigations. Browsers based on *Mozilla Firefox* are still lagging behind Chrome, especially on Android OS.
+Chrome/Chromium's a browser with superior exploit mitigations. Browsers based on *Mozilla Firefox* are still lagging behind Chrome, especially on Android OS.
 
 #### FOSS:
 - Chromium: https://www.chromium.org/developers/how-tos/android-build-instructions

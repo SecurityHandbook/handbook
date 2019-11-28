@@ -1,7 +1,7 @@
 # FAQ – OS Linux
-Due to its minor share of desktop installations, Linux OS enjoys little attention from hackers – majority of Linux malware's targeted towards servers. Malware for desktops does exist, but in significantly lower numbers. As a result, while some Linux distributions are in horrendous condition from security perspective, the risk of infection is in practice lower than with different OSs. Yet, modern *exploit kits* are often multiplatform and their numbers are rising. Sufficient OS security is therefore essential.
+Thanks to its minor share on desktop installations, Linux OS on desktop gets little attention from hackers – majority of Linux malware's targeted towards servers. Malware for desktops does exist, but in considerably lower numbers. As a result, while some Linux distributions are in horrendous condition from security perspective, the risk of infection's in practice lower than with different OSs. Yet, modern *exploit kits* are often multiplatform and their numbers are rising. Sufficient OS security is therefore essential.
 
-This FAQ chapter is designed for everyday and intermediate users. Chapter for the advanced can be found [here](https://faq.mople71.cz/en/lnx/adv.php#lnx).
+This FAQ chapter's designed for everyday and intermediate users. Chapter for the advanced can be found [here](https://faq.mople71.cz/en/lnx/adv.php#lnx).
 
 #### FAQ is divided into several sections:
 - [Recommended Distributions](#lnx1)
@@ -18,20 +18,20 @@ This FAQ chapter is designed for everyday and intermediate users. Chapter for th
 
 Inside Linux OS chapter, you'll mostly find tips for the **Fedora** distribution.
 
-**<span class="fe">Fedora</span>** is the best choice for everyday user as it's quite secure by default. It uses GNOME, offers simple Flatpak apps installation, contains a robust SELinux implementation and has high standards for its packages – all must be compiled with important memory corruption mitigations. Apart from technical features the distribution provides stable up-to-date software. The only caveat are occasional slow web browser updates due to the large amount of distro-specific changes (patches) which must be updated with every new release.
+**<span class="fe">Fedora</span>** is the best choice for everyday user as it's quite secure by default. It uses GNOME, offers simple Flatpak apps installation, contains a robust SELinux implementation and has high standards for its packages – all must be compiled with important memory corruption mitigations. Apart from technical features, the distribution provides stable up-to-date software. The only caveat are occasional slow web browser updates due to the large amount of distro-specific changes (patches), which must be updated with every new release.
 
-At some places, you'll also find steps for the **<span class="os">openSUSE</span>** distribution and **<span class="ub">Ubuntu</span>** distribution, of which the latter is very popular but less suitable in terms of security.
+At some places, you'll also find steps for the **<span class="os">openSUSE</span>** & **<span class="ub">Ubuntu</span>** distributions, of which the latter's very popular – but less suitable in terms of security.
 
 Most of the information are valid for other distributions as well, the only difference's in syntax.
 
 ### Recommended graphical interface:
-From the security perspective, the most reasonable choice is the [GNOME](https://www.gnome.org/) interface as it uses Wayland instead of X.org and participates in Flatpak development. *GNOME Classic* is an exception as it primarily uses X.org – therefore isn't recommended.
+From the security perspective, [GNOME](https://www.gnome.org/) interface appears to be the most reasonable choice, as it uses Wayland instead of X.org and participates in Flatpak development. *GNOME Classic*'s an exception as it primarily uses X.org – therefore isn't recommended.
 
 <br><br><hr><br>
 
 ## Elementary Security Configuration:
 ### Separating /tmp partition at installation and its secure mount:
-Malware's often executed from temporary folders. As a result, disabling execution in temporary folders (namely /tmp) incapacitates many families of malware.
+Malware's often executed from temporary folders. As a result, disabling execution in temporary folders (namely /tmp) incapacitates whole families of malware.
 
 > Guide
 
@@ -52,12 +52,12 @@ If you're not familiar with the word DNS, take a look at the following [short vi
 <li style="list-style-type: none">![lnxnet](https://faq.mople71.cz/img/en/lnxnet.png)
 ![lnxnet1](https://faq.mople71.cz/img/en/lnxnet1.png)</li>
 - Switch to the **IPv4** card and turn off <span class="green">Automatic</span> DNS in the **DNS** section.
-- Fill in following DNS servers into the empty line:
+- Input following DNS servers into the empty line:
 <li style="list-style-type: none"><pre><code>193.17.47.1,185.43.135.1</code></pre></li>
 <li style="list-style-type: none">![lnxnet2](https://faq.mople71.cz/img/en/lnxnet2.png)</li>
-- For *IPv6* repeat the process using following servers:
+- For *IPv6* repeat the process using the following servers:
 <li style="list-style-type: none"><pre><code>2001:148f:ffff::1,2001:148f:fffe::1</code></pre></li>
-- Click on <span class="green">Apply</span> and close the settings.
+- Click <span class="green">Apply</span> and close the settings.
 
 > Disabling IPv6
 
@@ -67,9 +67,9 @@ In case you don't need IPv6 (if unsure you can try this [test](https://test-ipv6
 <li style="list-style-type: none"><pre><code>sudo -i
 dnf -y install nano
 nano /etc/default/grub</code></pre></li>
-- Find the line starting with <span class="green">GRUB_CMDLINE_LINUX_DEFAULT</span> and write "<span class="red"> ipv6.disable=1</span>" in front of the last quote mark. The line will now look like this:
+- Find the line starting with <span class="green">GRUB_CMDLINE_LINUX_DEFAULT</span> and write "<span class="red"> ipv6.disable=1</span>" just before the last quote mark. The line will now look like this:
 <li style="list-style-type: none"><pre><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash ipv6.disable=1"</code></pre></li>
-- Press shortcut <span class="green">Ctrl + X</span>. In order to save the changes press <span class="red">Y</span> and then <span class="green">Enter</span>.
+- Press <span class="green">Ctrl + X</span> shortcut. Save the changes by pressing <span class="red">Y</span> and then <span class="green">Enter</span>.
 - You'll be returned to the console. Run the following commands:
 <li style="list-style-type: none"><pre><code>grub2-mkconfig -o /boot/grub2/grub.cfg
 exit
@@ -123,13 +123,13 @@ Firewall's an essential OS security layer providing protection against network a
 <br>
 
 ### MAC:
-<abbr title="Mandatory Access Control">MAC</abbr> has become an important layer of Linux distributions' security model. For detailed explanation take a look at e.g. [Wikipedia](https://en.wikipedia.org/wiki/Mandatory_access_control).
+<abbr title="Mandatory Access Control">MAC</abbr>'s become an important layer of Linux distributions' security model. For detailed explanation take a look at e.g. [Wikipedia – MAC](https://en.wikipedia.org/wiki/Mandatory_access_control).
 
 **<span class="fe">Fedora</span>** implements **SELinux**.
 
-**<span class="os">openSUSE</span>** implements **AppArmor**, a MAC offering lesser protection than e.g. SELinux.
+**<span class="os">openSUSE</span>** implements **AppArmor**, a MAC offering lesser protection means than e.g. SELinux.
 
-**<span class="ub">Ubuntu</span>** implements **AppArmor**, a MAC offering lesser protection than e.g. SELinux.
+**<span class="ub">Ubuntu</span>** implements **AppArmor**, a MAC offering lesser protection means than e.g. SELinux.
 
 <br>
 
