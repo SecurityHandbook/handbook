@@ -140,8 +140,9 @@ Brave používá špičkovou implementaci sandboxu.
 <li style="list-style-type: none">![brvand2](https://faq.mople71.cz/img/cs/brvand2.png)</li>
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Nyní máte ve výchozím nastavení vypnutý JS pro všechny weby. Jakmile budete chtít spuštění JS pro určitý web povolit, stačí poklepat na ikonu prohlížeče v horním panelu a skripty povolit.<br><br>
-![brvand3](https://faq.mople71.cz/img/cs/brvand3.png)</p></div>
+Nyní máte ve výchozím nastavení vypnutý JS pro všechny weby. Jakmile budete chtít spuštění JS pro určitý web povolit, stačí poklepat na ikonu prohlížeče v horním panelu a skripty povolit.</p></div>
+
+![brvand3](https://faq.mople71.cz/img/cs/brvand3.png)
 
 -----------------------------------
 -----------------------------------

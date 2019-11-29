@@ -1,7 +1,7 @@
 # FAQ – OS Linux
 Thanks to its minor share on desktop installations, Linux OS on desktop gets little attention from hackers – majority of Linux malware's targeted towards servers. Malware for desktops does exist, but in considerably lower numbers. As a result, while some Linux distributions are in horrendous condition from security perspective, the risk of infection's in practice lower than with different OSs. Yet, modern *exploit kits* are often multiplatform and their numbers are rising. Sufficient OS security is therefore essential.
 
-This FAQ chapter's designed for everyday and intermediate users. Chapter for the advanced can be found [here](https://faq.mople71.cz/en/lnx/adv.php#lnx).
+This FAQ chapter's designed for everyday and intermediate users. Chapter for the advanced can be found [here](https://securityhandbook.cz/en/lnx/adv.php#lnx).
 
 #### FAQ is divided into several sections:
 - [Recommended Distributions](#lnx1)
@@ -49,12 +49,12 @@ If you're not familiar with the word DNS, take a look at the following [short vi
 - Open your <span class="green">Settings</span>.
 - Choose <span class="green">Wi-Fi</span> or <span class="green">Network</span> from the menu, depending on your connection type.
 - Find the desired connection in the list and open its configuration.
-<li style="list-style-type: none">![lnxnet](https://faq.mople71.cz/img/en/lnxnet.png)
-![lnxnet1](https://faq.mople71.cz/img/en/lnxnet1.png)</li>
+<li style="list-style-type: none">![lnxnet](https://securityhandbook.cz/img/en/lnxnet.png)
+![lnxnet1](https://securityhandbook.cz/img/en/lnxnet1.png)</li>
 - Switch to the **IPv4** card and turn off <span class="green">Automatic</span> DNS in the **DNS** section.
 - Input following DNS servers into the empty line:
 <li style="list-style-type: none"><pre><code>193.17.47.1,185.43.135.1</code></pre></li>
-<li style="list-style-type: none">![lnxnet2](https://faq.mople71.cz/img/en/lnxnet2.png)</li>
+<li style="list-style-type: none">![lnxnet2](https://securityhandbook.cz/img/en/lnxnet2.png)</li>
 - For *IPv6* repeat the process using the following servers:
 <li style="list-style-type: none"><pre><code>2001:148f:ffff::1,2001:148f:fffe::1</code></pre></li>
 - Click <span class="green">Apply</span> and close the settings.
@@ -83,11 +83,11 @@ exit</code></pre></li>
   - Open your <span class="green">Settings</span> and choose **Devices** from the menu.
   - Click on <span class="green">Removable Media</span>
   - Tick the <span class="green">Never prompt or start programs on media insertion</span> option.
-  <li style="list-style-type: none">![lnxar](https://faq.mople71.cz/img/en/lnxar.png)</li>
+  <li style="list-style-type: none">![lnxar](https://securityhandbook.cz/img/en/lnxar.png)</li>
 - Disable sharing:
   - Open your <span class="green">Settings</span> and choose <span class="green">Sharing</span> from the menu.
   - Check the sharing's turned off and correct if necessary.
-  <li style="list-style-type: none">![lnxshare](https://faq.mople71.cz/img/en/lnxshare.png)</li>
+  <li style="list-style-type: none">![lnxshare](https://securityhandbook.cz/img/en/lnxshare.png)</li>
 
 <br><br><hr><br>
 
@@ -153,4 +153,4 @@ Firewall's an essential OS security layer providing protection against network a
 
 <br><br><hr>
 
-<h3 class="nocol">That's all. Stay safe! ![smile](https://mople71.cz/img/sm/smile.svg)</h3>
+<h3 class="nocol">That's all. Stay safe! <img class="smile" src="https://securityhandbook.cz/img/sm/smile.svg" alt="smile"></h3>

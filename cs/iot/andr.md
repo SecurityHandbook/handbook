@@ -87,7 +87,7 @@ Android je většinou bezpečně nastaven již v základu, není ovšem od věci
 - Zkontrolujte, zdali máte aktuální **verzi systému Android** – **10.0** či výše.
 - Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
 <li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
-- Máte-li starší *verzi systému Android* než **9.O** a výrobce nepotvrdil aktualizaci, zařízení je implicitně nebezpečné – můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než **3 měsíce**, zařízení není bezpečné – můžete se dívat po náhradě.
+- Máte-li starší *verzi systému Android* než **9.0** a výrobce nepotvrdil aktualizaci, zařízení je implicitně nebezpečné – můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než **3 měsíce**, zařízení není bezpečné – můžete se dívat po náhradě.
 - Aplikaci zavřete.
 
 <br>

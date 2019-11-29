@@ -7,7 +7,7 @@ Android has a robust security model which treats all apps as implicitly untruste
 
 Android has a robust multilayer security model. It uses the Linux kernel, implements a <abbr title="Mandatory Access Control">MAC</abbr> and mitigations against *memory corruption* exploits – Android's the only linux distribution not supporting running *non-<abbr title="Position Independent Executable">PIE</abbr>* code. Each app's assigned their unique user ID and runs in sandbox, thus can't intervene with other apps and only is allowed to operate with files/OS components for which the user gives their permission.
 
-![Android Security Model](https://faq.mople71.cz/img/en/and.png)
+![Android Security Model](https://securityhandbook.cz/img/en/and.png)
 <p class="imgsrcf">*The Android security model (modified).* Source: [Android Security 2015 Annual Report](http://source.android.com/security/reports/Google_Android_Security_2015_Report_Final.pdf)</p>
 
 #### Kernel:
@@ -86,8 +86,8 @@ Android's typically safely configured by default, but it never hurts to check yo
 - Tap on the <span class="green">About phone</span>.
 - Check whether your **Android OS version** is up-to-date – **10.0** or above.
 - Check whether your **Android security patch level** is the newest available.
-<li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/en/andinf.png)</li>
-- Should your device run older *Android OS version* than **9.O** and the manufacturer hasn't confirmed an update, it's inherently insecure – consider looking for a replacement. Should your device contain older *Android security patch level* than **3 months**, it's unsafe to use – consider looking for a replacement.
+<li style="list-style-type: none">![andinf](https://securityhandbook.cz/img/en/andinf.png)</li>
+- Should your device run older *Android OS version* than **9.0** and the manufacturer hasn't confirmed an update, it's inherently insecure – consider looking for a replacement. Should your device contain older *Android security patch level* than **3 months**, it's unsafe to use – consider looking for a replacement.
 - Close the app.
 
 <br>
@@ -101,12 +101,12 @@ Permissions manager empowers user to configure what information and components c
 - Find **Apps & notification** subcategory and enter it.
 - Tap <span class="green">App permissions</span>.
 - Go through the categories one by one and deny unnecessary access to all apps.
-<li style="list-style-type: none">![andapp](https://faq.mople71.cz/img/en/andapp.png)</li>
-<li style="list-style-type: none">![andapp1](https://faq.mople71.cz/img/en/andapp1.png)</li>
+<li style="list-style-type: none">![andapp](https://securityhandbook.cz/img/en/andapp.png)</li>
+<li style="list-style-type: none">![andapp1](https://securityhandbook.cz/img/en/andapp1.png)</li>
 - Upon finishing go up a level from *App permissions* and expand **Advanced** options.
 - Scroll down and enter <span class="green">Special app access</span>.
 - Here you can set e.g. which apps have access to premium SMS or modifying system settings.
-<li style="list-style-type: none">![andapp2](https://faq.mople71.cz/img/cs/andapp2.png)</li>
+<li style="list-style-type: none">![andapp2](https://securityhandbook.cz/img/en/andapp2.png)</li>
 - Close the app.
 
 <br>
@@ -122,7 +122,7 @@ Guest account provides a relatively safe means of e.g. browsing the web. Install
 - Switch to **Guest** account by tapping it in the list.
 - Should you wish to return, pull down the notification bar and extend **Android system · Guest user**.
 - Tap <span class="green">Remove Guest</span>.
-<li style="list-style-type: none">![andg1](https://faq.mople71.cz/img/en/andg1.png)</li>
+<li style="list-style-type: none">![andg1](https://securityhandbook.cz/img/en/andg1.png)</li>
 - Confirm the action.
 
 <br><br><hr><br>
@@ -196,4 +196,4 @@ Chrome/Chromium's a browser with superior exploit mitigations. Browsers based on
 
 <br><br><hr>
 
-<h3 class="nocol">That's all. Stay safe! ![smile](https://mople71.cz/img/sm/smile.svg)</h3>
+<h3 class="nocol">That's all. Stay safe! <img class="smile" src="https://securityhandbook.cz/img/sm/smile.svg" alt="smile"></h3>

@@ -3,7 +3,7 @@ Thanks to its minor share on desktop installations, Linux OS on desktop gets lit
 
 This chapter focuses on advanced techniques of securing Linux (not only) desktop, taking the **Arch Linux** distro hostage, a distro which can be turned into a fairly secure installation with appropriate configuration. Steps described below can be applied on most distributions with proper modification of syntax.
 
-It's expected you've read FAQ [OS Linux for less advanced](https://faq.mople71.cz/en/lnx/index.php#lnx) users and have at least the knowledge discussed there.
+It's expected you've read FAQ [OS Linux for less advanced](https://securityhandbook.cz/en/lnx/index.php#lnx) users and have at least the knowledge discussed there.
 
 #### FAQ is divided into several sections:
 - [Malware protection](#lnx1)
@@ -18,7 +18,7 @@ Simply disabling FORWARD and properly configuring INPUT chains is sufficient for
 
 As for whitelisting outgoing communication (application FW), *nftables* isn't the most comfortable option. Implementing app FW through <abbr title="Mandatory Access Control">MAC</abbr> would be considerably easier.
 
-> Ruleset example for an ordinary desktop:
+> Ruleset example for an ordinary desktop
 
 <pre><code>/etc/nftables.conf
 -----------------------------------
@@ -47,9 +47,9 @@ table inet filter {
 
 **SELinux** provides a robust MAC implementation, but the configuration can be tricky. It's used by e.g. **<span class="fe">Fedora</span>** and plays an important role in Android's security model.
 
-**AppArmor** is a MAC implementation offering lower protection than SELinux (e.g. cannot restrict ioctls). It's used by e.g. **<span class="os">openSUSE</span>** or **<span class="ub">Ubuntu</span>**.
+**AppArmor** is a MAC implementation offering lesser protection means than (e.g. cannot restrict ioctls). It's used by e.g. **<span class="os">openSUSE</span>** or **<span class="ub">Ubuntu</span>**.
 
-**TOMOYO Linux** is a solid MAC implementation offering better security capabilities than AppArmor and much simpler configuration than SELinux.
+**TOMOYO Linux** is a solid MAC implementation offering better security capabilities than AppArmor and considerably simpler configuration than SELinux.
 
 It's easy to use TOMOYO or AppArmor with Arch Linux, whilst TOMOYO doesn't require compiling custom kernel. Using SELinux isn't that simple.
 
@@ -136,7 +136,7 @@ Packages can be compiled with *memory corruption* mitigations (ASLR, PIE, RELRO,
 
 For ASLR to work properly, all running processes need to be compiled as **PIE**. The combination then forms a rather solid mitigation – that is on the *64-bit* architecture anyway. Canaries are not so great, their potential absence can be forgiven.
 
-*Arch Linux*'s packages contain mentioned mitigations. Same applies to e.g. *Fedora*, however the situation may be different with other distributions. Packages missing the mentioned mitigations require manual compilation.
+*Arch Linux*'s packages contain mentioned mitigations. Same applies to e.g. *Fedora*, however the situation may be different with other distributions. Packages lacking the mentioned mitigations require manual compilation.
 
 > Audit of running processes
 
@@ -151,11 +151,11 @@ For ASLR to work properly, all running processes need to be compiled as **PIE**.
 <li style="list-style-type: none"><pre><code>sudo pacman -S asp gnupg
 asp export extra/networkmanager
 cd ./networkmanager</code></pre></li>
-- Initiate compilation & automatic installation:
+- Initiate compilation & automatic install:
 <li style="list-style-type: none"><pre><code>makepkg -si</code></pre></li>
 - Reboot after the successful installation.
 
-> Automating compilation of problematic packages:
+> Automating compilation of problematic packages
 
 - Use **srcpac**.
 <li style="list-style-type: none"><pre><code>sudo pacman -S srcpac
@@ -222,4 +222,4 @@ Checksec's a script enabling kernel security config checkup and review of *memor
 
 <br><br><hr>
 
-<h3 class="nocol">That's all. Stay safe! ![smile](https://mople71.cz/img/sm/smile.svg)</h3>
+<h3 class="nocol">That's all. Stay safe! <img class="smile" src="https://securityhandbook.cz/img/sm/smile.svg" alt="smile"></h3>

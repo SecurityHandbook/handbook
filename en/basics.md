@@ -22,7 +22,7 @@
 - Download all SW exclusively from its official website.
 - Use strong passwords that are easy to remember:
 <li style="list-style-type: none"><p class="imgsrc">*Password Strength.* Source: https://xkcd.com/936/ | [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)</p>
-![password_strength_sm](https://faq.mople71.cz/img/en/passwd.png)</li>
+![password_strength_sm](https://securityhandbook.cz/img/en/passwd.png)</li>
 - Use a different password for each service, consider using a [password manager](#basics8).
 - Don't connect to unknown/public networks and avoid using unsafe protocols – HTTP, FTP,&#8230; – or at least don't send any personal data through them. Consider using a VPN.
 - Pay attention to where you enter what data – selling personal data is a highly profitable business.

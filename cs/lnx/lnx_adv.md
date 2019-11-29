@@ -18,7 +18,7 @@ Pro běžné počítače stačí zakázat FORWARD chain a bezpečně nastavit IN
 
 Co se týče whitelistu odchozí komunikace (aplikační FW), *nftables* není nejpříjemnější možností. Mnohem snazší by bylo aplikační FW implementovat skrz <abbr title="Mandatory Access Control">MAC</abbr>.
 
-> Příklad pravidel pro běžný počítač:
+> Příklad pravidel pro běžný počítač
 
 <pre><code>/etc/nftables.conf
 -----------------------------------
@@ -127,7 +127,7 @@ TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spušt�
 ## Ochrana proti exploitaci:
 ### Hardened alokátor:
 - https://github.com/grapheneos/hardened_malloc
-- nefungují: man, občas **nftables** či gnome-control-center
+- nefungují: man, občas **netfilter** či gnome-control-center
 
 <br>
 
