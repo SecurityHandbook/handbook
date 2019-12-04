@@ -1,2 +1,2 @@
-# FAQ – OS Windows
+# FAQ – Windows OS
 ...

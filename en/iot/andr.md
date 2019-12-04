@@ -43,11 +43,11 @@ As mentioned above, variety and diversity of devices running Android OS is a maj
 - *Treble* support
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-There're two levels of monthly security patches – **1st** day of the month and **5th** day of the month. Both levels are relevant for most devices on the market. If the manufacturer provides frequent updates for their device, but only implements the first patch level (e.g. *1 November 2019*), this may pose an issue.</p></div>
+There're two levels of monthly security patches – **1st** day of month and **5th** day of month. Both levels are relevant for most devices on the market. If a manufacturer provides frequent updates for their device, but only implements the first patch level (e.g. *1 November 2019*), this may pose an issue.</p></div>
 
 > Why OS version matters
 
-Each new OS release introduces significant security and other enhancements. For example, **Marshmallow** introduced app permission model, empowering users to choose what each app can access. **Nougat** introduced a rewritten *MediaServer*, effectively incapacitating several families of exploits such as *Stagefright*. **Oreo** elevated sandboxing to a whole new level by introducing *Project Treble* and flat use of *seccomp* for apps. Above that enhanced *WebView* and app permission model. The list goes on for every release. It can be said with a clear conscience that <span class="red">no OS Android release prior to *Pie* is secure and shouldn't be used.</span>
+Each new OS release introduces significant security and other enhancements. For example, **Marshmallow** introduced app permission model, empowering users to choose what each app can access. **Nougat** introduced a rewritten *MediaServer*, effectively incapacitating several families of exploits such as *Stagefright*. **Oreo** elevated sandboxing to a whole new level by introducing *Project Treble* and flat use of *seccomp* for apps. Above that enhanced *WebView* and app permission model. The list goes on for every release. It can be said with a clear conscience that <span class="red">no Android OS release prior to *Pie* is secure and shouldn't be used.</span>
 
 > Why security updates matter
 

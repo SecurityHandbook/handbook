@@ -1,9 +1,9 @@
-# FAQ – OS Linux
+# FAQ – Linux OS
 Thanks to its minor share on desktop installations, Linux OS on desktop gets little attention from hackers – majority of Linux malware's targeted towards servers. Malware for desktops does exist, but in considerably lower numbers. As a result, while some Linux distributions are in horrendous condition from security perspective, the risk of infection's in practice lower than with different OSs. Yet, modern *exploit kits* are often multiplatform and their numbers are rising. Sufficient OS security is therefore essential.
 
 This chapter focuses on advanced techniques of securing Linux (not only) desktop, taking the **Arch Linux** distro hostage, a distro which can be turned into a fairly secure installation with appropriate configuration. Steps described below can be applied on most distributions with proper modification of syntax.
 
-It's expected you've read FAQ [OS Linux for less advanced](https://securityhandbook.cz/en/lnx/index.php#lnx) users and have at least the knowledge discussed there.
+It's expected you've read FAQ [Linux OS for less advanced](https://securityhandbook.cz/en/lnx/index.php#lnx) users and have at least the knowledge discussed there.
 
 #### FAQ is divided into several sections:
 - [Malware protection](#lnx1)
@@ -47,7 +47,7 @@ table inet filter {
 
 **SELinux** provides a robust MAC implementation, but the configuration can be tricky. It's used by e.g. **<span class="fe">Fedora</span>** and plays an important role in Android's security model.
 
-**AppArmor** is a MAC implementation offering lesser protection means than (e.g. cannot restrict ioctls). It's used by e.g. **<span class="os">openSUSE</span>** or **<span class="ub">Ubuntu</span>**.
+**AppArmor** is a MAC implementation offering lesser protection means than SELinux (e.g. cannot restrict ioctls). It's used by e.g. **<span class="os">openSUSE</span>** or **<span class="ub">Ubuntu</span>**.
 
 **TOMOYO Linux** is a solid MAC implementation offering better security capabilities than AppArmor and considerably simpler configuration than SELinux.
 
@@ -143,7 +143,7 @@ For ASLR to work properly, all running processes need to be compiled as **PIE**.
 <pre><code>checksec --proc-all</code></pre>
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-**Checksec** script's presented further below.</p></div>
+**Checksec** script's discussed further below.</p></div>
 
 > Compiling an app with mitigations
 

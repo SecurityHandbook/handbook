@@ -1,4 +1,4 @@
-# FAQ – OS Linux
+# FAQ – Linux OS
 Thanks to its minor share on desktop installations, Linux OS on desktop gets little attention from hackers – majority of Linux malware's targeted towards servers. Malware for desktops does exist, but in considerably lower numbers. As a result, while some Linux distributions are in horrendous condition from security perspective, the risk of infection's in practice lower than with different OSs. Yet, modern *exploit kits* are often multiplatform and their numbers are rising. Sufficient OS security is therefore essential.
 
 This FAQ chapter's designed for everyday and intermediate users. Chapter for the advanced can be found [here](https://securityhandbook.cz/en/lnx/adv.php#lnx).
@@ -16,7 +16,7 @@ This FAQ chapter's designed for everyday and intermediate users. Chapter for the
 - **<span class="os">openSUSE</span>** (Leap): https://www.opensuse.org/#Leap
 - **<span class="ub">Ubuntu</span>**: https://www.ubuntu.com/desktop
 
-Inside Linux OS chapter, you'll mostly find tips for the **Fedora** distribution.
+Inside Linux OS chapter, you'll mostly find tips for **Fedora** distribution.
 
 **<span class="fe">Fedora</span>** is the best choice for everyday user as it's quite secure by default. It uses GNOME, offers simple Flatpak apps installation, contains a robust SELinux implementation and has high standards for its packages – all must be compiled with important memory corruption mitigations. Apart from technical features, the distribution provides stable up-to-date software. The only caveat are occasional slow web browser updates due to the large amount of distro-specific changes (patches), which must be updated with every new release.
 
@@ -69,7 +69,7 @@ dnf -y install nano
 nano /etc/default/grub</code></pre></li>
 - Find the line starting with <span class="green">GRUB_CMDLINE_LINUX_DEFAULT</span> and write "<span class="red"> ipv6.disable=1</span>" just before the last quote mark. The line will now look like this:
 <li style="list-style-type: none"><pre><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash ipv6.disable=1"</code></pre></li>
-- Press <span class="green">Ctrl + X</span> shortcut. Save the changes by pressing <span class="red">Y</span> and then <span class="green">Enter</span>.
+- Press <span class="green">Ctrl + X</span>. Save the changes by pressing <span class="red">Y</span> and then <span class="green">Enter</span>.
 - You'll be returned to the console. Run the following commands:
 <li style="list-style-type: none"><pre><code>grub2-mkconfig -o /boot/grub2/grub.cfg
 exit
@@ -92,7 +92,7 @@ exit</code></pre></li>
 <br><br><hr><br>
 
 ## Malware Protection:
-Configuration consisting of several layers (*&bdquo;layered config&ldquo;*) is considered best means of protection against malware – should one layer fail, another comes into play. The OS itself provides a certain level of malware protection which varies across distributions. However, not all security features are usually enabled and/or properly configured by default.
+Configuration consisting of several layers (*&bdquo;layered config&ldquo;*) is considered the best means of protection against malware – should one layer fail, another comes into play. The OS itself provides a certain level of malware protection which varies across distributions. However, not all security features are usually enabled and/or properly configured by default.
 
 <br>
 
