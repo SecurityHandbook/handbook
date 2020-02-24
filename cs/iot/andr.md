@@ -7,7 +7,7 @@ Android má robustní bezpečnostní model, který předpokládá, že aplikace 
 
 Android má robustní vícevrstevný bezpečnostní model. Používá linuxové jádro, implementuje <abbr title="Mandatory Access Control">MAC</abbr> a mitigace proti *memory corruption* exploitům – Android je jediná linuxová distribuce, která neumožňuje spuštění *non-<abbr title="Position Independent Executable">PIE</abbr>* kódu. Každé aplikaci je přiřazen unikátní uživatelský ID, aplikace je uzavřena v sandboxovaném prostředí, nemůže operovat s žádnou jinou aplikací a je jí umožněno operovat pouze se soubory/komponenty OS, ke kterými dostane oprávnění od vlastníka zařízení.
 
-![Android Security Model](https://faq.mople71.cz/img/en/and.png)
+![Android Security Model](https://securityhandbook.cz/img/en/and.png)
 <p class="imgsrcf">*The Android security model (upraveno).* Zdroj: [Android Security 2015 Annual Report](http://source.android.com/security/reports/Google_Android_Security_2015_Report_Final.pdf)</p>
 
 #### Jádro:
@@ -86,7 +86,7 @@ Android je většinou bezpečně nastaven již v základu, není ovšem od věci
 - Klikněte na <span class="green">Informace o telefonu</span>.
 - Zkontrolujte, zdali máte aktuální **verzi systému Android** – **10.0** či výše.
 - Zkontrolujte, zdali máte nejnovější **úroveň opravy zabezpečení Android**.
-<li style="list-style-type: none">![andinf](https://faq.mople71.cz/img/cs/andinf.png)</li>
+<li style="list-style-type: none">![andinf](https://securityhandbook.cz/img/cs/andinf.png)</li>
 - Máte-li starší *verzi systému Android* než **9.0** a výrobce nepotvrdil aktualizaci, zařízení je implicitně nebezpečné – můžete se dívat po náhradě. Máte-li starší *úroveň opravy zabezpečení Android* než **3 měsíce**, zařízení není bezpečné – můžete se dívat po náhradě.
 - Aplikaci zavřete.
 
@@ -101,12 +101,12 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 - Nalezněte podkategorii **Aplikace a oznámení** a otevřete ji.
 - Klikněte na <span class="green">Oprávnění aplikací</span>.
 - Otevřete postupně všechny kategorie a zakažte všem aplikacím nepotřebný přístup.
-<li style="list-style-type: none">![andapp](https://faq.mople71.cz/img/cs/andapp.png)</li>
-<li style="list-style-type: none">![andapp1](https://faq.mople71.cz/img/cs/andapp1.png)</li>
+<li style="list-style-type: none">![andapp](https://securityhandbook.cz/img/cs/andapp.png)</li>
+<li style="list-style-type: none">![andapp1](https://securityhandbook.cz/img/cs/andapp1.png)</li>
 - Po dokončení nastavení oprávnění se z kategorie **Oprávnění aplikací** přesuňte o úroveň výše, rozklikněte **Rozšířená nastavení**.
 - Otevřete <span class="green">Přístup ke spec. aplikacím</span>.
 - Zde můžete nastavit např. které aplikace mají přístup k prémiovým SMS nebo mohou měnit nastavení systému.
-<li style="list-style-type: none">![andapp2](https://faq.mople71.cz/img/cs/andapp2.png)</li>
+<li style="list-style-type: none">![andapp2](https://securityhandbook.cz/img/cs/andapp2.png)</li>
 - Aplikaci zavřete.
 
 <br>
@@ -119,10 +119,10 @@ Pod účtem hosta můžete relativně v bezpečí např. prohlížet rizikové i
 - Stáhněte dolů notifikační lištu dvěma prsty, případně ji rozšiřte kliknutím na šipku v pravém dolním rohu.
 - V pravém dolním sloupci klikněte na obrázek svého uživatelského účtu.
 - Zobrazí se seznam uživatelských účtů. Klikněte na tlačítko <span class="green">Přidat hosta</span>.
-<li style="list-style-type: none">![andg](https://faq.mople71.cz/img/cs/andg.png)</li>
+<li style="list-style-type: none">![andg](https://securityhandbook.cz/img/cs/andg.png)</li>
 - Budete automaticky přepnuti na uživatele hosta.
 - Jakmile z účtu hosta budete chtít odejít, stáhněte notifikační lištu a klikněte na tlačítko <span class="green">Odstranit hosta</span>.
-<li style="list-style-type: none">![andg1](https://faq.mople71.cz/img/cs/andg1.png)</li>
+<li style="list-style-type: none">![andg1](https://securityhandbook.cz/img/cs/andg1.png)</li>
 - Odstranění potvrďte.
 
 <br><br><hr><br>
@@ -196,4 +196,4 @@ Chrome/Chromium je prohlížeč s nejkvalitnějšími mitigacemi proti exploitů
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.svg)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://securityhandbook.cz/img/sm/smile.svg)</h3>

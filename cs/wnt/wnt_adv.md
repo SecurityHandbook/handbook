@@ -3,7 +3,7 @@ Windows se jakožto nejrozšířenější desktopový OS těší velké pozornos
 
 V FAQ pro pokročilé se budeme věnovat hlavně vestavěným funkcím OS &ndash; cílem je dosáhnout špičkového zabezpečení za použití co nejméně kódu, jehož velikost s aplikacemi třetích stran rapidně roste.
 
-Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Windows pro méně pokročilé](https://faq.mople71.cz/cs/wnt/index.php#wnt) uživatele a máte znalosti ve zmíněné sekci rozebírané.
+Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Windows pro méně pokročilé](https://securityhandbook.cz/cs/wnt/index.php#wnt) uživatele a máte znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
 - [Bezpečnostní aplikace](#wnt1)
@@ -28,14 +28,14 @@ Návod měl původně být v sekci pro méně pokročilé, ovšem z důvodu nep�
 
 - Otevřete si **hledání Windows**, do vyhledávacího pole zadejte:
 <li style="list-style-type: none"><pre><code>wf.msc</code></pre></li>
-- Na nalezenou položku klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/icons/admin.png) **Spustit jako správce**.
-<li style="list-style-type: none">![wdf](https://faq.mople71.cz/img/cs/wdf.png)</li>
+- Na nalezenou položku klikněte pravým tlačítkem a zvolte možnost: ![admin](https://securityhandbook.cz/img/icons/admin.png) **Spustit jako správce**.
+<li style="list-style-type: none">![wdf](https://securityhandbook.cz/img/cs/wdf.png)</li>
 - Otevře se pokročilé nastavení Windows Firewall. V prostředním sloupci zvolte možnost <span class="green">Vlastnosti brány Firewall v programu Windows Defender</span>.
 - V horním panelu si otevřete záložku **Privátní profil**. U položky **Odchozí připojení** zvolte možnost <span class="green">Blokovat</span>.
-<li style="list-style-type: none">![wdf1](https://faq.mople71.cz/img/cs/wdf1.png)</li>
+<li style="list-style-type: none">![wdf1](https://securityhandbook.cz/img/cs/wdf1.png)</li>
 - Postup zopakujte pro záložku **Veřejný profil**.
 - Klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![wdf2](https://faq.mople71.cz/img/cs/wdf2.png)</li>
+<li style="list-style-type: none">![wdf2](https://securityhandbook.cz/img/cs/wdf2.png)</li>
 
 <div class="alert success"><p><em class="icon-ok-circled"></em>**Úspěch**<br>
 Nyní WDF blokuje veškerou odchozí komunikaci, která není na whitelistu. Dále je třeba nastavit whitelist.</p></div>
@@ -51,9 +51,9 @@ Nyní WDF blokuje veškerou odchozí komunikaci, která není na whitelistu. Dá
 - Zadejte název pravidla &ndash; v tomto případě např. **All MoUI Apps**
 - Klikněte na <span class="green">Dokončit</span>.
 - Nové pravidlo otevřete. Přesuňte se do záložky **Programy a služby** a v sekci **Balíčky aplikací** klikněte na <span class="green">Nastavení...</span>
-<li style="list-style-type: none">![wdf3](https://faq.mople71.cz/img/cs/wdf3.png)</li>
+<li style="list-style-type: none">![wdf3](https://securityhandbook.cz/img/cs/wdf3.png)</li>
 - Zvolte možnost <span class="green">Použít pouze pro balíčky aplikací</span> a potvrďte. Následně uložte změny v pravidle.
-<li style="list-style-type: none">![wdf4](https://faq.mople71.cz/img/cs/wdf4.png)</li>
+<li style="list-style-type: none">![wdf4](https://securityhandbook.cz/img/cs/wdf4.png)</li>
 
 > Povolení odchozí komunikace pro všechny služby Windows
 
@@ -66,7 +66,7 @@ Nyní WDF blokuje veškerou odchozí komunikaci, která není na whitelistu. Dá
 - Klikněte na <span class="green">Dokončit</span>.
 - Nové pravidlo otevřete. Přesuňte se do záložky **Programy a služby** a v sekci **Služby** klikněte na <span class="green">Nastavení...</span>
 - Zvolte možnost <span class="green">Použít pouze pro balíčky aplikací</span> a potvrďte. Následně uložte změny v pravidle.
-<li style="list-style-type: none">![wdf5](https://faq.mople71.cz/img/cs/wdf5.png)</li>
+<li style="list-style-type: none">![wdf5](https://securityhandbook.cz/img/cs/wdf5.png)</li>
 
 > Povolení odchozí komunikace pro důležité aplikace
 
@@ -74,7 +74,7 @@ Nyní WDF blokuje veškerou odchozí komunikaci, která není na whitelistu. Dá
 - Jako typ pravidla zvolte **Program** a klikněte na tlačítko <span class="green">Další</span>.
 - Zvolte možnost **Cesta k tomuto programu** a do textového pole vložte cestu k následujícímu souboru:
 <li style="list-style-type: none"><pre><code>%SystemRoot%\System32\smartscreen.exe</code></pre></li>
-<li style="list-style-type: none">![wdf6](https://faq.mople71.cz/img/cs/wdf6.png)</li>
+<li style="list-style-type: none">![wdf6](https://securityhandbook.cz/img/cs/wdf6.png)</li>
 - Klikněte na tlačítko <span class="green">Další</span>.
 - Zvolte možnost **Povolit připojení** a klikněte na tlačítko <span class="green">Další</span>.
 - Zkontrolujte zatržítka u všech položek a klikněte na tlačítko <span class="green">Další</span>.
@@ -211,7 +211,7 @@ ACL můžeme využít následovně: můžeme zakázat spouštění spustitelnýc
 
 > Odebrání pravomoce exekuce souborů v uživatelských složkách
 
-- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
+- Stiskněte kláv. zkratku <img src="https://securityhandbook.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
 <li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs/wx.png)</li>
 - Do příkazové řádky zadejte následující příkazy (cestu ke složce uživatele patřičně upravte):
 <li style="list-style-type: none"><pre><code>icacls "C:\Users\(uživ. jméno)" /c /inheritance:d
@@ -219,7 +219,7 @@ icacls "C:\Users\(uživ. jméno)" /c /deny Everyone:(OI)(CI)(X)</code></pre></li
 
 > Opětovné přidání pravomoce exekuce souborů v uživatelské složce
 
-- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
+- Stiskněte kláv. zkratku <img src="https://securityhandbook.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
 <li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs/wx.png)</li>
 - Do příkazové řádky zadejte následující příkaz (cestu ke složce patřičně upravte):
 <li style="list-style-type: none"><pre><code>icacls "C:\Users\User\AppData\Local\Temp" /remove Everyone /t</code></pre></li>
@@ -269,13 +269,13 @@ Kromě složek můžete přenastavit nižší úroveň integrity i aplikacím. M
 
 Windows má vestavěný nástroj jménem <span class="green">icacls</span>, který umožňuje měnit úrovně integrity, neumožňuje ovšem pokročilé nastavení integritní politiky. Z tohoto důvodu je nutné použít drobný nástroj třetí strany.
 
-- Stáhněte si [chml](https://mople71.cz/mirror/chml.exe) (by *[Mark Minasi](https://www.minasi.com/)*) a uložte jej <span class="blue">na Plochu</span>.
+- Stáhněte si [chml](https://securityhandbook.cz/mirror/chml.exe) (by *[Mark Minasi](https://www.minasi.com/)*) a uložte jej <span class="blue">na Plochu</span>.
 - Zkontrolujte *checksums* aplikace:
 <li style="list-style-type: none"><pre><code>SHA-256: 59aa55d2eac6b295d42ef2aadc607b759f034f4557a66dec0214a4cc032ecc17
 SHA-512: a22317552f90e896fb6f0e4a30f7834baf97a771211a37aca12f52d55ff8b85212d4ded5138ab66a70eaaa1193002b98158938bc17185ea94ccc9f7f4b8120f4</code></pre></li>
 - Aplikaci zkopírujte do umístění: <span class="blue">C:\Windows\System32</span>
 - Smažte *chml* z původní lokace.
-- Stiskněte kláv. zkratku <img src="https://mople71.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
+- Stiskněte kláv. zkratku <img src="https://securityhandbook.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
 <li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs/wx.png)</li>
 - Do příkazové řádky zadejte následující příkaz pro validaci úspěšné instalace aplikace:
 <li style="list-style-type: none"><pre><code>chml /?</code></pre></li>
@@ -309,4 +309,4 @@ AppContainer odděluje aplikace od sebe a částí OS. Podobnou snahu můžeme p
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.svg)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://securityhandbook.cz/img/sm/smile.svg)</h3>

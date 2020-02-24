@@ -3,7 +3,7 @@
 - LNX – **N/A**
 - ANDR – **2**
 
-<h3 class="ch">![ch_icon](https://mople71.cz/img/icons/ch16.png) Google Chrome</h3>
+<h3 class="ch">![ch_icon](https://securityhandbook.cz/img/icons/ch16.png) Google Chrome</h3>
 
 > Instalace
 
@@ -15,19 +15,19 @@
 - Do adresního řádku prohlížeče zadejte:
 <li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
 a stiskněte **Enter**.</li>
-- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch](https://faq.mople71.cz/img/cs/ch.png)
+- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch](https://securityhandbook.cz/img/cs/ch.png)
 - V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu...</span>
-<li style="list-style-type: none">![ch1](https://faq.mople71.cz/img/cs/ch1.png)</li>
+<li style="list-style-type: none">![ch1](https://securityhandbook.cz/img/cs/ch1.png)</li>
 - V sekci **Soubory cookie** zatrhněte možnost <span class="green">Blokovat soubory cookie třetích stran a data webových stránek</span>.
-<li style="list-style-type: none">![ch2](https://faq.mople71.cz/img/cs/ch2.png)</li>
+<li style="list-style-type: none">![ch2](https://securityhandbook.cz/img/cs/ch2.png)</li>
 - V sekci **Flash** zablokujte spouštění obsahu Flash na webech.
-<li style="list-style-type: none">![ch3](https://faq.mople71.cz/img/cs/ch3.png)</li>
+<li style="list-style-type: none">![ch3](https://securityhandbook.cz/img/cs/ch3.png)</li>
 - V sekci **Synchronizace na pozadí** zablokujte nedávno zavřeným webům dokončit odeslání a příjem dat.
-<li style="list-style-type: none">![ch4](https://faq.mople71.cz/img/cs/ch4.png)</li>
+<li style="list-style-type: none">![ch4](https://securityhandbook.cz/img/cs/ch4.png)</li>
 - V sekci **Přístup pluginu mimo izolovaný prostor** zablokujte webům přístup do počítače pomocí pluginu.
-<li style="list-style-type: none">![ch5](https://faq.mople71.cz/img/cs/ch5.png)</li>
+<li style="list-style-type: none">![ch5](https://securityhandbook.cz/img/cs/ch5.png)</li>
 - V sekci **Schránka** zablokujte webům přístup k datům ve schránce.
-<li style="list-style-type: none">![ch6](https://faq.mople71.cz/img/cs/ch6.png)</li>
+<li style="list-style-type: none">![ch6](https://securityhandbook.cz/img/cs/ch6.png)</li>
 - Prohlížeč restartujte.
 
 > Omezení JavaScript
@@ -35,14 +35,14 @@ a stiskněte **Enter**.</li>
 - Do adresního řádku prohlížeče zadejte:
 <li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
 a stiskněte **Enter**.</li>
-- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch](https://faq.mople71.cz/img/cs/ch.png)
+- Zobrazí se nastavení. Sjeďte na konec stránky a klikněte na tlačítko ![ch](https://securityhandbook.cz/img/cs/ch.png)
 - V sekci **Ochrana soukromí** klikněte na tlačítko <span class="green">Nastavení obsahu</span>
-<li style="list-style-type: none">![ch1](https://faq.mople71.cz/img/cs/ch1.png)</li>
+<li style="list-style-type: none">![ch1](https://securityhandbook.cz/img/cs/ch1.png)</li>
 - V sekci **JavaScript** zablokujte spouštění JS.
-<li style="list-style-type: none">![ch7](https://faq.mople71.cz/img/cs/ch7.png)</li>
+<li style="list-style-type: none">![ch7](https://securityhandbook.cz/img/cs/ch7.png)</li>
 - Klikněte na tlačítko <span class="green">Přidat</span> v sekci **Povolit**.
 - Zadejte adresu důvěryhodného webu, na kterém se může spouštět JS. Syntax je jednoduchý.
-<li style="list-style-type: none">![ch8](https://faq.mople71.cz/img/cs/ch8.png)</li>
+<li style="list-style-type: none">![ch8](https://securityhandbook.cz/img/cs/ch8.png)</li>
 - Klikněte na <span class="green">Přidat</span>.
 - Prohlížeč restartujte.
 
@@ -52,15 +52,15 @@ a stiskněte **Enter**.</li>
 
 #### Nastavení uBlock:
 - Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
-<li style="list-style-type: none">![chublock](https://faq.mople71.cz/img/en/chublock.png)</li>
+<li style="list-style-type: none">![chublock](https://securityhandbook.cz/img/en/chublock.png)</li>
 - Zobrazí se nastavení uBlock Origin. V sekci **Soukromí** zatrhněte možnost <span class="green">Předejít úniku lokálních IP adres přes WebRTC</span>.
 - Následně se přesuňte do záložky <span class="green">Filtry třetích stran</span>.
-<li style="list-style-type: none">![ublock](https://faq.mople71.cz/img/cs/ublock.png)</li>
+<li style="list-style-type: none">![ublock](https://securityhandbook.cz/img/cs/ublock.png)</li>
 - Zde vyberte filtry pro blokování webového obsahu. Doporučuji kromě výchozích zvolit následující:</li>
-<li style="list-style-type: none">![ublock1](https://faq.mople71.cz/img/cs/ublock1.png)</li>
-- Následně v pravém horním rohu klikněte na tlačítko: ![ublock2](https://faq.mople71.cz/img/cs/ublock2.png)
+<li style="list-style-type: none">![ublock1](https://securityhandbook.cz/img/cs/ublock1.png)</li>
+- Následně v pravém horním rohu klikněte na tlačítko: ![ublock2](https://securityhandbook.cz/img/cs/ublock2.png)
 - Přesuňte se na začátek stránky, zkontrolujte zatržítko u položky <span class="green">Automaticky aktualizovat seznamy filtrů</span> a klikněte na tlačítko <span class="green">Aktualizovat nyní</span>. Během aktualizace panel nezavírejte.
-<li style="list-style-type: none">![ublock3](https://faq.mople71.cz/img/cs/ublock3.png)</li>
+<li style="list-style-type: none">![ublock3](https://securityhandbook.cz/img/cs/ublock3.png)</li>
 
 
 > Oddělení prohlížeče od OS a dat
@@ -76,10 +76,10 @@ Google Chrome používá špičkovou implementaci sandboxu.
 - Kliknutím na tři tečky v horním pravém rohu otevřete boční panel a klikněte na tlačítko <span class="green">Nastavení</span>.
 - Klikněte na **Nastavení webu** a otevřete podkategorii <span class="green">JavaScript</span>.
 - Zablokujte spouštění JS.
-<li style="list-style-type: none">![chmandrjs](https://faq.mople71.cz/img/cs/chmandrjs.png)</li>
+<li style="list-style-type: none">![chmandrjs](https://securityhandbook.cz/img/cs/chmandrjs.png)</li>
 - Klikněte na tlačítko <span class="green">Přidat výjimku pro konkrétní web</span>.
 - Zadejte adresu důvěryhodného webu, na kterém se může spouštět JS. Syntax je oproti desktopové verzi značně omezený.
-<li style="list-style-type: none">![chmandrjs1](https://faq.mople71.cz/img/cs/chmandrjs1.png)</li>
+<li style="list-style-type: none">![chmandrjs1](https://securityhandbook.cz/img/cs/chmandrjs1.png)</li>
 - Klikněte na <span class="green">Přidat</span>.
 
 -----------------------------------
@@ -90,7 +90,7 @@ Google Chrome používá špičkovou implementaci sandboxu.
 - LNX – **N/A**
 - ANDR – **1**
 
-<h3 class="brv">![brv_icon](https://mople71.cz/img/icons/brv.png) Brave</h3>
+<h3 class="brv">![brv_icon](https://securityhandbook.cz/img/icons/brv.png) Brave</h3>
 
 > Instalace
 
@@ -103,8 +103,8 @@ Google Chrome používá špičkovou implementaci sandboxu.
 <li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
 a stiskněte **Enter**.</li>
 - Zobrazí se nastavení. V sekci **Brave shields defaults** zkontrolujte konfiguraci a případně opravte:
- <li style="list-style-type: none">![brv](https://faq.mople71.cz/img/en/brv.png)</li>
-- Sjeďte na konec stránky a klikněte na tlačítko ![ch](https://faq.mople71.cz/img/cs/ch.png)
+ <li style="list-style-type: none">![brv](https://securityhandbook.cz/img/en/brv.png)</li>
+- Sjeďte na konec stránky a klikněte na tlačítko ![ch](https://securityhandbook.cz/img/cs/ch.png)
 - *Google Chrome – L18-30*
 
 > Omezení JavaScript
@@ -113,7 +113,7 @@ a stiskněte **Enter**.</li>
 <li style="list-style-type: none"><pre><code>chrome://settings</code></pre>
 a stiskněte **Enter**.</li>
 - Zobrazí se nastavení. V sekci **Brave shields defaults** upravte konfiguraci dle obrázku:
- <li style="list-style-type: none">![brv1](https://faq.mople71.cz/img/en/brv1.png)</li>
+ <li style="list-style-type: none">![brv1](https://securityhandbook.cz/img/en/brv1.png)</li>
 - Prohlížeč restartujte.
 
 > Blokování reklamy
@@ -132,17 +132,17 @@ Brave používá špičkovou implementaci sandboxu.
 - Otevřete prohlížeč <span class="green">Brave</span>.
 - Přes menu v pravém rohu otevřete <span class="green">Nastavení</span>.
 - Rozklikněte nabídku **Ochrana soukromí**. Zatrhněte položky <span class="green">Blokování reklam</span>, <span class="green">Blokování regionálních reklam</span> a <span class="green">Ochrana proti otisku prohlížeče</span>.
-<li style="list-style-type: none">![brvand](https://faq.mople71.cz/img/cs/brvand.png)</li>
+<li style="list-style-type: none">![brvand](https://securityhandbook.cz/img/cs/brvand.png)</li>
 - Vraťte se o úroveň výše a rozklikněte nabídku <span class="green">Nastavení webu</span>.
 - V sekci **JavaScript** zablokujte spouštění JS.
-<li style="list-style-type: none">![brvand1](https://faq.mople71.cz/img/cs/brvand1.png)</li>
+<li style="list-style-type: none">![brvand1](https://securityhandbook.cz/img/cs/brvand1.png)</li>
 - V sekci **Schránka** zablokujte webům přístup k datům ve schránce.
-<li style="list-style-type: none">![brvand2](https://faq.mople71.cz/img/cs/brvand2.png)</li>
+<li style="list-style-type: none">![brvand2](https://securityhandbook.cz/img/cs/brvand2.png)</li>
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Nyní máte ve výchozím nastavení vypnutý JS pro všechny weby. Jakmile budete chtít spuštění JS pro určitý web povolit, stačí poklepat na ikonu prohlížeče v horním panelu a skripty povolit.</p></div>
 
-![brvand3](https://faq.mople71.cz/img/cs/brvand3.png)
+![brvand3](https://securityhandbook.cz/img/cs/brvand3.png)
 
 -----------------------------------
 -----------------------------------
@@ -151,7 +151,7 @@ Nyní máte ve výchozím nastavení vypnutý JS pro všechny weby. Jakmile bude
 - WNT – **3**
 - LNX – **1**
 
-<h3 class="chm">![chm_icon](https://mople71.cz/img/icons/chm16.ico) Chromium:</h3>
+<h3 class="chm">![chm_icon](https://securityhandbook.cz/img/icons/chm16.ico) Chromium:</h3>
 
 ## WNT:
 Nechcete-li používat *Google Chrome* ani *Brave*, doporučuji použít open-source Chromium, na kterém je *Google Chrome* založen. Chromium na Windows se bohužel neumí automaticky aktualizovat. Můžete ovšem použít komunitní open-source nástroj.
@@ -162,19 +162,19 @@ Nechcete-li používat *Google Chrome* ani *Brave*, doporučuji použít open-so
 - Archiv extrahujte. V závislosti na bitové verzi vašeho OS určete, kterou složku z archivu budete potřebovat (64-bit OS – složka **64**), a následně ji přesuňte na důstojné místo (ideálně *%localappdata%*, ale stačí *Dokumenty*). Také je vhodné ji přejmenovat.
 - Ve složce nalezněte a otevřete konfigurační soubor <span class="green">chrlauncher.ini</span>.
 - Nalezněte řádek začínající na **ChromiumArchitecture** a za rovnítko vepište požadovanou architekturu (na novějších zařízeních <span class="green">64</span>):
-<li style="list-style-type: none">![chrl](https://faq.mople71.cz/img/en/chrl.png)</li>
+<li style="list-style-type: none">![chrl](https://securityhandbook.cz/img/en/chrl.png)</li>
 - Sjeďte níže na řádek začínající na **ChromiumType** a za rovnítko vepište druh prohlížeče, který chcete použít. <span class="green">Stable-codecs-nosync</span> je verze s kodeky a bez služeb Google, je tedy doporučena. Naopak *ungoogled-chromium* je neoficiální nebezpečný fork a jeho užití je důrazně <span style="color: #bf0000">nedoporučeno</span>.
 - Zkontrolujte nastavení **ChromiumCheckPeriod**, případně opravte.
-<li style="list-style-type: none">![chrl1](https://faq.mople71.cz/img/en/chrl1.png)</li>
+<li style="list-style-type: none">![chrl1](https://securityhandbook.cz/img/en/chrl1.png)</li>
 - Dále zkontrolujte a případně opravte nastavení následujících argumentů:
 <li style="list-style-type: none"><pre><code>ChromiumAutoDownload=true
 ChromiumBringToFront=true
 ChromiumWaitForDownloadEnd=true</code></pre></li>
 - Změny uložte a konfigurační soubor zavřete.
 - Spusťte aplikaci <span class="green">chrlauncher</span>.
-- Chcete-li nastavit chrlauncher jako výchozí prohlížeč, klikněte pravým tlačítkem na skript <span class="green">SetDefaultBrowser</span> ve složce a zvolte možnost: ![admin](https://mople71.cz/img/icons/admin.png) **Spustit jako správce**.
+- Chcete-li nastavit chrlauncher jako výchozí prohlížeč, klikněte pravým tlačítkem na skript <span class="green">SetDefaultBrowser</span> ve složce a zvolte možnost: ![admin](https://securityhandbook.cz/img/icons/admin.png) **Spustit jako správce**.
 - Na Windows 10 budete muset následně výchozí prohlížeč ještě zvolit v **Nastavení**.
-<li style="list-style-type: none">![chrl2](https://faq.mople71.cz/img/cs/chrl2.png)</li>
+<li style="list-style-type: none">![chrl2](https://securityhandbook.cz/img/cs/chrl2.png)</li>
 
 > Bezpečnější nastavení a blokování reklam
 
@@ -212,14 +212,14 @@ Chromium používá špičkovou implementaci sandboxu.
 - WNT – **4**
 - LNX – **N/A**
 
-<h3 class="ed">![edge_icon](https://mople71.cz/img/icons/edge16.png) Microsoft Edge</h3>
+<h3 class="ed">![edge_icon](https://securityhandbook.cz/img/icons/edge16.png) Microsoft Edge</h3>
 
 > Bezpečnější nastavení
 
 - V pravém panelu otevřete <span class="green">Nastavení</span>.
 - Sjeďte na konec stránky a klikněte na <span class="green">Zobrazit upřesňující nastavení</span>.
 - Zkontrolujte konfiguraci a případně upravte:
-<li style="list-style-type: none">![edge](https://faq.mople71.cz/img/cs/edge.png)</li>
+<li style="list-style-type: none">![edge](https://securityhandbook.cz/img/cs/edge.png)</li>
 - Prohlížeč restartujte.
 
 > Blokování reklamy
@@ -228,7 +228,7 @@ Chromium používá špičkovou implementaci sandboxu.
 
 #### Nastavení uBlock:
 - Klikněte na ikonu uBlock v panelu ikon a následně otevřete **Nastavení**.
-<li style="list-style-type: none">![edublock](https://faq.mople71.cz/img/en/edublock.png)</li>
+<li style="list-style-type: none">![edublock](https://securityhandbook.cz/img/en/edublock.png)</li>
 - *Google Chrome – L55-62*
 
 > Oddělení prohlížeče od OS a dat
@@ -242,7 +242,7 @@ Microsoft Edge používá špičkovou implementaci sandboxu.
 - WNT – **5**
 - LNX – **3**
 
-<h3 class="ff">![ff_icon](https://mople71.cz/img/icons/ff.png) Mozilla Firefox</h3>
+<h3 class="ff">![ff_icon](https://securityhandbook.cz/img/icons/ff.png) Mozilla Firefox</h3>
 
 ## WNT:
 > Instalace
@@ -257,9 +257,9 @@ Microsoft Edge používá špičkovou implementaci sandboxu.
 a stiskněte **Enter**.</li>
 - V levém panelu se přesuňte do záložky <span class="green">Soukromí a zabezpečení</span>.
 - V sekci **Nastavení soukromí** u položky *Rozšířená ochrana proti sledování* zvolte úroveň <span class="green">Vlastní</span>, kterou nakonfigurujte dle obrázku:
-<li style="list-style-type: none">![ff](https://faq.mople71.cz/img/cs/ff.png)</li>
+<li style="list-style-type: none">![ff](https://securityhandbook.cz/img/cs/ff.png)</li>
 - Sjeďte níže do sekce **Oprávnění**. Zatrhněte položku <span class="green">Zabránit službám pro přístupnost v přístupu k vašemu prohlížeči</span> a potvrďte restart aplikace.
-<li style="list-style-type: none">![ff1](https://faq.mople71.cz/img/cs/ff1.png)</li>
+<li style="list-style-type: none">![ff1](https://securityhandbook.cz/img/cs/ff1.png)</li>
 
 - Do adresního řádku prohlížeče zadejte:
 <li style="list-style-type: none"><pre><code>about:config</code></pre>
@@ -270,8 +270,8 @@ a stiskněte **Enter**.</li>
 - Vyhledávání zobrazí veškeré hodnoty s **OCSP** v názvu. Dvakrát poklepejte levým myšítkem na následující hodnotu:
 <li style="list-style-type: none"><pre><code>security.OCSP.require</code></pre></li>
 - Tím změníte konfiguraci hodnoty (zapnete/vypnete požadovanou funkci).
-<li style="list-style-type: none">![ff2](https://faq.mople71.cz/img/cs/ff2.png)
-![ff3](https://faq.mople71.cz/img/cs/ff3.png)</li>
+<li style="list-style-type: none">![ff2](https://securityhandbook.cz/img/cs/ff2.png)
+![ff3](https://securityhandbook.cz/img/cs/ff3.png)</li>
 - Výše uvedeným způsobem vyhledejte a opravte nastavení následujících hodnot (pokud se neshoduje):
 <li style="list-style-type: none"><pre><code>accessibility.blockautorefresh  ---  true
 security.mixed_content.block_display_content  ---  true
@@ -295,7 +295,7 @@ network.allow-experiments --- false</code></pre></li>
 
 #### Nastavení uBlock:
 - Klikněte na ikonu uBlock v panelu ikon a následně klikněte na nápis <span class="green">uBlock Origin</span>.
-<li style="list-style-type: none">![ffublock](https://faq.mople71.cz/img/en/ffublock.png)</li>
+<li style="list-style-type: none">![ffublock](https://securityhandbook.cz/img/en/ffublock.png)</li>
 - *Google Chrome – L55-62*
 
 > Oddělení prohlížeče od OS a dat
@@ -305,7 +305,7 @@ Sandbox Firefoxu je v aktivním vývoji a již nyní je v celkem použitelném s
 -----------------------------------
 
 ## LNX:
-<h3 class="ff">![ff_icon](https://mople71.cz/img/icons/ff.png) Mozilla Firefox</h3>
+<h3 class="ff">![ff_icon](https://securityhandbook.cz/img/icons/ff.png) Mozilla Firefox</h3>
 
 > Instalace
 
@@ -332,23 +332,23 @@ Sandbox Firefoxu je v aktivním vývoji. Lepší, nežli žádný.
 - WNT – **6**
 - LNX – **N/A**
 
-<h3 class="ie">![ie_icon](https://mople71.cz/img/icons/ie16.png) Internet Explorer</h3>
+<h3 class="ie">![ie_icon](https://securityhandbook.cz/img/icons/ie16.png) Internet Explorer</h3>
 
 > Bezpečnější nastavení
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+- Stiskněte kláv. zkratku ![win](https://securityhandbook.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>inetcpl.cpl</code></pre>
 a stiskněte **Enter**.</li>
 - Zobrazí se Vlastnosti internetu. V horní liště se přesuňte do záložky <span class="green">Zabezpečení</span>.
 - Zobrazí se nastavení úrovně zabezpečení internetových zón.
-<li style="list-style-type: none">![ie](https://faq.mople71.cz/img/cs/ie.png)</li>
+<li style="list-style-type: none">![ie](https://securityhandbook.cz/img/cs/ie.png)</li>
 - V zóně **Internet** se ujistěte, že má nastavenou výchozí úroveň zabezpečení. Pokud nemá, klikněte na tlačítko <span class="green">Výchozí úroveň</span>, čímž nastavení opravíte.
 - Přesuňte se do zóny **Místní intranet** a upravte její úroveň zabezpečení dle obrázku:
-<li style="list-style-type: none">![ie1](https://faq.mople71.cz/img/cs/ie1.png)</li>
+<li style="list-style-type: none">![ie1](https://securityhandbook.cz/img/cs/ie1.png)</li>
 - Stejným způsobem upravte úroveň zabezpečení zóny **Důvěryhodné weby**.
 - V horní liště se přesuňte do záložky <span class="green">Osobní údaje</span>, případně napravte.
 - Nastavení upravte na 3. nebo 2. nejvyšší možnost (<span class="green">Vyšší</span> nebo <span class="green">Vysoká</span>).
-<li style="list-style-type: none">![ie2](https://faq.mople71.cz/img/cs/ie2.png)</li>
+<li style="list-style-type: none">![ie2](https://securityhandbook.cz/img/cs/ie2.png)</li>
 - V horní liště se přesuňte do záložky <span class="green">Upřesnit</span>.
 - V sekci **Procházení** <span style="color: #BF0000">odstraňte</span> zatržítko u položky <span class="green">Povolit rozšíření prohlížečů jiných výrobců</span>.
 - V sekci **Zabezpečení** <span style="color: #BF0000">odstraňte</span> zatržítko u následujících položek:
@@ -365,7 +365,7 @@ a stiskněte **Enter**.</li>
 - Klikněte na ozubené kolo v pravém horním rohu.
 - Rozbalte záložku <span class="green">Zabezpečení</span>.
 - Klikněte na tlačítko <span class="green">Filtrování ActiveX</span>.
-<li style="list-style-type: none">![ie3](https://faq.mople71.cz/img/cs/ie3.png)</li>
+<li style="list-style-type: none">![ie3](https://securityhandbook.cz/img/cs/ie3.png)</li>
 
 > Blokování reklamy
 
@@ -374,7 +374,7 @@ a stiskněte **Enter**.</li>
 - Ze seznamu doporučuji přidat filtry <span class="green">EasyList</span>, <span class="green">EasyList Czech and Slovak</span> a <span class="green">EasyPrivacy</span>.
 
 #### Přidání filtru pro Tracking Protection:
-- Klikněte na takto vypadající odkaz: ![ie4](https://faq.mople71.cz/img/en/ie4.png)
+- Klikněte na takto vypadající odkaz: ![ie4](https://securityhandbook.cz/img/en/ie4.png)
 - V zobrazeném vyskakovacím okně klikněte na tlačítko <span class="green">Přidat seznam</span>.
 
 Další český filtr naleznete např. [zde](http://adblock.dajbych.net/).
@@ -390,7 +390,7 @@ Prohlížeč je částečně oddělen od OS díky technologii **Protected Mode**
 - WNT – **N/A**
 - LNX – **2**
 
-<h3 class="epiph">![epiph_icon](https://mople71.cz/img/icons/epiph.png) GNOME Web:</h3>
+<h3 class="epiph">![epiph_icon](https://securityhandbook.cz/img/icons/epiph.png) GNOME Web:</h3>
 
 > Instalace
 
@@ -401,11 +401,11 @@ exit</code></pre></li>
 >  Bezpečnější nastavení
 
 - Kliknutím na tři tečky v horním pravém rohu otevřete boční panel a zvolte <span class="green">Předvolby</span>.
-<li style="list-style-type: none">![epiph](https://faq.mople71.cz/img/cs/epiph.png)</li>
+<li style="list-style-type: none">![epiph](https://securityhandbook.cz/img/cs/epiph.png)</li>
 - V sekci **Obsah webových stránek** zkontrolujte konfiguraci a případně upravte:
-<li style="list-style-type: none">![epiph1](https://faq.mople71.cz/img/cs/epiph1.png)</li>
+<li style="list-style-type: none">![epiph1](https://securityhandbook.cz/img/cs/epiph1.png)</li>
 - Přesuňte se do záložky **Uchovaná data** a v sekci **Cookies** zvolte možnost <span class="green">Jen z webových stránek, které navštěvujete</span>.
-<li style="list-style-type: none">![epiph2](https://faq.mople71.cz/img/cs/epiph2.png)</li>
+<li style="list-style-type: none">![epiph2](https://securityhandbook.cz/img/cs/epiph2.png)</li>
 
 > Blokování reklamy
 

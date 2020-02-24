@@ -3,7 +3,7 @@ Windows se jakožto nejrozšířenější desktopový OS těší velké pozornos
 
 Podporovanou verzí Windows v následující sekci je <span class="green">Windows 10 September 2018 Update</span> jakožto nejnovější OS s podporou do roku 2025. Obsažené informace jsou platné také pro **Windows 8.1 Update 3**. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí &ndash; pokud již neskončil &ndash; cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
 
-Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/wnt/adv.php#wnt).
+Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://securityhandbook.cz/cs/wnt/adv.php#wnt).
 
 
 #### FAQ se dělí na několik sekcí:
@@ -28,15 +28,15 @@ Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá dal�
 
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Rodina a jiní uživatelé</span>.
 - Klikněte na tlačítko <span class="green">Přidat do tohoto počítače někoho dalšího</span>.
-<li style="list-style-type: none">![wntus](https://faq.mople71.cz/img/cs/wntus.png)</li>
+<li style="list-style-type: none">![wntus](https://securityhandbook.cz/img/cs/wntus.png)</li>
 - Otevře se dialog pro přidání nového uživatele. V levém dolním rohu klikněte na <span class="green">Nemám přihlašovací údaje této osoby</span>.
 - V levém dolním rohu zvolte možnost <span class="green">Přidat uživatele bez účtu Microsoft</span>.
 - Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné zapamatovatelné heslo. Vyplňte bezpečnostní otázky a klikněte na <span class="green">Další</span>.
-<li style="list-style-type: none">![wntus1](https://faq.mople71.cz/img/cs/wntus1.png)</li>
+<li style="list-style-type: none">![wntus1](https://securityhandbook.cz/img/cs/wntus1.png)</li>
 - V seznamu jiných uživatelů se zobrazí účet **Admin**. Klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
-<li style="list-style-type: none">![wntus2](https://faq.mople71.cz/img/cs/wntus2.png)</li>
+<li style="list-style-type: none">![wntus2](https://securityhandbook.cz/img/cs/wntus2.png)</li>
 - Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Správce</span> a klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![wntus3](https://faq.mople71.cz/img/cs/wntus3.png)</li>
+<li style="list-style-type: none">![wntus3](https://securityhandbook.cz/img/cs/wntus3.png)</li>
 - Odhlaste se z vašeho účtu a přihlaste se jako **Admin**.
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Rodina a jiní uživatelé</span>.
 - V seznamu jiných uživatelů nalezněte svůj účet, klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
@@ -52,9 +52,9 @@ Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá dal�
 - Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné zapamatovatelné heslo.
 - Potvrďte přidání uživatele (<span class="green">Dokončit</span>).
 - V seznamu dalších účtů se zobrazí účet **Admin**. Klikněte na něj a následně zvolte <span class="green">Upravit</span>.
-<li style="list-style-type: none">![wntusleg](https://faq.mople71.cz/img/cs/wntusleg.png)</li>
+<li style="list-style-type: none">![wntusleg](https://securityhandbook.cz/img/cs/wntusleg.png)</li>
 - Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Správce</span> a klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![wntusleg1](https://faq.mople71.cz/img/cs/wntusleg1.png)</li>
+<li style="list-style-type: none">![wntusleg1](https://securityhandbook.cz/img/cs/wntusleg1.png)</li>
 - Odhlaste se z vašeho účtu a přihlaste se jako **Admin**.
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Jiné účty</span>.
 - V seznamu dalších účtů nalezněte svůj účet, klikněte na něj a následně zvolte <span class="green">Upravit</span>.
@@ -69,11 +69,11 @@ Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá dal�
 
 > Nastavení UAC
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+- Stiskněte kláv. zkratku ![win](https://securityhandbook.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>useraccountcontrolsettings</code></pre>
 a stiskněte **Enter**.</li>
 - Otevře se konfigurace UAC. Zkontrolujte, že je nastavena na nejvyšší úroveň. Případně napravte.
-<li style="list-style-type: none">![uac](https://faq.mople71.cz/img/cs/uac.png)</li>
+<li style="list-style-type: none">![uac](https://securityhandbook.cz/img/cs/uac.png)</li>
 - Klikněte na <span class="green">OK</span>.
 
 <br>
@@ -83,19 +83,19 @@ a stiskněte **Enter**.</li>
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Pokročilejší si skript mohou upravit &ndash; je v něm několik zakomentovaných bezpečnostních opatření, které nemohou být aplikovány širokopásmově&#8230;</p></div>
 
-![batch](https://mople71.cz/img/icons/bat.png) **SafeSVC**:
-- Stáhněte si [SafeSVC](https://mople71.cz/safesvc.zip).
+![batch](https://securityhandbook.cz/img/icons/bat.png) **WinSecOpt**:
+- Stáhněte si [WinSecOpt](https://securityhandbook.cz/dl/winsecopt.zip).
 - Uložte a obsah archivu vyextrahujte <span class="blue">na Plochu</span>.
-- Na skript jménem <span class="green">safesvc</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://mople71.cz/img/icons/admin.png) **Spustit jako správce**.
+- Na skript jménem <span class="green">winsecopt</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://securityhandbook.cz/img/icons/admin.png) **Spustit jako správce**.
 - Nechte skript pracovat, na konci procesu vám řekne o souhlas k restartu OS.
 
 > Nastavení SmartScreen (starší verze Windows)
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+- Stiskněte kláv. zkratku ![win](https://securityhandbook.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>smartscreensettings</code></pre>
 a stiskněte **Enter**.</li>
 - Otevře se nastavení SmartScreen filtru. Upravte jej dle obrázku:
-<li style="list-style-type: none">![smartscreen](https://faq.mople71.cz/img/cs/smartscreen.png)</li>
+<li style="list-style-type: none">![smartscreen](https://securityhandbook.cz/img/cs/smartscreen.png)</li>
 - Klikněte na <span class="green">OK</span>.
 
 <br>
@@ -103,16 +103,16 @@ a stiskněte **Enter**.</li>
 ### Bezpečné nastavení sítě:
 > Konfigurace síťového adaptéru + DNS
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+- Stiskněte kláv. zkratku ![win](https://securityhandbook.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>ncpa.cpl</code></pre>
 a stiskněte **Enter**.</li>
 - Otevře se seznam síťových adaptérů. Klikněte na první adaptér (obvykle ethernet) pravým tlačítkem a zvolte možnost <span class="green">Vlastnosti</span>.
-<li style="list-style-type: none">![wntnet](https://faq.mople71.cz/img/cs/wntnet.png)</li>
+<li style="list-style-type: none">![wntnet](https://securityhandbook.cz/img/cs/wntnet.png)</li>
 - V seznamu odškrtněte všechny nepotřebné položky. Běžným uživatelům stačí ponechat pouze <span class="green">Sdílení souborů a tiskáren v sítích Microsoft</span>, <span class="green">Protokol IP verze 4 (TCP/IPv4)</span> a <span class="green">Protokol IP verze 6 (TCP/IPv6)</span>.
 - Pokud nesdílíte žádnou tiskárnu v síti a nepoužíváte IPv6 (pokud nevíte, zdali používáte IPv6, můžete to zjistil pomocí následujícího rychlého [online testu](https://www.test-ipv6.cz/)\), můžete pro vyšší bezpečnost ponechat zaškrtnutý pouze <span class="green">Protokol IP verze 4 (TCP/IPv4)</span>.
-<li style="list-style-type: none">![wntnet1](https://faq.mople71.cz/img/cs/wntnet1.png)</li>
+<li style="list-style-type: none">![wntnet1](https://securityhandbook.cz/img/cs/wntnet1.png)</li>
 - Klikněte na **Protokol IP verze 4 (TCP/IPv4)** a zvolte možnost <span class="green">Vlastnosti</span>.
-<li style="list-style-type: none">![wntnet2](https://faq.mople71.cz/img/cs/wntnet2.png)</li>
+<li style="list-style-type: none">![wntnet2](https://securityhandbook.cz/img/cs/wntnet2.png)</li>
 
 <div class="alert success"><p><em class="icon-ok-circled"></em>**Úspěch**<br>
 Potenciálně nebezpečné protokoly jsou nyní vypnuty. Dále nastavíme bezpečné DNS servery.</p></div>
@@ -121,10 +121,10 @@ Potenciálně nebezpečné protokoly jsou nyní vypnuty. Dále nastavíme bezpe�
 - Klikněte na <span class="green">Použít následující adresy serverů DNS</span> a do kolonek vepište následující DNS servery:
 <li style="list-style-type: none"><pre><code>193.17.47.1
 185.43.135.1</code></pre></li>
-<li style="list-style-type: none">![wntnet3](https://faq.mople71.cz/img/cs/wntnet3.png)</li>
+<li style="list-style-type: none">![wntnet3](https://securityhandbook.cz/img/cs/wntnet3.png)</li>
 - Klikněte na tlačítko <span class="green">Upřesnit&#8230;</span>
 - V horním panelu se přesuňte do záložky **WINS** a zvolte možnost <span class="green">Zakázat rozhraní NetBIOS nad protokolem TCP/IP</span>.
-<li style="list-style-type: none">![wntnet4](https://faq.mople71.cz/img/cs/wntnet4.png)</li>
+<li style="list-style-type: none">![wntnet4](https://securityhandbook.cz/img/cs/wntnet4.png)</li>
 - Klikněte na <span class="green">OK</span>.
 - Klikněte na <span class="green">OK</span> a okno zavřete.
 - Pro *IPv6* použijte obdobný postup s následujícími servery:
@@ -137,18 +137,18 @@ Pro dosáhnutí kýženého efektu je nutné kompletní postup aplikovat pro vš
 <br>
 
 ### Další bezpečnostní nastavení:
-- Vypněte Usnadnění přístupu na přihlašovací obrazovce &ndash; součást skriptu *SafeSVC*.
+- Vypněte Usnadnění přístupu na přihlašovací obrazovce &ndash; součást skriptu *WinSecOpt*.
 - Vypněte AutoPlay:
     - Otevřete si <span class="green">Nastavení.</span> Rozklikněte kategorii **Zařízení** a následně zvolte podkategorii <span class="green">Automatické přehrávání</span>.
     - Automatické přehrávání vypněte.
-    <li style="list-style-type: none">![autoplay](https://faq.mople71.cz/img/cs/autoplay.png)</li>
+    <li style="list-style-type: none">![autoplay](https://securityhandbook.cz/img/cs/autoplay.png)</li>
 - Vypněte Remote Assistance:
-    - Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+    - Stiskněte kláv. zkratku ![win](https://securityhandbook.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
     <li style="list-style-type: none"><pre><code>sysdm.cpl</code></pre>
 a stiskněte **Enter**.</li>
     - Zobrazí se Vlastnosti systému.
     - Přesuňte se do záložky **Vzdálený přístup** a <span style="color: #BF0000">odstraňte</span> zatržítko u položky <span class="green">Povolit připojení vzdálené pomoci k tomuto počítači</span>.
-    <li style="list-style-type: none">![sysdm](https://faq.mople71.cz/img/cs/sysdm.png)</li>
+    <li style="list-style-type: none">![sysdm](https://securityhandbook.cz/img/cs/sysdm.png)</li>
     - Klikněte na <span class="green">OK</span>.
 
 <br><br><hr><br>
@@ -169,7 +169,7 @@ Pro kontrolu aktualizací ostatního SW můžete použít např. aplikaci <span 
 
 > Kontrola nastavení aktualizací OS (starší verze Windows)
 
-- Stiskněte kláv. zkratku ![win](https://mople71.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
+- Stiskněte kláv. zkratku ![win](https://securityhandbook.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>wuapp</code></pre>
 a stiskněte **Enter**.</li>
 - V levém panelu klikněte na tlačítko <span class="green">Změnit nastavení</span>.
@@ -209,36 +209,36 @@ Detekce <span class="green">Windows Defender</span> je na velmi dobré úrovni. 
 - Otevřete si <span class="green">Centrum zabezpečení v programu Windows Defender</span>.
 - Přesuňte se do kategorie **Ochrana před viry a hrozbami** a otevřete <span class="green">Nastavení ochrany před viry a hrozbami</span>.
 - Zkontrolujte konfiguraci ochrany a případně opravte:
-<li style="list-style-type: none">![wd](https://faq.mople71.cz/img/cs/wd.png)</li>
+<li style="list-style-type: none">![wd](https://securityhandbook.cz/img/cs/wd.png)</li>
 
 > Řízení aplikací a prohlížečů &ndash; nastavení
 
 - Přesuňte se do kategorie **Řízení aplikací a prohlížečů**.
 - Zkontrolujte konfiguraci SmartScreen filtru a případně opravte:
-<li style="list-style-type: none">![wd1](https://faq.mople71.cz/img/cs/wd1.png)</li>
+<li style="list-style-type: none">![wd1](https://securityhandbook.cz/img/cs/wd1.png)</li>
 
 > Zabezpečení zařízení &ndash; nastavení
 
 - Přesuňte se do kategorie **Zabezpečení zařízení**.
 - V sekci **Izolace jádra** otevřete <span class="green">Podrobnosti o izolaci jádra</span>.
 - Zkontrolujte konfiguraci virtualizace a případně opravte:
-<li style="list-style-type: none">![wd2](https://faq.mople71.cz/img/cs/wd2.png)</li>
+<li style="list-style-type: none">![wd2](https://securityhandbook.cz/img/cs/wd2.png)</li>
 - Potvrďte případný restart OS.
 
 > Konfigurace Řízeného přístupu ke složkám
 
 - Přesuňte se do kategorie **Ochrana před viry a hrozbami** a otevřete <span class="green">Ochranu před ransomwarem</span>.
 - Zapněte <span class="green">Řízený přístup ke složkám</span> a následně otevřete <span class="green">Chráněné složky</span>.
-<li style="list-style-type: none">![wd3](https://faq.mople71.cz/img/cs/wd3.png)</li>
+<li style="list-style-type: none">![wd3](https://securityhandbook.cz/img/cs/wd3.png)</li>
 - Kliknutím na <span class="green">Přidat chráněnou složku</span> přidejte na seznam veškeré důležité osobní složky na disku, které nejsou v seznamu.
 
 > Povolení aplikace v Řízeném přístupu ke složkám (příklad: Kaspersky Software Updater)
 
 - Při instalaci aplikací budete muset dočasně **Řízený přístup ke složkám** zakázat.
 - Otevřete <span class="green">povolené aplikace v Řízeném přístupu ke složkám</span>.
-<li style="list-style-type: none">![wd3b](https://faq.mople71.cz/img/cs/wd3b.png)</li>
+<li style="list-style-type: none">![wd3b](https://securityhandbook.cz/img/cs/wd3b.png)</li>
 - Klikněte na <span class="green">Přidat povolenou aplikaci</span>. Zvolte možnost <span class="green">Procházet všechny aplikace</span>.
-<li style="list-style-type: none">![wd4](https://faq.mople71.cz/img/cs/wd4.png)</li>
+<li style="list-style-type: none">![wd4](https://securityhandbook.cz/img/cs/wd4.png)</li>
 - Nalezněte **Kaspersky Software Updater** a přidejte postupně jeho spustitelné programy na seznam.
 - **Řízený přístup ke složkám** následně opětovně povolte.
 
@@ -256,9 +256,9 @@ Ve verzi OS **Windows 8.1 Update 3** obsahuje *Windows Defender* méně funkcí,
 - Přesuňte se do záložky **Nastavení** a zvolte podkategorii <span class="green">Ochrana v reálném čase</span>.
 - Zkontrolujte zatržítko u volby <span class="green">Zapnout ochranu v reálném čase</span>.
 - Přesuňte se do podkategorie **Upřesnit**. Zkontrolujte konfiguraci ochrany a případně opravte:
-<li style="list-style-type: none">![wdleg](https://faq.mople71.cz/img/cs/wdleg.png)</li>
+<li style="list-style-type: none">![wdleg](https://securityhandbook.cz/img/cs/wdleg.png)</li>
 - Přesuňte se do podkategorie **Komunita MAPS**. Zkontrolujte konfiguraci ochrany a případně opravte:
-<li style="list-style-type: none">![wdleg1](https://faq.mople71.cz/img/cs/wdleg1.png)</li>
+<li style="list-style-type: none">![wdleg1](https://securityhandbook.cz/img/cs/wdleg1.png)</li>
 - Přesuňte se do podkategorie **Správce** a zkontrolujte zatržítko u volby <span class="green">Zapnout tuto aplikaci</span>.
 - Případné změny uložte a aplikaci zavřete.
 
@@ -268,7 +268,7 @@ Ve verzi OS **Windows 8.1 Update 3** obsahuje *Windows Defender* méně funkcí,
 
 Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před útoky ze sítě. Windows obsahují vestavěný <span class="green">Windows Defender Firewall</span> (WDF), který je na velmi dobré úrovni a plně dostačující. *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*
 
-**Windows Defender Firewall** je v základu nastaven na blokování příchozí komunikace, která není explicitně povolena. Chcete-li posunout bezpečnost na výrazně vyšší úroveň, je nutné nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V nejnovější verzi Windows je ovšem taková konfigurace značně problematická, návod proto naleznete pouze v [FAQ pro pokročilé](https://faq.mople71.cz/cs/wnt/adv.php#wnt1).
+**Windows Defender Firewall** je v základu nastaven na blokování příchozí komunikace, která není explicitně povolena. Chcete-li posunout bezpečnost na výrazně vyšší úroveň, je nutné nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V nejnovější verzi Windows je ovšem taková konfigurace značně problematická, návod proto naleznete pouze v [FAQ pro pokročilé](https://securityhandbook.cz/cs/wnt/adv.php#wnt1).
 
 Firewall aplikace třetích stran jako <span class="red">Comodo Firewall</span> jsou důrazně nedoporučeny.
 
@@ -286,19 +286,19 @@ Od verze **Windows 10 Fall Creators Update** je schopnost mitigace aplikací tř
 - Otevřete si <span class="green">Centrum zabezpečení v programu Windows Defender</span>.
 - Přesuňte se do kategorie **Řízení aplikací a prohlížečů**.
 - Sjeďte na konec stránky a otevřete <span class="green">Nastavení Ochrany Exploit Protection</span>.
-<li style="list-style-type: none">![wd5](https://faq.mople71.cz/img/cs/wd5.png)</li>
+<li style="list-style-type: none">![wd5](https://securityhandbook.cz/img/cs/wd5.png)</li>
 - Zkontrolujte konfiguraci celosystémových mitigací a případně opravte:
-<li style="list-style-type: none">![wd6](https://faq.mople71.cz/img/cs/wd6.png)</li>
+<li style="list-style-type: none">![wd6](https://securityhandbook.cz/img/cs/wd6.png)</li>
 
 > Konfigurace anti-exploit mitigací pro jednotlivé aplikace (příklad: VoodooShield)
 
 - V horním panelu se přesuňte do záložky **Nastavení programu**.
 - Klikněte na <span class="green">Přidat program, který chcete přizpůsobit</span> a <span class="green">Zvolit přesnou cestu k souboru</span>.
-<li style="list-style-type: none">![wd7](https://faq.mople71.cz/img/cs/wd7.png)</li>
+<li style="list-style-type: none">![wd7](https://securityhandbook.cz/img/cs/wd7.png)</li>
 - Nalezněte a zvolte požadovanou aplikaci, kterou chcete mitigovat.
-<li style="list-style-type: none">![wd8](https://faq.mople71.cz/img/cs/wd8.png)</li>
+<li style="list-style-type: none">![wd8](https://securityhandbook.cz/img/cs/wd8.png)</li>
 - Upravte konfiguraci dle obrázku:
-<li style="list-style-type: none">![wd9](https://faq.mople71.cz/img/cs/wd9.png)</li>
+<li style="list-style-type: none">![wd9](https://securityhandbook.cz/img/cs/wd9.png)</li>
 - Klikněte na tlačítko <span class="green">Použít</span>.
 
 > Konfigurace anti-exploit mitigací pro Microsoft Office
@@ -308,7 +308,7 @@ Od verze **Windows 10 Fall Creators Update** je schopnost mitigace aplikací tř
 - Do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>WINWORD.EXE</code></pre></li>
 - Upravte konfiguraci dle obrázku:
-<li style="list-style-type: none">![wd10](https://faq.mople71.cz/img/cs/wd10.png)</li>
+<li style="list-style-type: none">![wd10](https://securityhandbook.cz/img/cs/wd10.png)</li>
 - Klikněte na tlačítko <span class="green">Použít</span>.
 - Obdobný způsob proveďte pro aplikaci MS Excel:
 <li style="list-style-type: none"><pre><code>EXCEL.EXE</code></pre></li>
@@ -328,17 +328,17 @@ Od verze **Windows 10 Fall Creators Update** je schopnost mitigace aplikací tř
 - Stáhněte si nejnovější verzi [EMET](https://aka.ms/emetdownload).
 - Aplikaci nainstalujte.
 - V průběhu instalace se zobrazí okno se základním nastavením aplikace. Zvolte možnost <span class="green">Use Recommended Settings</span> a klikněte na <span class="green">Finish</span>.
-<li style="list-style-type: none">![emet](https://faq.mople71.cz/img/en/emet.png)</li>
+<li style="list-style-type: none">![emet](https://securityhandbook.cz/img/en/emet.png)</li>
 - Otevřete si <span class="green">EMET GUI</span>.
 - V horním menu EMET klikněte na tlačítko <span class="green">Apps</span>.
 - Zobrazí se seznam mitigovaných aplikací, pro přidání nové klikněte na tlačítko <span class="green">Add Application</span>.
-<li style="list-style-type: none">![emet1](https://faq.mople71.cz/img/en/emet1.png)</li>
+<li style="list-style-type: none">![emet1](https://securityhandbook.cz/img/en/emet1.png)</li>
 - Nalezněte a zvolte požadovanou aplikaci, kterou chcete mitigovat.
-<li style="list-style-type: none">![wd8](https://faq.mople71.cz/img/cs/wd8.png)</li>
+<li style="list-style-type: none">![wd8](https://securityhandbook.cz/img/cs/wd8.png)</li>
 - Upravte konfiguraci dle obrázku:
-<li style="list-style-type: none">![emet2](https://faq.mople71.cz/img/en/emet2.png)</li>
+<li style="list-style-type: none">![emet2](https://securityhandbook.cz/img/en/emet2.png)</li>
 - Po dokončení nastavení všech aplikací zkontrolujte nastavení mitigací, případně opravte dle obrázku:
-<li style="list-style-type: none">![emet3](https://faq.mople71.cz/img/en/emet3.png)</li>
+<li style="list-style-type: none">![emet3](https://securityhandbook.cz/img/en/emet3.png)</li>
 - Klikněte na <span class="green">OK</span> a zavřete EMET spolu s vyskakovacím oknem, které se objeví.
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
@@ -349,7 +349,7 @@ Jaké další aplikace mitigovat? Veškerý rizikový SW třetí strany – nap�
 - Otevřete si <span class="green">EMET GUI</span>.
 - V listu běžících procesů nalezněte danou aplikaci, klikněte na ni pravým tlačítkem a zvolte možnost <span class="green">Configure Process&#8230;</span>
 - Otevře se nastavení aplikací s nově přidanou zvolenou aplikací, pro kterou následně nakonfigurujte mitigace, a klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![emet4](https://faq.mople71.cz/img/en/emet4.png)</li>
+<li style="list-style-type: none">![emet4](https://securityhandbook.cz/img/en/emet4.png)</li>
 
 <span class="red">HitmanPro.Alert</span> je placená aplikace, která nabízí komplexní zabezpečení včetně mitigací proti exploitům. Investice do něj má smysl u starších verzí OS, verze **Windows 10 Fall Creators Update** a novější ovšem mají většinu hlavních funkcí HMP.A integrovanou v OS.
 
@@ -360,13 +360,13 @@ Jaké další aplikace mitigovat? Veškerý rizikový SW třetí strany – nap�
 - Aplikaci otevřete.
 - Klikněte na ozubené kolo v pravém horním rohu a zvolte možnost <span class="green">Advanced interface</span>.
 - Následně v dolní části klikněte na možnost **Safety notification** a zvolte možnost <span class="green">At application start</span>.
-<li style="list-style-type: none">![hmpa](https://faq.mople71.cz/img/en/hmpa.png)</li>
+<li style="list-style-type: none">![hmpa](https://securityhandbook.cz/img/en/hmpa.png)</li>
 - Následně klikněte na kategorii <span class="green">Risk reduction</span> a zapněte všechny její funkce, které nejsou vypnuté. Funkce, které již jsou zapnuté, ponechte na výchozím nastavení.
 - Při otevření prohlížeče nebo jiné chráněné aplikace se při ponechání myši na pár sekund na kraji jejího okna  zobrazí ohraničení, které signalizuje, že HMP.A chrání danou aplikaci a také ukazuje, které funkce HMP.A jsou pro danou aplikaci zapnuté. Mimo jiné se objeví notifikace o zapnutí ochrany pro danou aplikaci.
-<li style="list-style-type: none">![hmpa1](https://faq.mople71.cz/img/en/hmpa1.png)</li>
-<li style="list-style-type: none">![hmpa2](https://faq.mople71.cz/img/en/hmpa2.png)</li>
+<li style="list-style-type: none">![hmpa1](https://securityhandbook.cz/img/en/hmpa1.png)</li>
+<li style="list-style-type: none">![hmpa2](https://securityhandbook.cz/img/en/hmpa2.png)</li>
 - Při zachycení útoku HMP.A školivou aplikaci ukončí a zobrazí následující hlášku:
-<li style="list-style-type: none">![hmpa3](https://faq.mople71.cz/img/en/hmpa3.png)</li>
+<li style="list-style-type: none">![hmpa3](https://securityhandbook.cz/img/en/hmpa3.png)</li>
 
 <div class="alert success"><p><em class="icon-ok-circled"></em>**Tip**<br>
 Více informací můžete nalézt v [manuálu](https://www.hitmanpro.com/en-us/medialibrary/Microsites/SurfRight/Resources/HitmanPro-Alert-Getting-Started.pdf) [EN].</p></div>
@@ -396,10 +396,10 @@ Většina řešení funguje na principu *whitelistu* &ndash; má nastaveno, kter
 - Vyčkejte na dokončení konfigurace aplikace a při dotázání zvolte <span class="green">Application Whitelisting Mode</span>. Uvítací okno následně zavřete.
 - Klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a vyberte možnost <span class="green">Hide</span>, čímž skryjete widget aplikace z pracovního prostoru.
 - Klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Training</span>.
-<li style="list-style-type: none">![vs](https://faq.mople71.cz/img/en/vs.png)</li>
+<li style="list-style-type: none">![vs](https://securityhandbook.cz/img/en/vs.png)</li>
 - Nyní se VoodooShield učí aplikace, které používáte, a povoluje je. V tréninkovém módu postupně spusťte všechny aplikace, které používáte. Ideální je v tréninkovém módu PC používat jeden den, aby VoodooShield vše stihl zapsat.
 - Po ukončení tréninku VoodooShield klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Always On</span>.
-<li style="list-style-type: none">![vs1](https://faq.mople71.cz/img/en/vs1.png)</li>
+<li style="list-style-type: none">![vs1](https://securityhandbook.cz/img/en/vs1.png)</li>
 
 <div class="alert success"><p><em class="icon-ok-circled"></em>**Úspěch**<br>
 Nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když budete chtít instalovat libovolnou aplikaci, zvolte <strong>Disable/Install Mode</strong>.</p></div>
@@ -408,13 +408,13 @@ Nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když
 (obrázky jsou pouze ilustrativní)
 
 - Když VS zablokuje neznámou, ale možná bezpečnou aplikaci, zobrazí následující bublinu:
-<li style="list-style-type: none">![vs2](https://faq.mople71.cz/img/en/vs2.png)</li>
+<li style="list-style-type: none">![vs2](https://securityhandbook.cz/img/en/vs2.png)</li>
 - Pokud chcete aplikaci povolit, na bublinu klikněte a v následujícím okně zvolte možnost <span class="green">Install</span>.
-<li style="list-style-type: none">![vs3](https://faq.mople71.cz/img/en/vs3.png)</li>
+<li style="list-style-type: none">![vs3](https://securityhandbook.cz/img/en/vs3.png)</li>
 - Když VS zablokuje aplikaci, kterou detekuje alespoň 1 antivirový produkt nebo VoodooAI jako malware, zobrazí následující bublinu:
-<li style="list-style-type: none">![vs4](https://faq.mople71.cz/img/en/vs4.png)</li>
+<li style="list-style-type: none">![vs4](https://securityhandbook.cz/img/en/vs4.png)</li>
 - Zde je povolení o pár kliků delší. Klikněte na bublinu, v následujícím okně zvolte možnost <span class="green">Allow False Positive</span> a odsouhlaste veškerá vyskakovací okna.
-<li style="list-style-type: none">![vs5](https://faq.mople71.cz/img/en/vs5.png)</li>
+<li style="list-style-type: none">![vs5](https://securityhandbook.cz/img/en/vs5.png)</li>
 - Po povolení aplikace a provedení vámi požadované akce se vždy přesvědčte, že VS běží v módu <span class="green">Always On</span>.
 
 <br>
@@ -459,10 +459,10 @@ Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce.
 - Upravte nastavení VM dle potřeby a následně virtuální stroj spusťte. Vyberte bootovací disk požadovaného OS a klikněte na tlačítko <span class="green">Spustit</span>.
 - Nainstalujte a nakonfigurujte OS. Po úspěšné konfiguraci pro požadované účely virtuální stroj vypněte.
 - V pravém horním menu rozklikněte nabídku **Machine Tools** a zvolte <span class="green">Snímky</span>.
-<li style="list-style-type: none">![vbox](https://faq.mople71.cz/img/cs/vbox.png)</li>
+<li style="list-style-type: none">![vbox](https://securityhandbook.cz/img/cs/vbox.png)</li>
 - Tlačítkem <span class="green">Take</span> vytvořte nový snapshot virtuálního stroje.
 - Snapshot pojmenujte a klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![vbox1](https://faq.mople71.cz/img/cs/vbox1.png)</li>
+<li style="list-style-type: none">![vbox1](https://securityhandbook.cz/img/cs/vbox1.png)</li>
 - Při následujícím vypnutí virtuálního stroje nastavte automatické obnovení vytvořeného snapshotu.
 - Čas od času (např. 1x měsíčně) virtuální OS aktualizujte a vytvořte nový snapshot.
 
@@ -491,10 +491,10 @@ Windows implementují svůj vestavěný sandbox (*AppContainer*), pokročilejš�
 - Aplikaci nainstalujte a projděte úvodním tutoriálem.
 - Otevřete **Ovládání Sandboxie**.
 - Klikněte pravým tlačítkem na **Sandbox DefaultBox** a zvolte možnost <span class="green">Nastavení Sandboxu</span>.
-<li style="list-style-type: none">![sbie](https://faq.mople71.cz/img/cs/sbie.png)</li>
+<li style="list-style-type: none">![sbie](https://securityhandbook.cz/img/cs/sbie.png)</li>
 - V pravém panelu rozbalte možnost **Vymazat** a klikněte na <span class="green">Smazat pracovní soubory</span>.
 - Zatrhněte možnost <span class="green">Automaticky smazat obsah Sandboxu</span> a klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![sbie1](https://faq.mople71.cz/img/cs/sbie1.png)</li>
+<li style="list-style-type: none">![sbie1](https://securityhandbook.cz/img/cs/sbie1.png)</li>
 
 <br>
 
@@ -515,12 +515,12 @@ Užitečné aplikace, které nelze zařadit pod určitou vrstvu zabezpečení.
 - Ujistěte se, že **režim vyhledávání aktualizací** je nastaven na <span class="green">Úplné vyhledávání</span>.
 - Zvolte si požadovaný čas vyhledávání aktualizací, časový interval ponechte na *jednou týdně*.
 - Odeberte zatržítko u položky <span class="green">Chci, aby mi společnost Kaspersky Lab zasílala zprávy s novinkami a speciálními nabídkami</span>.
-<li style="list-style-type: none">![ksu](https://faq.mople71.cz/img/cs/ksu.png)</li>
+<li style="list-style-type: none">![ksu](https://securityhandbook.cz/img/cs/ksu.png)</li>
 - Nastavení uložte a vraťte se zpět na úvodní obrazovku aplikace.
 - Klikněte na <span class="green">Vyhledat aktualizace</span>.
 - Kaspersky Software Updater zobrazí dostupné aktualizace vašich aplikací. Aktualizaci můžete provést ručně přes stránky výrobce, nebo pomocí KSU kliknutím na tlačítko <span class="green">Aktualizovat</span>.
 - Aplikaci zavřete. Marketingovou řečnickou otázku v horní liště aplikace okázale ignorujte.
-<li style="list-style-type: none">![ksu1](https://faq.mople71.cz/img/cs/ksu1.png)</li>
+<li style="list-style-type: none">![ksu1](https://securityhandbook.cz/img/cs/ksu1.png)</li>
 - Aplikaci pravděpodobně budete muset povolit v **Řízeném přístupu ke složkám**, který nyní opětovně zapněte. Návod [zde](#wnt2.2.1).
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
@@ -532,7 +532,7 @@ Ačkoli je *Kaspersky Software Updater* kvalitní aplikace, automatická aktuali
 - Aplikaci nainstalujte.
 - Otevřete rozhraní aplikace a přesuňte se do sekce **Nastavení**.
 - Vypněte zobrazování ikony v oznamovací oblasti a klikněte na <span class="green">Použít</span>.
-<li style="list-style-type: none">![un](https://faq.mople71.cz/img/cs/un.png)</li>
+<li style="list-style-type: none">![un](https://securityhandbook.cz/img/cs/un.png)</li>
 
 > Instalace a konfigurace HashTab
 
@@ -540,9 +540,9 @@ Ačkoli je *Kaspersky Software Updater* kvalitní aplikace, automatická aktuali
 - Aplikaci nainstalujte.
 - Nalezněte libovolný soubor na disku a otevřete jeho **Vlastnosti**.
 - V horním panelu se přesuňte do záložky **File Hashes** a klikněte na tlačítko <span class="green">Settings</span>.
-<li style="list-style-type: none">![ht](https://faq.mople71.cz/img/en/ht.png)</li>
+<li style="list-style-type: none">![ht](https://securityhandbook.cz/img/en/ht.png)</li>
 - Upravte konfiguraci dle obrázku a klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![ht1](https://faq.mople71.cz/img/en/ht1.png)</li>
+<li style="list-style-type: none">![ht1](https://securityhandbook.cz/img/en/ht1.png)</li>
 
 <br><br><hr><br>
 
@@ -610,4 +610,4 @@ Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nas
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.svg)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://securityhandbook.cz/img/sm/smile.svg)</h3>

@@ -1,7 +1,7 @@
 # FAQ – OS Linux
 Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů – většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce také existuje, akorát v mnohonásobně menším množství. Ačkoliv tedy je stav některých desktopových linuxových distribucí z pohledu bezpečnosti tristní, v praxi je riziko infikace nižší nežli u jiných OS. Moderní *exploit kity* jsou ovšem často multiplatformní a jejich počet roste. Dostatečné zabezpečení OS je proto nezbytné.
 
-Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/lnx/adv.php#lnx).
+Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://securityhandbook.cz/cs/lnx/adv.php#lnx).
 
 #### FAQ se dělí na několik sekcí:
 - [Doporučené distribuce](#lnx1)
@@ -41,17 +41,17 @@ Malware se často spouští z dočasných složek. Zakázání exekuce spustitel
 - Jako **typ zařízení** vyberte <span class="green">Oddíl</span>.
 - Do kolonky **velikost** zadejte <span class="blue">0,5 GiB</span>.
 - Jako **souborový systém** zvolte <span class="green">ext4</span>, jako **label** zadejte *boot*, **přípojný bod** nastavte na "<span class="red">/boot</span>" a následně klikněte na tlačítko <span class="green">Budiž</span>.
-<li style="list-style-type: none">![lnxtmp](https://faq.mople71.cz/img/cs/lnxtmp.png)</li>
+<li style="list-style-type: none">![lnxtmp](https://securityhandbook.cz/img/cs/lnxtmp.png)</li>
 - V pravém sloupci kliknutím označte **volné místo** a klikněte na tlačítko <span class="green">+</span> pro přidání dalšího oddílu.
 - Jako **typ zařízení** vyberte <span class="green">Oddíl</span>.
 - Do kolonky **velikost** zadejte velikost, kterou chcete vyhradit pro OS, akorát od ní odečtěte <span class="blue">4 GiB</span>.
 - Jako **souborový systém** zvolte <span class="green">btrfs</span>, jako **přípojný bod** nastavte na "<span class="red">/</span>" a následně klikněte na tlačítko <span class="green">Budiž</span>.
-<li style="list-style-type: none">![lnxtmp1](https://faq.mople71.cz/img/cs/lnxtmp1.png)</li>
+<li style="list-style-type: none">![lnxtmp1](https://securityhandbook.cz/img/cs/lnxtmp1.png)</li>
 - V pravém sloupci kliknutím označte **volné místo** a klikněte na tlačítko <span class="green">+</span> pro přidání dalšího oddílu.
 - Jako **typ zařízení** vyberte <span class="green">Oddíl</span>.
 - Do kolonky **velikost** zadejte <span class="blue">2,0 GiB</span> (budete muset přepnout jednotky na *GiB*).
 - Jako **souborový systém** zvolte <span class="green">ext4</span>, jako **label** zadejte *tmp*, **přípojný bod** nastavte na "<span class="red">/tmp</span>" a následně klikněte na tlačítko <span class="green">Budiž</span>.
-<li style="list-style-type: none">![lnxtmp2](https://faq.mople71.cz/img/cs/lnxtmp2.png)</li>
+<li style="list-style-type: none">![lnxtmp2](https://securityhandbook.cz/img/cs/lnxtmp2.png)</li>
 - V pravém sloupci kliknutím označte **volné místo** a klikněte na tlačítko <span class="green">+</span> pro přidání dalšího oddílu.
 - Jako **typ zařízení** vyberte <span class="green">Oddíl</span>.
 - V kolonce **velikost** ponechte původní hodnotu (měla by být <span class="blue">2047 MiB</span>).
@@ -66,7 +66,7 @@ nano -\$ /etc/fstab</code></pre></li>
 - V textovém souboru šipkami nalezněte řádek, který obsahuje "<span class="red">/tmp</span>". Řádek by měl vypadat následovně:
 <li style="list-style-type: none"><pre><code>UUID=... /tmp           ext4    defaults     1 2</code></pre></li>
 - Na řádku nalezněte slovo "<span class="green">defaults</span>" a a za něj dopište "<span class="red">,nodev,noexec,nosuid</span>". Fstab tedy bude vypadat následovně:
-<li style="list-style-type: none">![lnxfstab](https://faq.mople71.cz/img/en/lnxfstab.png)</li>
+<li style="list-style-type: none">![lnxfstab](https://securityhandbook.cz/img/en/lnxfstab.png)</li>
 - Stiskněte klávesovou zkratku <span class="green">Ctrl + X</span>. Pro uložení změn v souboru stiskněte tlačítko <span class="red">Y</span> a následně <span class="green">Enter</span>.
 - Budete vráceni do konzole. Zadejte do ní následující příkazy:
 <li style="list-style-type: none"><pre><code>exit
@@ -84,12 +84,12 @@ Pokud vám zkratka DNS nic neříká, podívejte se na následující [jednoduch
 - Otevřete si <span class="green">Nastavení</span>.
 - Rozklikněte položku <span class="green">Wi-Fi</span> nebo <span class="green">Síť</span> v závislosti na druhu vašeho připojení.
 - V seznamu nalezněte příslušné spojení a otevřete jeho nastavení.
-<li style="list-style-type: none">![lnxnet](https://faq.mople71.cz/img/cs/lnxnet.png)
-![lnxnet1](https://faq.mople71.cz/img/cs/lnxnet1.png)</li>
+<li style="list-style-type: none">![lnxnet](https://securityhandbook.cz/img/cs/lnxnet.png)
+![lnxnet1](https://securityhandbook.cz/img/cs/lnxnet1.png)</li>
 - Přepněte se do záložky IPv4 a v sekci **DNS** vypněte možnost <span class="green">Automatické</span>.
 - Do řádku vepište následující DNS servery:
 <li style="list-style-type: none"><pre><code>193.17.47.1,185.43.135.1</code></pre></li>
-<li style="list-style-type: none">![lnxnet2](https://faq.mople71.cz/img/cs/lnxnet2.png)</li>
+<li style="list-style-type: none">![lnxnet2](https://securityhandbook.cz/img/cs/lnxnet2.png)</li>
 - Pro *IPv6* aplikujte obdobný postup s následujícími servery:
 <li style="list-style-type: none"><pre><code>2001:148f:ffff::1,2001:148f:fffe::1</code></pre></li>
 - Klikněte na tlačítko <span class="green">Použít</span> a nastavení zavřete.
@@ -118,11 +118,11 @@ exit</code></pre></li>
   - Otevřete si <span class="green">Nastavení</span> a rozklikněte kategorii **Zařízení**.
   - Klikněte na položku <span class="green">Výměnná média</span>.
   - Zatrhněte možnost <span class="green">Nikdy se nedotazovat nebo spouštět programy na vloženém médiu</span>.
-  <li style="list-style-type: none">![lnxar](https://faq.mople71.cz/img/cs/lnxar.png)</li>
+  <li style="list-style-type: none">![lnxar](https://securityhandbook.cz/img/cs/lnxar.png)</li>
 - Vypněte sdílení:
   - Otevřete si <span class="green">Nastavení</span> a klikněte na položku <span class="green">Sdílení</span>.
   - Zkontrolujte, že je sdílení vypnuto, případně napravte.
-  <li style="list-style-type: none">![lnxshare](https://faq.mople71.cz/img/cs/lnxshare.png)</li>
+  <li style="list-style-type: none">![lnxshare](https://securityhandbook.cz/img/cs/lnxshare.png)</li>
 
 <br><br><hr><br>
 
@@ -238,10 +238,10 @@ flatpak install flathub org.gnome.Epiphany</code></pre></li>
 - Nyní nastavte zpět aplikace jako výchozí. Otevřete si <span class="green">Nastavení</span>.
 - Rozklikněte kategorii **Podrobnosti** a následně zvolte podkategorii <span class="green">Výchozí aplikace</span>.
 - Nastavte Flatpak verzi *Eye of GNOME* aplikací jako výchozí:
-<li style="list-style-type: none">![lnxdapp](https://faq.mople71.cz/img/cs/lnxdapp.png)</li>
+<li style="list-style-type: none">![lnxdapp](https://securityhandbook.cz/img/cs/lnxdapp.png)</li>
 - Nalezněte libovolný **PDF** soubor. Klikněte na něj pravým tlačítkem a zvolte <span class="green">Otevřít jinou aplikací</span>.
 - V seznamu zvolte Flatpak verzi **Prohlížeč dokumentů** a klikněte na tlačítko <span class="green">Vybrat</span>.
-<li style="list-style-type: none">![lnxdapp1](https://faq.mople71.cz/img/cs/lnxdapp1.png)</li>
+<li style="list-style-type: none">![lnxdapp1](https://securityhandbook.cz/img/cs/lnxdapp1.png)</li>
 
 > Instalace LibreOffice
 
@@ -276,14 +276,14 @@ Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce.
 - Odmítněte případnou expresní instalaci.
 - Klikněte na tlačítko <span class="green">Přizpůsobit...</span>
 - Nastavte požadované množství alokované paměti (alespoň *3 GiB*) a místa na disku (alespoň *20 GiB*).
-<li style="list-style-type: none">![gboxes](https://faq.mople71.cz/img/cs/gboxes.png)</li>
+<li style="list-style-type: none">![gboxes](https://securityhandbook.cz/img/cs/gboxes.png)</li>
 - Přesuňte se zpět a v pravém horním rohu klikněte na <span class="green">Vytvořit</span>.
 - Nainstalujte a nakonfigurujte OS. Následně jej vypněte.
 - V seznamu na požadovaný virtuální stroj klikněte pravým tlačítkem a otevřete <span class="green">Vlastnosti</span>.
 - Přesuňte se do záložky **Snímky**. Existuje-li již nějaký snapshot, ozubeným kolem vpravo otevřete jeho konfiguraci a smažte jej.
 - Tlačítkem <span class="green">+</span> v dolním menu vytvořte nový snapshot.
 - Ozubeným kolem vpravo otevřete jeho konfiguraci a tlačítkem <span class="green">Přejmenovat</span> si jej pojmenujte jako výchozí snapshot.
-<li style="list-style-type: none">![gboxes1](https://faq.mople71.cz/img/cs/gboxes1.png)</li>
+<li style="list-style-type: none">![gboxes1](https://securityhandbook.cz/img/cs/gboxes1.png)</li>
 - Nyní můžete kdykoli virtuální stroj po jeho vypnutí snadno obnovit do výchozího stavu.
 - Čas od času (např. 1x měsíčně) virtuální OS aktualizujte a vytvořte nový snapshot.
 
@@ -296,4 +296,4 @@ Z bezpečnostního hlediska lze doporučit prohlížeč <span class="green">Chro
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.svg)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://securityhandbook.cz/img/sm/smile.svg)</h3>

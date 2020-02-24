@@ -3,7 +3,7 @@ Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS 
 
 Zde se budeme věnovat pokročilejším možnostem zabezpečení (nejen) desktopového Linuxu. Jako rukojmí použijeme distribuci **Arch Linux**, se kterou lze korektní konfigurací vytvořit vcelku bezpečnou instalaci. Kroky níže popisované jsou aplikovatelné na většinu distribucí, stačí korektně změnit syntax.
 
-Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pokročilé](https://faq.mople71.cz/cs/lnx/index.php#lnx) uživatele a máte minimálně znalosti ve zmíněné sekci rozebírané.
+Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pokročilé](https://securityhandbook.cz/cs/lnx/index.php#lnx) uživatele a máte minimálně znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
 - [Ochrana proti malware](#lnx1)
@@ -134,12 +134,9 @@ TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spušt�
 ### Hardening aplikací:
 Balíčky mohou být kompilovány s *memory corruption* mitigacemi (ASLR, PIE, RELRO, Canary,&#8230;), které následně významně ztěžují jejich exploitaci.
 
-// Rewrite //
-Jediná distribuce, která má balíčky velmi vysoké úrovně s  důležitými *memory corruption* mitigacemi, je <span class="fe">Fedora</span> (+ RHEL, CentOS).
+Pro plnou funkčnost ASLR musí být všechny běžící procesy zkompilovány jako **PIE**. Poté se bude jednat o vcelku robustní mitigaci (na *64-bit* architektuře).
 
-Pro plnou funkčnost ASLR musí být všechny běžící procesy zkompilovány jako **PIE**. Poté se bude jednat o vcelku robustní mitigaci – alespoň na *64-bit* architektuře.
-
-Balíčky neobsahující zmíněné mitigace je tedy nutné zkompilovat ručně.
+Balíčky neobsahující zmíněné mitigace je nutné zkompilovat ručně.
 
 > Audit mitigací běžících procesů
 
@@ -225,4 +222,4 @@ Checksec je skript určený pro kontrolu nastavení kernelu a zobrazení *memory
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.svg)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://securityhandbook.cz/img/sm/smile.svg)</h3>
