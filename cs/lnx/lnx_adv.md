@@ -6,17 +6,45 @@ Zde se budeme věnovat pokročilejším možnostem zabezpečení (nejen) desktop
 Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Linux pro méně pokročilé](https://securityhandbook.cz/cs/lnx/index.php#lnx) uživatele a máte minimálně znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
-- [Ochrana proti malware](#lnx1)
-- [Ochrana proti exploitaci](#lnx2)
+- [Základní bezpečnostní nastavení](#lnx1)
+- [Ochrana proti malware](#lnx2)
 - [Audit](#lnx3)
 
 <br>
 
+## Základní bezpečnostní nastavení:
+### Sudo:
+<pre><code>/etc/sudoers
+-----------------------------------
+
+Defaults   !visiblepw
+Defaults    always_set_home
+Defaults    match_group_by_gid
+Defaults    always_query_group_plugin
+
+Defaults    env_reset
+Defaults    env_keep =  "COLORS DISPLAY HOSTNAME HISTSIZE KDEDIR LS_COLORS"
+Defaults    env_keep += "MAIL QTDIR USERNAME LANG LC_ADDRESS LC_CTYPE"
+Defaults    env_keep += "LC_COLLATE LC_IDENTIFICATION LC_MEASUREMENT LC_MESSAGES"
+Defaults    env_keep += "LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER LC_TELEPHONE"
+Defaults    env_keep += "LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY"
+
+Defaults    secure_path = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Defaults    use_pty
+
+root        ALL=(ALL)    ALL
+uživatel    ALL=(ALL)    ALL
+</code></pre>
+# atom underscore __
+
+### Uzamknutí roota:
+<pre><code>sudo passwd -l root</code></pre>
+
+<br><br><hr><br>
+
 ## Ochrana proti malware:
 ### Firewall:
-Pro běžné počítače stačí zakázat FORWARD chain a bezpečně nastavit INPUT.
-
-Co se týče whitelistu odchozí komunikace (aplikační FW), *nftables* není nejpříjemnější možností. Mnohem snazší by bylo aplikační FW implementovat skrz <abbr title="Mandatory Access Control">MAC</abbr>.
+Pro běžné počítače stačí zakázat *forward* chain a bezpečně nastavit *input*. Aplikační FW lze implementovat skrz <abbr title="Mandatory Access Control">MAC</abbr>.
 
 > Příklad pravidel pro běžný počítač
 
@@ -43,13 +71,9 @@ table inet filter {
 <br>
 
 ### MAC:
-<abbr title="Mandatory Access Control">MAC</abbr> se stal důležitou součástí bezpečnostního modelu linuxových distribucí.
+<abbr title="Mandatory Access Control">MAC</abbr> se stal důležitou součástí bezpečnostního modelu linuxových distribucí. Implementací existuje více.
 
-**SELinux** je velmi robustní implementace MAC, její nastavení je ovšem problematické. Využívá ji např. **<span class="fe">Fedora</span>**  a je důležitou součástí bezpečnostního modelu OS Android.
-
-**AppArmor** je implementace MAC poskytující nižší úroveň ochrany než SELinux (např. neumí omezit ioctl). Využívá ji např. **<span class="os">openSUSE</span>** a **<span class="ub">Ubuntu</span>**.
-
-**TOMOYO Linux** je velmi solidní implementace MAC poskytující vyšší úroveň ochrany než AppArmor a zároveň nabízí mnohem jednodušší konfiguraci nežli SELinux.
+**SELinux** je velmi robustní implementace MAC využívána např. distribucí **<span class="fe">Fedora</span>** nebo OS Android. **AppArmor** je implementace MAC poskytující nižší úroveň ochrany než SELinux (mj. neumí omezit ioctl) využívána distribucemi **<span class="os">openSUSE</span>** či **<span class="ub">Ubuntu</span>**. **TOMOYO Linux** je zajímavou méně známou alternativou, poskytující vyšší úroveň ochrany než AppArmor a zároveň nabízející mnohem jednodušší konfiguraci nežli SELinux.
 
 Na Arch Linux lze bez problému provozovat TOMOYO nebo AppArmor, přičemž pro TOMOYO není třeba kompilovat vlastní kernel. SELinux je o něco složitější.
 
@@ -122,21 +146,32 @@ TOMOYO detekuje pouze aplikace, které byly od jeho aktivace alespoň 1x spušt�
 - Po dokončení konfigurace ji následně uložte:
 <li style="list-style-type: none"><pre><code>sudo tomoyo-savepolicy</code></pre></li>
 
-<br><br><hr><br>
+<br>
 
-## Ochrana proti exploitaci:
 ### Hardened alokátor:
-- https://github.com/grapheneos/hardened_malloc
-- nefungují: man, občas **netfilter** či gnome-control-center
+
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
+Hardened malloc může působit problémy s aplikacemi, instalací znefunkčníte ze standardně využívaných např. *man*.</p></div>
+
+- Stáhněte si [nejnovější verzi zdrojového kódu](https://github.com/GrapheneOS/hardened_malloc/releases/latest).
+- Rozbalte, přesuňte se do extrahované složky a otevřete terminál. Instalace:
+<li style="list-style-type: none"><pre><code>make
+sudo cp libhardened_malloc.so /usr/local/lib</code></pre></li>
+- Vyvořte potřebné konfigurační soubory:
+<li style="list-style-type: none"><pre><code>/etc/ld.so.preload
+-----------------------------------
+
+/usr/local/lib/libhardened_malloc.so</code></pre></li>
+<li style="list-style-type: none"><pre><code>/etc/sysctl.d/hardened_malloc.conf
+-----------------------------------
+
+vm.max_map_count = 524240</code></pre></li>
+- Restartujte OS.
 
 <br>
 
 ### Hardening aplikací:
-Balíčky mohou být kompilovány s *memory corruption* mitigacemi (ASLR, PIE, RELRO, Canary,&#8230;), které následně významně ztěžují jejich exploitaci.
-
-Pro plnou funkčnost ASLR musí být všechny běžící procesy zkompilovány jako **PIE**. Poté se bude jednat o vcelku robustní mitigaci (na *64-bit* architektuře).
-
-Balíčky neobsahující zmíněné mitigace je nutné zkompilovat ručně.
+Balíčky mohou být kompilovány s *memory corruption* mitigacemi (ASLR, PIE, RELRO, Canary,&#8230;), které následně významně ztěžují jejich exploitaci. Většina balíčků by standardně měla důležité mitigace obsahovat. Balíčky neobsahující zmíněné mitigace je nutné zkompilovat ručně.
 
 > Audit mitigací běžících procesů
 
@@ -196,7 +231,7 @@ ALLOWHIDDENFILE="/usr/share/man/man5/.k5login.5.gz"</code></pre></li>
 <br>
 
 ### Lynis:
-Lynis je špičková aplikace umožňující audit mnoha OS založených na UNIXu, včetně Linuxu. Provádí velmi detailní audit OS a po dokončení auditu zobrazí doporučení pro zvýšení bezpečnosti.
+Lynis umožňuje bezpečnostní audit mnoha OS založených na UNIXu. Provádí velmi detailní audit OS a po dokončení auditu zobrazí doporučení pro zvýšení bezpečnosti.
 
 > Návod
 

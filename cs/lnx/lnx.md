@@ -132,16 +132,9 @@ Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostn�
 <br>
 
 ### Aktualizace OS a SW:
-Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často opravují mnoho bezpečnostních chyb. Neaktuální SW je implicitně nebezpečný.
+Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často opravují mnoho bezpečnostních chyb. Neaktuální SW je implicitně nebezpečný. Ve všech zmíněných distribucích slouží k aktualizaci SW vestavěná aplikace <span class="green">Software</span>, která kromě tradičních balíčků obstarává i aktualizaci flatpaků či firmware.
 
-V distribuci **<span class="fe">Fedora</span>** teoreticky můžete aktualizace nechat na aplikaci **GNOME Software**, nebo je můžete jednou za čas spustit ručně pomocí jednoduchého příkazu:
-<pre><code>sudo dnf update</code></pre>
-
-Pro distribuci **<span class="os">openSUSE</span>** platí to stejné, co výše, akorát se liší syntax příkazu:
-<pre><code>sudo zypper up</code></pre>
-
-Pro distribuci **<span class="ub">Ubuntu</span>** platí to stejné, co výše, akorát se liší syntax příkazu:
-<pre><code>sudo apt update && sudo apt upgrade</code></pre>
+![lnxupd](https://securityhandbook.cz/img/cs/lnxupd.png)
 
 <br>
 
@@ -158,13 +151,9 @@ Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před út
 <br>
 
 ### MAC:
-<abbr title="Mandatory Access Control">MAC</abbr> se stal důležitou součástí bezpečnostního modelu linuxových distribucí. Podrobné vysvětlení naleznete např. na [Wikipedii](https://cs.wikipedia.org/wiki/Mandatory_access_control).
+<abbr title="Mandatory Access Control">MAC</abbr> se stal důležitou součástí bezpečnostního modelu linuxových distribucí.
 
-**<span class="fe">Fedora</span>** používá implementaci **SELinux**.
-
-**<span class="os">openSUSE</span>** používá implementaci **AppArmor**, MAC poskytující menší možnosti ochrany než např. SELinux.
-
-**<span class="ub">Ubuntu</span>** používá implementaci **AppArmor**, MAC poskytující menší možnosti ochrany než např. SELinux.
+**<span class="fe">Fedora</span>** používá implementaci **SELinux**. **<span class="os">openSUSE</span>** a **<span class="ub">Ubuntu</span>** používají implementaci **AppArmor**, MAC poskytující menší možnosti ochrany nežli např. SELinux.
 
 <br>
 
@@ -172,6 +161,7 @@ Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před út
 Virtualizace může být velmi bezpečný způsob ochrany před malware (záleží na způsobu aplikace), jelikož odděluje požadovanou část OS od fyzického OS. Základních možností aplikace virtualizace je několik.
 
 - sandbox
+- semivirtuální stroj (např. docker)
 - virtuální stroj (VM; virtual machine)
 
 #### Flatpak:
@@ -198,64 +188,61 @@ sudo apt install flatpak</code></pre>
 
 > Návod k použití Flatpak
 
-Několik aplikací můžete nalézt na [stránkách Flatpak](http://flatpak.org/apps.html) a většinu poté v repozitáři **Flathub**. Je důrazně doporučeno překliknout se do záložky <span class="green">Command Line</span> a příkazy provést ručně.
+Většinu aplikací můžete nalézt v repozitáři [Flathub](https://flathub.org/home). Distribuce **<span class="fe">Fedora</span>** má svůj integrovaný [kontejnerový repozitář](https://registry.fedoraproject.org/). Flatpak balíčky lze spravovat pomocí vestavěné aplikace <span class="green">Software</span>.
 
-Nikdy před příkaz **flatpak** nedávejte <span class="red">sudo</span>. Flatpak si o autorizaci řekne sám, bude-li ji potřebovat.
+Budete-li příkaz **flatpak** spouštět v terminálnu, <span class="red">nikdy jej nespouštějte pod sudo</span>. Flatpak si o autorizaci případně požádá sám přes GNOME dialog. Níže naleznete základní terminálové příkazy pro správu flatpak aplikací.
 
-- Nainstalované Flatpak aplikace vypíšete následujícím příkazem:
+- Výpis nainstalovaných aplikací:
 <li style="list-style-type: none"><pre><code>flatpak list</code></pre></li>
-- Aplikace aktualizujete náledujícím příkazem:
+- Aktualizace nainstalovaných aplikací:
 <li style="list-style-type: none"><pre><code>flatpak update</code></pre></li>
-- Dostupné aplikace v repozitáři vypíšete takto:
+- Výpis obsahu repozitáře – dostupných aplikací:
 <li style="list-style-type: none"><pre><code>flatpak remote-ls <repozitář></code></pre></li>
-- Instalaci aplikace z repozitáře je možno provést následovně:
+- Instalace aplikace z repozitáře:
 <li style="list-style-type: none"><pre><code>flatpak install <repozitář> <název_aplikace></code></pre></li>
-- Aplikaci poté můžete jednoduše odinstalovat:
+- Odinstalace:
 <li style="list-style-type: none"><pre><code>flatpak uninstall <název_aplikace></code></pre></li>
 
-<span class="green">Flathub</span> je oficiální platforma pro distribuci Flatpak aplikací. Naleznete zde již vcelku obstojný počet aplikací, který se neustále rozšiřuje. Například **LibreOffice**, **GIMP**, **Atom**, Signal, **VLC**, Audacity, Blender, **Steam**, GeoGebra, Inkscape,&#8230;
+<span class="green">Flathub</span> je nejrozšířenější platforma pro distribuci Flatpak aplikací. Repozitář **fedora** již obsahuje část GNOME aplikací a některé populární aplikace jako *GIMP*, nicméně je stále v aktivním vývoji a ne všechny aplikace jsou v použitelném stavu.
 
-> Nastavení repozitáře Flathub
+> Přidání Flathub repozitáře
 
-- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
-<li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</code></pre></li>
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkaz:
+<li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</code></pre></li>
+- Aplikaci zavřete.
+- Otevřete si <span class="green">Software</span>.
+- Přesuňte se do záložky **Aktualizace** a v levém horním rohu spusťte kontrolu aktualizací.
+- Po dokončení kontroly se přesuňte zpět do záložky **Procházet**.
+- Aplikaci zavřete.
 
 > Instalace GNOME aplikací
 
-Ve Flatpaku by správně měly být všechny aplikace ve výchozím nastavení, na to si ovšem budeme ještě muset chvíli počkat. (*Fedora 30?*)
+Ve Flatpaku by správně měly být všechny aplikace ve výchozím nastavení, na to si ovšem budeme ještě muset chvíli počkat. (*Fedora 34?*)
 
-Je vhodné mít ve Flatpaku alespoň rizikové aplikace jako **Evince** (prohlížeč PDF) nebo **Eye of GNOME** (prohlížeč obrázků). Také je dobrý nápad nainstalovat flatpak verzi GNOME prohlížeče **Epiphany**, který následně můžete odděleně používat pro citlivé věci jako bankovnictví apod.
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
+<li style="list-style-type: none"><pre><code>sudo dnf -y remove eog evince epiphany
+flatpak install fedora org.gnome.eog
+flatpak install fedora org.gnome.Evince
+flatpak install fedora org.gnome.Epiphany</code></pre></li>
 
-- Otevřete si <span class="green">Terminál</span>. Odinstalujte původní aplikace:
-<li style="list-style-type: none"><pre><code>sudo dnf -y remove eog</code></pre></li>
-- Aplikace *Evince* odebrat nelze, jelikož poskytuje náhledy ve správci souborů a také náhledy tisku. Lze ovšem jednoduše odebrat jeho ikonu ze seznamu aplikací:
-<li style="list-style-type: none"><pre><code>sudo rm /usr/share/applications/evince.desktop</code></pre></li>
-- Nainstalujte flatpak verze aplikací:
-<li style="list-style-type: none"><pre><code>flatpak install flathub org.gnome.Evince
-flatpak install flathub org.gnome.eog
-flatpak install flathub org.gnome.Epiphany</code></pre></li>
-- Nyní nastavte zpět aplikace jako výchozí. Otevřete si <span class="green">Nastavení</span>.
-- Rozklikněte kategorii **Podrobnosti** a následně zvolte podkategorii <span class="green">Výchozí aplikace</span>.
-- Nastavte Flatpak verzi *Eye of GNOME* aplikací jako výchozí:
-<li style="list-style-type: none">![lnxdapp](https://securityhandbook.cz/img/cs/lnxdapp.png)</li>
-- Nalezněte libovolný **PDF** soubor. Klikněte na něj pravým tlačítkem a zvolte <span class="green">Otevřít jinou aplikací</span>.
-- V seznamu zvolte Flatpak verzi **Prohlížeč dokumentů** a klikněte na tlačítko <span class="green">Vybrat</span>.
-<li style="list-style-type: none">![lnxdapp1](https://securityhandbook.cz/img/cs/lnxdapp1.png)</li>
+> Instalace flatpak aplikace v GNOME Software
 
-> Instalace LibreOffice
+- Otevřete si <span class="green">Software</span>.
+- Pomocí vyhledávání nalezněte a rozklikněte požadovanou aplikaci.
+- V pravém horním rohu vyberte příslušný zdroj &ndash; Fedora / Flathub:
+<li style="list-style-type: none">![lnxflat](https://securityhandbook.cz/img/cs/lnxflat.png)</li>
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
+Flatpak repozitář **Fedora** preferujte pouze u GNOME aplikací, aplikací <span class="red">GIMP</span> a <span class="red">Transmission</span>. Jinde preferujte **Flathub**.</p></div>
+- Klikněte na <span class="green">Instalovat</span>.
+- Instalace může trvat delší dobu v závislosti na vašem internetovém připojení, aplikace může vyžadovat runtime, která jsou objemná a musí se nejprve stáhnout.
+- Po dokončení instalace aplikaci zavřete.
+
+> Instalace flatpak LibreOffice
 
 - Otevřete si <span class="green">Terminál</span>. Odinstalujte původní LibreOffice, které jsou součástí standardní instalace:
 <li style="list-style-type: none"><pre><code>sudo dnf -y remove libreoffice*</code></pre></li>
 - Nainstalujte flatpak verzi LibreOffice:
 <li style="list-style-type: none"><pre><code>flatpak install flathub org.libreoffice.LibreOffice</code></pre></li>
-
-> Instalace Steam
-
-- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkaz:
-<li style="list-style-type: none"><pre><code>flatpak install flathub com.valvesoftware.Steam</code></pre></li>
-- Bude-li vám v průběhu nabídnut výběr mezi *gnome* a *flathub* repozitáři, zvolte <span class="green">flathub</span>.
-- Spusťte Steam a doufejte, že vaše oblíbené hry jsou ve flatpaku funkční. Seznam otestovaných her naleznete [zde](https://github.com/flathub/com.valvesoftware.Steam/wiki/Tested-Games).
 
 <br>
 
@@ -269,15 +256,16 @@ Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce.
 
 > Konfigurace GNOME Boxes
 
-- Stáhněte si obraz OS (ISO), který chcete virtualizovat.
+- Stáhněte si .iso obraz OS, který chcete virtualizovat.
 - Otevřete si aplikaci <span class="green">Boxy</span>.
-- V levém horním rohu aplikace klikněte na tlačítko <span class="green">Nový</span>.
-- Klikněte na <span class="green">Vybrat soubor</span> a nalezněte požadovaný ISO soubor.
+- Zobrazí-li se **Úvodní seznámení**, projděte jej a zavřete.
+- V levém horním rohu aplikace vytvořte nový virtuální stroj.
+- Klikněte na <span class="green">Soubor s obrazem operačního systému</span> a nalezněte požadovaný ISO soubor.
 - Odmítněte případnou expresní instalaci.
-- Klikněte na tlačítko <span class="green">Přizpůsobit...</span>
-- Nastavte požadované množství alokované paměti (alespoň *3 GiB*) a místa na disku (alespoň *20 GiB*).
+- Upravte alokaci zdrojů tlačítkem <span class="green">Přizpůsobit</span>
+- Přidělte virtuálnímu stroji alespoň *3 GiB* paměti a alespoň *22 GiB* místa na disku.
 <li style="list-style-type: none">![gboxes](https://securityhandbook.cz/img/cs/gboxes.png)</li>
-- Přesuňte se zpět a v pravém horním rohu klikněte na <span class="green">Vytvořit</span>.
+- Klikněte na <span class="green">Vytvořit</span>.
 - Nainstalujte a nakonfigurujte OS. Následně jej vypněte.
 - V seznamu na požadovaný virtuální stroj klikněte pravým tlačítkem a otevřete <span class="green">Vlastnosti</span>.
 - Přesuňte se do záložky **Snímky**. Existuje-li již nějaký snapshot, ozubeným kolem vpravo otevřete jeho konfiguraci a smažte jej.
