@@ -229,7 +229,7 @@ flatpak install fedora org.gnome.Epiphany</code></pre></li>
 
 - Otevřete si <span class="green">Software</span>.
 - Pomocí vyhledávání nalezněte a rozklikněte požadovanou aplikaci.
-- V pravém horním rohu vyberte příslušný zdroj &ndash; Fedora / Flathub:
+- V pravém horním rohu vyberte příslušný zdroj – Fedora / Flathub:
 <li style="list-style-type: none">![lnxflat](https://securityhandbook.cz/img/cs/lnxflat.png)</li>
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Flatpak repozitář **Fedora** preferujte pouze u GNOME aplikací, aplikací <span class="red">GIMP</span> a <span class="red">Transmission</span>. Jinde preferujte **Flathub**.</p></div>

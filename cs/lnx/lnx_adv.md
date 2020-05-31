@@ -44,7 +44,7 @@ uživatel    ALL=(ALL)    ALL
 
 ## Ochrana proti malware:
 ### Firewall:
-Pro běžné počítače stačí zakázat *forward* chain a bezpečně nastavit *input*. Aplikační FW lze implementovat skrz <abbr title="Mandatory Access Control">MAC</abbr>.
+Pro běžné počítače stačí zakázat *forward* chain a bezpečně nastavit *input*. Nejjednodušší konfiguraci pro ipv4/6 nabízí **nftables**. Aplikační FW lze implementovat skrz <abbr title="Mandatory Access Control">MAC</abbr>.
 
 > Příklad pravidel pro běžný počítač
 

@@ -1,28 +1,19 @@
-# FAQ &ndash; OS Windows
+# FAQ – OS Windows
 Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto nezbytné.
 
-V FAQ pro pokročilé se budeme věnovat hlavně vestavěným funkcím OS &ndash; cílem je dosáhnout špičkového zabezpečení za použití co nejméně kódu, jehož velikost s aplikacemi třetích stran rapidně roste.
+V FAQ pro pokročilé se budeme věnovat hlavně vestavěným funkcím OS – cílem je dosáhnout špičkového zabezpečení za použití co nejméně kódu, jehož velikost s aplikacemi třetích stran rapidně roste.
 
 Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Windows pro méně pokročilé](https://securityhandbook.cz/cs/wnt/index.php#wnt) uživatele a máte znalosti ve zmíněné sekci rozebírané.
 
 #### FAQ se dělí na několik sekcí:
 - [Bezpečnostní aplikace](#wnt1)
-- [Integritní politika](#wnt2)
-- [ACL](#wnt3)
-- [AppContainer](#wnt4)
+- [ACL](#wnt2)
 
 <br>
 
 ## Bezpečnostní aplikace:
 ### Firewall:
-Windows obsahují vestavěný <span class="green">Windows Defender Firewall</span> (WDF), který je na velmi vysoké úrovni.
-
-Použití FW třetí strany je zbytečné rozšiřování attack surface. Základem síťového zabezpečení v domácnosti je rozumný router s NAT a použitelným FW (např. libovolný Mikrotik, kde si FW ovšem musíte nastavit).
-
-Co se blokování odchozí komunikace týče, *Windows Defender Firewall* tuto funkci podporuje a umožňuje vcelku jednoduše nastavit.
-
-<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Návod měl původně být v sekci pro méně pokročilé, ovšem z důvodu nepříjemného bugu (nebo funkce) Windows 10, automatické aktualizace OS nelze ve whitelistu rozumně definovat.</p></div>
+Windows v základu integrují <span class="green">Windows Defender Firewall</span> (WDF) pro blokování příchozí komunikace. Co se blokování odchozí komunikace týče, *Windows Defender Firewall* tuto funkci podporuje, ovšem její nastavení se v nových verzích OS blíží k úrovni nemožného.
 
 > Konfigurace WDF pro blokování odchozí komunikace
 
@@ -38,100 +29,48 @@ Návod měl původně být v sekci pro méně pokročilé, ovšem z důvodu nep�
 <li style="list-style-type: none">![wdf2](https://securityhandbook.cz/img/cs/wdf2.png)</li>
 
 <div class="alert success"><p><em class="icon-ok-circled"></em>**Úspěch**<br>
-Nyní WDF blokuje veškerou odchozí komunikaci, která není na whitelistu. Dále je třeba nastavit whitelist.</p></div>
+Nyní WDF blokuje veškerou odchozí komunikaci, která není specificky povolena. Dále je třeba nastavit whitelist.</p></div>
 
-> Povolení odchozí komunikace pro všechny moderní aplikace
+> Whitelist odchozí komunikace
 
-- V levém sloupci otevřete <span class="green">Odchozí pravidla</span>.
-- V pravém sloupci zvolte možnost <span class="green">Nové pravidlo...</span>
-- Jako typ pravidla zvolte **Program** a klikněte na tlačítko <span class="green">Další</span>.
-- Zvolte možnost **Všechny programy** a klikněte na tlačítko <span class="green">Další</span>.
-- Zvolte možnost **Povolit připojení** a klikněte na tlačítko <span class="green">Další</span>.
-- Zkontrolujte zatržítka u všech položek a klikněte na tlačítko <span class="green">Další</span>.
-- Zadejte název pravidla &ndash; v tomto případě např. **All MoUI Apps**
-- Klikněte na <span class="green">Dokončit</span>.
-- Nové pravidlo otevřete. Přesuňte se do záložky **Programy a služby** a v sekci **Balíčky aplikací** klikněte na <span class="green">Nastavení...</span>
-<li style="list-style-type: none">![wdf3](https://securityhandbook.cz/img/cs/wdf3.png)</li>
-- Zvolte možnost <span class="green">Použít pouze pro balíčky aplikací</span> a potvrďte. Následně uložte změny v pravidle.
-<li style="list-style-type: none">![wdf4](https://securityhandbook.cz/img/cs/wdf4.png)</li>
+<pre><code># sitove sluzby OS
+%SystemRoot%\System32\svchost.exe
 
-> Povolení odchozí komunikace pro všechny služby Windows
+# nastaveni
+%SystemRoot%\ImmersiveControlPanel\SystemSettings.exe
 
-- V pravém sloupci zvolte možnost <span class="green">Nové pravidlo...</span>
-- Jako typ pravidla zvolte **Program** a klikněte na tlačítko <span class="green">Další</span>.
-- Zvolte možnost **Všechny programy** a klikněte na tlačítko <span class="green">Další</span>.
-- Zvolte možnost **Povolit připojení** a klikněte na tlačítko <span class="green">Další</span>.
-- Zkontrolujte zatržítka u všech položek a klikněte na tlačítko <span class="green">Další</span>.
-- Zadejte název pravidla &ndash; v tomto případě např. **All Services**
-- Klikněte na <span class="green">Dokončit</span>.
-- Nové pravidlo otevřete. Přesuňte se do záložky **Programy a služby** a v sekci **Služby** klikněte na <span class="green">Nastavení...</span>
-- Zvolte možnost <span class="green">Použít pouze pro balíčky aplikací</span> a potvrďte. Následně uložte změny v pravidle.
-<li style="list-style-type: none">![wdf5](https://securityhandbook.cz/img/cs/wdf5.png)</li>
+# Defender
+%ProgramFiles%\Windows Defender\MsMpEng.exe
+%ProgramFiles%\Windows Defender\MpCmdRun.exe
+%ProgramFiles%\Windows Defender\NisSrv.exe
+%ProgramData%\Microsoft\Windows Defender\Platform\*\MsMpEng.exe
+%ProgramData%\Microsoft\Windows Defender\Platform\*\MpCmdRun.exe
+%ProgramData%\Microsoft\Windows Defender\Platform\*\MpDlpCmd.exe
+%ProgramData%\Microsoft\Windows Defender\Platform\*\NisSrv.exe
 
-> Povolení odchozí komunikace pro důležité aplikace
-
-- V pravém sloupci zvolte možnost <span class="green">Nové pravidlo...</span>
-- Jako typ pravidla zvolte **Program** a klikněte na tlačítko <span class="green">Další</span>.
-- Zvolte možnost **Cesta k tomuto programu** a do textového pole vložte cestu k následujícímu souboru:
-<li style="list-style-type: none"><pre><code>%SystemRoot%\System32\smartscreen.exe</code></pre></li>
-<li style="list-style-type: none">![wdf6](https://securityhandbook.cz/img/cs/wdf6.png)</li>
-- Klikněte na tlačítko <span class="green">Další</span>.
-- Zvolte možnost **Povolit připojení** a klikněte na tlačítko <span class="green">Další</span>.
-- Zkontrolujte zatržítka u všech položek a klikněte na tlačítko <span class="green">Další</span>.
-- Zadejte název pravidla &ndash; v tomto případě např. **SmartScreen**
-- Klikněte na <span class="green">Dokončit</span>.
-- Stejný postup aplikujte pro následující aplikace:
-<li style="list-style-type: none"><pre><code>%SystemRoot%\ImmersiveControlPanel\SystemSettings.exe
-%programfiles%\Windows Defender\MsMpEng.exe
-%programfiles%\Windows Defender\MpUXSrv.exe
-%programfiles%\Windows Defender\MpCmdRun.exe
-%programfiles%\Windows Defender\wdnsfltr.exe</code></pre></li>
-
-> Windows Update na Windows 10
-
-Od verze **Windows 10 Creators Update** není možné rozumně povolit Windows Update &ndash; nestačí povolit pouze nezbytné služby, je nutné povolit celý *svchost.exe*.
-
-Je zde několik možností:
-
-- <span class="s">Permanentně povolit SVCHost.exe pro porty 80 a 443</span>. (<span class="red">nedoporučeno</span>)
-- Povolit SVCHost.exe pouze po dobu instalace aktualizací.
-- Instalovat aktualizace 1x měsíčně ručně a WU neřešit.
-- ...
-
-Problémem ovšem je, že přes WU se aktualizují definice <span class="green">Windows Defender</span>, které je důležité mít aktuální.
-
-Jako nejrozumnější varianta se tedy jeví následující:
-
-Vytvořit pravidlo pro povolení celého *SVCHost.exe* ve WDF, pojmenovat jej **SVCHost** a pravidlo zakázat (pravým tlačítkem). Následně pro aktualizaci definicí WD napsat jednoduchý skript a naplánovat v *Plánovači úloh* jeho spuštění 1x za 6 hodin.
-<pre><code>@echo off
-netsh advfirewall firewall set rule name="SVCHost" new enable=yes
-"%programfiles%\Windows Defender\MpCmdRun.exe" -SignatureUpdate
-netsh advfirewall firewall set rule name="SVCHost" new enable=no
-pause</code></pre>
-
-Windows Update následně můžete řešit libovolným způsobem.
+# OpenSSH
+%SystemRoot%\System32\OpenSSH\ssh-agent.exe
+</code></pre>
 
 <br>
 
 ### MemProtect:
-[MemProtect](https://excubits.com/content/en/products_memprotect.html) je drobný ovladač na úrovni kernelu, který určuje, které procesy mají přístup k ostatním procesům v RAM. Jedná se o špičkové řešení nejen proti řadám rodin exploitům, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
+[Excubits MemProtect](https://excubits.com/content/en/products_memprotect.html) je drobný ovladač určující které procesy mají přístup k jakým procesům v RAM. Jedná se o špičkové řešení mitigace proti exploitům, jehož konfigurace je triviální.
 
-Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, akorát podporuje konfigurační soubor pouze do velikosti 2 kB, což není dostatek pro pokročilé nastavení. Doporučuji tedy investovat do plné verze a podpořit vývojáře.
+Existuje bezplatná demo verze, která je po nějakou dobu plně funkční, s omezením velikosti konfigurační souboru na 2 kB, což není dostatek pro pokročilé nastavení, investice do plné verze je tedy žádoucí.
 
 > Instalace MemProtect
 
 - Stáhněte si demo verzi ze stránek výrobce, soubor spusťte a aplikaci vybalte.
-- V závislosti na bitové verzi OS otevřete složku **32-bit** / **64-bit**.
+- Otevřete složku **64-bit**.
 - Klikněte pravým tlačítkem na INF soubor a zvolte **Install**.
-- Vraťte se do rootu aplikace a otevřete **MemProtect.ini**.
-- Otevře se konfigurační soubor, kde definujete pravidla. V základu tam naleznete pravidlo, že Notepad nemá právo k modifikaci žádného souboru kromě TXT na Plochách uživatelů. RTFM, je v rootu aplikace.
-- Po dokončení úprav konfiguračního souboru jej přesuňte do lokace **C:\Windows**.
-- Následně ovladač aktivujte pomocí *net start MemProtect*.
+- RTFM, který je ve složce *Tools*.
 
-> Příklady MemProtect
+> Ukázka syntaxe konfiguračního souboru
 
-- Zablokování přístupu všem nesystémovým procesům k procesům VoodooShield &ndash; jednoduché ztížení exploitace:
-<li style="list-style-type: none"><pre><code>[LETHAL]
+Příklad: Zablokování přístupu všem nesystémovým procesům k procesům VoodooShield – jednoduché ztížení exploitace.
+
+<pre><code>[LETHAL]
 [LOGGING]
 [DEFAULTALLOW]
 [WHITELIST]
@@ -143,53 +82,35 @@ Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, a
 [BLACKLIST]
 *>C:\Program Files\VoodooShield\*
 [EOF]
-</code></pre></li>
-- &#8230;
+</code></pre>
 
 <br>
 
 ### FIDES:
-[FIDES](https://excubits.com/content/en/products_pumpernickelfides.html) je drobný ovladač na úrovni kernelu, který si můžete představit jako nějakou obdobu *MAC* na Linuxu &ndash; program určuje, které procesy mají ke kterým souborům přístup. Jedná se o špičkové řešení, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
+[Excubits FIDES](https://excubits.com/content/en/products_pumpernickelfides.html) je drobný ovladač určující které procesy mají k jakým souborům/složkám přístup. Jedná se o špičkové řešení mitigace proti exploitům, jehož konfigurace je triviální.
 
-Existuje demo verze, která je po nějakou dobu (obvykle rok) plně funkční, akorát podporuje konfigurační soubor pouze do velikosti 2 kB, což není dostatek pro pokročilé nastavení. Doporučuji tedy investovat do plné verze a podpořit vývojáře. Návod s příklady konfigurace bude někdy v budoucnu pravděpodobně doplněn.
+Existuje bezplatná demo verze, která je po nějakou dobu plně funkční, s omezením velikosti konfigurační souboru na 2 kB, což není dostatek pro pokročilé nastavení, investice do plné verze je tedy žádoucí.
 
 > Instalace FIDES
 
 - Stáhněte si demo verzi ze stránek výrobce, soubor spusťte a aplikaci vybalte.
-- V závislosti na bitové verzi OS otevřete složku **32-bit** / **64-bit**.
+- Otevřete složku **64-bit**.
 - Klikněte pravým tlačítkem na INF soubor a zvolte **Install**.
-- Vraťte se do rootu aplikace a otevřete **Pumpernickel.ini**.
-- Otevře se konfigurační soubor, kde definujete pravidla. V základu tam naleznete pravidlo, že Notepad nemá právo k modifikaci žádného souboru kromě TXT na Plochách uživatelů. RTFM, je v rootu aplikace.
-- Po dokončení úprav konfiguračního souboru jej přesuňte do lokace **C:\Windows**.
-- Následně ovladač aktivujte pomocí *net start pumpernickel*.
+- RTFM, který je ve složce *Tools*.
 
 <br>
 
 ### Bouncer:
-[Bouncer](https://excubits.com/content/en/products_bouncer.html) je drobný ovladač na úrovni kernelu, který umožňuje pokročilý whitelist spustitelných souborů. Jedná se o špičkové řešení, jehož konfigurace je vcelku jednoduchá, syntax konfiguračního souboru je triviální.
+[Excubits Bouncer](https://excubits.com/content/en/products_bouncer.html) je drobný ovladač umožňující pokročilý whitelist spustitelných souborů. Jedná se o špičkové řešení mitigace proti exploitům, jehož konfigurace je triviální.
 
-Existuje demo verze, která je po nějakou dobu plně funkční, akorát podporuje konfigurační soubor pouze do velikosti 5 kB, což není dostatek pro pokročilé nastavení. Doporučuji tedy investovat do plné verze a podpořit vývojáře.
+Existuje bezplatná demo verze, která je po nějakou dobu plně funkční, s omezením velikosti konfigurační souboru na 5 kB, což není dostatek pro pokročilé nastavení, investice do plné verze je tedy žádoucí.
 
-Postup je podobný jako u výše zmíněných produktů stejné společnosti. Návod s příklady konfigurace bude někdy v budoucnu pravděpodobně doplněn.
-
-<br>
-
-### Smart Object Blocker:
-[Smart Object Blocker](https://www.novirusthanks.org/products/smart-object-blocker/) je možnou alternativou k výše zmíněnému řešení.
-
-Návod s příklady konfigurace bude někdy v budoucnu pravděpodobně doplněn.
-
-<br>
-
-### OSArmor:
-[OSArmor](https://www.novirusthanks.org/products/osarmor/) je řešení založené na bázi behaviorálních pravidel, které nabízí několik zajímavých možností ochrany. Aktuálně je řazeno mezi experimentální aplikace, funguje již vcelku spolehlivě. Stejně jako např. *VoodooShield* ovšem není určeno k profesionálnímu nasazení.
-
-Návod s doporučenou konfigurací bude někdy v budoucnu pravděpodobně doplněn. Každopádně je doporučeno vypnout anti-exploit ochranu u aplikací, které mají implementovány vlastní účinné mitigace (MS Office, Chrome,&#8230;) a vyzkoušet různé možnosti ochrany v sekci *Advanced*.
+Postup je podobný jako u výše zmíněných produktů stejné společnosti.
 
 <br><br><hr><br>
 
 ## ACL:
-<span class="green">Access Control List</span> je součást bezpečnostního modelu OS, s jejíž pomocí můžeme zakázat např. spuštění aplikací v určité složce.
+<span class="green">Access Control List</span> je součást bezpečnostního modelu OS, jež v důsledku pro koncového uživatele umožňuje např. spuštění aplikací v určité složce.
 
 > Nutná teorie k ACL
 
@@ -197,115 +118,59 @@ Návod s doporučenou konfigurací bude někdy v budoucnu pravděpodobně dopln�
 
 Token obsahuje mnoho věcí, pro nás je ale aktuálně důležitá jedna položka: <span class="green">SID</span>.
 
-**SID** je unikátní hodnota určená k identifikaci vlastníka &ndash; uživatelského účtu nebo uživatelské skupiny. Např.: *S-1-5-32-544*.
+**SID** je unikátní hodnota určená k identifikaci vlastníka – uživatelského účtu nebo uživatelské skupiny. Např.: *S-1-5-32-544*.
 
 Kontrola přístupu z tokenu aplikace získá jeho SID a následně v ACL seznamu vyhledá veškeré záznamy (ACE), ve kterých je daný SID. Následně všechny nalezené ACE sekvenčně prozkoumá, dokud nenalezne ACE, který přístup k objektu explicitně zakáže/povolí. ACE zakazující přístup jsou zkoumány přednostně.
 
-<br>
+--
 
-Pokud jste si přečetli teorii, snad máte alespoň matnou představu o tom, jak ACL a kontrola přístupu funguje.
+ACL lze využít následovně: můžeme zakázat spouštění spustitelných souborů v uživatelských složkách a složce pro dočasné soubory. Běžný uživatel by neměl potřebovat spouštět ve svých složkách spustitelné soubory – a pokud ano, vždy lze nastavit výjimka.
 
-ACL můžeme využít následovně: můžeme zakázat spouštění spustitelných souborů v uživatelských složkách. Běžný uživatel nepotřebuje spouštět ve svých složkách spustitelné soubory &ndash; a pokud ano, nic mu nebrání v přesunutí souboru mimo jeho osobní složky. Výhody jsou doufám jasné &ndash; pokud se malware dostane na disk, nespustí se.
+> Konfigurace exekuce v uživatelské složce
 
-### Návody:
-
-> Odebrání pravomoce exekuce souborů v uživatelských složkách
-
-- Stiskněte kláv. zkratku <img src="https://securityhandbook.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
+- Stiskněte kláv. zkratku <img src="https://securityhandbook.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
 <li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs/wx.png)</li>
 - Do příkazové řádky zadejte následující příkazy (cestu ke složce uživatele patřičně upravte):
-<li style="list-style-type: none"><pre><code>icacls "C:\Users\(uživ. jméno)" /c /inheritance:d
-icacls "C:\Users\(uživ. jméno)" /c /deny Everyone:(OI)(CI)(X)</code></pre></li>
+<li style="list-style-type: none"><pre><code>icacls "(cesta k uživatelské složce)" /c /deny "Everyone:(OI)(CI)(X)"
+# např.: icacls "C:\Users\Uzivatel" /c /deny "Everyone:(OI)(CI)(X)"
+icacls "(cesta k uživatelské složce)\AppData\Local\Microsoft\WindowsApps" /inheritance:d
+icacls "(cesta k uživatelské složce)\AppData\Local\Microsoft\WindowsApps" /remove:d Everyone /t</code></pre></li>
 
-> Opětovné přidání pravomoce exekuce souborů v uživatelské složce
-
-- Stiskněte kláv. zkratku <img src="https://securityhandbook.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.</li>
-<li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs/wx.png)</li>
-- Do příkazové řádky zadejte následující příkaz (cestu ke složce patřičně upravte):
-<li style="list-style-type: none"><pre><code>icacls "C:\Users\User\AppData\Local\Temp" /remove Everyone /t</code></pre></li>
-
-<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-V příkladu byla použita složka **Temp**, jejíž pravomoc exekuce obsahujících souborů může být vyžadována některými aplikacemi (včetně systémových &ndash; MS Edge). Každopádně z bezpečnostního hlediska není úplně ideální exekuci ve složce povolit.</p></div>
-
-<br><br><hr><br>
-
-## Integritní politika:
-Pomocí integritní politiky &ndash; součásti bezpečnostního modelu OS &ndash; je možné omezit přístup aplikacím s nízkou úrovní integrity do osobních složek.
-
-> Nutná teorie k úrovním integrity a integritní politice
-
-Windows obsahuje mechanismus jménem **Kontrola přístupu**, který by se dal označit za základ bezpečnostního modelu Windows. Vždy, když libovolná aplikace žádá o přístup k nějakému objektu apod., musí projít Kontrolou přístupu. Bezpečnostní systém Windows získá tzv. **token** aplikace, což je zjednodušeně řečeno souhrn důkazů, proč má, potažmo nemá aplikace právo na vykonání dané akce. Na druhé straně (u požadovaného objektu) leží tzv. **deskriptor zabezpečení**, který říká, kdo k objektu má/nemá přístup a pravomoci k jeho manipulaci. Tokeny a deskriptory zabezpečení obsahují mnoho věcí, pro nás jsou ale důležité dvě položky: <span class='green'>úroveň integrity</span> a <span class='green'>integritní politika</span>.
-
-**Úroveň integrity** je číslo udávající důvěryhodnost aplikace/objektu. Existují následující úrovně integrity:
-
-- AppContainer
-- nedůvěryhodná
-- <span style='color: #BF0000'>nízká</span>
-- <span style='color: #FF8000'>střední</span>
-- <span style='color: #008000'>vysoká</span>
-- Systémová
-
-Pokud je úroveň integrity tokenu menší než úroveň integrity deskriptoru, dochází k aplikaci právě <span class='green'>integritní politiky</span>. Zde začíná pro nás zábava a pro hackera noční můra.
-
-**Integritní politika** určuje pravomoce procesů s nižší úrovní integrity k operaci s objekty s vyšší úrovní integrity. To znamená, že může např. malware s nízkou úrovní integrity zamezit práva zápisu do složky střední/vysoké integrity. Pro nás jsou nejzajímavější následující pravidla integritní politiky:
-
-- NO_READ_UP &ndash; omezuje práva ke čtení
-- NO_WRITE_UP &ndash; omezuje práva k zápisu
-- NO_EXECUTE_UP &ndash; omezuje práva ke spouštění
-
-Pravidla určovaná integritní politikou jsou absolutní &ndash; aplikaci je natvrdo zamezen přístup a jediné, co s tím může dělat, je úroveň integrity navýšit. Což může pouze skrz UAC dialog, rozhodnutí je následně samozřejmě na uživateli. Malware ovšem obvykle chce zůstat utajen, dokud nedokončí svoji práci &ndash; UAC dialog by ho tak nějak prozradil.
-
-Většina lépe naprogramovaného malware pozná, že běží s nízkou integritou, a hrdě spáchá *seppuku*. Exploitace UAC (samo-povýšení) je v jistých případech teoreticky možná a proveditelná se střední úrovní integrity &ndash; proces s nízkou úrovní integrity nemůže nic, maximálně se pokusit o exploitaci kernelu.
+Stejný postup proveďte pro globální složku dočasných sobourů.
 
 <br>
 
-Níže naleznete návod na konfiguraci integritní politiky pro osobní složky &ndash; *střední integrita*, **NO_WRITE_UP**, **NO_EXECUTE_UP**. Možností je ovšem více. Můžete například osobním složkám (kromě *Stažených soborů*) nastavit místo střední integrity **vysokou** integritu a tím zamezit většině uživatelských aplikací manipulaci s daty. V takovém případě soubory, které budete chtít v uživatelské aplikaci upravit, budete muset dočasně překopírovat jinam a následně zpět.
-
-Kromě složek můžete přenastavit nižší úroveň integrity i aplikacím. Mělo by se jednat o aplikace, které nepotřebují zapisovat do osobních složek &ndash; PDF prohlížeč, VLC etc. Nejedná se ovšem o komfortní a jednoduchou konfiguraci. Pro nastavení přístupu aplikací k disku je doporučeno použít <span class="green">FIDES</span>.
-
-<br>
+### Integritní politika:
+Pomocí integritní politiky je možné např. omezit přístup aplikacím s nízkou úrovní integrity do osobních složek. Pro komplexní konfiguraci přístupu aplikací k disku je doporučeno použít <span class="green">FIDES</span>. Ochranu proti ransomware poskytuje <span class="green">Windows Defender</span>. *Tato sekce již nemá příliš praktické využití.*
 
 > Instalace CHML
 
-Windows má vestavěný nástroj jménem <span class="green">icacls</span>, který umožňuje měnit úrovně integrity, neumožňuje ovšem pokročilé nastavení integritní politiky. Z tohoto důvodu je nutné použít drobný nástroj třetí strany.
+Integrovaný nástroj **icacls** neumožňuje nastavení integritní politiky, je proto nutné použít drobný nástroj třetí strany.
 
 - Stáhněte si [chml](https://securityhandbook.cz/mirror/chml.exe) (by *[Mark Minasi](https://www.minasi.com/)*) a uložte jej <span class="blue">na Plochu</span>.
-- Zkontrolujte *checksums* aplikace:
-<li style="list-style-type: none"><pre><code>SHA-256: 59aa55d2eac6b295d42ef2aadc607b759f034f4557a66dec0214a4cc032ecc17
-SHA-512: a22317552f90e896fb6f0e4a30f7834baf97a771211a37aca12f52d55ff8b85212d4ded5138ab66a70eaaa1193002b98158938bc17185ea94ccc9f7f4b8120f4</code></pre></li>
-- Aplikaci zkopírujte do umístění: <span class="blue">C:\Windows\System32</span>
-- Smažte *chml* z původní lokace.
+- Zkontrolujte checksum aplikace:
+<li style="list-style-type: none"><pre><code>SHA-256: 59aa55d2eac6b295d42ef2aadc607b759f034f4557a66dec0214a4cc032ecc17</code></pre></li>
+- Aplikaci zkopírujte do umístění: <span class="blue">%SystemRoot%\System32</span>
 - Stiskněte kláv. zkratku <img src="https://securityhandbook.cz/img/icons/wkey.png" alt="win"> <span class="ks">+ X</span> a z nabídky vyberte <span class="green">Windows PowerShell (správce)</span>.
 <li style="list-style-type: none">![wx](https://guide.mople71.cz/img/cs/wx.png)</li>
 - Do příkazové řádky zadejte následující příkaz pro validaci úspěšné instalace aplikace:
-<li style="list-style-type: none"><pre><code>chml /?</code></pre></li>
-- Pokud chml zareagoval svým výstupem, je správně nainstalován.
+<li style="list-style-type: none"><pre><code>chml</code></pre></li>
 
 > Nastavení integritní politiky osobních složek
 
-- Nyní můžeme nastavit integritní politiku osobních složek, jejichž obsah chceme chránit před malware. Cestu ke složkám tedy upravte pro váš OS.:
-<li style="list-style-type: none"><pre><code>chml C:\Users\[uživatel]\Documents -i:m -nw -nx
-chml C:\Users\[uživatel]\Pictures -i:m -nw -nx
-chml C:\Users\[uživatel]\Music -i:m -nw -nx
-chml C:\Users\[uživatel]\Videos -i:m -nw -nx
+- Do příkazové řádky zadejte následující příkazy:
+<li style="list-style-type: none"><pre><code>chml "(cesta k uživatelské složce)\Documents" -i:m -nw -nx
+chml "(cesta k uživatelské složce)\Pictures" -i:m -nw -nx
+chml "(cesta k uživatelské složce)\Music" -i:m -nw -nx
+chml "(cesta k uživatelské složce)\Videos" -i:m -nw -nx
 
-/* -i:l (nízká úroveň integrity)
--i:m (střední úroveň integrity)
--i:h (vysoká úroveň integrity)
--nw (NO_WRITE_UP)
--nx (NO_EXECUTE_UP)
--nr (NO_READ_UP) */</code></pre></li>
-- Stejným způsobem můžete nastavit integritu pro libovolnou privátní složku na disku. Úroveň integrity a integritní politika se *dědí*, není tedy potřeba nastavovat integritu pro složky nacházející se v již nakonfigurovaných složkách.
-
-<div class="alert success"><p><em class="icon-ok-circled"></em>**Úspěch**<br>
-Nyní máte nastavenou integritní politiku pro vaše privátní složky.</p></div>
-
-<br><br><hr><br>
-
-## AppContainer:
-AppContainer je implementace sandboxu integrovaná v OS od **Windows 8**. Je vyvinut pro ModernUI aplikace a např. MS Edge na něm má postavený svůj bezpečnostní model (používá několik AppContainerů zároveň). Existují také možnosti, jak upravit Win32 aplikaci, aby běžela v AppContainer, viz. [zde](https://www.howtogeek.com/250041/how-to-convert-a-windows-desktop-app-to-a-universal-windows-app/) nebo [zde](https://news.saferbytes.it/analisi/2013/07/securing-microsoft-windows-8-appcontainers/).
-
-AppContainer odděluje aplikace od sebe a částí OS. Podobnou snahu můžeme pozorovat i u Linuxu (Flatpak). Více o izolaci si můžete přečíst [zde](https://msdn.microsoft.com/en-us/library/windows/desktop/mt595898(v=vs.85).aspx).
+# -i:l (nízká úroveň integrity)
+# -i:m (střední úroveň integrity)
+# -i:h (vysoká úroveň integrity)
+# -nw (NO_WRITE_UP)
+# -nx (NO_EXECUTE_UP)
+# -nr (NO_READ_UP)</code></pre></li>
+- Analogicky lze nastavit integritní politiku pro libovolnou složku/soubor. Úroveň integrity a integritní politika jsou ve výchozím nastavení dědičné atributy.
 
 <br><br><hr>
 
