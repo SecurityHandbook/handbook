@@ -13,7 +13,7 @@ Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Windows pro méně p
 
 ## Bezpečnostní aplikace:
 ### Firewall:
-Windows v základu integrují <span class="green">Windows Defender Firewall</span> (WDF) pro blokování příchozí komunikace. Co se blokování odchozí komunikace týče, *Windows Defender Firewall* tuto funkci podporuje, ovšem její nastavení se v nových verzích OS blíží k úrovni nemožného.
+Windows v základu integrují <span class="green">Windows Defender Firewall</span> (WDF) pro blokování příchozí komunikace. Co se blokování odchozí komunikace týče, *Windows Defender Firewall* tuto funkci podporuje, ovšem její nastavení se v nových verzích OS limitně blíží k úrovni nemožného.
 
 > Konfigurace WDF pro blokování odchozí komunikace
 

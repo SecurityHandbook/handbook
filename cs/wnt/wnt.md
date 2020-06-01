@@ -1,7 +1,7 @@
-# FAQ &ndash; OS Windows
+# FAQ – OS Windows
 Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto nezbytné.
 
-Podporovanou verzí Windows v následující sekci je <span class="green">Windows 10 September 2018 Update</span> jakožto nejnovější OS s podporou do roku 2025. Obsažené informace jsou platné také pro **Windows 8.1 Update 3**. Starší verze OS Windows již postrádají důležité bezpečnostní mitigace/funkce a zanedlouho jim skončí &ndash; pokud již neskončil &ndash; cyklus rozšířené podpory. Majitelé starých verzí OS by proto měli přejít na novější OS, dovoluje-li jim to jejich HW. I přesto je většina obsažených informací platná pro starší verze OS, pouze se bude lišit přesný postup aplikace různých kroků &ndash; přesný postup pro staré verze zde nebude uváděn.
+Podporovanými verzemi Windows v této sekci jsou <span class="green">Windows 10 May 2020 Update</span> jakožto aktuální verze OS a **Windows 8.1 Update 3**. Starší verze OS již postrádají důležité bezpečnostní mitigace/funkce a nejsou podporovány, jejich uživatelé by proto přejít na novější verzi, dovoluje-li to HW.
 
 Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://securityhandbook.cz/cs/wnt/adv.php#wnt).
 
@@ -19,10 +19,10 @@ Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci
 
 OS Windows má dva typy uživatelských účtů: <span class="green">Standardní uživatel</span> a <span class="green">Správce</span>.
 
-Z hlediska bezpečnosti je důležité pracovat pod Standardním uživatelem, jelikož má omezená oprávnění. Pokud se tedy do OS i přes všechna zdejší doporučení dostane malware, infikuje pouze uživatelský účet &ndash; na infikaci OS nemá potřebná oprávnění.
+Z hlediska bezpečnosti je nezbytné provádět denní činnosti pod Standardním uživatelem, jelikož má omezená oprávnění, která jsou pro práci plně dostačující. Pokud se do OS i přes všechny vrstvy ochrany dostane malware, infikuje pouze uživatelský účet – na infikaci OS nebude mít potřebná oprávnění.
 
 <div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
-Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá další opatření naprosto zbytečná.</p></div>
+Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá další opatření zbytečná.</p></div>
 
 > Přidání účtu Správce a změna stávajícího uživatele na Standardního
 
@@ -41,7 +41,7 @@ Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá dal�
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Rodina a jiní uživatelé</span>.
 - V seznamu jiných uživatelů nalezněte svůj účet, klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
 - Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Standardní uživatel</span> a klikněte na <span class="green">OK</span>.
-- Přihlaste se zpět na svůj uživatelský účet.
+- Odhlaste se z administrátorského účtu a přihlaste se zpět na svůj uživatelský účet.
 
 > Přidání účtu Správce a změna stávajícího uživatele na Standardního (starší verze Windows)
 
@@ -59,20 +59,20 @@ Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá dal�
 - Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Účty** a následně zvolte podkategorii <span class="green">Jiné účty</span>.
 - V seznamu dalších účtů nalezněte svůj účet, klikněte na něj a následně zvolte <span class="green">Upravit</span>.
 - Zobrazí se dialog pro změnu typu účtu. Ze seznamu zvolte možnost <span class="green">Standardní uživatel</span> a klikněte na <span class="green">OK</span>.
-- Přihlaste se zpět na svůj uživatelský účet.
+- Odhlaste se z administrátorského účtu a přihlaste se zpět na svůj uživatelský účet.
 
 <br>
 
 ### User Account Control:
 
-*User Account Control* je důležitá součást bezpečnostního modelu OS od **Windows Vista**, kde se dočkala obrovské kritiky a ve Windows 7 proto byla v základním nastavení oslabena. Vypnutí UAC je z hlediska bezpečnosti sebevražda, naopak je doporučeno konfiguraci UAC nastavit na ještě přísnější úroveň.
+*User Account Control* je důležitá součást bezpečnostního modelu již OS od **Windows Vista**, kde se dočkala obrovské kritiky ze strany uživatelů a v novějších verzích OS je od té doby ve výchozím nastavením oslabena. Je důrazně doporučeno konfiguraci UAC zvýšit na nejpřísnější úroveň.
 
 > Nastavení UAC
 
 - Stiskněte kláv. zkratku ![win](https://securityhandbook.cz/img/icons/wkey.png) <span class="ks">+ R</span>, do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>useraccountcontrolsettings</code></pre>
 a stiskněte **Enter**.</li>
-- Otevře se konfigurace UAC. Zkontrolujte, že je nastavena na nejvyšší úroveň. Případně napravte.
+- Otevře se konfigurace UAC. Posuvník nastavte na nejvyšší úroveň.
 <li style="list-style-type: none">![uac](https://securityhandbook.cz/img/cs/uac.png)</li>
 - Klikněte na <span class="green">OK</span>.
 
@@ -80,11 +80,8 @@ a stiskněte **Enter**.</li>
 
 ### Bezpečné nastavení služeb a funkcí Windows:
 
-<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Pokročilejší si skript mohou upravit &ndash; je v něm několik zakomentovaných bezpečnostních opatření, které nemohou být aplikovány širokopásmově&#8230;</p></div>
-
 ![batch](https://securityhandbook.cz/img/icons/bat.png) **WinSecOpt**:
-- Stáhněte si [WinSecOpt](https://securityhandbook.cz/dl/winsecopt.zip).
+- Stáhněte si [WinSecOpt](https://github.com/lhajn/WNT_scripts/releases/download/v1/winsecopt_cs.zip).
 - Uložte a obsah archivu vyextrahujte <span class="blue">na Plochu</span>.
 - Na skript jménem <span class="green">winsecopt</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://securityhandbook.cz/img/icons/admin.png) **Spustit jako správce**.
 - Nechte skript pracovat, na konci procesu vám řekne o souhlas k restartu OS.
@@ -132,12 +129,12 @@ Potenciálně nebezpečné protokoly jsou nyní vypnuty. Dále nastavíme bezpe�
 2001:148f:fffe::1</code></pre></li>
 
 <div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
-Pro dosáhnutí kýženého efektu je nutné kompletní postup aplikovat pro všechny síťové adaptéry v seznamu (obvykle WLAN).</p></div>
+Pro dosáhnutí kýženého efektu je nutné kompletní postup aplikovat pro všechny síťové adaptéry v seznamu – obvykle Wi-Fi modul.</p></div>
 
 <br>
 
 ### Další bezpečnostní nastavení:
-- Vypněte Usnadnění přístupu na přihlašovací obrazovce &ndash; součást skriptu *WinSecOpt*.
+- Vypněte Usnadnění přístupu na přihlašovací obrazovce – součást skriptu *WinSecOpt*.
 - Vypněte AutoPlay:
     - Otevřete si <span class="green">Nastavení.</span> Rozklikněte kategorii **Zařízení** a následně zvolte podkategorii <span class="green">Automatické přehrávání</span>.
     - Automatické přehrávání vypněte.
@@ -154,18 +151,18 @@ a stiskněte **Enter**.</li>
 <br><br><hr><br>
 
 ## Ochrana proti malware
-Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (*&bdquo;layered config&ldquo;*) &ndash; pokud selže jedna vrstva, nastupuje druhá. Spousta běžných uživatelů stále spoléhá pouze na jednu tradiční vrstvu &ndash; antivirus &ndash; což je z hlediska bezpečnosti tristní.
+Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (*&bdquo;layered config&ldquo;*) – pokud selže jedna vrstva, nastupuje druhá. Bohužel stále není neobvyklé spoléhání se pouze na jednu tradiční vrstvu – antivirus – což je z hlediska bezpečnosti tristní.
 
-Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na verzi a edici OS. V základním nastavení ovšem bohužel nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
+Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na verzi a edici OS. V základním nastavení nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
 
 <br>
 
 ### Aktualizace OS a SW:
 Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často opravují mnoho bezpečnostních chyb. Neaktuální děravý SW je implicitně nebezpečný.
 
-Windows by se měly ve výchozím nastavení aktualizovat samy (v edici *Home* automatické aktualizace dokonce nelze vypnout). Mnohé důležité aplikace (např. prohlížeče) se obvykle aktualizují automaticky.
+Windows by se měly ve výchozím nastavení aktualizovat samy (v edici *Home* automatické aktualizace dokonce nelze vypnout). Důležité aplikace (např. prohlížeče, Adobe Reader) se zpravidla aktualizují automaticky.
 
-Pro kontrolu aktualizací ostatního SW můžete použít např. aplikaci <span class="green">Kaspersky Software Updater</span>, která vás v případě neaktuálního SW upozorní a umožní jeho aktualizaci &ndash; automatické aktualizace ovšem teoreticky mohou způsobit problémy. Návod ke *Kaspersky Software Updater* naleznete v sekci [Ostatní aplikace](#wnt2.6).
+Pro kontrolu aktualizací ostatního SW aktuálně neexistuje ideální aplikace.
 
 > Kontrola nastavení aktualizací OS (starší verze Windows)
 
@@ -180,77 +177,45 @@ a stiskněte **Enter**.</li>
 <br>
 
 ### Windows Defender:
-Windows Defender je komplexní řešení, jež kompletně pokrývá následující vrstvy zabezpečení: **antimalware**, **firewall**, **anti-exploit**. Dále zasahuje i do jiných vrstev jako *anti-ransomware* atd.
+Windows Defender je integrovaný komplexní bezpečnostní systém, jenž spolehlivě pokrývá vrstvy zabezpečení **antivirus / antimalware**, **firewall** i **anti-exploit**.
 
-#### Ochrana proti tradičnímu malware:
-Antivirus nebo antimalware (AV/M) je uživateli chápán jako základní vrstva zabezpečení, která sama o sobě stačí k zabezpečení OS. Tato teze již ovšem nějakou dobu není pravdivá.
+Antivirus nebo antimalware (AV/M) je uživateli často chápán jako vrstva zabezpečení, která sama o sobě stačí k zabezpečení OS. Tato teze již dlouhou dobu není pravdivá. Tradiční antimalware ochrana nicméně má v bezpečnostní konfiguraci své místo, a je integrována v rámci systému *Windows Defender*.
+
+<div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
+Instalace antivirových řešení třetích stran je důrazně nedoporučena.</p></div>
 
 > Rozebrání problematiky antivirů
 
-Tradiční mechanismus antiviru pracuje na bázi databáze &ndash; detekuje známý malware, jejichž otisk má v databázi. Tento systém má vcelku očividnou slabinu &ndash; pokud otisk pro malware neexistuje, antivir jej nevyhodnotí jako škodlivý.
-Další technologií je tzv. *heuristika*, kdy je škodlivost kódu vyhodnocována na základě jeho aktivit po spuštění (vzorek je zpravidla testován v izolovaném prostředí &ndash; sandboxu). Tato technologie má také slabinu &ndash; škodlivost je posuzována na základě předvolených pravidel a indikací, které u vzorku pozoruje. Pokud malware provede činnost, která není zaznamenána heuristickým systémem jako škodlivá, antivir jej nevyhodnotí jako škodlivý. Tvůrci malware tedy používají různé postupy, aby heuristickou detekcí jejich kód prošel.
+Tradiční mechanismus antiviru je založen na detekci známého malware, jehož otisk má v databázi. Pokud otisk pro malware neexistuje, nebude vyhodnocen jako škodlivý.
 
-Další problém antivirů je ten, že většina z nich je stará &ndash; mají starý kód, který je tak komplexní, že jej vývojáři nepřepisují, pouze záplatují a přidávají nové funkce. V důsledku je mnoho antivirů náchylných na hackerské útoky staré 10 let.
+Novější technologií je *heuristika*: škodlivost kódu je vyhodnocena podle aktivity po jeho spuštění (vzorek je testován v izolovaném prostředí), na základě předvolených pravidel a indikací, které jsou u vzorku pozorovány. Provede-li malware nekalou činnost, která není heuristickými pravidly označena jako škodlivá, malware bude vyhodnocen jako neškodný.
 
-Z výše uvedených důvodů tedy není bezpečné mít antivirus jako hlavní &ndash; natož jedinou &ndash; vrstvu zabezpečení. Antivirus ovšem má v bezpečnostní konfiguraci místo.
+Obejít výše zmíněné postupy není příliš náročné. Nejnovějším trendem je využití velkých dat a *AI* pro detekci malware. Tyto pokročilé technologie jsou zpravidla implementovány pouze v enterprise placených produktech nepřístupných běžným uživatelům (např. [SentinelOne](https://www.sentinelone.com/)) a ani ty nejsou nepřůstřelné.
 
-> Porovnání Windows Defender a AV/M řešení třetích stran
+Detekce **Windows Defender** je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na instalacích aktuálních verzí OS – počet uživatelů zvyšuje šanci zachytit nový malware. Implementuje vyspělý cloudový systém, díky kterému nabízí užitečné pokročilé funkce (např. *block on first sight*).
 
-Do příchodu **Windows 8.1 Update 3** byla AV/M řešení třetích stran brána jako nutné zlo, jelikož být bez žádného AV/M řešení je výrazně horší, nežli být s AV/M řešením třetí strany, a OS tehdy neobsahoval použitelné vestavěné AV/M řešení. S příchodem **Windows 10** byl <span class="green">Windows Defender</span> z velké části přepsán a s každou novou verzí OS se dočkává vylepšení. V aktuálním stavu se jedná o kvalitní moderní AV/M řešení.
+#### Ochrana proti tradičnímu malware:
 
-Ostatní AV/M řešení nejsou vestavěná v OS &ndash; kvalita jejich kódu nemusí (může) být na úrovni zbytku OS, s každým řádkem kódu navíc se ovšem zvětšuje prostor pro exploitaci. Na rozdíl od <span class="green">Windows Defender</span> nejsou korektně integrovány do OS &ndash; operují proto na bázi hacku a zásahu do bezpečnostního modelu OS (a aplikací jako internetových prohlížečů). V porovnání s integrovaným řešením navíc zpravidla postrádají/nevyužívají moderní mitigace proti exploitaci, které mají všechny systémové aplikace.
-
-Detekce <span class="green">Windows Defender</span> je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na instalacích aktuálních verzí OS &ndash; počet uživatelů zvyšuje šanci zachytit nový malware. Implementuje vyspělý cloudový systém, díky kterému nabízí užitečné pokročilé funkce (např. *block on first sight*).
-
-**Windows Defender** integrovaný ve *Windows 8.1 Update 3* a **Windows 10** dosáhl úrovně, kdy dostatečně pokrývá tradiční vrstvu zabezpečení. Již tedy není nutné instalovat antivirus třetí strany, jehož kvalita kódu je řádově menší a s OS mnohdy provádí oproti integrovanému řešení naprosté šílenosti.
-
-> Ochrana před viry a hrozbami &ndash; nastavení
+> Konfigurace Ochrany před viry a hrozbami
 
 - Otevřete si <span class="green">Centrum zabezpečení v programu Windows Defender</span>.
-- Přesuňte se do kategorie **Ochrana před viry a hrozbami** a otevřete <span class="green">Nastavení ochrany před viry a hrozbami</span>.
+- Rozklikněte kategorii **Ochrana před viry a hrozbami**.
+- Tlačítkem <span class="green">Spravovat nastavení</span> otevřete nastavení ochrany před viry a hrozbami.
 - Zkontrolujte konfiguraci ochrany a případně opravte:
-<li style="list-style-type: none">![wd](https://securityhandbook.cz/img/cs/wd.png)</li>
+<li style="list-style-type: none">![wdmal](https://securityhandbook.cz/img/cs/wdmal.png)</li>
 
-> Řízení aplikací a prohlížečů &ndash; nastavení
+> Konfigurace Ochrany na základě reputace
 
 - Přesuňte se do kategorie **Řízení aplikací a prohlížečů**.
+- Otevřete <span class="green">Nastavení Ochrany na základě reputace</span>.
 - Zkontrolujte konfiguraci SmartScreen filtru a případně opravte:
-<li style="list-style-type: none">![wd1](https://securityhandbook.cz/img/cs/wd1.png)</li>
-
-> Zabezpečení zařízení &ndash; nastavení
-
-- Přesuňte se do kategorie **Zabezpečení zařízení**.
-- V sekci **Izolace jádra** otevřete <span class="green">Podrobnosti o izolaci jádra</span>.
-- Zkontrolujte konfiguraci virtualizace a případně opravte:
-<li style="list-style-type: none">![wd2](https://securityhandbook.cz/img/cs/wd2.png)</li>
-- Potvrďte případný restart OS.
-
-> Konfigurace Řízeného přístupu ke složkám
-
-- Přesuňte se do kategorie **Ochrana před viry a hrozbami** a otevřete <span class="green">Ochranu před ransomwarem</span>.
-- Zapněte <span class="green">Řízený přístup ke složkám</span> a následně otevřete <span class="green">Chráněné složky</span>.
-<li style="list-style-type: none">![wd3](https://securityhandbook.cz/img/cs/wd3.png)</li>
-- Kliknutím na <span class="green">Přidat chráněnou složku</span> přidejte na seznam veškeré důležité osobní složky na disku, které nejsou v seznamu.
-
-> Povolení aplikace v Řízeném přístupu ke složkám (příklad: Kaspersky Software Updater)
-
-- Při instalaci aplikací budete muset dočasně **Řízený přístup ke složkám** zakázat.
-- Otevřete <span class="green">povolené aplikace v Řízeném přístupu ke složkám</span>.
-<li style="list-style-type: none">![wd3b](https://securityhandbook.cz/img/cs/wd3b.png)</li>
-- Klikněte na <span class="green">Přidat povolenou aplikaci</span>. Zvolte možnost <span class="green">Procházet všechny aplikace</span>.
-<li style="list-style-type: none">![wd4](https://securityhandbook.cz/img/cs/wd4.png)</li>
-- Nalezněte **Kaspersky Software Updater** a přidejte postupně jeho spustitelné programy na seznam.
-- **Řízený přístup ke složkám** následně opětovně povolte.
+<li style="list-style-type: none">![wdmal1](https://securityhandbook.cz/img/cs/wdmal1.png)</li>
 
 <br>
 
-<div class="alert info"><p><em class="icon-info-circled"></em>**Tip**<br>
-Používáte-li lokální uživatelský účet bez propojení s účtem Microsoftu, *Windows Defender* bude zobrazovat varování o nezabezpečení účtu. Zmíněného varování se snadno zbavíte otevřením **Centra zabezpečení v programu Windows Defender** a kliknutím na **Zavřít** v sekci *Ochrana účtu*.</p></div>
+Ve verzi OS **Windows 8.1 Update 3** obsahuje *Windows Defender* podstatně méně funkcí, stále se ovšem jedná o rozumnou volbu pro tradiční antimalware ochranu.
 
-
-Ve verzi OS **Windows 8.1 Update 3** obsahuje *Windows Defender* méně funkcí, stále se ovšem jedná o nejlepší volbu. Pro nižší verze OS poté existuje substituce Defenderu &ndash; [Microsoft Security Essentials](https://www.microsoft.com/cs-cz/download/details.aspx?id=5201).
-
-> Ochrana před viry a hrozbami &ndash; nastavení (starší verze Windows)
+> Konfigurace Ochrany před viry a hrozbami (starší verze Windows)
 
 - Otevřete si <span class="green">Windows Defender</span>.
 - Přesuňte se do záložky **Nastavení** a zvolte podkategorii <span class="green">Ochrana v reálném čase</span>.
@@ -264,198 +229,174 @@ Ve verzi OS **Windows 8.1 Update 3** obsahuje *Windows Defender* méně funkcí,
 
 <br>
 
-#### Firewall:
+#### Ochrana proti ransomware:
+**Řízený přístup ke složkám** je velice cenná a důležitá integrovaná bezpečnostní funkce, která spravuje přístup aplikací k obsahu uživatelských složek. Na základě pravidel zhodnotí, zdali je pokus o přístup ze strany aplikace legitimní, a pokud vyhodnotí pokus o přístup jako podezřelý/nestandardní, odepře jej.
 
-Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před útoky ze sítě. Windows obsahují vestavěný <span class="green">Windows Defender Firewall</span> (WDF), který je na velmi dobré úrovni a plně dostačující. *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*
+Zmíněná funkce prozatím není ve výchozím nastavení aktivována, jelikož čas od času chybně vyhodnotí pokus o přístup legitimní aplikace k souborům a odepře jej. Takovým aplikacím se následně musí v nastavení povolit přístup několika kliknutími.
 
-**Windows Defender Firewall** je v základu nastaven na blokování příchozí komunikace, která není explicitně povolena. Chcete-li posunout bezpečnost na výrazně vyšší úroveň, je nutné nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V nejnovější verzi Windows je ovšem taková konfigurace značně problematická, návod proto naleznete pouze v [FAQ pro pokročilé](https://securityhandbook.cz/cs/wnt/adv.php#wnt1).
+> Konfigurace Řízeného přístupu ke složkám
 
-Firewall aplikace třetích stran jako <span class="red">Comodo Firewall</span> jsou důrazně nedoporučeny.
+- Otevřete si <span class="green">Centrum zabezpečení v programu Windows Defender</span>.
+- Přesuňte se do kategorie **Ochrana před viry a hrozbami**.
+- Na konci stránky zvolte <span class="green">Spravovat ochranu před ransomwarem</span>.
+- Zapněte <span class="green">Řízený přístup ke složkám</span>.
+<li style="list-style-type: none">![wdrans](https://securityhandbook.cz/img/cs/wdrans.png)</li>
+- Ve výchozím nastavení jsou chráněny složky **Dokumenty**, **Obrázky**, **Videa** a **Hudba**.
+- Pro přidání chráněné složky (např. Plochy) klikněte na <span class="green">Chráněné složky</span>, zvolte <span class="green">Přidat chráněnou složku</span>, nalezněte cestu k dané složce a potvrďte.
+
+> Manuální povolení aplikace v Řízeném přístupu ke složkám
+
+- Ve **správě ochrany před ransomwarem** zvolte <span class="green">Povolit aplikace v Řízeném přístupu ke složkám</span>.
+- Klikněte na <span class="green">Přidat povolenou aplikaci</span>. Můžete buď požadovanou aplikaci nalézt na seznamu aplikací, jimž byl nedávno odepřen přístup, nebo aplikaci nalézt v souborovém systému.
+- Nalezněte požadovanou aplikaci a přidejte ji (případně ostatní její spustitelné programy) na seznam.
 
 <br>
 
-### Ochrana proti exploitaci:
-Každý kód obsahuje minimálně jednu chybu. Toho zneužívají *exploity*, které tyto chyby zneužívají.
+#### Ochrana proti exploitaci:
+Každý kód obsahuje minimálně jednu chybu. Některé z těchto chyb kvůli své povaze přináší bezpečnostní riziko. Takových chyb následně využívají tzv. *exploity* za účelem kompromitace systému a provedení typicky nekalé činnosti. Windows implementují nejmodernějších mitigace, exploitace důležitých samotného OS je proto časově náročná a velmi nákladná. Některé důležité aplikace (např. prohlížeč *Google Chrome*) jsou z hlediska mitigací proti exploitům také na velmi vysoké úrovni. Poté jsou zde ovšem aplikace, které dostatečné mitigace neimplementují, a jsou bohužel pro uživatele nezbytné.
 
-Windows využívají velké množství nejmodernějších mitigací, exploitace samotného OS je tedy velmi nákladná. Některé aplikace (např. *Google Chrome*) jsou z hlediska mitigací proti exploitům také na velmi vysoké úrovni. Pak jsou zde ovšem aplikace, které žádné mitigace neimplementují/nevyužívají, a někdy je bohužel užívání takových aplikací nezbytné. V takovém případě existují anti-exploit řešení, která umí exploitaci těchto aplikací ztížit.
+Systém *Windows Defender* integruje extrémně robustní a silnou ochranu proti exploitaci kritických částí OS na bázi virtualizace, která ovšem ve výchozím nastavení není povolena z důvodu nepatrné ztráty systémových prostředků. **Je důrazně doporučeno funkcionalitu aktivovat.**
 
-Od verze **Windows 10 Fall Creators Update** je schopnost mitigace aplikací třetích stran integrována přímo v OS, rozhraní pro konfiguraci poskytuje Windows Defender.
-
-> Konfigurace celosystémových anti-exploit mitigací
+> Konfigurace izolace jádra
 
 - Otevřete si <span class="green">Centrum zabezpečení v programu Windows Defender</span>.
-- Přesuňte se do kategorie **Řízení aplikací a prohlížečů**.
-- Sjeďte na konec stránky a otevřete <span class="green">Nastavení Ochrany Exploit Protection</span>.
-<li style="list-style-type: none">![wd5](https://securityhandbook.cz/img/cs/wd5.png)</li>
-- Zkontrolujte konfiguraci celosystémových mitigací a případně opravte:
-<li style="list-style-type: none">![wd6](https://securityhandbook.cz/img/cs/wd6.png)</li>
+- Přesuňte se do kategorie **Zabezpečení zařízení**.
+- Otevřete <span class="green">Podrobnosti o izolaci jádra</span>.
+- Aktivujte fuknci <span class="green">Integrita paměti</span>:
+<li style="list-style-type: none">![wd2](https://securityhandbook.cz/img/cs/wd2.png)</li>
+- Potvrďte restart OS.
 
-> Konfigurace anti-exploit mitigací pro jednotlivé aplikace (příklad: VoodooShield)
+Dále integruje *anti-exploit* řešení, které umí na spuštěnou aplikaci dodatečně nabalit různé mitigace a tím jejich exploitaci výrazně ztížit. Tuto funkcionalitu standardně ve výchozím nastavení aplikuje na některé důležité systémové procesy.
 
+> Konfigurace mitigací pro jednotlivé aplikace (příklad: VoodooShield)
+
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
+Aplikace *VoodooShield* je rozebírána v sekci [Anti-executable](#wnt2.3) níže.</p></div>
+
+<div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
+Níže uvedená konfigurace je určena pro aplikaci **VoodooShield** a nemusí být kompatibilní s jinými aplikacemi.</p></div>
+
+- Otevřete si <span class="green">Centrum zabezpečení v programu Windows Defender</span>.
+- Přesuňte se do kategorie **Řízení aplikací a prohlížečů**
+- Otevřete <span class="green">Nastavení Ochrany Exploit Protection</span>.
 - V horním panelu se přesuňte do záložky **Nastavení programu**.
-- Klikněte na <span class="green">Přidat program, který chcete přizpůsobit</span> a <span class="green">Zvolit přesnou cestu k souboru</span>.
-<li style="list-style-type: none">![wd7](https://securityhandbook.cz/img/cs/wd7.png)</li>
-- Nalezněte a zvolte požadovanou aplikaci, kterou chcete mitigovat.
-<li style="list-style-type: none">![wd8](https://securityhandbook.cz/img/cs/wd8.png)</li>
+- Klikněte na <span class="green">Přidat program, který chcete přizpůsobit</span> a poté <span class="green">Zvolit přesnou cestu k souboru</span>.
+- Nalezněte a potvrďte požadovanou aplikaci, kterou chcete mitigovat (*VoodooShield.exe*).
+<li style="list-style-type: none">![wdexpl](https://securityhandbook.cz/img/cs/wdexpl.png)</li>
 - Upravte konfiguraci dle obrázku:
-<li style="list-style-type: none">![wd9](https://securityhandbook.cz/img/cs/wd9.png)</li>
-- Klikněte na tlačítko <span class="green">Použít</span>.
+<li style="list-style-type: none">![wdexplvs](https://securityhandbook.cz/img/cs/wdexplvs.png)</li>
+- Klikněte na <span class="green">Použít</span>.
+- Postup zopakujte pro **VoodooShieldService.exe** ve stejném umístění s následující konfigurací:
+<li style="list-style-type: none">![wdexplvss](https://securityhandbook.cz/img/cs/wdexplvss.png)</li>
 
-> Konfigurace anti-exploit mitigací pro Microsoft Office
+> Konfigurace mitigací pro Microsoft Office
 
-- V horním panelu se přesuňte do záložky **Nastavení programu**.
-- Klikněte na <span class="green">Přidat program, který chcete přizpůsobit</span> a zvolte <span class="green">Přidat podle názvu aplikace</span>.
+<div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
+Níže uvedená konfigurace je určena pro aplikace **MS Office** a nemusí být kompatibilní s jinými aplikacemi.</p></div>
+
+- Klikněte na <span class="green">Přidat program, který chcete přizpůsobit</span> a poté <span class="green">Přidat podle názvu aplikace</span>.
 - Do textového pole zadejte:
 <li style="list-style-type: none"><pre><code>WINWORD.EXE</code></pre></li>
 - Upravte konfiguraci dle obrázku:
-<li style="list-style-type: none">![wd10](https://securityhandbook.cz/img/cs/wd10.png)</li>
+<li style="list-style-type: none">![wdexplmso](https://securityhandbook.cz/img/cs/wdexplmso.png)</li>
 - Klikněte na tlačítko <span class="green">Použít</span>.
-- Obdobný způsob proveďte pro aplikaci MS Excel:
+- Obdobný způsob aplikujte pro aplikaci MS Excel:
 <li style="list-style-type: none"><pre><code>EXCEL.EXE</code></pre></li>
-- Obdobný způsob proveďte pro aplikaci MS PowerPoint:
+- Obdobný způsob aplikujte pro aplikaci MS PowerPoint:
 <li style="list-style-type: none"><pre><code>POWERPNT.EXE</code></pre></li>
 
 <br>
 
-#### Ochrana proti exploitaci starších verzí Windows:
-- [Microsoft Enhanced Mitigation Experience Toolkit](https://support.microsoft.com/cs-cz/help/2458544/the-enhanced-mitigation-experience-toolkit) (EMET; Windows 8.1 Update 3 a níže)
-- [HitmanPro.Alert](https://www.hitmanpro.com/en/alert.aspx) (HMP.A)
+Alternativním řešením, které v *anti-exploit* sekci stojí za zmínku, je placený software [HitmanPro.Alert](https://www.hitmanpro.com/en-us/alert.aspx) od společnosti Sophos. Kritický může být pro uživatele verze **Windows 8.1 Update 3**, kde nejsou pokročilé funkce ochrany integrovány v OS. Aplikace není dostupná v češtině.
 
-<span class="red">EMET</span> je anti-exploit řešení od MS určeno pro **starší verze OS**, které anti-exploit mitigace nemají integrovány.
-
-> Instalace a konfigurace EMET (starší verze Windows)
-
-- Stáhněte si nejnovější verzi [EMET](https://aka.ms/emetdownload).
-- Aplikaci nainstalujte.
-- V průběhu instalace se zobrazí okno se základním nastavením aplikace. Zvolte možnost <span class="green">Use Recommended Settings</span> a klikněte na <span class="green">Finish</span>.
-<li style="list-style-type: none">![emet](https://securityhandbook.cz/img/en/emet.png)</li>
-- Otevřete si <span class="green">EMET GUI</span>.
-- V horním menu EMET klikněte na tlačítko <span class="green">Apps</span>.
-- Zobrazí se seznam mitigovaných aplikací, pro přidání nové klikněte na tlačítko <span class="green">Add Application</span>.
-<li style="list-style-type: none">![emet1](https://securityhandbook.cz/img/en/emet1.png)</li>
-- Nalezněte a zvolte požadovanou aplikaci, kterou chcete mitigovat.
-<li style="list-style-type: none">![wd8](https://securityhandbook.cz/img/cs/wd8.png)</li>
-- Upravte konfiguraci dle obrázku:
-<li style="list-style-type: none">![emet2](https://securityhandbook.cz/img/en/emet2.png)</li>
-- Po dokončení nastavení všech aplikací zkontrolujte nastavení mitigací, případně opravte dle obrázku:
-<li style="list-style-type: none">![emet3](https://securityhandbook.cz/img/en/emet3.png)</li>
-- Klikněte na <span class="green">OK</span> a zavřete EMET spolu s vyskakovacím oknem, které se objeví.
-
-<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Jaké další aplikace mitigovat? Veškerý rizikový SW třetí strany – např. VLC, 7-Zip, PDF prohlížeč, Steam apod.</p></div>
-
-**TIP pro rychlou konfiguraci aplikace:**
-- Pro rychlou konfiguraci aplikace danou aplikaci nejprve spusťte.
-- Otevřete si <span class="green">EMET GUI</span>.
-- V listu běžících procesů nalezněte danou aplikaci, klikněte na ni pravým tlačítkem a zvolte možnost <span class="green">Configure Process&#8230;</span>
-- Otevře se nastavení aplikací s nově přidanou zvolenou aplikací, pro kterou následně nakonfigurujte mitigace, a klikněte na <span class="green">OK</span>.
-<li style="list-style-type: none">![emet4](https://securityhandbook.cz/img/en/emet4.png)</li>
-
-<span class="red">HitmanPro.Alert</span> je placená aplikace, která nabízí komplexní zabezpečení včetně mitigací proti exploitům. Investice do něj má smysl u starších verzí OS, verze **Windows 10 Fall Creators Update** a novější ovšem mají většinu hlavních funkcí HMP.A integrovanou v OS.
-
-> Instalace a konfigurace HMP.A (starší verze Windows)
+> Instalace a konfigurace HitmanPro.Alert (starší verze Windows)
 
 - Stáhněte si [HMP.A](https://www.hitmanpro.com/en/alert.aspx).
 - Aplikaci nainstalujte, ponechte doporučené nastavení a možnost skenu po instalaci.
-- Aplikaci otevřete.
+- Vyčkejte na dokončení skenu a vyřešte případné nálezy.
 - Klikněte na ozubené kolo v pravém horním rohu a zvolte možnost <span class="green">Advanced interface</span>.
-- Následně v dolní části klikněte na možnost **Safety notification** a zvolte možnost <span class="green">At application start</span>.
+- Rozklikněte kategorii <span class="green">Risk reduction</span>.
+- Zapněte funkci **BadUSB** a změňte nastavení funkce **Vaccination** na <span class="green">Active vaccination</span>.
 <li style="list-style-type: none">![hmpa](https://securityhandbook.cz/img/en/hmpa.png)</li>
-- Následně klikněte na kategorii <span class="green">Risk reduction</span> a zapněte všechny její funkce, které nejsou vypnuté. Funkce, které již jsou zapnuté, ponechte na výchozím nastavení.
-- Při otevření prohlížeče nebo jiné chráněné aplikace se při ponechání myši na pár sekund na kraji jejího okna  zobrazí ohraničení, které signalizuje, že HMP.A chrání danou aplikaci a také ukazuje, které funkce HMP.A jsou pro danou aplikaci zapnuté. Mimo jiné se objeví notifikace o zapnutí ochrany pro danou aplikaci.
+- Při otevření prohlížeče nebo jiné chráněné aplikace se při ponechání myši na pár sekund na kraji jejího okna zobrazí ohraničení, které signalizuje, že HMP.A chrání danou aplikaci a také ukazuje, které funkce HMP.A jsou pro danou aplikaci zapnuté. Mimo jiné se při prvním startu aplikace za uživatelské sezení objeví notifikace o aktivní ochraně.
 <li style="list-style-type: none">![hmpa1](https://securityhandbook.cz/img/en/hmpa1.png)</li>
 <li style="list-style-type: none">![hmpa2](https://securityhandbook.cz/img/en/hmpa2.png)</li>
 - Při zachycení útoku HMP.A školivou aplikaci ukončí a zobrazí následující hlášku:
 <li style="list-style-type: none">![hmpa3](https://securityhandbook.cz/img/en/hmpa3.png)</li>
 
-<div class="alert success"><p><em class="icon-ok-circled"></em>**Tip**<br>
-Více informací můžete nalézt v [manuálu](https://www.hitmanpro.com/en-us/medialibrary/Microsites/SurfRight/Resources/HitmanPro-Alert-Getting-Started.pdf) [EN].</p></div>
+<br>
+
+#### Firewall:
+Firewall je velmi důležitá vrstva zabezpečení, která chrání OS síťovými útoky. Systém *Windows Defender* integruje **Windows Defender Firewall** (WDF), který je pro standardní použití plně dostačující. *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*
+
+<div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
+Instalace firewall řešení třetích stran je důrazně nedoporučena.</p></div>
+
+Firewall je v základu korektně nastaven na blokování příchozí komunikace, která není explicitně povolena. Pro citelné zvýšení bezpečnosti je možné nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V novějších verzích OS je taková konfigurace ovšem nesnadný počin a rámcový návod je proto dostupný pouze v [sekci pro pokročilé](https://securityhandbook.cz/cs/wnt/adv.php#wnt1).
 
 <br>
 
 ### Anti-executable:
-Anti-executable je velmi účinná vrstva ochrany. Jak název napovídá, anti-executable řešení zabraňuje spouštění spustitelných souborů, tedy i malware.
+Anti-executable je specifická vrstva ochrany. Jedná se o řešení, které na základě definovaných pravidel spravuje, jaký kód je v OS spuštěn. Tímto principem ideálně zachytí pokus o spuštění malware a zabrání mu. Většina řešení funguje na principu *whitelistu* – má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně v závislosti na nastavení souboru přímo exekuci odepře. Nastavení whitelistu není triviální úkol, existují ovšem i řešení, která umí whitelist vytvořit s minimem uživatelské interakce.
 
-Většina řešení funguje na principu *whitelistu* &ndash; má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně souboru rovnou zabraní ve spuštění. Nastavení whitelistu není úkol pro běžné uživatele, existují ovšem i řešení, která umí whitelist vytvořit s minimem uživatelské interakce.
-
-#### Přehled anti-executable řešení:
-- [NVT Anti-AutoExec](https://www.novirusthanks.org/products/anti-autoexec/)
-- [VoodooShield](https://voodooshield.com/) (VS)
-- [NVT ExeRadarPro](https://www.novirusthanks.org/products/exe-radar-pro/) (NVT ERP)
-- [AppLocker](https://technet.microsoft.com/cs-cz/library/dd759117.aspx)
-- [Software Restrtiction Policies](https://technet.microsoft.com/cs-cz/library/hh831534.aspx) (SRP)
-
-<span class="red">NVT Anti-AutoExec</span> je drobná aplikace, která automaticky zabraňuje šíření USB malware. Stačí nainstalovat a ochrana je aktivní bez jakékoli interakce.
-
-<span class="red">VoodooShield</span> je nejpřívětivější anti-executable a vhodná volba pro obyčejné uživatele, pro profesionální nasazení z důvodů implementace ochrany již ne. Kromě placené verze poskytuje i bezplatnou pro nekomerční využití, která poskytuje srovnatelnou ochranu, akorát nenabízí možnost rozšířené konfigurace &ndash; což běžného uživatele nemusí trápit. V základu je aplikace nakonfigurována bezpečně. Bohužel (zatím) nenabízí české rozhraní.
+Nejpřívětivějším řešením je software [VoodooShield](https://voodooshield.com/), jenž kromě placené verze nabízí i bezplatnou pro nekomerční využití, která poskytuje srovnatelnou ochranu, akorát nenabízí možnost rozšířené konfigurace. Jedinou zásadní nevýhodou je absence českého rozhraní.
 
 > Instalace a konfigurace VoodooShield
 
 - Stáhněte si [VoodooShield](https://voodooshield.com/#download).
-- Aplikaci nainstalujte.
-- Vyčkejte na dokončení konfigurace aplikace a při dotázání zvolte <span class="green">Application Whitelisting Mode</span>. Uvítací okno následně zavřete.
-- Klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a vyberte možnost <span class="green">Hide</span>, čímž skryjete widget aplikace z pracovního prostoru.
-- Klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Training</span>.
+- Aplikaci nainstalujte. Zadejte email pro bezplatnou registraci, zvolte <span class="green">Application Whitelisting Mode</span>.
+- Vyčkejte na dokončení konfigurace. Uvítací okno následně zavřete.
+- Klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a vyberte možnost <span class="green">Hide Desktop Shield</span>, čímž skryjete widget aplikace z pracovního prostoru.
+- Klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">TRAINING</span>.
 <li style="list-style-type: none">![vs](https://securityhandbook.cz/img/en/vs.png)</li>
-- Nyní se VoodooShield učí aplikace, které používáte, a povoluje je. V tréninkovém módu postupně spusťte všechny aplikace, které používáte. Ideální je v tréninkovém módu PC používat jeden den, aby VoodooShield vše stihl zapsat.
-- Po ukončení tréninku VoodooShield klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">Always On</span>.
+- VoodooShield se nyní učí aplikace, které používáte, aby je následně mohl povolit bez uživatelské interakce. Ideální je v tréninkovém módu zařízení používat jeden den, aby VoodooShield vše stihl zapsat.
+- Po ukončení tréninku VoodooShield klikněte pravým tlačítkem na ikonu aplikace v hlavním panelu a zvolte mód <span class="green">ALWAYS ON</span>.
 <li style="list-style-type: none">![vs1](https://securityhandbook.cz/img/en/vs1.png)</li>
 
 <div class="alert success"><p><em class="icon-ok-circled"></em>**Úspěch**<br>
-Nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když budete chtít instalovat libovolnou aplikaci, zvolte <strong>Disable/Install Mode</strong>.</p></div>
+Nyní máte plně funkční anti-executable ochranu aplikace VoodooShield. Když budete chtít instalovat libovolnou aplikaci, dočasně přepněte mód ochrany na <strong>DISABLE / INSTALL</strong>.</p></div>
 
-#### Ukázky a poznatky z provozu:
-(obrázky jsou pouze ilustrativní)
+> Ukázky a poznatky z provozu VoodooShield
 
-- Když VS zablokuje neznámou, ale možná bezpečnou aplikaci, zobrazí následující bublinu:
+- Jakmile VS zablokuje neznámou, ale možná bezpečnou aplikaci, zobrazí následující bublinu:
 <li style="list-style-type: none">![vs2](https://securityhandbook.cz/img/en/vs2.png)</li>
 - Pokud chcete aplikaci povolit, na bublinu klikněte a v následujícím okně zvolte možnost <span class="green">Install</span>.
 <li style="list-style-type: none">![vs3](https://securityhandbook.cz/img/en/vs3.png)</li>
 - Když VS zablokuje aplikaci, kterou detekuje alespoň 1 antivirový produkt nebo VoodooAI jako malware, zobrazí následující bublinu:
 <li style="list-style-type: none">![vs4](https://securityhandbook.cz/img/en/vs4.png)</li>
-- Zde je povolení o pár kliků delší. Klikněte na bublinu, v následujícím okně zvolte možnost <span class="green">Allow False Positive</span> a odsouhlaste veškerá vyskakovací okna.
+- Zde je povolení o pár kliků delší, jedná-li se o legitimní aplikaci. Klikněte na bublinu, v následujícím okně zvolte možnost <span class="green">Allow False Positive</span> a odsouhlaste veškerá vyskakovací okna.
 <li style="list-style-type: none">![vs5](https://securityhandbook.cz/img/en/vs5.png)</li>
 - Po povolení aplikace a provedení vámi požadované akce se vždy přesvědčte, že VS běží v módu <span class="green">Always On</span>.
 
 <br>
 
-<span class="red">AppLocker</span> je anti-executable integrovaný ve Windows v edicích **Ultimate**, **Education** a **Enterprise**. Umožňuje ovládání spustitelných souborů, skriptů, DLL knihoven, MSI instalátorů a ModernUI (metro) aplikací. Poskytuje vcelku slušnou ochranu, na druhou stranu existují známé způsoby jeho obejití.
-
-<span class="red">Software Restriction Policy</span> je funkčně velmi omezený anti-executable dostupný ve všech edicích Windows. Umožňuje ovládání spustitelných souborů a skriptů. Jeho pravidla jsou ovšem vázána na proces *explorer.exe*, který je vlastněn uživatelem, není tedy ideální k profesionálnímu nasazení.
-
-<br>
-
 ### Virtualizace:
-Virtualizace může být velmi bezpečný způsob ochrany před malware (záleží na způsobu aplikace), jelikož odděluje požadovanou část OS od fyzického OS. Základních možností aplikace virtualizace je několik.
+Virtualizace může být velmi bezpečný způsob ochrany před malware v závislosti na způsobu implementace, jelikož odděluje požadovanou část OS od jeho zbytku. Standardních způsobů implementace virtualizace je několik:
 
 - virtuální stroj (VM; virtual machine)
-- částečná virtualizace OS
+- semivirtuální stroj (např. docker)
 - sandbox
 
 #### Virtuální stroj:
-Nejbezpečnější způsob virtualizace je emulace virtuálního zařízení, kdy je virtualizován celý OS &ndash; za korektního nastavení a využití snapshotů. Po správné konfiguraci můžete virtuální stroj používat např. k vcelku bezpečnému brouzdání internetem.
-
-Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce. Pro virtualizaci OS Windows pro něj ovšem budete potřebovat dodatečnou licenci. Přehled populárních řešení naleznete níže:
+Nejpokročilejší způsob virtualizace je emulace na nejnižší úrovni, kdy je virtualizován celý OS. Za korektního použití a nastavení (např. snapshoty) může jít o vysoce robustní bezpečnostní vrstvu. Po patřičné konfiguraci můžete virtuální stroj používat např. k relativně bezpečnému brouzdání internetem. Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce. Pro virtualizaci OS Windows pro něj ovšem budete potřebovat dodatečnou licenci, nebo členství v programu Insider.
 
 - [Hyper-V](https://docs.microsoft.com/cs-cz/virtualization/hyper-v-on-windows/about/)
 - [VMware Workstation Player](https://www.vmware.com/go/downloadworkstationplayer)
 - [VirtualBox](https://www.virtualbox.org/)
-- &#8230;
 
-<span class="red">Hyper-V</span> je integrované řešení OS Windows v edicích **Pro** a **Enterprise**.
+Majitelé edic OS Windows **Pro** a **Enterprise** mohou využít vestavěné profesionální řešení [Hyper-V](https://docs.microsoft.com/cs-cz/virtualization/hyper-v-on-windows/about/). Majitelé nižších edic OS mají na výběr z několika bezplatných a mnoha placených řešení třětích stran.
 
-<span class="red">VMware Workstation Player</span> je bezplatný virtualizační software, který je oproti své placené mutaci značně funkčně omezený.
+Z bezplatných řešení je jedinou volbou integrující důležité bezpečnostní funkce (mj. snapshoty) software <span class="red">VirtualBox</span>, populární bezplatné open-source řešení. Není ideální k profesionálnímu nasazení, spíše na hraní. Možnou robustnější alternativu tvoří <span class="red">VMware Workstation Player</span>, který je zdarma pro nekomerční využití, nepodporuje ovšem tvorbu snapshotů a neobsahuje české rozhraní.
 
-<span class="red">VirtualBox</span> je populární bezplatné open-source řešení, které umožňuje důležitou konfiguraci bezpečnostních funkcí jako snapshotů. Není ideální k profesionálnímu nasazení.
+> Vytvoření VM pomocí VirtualBox
 
-> Příklad vytvoření VM s linuxovou distribucí pomocí VirtualBox
-
+- Stáhněte si .iso obraz OS, který chcete virtualizovat.
 - Stáhněte si [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 - Aplikaci nainstalujte.
 - Po otevření aplikace v horním menu klikněte na tlačítko <span class="green">Nový</span>.
 - V dolním panelu zvolte <span class="green">Expertní režim</span>.
 - Zvolte název VM a požadovaný OS. Následně určete velikost paměti OS a tlačítkem <span class="green">Vytvořit</span> otevřete dialog k vytvoření virtuálního pevného disku.
-- Zvolte jeho velikost (alespoň *20 GB*) a vytvořte jej.
+- Zvolte jeho velikost (alespoň *22 GB*) a vytvořte jej.
 - Upravte nastavení VM dle potřeby a následně virtuální stroj spusťte. Vyberte bootovací disk požadovaného OS a klikněte na tlačítko <span class="green">Spustit</span>.
 - Nainstalujte a nakonfigurujte OS. Po úspěšné konfiguraci pro požadované účely virtuální stroj vypněte.
 - V pravém horním menu rozklikněte nabídku **Machine Tools** a zvolte <span class="green">Snímky</span>.
@@ -466,24 +407,28 @@ Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce.
 - Při následujícím vypnutí virtuálního stroje nastavte automatické obnovení vytvořeného snapshotu.
 - Čas od času (např. 1x měsíčně) virtuální OS aktualizujte a vytvořte nový snapshot.
 
-<br>
+> Vytvoření VM pomocí VMware Workstation Player
 
-#### Částečná virtualizace OS:
-Implementací částečné virtualizace OS je mnoho. Může spočívat ve virtualizaci jádra či jiné části OS, nebo např. ve vrácení změn v OS při restartu ([Shadow Defender](http://www.shadowdefender.com/),&#8230;).
-
-Od verze **Windows 10 September 2018 update** je částečná virtualizace implementována v OS. Konfigurace je možná pomocí *Centra zabezpečení v programu Windows Defender* v sekci **Zabezpečení zařízení**.
+- Stáhněte si .iso obraz OS, který chcete virtualizovat.
+- Stáhněte si [VMware Workstation Player](https://www.vmware.com/go/downloadworkstationplayer).
+- Aplikaci nainstalujte a otevřete. Potvrďte nekomerční účel využití.
+- Klikněte na <span class="green">Create a New Virtual Machine</span>.
+- Zvolte umístění instalace z **Installer disc image file (iso)** a nalezněte požadovaný ISO soubor. VMWare Player automaticky detekuje OS.
+-  Projděte postupně konfigurací VM. Pojmenujte virtuální stroj, přidělte mu alespoň *25 GB* místa na disku, zvolte variantu **Store virtual disk as a single file**. Na konci zvolte možnost <span class="green">Customize hardware&#8230;</span>.
+- V zařízení **Memory** přidělte virtuálnímu stroji alespoň *3072 MB* paměti. V zařízení **Processors** přidělte virtuálnímu stroji minimálně polovinu jader vašeho CPU, ideálně alespoň *4*.
+- Klikněte na <span class="green">Close</span> a následně <span class="green">Finish</span>.
 
 <br>
 
 #### Sandbox:
-Existují dva druhy sandboxu:
+Sandbox je populární způsob implementace virtualizace. Existují dva druhy sandboxu:
 
-- sandbox nativně integrovaný v aplikaci (např. *Google Chrome*)
-- externí sandbox &ndash; např. *AppContainer*, [Sandboxie](https://www.sandboxie.com/)
+- sandbox nativně integrovaný v aplikaci (např. *Microsoft Edge*)
+- externí sandbox – např. [Sandboxie](https://www.sandboxie.com/)
 
-Sandbox nativně integrovaný v aplikaci je nejúčinnější možností implementace sandboxu, jelikož je nastaven přesně na míru dané aplikaci. Externí sandbox nemusí být nutně účinný jako sandbox integrovaný v aplikaci, jelikož není dělaný přesně na míru určité aplikaci, a při porovnání může ponechat větší prostor pro exploitaci. Stále ovšem může být velmi účinný a přirozeně je nesrovnatelně lepší, nežli žádný sandbox.
+Sandbox nativně integrovaný v aplikaci je nejúčinnější možností implementace sandboxu, jelikož je nastaven přesně na míru dané aplikaci. Externí sandbox nemusí být nutně účinný jako sandbox integrovaný v aplikaci, jelikož není dělaný přesně na míru určité aplikaci, a při porovnání může ponechat větší prostor pro exploitaci. Stále ovšem může být velmi účinný a přirozeně je mnohem lepší, nežli žádný sandbox.
 
-Windows implementují svůj vestavěný sandbox (*AppContainer*), pokročilejší virtualizaci poté integrují ve verzích pro firemní sféru. Bezplatné řešení [Sandboxie](https://www.sandboxie.com/) poskytující externí sandbox pro aplikace, je spíše na hraní.
+Bezplatné řešení [Sandboxie](https://www.sandboxie.com/) poskytující externí sandbox pro aplikace, je spíše na hraní. *Tato část sekce již nemá příliš praktické využití.*
 
 > Instalace a konfigurace Sandboxie
 
@@ -499,32 +444,12 @@ Windows implementují svůj vestavěný sandbox (*AppContainer*), pokročilejš�
 <br>
 
 ### Ostatní aplikace:
-Užitečné aplikace, které nelze zařadit pod určitou vrstvu zabezpečení.
+Užitečné aplikace související s bezpečností, které nelze zařadit pod určitou vrstvu zabezpečení.
 
 #### Doporučené ostatní aplikace:
-- [Kaspersky Software Updater](https://www.kaspersky.com/free-software-updater) (KSU)
 - [Unchecky](https://unchecky.com/)
+- [NVT Anti-AutoExec](https://www.novirusthanks.org/products/anti-autoexec/)
 - [HashTab](http://implbits.com/products/hashtab/)
-
-> Instalace a konfigurace Kaspersky Software Updater
-
-- Stáhněte si [Kaspersky Software Updater](https://www.kaspersky.com/downloads/thank-you/free-software-updater).
-- Máte-li nastavený **Řízený přístup ke složkám** ve <span class="green">Windows Defender</span>, dočasně jej po dobu instalace vypněte.
-- Odsouhlaste všechny podmínky a aplikaci nainstalujte.
-- Po startu aplikace otevřete nastavení kliknutím na ozubené kolo v levém dolním rohu.
-- Ujistěte se, že **režim vyhledávání aktualizací** je nastaven na <span class="green">Úplné vyhledávání</span>.
-- Zvolte si požadovaný čas vyhledávání aktualizací, časový interval ponechte na *jednou týdně*.
-- Odeberte zatržítko u položky <span class="green">Chci, aby mi společnost Kaspersky Lab zasílala zprávy s novinkami a speciálními nabídkami</span>.
-<li style="list-style-type: none">![ksu](https://securityhandbook.cz/img/cs/ksu.png)</li>
-- Nastavení uložte a vraťte se zpět na úvodní obrazovku aplikace.
-- Klikněte na <span class="green">Vyhledat aktualizace</span>.
-- Kaspersky Software Updater zobrazí dostupné aktualizace vašich aplikací. Aktualizaci můžete provést ručně přes stránky výrobce, nebo pomocí KSU kliknutím na tlačítko <span class="green">Aktualizovat</span>.
-- Aplikaci zavřete. Marketingovou řečnickou otázku v horní liště aplikace okázale ignorujte.
-<li style="list-style-type: none">![ksu1](https://securityhandbook.cz/img/cs/ksu1.png)</li>
-- Aplikaci pravděpodobně budete muset povolit v **Řízeném přístupu ke složkám**, který nyní opětovně zapněte. Návod [zde](#wnt2.2.1).
-
-<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Ačkoli je *Kaspersky Software Updater* kvalitní aplikace, automatická aktualizace aplikací otevírá prostor problémům. Na druhou stranu se jedná o menší zlo v porovnání s neaktuálními aplikacemi. Pokud tedy takto konfigurujete OS člověku, který si s PC nerozumí a nebude aplikace aktualizovat, povolení automatických aktualizací zvažte.</p></div>
 
 > Instalace a konfigurace Unchecky
 
@@ -533,6 +458,11 @@ Ačkoli je *Kaspersky Software Updater* kvalitní aplikace, automatická aktuali
 - Otevřete rozhraní aplikace a přesuňte se do sekce **Nastavení**.
 - Vypněte zobrazování ikony v oznamovací oblasti a klikněte na <span class="green">Použít</span>.
 <li style="list-style-type: none">![un](https://securityhandbook.cz/img/cs/un.png)</li>
+
+> Instalace a konfigurace NVT Anti-AutoExec
+
+- Stáhněte si [NVT Anti-AutoExec](https://downloads.novirusthanks.org/files/anti-autoexec_setup.exe).
+- Aplikaci nainstalujte.
 
 > Instalace a konfigurace HashTab
 
@@ -547,23 +477,16 @@ Ačkoli je *Kaspersky Software Updater* kvalitní aplikace, automatická aktuali
 <br><br><hr><br>
 
 ## Zabezpečení internetového prohlížeče
-- bezpečnější nastavení (vypnutí nebezpečných funkcí, ideálně vč. javascriptu)
+- bezpečnější nastavení (vypnutí nebezpečných funkcí, ideálně vč. JavaScriptu)
 - blokování reklamy
-- oddělení prohlížeče od dat a fyzického OS (sandbox &lt; VM &lt; live OS)
 
 > Porovnání prohlížečů z ohledu bezpečnosti
 
-Všechny prohlížeče jsou po korektním nastavení relativně bezpečné, velmi důležitým faktorem je také samotný uživatel. Níže v sekci naleznete návody na zabezpečení **Google Chrome**, **Microsoft Edge**, **Mozilla Firefox** a **Internet Explorer**, z důvodu jejich dominantního postavení. Také zde naleznete **Chromium** (open-source prohlížeč, ze kterého vychází Google Chrome) a **Brave** (open-source prohlížeč vycházející z prohlížeče Chromium, v základu integruje blokování reklam a trackerů).
+Všechny prohlížeče jsou po korektním nastavení relativně bezpečné, kritickým důležitým faktorem je také samotný uživatel. V následující sekci naleznete postup pro bezpečnou konfiguraci **Microsoft Edge**, **Google Chrome** i **Mozilla Firefox** jakožto dominantních prohlížečů. Také zde naleznete prohlížeče **Brave** (open-source prohlížeč vycházející z Chromium, v *základu integruje blokování reklam a trackerů*) a **Chromium** (open-source prohlížeč, ze kterého vychází Google Chrome).
 
-Ze zmíněných prohlížečů jsou na vrcholu <span class="green">Microsoft Edge</span> a <span class="green">Chromium</span>, případně jeho proprietární varianta [Google Chrome](https://www.google.com/chrome/browser/index.html) či prohlížeč [Brave](https://brave.com/).
+Z uvedených prohlížečů jsou z hlediska bezpečnosti nejlepší volbou <span class="green">Microsoft Edge</span> a <span class="green">Chromium</span>, případně jeho proprietární varianta [Google Chrome](https://www.google.com/chrome/browser/index.html) či prohlížeč [Brave](https://brave.com/).
 
-<span class="green">Chrome / Chromium</span> využívá špičkovou implementaci vestavěného sandboxu OS (LP-AC). Dále integruje všechny moderní mitigace včetně **CFG**, což je významné plus. Prohlížeč *Brave* je na tom obdobně.
-
-<span class="green">Microsoft Edge</span> je nový a moderní prohlížeč využívající implementaci vestavěného sandboxu OS (AC). Používá moderní mitigace jako **CFG**, což je významné plus.
-
-<span class="red">Mozilla Firefox</span> z hlediska zabezpečení v porovnání s ostatními zmíněnými prohlížeči stále o něco zaostává. Oproti svým konkurentům má starý kód nižší kvality a postrádá moderní mitigace proti exploitaci. Na druhou stranu aktivně pracuje na nápravě a na OS Windows již integruje solidní implementaci sandboxu.
-
-Prohlížeč **Internet Explorer** již není v aktivním vývoji, jeho denní užívání tedy není doporučeno.
+<span class="green">Microsoft Edge / Google Chrome / Chromium</span> využívají špičkovou implementaci vestavěného sandboxu OS (LP-AC) a integrují všechny moderní mitigace včetně **CFG**. Prohlížeč *Brave* je na tom obdobně. <span class="red">Mozilla Firefox</span> z hlediska zabezpečení v porovnání s konkurencí stále zaostává, nicméně na Windows již situace není tak kritická jak dříve.
 
 <br>
 
@@ -572,41 +495,44 @@ Prohlížeč **Internet Explorer** již není v aktivním vývoji, jeho denní u
 <br><br><hr><br>
 
 ## Doporučené bezpečnostní konfigurace
-Zde naleznete několik příkladů bezpečnostních konfigurací. Není tedy je slovo od slova kopírovat, stačí se inspirovat. Na druhou stranu níže zmíněné příklady konfigurací jsou plně funkční a relativně účinné. Pokud byste chtěli příklad aplikovat, počítá se s prostudováním celé sekce OS Windows v FAQ &ndash; hlavně návodů na jednotlivé programy &ndash; a aplikací zmíněných doporučení.
+Zde naleznete několik příkladů bezpečnostních konfigurací, čistě pro inspiraci.
 
-#### Bezplatná konfigurace pro BFU, který neumí anglicky (např. prarodiče):
+#### Bezplatná konfigurace pro běžného uživatele, který neumí anglicky:
 > Konfigurace
 
-- OS &ndash; Windows **10 September 2019 Update**
-- bezpečné nastavení OS &ndash; **kompletní**
-- AV/M &ndash; **Windows Defender**
-- FW &ndash; **Windows Defender Firewall**
-- anti-exploit &ndash; **Windows Defender Exploit Guard**
-- anti-executable &ndash; **NVT Anti-AutoExec**
-- virtualizace &ndash; **integrovaná v OS**
-- internetový prohlížeč &ndash; **MS Edge**, **Google Chrome** / **Brave**
-- zabezpečení prohlížeče &ndash; **kompletní**
-- užitečné aplikace &ndash; **Unchecky**, **Kaspersky Software Updater**
-- konfigurace pro pokročilé &ndash; dle znalostí
+- OS – Windows **10 May 2020 Update**
+- bezpečné nastavení OS – **kompletní**
+- AV/M – **Windows Defender**
+- FW – **Windows Defender Firewall**
+- anti-exploit – **Windows Defender**
+- anti-ransomware – **Windows Defender**
+- anti-executable – **N/A**
+- virtualizace – **integrovaná**
+- internetový prohlížeč – **MS Edge**, **Google Chrome** / **Brave**
+- užitečné aplikace – **Unchecky**, **NVT Anti-AutoExec**
+- konfigurace pro pokročilé – dle znalostí
 
-Je nutné proškolit BFU, jak se má chovat na PC a na internetu. Bezpečně nastavit OS. **MS Edge** používat pro bankovní účely a podobné citlivé věci, **Google Chrome** či **Brave** pro běžné brouzdání.
+Je nutné dodržovat základy bezpečnosti a bezpečného pohybu na internetu. **MS Edge** používat pro bankovní účely a podobné citlivé věci, **Google Chrome** či **Brave** pro běžné brouzdání.
 
 <br>
 
-#### Bezplatná konfigurace pro středně pokročilého, který umí anglicky:
+#### Konfigurace pro středně pokročilého, který umí anglicky:
 > Konfigurace
 
-- OS &ndash; Windows **10 September 2019 Update** / **8.1 Update 3**
-- bezpečné nastavení OS &ndash; **kompletní**
-- AV/M &ndash; **Windows Defender**
-- FW &ndash; **Windows Defender Firewall**
-- anti-exploit &ndash; **Windows Defender Exploit Guard** / **EMET**
-- anti-executable &ndash; **VoodooShield**, **NVT Anti-AutoExec**
-- virtualizace &ndash; **integrovaná v OS**, **virtuální stroj**
-- internetový prohlížeč &ndash; **MS Edge**, **Chromium** / **Brave**
-- zabezpečení prohlížeče &ndash; **kompletní**
-- užitečné aplikace &ndash; **Kaspersky Software Updater**, **HashTab**
-- konfigurace pro pokročilé &ndash; dle znalostí
+- OS – Windows **10 May 2020 Update** / **8.1 Update 3**
+- bezpečné nastavení OS – **kompletní**
+- AV/M:
+    - W10 / W8.1 bezplatný – **Windows Defender**
+    - W8.1 placený – **Sophos Home** / **F-Secure SAFE** / **Emsisoft Anti-Malware Home**
+- FW – **Windows Defender Firewall** / **Windows Firewall**
+- anti-exploit:
+    - W10 bezplatný – **Windows Defender**
+    - W8.1 placený – **HitmanPro.Alert**
+- anti-executable – **VoodooShield**, **NVT Anti-AutoExec**
+- virtualizace – **integrovaná**, **virtuální stroj**
+- internetový prohlížeč – **MS Edge**, **Chromium** / **Brave**
+- užitečné aplikace – **HashTab**
+- konfigurace pro pokročilé – dle znalostí
 
 <br><br><hr>
 
