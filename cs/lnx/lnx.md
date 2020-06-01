@@ -1,7 +1,7 @@
 # FAQ – OS Linux
 Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů – většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce také existuje, akorát v mnohonásobně menším množství. Ačkoliv tedy je stav některých desktopových linuxových distribucí z pohledu bezpečnosti tristní, v praxi je riziko infikace nižší nežli u jiných OS. Moderní *exploit kity* jsou ovšem často multiplatformní a jejich počet roste. Dostatečné zabezpečení OS je proto nezbytné.
 
-Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://faq.mople71.cz/cs/lnx/adv.php#lnx).
+Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://securityhandbook.cz/cs/lnx/adv.php#lnx).
 
 #### FAQ se dělí na několik sekcí:
 - [Doporučené distribuce](#lnx1)
@@ -41,17 +41,17 @@ Malware se často spouští z dočasných složek. Zakázání exekuce spustitel
 - Jako **typ zařízení** vyberte <span class="green">Oddíl</span>.
 - Do kolonky **velikost** zadejte <span class="blue">0,5 GiB</span>.
 - Jako **souborový systém** zvolte <span class="green">ext4</span>, jako **label** zadejte *boot*, **přípojný bod** nastavte na "<span class="red">/boot</span>" a následně klikněte na tlačítko <span class="green">Budiž</span>.
-<li style="list-style-type: none">![lnxtmp](https://faq.mople71.cz/img/cs/lnxtmp.png)</li>
+<li style="list-style-type: none">![lnxtmp](https://securityhandbook.cz/img/cs/lnxtmp.png)</li>
 - V pravém sloupci kliknutím označte **volné místo** a klikněte na tlačítko <span class="green">+</span> pro přidání dalšího oddílu.
 - Jako **typ zařízení** vyberte <span class="green">Oddíl</span>.
 - Do kolonky **velikost** zadejte velikost, kterou chcete vyhradit pro OS, akorát od ní odečtěte <span class="blue">4 GiB</span>.
 - Jako **souborový systém** zvolte <span class="green">btrfs</span>, jako **přípojný bod** nastavte na "<span class="red">/</span>" a následně klikněte na tlačítko <span class="green">Budiž</span>.
-<li style="list-style-type: none">![lnxtmp1](https://faq.mople71.cz/img/cs/lnxtmp1.png)</li>
+<li style="list-style-type: none">![lnxtmp1](https://securityhandbook.cz/img/cs/lnxtmp1.png)</li>
 - V pravém sloupci kliknutím označte **volné místo** a klikněte na tlačítko <span class="green">+</span> pro přidání dalšího oddílu.
 - Jako **typ zařízení** vyberte <span class="green">Oddíl</span>.
 - Do kolonky **velikost** zadejte <span class="blue">2,0 GiB</span> (budete muset přepnout jednotky na *GiB*).
 - Jako **souborový systém** zvolte <span class="green">ext4</span>, jako **label** zadejte *tmp*, **přípojný bod** nastavte na "<span class="red">/tmp</span>" a následně klikněte na tlačítko <span class="green">Budiž</span>.
-<li style="list-style-type: none">![lnxtmp2](https://faq.mople71.cz/img/cs/lnxtmp2.png)</li>
+<li style="list-style-type: none">![lnxtmp2](https://securityhandbook.cz/img/cs/lnxtmp2.png)</li>
 - V pravém sloupci kliknutím označte **volné místo** a klikněte na tlačítko <span class="green">+</span> pro přidání dalšího oddílu.
 - Jako **typ zařízení** vyberte <span class="green">Oddíl</span>.
 - V kolonce **velikost** ponechte původní hodnotu (měla by být <span class="blue">2047 MiB</span>).
@@ -66,7 +66,7 @@ nano -\$ /etc/fstab</code></pre></li>
 - V textovém souboru šipkami nalezněte řádek, který obsahuje "<span class="red">/tmp</span>". Řádek by měl vypadat následovně:
 <li style="list-style-type: none"><pre><code>UUID=... /tmp           ext4    defaults     1 2</code></pre></li>
 - Na řádku nalezněte slovo "<span class="green">defaults</span>" a a za něj dopište "<span class="red">,nodev,noexec,nosuid</span>". Fstab tedy bude vypadat následovně:
-<li style="list-style-type: none">![lnxfstab](https://faq.mople71.cz/img/en/lnxfstab.png)</li>
+<li style="list-style-type: none">![lnxfstab](https://securityhandbook.cz/img/en/lnxfstab.png)</li>
 - Stiskněte klávesovou zkratku <span class="green">Ctrl + X</span>. Pro uložení změn v souboru stiskněte tlačítko <span class="red">Y</span> a následně <span class="green">Enter</span>.
 - Budete vráceni do konzole. Zadejte do ní následující příkazy:
 <li style="list-style-type: none"><pre><code>exit
@@ -77,9 +77,26 @@ exit</code></pre></li>
 
 ### Bezpečné nastavení sítě:
 
+> Nastavení DNS
+
+Pokud vám zkratka DNS nic neříká, podívejte se na následující [jednoduchou stránku](http://www.jakfungujedns.cz/).
+
+- Otevřete si <span class="green">Nastavení</span>.
+- Rozklikněte položku <span class="green">Wi-Fi</span> nebo <span class="green">Síť</span> v závislosti na druhu vašeho připojení.
+- V seznamu nalezněte příslušné spojení a otevřete jeho nastavení.
+<li style="list-style-type: none">![lnxnet](https://securityhandbook.cz/img/cs/lnxnet.png)
+![lnxnet1](https://securityhandbook.cz/img/cs/lnxnet1.png)</li>
+- Přepněte se do záložky IPv4 a v sekci **DNS** vypněte možnost <span class="green">Automatické</span>.
+- Do řádku vepište následující DNS servery:
+<li style="list-style-type: none"><pre><code>193.17.47.1,185.43.135.1</code></pre></li>
+<li style="list-style-type: none">![lnxnet2](https://securityhandbook.cz/img/cs/lnxnet2.png)</li>
+- Pro *IPv6* aplikujte obdobný postup s následujícími servery:
+<li style="list-style-type: none"><pre><code>2001:148f:ffff::1,2001:148f:fffe::1</code></pre></li>
+- Klikněte na tlačítko <span class="green">Použít</span> a nastavení zavřete.
+
 > Zakázání IPv6
 
-Pokud nepoužíváte a nepotřebujete IPv6 (nejste-li si jistí, můžete to vyzkoušet následující [test](http://www.test-ipv6.cz/), je rozumné protokol vypnout pro snížení prostoru pro útok.
+Pokud nepoužíváte a nepotřebujete IPv6 (nejste-li si jistí, můžete využít následující [test](https://test-ipv6.cz/)), je rozumné protokol vypnout pro snížení prostoru pro útok.
 
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
 <li style="list-style-type: none"><pre><code>sudo -i
@@ -94,35 +111,18 @@ exit
 exit</code></pre></li>
 - Restartujte OS.
 
-> Nastavení DNS
-
-Pokud vám zkratka DNS nic neříká, přečtěte si tento [krátký článek](https://www.nic.cz/page/312/o-domenach-a-dns/).
-
-- Otevřete si <span class="green">Nastavení</span>.
-- Rozklikněte položku <span class="green">Wi-Fi</span> nebo <span class="green">Síť</span> v závislosti na druhu vašeho připojení.
-- V seznamu nalezněte příslušné spojení a otevřete jeho nastavení.
-<li style="list-style-type: none">![lnxnet](https://faq.mople71.cz/img/cs/lnxnet.png)
-![lnxnet1](https://faq.mople71.cz/img/cs/lnxnet1.png)</li>
-- Přepněte se do záložky IPv4 a v sekci **DNS** vypněte možnost <span class="green">Automatické</span>.
-- Do řádku vepište následující DNS servery:
-<li style="list-style-type: none"><pre><code>193.17.47.1,185.43.135.1</code></pre></li>
-<li style="list-style-type: none">![lnxnet2](https://faq.mople71.cz/img/cs/lnxnet2.png)</li>
-- Pro *IPv6* aplikujte obdobný postup s následujícími servery:
-<li style="list-style-type: none"><pre><code>2001:148f:ffff::1,2001:148f:fffe::1</code></pre></li>
-- Klikněte na tlačítko <span class="green">Použít</span> a nastavení zavřete.
-
 <br>
 
 ### Další bezpečnostní nastavení:
 - Vypněte AutoPlay/AutoRun:
   - Otevřete si <span class="green">Nastavení</span> a rozklikněte kategorii **Zařízení**.
   - Klikněte na položku <span class="green">Výměnná média</span>.
-  - Zatrhněte možnost <span class="green">Nikdy se nedotazovat nebo spouštět programy na vloženém médiu</span>,
-  <li style="list-style-type: none">![lnxar](https://faq.mople71.cz/img/cs/lnxar.png)</li>
+  - Zatrhněte možnost <span class="green">Nikdy se nedotazovat nebo spouštět programy na vloženém médiu</span>.
+  <li style="list-style-type: none">![lnxar](https://securityhandbook.cz/img/cs/lnxar.png)</li>
 - Vypněte sdílení:
   - Otevřete si <span class="green">Nastavení</span> a klikněte na položku <span class="green">Sdílení</span>.
   - Zkontrolujte, že je sdílení vypnuto, případně napravte.
-  <li style="list-style-type: none">![lnxshare](https://faq.mople71.cz/img/cs/lnxshare.png)</li>
+  <li style="list-style-type: none">![lnxshare](https://securityhandbook.cz/img/cs/lnxshare.png)</li>
 
 <br><br><hr><br>
 
@@ -132,16 +132,9 @@ Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostn�
 <br>
 
 ### Aktualizace OS a SW:
-Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často opravují mnoho bezpečnostních chyb. Neaktuální děravý SW je implicitně nebezpečný.
+Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často opravují mnoho bezpečnostních chyb. Neaktuální SW je implicitně nebezpečný. Ve všech zmíněných distribucích slouží k aktualizaci SW vestavěná aplikace <span class="green">Software</span>, která kromě tradičních balíčků obstarává i aktualizaci flatpaků či firmware.
 
-V distribuci **<span class="fe">Fedora</span>** teoreticky můžete aktualizace nechat na aplikaci **GNOME Software**, nebo je můžete jednou za čas spustit ručně pomocí jednoduchého příkazu:
-<pre><code>sudo dnf update</code></pre>
-
-Pro distribuci **<span class="os">openSUSE</span>** platí to stejné, co výše, akorát se liší syntax příkazu:
-<pre><code>sudo zypper up</code></pre>
-
-Pro distribuci **<span class="ub">Ubuntu</span>** platí to stejné, co výše, akorát se liší syntax příkazu:
-<pre><code>sudo apt update && sudo apt upgrade</code></pre>
+![lnxupd](https://securityhandbook.cz/img/cs/lnxupd.png)
 
 <br>
 
@@ -158,29 +151,26 @@ Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před út
 <br>
 
 ### MAC:
-<abbr title="Mandatory Access Control">MAC</abbr> se stal důležitou součástí bezpečnostního modelu linuxových distribucí. Podrobné vysvětlení naleznete např. na [Wikipedii](https://cs.wikipedia.org/wiki/Mandatory_access_control).
+<abbr title="Mandatory Access Control">MAC</abbr> se stal důležitou součástí bezpečnostního modelu linuxových distribucí.
 
-**<span class="fe">Fedora</span>** používá implementaci **SELinux**.
-
-**<span class="os">openSUSE</span>** používá implementaci **AppArmor**, MAC poskytující menší možnosti ochrany než např. SELinux.
-
-**<span class="ub">Ubuntu</span>** používá implementaci **AppArmor**, MAC poskytující menší možnosti ochrany než např. SELinux.
+**<span class="fe">Fedora</span>** používá implementaci **SELinux**. **<span class="os">openSUSE</span>** a **<span class="ub">Ubuntu</span>** používají implementaci **AppArmor**, MAC poskytující menší možnosti ochrany nežli např. SELinux.
 
 <br>
 
 ### Virtualizace:
-Virtualizace může být velmi bezpečný způsob ochrany před malware (záleží na způsobu aplikace), jelikož odděluje požadovanou část OS od fyzického OS. Základních možností aplikace virtualizace je několik.
+Virtualizace může být velmi bezpečný způsob ochrany před malware v závislosti na způsobu implementace, jelikož odděluje požadovanou část OS od jeho zbytku. Standardních způsobů implementace virtualizace je několik:
 
 - sandbox
+- semivirtuální stroj (např. docker)
 - virtuální stroj (VM; virtual machine)
 
 #### Flatpak:
-Sandbox je populární způsob aplikace virtualizace. Existují dva druhy sandboxu:
+Sandbox je populární způsob implementace virtualizace. Existují dva druhy sandboxu:
 
 - sandbox nativně integrovaný v aplikaci (např. *Chromium*)
 - externí sandbox – např. **Flatpak**, *firejail*
 
-Sandbox nativně integrovaný v aplikaci je nejúčinnější možností implementace sandboxu, jelikož je nastaven přesně na míru dané aplikaci. Externí sandbox nemusí být nutně účinný jako sandbox integrovaný v aplikaci, jelikož není dělaný přesně na míru určité aplikaci, a při porovnání může ponechat větší prostor pro exploitaci. Stále ovšem může být velmi účinný a přirozeně je nesrovnatelně lepší, nežli žádný sandbox.
+Sandbox nativně integrovaný v aplikaci je nejúčinnější možností implementace sandboxu, jelikož je nastaven přesně na míru dané aplikaci. Externí sandbox nemusí být nutně účinný jako sandbox integrovaný v aplikaci, jelikož není dělaný přesně na míru určité aplikaci, a při porovnání může ponechat větší prostor pro exploitaci. Stále ovšem může být velmi účinný a přirozeně je mnohem lepší, nežli žádný sandbox.
 
 <span class="green">Flatpak</span> je nový způsob distribuce aplikací. Má za cíl odstranit chyby a nedostatky současné architektury – odděluje aplikace od sebe a částí OS (obsahuje implementaci sandboxu), sjednocuje instalaci aplikací pro linuxové distribuce apod.
 
@@ -198,64 +188,61 @@ sudo apt install flatpak</code></pre>
 
 > Návod k použití Flatpak
 
-Několik aplikací můžete nalézt na [stránkách Flatpak](http://flatpak.org/apps.html) a většinu poté v repozitáři **Flathub**. Je důrazně doporučeno překliknout se do záložky <span class="green">Command Line</span> a příkazy provést ručně.
+Většinu aplikací můžete nalézt v repozitáři [Flathub](https://flathub.org/home). Distribuce **<span class="fe">Fedora</span>** má svůj integrovaný [kontejnerový repozitář](https://registry.fedoraproject.org/). Flatpak balíčky lze spravovat pomocí vestavěné aplikace <span class="green">Software</span>.
 
-Nikdy před příkaz **flatpak** nedávejte <span class="red">sudo</span>. Flatpak si o autorizaci řekne sám, bude-li ji potřebovat.
+Budete-li příkaz **flatpak** spouštět v terminálnu, <span class="red">nikdy jej nespouštějte pod sudo</span>. Flatpak si o autorizaci případně požádá sám přes GNOME dialog. Níže naleznete základní terminálové příkazy pro správu flatpak aplikací.
 
-- Nainstalované Flatpak aplikace vypíšete následujícím příkazem:
+- Výpis nainstalovaných aplikací:
 <li style="list-style-type: none"><pre><code>flatpak list</code></pre></li>
-- Aplikace aktualizujete náledujícím příkazem:
+- Aktualizace nainstalovaných aplikací:
 <li style="list-style-type: none"><pre><code>flatpak update</code></pre></li>
-- Dostupné aplikace v repozitáři vypíšete takto:
+- Výpis obsahu repozitáře – dostupných aplikací:
 <li style="list-style-type: none"><pre><code>flatpak remote-ls <repozitář></code></pre></li>
-- Instalaci aplikace z repozitáře je možno provést následovně:
+- Instalace aplikace z repozitáře:
 <li style="list-style-type: none"><pre><code>flatpak install <repozitář> <název_aplikace></code></pre></li>
-- Aplikaci poté můžete jednoduše odinstalovat:
+- Odinstalace:
 <li style="list-style-type: none"><pre><code>flatpak uninstall <název_aplikace></code></pre></li>
 
-<span class="green">Flathub</span> je oficiální platforma pro distribuci Flatpak aplikací. Naleznete zde již vcelku obstojný počet aplikací, který se neustále rozšiřuje. Například **LibreOffice**, **GIMP**, **Atom**, Signal, **VLC**, Audacity, Blender, **Steam**, GeoGebra, Inkscape,&#8230;
+<span class="green">Flathub</span> je nejrozšířenější platforma pro distribuci Flatpak aplikací. Repozitář **fedora** již obsahuje část GNOME aplikací a některé populární aplikace jako *GIMP*, nicméně je stále v aktivním vývoji a ne všechny aplikace jsou v použitelném stavu.
 
-> Nastavení repozitáře Flathub
+> Přidání Flathub repozitáře
 
-- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
-<li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</code></pre></li>
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkaz:
+<li style="list-style-type: none"><pre><code>flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</code></pre></li>
+- Aplikaci zavřete.
+- Otevřete si <span class="green">Software</span>.
+- Přesuňte se do záložky **Aktualizace** a v levém horním rohu spusťte kontrolu aktualizací.
+- Po dokončení kontroly se přesuňte zpět do záložky **Procházet**.
+- Aplikaci zavřete.
 
 > Instalace GNOME aplikací
 
-Ve Flatpaku by správně měly být všechny aplikace ve výchozím nastavení, na to si ovšem budeme ještě muset chvíli počkat. (*Fedora 30?*)
+Ve Flatpaku by správně měly být všechny aplikace ve výchozím nastavení, na to si ovšem budeme ještě muset chvíli počkat. (*Fedora 34?*)
 
-Je vhodné mít ve Flatpaku alespoň rizikové aplikace jako **Evince** (prohlížeč PDF) nebo **Eye of GNOME** (prohlížeč obrázků). Také je dobrý nápad nainstalovat flatpak verzi GNOME prohlížeče **Epiphany**, který následně můžete odděleně používat pro citlivé věci jako bankovnictví apod.
+- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
+<li style="list-style-type: none"><pre><code>sudo dnf -y remove eog evince epiphany
+flatpak install fedora org.gnome.eog
+flatpak install fedora org.gnome.Evince
+flatpak install fedora org.gnome.Epiphany</code></pre></li>
 
-- Otevřete si <span class="green">Terminál</span>. Odinstalujte původní aplikace:
-<li style="list-style-type: none"><pre><code>sudo dnf -y remove eog</code></pre></li>
-- Aplikace *Evince* odebrat nelze, jelikož poskytuje náhledy ve správci souborů a také náhledy tisku. Lze ovšem jednoduše odebrat jeho ikonu ze seznamu aplikací:
-<li style="list-style-type: none"><pre><code>sudo rm /usr/share/applications/evince.desktop</code></pre></li>
-- Nainstalujte flatpak verze aplikací:
-<li style="list-style-type: none"><pre><code>flatpak install flathub org.gnome.Evince
-flatpak install flathub org.gnome.eog
-flatpak install flathub org.gnome.Epiphany</code></pre></li>
-- Nyní nastavte zpět aplikace jako výchozí. Otevřete si <span class="green">Nastavení</span>.
-- Rozklikněte kategorii **Podrobnosti** a následně zvolte podkategorii <span class="green">Výchozí aplikace</span>.
-- Nastavte Flatpak verzi *Eye of GNOME* aplikací jako výchozí:
-<li style="list-style-type: none">![lnxdapp](https://faq.mople71.cz/img/cs/lnxdapp.png)</li>
-- Nalezněte libovolný **PDF** soubor. Klikněte na něj pravým tlačítkem a zvolte <span class="green">Otevřít jinou aplikací</span>.
-- V seznamu zvolte Flatpak verzi **Prohlížeč dokumentů** a klikněte na tlačítko <span class="green">Vybrat</span>.
-<li style="list-style-type: none">![lnxdapp1](https://faq.mople71.cz/img/cs/lnxdapp1.png)</li>
+> Instalace flatpak aplikace v GNOME Software
 
-> Instalace LibreOffice
+- Otevřete si <span class="green">Software</span>.
+- Pomocí vyhledávání nalezněte a rozklikněte požadovanou aplikaci.
+- V pravém horním rohu vyberte příslušný zdroj – Fedora / Flathub:
+<li style="list-style-type: none">![lnxflat](https://securityhandbook.cz/img/cs/lnxflat.png)</li>
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
+Flatpak repozitář **Fedora** preferujte pouze u GNOME aplikací, aplikací <span class="red">GIMP</span> a <span class="red">Transmission</span>. Jinde preferujte **Flathub**.</p></div>
+- Klikněte na <span class="green">Instalovat</span>.
+- Instalace může trvat delší dobu v závislosti na vašem internetovém připojení, aplikace může vyžadovat runtime, která jsou objemná a musí se nejprve stáhnout.
+- Po dokončení instalace aplikaci zavřete.
+
+> Instalace flatpak LibreOffice
 
 - Otevřete si <span class="green">Terminál</span>. Odinstalujte původní LibreOffice, které jsou součástí standardní instalace:
 <li style="list-style-type: none"><pre><code>sudo dnf -y remove libreoffice*</code></pre></li>
 - Nainstalujte flatpak verzi LibreOffice:
 <li style="list-style-type: none"><pre><code>flatpak install flathub org.libreoffice.LibreOffice</code></pre></li>
-
-> Instalace Steam
-
-- Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkaz:
-<li style="list-style-type: none"><pre><code>flatpak install flathub com.valvesoftware.Steam</code></pre></li>
-- Bude-li vám v průběhu nabídnut výběr mezi *gnome* a *flathub* repozitáři, zvolte <span class="green">flathub</span>.
-- Spusťte Steam a doufejte, že vaše oblíbené hry jsou ve flatpaku funkční. Seznam otestovaných her naleznete [zde](https://github.com/flathub/com.valvesoftware.Steam/wiki/Tested-Games).
 
 <br>
 
@@ -269,21 +256,22 @@ Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce.
 
 > Konfigurace GNOME Boxes
 
-- Stáhněte si obraz OS (ISO), který chcete virtualizovat.
+- Stáhněte si .iso obraz OS, který chcete virtualizovat.
 - Otevřete si aplikaci <span class="green">Boxy</span>.
-- V levém horním rohu aplikace klikněte na tlačítko <span class="green">Nový</span>.
-- Klikněte na <span class="green">Vybrat soubor</span> a nalezněte požadovaný ISO soubor.
+- Zobrazí-li se **Úvodní seznámení**, projděte jej a zavřete.
+- V levém horním rohu aplikace vytvořte nový virtuální stroj.
+- Klikněte na <span class="green">Soubor s obrazem operačního systému</span> a nalezněte požadovaný ISO soubor.
 - Odmítněte případnou expresní instalaci.
-- Klikněte na tlačítko <span class="green">Přizpůsobit...</span>
-- Nastavte požadované množství alokované paměti (alespoň *3 GiB*) a místa na disku (alespoň *20 GiB*).
-<li style="list-style-type: none">![gboxes](https://faq.mople71.cz/img/cs/gboxes.png)</li>
-- Přesuňte se zpět a v pravém horním rohu klikněte na <span class="green">Vytvořit</span>.
+- Upravte alokaci zdrojů tlačítkem <span class="green">Přizpůsobit</span>
+- Přidělte virtuálnímu stroji alespoň *3 GiB* paměti a alespoň *22 GiB* místa na disku.
+<li style="list-style-type: none">![gboxes](https://securityhandbook.cz/img/cs/gboxes.png)</li>
+- Klikněte na <span class="green">Vytvořit</span>.
 - Nainstalujte a nakonfigurujte OS. Následně jej vypněte.
 - V seznamu na požadovaný virtuální stroj klikněte pravým tlačítkem a otevřete <span class="green">Vlastnosti</span>.
 - Přesuňte se do záložky **Snímky**. Existuje-li již nějaký snapshot, ozubeným kolem vpravo otevřete jeho konfiguraci a smažte jej.
 - Tlačítkem <span class="green">+</span> v dolním menu vytvořte nový snapshot.
 - Ozubeným kolem vpravo otevřete jeho konfiguraci a tlačítkem <span class="green">Přejmenovat</span> si jej pojmenujte jako výchozí snapshot.
-<li style="list-style-type: none">![gboxes1](https://faq.mople71.cz/img/cs/gboxes1.png)</li>
+<li style="list-style-type: none">![gboxes1](https://securityhandbook.cz/img/cs/gboxes1.png)</li>
 - Nyní můžete kdykoli virtuální stroj po jeho vypnutí snadno obnovit do výchozího stavu.
 - Čas od času (např. 1x měsíčně) virtuální OS aktualizujte a vytvořte nový snapshot.
 
@@ -296,4 +284,4 @@ Z bezpečnostního hlediska lze doporučit prohlížeč <span class="green">Chro
 
 <br><br><hr>
 
-<h3 class="nocol">To je vše. Stay safe! ![smile](https://mople71.cz/img/sm/smile.svg)</h3>
+<h3 class="nocol">To je vše. Stay safe! ![smile](https://securityhandbook.cz/img/sm/smile.svg)</h3>

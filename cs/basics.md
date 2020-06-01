@@ -22,7 +22,7 @@
 -	Veškerý SW stahujte výhradně ze stránek výrobce.
 - Používejte silná hesla dostatečně jednoduchá na zapamatování:
 <li style="list-style-type: none"><p class="imgsrc">*Password Strength.* Zdroj: https://xkcd.com/936/ | [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)</p>
-![password_strength_sm](https://faq.mople71.cz/img/en/passwd.png)</li>
+![password_strength_sm](https://securityhandbook.cz/img/en/passwd.png)</li>
 - Používejte více hesel na různé služby, zvažte použití [klíčenky](#basics8).
 - Nepřipojujte se k neznámým/veřejným bezdrátovým sítím a vyvarujte se nebezpečným protokolům – HTTP, FTP,&#8230; – případně přes ně neposílejte citlivé údaje. Zvažte použijtí VPN.
 - Dávejte si pozor, kam jaké údaje zadáváte – s osobními údaji se dobře obchoduje.
