@@ -90,7 +90,7 @@
 - V sekci **Brave shields defaults** zkontrolujte konfiguraci a případně opravte:
  <li style="list-style-type: none">![brv](https://securityhandbook.cz/img/en/brv.png)</li>
 - Vyjeďte na začátek stránky.
-- *Google Chrome – L18-33*
+- *Google Chrome – L16-31*
 
 > Omezení JavaScript
 
@@ -141,15 +141,15 @@ exit</code></pre></li>
 
 > Bezpečnější nastavení
 
-- *Google Chrome – L17-33*
+- *Google Chrome – L15-31*
 
 > Omezení JavaScript
 
-- *Google Chrome – L37-45*
+- *Google Chrome – L35-43*
 
 > Blokování reklamy
 
-- *Google Chrome – L49-57*
+- *Google Chrome – L47-55*
 
 -----------------------------------
 -----------------------------------
@@ -203,7 +203,7 @@ Návod je určen pro novou verzi MS Edge, aktualizace dostupná zde: https://www
 - Nainstalujte si následující bezpečnostní doplněk: [uBlock Origin](https://microsoftedge.microsoft.com/addons/detail/odfafepnkmbhccpbejgmiehpchacaeak?hl=cs)
 
 #### Nastavení uBlock:
-- *Google Chrome – L52-57*
+- *Google Chrome – L50-55*
 
 -----------------------------------
 -----------------------------------
@@ -217,7 +217,7 @@ Návod je určen pro novou verzi MS Edge, aktualizace dostupná zde: https://www
 ## WNT:
 > Instalace
 
-- Stáhněte si nejnovější verzi [Mozilla Firefox](https://www.mozilla.org/cs/firefox/new/).
+- Stáhněte si nejnovější verzi [Mozilla Firefox](https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=cs).
 - Aplikaci nainstalujte.
 
 > Bezpečnější nastavení
@@ -264,7 +264,7 @@ network.allow-experiments --- false</code></pre></li>
 - Nainstalujte si následující bezpečnostní doplněk: [uBlock Origin](https://addons.mozilla.org/cs/firefox/addon/ublock-origin/)
 
 #### Nastavení uBlock:
-- *Google Chrome – L52-57*
+- *Google Chrome – L50-55*
 
 -----------------------------------
 
@@ -274,19 +274,19 @@ network.allow-experiments --- false</code></pre></li>
 > Instalace
 
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
-<li style="list-style-type: none"><pre><code>sudo dnf install -y firefox
+<li style="list-style-type: none"><pre><code>flatpak install fedora org.mozilla.Firefox
 exit</code></pre></li>
 
 > Bezpečnější nastavení
 
-- *Mozilla Firefox WNT – L227-262*
+- *Mozilla Firefox WNT – L225-260*
 
 > Blokování reklamy
 
 - Nainstalujte si následující bezpečnostní doplněk: [uBlock Origin](https://addons.mozilla.org/cs/firefox/addon/ublock-origin/)
 
 #### Nastavení uBlock:
-- *Google Chrome – L52-57*
+- *Google Chrome – L50-55*
 
 -----------------------------------
 -----------------------------------
@@ -300,17 +300,15 @@ exit</code></pre></li>
 > Instalace
 
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
-<li style="list-style-type: none"><pre><code>sudo dnf install -y epiphany
+<li style="list-style-type: none"><pre><code>flatpak install fedora org.gnome.Epiphany
 exit</code></pre></li>
 
 >  Bezpečnější nastavení
 
 - Kliknutím na tři tečky v horním pravém rohu otevřete boční panel a zvolte <span class="green">Předvolby</span>.
 <li style="list-style-type: none">![epiph](https://securityhandbook.cz/img/cs/epiph.png)</li>
-- V sekci **Obsah webových stránek** zkontrolujte konfiguraci a případně upravte:
+- Přesuňte se do sekce **Soukromí**. Upravte konfiguraci dle obrázku:
 <li style="list-style-type: none">![epiph1](https://securityhandbook.cz/img/cs/epiph1.png)</li>
-- Přesuňte se do záložky **Uchovaná data** a v sekci **Cookies** zvolte možnost <span class="green">Jen z webových stránek, které navštěvujete</span>.
-<li style="list-style-type: none">![epiph2](https://securityhandbook.cz/img/cs/epiph2.png)</li>
 
 > Blokování reklamy
 
