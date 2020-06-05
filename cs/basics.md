@@ -1,57 +1,47 @@
-# FAQ – Základní informace
+# FAQ – Základy bezpečnosti
 
 ## Základní pojmy:
-- <span class="green">hacker</span> – člověk zneužívající svých znalostí (např. v oblasti počítačové bezpečnosti) za účelem osobního zisku; tento význam je původně převzatý z pojmu *cracker*
-- <span class="green">malware</span> – termín pro škodlivý software, jež se dělí na mnoho (méně či více škodlivých) podskupin
+- <span class="green">hacker</span> – člověk zneužívající svých znalostí, např. v oblasti počítačové bezpečnosti, za účelem osobního zisku (význam původně převzatý z *cracker*)
+- <span class="green">malware</span> – termín označující škodlivý software, jež se dělí na mnoho podskupin
 - <span class="green">ransomware</span> – software, který zabraňuje uživateli v přístupu ke svým datům a za obnovení přístupu požaduje poplatek
+- **adware** – software, který obsahuje reklamy a zobrazuje je uživateli
 - **rootkit** – kód, který skrývá přítomnost malware v OS a ztěžuje jeho detekci
-- <span class="green">exploit</span> – kód využívající chyby v jiném SW (klidně přímo v OS) za účelem provedení požadované akce
-- **zero-day (0-day)** – zranitelnost, která byla zneužita v den jejího zveřejnění (příp. před ním)
-- **adware** – malware, který obsahuje reklamy a zobrazuje je uživateli
-- **bundleware** – nadbytečný (ne nutně škodlivý) software, který je přibalen k validnímu software
-- **foistware** – software nainstalovaný bez vědomí uživatele, který se zpravidla snaží přesvědčit uživatele o chybách v OS a nabízí jejich odstranění za poplatek
-- **APT** – &bdquo;Advanced Persistent Threat&ldquo;; pokročilejší hrozba, většinou vytvářená na míru, běžný uživatel s ní obvykle nepřijde do styku
-- **payload** – část kódu malware, která vykonává klíčovou škodlivou akci
+- <span class="green">exploit</span> – kód využívající chyby v jiném SW za účelem provedení specifikované (zpravidla škodlivé) akce
+- **zero-day (0-day)** – zranitelnost, která byla zneužita v den jejího zveřejnění, příp. před ním
+- **payload** – hlavní část kódu malware, která vykonává klíčovou škodlivou akci
 
 <br>
 
-## Základy bezpečnosti:
-- Pravidelně zálohujte data.
-- Nepoužívejte nelegální software – většina cracků běžně dostupná na internetu je infikována.
+## Základní bezpečnostní pravidla:
+- Pravidelně zálohujte uživatelská data.
+- Používejte nejnovější záplatovanou **originální** verzi OS.
+- Vyvarujte se nelegálnímu software – většina cracků je infikována.
 - Před vykonáním libovolné akce dvakrát zkontrolujte její autenticitu.
--	Veškerý SW stahujte výhradně ze stránek výrobce.
-- Používejte silná hesla dostatečně jednoduchá na zapamatování:
-<li style="list-style-type: none"><p class="imgsrc">*Password Strength.* Zdroj: https://xkcd.com/936/ | [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)</p>
+-	Instalujte aplikace výhradně z důvěryhodných zdrojů: *stránek výrobce* / *Microsoft Store*
+  - na mobilních zařízeních: *Google Play* / *Apple Store*
+- Používejte silná hesla dostatečně jednoduchá na zapamatování. Používejte více hesel na různé služby, zvažte použití [klíčenky](#basics7).
+<li style="list-style-type: none"><p class="imgsrc">*Password Strength.* Zdroj: [xkcd](https://xkcd.com/936/) | [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)</p>
 ![password_strength_sm](https://securityhandbook.cz/img/en/passwd.png)</li>
-- Používejte více hesel na různé služby, zvažte použití [klíčenky](#basics8).
-- Nepřipojujte se k neznámým/veřejným bezdrátovým sítím a vyvarujte se nebezpečným protokolům – HTTP, FTP,&#8230; – případně přes ně neposílejte citlivé údaje. Zvažte použijtí VPN.
+- **Na mobilních zařízeních**:
+  - neprovádějte *root* / *jailbreak* – touto akcí rozbíjíte bezpečnostní model OS
+  - neinstalujte aplikace vyžadující nesmyslná oprávnění (např. Flashlight+ vyžadující přístup k SMS a kontaktům)
 - Dávejte si pozor, kam jaké údaje zadáváte – s osobními údaji se dobře obchoduje.
-- Nezapomeňte na fyzické zabezpečení zařízení – nastavte UEFI heslo, vypněte boot menu apod.
+- Nezapomeňte na fyzické zabezpečení zařízení: nastavte UEFI heslo, vypněte boot menu, neodemykejte bootloader,&#8230;
 
 <br>
 
 ## Bezpečný pohyb na internetu:
-- Používejte bezpečně nastavený prohlížeč (viz. ostatní kapitoly FAQ).
+- Nepřipojujte se k neznámým/veřejným bezdrátovým sítím a vyvarujte se nebezpečným protokolům – HTTP, FTP,&#8230; – případně přes ně neposílejte citlivé údaje. Zvažte použijtí VPN.
+- Používejte bezpečně nastavený prohlížeč.
 -	Zvažte využití odděleného prohlížeče pro citlivé věci (např. bankovnictví).
 - Nenavštěvujte pochybné/neznámé stránky a nestahujte z nich žádné soubory.
 - Omezte navštěvování erotických stránek, velmi často jsou oběti malwaretisingu a obsahují škodlivý kód.
--	Nepoužívejte sociální tlačítka na žádných stránkách mimo stránky dané sociální sítě. Falšování sociálních tlačítek je triviální a velmi oblíbené.
+-	Nepoužívejte sociální tlačítka na žádných stránkách mimo stránky dané sociální sítě. Falšování sociálních tlačítek je triviální.
 - Vyvarujte se tzv. **zkráceným odkazům** – např. https://bit.ly/tinyurlwiki – mohou jednoduše maskovat nebezpečné odkazy.
-- Vyvarujte se nebezpečnému síťovému SW jako <span class="red">Flash Player</span> a <span class="red">Java</span>, jeho exploitace je oblíbená a velmi častá. Případně jej alespoň zakažte ve vašem prohlížeči.
-- Otevírejte pouze důvěryhodné e-mailové přílohy.
-- Máte-li podezření na infikovaný soubor, vždy jej před otevřením otestujte pomocí např. [VirusTotal](https://www.virustotal.com/).
+- Otevírejte pouze důvěryhodné e-mailové přílohy / odkazy.
 
 <div class="alert success"><p><em class="icon-ok-circled"></em>**Tip**<br>
 Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpečně nastavený live OS</span>. Nutno podotknout, že tato možnost také nemusí být 100% – např. pokud zařízení, ze kterého je OS spouštěn, bylo dříve napadeno, může být infikováno EFI.</p></div>
-
-<br>
-
-## Bezpečné používání mobilních zařízení:
-- Používejte aktuální záplatovanou **originální** verzi OS.
-- Neprovádějte na své zařízením *root* / *jailbreak* – touto akcí rozbíjíte bezpečnostní model mobilních OS.
-- Instalujte aplikace pouze z důvěryhodných zdrojů – *Google Play* / *Apple Store* / *Microsoft Store*.
-- Neinstalujte aplikace vyžadující nesmyslná oprávnění (např. Flashlight+ vyžadující přístup k SMS a kontaktům).
-- Nezapomeňte na fyzické zabezpečení zařízení – nastavte zamykací heslo, neodemykejte bootloader apod.
 
 <br>
 
@@ -64,7 +54,6 @@ Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpeč
 - [BleepingComputer](https://www.bleepingcomputer.com/)
 - [The Hacker News](http://thehackernews.com/)
 - [Threatpost](https://threatpost.com/)
-- [LinuxSecurity](http://www.linuxsecurity.com/)
 
 <br>
 
@@ -72,17 +61,17 @@ Nejbezpečnější možnost prohlížení internetu: <span class="green">bezpeč
 - [VirusTotal](https://www.virustotal.com/) – AV databáze
 - [Metadefender](https://www.metadefender.com/) – AV databáze
 - [Hybrid Analysis](https://www.reverse.it/) – sandbox + VT
-- [Malwr](https://malwr.com/submission/) – Cuckoo sandbox
+- [Malwr](https://malwr.com/submission/) – sandbox
 
 <br>
 
 ## Doporučené VPN:
 - [Freedome VPN](https://www.f-secure.com/en/web/home_global/freedome/) – blokuje malware, trackery a reklamy
-- [IVPN](https://www.ivpn.net/) – důvěryhodná
-- [Cryptostorm](https://cryptostorm.is/) – důvěryhodná
+- [IVPN](https://www.ivpn.net/)
+- [Cryptostorm](https://cryptostorm.is/)
 
 <br>
 
 ## Doporučené klíčenky:
-- [1Password](https://1password.com/) – špičková platforma, placená
+- [1Password](https://1password.com/) – placená
 - [Bitwarden](https://bitwarden.com/) – bezplatná/placená

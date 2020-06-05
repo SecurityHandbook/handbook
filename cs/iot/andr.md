@@ -169,8 +169,11 @@ Nejbezpečnější ROM je originální ROM spravovaná společností Google – 
 
 Originální ROM implementované ostatními výrobci s *integrovanými službami Google* zpravidla základní bezpečnostní kritéria splňují. **Zařízením bez integrovaných služeb Google je důrazně doporučeno se vyhnout.**
 
-<span class="red">Custom ROM bezpečnostní kritéria nesplňují.</span> Například bohužel velmi oblíbený *LineageOS* nesplňuje ani jedno z několika výše vyjmenovaných kritérií. Výjimku potvrzující pravidlo tvoří projekt [GrapheneOS](https://grapheneos.org/), který ovšem cílí na specifickou skupinu uživatelů, neobsahuje služby Google a podporuje pouze bezpečný HW (modely řady Pixel). <span class="red">Instalace libovolné neoriginální ROM je z pohledu bezpečnosti sebevražda.</span>
+<span class="red">Custom ROM bezpečnostní kritéria nesplňují.</span> Například bohužel velmi oblíbený *LineageOS* nesplňuje ani jedno z několika výše vyjmenovaných kritérií. Výjimku potvrzující pravidlo tvoří projekt [GrapheneOS](https://grapheneos.org/), který ovšem cílí na specifickou skupinu uživatelů, neobsahuje služby Google a podporuje pouze bezpečný HW (modely řady Pixel).
 
-<br><br><hr>
+<div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
+Instalace libovolné neoriginální ROM je důrazně nedoporučena.</p></div>
+
+<br><hr>
 
 <h3 class="nocol">To je vše. Stay safe! ![smile](https://securityhandbook.cz/img/sm/smile.svg)</h3>

@@ -222,42 +222,29 @@ Návod je určen pro novou verzi MS Edge, aktualizace dostupná zde: https://www
 
 > Bezpečnější nastavení
 
-- Do adresního řádku prohlížeče zadejte:
-<li style="list-style-type: none"><pre><code>about:preferences</code></pre>
-a stiskněte **Enter**.</li>
-- V levém panelu se přesuňte do záložky <span class="green">Soukromí a zabezpečení</span>.
-- V sekci **Nastavení soukromí** u položky *Rozšířená ochrana proti sledování* zvolte úroveň <span class="green">Vlastní</span>, kterou nakonfigurujte dle obrázku:
+- Skrz nabídku v pravém horním rohu prohlížeče otevřete **Možnosti**.
+- V levém panelu se přesuňte do <span class="green">Soukromí a zabezpečení</span>.
+- V sekci **Rozšířená ochrana proti sledování** zvolte úroveň <span class="green">Vlastní</span>, kterou nakonfigurujte dle obrázku:
 <li style="list-style-type: none">![ff](https://securityhandbook.cz/img/cs/ff.png)</li>
-- Sjeďte níže do sekce **Oprávnění**. Zatrhněte položku <span class="green">Zabránit službám pro přístupnost v přístupu k vašemu prohlížeči</span> a potvrďte restart aplikace.
+- Sjeďte níže do sekce **Oprávnění** a upravte konfiguraci dle obrázku:
 <li style="list-style-type: none">![ff1](https://securityhandbook.cz/img/cs/ff1.png)</li>
 
 - Do adresního řádku prohlížeče zadejte:
 <li style="list-style-type: none"><pre><code>about:config</code></pre>
 a stiskněte **Enter**.</li>
-- Varování potvrďte tlačítkem <span class="green">Beru to na vědomí!</span>.
+- Varování potvrďte tlačítkem <span class="green">Beru na vědomí a chci pokračovat</span>.
 - Do vyhledávacího pole ve vrchní části stránky zadejte:
 <li style="list-style-type: none"><pre><code>ocsp</code></pre></li>
 - Vyhledávání zobrazí veškeré hodnoty s **OCSP** v názvu. Dvakrát poklepejte levým myšítkem na následující hodnotu:
 <li style="list-style-type: none"><pre><code>security.OCSP.require</code></pre></li>
 - Tím změníte konfiguraci hodnoty (zapnete/vypnete požadovanou funkci).
-<li style="list-style-type: none">![ff2](https://securityhandbook.cz/img/cs/ff2.png)
-![ff3](https://securityhandbook.cz/img/cs/ff3.png)</li>
+<li style="list-style-type: none">![ff2](https://securityhandbook.cz/img/cs/ff2.png)</li>
 - Výše uvedeným způsobem vyhledejte a opravte nastavení následujících hodnot (pokud se neshoduje):
 <li style="list-style-type: none"><pre><code>accessibility.blockautorefresh  ---  true
 security.mixed_content.block_display_content  ---  true
 security.mixed_content.block_object_subrequest --- true
 media.peerconnection.ice.no_host --- true
-javascript.options.asmjs  ---  false
-shumway.disabled  ---  true
-network.negotiate-auth.allow-insecure-ntlm-v1  ---  false
-network.allow-experiments --- false</code></pre></li>
-- Do vyhledávacího pole ve vrchní části stránky zadejte:
-<li style="list-style-type: none"><pre><code>flash</code></pre></li>
-- Vyhledávání zobrazí veškeré hodnoty s **flash** v názvu. Dvakrát poklepejte levým myšítkem na následující hodnotu:
-<li style="list-style-type: none"><pre><code>plugin.state.flash</code></pre></li>
-- Tím otevřete okno pro změnu hodnoty položky. Nastavte hodnotu na <span class="red">0</span> a klikněte na <span class="green">OK</span>.
-- Postup zopakujte pro následující položku:
-<li style="list-style-type: none"><pre><code>plugin.state.java</code></pre></li>
+javascript.options.asmjs  ---  false</code></pre></li>
 
 > Blokování reklamy
 
@@ -279,7 +266,7 @@ exit</code></pre></li>
 
 > Bezpečnější nastavení
 
-- *Mozilla Firefox WNT – L225-260*
+- *Mozilla Firefox WNT – L225-247*
 
 > Blokování reklamy
 
