@@ -31,7 +31,7 @@ Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá dal�
 <li style="list-style-type: none">![wntus](https://securityhandbook.cz/img/cs/wntus.png)</li>
 - Otevře se dialog pro přidání nového uživatele. V levém dolním rohu klikněte na <span class="green">Nemám přihlašovací údaje této osoby</span>.
 - V levém dolním rohu zvolte možnost <span class="green">Přidat uživatele bez účtu Microsoft</span>.
-- Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné zapamatovatelné heslo. Vyplňte bezpečnostní otázky a klikněte na <span class="green">Další</span>.
+- Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné bezpečné heslo. Vyplňte bezpečnostní otázky a klikněte na <span class="green">Další</span>.
 <li style="list-style-type: none">![wntus1](https://securityhandbook.cz/img/cs/wntus1.png)</li>
 - V seznamu jiných uživatelů se zobrazí účet **Admin**. Klikněte na něj a následně zvolte <span class="green">Změnit typ účtu</span>.
 <li style="list-style-type: none">![wntus2](https://securityhandbook.cz/img/cs/wntus2.png)</li>
@@ -49,7 +49,7 @@ Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá dal�
 - Zvolte možnost <span class="green">Přidat účet</span>.
 - Otevře se dialog pro přidání nového uživatele. V pravém dolním rohu klikněte na <span class="green">Přihlásit se bez účtu Microsoft</span>.
 - Klikněte na tlačítko <span class="green">Místní účet</span>.
-- Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné zapamatovatelné heslo.
+- Zadejte název účtu Správce (např. **Admin**) a zvolte pro něj silné bezpečné heslo.
 - Potvrďte přidání uživatele (<span class="green">Dokončit</span>).
 - V seznamu dalších účtů se zobrazí účet **Admin**. Klikněte na něj a následně zvolte <span class="green">Upravit</span>.
 <li style="list-style-type: none">![wntusleg](https://securityhandbook.cz/img/cs/wntusleg.png)</li>
@@ -184,6 +184,9 @@ Antivirus nebo antimalware (AV/M) je uživateli často chápán jako vrstva zabe
 <div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
 Instalace antivirových řešení třetích stran je důrazně nedoporučena.</p></div>
 
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
+Windows Defender může zobrazovat varování, pokud používáte lokální uživatelský účet bez propojení s účtem Microsoftu. Varování se snadno zbavíte otevřením *Centra zabezpečení v programu Windows Defender* a následně tlačítkem *Zavřít*.</p></div>
+
 > Rozebrání problematiky antivirů
 
 Tradiční mechanismus antiviru je založen na detekci známého malware, jehož otisk má v databázi. Pokud otisk pro malware neexistuje, nebude vyhodnocen jako škodlivý.
@@ -193,6 +196,8 @@ Novější technologií je *heuristika*: škodlivost kódu je vyhodnocena podle 
 Obejít výše zmíněné postupy není příliš náročné. Nejnovějším trendem je využití velkých dat a *AI* pro detekci malware. Tyto pokročilé technologie jsou zpravidla implementovány pouze v enterprise placených produktech nepřístupných běžným uživatelům (např. [SentinelOne](https://www.sentinelone.com/)) a ani ty nejsou nepřůstřelné.
 
 Detekce **Windows Defender** je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na instalacích aktuálních verzí OS – počet uživatelů zvyšuje šanci zachytit nový malware. Implementuje vyspělý cloudový systém, díky kterému nabízí užitečné pokročilé funkce (např. *block on first sight*).
+
+<br>
 
 #### Ochrana proti tradičnímu malware:
 

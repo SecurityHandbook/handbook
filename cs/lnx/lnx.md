@@ -75,6 +75,34 @@ exit</code></pre></li>
 
 <br>
 
+### Práce pod Běžným uživatelem:
+
+OS Linux má dva typy uživatelských účtů: <span class="green">Běžný uživatel</span> a <span class="green">Správce</span>.
+
+Z hlediska bezpečnosti je nezbytné provádět denní činnosti pod Běžným uživatelem, jelikož má omezená oprávnění, která jsou pro práci plně dostačující. Pokud se do OS i přes všechny vrstvy ochrany dostane malware, infikuje pouze uživatelský účet – na infikaci OS nebude mít potřebná oprávnění.
+
+<div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
+Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá další opatření zbytečná.</p></div>
+
+> Přidání účtu Správce a změna stávajícího uživatele na Běžného
+
+- Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Úživatelé**.
+- Klikněte na <span class="green">Odemknout&#8230;</span> a zadejte své heslo.
+- V horním pravém rohu zvolte možnost <span class="green">Přidat uživatele&#8230;</span>
+- Zobrazí se dialog pro přidání uživatele. **Typ účtu** zvolte <span class="green">Správce</span>.
+- Do textového pole *Celé jméno* název účtu Správce (např. **Admin**).
+- V sekci **Heslo** zvolte možnost <span class="green">Nastavit heslo nyní</span> a zvolte pro něj silné bezpečné heslo.
+- Tlačítkem <span class="green">Přidat</span> v horním pravém rohu účet vytvořte.
+<li style="list-style-type: none">![lnxus](https://securityhandbook.cz/img/cs/lnxus.png)</li>
+- Odhlaste se z vašeho účtu a přihlaste se jako **Admin**.
+- Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Úživatelé**.
+- Klikněte na <span class="green">Odemknout&#8230;</span> a zadejte heslo administrátora.
+- V seznamu uživatelů nalezněte svůj uživatelský účet, klikněte na něj a odeberte mu pravomoci <span class="green">Správce</span>.
+<li style="list-style-type: none">![lnxus1](https://securityhandbook.cz/img/cs/lnxus1.png)</li>
+- Odhlaste se z administrátorského účtu a přihlaste se zpět na svůj uživatelský účet.
+
+<br>
+
 ### Bezpečné nastavení sítě:
 
 > Nastavení DNS
@@ -190,7 +218,7 @@ sudo apt install flatpak</code></pre>
 
 Většinu aplikací můžete nalézt v repozitáři [Flathub](https://flathub.org/home). Distribuce **<span class="fe">Fedora</span>** má svůj integrovaný [kontejnerový repozitář](https://registry.fedoraproject.org/). Flatpak balíčky lze spravovat pomocí vestavěné aplikace <span class="green">Software</span>.
 
-Budete-li příkaz **flatpak** spouštět v terminálnu, <span class="red">nikdy jej nespouštějte pod sudo</span>. Flatpak si o autorizaci případně požádá sám přes GNOME dialog. Níže naleznete základní terminálové příkazy pro správu flatpak aplikací.
+Budete-li příkaz **flatpak** spouštět v terminálu, <span class="red">nikdy jej nespouštějte pod sudo</span>. Flatpak si o autorizaci případně požádá sám přes GNOME dialog. Níže naleznete základní terminálové příkazy pro správu flatpak aplikací.
 
 - Výpis nainstalovaných aplikací:
 <li style="list-style-type: none"><pre><code>flatpak list</code></pre></li>
