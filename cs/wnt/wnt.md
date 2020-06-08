@@ -80,10 +80,10 @@ a stiskněte **Enter**.</li>
 
 ### Bezpečné nastavení služeb a funkcí Windows:
 
-![batch](https://securityhandbook.cz/img/icons/bat.png) **WinSecOpt**:
-- Stáhněte si [WinSecOpt](https://github.com/lhajn/WNT_scripts/releases/download/v1/winsecopt_cs.zip).
+![batch](https://securityhandbook.cz/img/icons/bat.png) **WNTSec**:
+- Stáhněte si [WNTSec](https://github.com/cuffeax/WNT_scripts/releases/download/v1.0/wntsec_cs.zip).
 - Uložte a obsah archivu vyextrahujte <span class="blue">na Plochu</span>.
-- Na skript jménem <span class="green">winsecopt</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://securityhandbook.cz/img/icons/admin.png) **Spustit jako správce**.
+- Na skript jménem <span class="green">wntsec</span> klikněte pravým tlačítkem a zvolte možnost: ![admin](https://securityhandbook.cz/img/icons/admin.png) **Spustit jako správce**.
 - Nechte skript pracovat, na konci procesu vám řekne o souhlas k restartu OS.
 
 > Nastavení SmartScreen (starší verze Windows)
@@ -183,6 +183,8 @@ Antivirus nebo antimalware (AV/M) je uživateli často chápán jako vrstva zabe
 
 <div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
 Instalace antivirových řešení třetích stran je důrazně nedoporučena.</p></div>
+
+Vestavěný bezpečnostní systém je pro běžné využití plně dostačující. Výjimku mohou tvořit robustní placená bezpečnostní řešení vysoké kvality pro domácí užití, jejichž výčet naleznete [zde](#wnt4.2).
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
 Windows Defender může zobrazovat varování, pokud používáte lokální uživatelský účet bez propojení s účtem Microsoftu. Varování se snadno zbavíte otevřením *Centra zabezpečení v programu Windows Defender* a následně tlačítkem *Zavřít*.</p></div>
@@ -503,8 +505,6 @@ Z uvedených prohlížečů jsou z hlediska bezpečnosti nejlepší volbou <span
 Zde naleznete několik příkladů bezpečnostních konfigurací, čistě pro inspiraci.
 
 #### Bezplatná konfigurace pro běžného uživatele, který neumí anglicky:
-> Konfigurace
-
 - OS – Windows **10 May 2020 Update**
 - bezpečné nastavení OS – **kompletní**
 - AV/M – **Windows Defender**
@@ -517,22 +517,18 @@ Zde naleznete několik příkladů bezpečnostních konfigurací, čistě pro in
 - užitečné aplikace – **Unchecky**, **NVT Anti-AutoExec**
 - konfigurace pro pokročilé – dle znalostí
 
-Je nutné dodržovat základy bezpečnosti a bezpečného pohybu na internetu. **MS Edge** používat pro bankovní účely a podobné citlivé věci, **Google Chrome** či **Brave** pro běžné brouzdání.
-
 <br>
 
 #### Konfigurace pro středně pokročilého, který umí anglicky:
-> Konfigurace
-
 - OS – Windows **10 May 2020 Update** / **8.1 Update 3**
 - bezpečné nastavení OS – **kompletní**
 - AV/M:
-    - W10 / W8.1 bezplatný – **Windows Defender**
-    - W8.1 placený – **Sophos Home** / **F-Secure SAFE** / **Emsisoft Anti-Malware Home**
-- FW – **Windows Defender Firewall** / **Windows Firewall**
+    - bezplatný – **Windows Defender**
+    - placený – **Sophos Home Premium** / **F-Secure SAFE** / **Emsisoft Anti-Malware Home**
+- FW – **Windows (Defender) Firewall**
 - anti-exploit:
-    - W10 bezplatný – **Windows Defender**
-    - W8.1 placený – **HitmanPro.Alert**
+    - W10 – **Windows Defender**
+    - placený (W8.1) – **HitmanPro.Alert**
 - anti-executable – **VoodooShield**, **NVT Anti-AutoExec**
 - virtualizace – **integrovaná**, **virtuální stroj**
 - internetový prohlížeč – **MS Edge**, **Chromium** / **Brave**
