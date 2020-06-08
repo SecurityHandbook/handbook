@@ -1,11 +1,11 @@
-# FAQ – OS Windows
+# OS Windows pro pokročilé
 Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto nezbytné.
 
 V FAQ pro pokročilé se budeme věnovat hlavně vestavěným funkcím OS – cílem je dosáhnout špičkového zabezpečení za použití co nejméně kódu, jehož velikost s aplikacemi třetích stran rapidně roste.
 
-Tato sekce FAQ počítá s tím, že jste pročetli FAQ [OS Windows pro méně pokročilé](https://securityhandbook.cz/cs/wnt/index.php#wnt) uživatele a máte znalosti ve zmíněné sekci rozebírané.
+Tato část příručky počítá s tím, že jste pročetli kapitolu [OS Windows pro méně pokročilé](https://securityhandbook.cz/cs/wnt/index.php#wnt) a máte minimálně znalosti v kapitole rozebírané.
 
-#### FAQ se dělí na několik sekcí:
+#### Sekce kapitoly:
 - [Bezpečnostní aplikace](#wnt1)
 - [ACL](#wnt2)
 

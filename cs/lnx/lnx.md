@@ -1,9 +1,9 @@
-# FAQ – OS Linux
-Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů – většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce také existuje, akorát v mnohonásobně menším množství. Ačkoliv tedy je stav některých desktopových linuxových distribucí z pohledu bezpečnosti tristní, v praxi je riziko infikace nižší nežli u jiných OS. Moderní *exploit kity* jsou ovšem často multiplatformní a jejich počet roste. Dostatečné zabezpečení OS je proto nezbytné.
+# OS Linux
+Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů – většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce také existuje, akorát v mnohonásobně menším množství. Ačkoliv je tedy stav mnohých desktopových linuxových distribucí z pohledu bezpečnosti tristní, v praxi je riziko infikace nižší nežli u jiných OS. Moderní *exploit kity* jsou ovšem často multiplatformní a jejich počet roste. Dostatečné zabezpečení OS je proto nezbytné.
 
-Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://securityhandbook.cz/cs/lnx/adv.php#lnx).
+Tato část příručky je určena běžným a středně pokročilým uživatelům. Část pro pokročilé naleznete [zde](https://securityhandbook.cz/cs/lnx/adv.php#lnx).
 
-#### FAQ se dělí na několik sekcí:
+#### Sekce kapitoly:
 - [Doporučené distribuce](#lnx1)
 - [Základní bezpečnostní nastavení](#lnx2)
 - [Ochrana proti malware](#lnx3)
@@ -16,16 +16,11 @@ Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci
 - **<span class="os">openSUSE</span>** (Leap): https://www.opensuse.org/#Leap
 - **<span class="ub">Ubuntu</span>**: https://www.ubuntu.com/desktop
 
-V sekci OS Linux naleznete tipy převážně pro distribuci **Fedora**.
+V kapitole OS Linux naleznete tipy převážně pro distribuci **<span class="fe">Fedora</span>**.
 
-**<span class="fe">Fedora</span>** je nejlepší volbou pro běžného uživatele, jelikož je v základu vcelku bezpečně nastavená. Používá GNOME, nabízí uživateli možnost snadné instalace Flatpak aplikací, obsahuje robustní implementaci SELinux a má velmi vysoké standardy na své balíčky – všechny musí mít důležité mitigace proti memory corruption exploitům. Mimo technické funkce nabízí stabilní nejnovější software. Jediný problém zmíněné distribuce jsou občasné pomalejší aktualizace webových prohlížečů z důvodu mnoha vlastních úprav (patchů), které je nutno pro každou novou verzi aktualizovat.
+**Fedora** je nejlepší volbou pro běžného uživatele. U některých kroků také naleznete pokyny pro distribuci **<span class="os">openSUSE</span>** a distribuci **<span class="ub">Ubuntu</span>**, která je velmi populární, z hlediska bezpečnosti ovšem o něco méně vhodná. Všechny uvedené distribuce využívají grafické prostředí [GNOME](https://www.gnome.org/), které je v hlediska bezpečnosti rozumná volba. Výjimku tvoří rozhraní *GNOME Classic*, jež lze zvolit na přihlašovací obrazovce a jehož používání není doporučeno.
 
-U některých kroků také naleznete pokyny pro distribuci **<span class="os">openSUSE</span>** a distribuci **<span class="ub">Ubuntu</span>**, která je velmi populární, z hlediska bezpečnosti ovšem o něco méně vhodná.
-
-Většina obsažených informací je platná i pro jiné distribuce, pouze se bude lišit přesný postup aplikace různých kroků – syntax.
-
-### Doporučené grafické prostředí:
-Z bezpečnostního hlediska je rozumnou volbou prostředí [GNOME](https://www.gnome.org/), jelikož používá Wayland místo X.org a podílí se na vývoji Flatpaku. Výjimku tvoří rozhraní *GNOME Classic*, které využívá primárně X.org – není tedy doporučeno.
+Většina obsažených informací je aplikovatelná pro většinu distribucí, pouze se bude lišit přesný postup.
 
 <br><br><hr><br>
 
@@ -155,7 +150,7 @@ exit</code></pre></li>
 <br><br><hr><br>
 
 ## Ochrana proti malware:
-Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (*&bdquo;layered config&ldquo;*) – pokud selže jedna vrstva, nastupuje druhá. Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na distribuci. V základním nastavení ovšem většinou bohužel nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
+Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (*&bdquo;layered config&ldquo;*) – pokud selže jedna vrstva, nastupuje druhá. Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na distribuci. V základním nastavení ovšem většinou bohužel nejsou všechny bezpečnostní funkce zapnuty či korektně nastaveny.
 
 <br>
 
@@ -207,7 +202,7 @@ Sandbox nativně integrovaný v aplikaci je nejúčinnější možností impleme
 **<span class="os">openSUSE</span>** Flatpak předinstalovaný nemá, lze jej ovšem nainstalovat jednoduchým příkazem:
 <pre><code>sudo zypper install flatpak</code></pre>
 
-**<span class="ub">Ubuntu</span>** Flatpak předinstalovaný nemá, jelikož propaguje svou alternativu k Flatpaku – [Snap](https://www.ubuntu.com/desktop/snappy). Každopádně pokud se rozhodnete upřednostnit Flatpak před Snap (doporučeno), můžete jej nainstalovat následujícími příkazy:
+**<span class="ub">Ubuntu</span>** Flatpak předinstalovaný nemá, jelikož propaguje svou alternativu k Flatpaku – [Snap](https://www.ubuntu.com/desktop/snappy). Pakliže se rozhodnete upřednostnit Flatpak před Snap (doporučeno), můžete jej nainstalovat následujícími příkazy:
 <pre><code>sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
 sudo apt install flatpak</code></pre>
@@ -275,12 +270,12 @@ Flatpak repozitář **Fedora** preferujte pouze u GNOME aplikací, aplikací <sp
 <br>
 
 #### Virtuální stroj:
-Nejbezpečnější způsob virtualizace je emulace zařízení, kdy je virtualizován celý OS – za korektního nastavení a využití snapshotů. Po správné konfiguraci můžete virtuální stroj používat např. k vcelku bezpečnému brouzdání internetem.
-
-Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce. Pro virtualizaci OS Windows pro něj ovšem budete potřebovat dodatečnou licenci. Jednoduché nastavení a používání virtuálního počítače umožňují následující aplikace:
+Nejpokročilejší způsob virtualizace je emulace na nejnižší úrovni, kdy je virtualizován celý OS. Za korektního použití a nastavení (např. snapshoty) může jít o vysoce robustní bezpečnostní vrstvu. Po patřičné konfiguraci můžete virtuální stroj používat např. k relativně bezpečnému brouzdání internetem. Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce. Pro virtualizaci OS Windows ovšem budete potřebovat licenci, nebo členství v programu Insider.
 
 - [GNOME Boxes](https://wiki.gnome.org/Apps/Boxes)
 - [VirtualBox](https://www.virtualbox.org/)
+
+Nejlepší volbou z hlediska bezpečnosti je využítí vestavěného robustního řešení <span class="green">GNOME Boxes</span>. Populární software <span class="red">VirtualBox</span> není ideální k profesionálnímu nasazení, slouží spíše na hraní.
 
 > Konfigurace GNOME Boxes
 
@@ -306,9 +301,18 @@ Virtualizován může být libovolný OS jako Windows nebo linuxová distribuce.
 <br><br><hr><br>
 
 ## Zabezpečení internetového prohlížeče:
-Z bezpečnostního hlediska lze doporučit prohlížeč <span class="green">Chromium</span>. Používá špičkovou implementaci sandboxu a jeho kód je na velmi dobré úrovni. Celkově je v ohledu bezpečnosti v současném stavu dále než **Mozilla Firefox**. Prohlížeč **GNOME Web (Epiphany)** není nijak zvlášť zaměřený na bezpečnost, nehodí se tedy ke každodennímu používání. Je možné jej ovšem použít jako oddělený prohlížeč pro citlivé věci jako bankovnictví apod. Prohlížeč **Brave** vychází z prohlížeče Chromium, v základu integruje blokování reklam a trackerů. Jeho sandbox aktuálně není na úrovni prohlížeče Chromium, i tak je ovšem solidní.
+- bezpečnější nastavení (vypnutí nebezpečných funkcí, ideálně vč. JavaScriptu)
+- blokování reklamy
 
-<!--- /browsers.md -->
+> Porovnání prohlížečů z ohledu bezpečnosti
+
+Všechny prohlížeče jsou po korektním nastavení relativně bezpečné, kritickým důležitým faktorem je také samotný uživatel. V následující sekci naleznete postup pro bezpečnou konfiguraci **Chromium** i **Mozilla Firefox** jakožto dominantních prohlížečů. Také zde naleznete prohlížeče **GNOME Web** (základní jednoduchý prohlížeč příbuzný prohlížeči Safari) a **Brave** (open-source prohlížeč vycházející z Chromium, v *základu integruje blokování reklam a trackerů*).
+
+Z uvedených prohlížečů je z hlediska bezpečnosti nejlepší volbou <span class="green">Chromium</span>, případně jeho proprietární varianta [Google Chrome](https://www.google.com/chrome/browser/index.html).
+
+<span class="green">Chromium / Google Chrome</span> využívají špičkovou implementaci vestavěného sandboxu OS (seccomp-bpf) a integrují moderní mitigace. Prohlížeč *Brave* je na tom o něco hůře, jeho používání je doporučeno spíše na jiných OS. **GNOME Web** není nijak zvlášť zaměřený na bezpečnost a nehodí se ke každodennímu používání, je ovšem možné jej použít jako oddělený prohlížeč pro citlivé záležitosti (např. bankovnictví). <span class="red">Mozilla Firefox</span> z hlediska zabezpečení v porovnání s konkurencí v některých směrech stále zaostává, obzvláště pak na OS Linux. Na druhou stranu nativně funguje na protokolu *wayland*, což je významné plus.
+
+<!--- ../browsers.md -->
 
 <br><br><hr>
 

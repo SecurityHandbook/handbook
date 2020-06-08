@@ -1,9 +1,9 @@
-# FAQ – OS Android
+# OS Android
 Android je dominantní OS na mobilním trhu (>88% podíl) vyvíjený společností **Google, Inc.** Díky svému majoritnímu zastoupení se těší velké pozornosti hackerů.
 
 Android má robustní bezpečnostní model, který předpokládá, že aplikace třetích stran běžící v OS nejsou důvěryhodné. Hlavním bezpečnostním problémem je rozmanitost zařízení, z nichž většina modelů nedostává pravidelné bezpečnostní záplaty a/nebo běží na zastaralých verzích OS.
 
-#### FAQ se dělí na několik sekcí:
+#### Sekce kapitoly:
 - [Bezpečná zařízení](#andr1)
 - [Základní bezpečnostní nastavení](#andr2)
 - [Doporučené aplikace](#andr3)
@@ -27,7 +27,7 @@ Existují dvě úrovně měsíčních bezpečnostních aktualizací – **první
 
 > Proč záleží na verzi OS
 
-Každá verze OS Android přináší mnohá bezpečnostní a jiná vylepšení. **Marshmallow** přinesl správu oprávnění pro aplikace, kdy si uživatel může zvolit, jaká aplikace má k čemu přístup. **Nougat** přinesl přepsaný *MediaServer*, který likviduje řadu typů exploitů jako např. *Stagefright*. **Oreo** posunul sandboxing na vyšší úroveň díky *Project Treble* a celoplošenému využítí *seccomp* pro veškeré aplikace. Dále například zrobustnil *WebView* a model oprávnění aplikací. Lze s klidným svědomím říci, že <span class="red">žádná verze OS Android starší nežli *Pie* není bezpečná a neměla by být používána.</span>
+Každá verze OS Android přináší mnohá bezpečnostní a jiná vylepšení. **Marshmallow** přinesl správu oprávnění pro aplikace, kdy si uživatel může zvolit, jaká aplikace má k čemu přístup. **Nougat** přinesl přepsaný *MediaServer*, který likviduje řadu typů exploitů jako např. *Stagefright*. **Oreo** posunul sandboxing na vyšší úroveň díky *Project Treble* a celoplošenému využítí *seccomp* pro veškeré aplikace. Dále například zrobustnil *WebView* a model oprávnění aplikací. Lze s klidným svědomím říci, že <span class="red">žádná verze OS Android starší nežli *Q* není bezpečná a neměla by být používána.</span>
 
 > Proč záleží na bezpečnostních aktualizacích
 
@@ -153,12 +153,12 @@ Chrome/Chromium je prohlížeč s nejkvalitnějšími mitigacemi proti exploitů
 - <span class="green">Brave</span>: https://play.google.com/store/apps/details?id=com.brave.browser&hl=cs
 - Chromium: https://www.chromium.org/developers/how-tos/android-build-instructions
 
-<!--- /browsers.md -->
+<!--- ../browsers.md -->
 
 #### Proprietární:
 - Google Chrome: https://play.google.com/store/apps/details?id=com.android.chrome&hl=cs
 
-<!--- /browsers.md -->
+<!--- ../browsers.md -->
 
 <br><br><hr><br>
 

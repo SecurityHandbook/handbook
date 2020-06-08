@@ -1,12 +1,12 @@
-# FAQ – OS Windows
+# OS Windows
 Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto nezbytné.
 
 Podporovanými verzemi Windows v této sekci jsou <span class="green">Windows 10 May 2020 Update</span> jakožto aktuální verze OS a **Windows 8.1 Update 3**. Starší verze OS již postrádají důležité bezpečnostní mitigace/funkce a nejsou podporovány, jejich uživatelé by proto přejít na novější verzi, dovoluje-li to HW.
 
-Tato sekce FAQ je určena běžným a středně pokročilým uživatelům. Sekci pro pokročilé naleznete [zde](https://securityhandbook.cz/cs/wnt/adv.php#wnt).
+Tato část příručky je určena běžným a středně pokročilým uživatelům. Část pro pokročilé naleznete [zde](https://securityhandbook.cz/cs/wnt/adv.php#wnt).
 
 
-#### FAQ se dělí na několik sekcí:
+#### Sekce kapitoly:
 - [Základní bezpečnostní nastavení](#wnt1)
 - [Ochrana proti malware](#wnt2)
 - [Zabezpečení internetového prohlížeče](#wnt3)
@@ -153,7 +153,7 @@ a stiskněte **Enter**.</li>
 ## Ochrana proti malware
 Jako nejúčinnější metoda ochrany proti malware se osvědčila bezpečnostní konfigurace skládající se z více vrstev (*&bdquo;layered config&ldquo;*) – pokud selže jedna vrstva, nastupuje druhá. Bohužel stále není neobvyklé spoléhání se pouze na jednu tradiční vrstvu – antivirus – což je z hlediska bezpečnosti tristní.
 
-Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na verzi a edici OS. V základním nastavení nejsou všechny bezpečnostní funkce zapnuty a/nebo korektně nastaveny.
+Samotný OS poskytuje jistou úroveň ochrany proti malware, která se liší v závislosti na verzi a edici OS. V základním nastavení nejsou všechny bezpečnostní funkce zapnuty či korektně nastaveny.
 
 <br>
 
@@ -495,7 +495,7 @@ Z uvedených prohlížečů jsou z hlediska bezpečnosti nejlepší volbou <span
 
 <br>
 
-<!--- ./browsers.md -->
+<!--- ../browsers.md -->
 
 <br><br><hr><br>
 
