@@ -1,7 +1,7 @@
 # OS Windows
 Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto nezbytné.
 
-Podporovanými verzemi Windows v této sekci jsou <span class="green">Windows 10 May 2020 Update</span> jakožto aktuální verze OS a **Windows 8.1 Update 3**. Starší verze OS již postrádají důležité bezpečnostní mitigace/funkce a nejsou podporovány, jejich uživatelé by proto přejít na novější verzi, dovoluje-li to HW.
+Podporovanými verzemi Windows jsou <span class="green">Windows 10 May 2020 Update</span> jakožto aktuální verze OS a **Windows 8.1 Update 3**. Starší verze OS by neměly být používány. Informace pro Windows 8.1 jsou v kapitole standardně označeny dodatkem &bdquo;*(starší verze Windows)*&ldquo;.
 
 Tato část příručky je určena běžným a středně pokročilým uživatelům. Část pro pokročilé naleznete [zde](https://securityhandbook.cz/cs/wnt/adv.php#wnt).
 
@@ -184,10 +184,7 @@ Antivirus nebo antimalware (AV/M) je uživateli často chápán jako vrstva zabe
 <div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
 Instalace antivirových řešení třetích stran je důrazně nedoporučena.</p></div>
 
-Vestavěný bezpečnostní systém je pro běžné využití plně dostačující. Výjimku mohou tvořit robustní placená bezpečnostní řešení vysoké kvality pro domácí užití, jejichž výčet naleznete [zde](#wnt4.2).
-
-<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Windows Defender může zobrazovat varování, pokud používáte lokální uživatelský účet bez propojení s účtem Microsoftu. Varování se snadno zbavíte otevřením *Centra zabezpečení v programu Windows Defender* a následně tlačítkem *Zavřít*.</p></div>
+Vestavěný bezpečnostní systém je vysoce robustní a pro běžné využití plně dostačující. Výjimku z výše uvedeného tvoří profesionální kvalitní bezpečnostní produkty, kterých na trhu pro domácí použití není mnoho, za které si uživatel musí řádně zaplatit, a o jejichž reálném přínosu lze polemizovat. Jako nejrozumnější takovou investicí se v současnosti jeví [Sophos Home Premium](https://home.sophos.com/en-us.aspx), který představuje přívětivou možnost vysoké úrovně ochrany až pro deset zařízení v domácnosti (Windows/Mac) a nabízí další užitečné funkce, mezi které zatím ovšem nepatří česká lokalizace.
 
 > Rozebrání problematiky antivirů
 
@@ -195,7 +192,7 @@ Tradiční mechanismus antiviru je založen na detekci známého malware, jehož
 
 Novější technologií je *heuristika*: škodlivost kódu je vyhodnocena podle aktivity po jeho spuštění (vzorek je testován v izolovaném prostředí), na základě předvolených pravidel a indikací, které jsou u vzorku pozorovány. Provede-li malware nekalou činnost, která není heuristickými pravidly označena jako škodlivá, malware bude vyhodnocen jako neškodný.
 
-Obejít výše zmíněné postupy není příliš náročné. Nejnovějším trendem je využití velkých dat a *AI* pro detekci malware. Tyto pokročilé technologie jsou zpravidla implementovány pouze v enterprise placených produktech nepřístupných běžným uživatelům (např. [SentinelOne](https://www.sentinelone.com/)) a ani ty nejsou nepřůstřelné.
+Obejít výše zmíněné postupy není příliš náročné. Nejnovějším trendem je využití velkých dat a *AI* pro detekci malware. Tyto pokročilé technologie jsou zpravidla implementovány pouze v enterprise placených produktech nepřístupných běžným uživatelům (např. [SentinelOne](https://www.sentinelone.com/)), nicméně ani ty nejsou nepřůstřelné.
 
 Detekce **Windows Defender** je na velmi dobré úrovni. Jedná se o výchozí AV/M řešení na instalacích aktuálních verzí OS – počet uživatelů zvyšuje šanci zachytit nový malware. Implementuje vyspělý cloudový systém, díky kterému nabízí užitečné pokročilé funkce (např. *block on first sight*).
 
@@ -220,7 +217,7 @@ Detekce **Windows Defender** je na velmi dobré úrovni. Jedná se o výchozí A
 
 <br>
 
-Ve verzi OS **Windows 8.1 Update 3** obsahuje *Windows Defender* podstatně méně funkcí, stále se ovšem jedná o rozumnou volbu pro tradiční antimalware ochranu.
+Ve verzi OS **Windows 8.1 Update 3** obsahuje *Windows Defender* podstatně méně funkcí, stále jej ovšem lze rozumně použít pro bezplatnou ochranu proti tradičnímu malware.
 
 > Konfigurace Ochrany před viry a hrozbami (starší verze Windows)
 
@@ -259,10 +256,14 @@ Zmíněná funkce prozatím není ve výchozím nastavení aktivována, jelikož
 
 <br>
 
+Ve starší verzi OS **Windows 8.1 Update 3** systém *Windows Defender* výše popisovanou funkcionalitu neobsahuje. Uživatelé mohou využít doporučený profesionální bezpečnostní systém *Sophos Home Premium*.
+
+<br>
+
 #### Ochrana proti exploitaci:
 Každý kód obsahuje minimálně jednu chybu. Některé z těchto chyb kvůli své povaze přináší bezpečnostní riziko. Takových chyb následně využívají tzv. *exploity* za účelem kompromitace systému a provedení typicky nekalé činnosti. Windows implementují nejmodernějších mitigace, exploitace důležitých samotného OS je proto časově náročná a velmi nákladná. Některé důležité aplikace (např. prohlížeč *Google Chrome*) jsou z hlediska mitigací proti exploitům také na velmi vysoké úrovni. Poté jsou zde ovšem aplikace, které dostatečné mitigace neimplementují, a jsou bohužel pro uživatele nezbytné.
 
-Systém *Windows Defender* integruje extrémně robustní a silnou ochranu proti exploitaci kritických částí OS na bázi virtualizace, která ovšem ve výchozím nastavení není povolena z důvodu nepatrné ztráty systémových prostředků. **Je důrazně doporučeno funkcionalitu aktivovat.**
+Systém *Windows Defender* integruje velice robustní a silnou ochranu proti exploitaci kritických částí OS na bázi virtualizace, která ovšem ve výchozím nastavení není povolena z důvodu nepatrné ztráty systémových prostředků. **Je důrazně doporučeno funkcionalitu aktivovat.**
 
 > Konfigurace izolace jádra
 
@@ -273,7 +274,7 @@ Systém *Windows Defender* integruje extrémně robustní a silnou ochranu proti
 <li style="list-style-type: none">![wd2](https://securityhandbook.cz/img/cs/wd2.png)</li>
 - Potvrďte restart OS.
 
-Dále integruje *anti-exploit* řešení, které umí na spuštěnou aplikaci dodatečně nabalit různé mitigace a tím jejich exploitaci výrazně ztížit. Tuto funkcionalitu standardně ve výchozím nastavení aplikuje na některé důležité systémové procesy.
+Dále integruje *anti-exploit* řešení, které umožňuje na libovolnou aplikaci nabalit různé mitigace a tím výrazně ztížit její exploitaci. Tuto funkcionalitu standardně ve výchozím nastavení aplikuje na některé důležité systémové procesy.
 
 > Konfigurace mitigací pro jednotlivé aplikace (příklad: VoodooShield)
 
@@ -314,32 +315,20 @@ Níže uvedená konfigurace je určena pro aplikace **MS Office** a nemusí být
 
 <br>
 
-Alternativním řešením, které v *anti-exploit* sekci stojí za zmínku, je placený software [HitmanPro.Alert](https://www.hitmanpro.com/en-us/alert.aspx) od společnosti Sophos. Kritický může být pro uživatele verze **Windows 8.1 Update 3**, kde nejsou pokročilé funkce ochrany integrovány v OS. Aplikace není dostupná v češtině.
-
-> Instalace a konfigurace HitmanPro.Alert (starší verze Windows)
-
-- Stáhněte si [HMP.A](https://www.hitmanpro.com/en/alert.aspx).
-- Aplikaci nainstalujte, ponechte doporučené nastavení a možnost skenu po instalaci.
-- Vyčkejte na dokončení skenu a vyřešte případné nálezy.
-- Klikněte na ozubené kolo v pravém horním rohu a zvolte možnost <span class="green">Advanced interface</span>.
-- Rozklikněte kategorii <span class="green">Risk reduction</span>.
-- Zapněte funkci **BadUSB** a změňte nastavení funkce **Vaccination** na <span class="green">Active vaccination</span>.
-<li style="list-style-type: none">![hmpa](https://securityhandbook.cz/img/en/hmpa.png)</li>
-- Při otevření prohlížeče nebo jiné chráněné aplikace se při ponechání myši na pár sekund na kraji jejího okna zobrazí ohraničení, které signalizuje, že HMP.A chrání danou aplikaci a také ukazuje, které funkce HMP.A jsou pro danou aplikaci zapnuté. Mimo jiné se při prvním startu aplikace za uživatelské sezení objeví notifikace o aktivní ochraně.
-<li style="list-style-type: none">![hmpa1](https://securityhandbook.cz/img/en/hmpa1.png)</li>
-<li style="list-style-type: none">![hmpa2](https://securityhandbook.cz/img/en/hmpa2.png)</li>
-- Při zachycení útoku HMP.A školivou aplikaci ukončí a zobrazí následující hlášku:
-<li style="list-style-type: none">![hmpa3](https://securityhandbook.cz/img/en/hmpa3.png)</li>
+Ve starší verzi OS **Windows 8.1 Update 3** systém *Windows Defender* žádnou z výše popisovaných funkcionalit neobsahuje. Uživatelé mohou využít doporučený profesionální bezpečnostní systém *Sophos Home Premium*. Alternativně mohou využít placený software [HitmanPro.Alert](https://www.hitmanpro.com/en-us/alert.aspx), jehož funkcionalitu zmíněný systém integruje, chtějí-li pouze zaplnit anti-exploit vrstvu zabezpečení.
 
 <br>
 
 #### Firewall:
-Firewall je velmi důležitá vrstva zabezpečení, která chrání OS síťovými útoky. Systém *Windows Defender* integruje **Windows Defender Firewall** (WDF), který je pro standardní použití plně dostačující. *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*
+Firewall je velmi důležitá vrstva zabezpečení, která chrání OS síťovými útoky. Systém *Windows Defender* integruje **Windows Defender Firewall** (WDF), který je pro standardní použití plně dostačující.
 
 <div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
 Instalace firewall řešení třetích stran je důrazně nedoporučena.</p></div>
 
 Firewall je v základu korektně nastaven na blokování příchozí komunikace, která není explicitně povolena. Pro citelné zvýšení bezpečnosti je možné nastavit FW na blokování veškeré odchozí komunikace, která není explicitně povolena. V novějších verzích OS je taková konfigurace ovšem nesnadný počin a rámcový návod je proto dostupný pouze v [sekci pro pokročilé](https://securityhandbook.cz/cs/wnt/adv.php#wnt1).
+
+<div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
+Windows Defender může zobrazovat varování, pokud používáte lokální uživatelský účet bez propojení s účtem Microsoftu. Varování se snadno zbavíte otevřením *Centra zabezpečení v programu Windows Defender* a následně tlačítkem *Zavřít*.</p></div>
 
 <br>
 
@@ -493,7 +482,7 @@ Všechny prohlížeče jsou po korektním nastavení relativně bezpečné, krit
 
 Z uvedených prohlížečů jsou z hlediska bezpečnosti nejlepší volbou <span class="green">Microsoft Edge</span> a <span class="green">Chromium</span>, případně jeho proprietární varianta [Google Chrome](https://www.google.com/chrome/browser/index.html) či prohlížeč [Brave](https://brave.com/).
 
-<span class="green">Microsoft Edge / Google Chrome / Chromium</span> využívají špičkovou implementaci vestavěného sandboxu OS (LP-AC) a integrují všechny moderní mitigace včetně **CFG**. Prohlížeč *Brave* je na tom obdobně. <span class="red">Mozilla Firefox</span> z hlediska zabezpečení v porovnání s konkurencí stále zaostává, nicméně na Windows již situace není tak kritická jak dříve.
+<span class="green">Microsoft Edge / Google Chrome / Chromium</span> využívají špičkovou implementaci vestavěného sandboxu OS (LP-AC) a integrují všechny moderní mitigace včetně **CFG**. Prohlížeč *Brave* je na tom obdobně. <span class="red">Mozilla Firefox</span> z hlediska zabezpečení v porovnání s konkurencí stále zaostává, nicméně na OS Windows již situace není tak kritická jak dříve.
 
 <br>
 
@@ -505,8 +494,7 @@ Z uvedených prohlížečů jsou z hlediska bezpečnosti nejlepší volbou <span
 Zde naleznete několik příkladů bezpečnostních konfigurací, čistě pro inspiraci.
 
 #### Bezplatná konfigurace pro běžného uživatele, který neumí anglicky:
-- OS – Windows **10 May 2020 Update**
-- bezpečné nastavení OS – **kompletní**
+- OS – Windows **10 May 2020 Update** (bezpečně nakofigurován)
 - AV/M – **Windows Defender**
 - FW – **Windows Defender Firewall**
 - anti-exploit – **Windows Defender**
@@ -515,25 +503,27 @@ Zde naleznete několik příkladů bezpečnostních konfigurací, čistě pro in
 - virtualizace – **integrovaná**
 - internetový prohlížeč – **MS Edge**, **Google Chrome** / **Brave**
 - užitečné aplikace – **Unchecky**, **NVT Anti-AutoExec**
-- konfigurace pro pokročilé – dle znalostí
+- (konfigurace z kapitoly pro pokročilé dle znalostí)
 
 <br>
 
 #### Konfigurace pro středně pokročilého, který umí anglicky:
-- OS – Windows **10 May 2020 Update** / **8.1 Update 3**
-- bezpečné nastavení OS – **kompletní**
+- OS – Windows **10 May 2020 Update** / **8.1 Update 3** (bezpečně nakofigurován)
 - AV/M:
-    - bezplatný – **Windows Defender**
-    - placený – **Sophos Home Premium** / **F-Secure SAFE** / **Emsisoft Anti-Malware Home**
+  - bezplatný – **Windows Defender**
+  - placený – **Sophos Home Premium** / **&#8230;**
 - FW – **Windows (Defender) Firewall**
 - anti-exploit:
-    - W10 – **Windows Defender**
-    - placený (W8.1) – **HitmanPro.Alert**
-- anti-executable – **VoodooShield**, **NVT Anti-AutoExec**
+  - W10 bezplatný – **Windows Defender**
+  - placený – **Sophos Home Premium**
+- anti-ransomware:
+  - W10 bezplatný – **Windows Defender**
+  - placený – **Sophos Home Premium**
+- anti-executable – **VoodooShield**
 - virtualizace – **integrovaná**, **virtuální stroj**
 - internetový prohlížeč – **MS Edge**, **Chromium** / **Brave**
 - užitečné aplikace – **HashTab**
-- konfigurace pro pokročilé – dle znalostí
+- (konfigurace z kapitoly pro pokročilé dle znalostí)
 
 <br><br><hr>
 

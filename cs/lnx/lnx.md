@@ -162,7 +162,7 @@ Je důležité mít aktuální verzi veškerého SW, jelikož nové verze často
 <br>
 
 ### Firewall:
-Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před útoky ze sítě. *Poznámka na okraj: základem síťového zabezpečení v domácnosti je rozumný router.*
+Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před útoky ze sítě.
 
 **<span class="fe">Fedora</span>** má v základu plně funkční firewall.
 
