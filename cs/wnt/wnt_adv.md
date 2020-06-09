@@ -1,8 +1,6 @@
 # OS Windows pro pokročilé
 Windows se jakožto nejrozšířenější desktopový OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto nezbytné.
 
-V FAQ pro pokročilé se budeme věnovat hlavně vestavěným funkcím OS – cílem je dosáhnout špičkového zabezpečení za použití co nejméně kódu, jehož velikost s aplikacemi třetích stran rapidně roste.
-
 Tato část příručky počítá s tím, že jste pročetli kapitolu [OS Windows pro méně pokročilé](https://securityhandbook.cz/cs/wnt/index.php#wnt) a máte minimálně znalosti v kapitole rozebírané.
 
 #### Sekce kapitoly:
@@ -136,7 +134,7 @@ ACL lze využít následovně: můžeme zakázat spouštění spustitelných sou
 icacls "(cesta k uživatelské složce)\AppData\Local\Microsoft\WindowsApps" /inheritance:d
 icacls "(cesta k uživatelské složce)\AppData\Local\Microsoft\WindowsApps" /remove:d Everyone /t</code></pre></li>
 
-Stejný postup proveďte pro globální složku dočasných sobourů.
+Stejný postup proveďte pro globální složku dočasných souborů.
 
 <br>
 

@@ -1,7 +1,7 @@
 # OS Linux pro pokročilé
 Linux se díky svému minoritnímu zastoupení na desktopech v porovnání s OS Windows těší řádově menší pozornosti hackerů – většina malware pro Linux je směřována pouze na servery. Malware pro desktopové linuxové distribuce také existuje, akorát v mnohonásobně menším množství. Ačkoliv je tedy stav mnohých desktopových linuxových distribucí z pohledu bezpečnosti tristní, v praxi je riziko infikace nižší nežli u jiných OS. Moderní *exploit kity* jsou ovšem často multiplatformní a jejich počet roste. Dostatečné zabezpečení OS je proto nezbytné.
 
-Zde se budeme věnovat pokročilejším možnostem zabezpečení (nejen) desktopového Linuxu. Jako rukojmí použijeme distribuci **Arch Linux**, se kterou lze korektní konfigurací vytvořit vcelku bezpečnou instalaci. Kroky níže popisované jsou aplikovatelné na většinu distribucí, stačí korektně změnit syntax.
+Tato kapitola využívá distribuci **Arch Linux**.
 
 Tato část příručky počítá s tím, že jste pročetli kapitolu [OS Linux pro méně pokročilé](https://securityhandbook.cz/cs/lnx/index.php#lnx) a máte minimálně znalosti v kapitole rozebírané.
 

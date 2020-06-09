@@ -31,7 +31,7 @@
 <br>
 
 ## Bezpečný pohyb na internetu:
-- Nepřipojujte se k neznámým/veřejným bezdrátovým sítím a vyvarujte se nebezpečným protokolům – HTTP, FTP,&#8230; – případně přes ně neposílejte citlivé údaje. Zvažte použijtí VPN.
+- Nepřipojujte se k neznámým/veřejným bezdrátovým sítím a vyvarujte se nebezpečným protokolům – HTTP, FTP,&#8230; – případně přes ně neposílejte citlivé údaje. Zvažte použití VPN.
 - Používejte bezpečně nastavený prohlížeč.
 -	Zvažte využití odděleného prohlížeče pro citlivé věci (např. bankovnictví).
 - Nenavštěvujte pochybné/neznámé stránky a nestahujte z nich žádné soubory.

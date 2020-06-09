@@ -1,7 +1,7 @@
 # OS Android
-Android je dominantní OS na mobilním trhu (>88% podíl) vyvíjený společností **Google, Inc.** Díky svému majoritnímu zastoupení se těší velké pozornosti hackerů.
+Android se jakožto nejrozšířenější mobilní OS těší velké pozornosti hackerů, jeho dostatečné zabezpečení je proto nezbytné. Android má robustní bezpečnostní model, který předpokládá, že aplikace třetích stran běžící v OS nejsou důvěryhodné. Hlavním bezpečnostním problémem je rozmanitost zařízení, z nichž většina modelů nedostává pravidelné bezpečnostní záplaty a/nebo běží na zastaralých verzích OS.
 
-Android má robustní bezpečnostní model, který předpokládá, že aplikace třetích stran běžící v OS nejsou důvěryhodné. Hlavním bezpečnostním problémem je rozmanitost zařízení, z nichž většina modelů nedostává pravidelné bezpečnostní záplaty a/nebo běží na zastaralých verzích OS.
+Podporovanou verzí Android je <span class="green">Q (10)</span> jakožto aktuální verze OS. Starší verze OS by neměly být používány. Přesto je většina obsažených informací platná i pro starší verze OS, pouze se může lišit přesný postup aplikace různých kroků.
 
 #### Sekce kapitoly:
 - [Bezpečná zařízení](#andr1)
@@ -23,15 +23,7 @@ Jak již bylo zmíněno, diverzita zařízení s OS Android je z pohledu bezpeč
 - jádro >= 4.4
 
 <div class="alert info"><p><em class="icon-info-circled"></em>**Info**<br>
-Existují dvě úrovně měsíčních bezpečnostních aktualizací – **prvního** dne v měsíci a **páteho** dne v měsíci. Obě úrovně jsou aplikovatelné pro většinu modelů na trhu. Pokud výrobce celkem pravidelně zařízení aktualizuje, ale implementuje pouze první úroveň (např. *1. listopadu 2019*), může to značit problém.</p></div>
-
-> Proč záleží na verzi OS
-
-Každá verze OS Android přináší mnohá bezpečnostní a jiná vylepšení. **Marshmallow** přinesl správu oprávnění pro aplikace, kdy si uživatel může zvolit, jaká aplikace má k čemu přístup. **Nougat** přinesl přepsaný *MediaServer*, který likviduje řadu typů exploitů jako např. *Stagefright*. **Oreo** posunul sandboxing na vyšší úroveň díky *Project Treble* a celoplošenému využítí *seccomp* pro veškeré aplikace. Dále například zrobustnil *WebView* a model oprávnění aplikací. Lze s klidným svědomím říci, že <span class="red">žádná verze OS Android starší nežli *Q* není bezpečná a neměla by být používána.</span>
-
-> Proč záleží na bezpečnostních aktualizacích
-
-Uveďme drobný příklad. Nainstalujete si škodlivou aplikaci na starší verzi <span class="green">8.1</span> – máte kontrolu nad oprávněními aplikace a všechna nepotřebná oprávnění tedy můžete zakázat. Nemáte ovšem nejnovější bezpečnostní záplaty. Aplikace tedy může využít známou bezpečnostní díru a exploitovat OS – uživatel se o tom nikdy nedozví. Toto je bežná praxe malware pro OS Android, jelikož se jedná o nejjednodušší a nejméně nákladný způsob infikace – **drtivá většina (převážně starších) zařízení nemá kritické bezpečnostní záplaty**.
+Existují dvě úrovně měsíčních bezpečnostních aktualizací – **prvního** dne v měsíci a **pátého** dne v měsíci. Obě úrovně jsou aplikovatelné pro většinu modelů na trhu. Pokud výrobce celkem pravidelně zařízení aktualizuje, ale implementuje pouze první úroveň (např. *1. listopadu 2019*), může to značit problém.</p></div>
 
 <br>
 
@@ -84,7 +76,7 @@ Správce oprávnění umožňuje nastavit, k jakým informacím a komponentům m
 > Nastavení oprávnění aplikací
 
 - Otevřete si <span class="green">Nastavení</span>.
-- Přesuňte se do podkategorie **Aplikace a oznámění**.
+- Přesuňte se do podkategorie **Aplikace a oznámení**.
 - V *rozšířených nastavení* otevřete <span class="green">Správce oprávnění</span>.
 - Rozklikněte postupně všechny kategorie a zakažte všem aplikacím nepotřebný přístup.
 <li style="list-style-type: none">![andapp](https://securityhandbook.cz/img/cs/andapp.png)</li>
@@ -127,7 +119,7 @@ Aplikační firewall OS neintegruje, funkcionalitu je možné dodat externí apl
 ### Blokování reklamy:
 Blokování reklamy je bohužel z hlediska bezpečnosti nezbytné kvůli výskytu škodlivých reklam na internetu. Rozumnější je oblíbené stránky podporovat jinou a bezpečnější – např. finanční – formou.
 
-VPN je dobrý způsob blokace reklam, standardním typem připojení je ovšem přes *OpenVPN* a Android bohužel tento druh připojení neintegruje, uživatel je tedy zpravidla odkázán na aplikaci svého poskytovatele. Použití prohlížeče blokující reklamy (viz sekce níže) je na OS Android nejlepším řešením. **Google Chrome** nativně blokovuje agresivní reklamy. Prohlížeč **Brave** v základu integruje blokování reklam a trackerů.
+VPN je dobrý způsob blokace reklam, standardním typem připojení je ovšem přes *OpenVPN* a Android bohužel tento druh připojení neintegruje, uživatel je tedy zpravidla odkázán na aplikaci svého poskytovatele. Použití prohlížeče blokující reklamy (viz sekce níže) je na OS Android nejlepším řešením. **Google Chrome** nativně blokuje agresivní reklamy. Prohlížeč **Brave** v základu integruje blokování reklam a trackerů.
 
 #### FOSS lokální VPN:
 - Blokada: http://blokada.org/

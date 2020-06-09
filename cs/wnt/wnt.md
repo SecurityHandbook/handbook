@@ -16,7 +16,6 @@ Tato část příručky je určena běžným a středně pokročilým uživatel�
 
 ## Základní bezpečnostní nastavení
 ### Práce pod Standardním uživatelem:
-
 OS Windows má dva typy uživatelských účtů: <span class="green">Standardní uživatel</span> a <span class="green">Správce</span>.
 
 Z hlediska bezpečnosti je nezbytné provádět denní činnosti pod Standardním uživatelem, jelikož má omezená oprávnění, která jsou pro práci plně dostačující. Pokud se do OS i přes všechny vrstvy ochrany dostane malware, infikuje pouze uživatelský účet – na infikaci OS nebude mít potřebná oprávnění.
@@ -64,7 +63,6 @@ Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá dal�
 <br>
 
 ### User Account Control:
-
 *User Account Control* je důležitá součást bezpečnostního modelu již OS od **Windows Vista**, kde se dočkala obrovské kritiky ze strany uživatelů a v novějších verzích OS je od té doby ve výchozím nastavením oslabena. Je důrazně doporučeno konfiguraci UAC zvýšit na nejpřísnější úroveň.
 
 > Nastavení UAC
@@ -217,7 +215,7 @@ Detekce **Windows Defender** je na velmi dobré úrovni. Jedná se o výchozí A
 
 <br>
 
-Ve verzi OS **Windows 8.1 Update 3** obsahuje *Windows Defender* podstatně méně funkcí, stále jej ovšem lze rozumně použít pro bezplatnou ochranu proti tradičnímu malware.
+Ve starší verzi OS **Windows 8.1 Update 3** obsahuje *Windows Defender* podstatně méně funkcí, stále jej ovšem lze rozumně použít pro bezplatnou ochranu proti tradičnímu malware.
 
 > Konfigurace Ochrany před viry a hrozbami (starší verze Windows)
 
@@ -320,7 +318,7 @@ Ve starší verzi OS **Windows 8.1 Update 3** systém *Windows Defender* žádno
 <br>
 
 #### Firewall:
-Firewall je velmi důležitá vrstva zabezpečení, která chrání OS síťovými útoky. Systém *Windows Defender* integruje **Windows Defender Firewall** (WDF), který je pro standardní použití plně dostačující.
+Firewall je velmi důležitá vrstva zabezpečení, která chrání OS před síťovými útoky. Systém *Windows Defender* integruje **Windows Defender Firewall** (WDF), který je pro standardní použití plně dostačující.
 
 <div class="alert exclaim"><p><em class="icon-attention"></em>**Varování**<br>
 Instalace firewall řešení třetích stran je důrazně nedoporučena.</p></div>
@@ -494,7 +492,10 @@ Z uvedených prohlížečů jsou z hlediska bezpečnosti nejlepší volbou <span
 Zde naleznete několik příkladů bezpečnostních konfigurací, čistě pro inspiraci.
 
 #### Bezplatná konfigurace pro běžného uživatele, který neumí anglicky:
-- OS – Windows **10 May 2020 Update** (bezpečně nakofigurován)
+
+> Konfigurace
+
+- OS – Windows **10 May 2020 Update** (bezpečně nakonfigurován)
 - AV/M – **Windows Defender**
 - FW – **Windows Defender Firewall**
 - anti-exploit – **Windows Defender**
@@ -508,7 +509,10 @@ Zde naleznete několik příkladů bezpečnostních konfigurací, čistě pro in
 <br>
 
 #### Konfigurace pro středně pokročilého, který umí anglicky:
-- OS – Windows **10 May 2020 Update** / **8.1 Update 3** (bezpečně nakofigurován)
+
+> Konfigurace
+
+- OS – Windows **10 May 2020 Update** / **8.1 Update 3** (bezpečně nakonfigurován)
 - AV/M:
   - bezplatný – **Windows Defender**
   - placený – **Sophos Home Premium** / **&#8230;**

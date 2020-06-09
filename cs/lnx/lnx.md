@@ -71,7 +71,6 @@ exit</code></pre></li>
 <br>
 
 ### Práce pod Běžným uživatelem:
-
 OS Linux má dva typy uživatelských účtů: <span class="green">Běžný uživatel</span> a <span class="green">Správce</span>.
 
 Z hlediska bezpečnosti je nezbytné provádět denní činnosti pod Běžným uživatelem, jelikož má omezená oprávnění, která jsou pro práci plně dostačující. Pokud se do OS i přes všechny vrstvy ochrany dostane malware, infikuje pouze uživatelský účet – na infikaci OS nebude mít potřebná oprávnění.
@@ -81,7 +80,7 @@ Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá dal�
 
 > Přidání účtu Správce a změna stávajícího uživatele na Běžného
 
-- Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Úživatelé**.
+- Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Uživatelé**.
 - Klikněte na <span class="green">Odemknout&#8230;</span> a zadejte své heslo.
 - V horním pravém rohu zvolte možnost <span class="green">Přidat uživatele&#8230;</span>
 - Zobrazí se dialog pro přidání uživatele. **Typ účtu** zvolte <span class="green">Správce</span>.
@@ -90,7 +89,7 @@ Jedná se o naprostý základ zabezpečení OS, bez kterého jsou veškerá dal�
 - Tlačítkem <span class="green">Přidat</span> v horním pravém rohu účet vytvořte.
 <li style="list-style-type: none">![lnxus](https://securityhandbook.cz/img/cs/lnxus.png)</li>
 - Odhlaste se z vašeho účtu a přihlaste se jako **Admin**.
-- Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Úživatelé**.
+- Otevřete si <span class="green">Nastavení</span>. Rozklikněte kategorii **Uživatelé**.
 - Klikněte na <span class="green">Odemknout&#8230;</span> a zadejte heslo administrátora.
 - V seznamu uživatelů nalezněte svůj uživatelský účet, klikněte na něj a odeberte mu pravomoci <span class="green">Správce</span>.
 <li style="list-style-type: none">![lnxus1](https://securityhandbook.cz/img/cs/lnxus1.png)</li>
@@ -275,7 +274,7 @@ Nejpokročilejší způsob virtualizace je emulace na nejnižší úrovni, kdy j
 - [GNOME Boxes](https://wiki.gnome.org/Apps/Boxes)
 - [VirtualBox](https://www.virtualbox.org/)
 
-Nejlepší volbou z hlediska bezpečnosti je využítí vestavěného robustního řešení <span class="green">GNOME Boxes</span>. Populární software <span class="red">VirtualBox</span> není ideální k profesionálnímu nasazení, slouží spíše na hraní.
+Nejlepší volbou z hlediska bezpečnosti je využití vestavěného robustního řešení <span class="green">GNOME Boxes</span>. Populární software <span class="red">VirtualBox</span> není ideální k profesionálnímu nasazení, slouží spíše na hraní.
 
 > Konfigurace GNOME Boxes
 
