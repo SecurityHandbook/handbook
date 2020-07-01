@@ -27,9 +27,9 @@ Windows v základu integrují <span class="green">Windows Defender Firewall</spa
 <li style="list-style-type: none">![wdf2](https://securityhandbook.cz/img/cs/wdf2.png)</li>
 
 <div class="alert success"><p><em class="icon-ok-circled"></em>**Úspěch**<br>
-Nyní WDF blokuje veškerou odchozí komunikaci, která není specificky povolena. Dále je třeba nastavit whitelist.</p></div>
+Nyní WDF blokuje veškerou odchozí komunikaci, která není specificky povolena. Dále je třeba nastavit allowlist.</p></div>
 
-> Whitelist odchozí komunikace
+> Allowlist odchozí komunikace
 
 <pre><code># sitove sluzby OS
 %SystemRoot%\System32\svchost.exe
@@ -99,7 +99,7 @@ Existuje bezplatná demo verze, která je po nějakou dobu plně funkční, s om
 <br>
 
 ### Bouncer:
-[Excubits Bouncer](https://excubits.com/content/en/products_bouncer.html) je drobný ovladač umožňující pokročilý whitelist spustitelných souborů. Jedná se o špičkové řešení mitigace proti exploitům, jehož konfigurace je triviální.
+[Excubits Bouncer](https://excubits.com/content/en/products_bouncer.html) je drobný ovladač umožňující pokročilý allowlist spustitelných souborů. Jedná se o špičkové řešení mitigace proti exploitům, jehož konfigurace je triviální.
 
 Existuje bezplatná demo verze, která je po nějakou dobu plně funkční, s omezením velikosti konfigurační souboru na 5 kB, což není dostatek pro pokročilé nastavení, investice do plné verze je tedy žádoucí.
 

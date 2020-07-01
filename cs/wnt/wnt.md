@@ -331,7 +331,7 @@ Windows Defender může zobrazovat varování, pokud používáte lokální uži
 <br>
 
 ### Anti-executable:
-Anti-executable je specifická vrstva ochrany. Jedná se o řešení, které na základě definovaných pravidel spravuje, jaký kód je v OS spuštěn. Tímto principem ideálně zachytí pokus o spuštění malware a zabrání mu. Většina řešení funguje na principu *whitelistu* – má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně v závislosti na nastavení souboru přímo exekuci odepře. Nastavení whitelistu není triviální úkol, existují ovšem i řešení, která umí whitelist vytvořit s minimem uživatelské interakce.
+Anti-executable je specifická vrstva ochrany. Jedná se o řešení, které na základě definovaných pravidel spravuje, jaký kód je v OS spuštěn. Tímto principem ideálně zachytí pokus o spuštění malware a zabrání mu. Většina řešení funguje na principu *allowlistu* – má nastaveno, které spustitelné soubory povolit, a při spuštění neznámého souboru zobrazí uživateli dialog pro povolení/zakázání, případně v závislosti na nastavení souboru přímo exekuci odepře. Nastavení allowlistu není triviální úkol, existují ovšem i řešení, která umí allowlist vytvořit s minimem uživatelské interakce.
 
 Nejpřívětivějším řešením je software [VoodooShield](https://voodooshield.com/), jenž kromě placené verze nabízí i bezplatnou pro nekomerční využití, která poskytuje srovnatelnou ochranu, akorát nenabízí možnost rozšířené konfigurace. Jedinou zásadní nevýhodou je absence českého rozhraní.
 

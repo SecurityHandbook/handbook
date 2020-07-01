@@ -55,7 +55,7 @@ Malware se často spouští z dočasných složek. Zakázání exekuce spustitel
 - Rozložení disku potvrďte tlačítkem <span class="green">Přijmout změny</span>.
 - Pokračujte v instalaci.
 - Po úspěšné instalaci si otevřete <span class="green">Terminál</span>. Zadejte do něj následující příkaz:
-<li style="list-style-type: none"><pre><code>sudo -i
+<li style="list-style-type: none"><pre><code>sudo su -
 dnf -y install nano
 nano -\$ /etc/fstab</code></pre></li>
 - V textovém souboru šipkami nalezněte řádek, který obsahuje "<span class="red">/tmp</span>". Řádek by měl vypadat následovně:
@@ -121,7 +121,7 @@ Pokud vám zkratka DNS nic neříká, podívejte se na následující [jednoduch
 Pokud nepoužíváte a nepotřebujete IPv6 (nejste-li si jistí, můžete využít následující [test](https://test-ipv6.cz/)), je rozumné protokol vypnout pro snížení prostoru pro útok.
 
 - Otevřete si <span class="green">Terminál</span>. Zadejte do něj následující příkazy:
-<li style="list-style-type: none"><pre><code>sudo -i
+<li style="list-style-type: none"><pre><code>sudo su -
 dnf -y install nano
 nano /etc/default/grub</code></pre></li>
 - Nalezněte řádek <span class="green">GRUB_CMDLINE_LINUX_DEFAULT</span> a před poslední uvozovku vepište "<span class="red"> ipv6.disable=1</span>". Řádek tedy bude vypadat nějak takto:
